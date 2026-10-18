@@ -48,9 +48,10 @@ theorems. Consumers run the pinned copy from their repository root:
 ```
 
 For a Lake project the gate also builds each tracked proof source explicitly,
-using its source-path target, before auditing the built modules. A source
-omitted by default targets must be declared as a Lake module; an unknown target
-fails with `FAIL_build_source`. Nested projects are checked separately. Lake
+using its source-path target, before auditing the built modules. An unregistered
+auxiliary source compiles into a private directory and is audited with the project,
+without changing frozen Lake configurations. A source build failure fails the gate.
+Nested projects are checked separately. Lake
 configuration, the gate auditor and deliberate gate fixtures under `tools/lean`
 or `tools/selftest` are outside the proof inventory. The receipt's `sources.log`
 records that inventory. Untracked files are not covered by repository discovery.
@@ -59,7 +60,7 @@ A deliberate `native_decide` goes in the consumer's
 `tools/lean/trusted-native.txt` with its reason, and is reported as `TRUST`.
 `tools/selftest/run.sh` checks the gate itself: every fixture must pass or
 fail *for the expected reason*, so a broken audit cannot pass the self-test.
-Project controls include an omitted false proof and configured positive and
+Project controls include unconfigured true and false proofs and configured positive and
 negative modules, independently of the default root's successful build.
 
 Passing the gate shows that a theorem is proved from the standard foundations.
