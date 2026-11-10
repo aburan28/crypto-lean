@@ -9,3 +9,6 @@ import CryptoLean.Group.CyclicTwists
 import CryptoLean.Group.Torsion
 import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
+import CryptoLean.SplitPrime.GL4Core
+import CryptoLean.SplitPrime.GL4Bridge
+import CryptoLean.SplitPrime.GL4ZMod
