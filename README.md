@@ -28,6 +28,15 @@ They concern semantic rings and fields. Native source binding, rational-root
 completeness, point-group semantics and complete algorithmic cost remain
 consumer obligations.
 
+`CryptoLean.Polynomial.InterpolationKernels` separates actual degree-bounded
+evaluation kernels of clean colored prefixes and counts their finite range
+as b^t when t is within the u-degree cap. It also represents their union
+exactly by products of evaluation forms, keeping nonzero extraction explicit.
+It supplies no witness-search algorithm. The prospective inheritance plans,
+actual prime-field coordinate assembly and build receipts are under
+`docs/interpolation-kernels-20261115-plan.md` and
+`docs/receipts/interpolation-kernels-20261115/`.
+
 `CryptoLean.Group.PartiteCoverage` counts actual zero-sum tuples in disjoint
 random lists over any finite additive commutative group. It derives exact
 single/pair event counts and both moments, then the integer coverage bound
