@@ -146,3 +146,24 @@ https://acm.math.spbu.ru/~sk1/download/papers/knapsack/knapsack-978-3-642-20465-
 Read the pinned Mathlib UniformOn, Bernoulli, variance_sum_pi,
 integral_comp_eval, Fintype product/counting and Point equivalence sources.
 No novelty, cheap-generation or general lower-bound claim is made.
+
+## Floor001 actual-instance diagnosis before shared source
+
+Generic product variance and primitive-basis cancellation type-check. The
+first actual-point assembly could not synthesize the finite coordinate
+code, then exhausted the unchanged heartbeat limit during downstream
+instance elaboration. Its original source/log remain as floor001.lean.txt
+and floor001.log. Derive NeZero p from the existing prime hypothesis before
+asking for ZMod's Fintype instance, and give the Option coordinate-code
+domain of the existing point equivalence explicitly. This supplies instance
+data; it does not change the point object, strengthen a mathematical
+hypothesis or raise the proof limit. Recheck before adding shared laws.
+
+Floor002 resolves that finite-code obligation. Floor003 makes the probability
+theorem's family/measure/function arguments explicit and exposes the remaining
+issue: let-instances in the goal type were not installed in the proof's local
+typeclass context by dsimp. Floor004 installs the identical derived instances
+in that context, then applies variance_sum_pi unchanged. It passes under the
+original200000 heartbeat limit. All three failed sources/logs remain; no
+mathematical target or inherited theorem changed. Style warnings on letI are
+retained and no linter is disabled.

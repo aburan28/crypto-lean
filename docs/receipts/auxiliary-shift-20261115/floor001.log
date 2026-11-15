@@ -1,0 +1,27 @@
+ProbabilityTheory.variance_sum_pi.{u_2, u_3} {ι : Type u_2} [Fintype ι] {Ω : ι → Type u_3}
+  {mΩ : (i : ι) → MeasurableSpace (Ω i)} {μ : (i : ι) → Measure (Ω i)} [∀ (i : ι), IsProbabilityMeasure (μ i)]
+  {X : (i : ι) → Ω i → ℝ} (h : ∀ (i : ι), MemLp (X i) 2 (μ i)) :
+  Var[∑ i, fun ω => X i (ω i); Measure.pi μ] = ∑ i, Var[X i; μ i]
+MeasureTheory.integral_comp_eval.{u_2, u_3, u_4} {ι : Type u_2} [Fintype ι] {X : ι → Type u_3}
+  {mX : (i : ι) → MeasurableSpace (X i)} {μ : (i : ι) → Measure (X i)} {E : Type u_4} [NormedAddCommGroup E]
+  [NormedSpace ℝ E] [∀ (i : ι), IsProbabilityMeasure (μ i)] {i : ι} {f : X i → E} (hf : AEStronglyMeasurable f (μ i)) :
+  ∫ (x : (i : ι) → X i), f (x i) ∂Measure.pi μ = ∫ (x : X i), f x ∂μ i
+MeasureTheory.integral_indicator_one.{u_1} {X : Type u_1} {mX : MeasurableSpace X} {μ : Measure X} ⦃s : Set X⦄
+  (hs : MeasurableSet s) : ∫ (x : X), s.indicator 1 x ∂μ = μ.real s
+ProbabilityTheory.variance_eq_sub.{u_1} {Ω : Type u_1} {mΩ : MeasurableSpace Ω} {μ : Measure Ω} [IsProbabilityMeasure μ]
+  {X : Ω → ℝ} (hX : MemLp X 2 μ) : Var[X; μ] = ∫ (x : Ω), (X ^ 2) x ∂μ - (∫ (x : Ω), X x ∂μ) ^ 2
+MeasureTheory.MemLp.of_discrete.{u_1, u_6} {α : Type u_1} {F : Type u_6} {m0 : MeasurableSpace α} {p : ENNReal}
+  {μ : Measure α} [NormedAddCommGroup F] {f : α → F} [DiscreteMeasurableSpace α] [Finite α] [IsFiniteMeasure μ] :
+  MemLp f p μ
+Finite.of_equiv.{u_2, u_3} {β : Sort u_2} (α : Sort u_3) [h : Finite α] (f : α ≃ β) : Finite β
+Finsupp.single_left_inj.{u_1, u_4} {α : Type u_1} {M : Type u_4} [Zero M] {a a' : α} {b : M} (h : b ≠ 0) :
+  Finsupp.single a b = Finsupp.single a' b ↔ a = a'
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:35:29: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Finite (WithZero { xy // W.Nonsingular xy.1 xy.2 })
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:44:8: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
