@@ -1,0 +1,37 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-15T23:48:06Z",
+ "id": "PCC-20261115-9ea735",
+ "kind": "statement",
+ "producer": {
+  "commit": "8fcb3108ade24661d9dff8dd062bc80e6b062cac",
+  "model": "",
+  "session": "rank-threshold-20261115"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/rank-threshold-20261115-plan.md",
+    "sha256": "2613db3683d77b8ca44896bb4ff908ce8461934734d497945efad61b5ba6609c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/RankThreshold20261115/FloorProbe.lean",
+    "sha256": "a971c4cee7f401b1d761041d3d8826051cd15f2dea2276d63a29dc6b856720d9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-threshold-20261115/floor001.log",
+    "sha256": "6879c04726c9e52a3d1aa55f878e80e56b8be239f8caf926ab7c80161a696258"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Prospective rank-threshold model and local inherited-law assembly only. Full raw sample multiplicities and ties retained; prior fixed-filter moments and complete-algorithm criterion remain open.",
+ "statement": "Marker-rank pre-source checkpoint: the prospective plan precedes the new family; the inherited finite-minimum, pool-equivalence and subtype-cardinality floor type-checks, including actual prime-field subgroup finiteness and coordinate-key negation invariance. No new survival theorem, cheap batch generator or complete selector is supplied yet."
+}
