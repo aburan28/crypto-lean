@@ -28,6 +28,13 @@ They concern semantic rings and fields. Native source binding, rational-root
 completeness, point-group semantics and complete algorithmic cost remain
 consumer obligations.
 
+`CryptoLean.Group.PartiteCoverage` counts actual zero-sum tuples in disjoint
+random lists over any finite additive commutative group. It derives exact
+single/pair event counts and both moments, then the integer coverage bound
+equivalent to `Pr[Z>0] >= L/(r+L-1)`. It proves existence coverage, not a fast
+relation selector. Source/axiom receipts and the finite model are in
+`docs/partite-coverage-20261115.md`.
+
 ## Using it
 
 In the consumer's `lakefile.toml`:
