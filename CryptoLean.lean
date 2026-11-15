@@ -14,6 +14,7 @@ import CryptoLean.Group.SubsetFourier
 import CryptoLean.Group.PartiteCoverage
 import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
+import CryptoLean.Polynomial.InterpolationKernels
 import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
 import CryptoLean.Polynomial.RootCertificate
