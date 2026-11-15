@@ -1,0 +1,105 @@
+import Mathlib.Data.Finsupp.Single
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+import Mathlib.Tactic
+
+/-! Primitive provenance and the actual two-filter count in a four-leaf
+auxiliary-shift construction. The original colored-output contract requires
+auxiliary cancellation. Cross-tag actual relations have a different contract. -/
+set_option autoImplicit false
+
+noncomputable section
+
+namespace CryptoLean.ShiftRepresentations
+
+section Provenance
+
+variable {R : Type*} [Ring R] {k : ℕ}
+
+abbrev Coefficients (R : Type*) [Zero R] (k : ℕ) := (Fin 4 ⊕ Fin k) →₀ R
+
+def originalRecord (i : Fin 4) : Coefficients R k := Finsupp.single (Sum.inl i) 1
+
+def auxiliaryRecord (j : Fin k) : Coefficients R k := Finsupp.single (Sum.inr j) 1
+
+def originalVector : Coefficients R k :=
+  (originalRecord 0 + originalRecord 1) + (originalRecord 2 + originalRecord 3)
+
+def leftVector (j : Fin k) : Coefficients R k :=
+  (originalRecord 0 + originalRecord 1) + auxiliaryRecord j
+
+def rightVector (j : Fin k) : Coefficients R k :=
+  (originalRecord 2 + originalRecord 3) - auxiliaryRecord j
+
+theorem vector_sum (j l : Fin k) :
+    leftVector (R := R) j + rightVector l = originalVector + auxiliaryRecord j - auxiliaryRecord l := by
+  unfold leftVector rightVector originalVector
+  abel
+
+theorem vector_residual (j l : Fin k) :
+    (leftVector (R := R) j + rightVector l) - originalVector =
+      auxiliaryRecord j - auxiliaryRecord l := by
+  rw [vector_sum]
+  abel
+
+theorem auxiliary_eq_iff [Nontrivial R] (j l : Fin k) :
+    auxiliaryRecord (R := R) j = auxiliaryRecord l ↔ j = l := by
+  simpa only [auxiliaryRecord, Sum.inr.injEq] using
+    (Finsupp.single_left_inj (a := (Sum.inr j : Fin 4 ⊕ Fin k))
+      (a' := Sum.inr l) (one_ne_zero : (1 : R) ≠ 0))
+
+theorem vector_sum_eq_original_iff [Nontrivial R] (j l : Fin k) :
+    leftVector (R := R) j + rightVector l = originalVector ↔ j = l := by
+  rw [← sub_eq_zero, vector_residual, sub_eq_zero, auxiliary_eq_iff]
+
+theorem original_eval_zero :
+    (originalVector : Coefficients R k) (Sum.inl 0) = 1 := by
+  simp [originalVector, originalRecord]
+
+theorem auxiliary_eval_original (j : Fin k) (i : Fin 4) :
+    auxiliaryRecord (R := R) j (Sum.inl i) = 0 := by
+  simp [auxiliaryRecord]
+
+theorem original_ne_zero [Nontrivial R] : (originalVector : Coefficients R k) ≠ 0 := by
+  intro h
+  have h0 := congrArg (fun v : Coefficients R k ↦ v (Sum.inl 0)) h
+  apply (one_ne_zero : (1 : R) ≠ 0)
+  simpa only [original_eval_zero, Finsupp.zero_apply] using h0
+
+theorem vector_sum_ne_zero [Nontrivial R] (j l : Fin k) :
+    leftVector (R := R) j + rightVector l ≠ 0 := by
+  intro h
+  rw [vector_sum] at h
+  have h0 := congrArg (fun v : Coefficients R k ↦ v (Sum.inl 0)) h
+  apply (one_ne_zero : (1 : R) ≠ 0)
+  simpa only [Finsupp.sub_apply, Finsupp.add_apply, original_eval_zero,
+    auxiliary_eval_original, add_zero, sub_zero, Finsupp.zero_apply] using h0
+
+end Provenance
+
+section Gates
+
+variable {G : Type*} [AddCommGroup G] [DecidableEq G] {k : ℕ}
+
+noncomputable def acceptedCount (U V : G) (S : Finset G) (T : Fin k → G) : ℕ :=
+  (Finset.univ.filter fun j ↦ U + T j ∈ S ∧ V - T j ∈ S).card
+
+omit [DecidableEq G] in
+theorem both_filters_iff (U V t : G) (S : Finset G) (hzero : U + V = 0)
+    (hsym : ∀ g : G, g ∈ S ↔ -g ∈ S) :
+    (U + t ∈ S ∧ V - t ∈ S) ↔ U + t ∈ S := by
+  have hV : V = -U := eq_neg_iff_add_eq_zero.mpr (by simpa only [add_comm] using hzero)
+  have hright : V - t = -(U + t) := by rw [hV, sub_eq_add_neg, neg_add]
+  rw [hright, ← hsym (U + t)]
+  exact and_self_iff
+
+theorem acceptedCount_eq_sum (U V : G) (S : Finset G) (T : Fin k → G)
+    (hzero : U + V = 0) (hsym : ∀ g : G, g ∈ S ↔ -g ∈ S) :
+    acceptedCount U V S T = ∑ j : Fin k, if U + T j ∈ S then 1 else 0 := by
+  rw [acceptedCount, Finset.card_filter]
+  apply Finset.sum_congr rfl
+  intro j _
+  simp only [both_filters_iff U V (T j) S hzero hsym]
+
+end Gates
+
+end CryptoLean.ShiftRepresentations
