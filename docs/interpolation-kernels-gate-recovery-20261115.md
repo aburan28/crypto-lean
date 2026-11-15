@@ -7,7 +7,8 @@ direct Lean compilation. The old gate recognizes only "unknown target" as
 the signal for its existing direct-source compilation fallback.
 
 Narrow prospective change: recognize both unregistered-target messages in
-that classification branch. Keep source enumeration, direct compilation,+sorry-warning rejection, axiom allowlist and trusted-native policy unchanged.
+that classification branch. Keep source enumeration, direct compilation,
+sorry-warning rejection, axiom allowlist and trusted-native policy unchanged.
 Every tracked source must still compile; no file is removed from inventory.
 
 Run the existing self-test suite, including unconfigured-good, omitted-bad,
