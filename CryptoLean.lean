@@ -3,6 +3,7 @@ import CryptoLean.Bridge.Iterate
 import CryptoLean.Curve.Conductor
 import CryptoLean.Curve.QuadraticNormTransport
 import CryptoLean.Curve.Identities
+import CryptoLean.Curve.LineIncidence
 import CryptoLean.Curve.SubfieldTwists
 import CryptoLean.Curve.TorsionDepth
 import CryptoLean.Curve.Twists
