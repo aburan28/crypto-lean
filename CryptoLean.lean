@@ -9,6 +9,7 @@ import CryptoLean.Curve.Twists
 import CryptoLean.Group.CyclicTwists
 import CryptoLean.Group.Torsion
 import CryptoLean.Group.SingleRelation
+import CryptoLean.Group.PartiteCoverage
 import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.ProjectiveVelu
