@@ -29,3 +29,7 @@ separate from this finite-group probability claim.
   coverage endpoint are still required. A declaration probe preserved two
   unknown guessed convenience names; the existing sum_erase_add and
   sum_mul_sum statements were read instead. No limits were changed.
+- f5b4cbb/build004 proves the diagonal/off-diagonal row and the support's
+  existential characterization, but fails when a global square expansion also
+  rewrites the normalizing factor before the row rewrite. Restrict the
+  expansion to relationCount's square; preserve all theorem statements.
