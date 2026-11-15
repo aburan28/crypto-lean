@@ -11,5 +11,6 @@ import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
+import CryptoLean.Polynomial.RootCertificate
 import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
