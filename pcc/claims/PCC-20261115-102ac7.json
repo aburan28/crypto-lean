@@ -1,0 +1,44 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-15T23:06:12Z",
+ "id": "PCC-20261115-102ac7",
+ "kind": "statement",
+ "producer": {
+  "commit": "a0f668a9f22f4b3c1eec2728a828e0025585386b",
+  "model": "",
+  "session": "auxiliary-shift-moments-20261115"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/auxiliary-shift-20261115-plan.md",
+    "sha256": "9f570ebb3159e477b415090e54e9299fcddc2b329d19a8cdd29950370e256493"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/AuxiliaryShift20261115/FloorProbe.lean",
+    "sha256": "9328442647371e0ceeaa13cfc96d082fd3376a34b9365e25b1be76857deb1c04"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/auxiliary-shift-20261115/floor004.log",
+    "sha256": "4b40db837943d66ed00e2ccc1d25345822cd1b1e9c54d18f79b1eda7370ce0f6"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/auxiliary-shift-20261115/diff001.json",
+    "sha256": "1562bd73133aa6c07a817046d66d8e30689c48cce50be9b68a248eb17254a0dc"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Prospective plan and inherited-law assembly only; local source compilation is separate from signed PCC standing. Original complete-algorithm criterion retained.",
+ "statement": "Candidate-C pre-source checkpoint: the prospective four-leaf provenance/moment plan precedes Lean edits. Floor004 type-checks the inherited primitive-basis and product-variance interfaces, including an actual prime-field subgroup and shifted membership indicator, after three preserved instance-elaboration failures. No new accepted-count moment theorem or efficient selector is supplied yet."
+}
