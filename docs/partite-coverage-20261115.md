@@ -33,3 +33,7 @@ separate from this finite-group probability claim.
   existential characterization, but fails when a global square expansion also
   rewrites the normalizing factor before the row rewrite. Restrict the
   expansion to relationCount's square; preserve all theorem statements.
+- 3792669/build005 checks both exact moments and every coverage proof step
+  except the final equality-up-to-commutativity: a broad rw commutes both
+  products. Use a local `simpa only [mul_comm]` at that last step, with the
+  same endpoint and hypotheses.

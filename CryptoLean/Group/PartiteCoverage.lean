@@ -220,7 +220,7 @@ theorem coverage_count [Fintype G] (hm : 0 < m) (hb : 0 < b) :
     exact relationCount_ne_zero_iff x
   have hdenom : r+(L-1) = r+L-1 := by omega
   change L*N ≤ (r+L-1)*_
-  rw [← hcard, ← hdenom, mul_comm]
-  exact hcancel
+  rw [← hcard, ← hdenom]
+  simpa only [mul_comm] using hcancel
 
 end CryptoLean.PartiteCoverage
