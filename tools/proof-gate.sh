@@ -104,7 +104,7 @@ run_target() {
         printf '%s\n' "$rel" >> "$log/sources.log"
         probe="$log/source-target.log"
         if ! (cd "$root/$t" && lake build "$rel") > "$probe" 2>&1; then
-          if grep -q 'unknown target' "$probe"; then
+          if grep -Eq 'unknown target|unknown module source path' "$probe"; then
             printf 'direct source compile: %s\n' "$rel" >> "$log/build.log"
             auxfile="$aux/${rel%.lean}.olean"
             mkdir -p "$(dirname "$auxfile")"
