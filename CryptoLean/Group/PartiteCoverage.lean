@@ -114,6 +114,49 @@ theorem first_moment (hm : 0 < m) :
   simp_rw [single_event_count (G := G) _ hm]
   simp
 
+theorem second_moment_row (a : Fin m → Fin b) (hm : 0 < m) :
+    (∑ c : Fin m → Fin b, ∑ x : (Fin m × Fin b) → G, hit a x * hit c x) *
+      (Fintype.card G)^2 =
+      Fintype.card G ^ (m*b) * (Fintype.card G + (b^m - 1)) := by
+  classical
+  have hd : (∑ x : (Fin m × Fin b) → G, hit a x * hit a x) *
+      (Fintype.card G)^2 = Fintype.card G ^ (m*b) * Fintype.card G := by
+    simp_rw [← pow_two, hit_sq]
+    calc
+      _ = ((∑ x : (Fin m × Fin b) → G, hit a x) * Fintype.card G) *
+          Fintype.card G := by ring
+      _ = _ := by rw [single_event_count (G := G) a hm]
+  rw [Finset.sum_mul, ← Finset.sum_erase_add _ _ (Finset.mem_univ a)]
+  have ho : (∑ c ∈ (Finset.univ : Finset (Fin m → Fin b)).erase a,
+      (∑ x : (Fin m × Fin b) → G, hit a x * hit c x) * (Fintype.card G)^2) =
+      (b^m - 1) * Fintype.card G ^ (m*b) := by
+    calc
+      _ = ∑ _c ∈ (Finset.univ : Finset (Fin m → Fin b)).erase a,
+          Fintype.card G ^ (m*b) := by
+        apply Finset.sum_congr rfl
+        intro c hc
+        exact joint_event_count a c (Ne.symm (Finset.ne_of_mem_erase hc))
+      _ = _ := by simp
+  rw [ho, hd]
+  ring
+
+theorem second_moment (hm : 0 < m) :
+    (∑ x : (Fin m × Fin b) → G, relationCount x ^ 2) * (Fintype.card G)^2 =
+      Fintype.card G ^ (m*b) * b^m * (Fintype.card G + (b^m - 1)) := by
+  classical
+  simp_rw [relationCount, pow_two, Finset.sum_mul_sum]
+  rw [Finset.sum_comm]
+  simp_rw [Finset.sum_comm (f := fun x c => hit _ x * hit c x)]
+  rw [Finset.sum_mul]
+  simp_rw [second_moment_row (G := G) _ hm]
+  simp
+  ring
+
+theorem relationCount_ne_zero_iff (x : (Fin m × Fin b) → G) :
+    relationCount x ≠ 0 ↔ ∃ a : Fin m → Fin b, tupleSum a x = 0 := by
+  classical
+  simp [relationCount, Finset.sum_eq_zero_iff, hit]
+
 end Counting
 
 /-- The finite Cauchy--Schwarz support inequality, with exact integer counts. -/
