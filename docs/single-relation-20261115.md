@@ -23,3 +23,13 @@ Acceptance is the canonical all-source/axiom gate with only the standard
 three foundations and zero trusted native exceptions. Preserve first-build
 diagnostics, theorem statements and source/toolchain pins. No proof-limit
 override, custom axiom or native_decide.
+
+## Completed local check
+
+The first build at7df2c68 fails for missing explicit Ring/finite-ring-sum
+imports. Adding those two imports atad0b100 leaves all theorem statements and
+proof bodies unchanged. The second build succeeds, and the canonical
+all-source/axiom gate audits111theorems,0failures and0trusted native exceptions.
+No proof limit was raised. Complete first/second-build and gate logs, exact
+source commit, toolchain/manifest and source hashes are retained under
+receipts/single-relation-20261115. Hosted CI has its own status.
