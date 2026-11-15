@@ -41,6 +41,12 @@ slopes has at most 2s distinct-abscissa affine partners for any known curve
 point. It is a geometric count; probabilistic sampling and algorithm costs
 remain consumer obligations. See `docs/line-incidence-20261115.md`.
 
+`CryptoLean.Group.SubsetFourier` assembles finite-subset Parseval and actual
+additive-triple counts from existing character orthogonality. An explicit
+nontrivial-character bound M yields the triple-count deviation M*|S|. The
+elliptic analytic input and any sampling interpretation remain separate.
+Source, inheritance and audit receipts are in `docs/subset-fourier-20261115.md`.
+
 ## Using it
 
 In the consumer's `lakefile.toml`:
