@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-15T22:29:37Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/blob/46144f67d806697bf949d1293e8fa7de8464368e/docs/centered-completion-20261115.md",
+    "https://github.com/aburan28/crypto-lean/blob/46144f67d806697bf949d1293e8fa7de8464368e/docs/receipts/centered-completion-20261115/publication.json"
+  ],
+  "kind": "outcome",
+  "note": "Completed scoped component: two source laws, actual prime-field assembly and canonical169/0/0. PCC-e80d3e unverified. The pencil bridge and conditional-yield bound are hand analysis; implicit anchor lifting and the overall criterion remain open. Preserve both instance/import failures.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate,report-evidence,research-visuals",
+  "task": "Check the centered pair-completion interface and scope the explicit batch baseline"
+}

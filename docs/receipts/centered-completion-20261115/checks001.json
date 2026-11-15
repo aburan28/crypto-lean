@@ -1,0 +1,67 @@
+{
+  "schema": "centered-completion-local-checks/v1",
+  "recorded_at": "2026-11-15T22:29:36.818Z",
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "ledger",
+        "cmd": "python3 /workspace/scratch/selector-kernel-assessment/tools/pcc/pcc.py --repo /workspace/scratch/crypto-lean ledger verify --base origin/main",
+        "chunk_id": "408a51",
+        "wall_time_seconds": 0.000032814,
+        "exit_code": 0,
+        "original_token_count": 23,
+        "output": "ledger: origin/main has no pcc/ledger.jsonl; nothing to compare\nledger: 1 entries, chain ok\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "standing",
+        "cmd": "python3 /workspace/scratch/selector-kernel-assessment/tools/pcc/pcc.py --repo /workspace/scratch/crypto-lean standing PCC-20261115-e80d3e",
+        "chunk_id": "93f5f4",
+        "wall_time_seconds": 0.000064708,
+        "exit_code": 2,
+        "original_token_count": 8,
+        "output": "PCC-20261115-e80d3e: unverified\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "source-hashes",
+        "cmd": "sha256sum -c docs/receipts/centered-completion-20261115/source.sha256",
+        "chunk_id": "904d76",
+        "wall_time_seconds": 0.000027478,
+        "exit_code": 0,
+        "original_token_count": 60,
+        "output": "CryptoLean/Curve/CenteredCompletion.lean: OK\nCryptoLean.lean: OK\ndocs/receipts/CenteredCompletion20261115/FloorProbe.lean: OK\ndocs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean: OK\nlean-toolchain: OK\nlake-manifest.json: OK\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "claim-hashes",
+        "cmd": "python3 - <<'PY'\nimport json,hashlib\nfrom pathlib import Path\nc=json.loads(Path('pcc/claims/PCC-20261115-e80d3e.json').read_text())\nfor p in c['proofs']:\n s=p['subject'];assert hashlib.sha256(Path(s['path']).read_bytes()).hexdigest()==s['sha256'],s['path']\nprint('All six attestation subjects match their registered bytes.')\nPY",
+        "chunk_id": "54e242",
+        "wall_time_seconds": 0.000036182,
+        "exit_code": 0,
+        "original_token_count": 15,
+        "output": "All six attestation subjects match their registered bytes.\n"
+      }
+    }
+  ],
+  "standing": "Unverified; standing exit2 is retained as such.",
+  "source": "6ff00060599fe7b33d704cc0795f602f0e5d523d",
+  "canonical_gate": {
+    "theorems": 169,
+    "failures": 0,
+    "trusted_native_exceptions": 0
+  },
+  "render": {
+    "final_pages": 2,
+    "inspected_both": true,
+    "first_failure": "render001.json"
+  },
+  "scope": "No measured cost or complete selector assertion."
+}
