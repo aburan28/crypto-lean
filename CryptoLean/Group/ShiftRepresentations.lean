@@ -80,6 +80,12 @@ section Gates
 
 variable {G : Type*} [AddCommGroup G] [DecidableEq G] {k : ℕ}
 
+omit [DecidableEq G] in
+theorem right_shift_eq_neg_left (U V t : G) (hzero : U + V = 0) :
+    V - t = -(U + t) := by
+  have hV : V = -U := eq_neg_iff_add_eq_zero.mpr (by simpa only [add_comm] using hzero)
+  rw [hV, sub_eq_add_neg, neg_add]
+
 noncomputable def acceptedCount (U V : G) (S : Finset G) (T : Fin k → G) : ℕ :=
   (Finset.univ.filter fun j ↦ U + T j ∈ S ∧ V - T j ∈ S).card
 
@@ -87,9 +93,7 @@ omit [DecidableEq G] in
 theorem both_filters_iff (U V t : G) (S : Finset G) (hzero : U + V = 0)
     (hsym : ∀ g : G, g ∈ S ↔ -g ∈ S) :
     (U + t ∈ S ∧ V - t ∈ S) ↔ U + t ∈ S := by
-  have hV : V = -U := eq_neg_iff_add_eq_zero.mpr (by simpa only [add_comm] using hzero)
-  have hright : V - t = -(U + t) := by rw [hV, sub_eq_add_neg, neg_add]
-  rw [hright, ← hsym (U + t)]
+  rw [right_shift_eq_neg_left U V t hzero, ← hsym (U + t)]
   exact and_self_iff
 
 theorem acceptedCount_eq_sum (U V : G) (S : Finset G) (T : Fin k → G)
