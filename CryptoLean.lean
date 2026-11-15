@@ -8,6 +8,7 @@ import CryptoLean.Curve.Twists
 import CryptoLean.Group.CyclicTwists
 import CryptoLean.Group.Torsion
 import CryptoLean.Polynomial.NormCharts
+import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
 import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
