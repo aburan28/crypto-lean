@@ -1,0 +1,19 @@
+digraph completion {
+  graph [rankdir=LR, bgcolor="white", pad="0.18", nodesep="0.3", ranksep="0.45"];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, color="#496477", fillcolor="#eaf2f8", margin="0.13,0.1"];
+  edge [color="#496477", arrowsize=0.7];
+  prefix [label="First m-2 colors\nimplicit anchor family"];
+  anchors [label="Explicit anchor D\nT = -sum(D)"];
+  last [label="Last two colors\nb records each"];
+  table [label="Pair-sum dictionary\nb^2 additions / records"];
+  match [label="T in dictionary?\nrecover actual pair"];
+  verify [label="Relation + labels\nfinal scalar check"];
+  missing [label="Missing: lift a pair target\nto anchor records implicitly", color="#a36e27", fillcolor="#fff1d9"];
+  prefix -> anchors [label="charged enumeration", fontname="DejaVu Sans", fontsize=9];
+  anchors -> match;
+  last -> table;
+  table -> match;
+  match -> verify;
+  prefix -> missing [style=dashed];
+  table -> missing [style=dashed];
+}

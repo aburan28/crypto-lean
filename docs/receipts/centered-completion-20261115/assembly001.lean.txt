@@ -1,0 +1,25 @@
+import CryptoLean.Curve.CenteredCompletion
+import Mathlib.Data.ZMod.Basic
+
+set_option autoImplicit false
+
+open CryptoLean.CenteredCompletion
+
+example {F : Type*} [Field F] [DecidableEq F]
+    (W : WeierstrassCurve.Affine F) (P Q S : W.Point) :
+    (P - S).xRep = (Q - S).xRep ↔ P = Q ∨ P + Q = S + S :=
+  centered_xRep_eq_iff P Q S
+
+example (p : ℕ) [Fact p.Prime] (W : WeierstrassCurve.Affine (ZMod p))
+    (P Q S T : W.Point) (hPQ : P ≠ Q) (hcenter : S + S = T) :
+    (P - S).xRep = (Q - S).xRep ↔ P + Q = T :=
+  centered_completion_iff P Q S T hPQ hcenter
+
+example (p : ℕ) [Fact p.Prime] (W : WeierstrassCurve.Affine (ZMod p))
+    (P Q S A : W.Point) (hPQ : P ≠ Q) (hcenter : S + S = -A) :
+    (P - S).xRep = (Q - S).xRep ↔ (P + Q) + A = 0 := by
+  rw [centered_completion_iff P Q S (-A) hPQ hcenter]
+  exact eq_neg_iff_add_eq_zero
+
+#print axioms CryptoLean.CenteredCompletion.centered_xRep_eq_iff
+#print axioms CryptoLean.CenteredCompletion.centered_completion_iff

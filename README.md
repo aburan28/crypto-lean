@@ -34,9 +34,17 @@ as b^t when t is within the u-degree cap. It also represents their union
 exactly by products of evaluation forms, keeping nonzero extraction explicit.
 It supplies no witness-search algorithm. The prospective inheritance plans,
 actual prime-field coordinate assembly and build receipts are linked from
-`docs/interpolation-kernels-20261115.md`. The full gate audits 167 theorems,
+`docs/interpolation-kernels-20261115.md`. Its recorded gate audited 167 theorems,
 0 failures and 0 trusted-native exceptions. The gate dependency recovery and
 both earlier failed receipts are retained beside the source pins.
+
+`CryptoLean.Curve.CenteredCompletion` reads exact two-point completion from
+Mathlib's infinity-aware x representative after translation. The distinct-record
+and half-target hypotheses are explicit. Its generic/prime-field assembly,
+prospective plan and full audit169/0/0 are linked from
+`docs/centered-completion-20261115.md`. The pencil interpretation, explicit
+batch costs and fixed-family yield bound are separately labelled hand analysis;
+implicit anchor lifting remains open. [pcc:unverified]
 
 `CryptoLean.Group.PartiteCoverage` counts actual zero-sum tuples in disjoint
 random lists over any finite additive commutative group. It derives exact

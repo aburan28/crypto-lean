@@ -1,0 +1,50 @@
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:14:49: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd W.Point W.Point ?m.12
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:15:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd W.Point W.Point ?m.21
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:15:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub W.Point W.Point ?m.25
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:15:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub W.Point W.Point ?m.30
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:16:34: error: Application type mismatch: The argument
+  hPQ
+has type
+  P ≠ Q
+but is expected to have type
+  ?m.38 ≠ ?m.39
+in the application
+  centered_completion_iff ?m.38 ?m.39 ?m.40 ?m.41 hPQ
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:19:49: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd W.Point W.Point ?m.12
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:20:35: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd W.Point W.Point ?m.23
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:20:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub W.Point W.Point ?m.28
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:20:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub W.Point W.Point ?m.33
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean:20:53: error: unsolved goals
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+W : WeierstrassCurve.Affine (ZMod p)
+P Q S A : W.Point
+hPQ : P ≠ Q
+hcenter : sorry
+⊢ sorry = sorry ↔ sorry
+'CryptoLean.CenteredCompletion.centered_xRep_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CenteredCompletion.centered_completion_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

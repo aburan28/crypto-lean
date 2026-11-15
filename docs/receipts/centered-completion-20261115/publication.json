@@ -1,0 +1,27 @@
+{
+  "source_commit": "6ff00060599fe7b33d704cc0795f602f0e5d523d",
+  "assembly_commit": "7bc6d4c577f9035900cbd036e56d10edba13606f",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "new_named_laws": 2,
+  "canonical_gate": "gate001",
+  "audited_theorems": 169,
+  "failures": 0,
+  "trusted_native_exceptions": 0,
+  "source_build": "pass",
+  "floor002": "pass",
+  "assembly002": "pass",
+  "failed_sources_retained": [
+    "floor001.lean.txt",
+    "assembly001.lean.txt"
+  ],
+  "gate_tool_changed": false,
+  "proof_limits_changed": false,
+  "fresh_checker": "No lean4checker executable; no fresh pass asserted.",
+  "pdf_pages": 2,
+  "pdf_bytes": 58140,
+  "pdf_sha256": "7a5b8ca050336cc5127c885b2cd3cf76409f7d60c8e90b7ba2a994ecd9e3544a",
+  "producer_inspection": "Both final1250px page renders visually inspected; diagram, equations and scopes legible.",
+  "native_numeric_paid_execution": false,
+  "standing": "PCC unverified; local source audit, hand probability/cost and pencil bridge have distinct scopes."
+}

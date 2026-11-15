@@ -1,0 +1,58 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-15T22:26:02Z",
+ "id": "PCC-20261115-e80d3e",
+ "kind": "statement",
+ "producer": {
+  "commit": "46144f67d806697bf949d1293e8fa7de8464368e",
+  "model": "",
+  "session": "centered-completion-20261115"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/centered-completion-20261115.md",
+    "sha256": "2c1c51e7c70f7da333435492bd4f3b22aa5cac13a706fe2527d6fc408c278bed"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Curve/CenteredCompletion.lean",
+    "sha256": "d0888f348b94212dd6b6f82324507f0ce2656093a66cff650053085bef0ddc06"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean",
+    "sha256": "74d34a2208e1ff51bebc09f9f457c6d754279e7418433df1d0f8dfde524ac874"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/centered-completion-20261115/gate001/_/audit.log",
+    "sha256": "fdd365544a71c4a0e64a27e72fb16a76129927065798bb00096849e18e2c02dd"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/centered-completion-20261115/report.pdf",
+    "sha256": "7a5b8ca050336cc5127c885b2cd3cf76409f7d60c8e90b7ba2a994ecd9e3544a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/centered-completion-20261115/publication.json",
+    "sha256": "91240f8266b79373b56fb7b7a68cf76fdee54bdf5b76caf7660314c6d7638d34"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Actual Weierstrass point coordinate interface, with separate hand divisor, cost and fixed-family probability analysis. Local source gate169/0/0; no signed verification, general algorithm lower bound or measured cost.",
+ "statement": "Centered completion assessment: two local Lean laws read distinct-record pair completion from translated Mathlib x representatives with an explicit half target. A shared b-squared pair table is an explicit baseline; fixed anchor families independent of the final two colors have the stated hand conditional-yield bound. No implicit anchor extractor or complete selector is supplied."
+}

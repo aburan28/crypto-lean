@@ -1,0 +1,7 @@
+{
+  "renderer": "typst Python0.15.1",
+  "result": "failed",
+  "exception": "TypstError: expected function, found content",
+  "capture": "Exception message transcribed from actual tool output; original draft preserved.",
+  "cause_to_check": "Inline subscript content directly followed by parenthesized text."
+}
