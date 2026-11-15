@@ -25,3 +25,6 @@ Build001 at ea59988 checks the polynomial degree/evaluation/root equivalence
 and both x-fibre cardinalities, then fails on a tactic term with no expected
 type at the final injection-bound composition. Give that existing inequality
 its expected type through le_trans. No statement or hypothesis changes.
+Build002 at af774d6 passes all six targets. Extend the endpoint to an actual
+finite slope family's union with the existing card_biUnion_le law; no
+probability/cost assumption is added to the curve theorem.

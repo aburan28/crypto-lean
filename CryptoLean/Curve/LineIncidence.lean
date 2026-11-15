@@ -76,4 +76,29 @@ theorem other_line_point_card [Fintype F] (W : WeierstrassCurve.Affine F)
   refine le_trans ?_ (other_line_x_card W x y ℓ hP)
   simpa only [Nat.card_eq_fintype_card] using Fintype.card_le_of_injective f hf
 
+/-- A fixed family of s slopes admits at most 2s distinct-abscissa points
+relative to a known curve point. This is a fibre count, not a sampling law. -/
+theorem slope_family_point_card [Fintype F] (W : WeierstrassCurve.Affine F)
+    (x y : F) (hP : W.Equation x y) (Λ : Finset F) :
+    Nat.card {q : F × F // q.1 ≠ x ∧ W.Equation q.1 q.2 ∧
+      ∃ ℓ ∈ Λ, q.2 = ℓ*(q.1-x)+y} ≤ 2*Λ.card := by
+  classical
+  let s (ℓ : F) := Finset.univ.filter (fun q : F × F =>
+    q.1 ≠ x ∧ W.Equation q.1 q.2 ∧ q.2 = ℓ*(q.1-x)+y)
+  have hs (ℓ : F) : (s ℓ).card ≤ 2 := by
+    simpa only [s, Nat.card_eq_fintype_card, Fintype.card_subtype] using
+      other_line_point_card W x y ℓ hP
+  have hcard : Nat.card {q : F × F // q.1 ≠ x ∧ W.Equation q.1 q.2 ∧
+      ∃ ℓ ∈ Λ, q.2 = ℓ*(q.1-x)+y} = (Λ.biUnion s).card := by
+    rw [Nat.card_eq_fintype_card, Fintype.card_subtype]
+    congr 1
+    ext q
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_biUnion, s]
+    aesop
+  calc
+    _ = (Λ.biUnion s).card := hcard
+    _ ≤ ∑ ℓ ∈ Λ, (s ℓ).card := Finset.card_biUnion_le
+    _ ≤ ∑ _ℓ ∈ Λ, 2 := Finset.sum_le_sum (fun ℓ _ => hs ℓ)
+    _ = 2*Λ.card := by simp [Nat.mul_comm]
+
 end CryptoLean.LineIncidence
