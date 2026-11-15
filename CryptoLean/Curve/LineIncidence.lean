@@ -54,7 +54,7 @@ theorem other_line_x_card [Fintype F] (W : WeierstrassCurve.Affine F)
     rw [Nat.card_eq_fintype_card, Fintype.card_subtype]
     congr 1
     ext t
-    simp [s, and_comm]
+    simp [s]
   rw [he, Finset.card_erase_of_mem hx]
   omega
 
@@ -73,7 +73,7 @@ theorem other_line_point_card [Fintype F] (W : WeierstrassCurve.Affine F)
     apply Subtype.ext
     apply Prod.ext hx
     rw [q.property.2.2, q'.property.2.2, hx]
-  exact (by simpa only [Nat.card_eq_fintype_card] using Fintype.card_le_of_injective f hf).trans
-    (other_line_x_card W x y ℓ hP)
+  refine le_trans ?_ (other_line_x_card W x y ℓ hP)
+  simpa only [Nat.card_eq_fintype_card] using Fintype.card_le_of_injective f hf
 
 end CryptoLean.LineIncidence

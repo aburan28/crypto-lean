@@ -20,3 +20,8 @@ and other partial joins are outside the consumer's proposed assessment.
 
 Preserve first failures, source pins and canonical all-source/axiom receipts.
 No proof limits, native_decide, custom axioms or numerical cases.
+
+Build001 at ea59988 checks the polynomial degree/evaluation/root equivalence
+and both x-fibre cardinalities, then fails on a tactic term with no expected
+type at the final injection-bound composition. Give that existing inequality
+its expected type through le_trans. No statement or hypothesis changes.
