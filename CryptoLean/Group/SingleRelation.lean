@@ -1,6 +1,8 @@
 import Mathlib.SetTheory.Cardinal.Finite
 import Mathlib.Data.Nat.Choose.Basic
 import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.Ring
+import Mathlib.Algebra.BigOperators.Ring.Finset
 
 /-! Semantic label and index identities for a single-relation reduction.
 No statement below constructs a relation selector or proves its cost/yield. -/
