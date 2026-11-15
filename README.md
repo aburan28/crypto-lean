@@ -18,8 +18,15 @@ must build on the same toolchain (Lake requires it).
 | `CryptoLean` | Mathlib | short Weierstrass models and their generic, quartic and sextic twists; torsion fixing; cyclic and finite-field subfield twist tests; conductor arithmetic; Semaev's S₃ and its roots `x(R±F)` |
 | `CryptoLean.Bridge` | both | proofs that a `Core` computation means the Mathlib object (so far: `iterate` equals `f^[n]`, `Returns` iff `Function.IsPeriodicPt`) |
 
-Everything in `CryptoLean` was promoted from proofs that already passed in
-`aburan28/crypto`. Each file's first line names its source.
+`CryptoLean` contains promoted consumer proofs and shared generic laws.
+Promoted files name their source; new laws document their consumer and
+mathematical reference.
+
+`CryptoLean.Polynomial.EllipticMaps` supplies the cleared doubling quartic,
+degree-two Vélu curve residual and its kernel-root/affine specializations.
+They concern semantic rings and fields. Native source binding, rational-root
+completeness, point-group semantics and complete algorithmic cost remain
+consumer obligations.
 
 ## Using it
 
