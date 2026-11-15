@@ -22,3 +22,22 @@ propext, Classical.choice and Quot.sound and zero trusted native exceptions.
 Retain any first-build diagnostic before source repair; no raised proof limit
 or altered theorem statement merely to get a pass. Generic law correctness
 does not formally bind the future native parser, arithmetic or isogeny program.
+
+## Completed local gate
+
+At source b38b6b4712017a6d87140f302c04d754a3280dce, all four statements
+compiled on their first build. The canonical all-source gate then passed:
+106 theorems audited, zero failures and zero trusted native exceptions.
+The audit records only the standard foundations propext, Classical.choice
+and Quot.sound. Lean is4.35.0 and mathlib is
+cfc55fc58714a59dc06e6e79edc6d1d95140d3c2. No proof limit was raised.
+
+The complete build/source/axiom logs and source SHA-256 manifest are retained
+in [receipts/elliptic-map-identities-20261115](receipts/elliptic-map-identities-20261115).
+This is a local proof receipt; hosted CI and PR review retain their own status.
+The untracked ProjectiveVeluInstanceProbe.lean is unrelated and was not added
+to the module inventory or this change.
+
+The next consumer step is a GMP/FLINT implementation and separate OpenSSL
+complete-root/group replay under its already frozen qualification protocol.
+That numerical qualification has not run as of this proof receipt.
