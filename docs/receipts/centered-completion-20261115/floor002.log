@@ -1,0 +1,6 @@
+WeierstrassCurve.Affine.Point.xRep_eq_xRep_iff.{u} {F : Type u} [Field F] {W : WeierstrassCurve.Affine F}
+  {P Q : W.Point} : P.xRep = Q.xRep ↔ P = Q ∨ P = -Q
+sub_left_inj.{u_3} {G : Type u_3} [AddGroup G] {a b c : G} : b - a = c - a ↔ b = c
+sub_right_inj.{u_3} {G : Type u_3} [AddGroup G] {a b c : G} : a - b = a - c ↔ b = c
+neg_sub.{u_1} {α : Type u_1} [SubtractionMonoid α] (a b : α) : -(a - b) = b - a
+sub_eq_sub_iff_add_eq_add.{u_3} {G : Type u_3} [AddCommGroup G] {a b c d : G} : a - b = c - d ↔ a + d = c + b

@@ -85,3 +85,13 @@ https://websites.umich.edu/asnowden/teaching/2013/679/L02.html . Cheng
 https://arxiv.org/html/cs/0507026 section2 supplies the prior elliptic-code
 context and positive-degree dimension statement. No novelty or general
 algorithmic lower bound is claimed.
+
+## Floor001 contract correction, before the shared source
+
+The first generic translated-point probe omitted DecidableEq F, which the
+existing Mathlib point addition/subtraction instance explicitly requires.
+The actual ZMod p instance already supplies it. The original failed source
+and log are retained byte-for-byte as floor001.lean.txt/floor001.log; the
+valid generic floor probe now states DecidableEq F explicitly. This is an
+operation-instance obligation, not a new mathematical restriction or a
+replacement group law. Use the same explicit instance in the shared source.
