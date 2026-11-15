@@ -30,3 +30,7 @@ the actual zero-test counts. No endpoint/hypothesis or limit changes.
 Build002 atc72b292passes the energy, Parseval and actual triple identities.
 Continue with the original flatness-conditioned norm/count endpoint; do not
 report these exact identities alone as that completed bound.
+Build003 at00ec7b4checks the scaled norm endpoint and the real cast/factor
+bridges, but the final cancellation uses an outdated lemma shape. Apply the
+existing le_of_mul_le_mul_left inequality with its explicit positive group
+cardinality. Keep both original endpoint statements and all hypotheses.

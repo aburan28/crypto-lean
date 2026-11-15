@@ -102,7 +102,7 @@ theorem triple_deviation_scaled (S : Finset G) (M : ℝ) (hM : 0 ≤ M)
     _ = ∑ ψ ∈ (Finset.univ : Finset (AddChar G ℂ)).erase 1, ‖charSum S ψ‖^3 := by
       apply Finset.sum_congr rfl
       intro ψ _
-      simp [norm_mul, norm_pow]
+      simp [norm_pow]
       ring
     _ ≤ ∑ ψ ∈ (Finset.univ : Finset (AddChar G ℂ)).erase 1, M*‖charSum S ψ‖^2 := by
       apply Finset.sum_le_sum
@@ -134,7 +134,7 @@ theorem triple_deviation (S : Finset G) (M : ℝ) (hM : 0 ≤ M)
       ((returnCount S : ℝ) - (S.card : ℝ)^3 / (Fintype.card G : ℝ)) =
       (Fintype.card G : ℝ) * (returnCount S : ℝ) - (S.card : ℝ)^3 := by
     field_simp
-  apply (mul_le_mul_left hr).mp
+  refine le_of_mul_le_mul_left (a := (Fintype.card G : ℝ)) ?_ hr
   calc
     _ = |(Fintype.card G : ℝ) *
         ((returnCount S : ℝ) - (S.card : ℝ)^3 / (Fintype.card G : ℝ))| := by
