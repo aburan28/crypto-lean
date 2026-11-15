@@ -19,7 +19,7 @@ def tupleSum (a : Fin m → Fin b) : ((Fin m × Fin b) → G) →+ G where
 theorem tupleSum_spike (a c : Fin m → Fin b) (i0 : Fin m) (g : G) :
     tupleSum a (Pi.single (i0, c i0) g) = if a i0 = c i0 then g else 0 := by
   classical
-  change (∑ i : Fin m, Pi.single (i0, c i0) g (i, a i)) = _
+  change (∑ i : Fin m, (Pi.single (i0, c i0) g : (Fin m × Fin b) → G) (i, a i)) = _
   rw [Finset.sum_eq_single i0]
   · simp [Pi.single_apply]
   · intro i _ hi
