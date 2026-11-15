@@ -27,3 +27,6 @@ finite sums and on a cast/count normalization. Keep the exact energy/triple
 statements: align the intermediate dummy-variable order with the distribution,
 then cyclically commute the triple sums. Push Nat casts before simplifying
 the actual zero-test counts. No endpoint/hypothesis or limit changes.
+Build002 atc72b292passes the energy, Parseval and actual triple identities.
+Continue with the original flatness-conditioned norm/count endpoint; do not
+report these exact identities alone as that completed bound.
