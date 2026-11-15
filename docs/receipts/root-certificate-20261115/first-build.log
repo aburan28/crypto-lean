@@ -1,0 +1,4 @@
+⚠ [2011/2011] Built CryptoLean.Polynomial.RootCertificate (4.9s)
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (2011 jobs).

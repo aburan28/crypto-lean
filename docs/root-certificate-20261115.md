@@ -21,3 +21,12 @@ foundations and zero trusted native exceptions. Preserve the first compile
 diagnostic and theorem statements on repairs; no proof-limit increase. These
 theorems do not verify the native parser, polynomial operations, primality,
 integer/field encoding, curve doubling or an ECDLP solver.
+
+## Completed local gate
+
+Both semantic statements compile on their first build at source
+7364d8dab7014a8bc610ed6911e7fb0839f6d47d. The canonical all-source gate
+passes108theorems with0failures and0trusted native exceptions, using only
+propext, Classical.choice and Quot.sound. No limit was raised. Complete first-
+build, all-source and axiom logs plus source hashes are retained under
+receipts/root-certificate-20261115. Hosted CI retains its own status.
