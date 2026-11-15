@@ -15,6 +15,7 @@ set_option autoImplicit false
 
 namespace CryptoLean.InterpolationKernels
 open Polynomial
+open scoped BigOperators
 
 variable {F I : Type*} [Field F]
 
@@ -143,5 +144,88 @@ theorem prefix_kernel_count {t b : ℕ} (x y : Fin t × Fin b → F)
         kernel x y dU dV (prefixSupport choice))) = Nat.card (Fin t → Fin b) :=
       Nat.card_congr (Equiv.ofInjective _ (prefix_kernel_injective x y hx dU dV ht)).symm
     _ = b ^ t := by simp [Nat.card_eq_fintype_card]
+
+/-- A color is a product of its actual evaluation linear forms. -/
+def colorProduct {t b : ℕ} (x y : Fin t × Fin b → F) (i : Fin t)
+    (u v : F[X]) : F :=
+  ∏ j : Fin b, (u.eval (x (i,j)) + y (i,j) * v.eval (x (i,j)))
+
+theorem colorProduct_eq {t b : ℕ} (x y : Fin t × Fin b → F) (i : Fin t)
+    (u v : F[X]) : colorProduct x y i u v =
+      ∏ j : Fin b, (u.eval (x (i,j)) + y (i,j) * v.eval (x (i,j))) := rfl
+
+/-- Preserve the existential choice inside a color, rather than replacing
+it by simultaneous vanishing at every record. -/
+theorem colorProduct_zero_iff {t b : ℕ} (x y : Fin t × Fin b → F) (i : Fin t)
+    (u v : F[X]) : colorProduct x y i u v = 0 ↔
+      ∃ j : Fin b, u.eval (x (i,j)) + y (i,j) * v.eval (x (i,j)) = 0 := by
+  rw [colorProduct_eq]
+  simp only [Finset.prod_eq_zero_iff, Finset.mem_univ, true_and]
+
+theorem colorProducts_zero_iff_choice {t b : ℕ} (x y : Fin t × Fin b → F)
+    (u v : F[X]) : (∀ i, colorProduct x y i u v = 0) ↔
+      ∃ choice : Fin t → Fin b, ∀ i,
+        u.eval (x (i,choice i)) + y (i,choice i) * v.eval (x (i,choice i)) = 0 := by
+  simp only [colorProduct_zero_iff]
+  constructor
+  · exact Classical.axiomOfChoice
+  · rintro ⟨choice, h⟩ i
+    exact ⟨choice i, h i⟩
+
+/-- The selected-support interface also reads as one equation per color. -/
+theorem mem_prefix_kernel_iff {t b : ℕ} (x y : Fin t × Fin b → F)
+    (dU dV : ℕ) (choice : Fin t → Fin b) (u v : F[X]) :
+    (u,v) ∈ kernel x y dU dV (prefixSupport choice) ↔
+      u.natDegree ≤ dU ∧ v.natDegree ≤ dV ∧
+        ∀ i, u.eval (x (i,choice i)) + y (i,choice i) * v.eval (x (i,choice i)) = 0 := by
+  rw [mem_kernel]
+  constructor
+  · rintro ⟨hu, hv, h⟩
+    exact ⟨hu, hv, fun i => h (i,choice i) ((mem_prefixSupport choice i _).mpr rfl)⟩
+  · rintro ⟨hu, hv, h⟩
+    refine ⟨hu, hv, ?_⟩
+    rintro ⟨i,j⟩ hj
+    have he : j = choice i := (mem_prefixSupport choice i j).mp hj
+    simpa only [he] using h i
+
+/-- Compact membership predicate for the full union. This is not asserted
+to be a linear module or an efficient nonzero-witness extractor. -/
+def symbolic {t b : ℕ} (x y : Fin t × Fin b → F) (dU dV : ℕ) :
+    Set (F[X] × F[X]) :=
+  {uv | uv.1.natDegree ≤ dU ∧ uv.2.natDegree ≤ dV ∧
+    ∀ i, colorProduct x y i uv.1 uv.2 = 0}
+
+theorem mem_symbolic {t b : ℕ} (x y : Fin t × Fin b → F) (dU dV : ℕ)
+    (u v : F[X]) : (u,v) ∈ symbolic x y dU dV ↔
+      u.natDegree ≤ dU ∧ v.natDegree ≤ dV ∧
+        ∀ i, colorProduct x y i u v = 0 := Iff.rfl
+
+/-- The symbolic product constraints describe exactly the union of the
+genuine bounded kernels, without an independence or cleanliness assumption. -/
+theorem symbolic_mem_iff_exists_kernel {t b : ℕ} (x y : Fin t × Fin b → F)
+    (dU dV : ℕ) (u v : F[X]) :
+    (u,v) ∈ symbolic x y dU dV ↔
+      ∃ choice : Fin t → Fin b, (u,v) ∈ kernel x y dU dV (prefixSupport choice) := by
+  rw [mem_symbolic]
+  constructor
+  · rintro ⟨hu, hv, h⟩
+    obtain ⟨choice, hc⟩ := (colorProducts_zero_iff_choice x y u v).mp h
+    exact ⟨choice, (mem_prefix_kernel_iff x y dU dV choice u v).mpr ⟨hu, hv, hc⟩⟩
+  · rintro ⟨choice, hc⟩
+    obtain ⟨hu, hv, h⟩ := (mem_prefix_kernel_iff x y dU dV choice u v).mp hc
+    exact ⟨hu, hv, (colorProducts_zero_iff_choice x y u v).mpr ⟨choice, h⟩⟩
+
+/-- Nonzero extraction remains an explicit obligation on both sides. -/
+theorem symbolic_nonzero_iff_exists_kernel {t b : ℕ} (x y : Fin t × Fin b → F)
+    (dU dV : ℕ) :
+    (∃ uv : F[X] × F[X], uv ≠ 0 ∧ uv ∈ symbolic x y dU dV) ↔
+      ∃ choice : Fin t → Fin b, ∃ uv : F[X] × F[X],
+        uv ≠ 0 ∧ uv ∈ kernel x y dU dV (prefixSupport choice) := by
+  constructor
+  · rintro ⟨⟨u,v⟩, hne, h⟩
+    obtain ⟨choice, hc⟩ := (symbolic_mem_iff_exists_kernel x y dU dV u v).mp h
+    exact ⟨choice, (u,v), hne, hc⟩
+  · rintro ⟨choice, ⟨u,v⟩, hne, hc⟩
+    exact ⟨(u,v), hne, (symbolic_mem_iff_exists_kernel x y dU dV u v).mpr ⟨choice, hc⟩⟩
 
 end CryptoLean.InterpolationKernels
