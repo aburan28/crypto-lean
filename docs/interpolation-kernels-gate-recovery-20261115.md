@@ -17,3 +17,12 @@ fixtures. Then run a fresh canonical gate002 over the same complete source
 inventory. Preserve gate001 and every original build/probe receipt. Pin the
 new gate source/commit separately as a dependency change. A success under
 gate002 must not be described as a success of the old gate version.
+
+Observed continuation: gate002 compiles every tracked source but the audit
+CLI's String.toName parser turns the hyphenated diagnostic module path into
+Name.anonymous. The valid-identifier control parses correctly. The probes
+were moved, with byte-identical contents, into
+docs/receipts/InterpolationKernels20261115/. No source was dropped from
+auditing. Final gate003 passes167theorems,0failures,0trusted-native
+exceptions. module-name001.log and probes.sha256 retain the diagnosis and
+new paths. The axiom auditor itself was not changed.

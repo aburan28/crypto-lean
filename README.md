@@ -33,9 +33,10 @@ evaluation kernels of clean colored prefixes and counts their finite range
 as b^t when t is within the u-degree cap. It also represents their union
 exactly by products of evaluation forms, keeping nonzero extraction explicit.
 It supplies no witness-search algorithm. The prospective inheritance plans,
-actual prime-field coordinate assembly and build receipts are under
-`docs/interpolation-kernels-20261115-plan.md` and
-`docs/receipts/interpolation-kernels-20261115/`.
+actual prime-field coordinate assembly and build receipts are linked from
+`docs/interpolation-kernels-20261115.md`. The full gate audits 167 theorems,
+0 failures and 0 trusted-native exceptions. The gate dependency recovery and
+both earlier failed receipts are retained beside the source pins.
 
 `CryptoLean.Group.PartiteCoverage` counts actual zero-sum tuples in disjoint
 random lists over any finite additive commutative group. It derives exact
