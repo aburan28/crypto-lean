@@ -21,3 +21,9 @@ Correlated/adaptive lists are outside that consumer model.
 
 Preserve all failed builds/source pins and canonical all-source/axiom gate
 receipts. No native computation, proof-limit override or numerical case.
+
+Build001 at1781b76 fails on binder order after distributing products of
+finite sums and on a cast/count normalization. Keep the exact energy/triple
+statements: align the intermediate dummy-variable order with the distribution,
+then cyclically commute the triple sums. Push Nat casts before simplifying
+the actual zero-test counts. No endpoint/hypothesis or limit changes.

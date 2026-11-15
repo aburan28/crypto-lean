@@ -17,6 +17,7 @@ noncomputable def returnCount (S : Finset G) : ℕ := by
   classical
   exact ∑ x ∈ S, ∑ y ∈ S, ∑ z ∈ S, if x+y=z then 1 else 0
 
+omit [Fintype G] in
 theorem charSum_trivial (S : Finset G) : charSum S 1 = (S.card : ℂ) := by
   simp [charSum]
 
@@ -26,7 +27,7 @@ theorem energy (S : Finset G) :
       (Fintype.card G : ℂ) * (S.card : ℂ) := by
   classical
   calc
-    _ = ∑ ψ : AddChar G ℂ, ∑ x ∈ S, ∑ y ∈ S, ψ (x-y) := by
+    _ = ∑ ψ : AddChar G ℂ, ∑ x ∈ S, ∑ y ∈ S, ψ (y-x) := by
       apply Finset.sum_congr rfl
       intro ψ _
       simp only [charSum, map_sum, Finset.sum_mul, Finset.mul_sum]
@@ -35,7 +36,7 @@ theorem energy (S : Finset G) :
       apply Finset.sum_congr rfl
       intro y _
       rw [ψ.map_sub_eq_div, div_eq_mul_inv, ψ.inv_apply_eq_conj]
-    _ = ∑ x ∈ S, ∑ y ∈ S, ∑ ψ : AddChar G ℂ, ψ (x-y) := by
+    _ = ∑ x ∈ S, ∑ y ∈ S, ∑ ψ : AddChar G ℂ, ψ (y-x) := by
       simp_rw [Finset.sum_comm (s := (Finset.univ : Finset (AddChar G ℂ))) (t := S)]
     _ = _ := by
       simp [AddChar.sum_apply_eq_ite, sub_eq_zero, mul_comm]
@@ -53,7 +54,7 @@ theorem triple_identity (S : Finset G) :
       (Fintype.card G : ℂ) * (returnCount S : ℂ) := by
   classical
   calc
-    _ = ∑ ψ : AddChar G ℂ, ∑ x ∈ S, ∑ y ∈ S, ∑ z ∈ S, ψ (x+y-z) := by
+    _ = ∑ ψ : AddChar G ℂ, ∑ x ∈ S, ∑ y ∈ S, ∑ z ∈ S, ψ (y+z-x) := by
       apply Finset.sum_congr rfl
       intro ψ _
       simp only [charSum, pow_two, map_sum, Finset.sum_mul, Finset.mul_sum]
@@ -64,9 +65,18 @@ theorem triple_identity (S : Finset G) :
       apply Finset.sum_congr rfl
       intro z _
       rw [ψ.map_sub_eq_div, ψ.map_add_eq_mul, div_eq_mul_inv, ψ.inv_apply_eq_conj]
-    _ = ∑ x ∈ S, ∑ y ∈ S, ∑ z ∈ S, ∑ ψ : AddChar G ℂ, ψ (x+y-z) := by
+      ring
+    _ = ∑ x ∈ S, ∑ y ∈ S, ∑ z ∈ S, ∑ ψ : AddChar G ℂ, ψ (y+z-x) := by
       simp_rw [Finset.sum_comm (s := (Finset.univ : Finset (AddChar G ℂ))) (t := S)]
+    _ = ∑ y ∈ S, ∑ z ∈ S, ∑ x ∈ S, ∑ ψ : AddChar G ℂ, ψ (y+z-x) := by
+      rw [Finset.sum_comm]
+      apply Finset.sum_congr rfl
+      intro y _
+      exact Finset.sum_comm
     _ = _ := by
-      simp [AddChar.sum_apply_eq_ite, sub_eq_zero, returnCount, Finset.mul_sum, mul_ite]
+      rw [returnCount]
+      push_cast
+      simp only [AddChar.sum_apply_eq_ite, sub_eq_zero, Finset.mul_sum, mul_ite,
+        mul_one, mul_zero]
 
 end CryptoLean.SubsetFourier
