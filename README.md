@@ -35,6 +35,12 @@ equivalent to `Pr[Z>0] >= L/(r+L-1)`. It proves existence coverage, not a fast
 relation selector. Source/axiom receipts and the finite model are in
 `docs/partite-coverage-20261115.md`.
 
+`CryptoLean.Curve.LineIncidence` reuses Mathlib's Weierstrass equation and
+addition polynomial to bound secant fibres. A finite family of s prescribed
+slopes has at most 2s distinct-abscissa affine partners for any known curve
+point. It is a geometric count; probabilistic sampling and algorithm costs
+remain consumer obligations. See `docs/line-incidence-20261115.md`.
+
 ## Using it
 
 In the consumer's `lakefile.toml`:
