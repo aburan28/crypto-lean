@@ -1,0 +1,46 @@
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:33:13: error(lean.unknownIdentifier): Unknown identifier `pow_eq_zero`
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:62:2: error: Tactic `apply` failed: could not unify the conclusion of `@natDegree_sub_le_of_le`
+  (?p - ?q).natDegree ≤ max ?m ?n
+with the goal
+  (curveNorm a b u v).natDegree ≤ t
+
+Note: The full type of `@natDegree_sub_le_of_le` is
+  ∀ {R : Type ?u.36} {n m : ℕ} [inst : Ring R] {p q : R[X]},
+    p.natDegree ≤ m → q.natDegree ≤ n → (p - q).natDegree ≤ max m n
+
+K : Type u_1
+inst✝ : Field K
+a b : K
+u v : K[X]
+t : ℕ
+hu : 2 * u.natDegree ≤ t
+hv : 3 + 2 * v.natDegree ≤ t
+⊢ (curveNorm a b u v).natDegree ≤ t
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:90:29: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:92:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  0 ≤ c ≤ 1
+  c - 2*d ≥ 0
+where
+ c := ↑(Multiset.count x S.val)
+ d := ↑(if True then 1 else 0)
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:90:29: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.roots_pow, Polynomial.roots_X_sub_C, Multiset.count_nsmul, Multiset.count_singleton,
+    hr] at hcount
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:105:31: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidableEq K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Polynomial/NormSaturatedInterpolation.lean:131:31: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidableEq K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
