@@ -1,0 +1,6 @@
+CryptoLean/Curve/TightNormRelation.lean:26:4: error: Type mismatch
+  (LinearMap.injective_iff_surjective_of_finrank_eq_finrank hdim).mpr ?m.107
+has type
+  Function.Injective ⇑?m.104
+but is expected to have type
+  Function.Injective ⇑f

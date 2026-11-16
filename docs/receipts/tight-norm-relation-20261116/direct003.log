@@ -1,0 +1,53 @@
+CryptoLean/Curve/TightNormRelation.lean:32:2: error: Type mismatch: After simplification, term
+  Ideal.Quotient.eq_zero_iff_mem.mpr ha
+ has type
+  @Eq (A ⧸ J) ((Ideal.Quotient.mk J) a) 0
+but is expected to have type
+  @Eq (A ⧸ J) ((Ideal.quotientMapₐ J (AlgHom.id K A) hle) ((Ideal.Quotient.mk I) a)) 0
+CryptoLean/Curve/TightNormRelation.lean:117:5: error(lean.unknownIdentifier): Unknown constant `Ideal.finrank_quotient_span_eq_natDegree_norm`
+CryptoLean/Curve/TightNormRelation.lean:130:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  AddCommMonoid W.Point
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Curve/TightNormRelation.lean:136:75: error(lean.invalidField): Invalid field `map_prod`: The environment does not contain `RingHom.map_prod`, so it is not possible to project the field `map_prod` from an expression
+  FractionalIdeal.coeIdealHom W.CoordinateRing⁰ W.FunctionField
+of type
+  Ideal W.CoordinateRing →+* FractionalIdeal W.CoordinateRing⁰ W.FunctionField
+CryptoLean/Curve/TightNormRelation.lean:150:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  AddCommMonoid W.Point
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Curve/TightNormRelation.lean:153:10: error: unsolved goals
+case inl
+K : Type u_1
+inst✝¹ : Field K
+W : WeierstrassCurve.Affine K
+ι : Type u_2
+inst✝ : Fintype ι
+x y : ι → K
+hx : Function.Injective x
+hc : ∀ (i : ι), W.Nonsingular (x i) (y i)
+u v : K[X]
+hp : (u, v) ≠ 0
+hr : ∀ (i : ι), eval (x i) u + y i * eval (x i) v = 0
+hd : ((Algebra.norm K[X]) (rowFunction W u v)).natDegree = Fintype.card ι
+h : IsEmpty ι
+⊢ sorry () = 0
+CryptoLean/Curve/TightNormRelation.lean:162:20: warning: Possibly looping simp theorem: `NormSaturatedInterpolation.curveNorm.eq_1`
+
+Note: Possibly caused by: `NormSaturatedInterpolation.curveCubic`, `mul_comm`, and `X_mul_C`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+CryptoLean/Curve/TightNormRelation.lean:163:4: warning: Possibly looping simp theorem: `NormSaturatedInterpolation.curveCubic.eq_1`
+
+Note: Possibly caused by: `mul_comm` and `X_mul_C`
+
+Hint: You can disable a simp theorem from the default simp set by passing `- theoremName` to `simp`.
+CryptoLean/Curve/TightNormRelation.lean:162:2: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+CryptoLean/Curve/TightNormRelation.lean:172:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  AddCommMonoid W.Point
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

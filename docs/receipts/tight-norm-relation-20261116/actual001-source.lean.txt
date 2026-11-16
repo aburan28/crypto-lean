@@ -1,0 +1,51 @@
+import CryptoLean.Curve.TightNormRelation
+
+set_option autoImplicit false
+noncomputable section
+open scoped BigOperators Polynomial.Bivariate
+open Polynomial WeierstrassCurve.Affine CryptoLean.TightNormRelation
+
+namespace TightNormActual
+variable {K : Type*} [Field K] [DecidableEq K] {W : WeierstrassCurve.Affine K}
+
+theorem horizontal_actual_group_relation
+    (ha₁ : W.a₁=0) (ha₂ : W.a₂=0) (ha₃ : W.a₃=0) (r s : K)
+    (hx : Function.Injective (fun i : Fin 3 ↦ ![r,s,-(r+s)] i))
+    (hc : ∀ i : Fin 3, W.Nonsingular (![r,s,-(r+s)] i) (-1)) :
+    (∑ i : Fin 3, (Point.some (![r,s,-(r+s)] i) (-1) (hc i) : W.Point))=0 := by
+  apply short_capped_row_sum_zero W ha₁ ha₂ ha₃
+    (fun i : Fin 3 ↦ ![r,s,-(r+s)] i) (fun _ ↦ (-1 : K)) hx hc 1 1
+  · simp
+  · intro i
+    simp
+  · simp
+  · simp
+
+theorem empty_affine_row_control :
+    let x : Fin 0 → K := Fin.elim0
+    let y : Fin 0 → K := Fin.elim0
+    let hc : ∀ i : Fin 0, W.Nonsingular (x i) (y i) := fun i ↦ Fin.elim0 i
+    (∑ i : Fin 0, (Point.some (x i) (y i) (hc i) : W.Point))=0 := by
+  dsimp
+  apply tight_row_sum_zero W Fin.elim0 Fin.elim0
+    (fun i ↦ Fin.elim0 i) (fun i ↦ Fin.elim0 i) 1 0
+  · simp
+  · intro i
+    exact Fin.elim0 i
+  · simp only [rowFunction,zero_smul,add_zero,one_smul,Algebra.norm_one,
+      Polynomial.natDegree_one,Fintype.card_fin]
+
+theorem repeated_point_not_coprime (x y : K) (hc : W.Nonsingular x y) :
+    ¬ IsCoprime (CoordinateRing.XYIdeal W x (C y))
+      (CoordinateRing.XYIdeal W x (C y)) := by
+  intro h
+  have ht : CoordinateRing.XYIdeal W x (C y)=⊤ := by simpa using h.sup_eq
+  have hm : (1 : W.CoordinateRing) ∈ CoordinateRing.XYIdeal W x (C y) := by
+    rw [ht]
+    trivial
+  have hz := Ideal.Quotient.eq_zero_iff_mem.mpr hm
+  have he := congrArg (CoordinateRing.quotientXYIdealEquiv hc.left) hz
+  have hb : (1 : K)=0 := by simpa only [map_one,map_zero] using he
+  exact one_ne_zero hb
+
+end TightNormActual

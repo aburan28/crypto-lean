@@ -56,3 +56,4 @@ import CryptoLean.Polynomial.NormSaturatedInterpolation
 import CryptoLean.Polynomial.MonicNormSelector
 import CryptoLean.Polynomial.DoublingNormResidues
 import CryptoLean.Polynomial.CubicAdicLifting
+import CryptoLean.Curve.TightNormRelation

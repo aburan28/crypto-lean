@@ -1,0 +1,30 @@
+CryptoLean/Curve/TightNormRelation.lean:196:26: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+CryptoLean/Curve/TightNormRelation.lean:200:25: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  β i * k
+in the target expression
+  α i • G + (k * β i) • G = (α i + k * β i) • G
+
+A : Type u_2
+inst✝² : AddCommGroup A
+ι : Type u_3
+inst✝¹ : Fintype ι
+G H : A
+q k : ℕ
+inst✝ : Fact (Nat.Prime q)
+ho : addOrderOf G = q
+hH : H = k • G
+α β : ι → ℕ
+hr : ∑ i, α i • G + β sorry • H = 0
+hb : ∑ i, ↑(β i) ≠ 0
+i : ι
+⊢ α i • G + (k * β i) • G = (α i + k * β i) • G
+CryptoLean/Curve/TightNormRelation.lean:201:11: error: `simp` made no progress
+CryptoLean/Curve/TightNormRelation.lean:213:8: warning: declaration uses `sorry`
+CryptoLean/Curve/TightNormRelation.lean:218:5: warning: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

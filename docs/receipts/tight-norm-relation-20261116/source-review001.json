@@ -1,0 +1,22 @@
+{
+  "formal_owner_laws": 13,
+  "symbolic_applications": 4,
+  "named_axiom_prints": 13,
+  "final_owner_build_exit": 0,
+  "actual_final_exit": 0,
+  "mixed_final_exit": 0,
+  "axioms_exit": 0,
+  "application_outputs_empty": true,
+  "new_scientific_execution": false,
+  "complete_classical_subexponential_ECDLP": false,
+  "raw_source_snapshots": "exact compiler inputs archived as .lean.txt so failed inputs do not become maintained Lean targets",
+  "failures": {
+    "direct001": "missing polynomial Y scope; quotient map implicit and dependent finrank API; default heartbeat cascades preserved",
+    "direct002": "explicit linear map coercion required",
+    "direct003": "quotient reduce; norm theorem namespace; point group DecidableEq; ringHom map_prod API; looping simp hit default recursion",
+    "direct004": "additive/multiplicative type-tag expression; unused instances/simp warning",
+    "direct006": "sum binder precedence and multiplication order; downstream sorry warnings are failures, not accepted proofs",
+    "direct007": "wrong sum_nsmul lemma; failed simp no progress",
+    "actual001": "map_one API, corrected unused instance"
+  }
+}
