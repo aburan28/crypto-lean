@@ -1,0 +1,19 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "meta": null,
+    "content": [],
+    "structuredContent": {
+      "status": "ERROR",
+      "message": "The task service returned an unexpected error. Do not claim success. For a create or update request, list tasks to check whether the change was saved before retrying, so you do not create duplicates. If the error persists, report the failure to the user.",
+      "user_message": "Unable to complete task request. Try again."
+    },
+    "isError": false
+  },
+  "isError": false
+}
