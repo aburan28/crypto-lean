@@ -1,0 +1,21 @@
+import CryptoLean.Polynomial.ProjectiveSubresultant
+
+#print axioms CryptoLean.ProjectiveSubresultant.exact_subresultant
+#print axioms CryptoLean.ProjectiveSubresultant.residual_scaling
+#print axioms CryptoLean.ProjectiveSubresultant.diagonal_identity
+#print axioms CryptoLean.ProjectiveSubresultant.original_roots_residual_zero
+#print axioms CryptoLean.ProjectiveSubresultant.retained_residual_equiv
+#print axioms CryptoLean.ProjectiveSubresultant.complete_branch_split
+#print axioms CryptoLean.ProjectiveSubresultant.diagonal_residual_zero
+#print axioms CryptoLean.ProjectiveSubresultant.leaf_x_square
+#print axioms CryptoLean.ProjectiveSubresultant.leaf_xy_coeffs
+#print axioms CryptoLean.ProjectiveSubresultant.leaf_anchors
+#print axioms CryptoLean.ProjectiveSubresultant.projective_anchor_forms
+#print axioms CryptoLean.ProjectiveSubresultant.exact_source_anchors
+#print axioms CryptoLean.ProjectiveSubresultant.recover_source_parameters
+#print axioms CryptoLean.ProjectiveSubresultant.modelCode_eq
+#print axioms CryptoLean.ProjectiveSubresultant.modelCandidates_card_le
+#print axioms CryptoLean.ProjectiveSubresultant.model_curve_cover
+#print axioms CryptoLean.ProjectiveSubresultant.modelWindow_card_le
+#print axioms CryptoLean.ProjectiveSubresultant.profile_capacity_square
+#print axioms CryptoLean.ProjectiveSubresultant.universal_cover_charge

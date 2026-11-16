@@ -1,0 +1,27 @@
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:152:30: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b τ σ : R
+⊢ ((((coeff (-(C (C X) * (C X + C (C (C (C σ))) * C (C (C X))) ^ 2))) 0).coeff 2).coeff 1).coeff 0 = -1 ∧
+    ((((coeff (-(C (C X) * (C X + C (C (C (C σ))) * C (C (C X))) ^ 2))) 0).coeff 1).coeff 1).coeff 1 = -(2 * σ) ∧
+      2 * τ * ((((coeff ((C X + C (C (C (C σ))) * C (C (C X))) ^ 2)) 0).coeff 2).coeff 0).coeff 0 = 2 * τ ∧
+        ((((coeff
+                            (-(2 *
+                                  (C (C (C (C a))) * (C X + C (C (C (C σ))) * C (C (C X))) * C (C (C X)) +
+                                    2 * C (C (C (C b))) * C (C (C X)) ^ 2) *
+                                (X + C (C (C (C τ))) * C (C X)))))
+                          1).coeff
+                      1).coeff
+                  0).coeff
+              1 =
+            -(2 * a) ∧
+          ((((coeff
+                            (-(2 *
+                                  (C (C (C (C a))) * (C X + C (C (C (C σ))) * C (C (C X))) * C (C (C X)) +
+                                    2 * C (C (C (C b))) * C (C (C X)) ^ 2) *
+                                (X + C (C (C (C τ))) * C (C X)))))
+                          1).coeff
+                      0).coeff
+                  0).coeff
+              2 =
+            -(2 * a * σ) - 4 * b

@@ -50,3 +50,4 @@ import CryptoLean.Polynomial.TwoChartCoefficients
 import CryptoLean.Polynomial.SmallLiftRigidity
 import CryptoLean.Polynomial.RankTwoSourceAnchors
 import CryptoLean.Polynomial.LeafModuleAnchors
+import CryptoLean.Polynomial.ProjectiveSubresultant

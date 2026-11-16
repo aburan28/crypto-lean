@@ -20,7 +20,7 @@ theorem arbitrary_order_same_code (a b τ σ : K) (A A' : Polynomial (MvPolynomi
       leafCode a b τ σ (MvPolynomial.X 0) (MvPolynomial.X 1) A' (C F) 0 m := by
   have hl : ∀ i < n, (C F*X^n).coeff i=0 := by
     intro i hi
-    simp [Polynomial.coeff_C_mul_X_pow,Nat.ne_of_lt hi]
+    simp [Nat.ne_of_lt hi]
   rw [leafCode_values _ _ _ _ _ _ _ _ _ _ hl,
     leafCode_values _ _ _ _ _ _ _ _ _ _ (by omega)]
   simp only [Polynomial.coeff_C_mul_X_pow,ite_true,Polynomial.coeff_C_zero]
