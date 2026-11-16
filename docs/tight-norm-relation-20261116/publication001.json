@@ -1,0 +1,21 @@
+{
+  "source_commit": "dd78a8350b504b716d3a71d99d235dd70be1af5e",
+  "canonical_exit": 0,
+  "canonical_theorems": 684,
+  "failing": 0,
+  "trusted": 0,
+  "delta": 19,
+  "owner_laws": 13,
+  "actual_applications": 4,
+  "generated_or_maintained_equations": [
+    "CryptoLean.TightNormRelation.rowFunction.eq_1",
+    "WeierstrassCurve.Affine.CoordinateRing.quotientXYIdealEquiv.congr_simp"
+  ],
+  "actual_output_empty": true,
+  "mixed_output_empty": true,
+  "named_axiom_prints": 13,
+  "claim_standing": "unverified; local kernel audit is not an independent signed PCC verdict",
+  "new_scientific_execution": false,
+  "new_discovery_candidate": "translation folding; HAND/prospective only",
+  "complete_classical_subexponential_ECDLP": false
+}
