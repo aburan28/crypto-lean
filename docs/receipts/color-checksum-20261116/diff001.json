@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "origin/main"
+      ],
+      "exit_code": 2,
+      "stdout": "docs/receipts/color-checksum-20261116/assembly001.log:1: trailing whitespace.\n+docs/receipts/ColorChecksum20261116/FinalProbe.lean:23:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:403: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:25:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:411: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:26:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:419: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:29:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:427: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:30:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:454: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:46:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:462: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:47:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:470: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:50:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:478: trailing whitespace.\n+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:51:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:496: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:28:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:504: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:29:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:512: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:32:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:520: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:33:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:528: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:34:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:547: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:41:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:555: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:42:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:563: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:45:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:571: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:46:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:579: trailing whitespace.\n+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:47:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:603: trailing whitespace.\n+docs/receipts/ColorChecksum20261116/FinalProbe.lean:23:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:664: trailing whitespace.\n+docs/receipts/RankThreshold20261115/FinalProbe.lean:17:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:672: trailing whitespace.\n+docs/receipts/RankThreshold20261115/FinalProbe.lean:18:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:680: trailing whitespace.\n+docs/receipts/RankThreshold20261115/FinalProbe.lean:21:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:699: trailing whitespace.\n+docs/receipts/RankThreshold20261115/FloorProbe.lean:43:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:707: trailing whitespace.\n+docs/receipts/RankThreshold20261115/FloorProbe.lean:44:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:720: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FinalProbe.lean:15:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:728: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FinalProbe.lean:16:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:736: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FinalProbe.lean:19:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:756: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FloorProbe.lean:49:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:764: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FloorProbe.lean:50:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:772: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FloorProbe.lean:53:2: warning: Try this: \ndocs/receipts/color-checksum-20261116/gate001/_/build.log:780: trailing whitespace.\n+docs/receipts/SelectorTree20261116/FloorProbe.lean:54:2: warning: Try this: \n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "origin/main",
+        "--",
+        "*.lean",
+        "*.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "interpretation": "Preserve original diagnostic log spaces; source/prose must exit0. No policy waiver."
+}

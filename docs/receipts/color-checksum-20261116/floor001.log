@@ -1,0 +1,21 @@
+Finset.sum_erase_add.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [AddCommMonoid M] [DecidableEq ι] (s : Finset ι)
+  (f : ι → M) {a : ι} (h : a ∈ s) : ∑ x ∈ s.erase a, f x + f a = ∑ x ∈ s, f x
+docs/receipts/ColorChecksum20261116/FloorProbe.lean:12:7: error(lean.unknownIdentifier): Unknown identifier `Function.update_same`
+Function.update_of_ne.{u, v} {α : Sort u} {β : α → Sort v} [DecidableEq α] {a a' : α} (h : a ≠ a') (v : β a')
+  (f : (a : α) → β a) : Function.update f a' v a = f a
+Finset.sum_nsmul.{u_1, u_3} {ι : Type u_1} {M : Type u_3} [AddCommMonoid M] (s : Finset ι) (n : ℕ) (f : ι → M) :
+  ∑ x ∈ s, n • f x = n • ∑ x ∈ s, f x
+Finset.card_image_le.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Finset α} {f : α → β} [DecidableEq β] :
+  (Finset.image f s).card ≤ s.card
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α
+docs/receipts/ColorChecksum20261116/FloorProbe.lean:25:8: error: typeclass instance problem is stuck
+  AddCommMonoid ?m.24
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `AddCommMonoid` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+docs/receipts/ColorChecksum20261116/FloorProbe.lean:28:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (I → Fin (K + 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

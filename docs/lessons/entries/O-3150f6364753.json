@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T01:33:13Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/21",
+    "https://github.com/aburan28/crypto-lean/blob/a6b4a9c39d0a996c8f127d45174f54fd92a2496f/docs/selector-tree-20261116.md"
+  ],
+  "kind": "outcome",
+  "note": "Existing equal-fiber, kernel and Sigma/surjection cardinality laws suffice. Known-witness retention does not supply unknown-witness extraction. Side-local selection need not be uniform; independence belongs to the right raw product world. Read full commit IDs from git rather than transcribing; a head guard rejected the wrong ID. Local215/0/0, three standard-axiom prints; hosted zero-step billing failure, CI-green=false. Full algorithm open.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate",
+  "task": "PR21 arbitrary side-local shortlist budget and actual point-group assembly"
+}

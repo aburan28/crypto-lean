@@ -1,0 +1,6 @@
+import CryptoLean.Group.ColorChecksums
+
+#print axioms CryptoLean.ColorChecksums.weights_eq_of_common_target
+#print axioms CryptoLean.ColorChecksums.common_target_iff
+#print axioms CryptoLean.ColorChecksums.checksum_eq_profile
+#print axioms CryptoLean.ColorChecksums.checksum_image_card_le

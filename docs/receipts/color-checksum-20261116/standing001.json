@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "/workspace/scratch/selector-kernel-assessment/tools/pcc/pcc.py",
+        "--repo",
+        "/workspace/scratch/crypto-lean",
+        "standing",
+        "PCC-20261116-06676d"
+      ],
+      "exit_code": 2,
+      "stdout": "PCC-20261116-06676d: unverified\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "/workspace/scratch/selector-kernel-assessment/tools/pcc/pcc.py",
+        "--repo",
+        "/workspace/scratch/crypto-lean",
+        "ledger",
+        "verify",
+        "--base",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "ledger: 7 entries, chain ok\n",
+      "stderr": ""
+    }
+  ]
+}

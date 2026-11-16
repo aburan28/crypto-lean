@@ -17,6 +17,7 @@ import CryptoLean.Group.ShiftMoments
 import CryptoLean.Group.RankThreshold
 import CryptoLean.Group.TranslatedIntersections
 import CryptoLean.Group.ShortlistCompletion
+import CryptoLean.Group.ColorChecksums
 import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.InterpolationKernels

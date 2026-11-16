@@ -1,0 +1,17 @@
+digraph Checksums {
+  graph [rankdir=TB,bgcolor="white",pad=0.14,nodesep=0.25,ranksep=0.32];
+  node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,
+        color="#355b76",fillcolor="#edf5fb",margin="0.14,0.09"];
+  edge [color="#355b76",fontname="DejaVu Sans",fontsize=10];
+  legal [label="All one-per-color tuples share known additive target\nsum_i lambda(i,c_i) = T for every c"];
+  weights [label="Checked characterization\nweights must be constant inside each color"];
+  profile [label="Checked natural-array factorization\nH(u) sees only color totals d_i = sum_j u(i,j)"];
+  bound [label="Checked finite image bound\nd_i <= K gives at most (K+1)^m values",fillcolor="#fff0df",color="#a07124"];
+  sample [label="HAND independent uniform residue reading\nsurvival <= min(1,(K+1)^m / |Q|)\nfull representation count need not mix"];
+  compatible [label="VALID compatibility layer\nknown target keeps every legal final vector",fillcolor="#e7f3e8",color="#3d7542"];
+  next [label="OPEN joint construction\nconnect compatible generation to actual group zero\ncharge construction, yield and recovery",style="rounded,dashed",fillcolor="#ffffff",color="#a07124"];
+  legal -> weights -> profile -> bound -> sample;
+  weights -> compatible;
+  compatible -> next [style=dashed];
+  sample -> next [style=dashed];
+}

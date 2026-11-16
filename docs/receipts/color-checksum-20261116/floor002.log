@@ -1,0 +1,12 @@
+Finset.sum_erase_add.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [AddCommMonoid M] [DecidableEq ι] (s : Finset ι)
+  (f : ι → M) {a : ι} (h : a ∈ s) : ∑ x ∈ s.erase a, f x + f a = ∑ x ∈ s, f x
+Function.update_self.{u, v} {α : Sort u} {β : α → Sort v} [DecidableEq α] (a : α) (v : β a) (f : (a : α) → β a) :
+  Function.update f a v a = v
+Function.update_of_ne.{u, v} {α : Sort u} {β : α → Sort v} [DecidableEq α] {a a' : α} (h : a ≠ a') (v : β a')
+  (f : (a : α) → β a) : Function.update f a' v a = f a
+Finset.sum_nsmul_assoc.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [AddCommMonoid M] (s : Finset ι) (f : ι → ℕ) (a : M) :
+  ∑ i ∈ s, f i • a = (∑ i ∈ s, f i) • a
+Finset.card_image_le.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Finset α} {f : α → β} [DecidableEq β] :
+  (Finset.image f s).card ≤ s.card
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α

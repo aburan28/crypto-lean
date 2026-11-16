@@ -1,0 +1,213 @@
+{
+  "checked_at": "2026-11-16T01:49:25.626086+00:00",
+  "older_claims": 6,
+  "subjects": [
+    {
+      "claim": "PCC-20261115-102ac7",
+      "path": "docs/auxiliary-shift-20261115-plan.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-102ac7",
+      "path": "docs/receipts/AuxiliaryShift20261115/FloorProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-102ac7",
+      "path": "docs/receipts/auxiliary-shift-20261115/floor004.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-102ac7",
+      "path": "docs/receipts/auxiliary-shift-20261115/diff001.json",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-9ea735",
+      "path": "docs/rank-threshold-20261115-plan.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-9ea735",
+      "path": "docs/receipts/RankThreshold20261115/FloorProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-9ea735",
+      "path": "docs/receipts/rank-threshold-20261115/floor001.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "docs/centered-completion-20261115.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "CryptoLean/Curve/CenteredCompletion.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "docs/receipts/centered-completion-20261115/gate001/_/audit.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "docs/centered-completion-20261115/report.pdf",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261115-e80d3e",
+      "path": "docs/receipts/centered-completion-20261115/publication.json",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/auxiliary-shift-20261115.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "CryptoLean/Group/ShiftRepresentations.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "CryptoLean/Group/ShiftMoments.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "CryptoLean/Group/RankThreshold.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/receipts/AuxiliaryShift20261115/FinalProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/receipts/RankThreshold20261115/FinalProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/receipts/auxiliary-shift-20261115/gate001/_/audit.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/receipts/auxiliary-shift-20261115/axioms001.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/auxiliary-shift-20261115/report.pdf",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-a6bb62",
+      "path": "docs/receipts/auxiliary-shift-20261115/publication.json",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/selector-tree-20261116.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "CryptoLean/Group/ShortlistCompletion.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/receipts/SelectorTree20261116/FinalProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/receipts/selector-tree-20261116/gate001/_/audit.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/receipts/selector-tree-20261116/axioms001.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/selector-tree-20261116/report.pdf",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/receipts/selector-tree-20261116/publication.json",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/selector-tree-20261116-plan.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-d003a9",
+      "path": "docs/receipts/SelectorTree20261116/FloorProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/batch-selector-query-20261116.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "CryptoLean/Group/TranslatedIntersections.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/receipts/batch-selector-query-20261116/gate001/_/audit.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/receipts/batch-selector-query-20261116/axioms001.log",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/batch-selector-query-20261116/report.pdf",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/receipts/batch-selector-query-20261116/publication.json",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/batch-selector-query-20261116-plan.md",
+      "matches": true
+    },
+    {
+      "claim": "PCC-20261116-f43793",
+      "path": "docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean",
+      "matches": true
+    }
+  ],
+  "owner_ledger_exact_base": true,
+  "base_rows": 6
+}

@@ -1,0 +1,79 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T01:49:43Z",
+ "id": "PCC-20261116-06676d",
+ "kind": "statement",
+ "producer": {
+  "commit": "5b6bdf1251dfce5d2ecf174ed4d627db53b0cf7c",
+  "model": "",
+  "session": "color-checksum-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/color-checksum-20261116.md",
+    "sha256": "636761338709157e891fdf6ce8e2d13cbaaaab59ef255eea1b886414d4ad1af4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/ColorChecksums.lean",
+    "sha256": "5ecb6d9850187b32a560526fe6c38fb05f3ee69f8bc78d30d8a54d7c1a90d27f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ColorChecksum20261116/FinalProbe.lean",
+    "sha256": "90e46d0bdc53bd1b5d480fd05c832fee26748eaa039e70e308de52f2d409e6f1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/color-checksum-20261116/gate001/_/audit.log",
+    "sha256": "68bdfa18f1d1b3c0e5da69cd431720204ecc95b27da4ab6dd7468b173380b612"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/color-checksum-20261116/axioms001.log",
+    "sha256": "638d7fc806dd565f5e9d7725b3e95cc5fb6cb3e8652513a2f5895151fe072174"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/color-checksum-20261116/report.pdf",
+    "sha256": "257d06b6820fe86b461a99350de80f813937957438e17b63174c59b60f79e620"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/color-checksum-20261116/publication.json",
+    "sha256": "8f2a046912c32e4193f3ce45bb95f6a58386e2e974834df79100390ab4c79301"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/color-checksum-20261116-plan.md",
+    "sha256": "8803c37d94c0723add7291305a577ca2d4b7b2640deea4094d4966f2d3c99270"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ColorChecksum20261116/FloorProbe.lean",
+    "sha256": "1eb14e564ced47cf7959c8758363d21382e03403637d57e6212d5a6de1e43888"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Universal known-target coefficient checksum only; formal finite count and actual instances, hand independent-residue probability and balanced representation application. No general overlap/selector lower bound, group-zero-only characterization, joint generator/yield bound, complete ECDLP algorithm, measured speed, signed verification, native numerical, paid or qualification execution.",
+ "statement": "Four shared finite-group laws characterize an additive checksum with a common target for every one-per-color tuple, factor natural partial coefficients through color totals, and cap its finite value image by (K+1)^m. Actual prime-field point and ZMod endpoints type-check. The canonical local audit covers 219 theorems with zero failures or trusted-native exceptions and four standard-axiom prints. A separate hand analysis limits independent uniform-residue survival by the number of color profiles rather than the full overlapping representation count."
+}
