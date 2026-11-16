@@ -1,0 +1,13 @@
+digraph Pool {
+  graph [rankdir=TB,bgcolor="transparent",pad="0.15",nodesep="0.25",ranksep="0.35"];
+  node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#1e3a5f",fillcolor="#edf4fb",margin="0.17,0.12"];
+  edge [color="#446280",arrowsize=0.7];
+  anchors [label="Prime-order subgroup H; distinct ± anchors\nGate D: all k quadratic characters are +1"];
+  branch [label="Centered supports S_I and W − S_J\nIf equal: n W = 0, with 0 < n < order(W)",fillcolor="#dceee7"];
+  density [label="Hand Kummer + unramified-twist estimate\nRemove canceled zeros; W = 0 separately\nEvery pair has ≥ r / (2 · 4^k) good shifts",style="rounded,filled,dashed"];
+  pool [label="Q independent uniform known scalar shifts\nFinite product counts + union over ALL r² pairs",fillcolor="#dceee7"];
+  global [label="Q ≥ 2 · 4^k (2 ln r + ln(1/ε))\nWith probability ≥ 1−ε, pool covers every pair",style="rounded,filled,dashed"];
+  adapt [label="Adaptive reuse follows on the global event\nKnown pair: scan at most Q tags"];
+  boundary [label="Retention only: implicit original tuple is still hidden\nExistential tags eliminate no original pair",color="#9c3f35",fillcolor="#f8e9e6"];
+  anchors -> branch -> density -> pool -> global -> adapt -> boundary;
+}

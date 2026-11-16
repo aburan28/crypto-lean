@@ -1,0 +1,19 @@
+error: unclosed label
+   ┌─ docs/universal-shift-pool-20261116/report.typ:17:44
+   │
+17 │ anchor abscissas, no two-torsion anchors, 2k<r. Public T_j=jG works.
+   │                                             ^^^
+
+error: unclosed delimiter
+   ┌─ docs/universal-shift-pool-20261116/report.typ:20:60
+   │
+20 │ The inherited two-gate identity is U+t∈D and V−t∈D iff U+t∈C_(U+V).
+   │                                                             ^
+
+error: unclosed delimiter
+   ┌─ docs/universal-shift-pool-20261116/report.typ:70:29
+   │
+70 │ bijection, hence |A_(U,V)|=|C_(U+V)|. More generally, demand any finite
+   │                              ^
+
+
