@@ -1,0 +1,25 @@
+digraph parity {
+ graph [rankdir=TB,bgcolor="white",pad="0.18",nodesep="0.22",ranksep="0.25"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#38536a",fillcolor="#eaf2f7",margin="0.15,0.1"];
+ edge [color="#38536a",arrowsize=0.7];
+ inputs [label="Explicit point records A, B; affine anchor T
+Keep original indices and all multiplicities"];
+ direct [label="Linear direct scans: O, ±T, coincidence, inverse
+Return any passing pair; otherwise retain active records"];
+ mask [label="One uniform bit per COLUMN RECORD
+Selected indexed polynomials F+ and F−"];
+ taylor [label="All distinct row keys: product / remainder trees
+Taylor coefficient at exact repeated-key multiplicity"];
+ correct [label="Per row: ≤3 forbidden point-value buckets
+Remove only nonzero factors; preserve bucket counts"];
+ signs [label="All row signs = exact M c over F₂
+Nonzero M: detect with probability ≥ 1/2 per mask",fillcolor="#dff0e5"];
+ recover [label="Odd row: scan selected columns; verify actual sum
+Return original pair indices",fillcolor="#dff0e5"];
+ cap [label="At most t masks; miss ≤ 2^(−t)
+NO_WITNESS_FOUND is not an emptiness certificate",fillcolor="#fff1d8"];
+ inputs -> direct -> mask -> taylor -> correct -> signs;
+ signs -> recover [label=" odd row",fontname="DejaVu Sans",fontsize=10];
+ signs -> cap [label=" no odd row",fontname="DejaVu Sans",fontsize=10];
+ cap -> mask [label=" next mask, within cap",style=dashed,fontname="DejaVu Sans",fontsize=9];
+}

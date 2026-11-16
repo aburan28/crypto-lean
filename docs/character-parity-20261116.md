@@ -4,7 +4,9 @@
 fast-selector ideas. The design computes a binary matrix-vector action
 without materializing all pairs, using two univariate product/remainder
 trees and repeated-root Taylor coefficients. Shared algebraic components
-and actual prime-field instances compile locally. The search and its cost
+and actual prime-field instances compile locally. The [diagram](character-parity-20261116/flow.svg),
+[PDF](character-parity-20261116/report.pdf) and
+[publication record](character-parity-20261116/PUBLICATION.md) accompany the source. The search and its cost
 are hand derivations, not an implemented or measured selector. [pcc:unverified]
 
 ## Input, output and guarantee
@@ -230,8 +232,10 @@ The prospective six fields and failed/passing floor receipts are in
 The table contains17 named theorems and one matrixSketch definition. The
 exception-set identification, algorithm, arithmetic complexity and repeated-
 trial probability multiplication are hand reasoning, not additional Lean
-verification claims. Final canonical all-source gate and named-axiom outputs
-are required in PUBLICATION before publication. [pcc:unverified]
+verification claims. Canonical gate002 audits236 theorems with0 failing and0 trusted-native
+exceptions. All17 named compiler axiom prints use only propext,
+Classical.choice and Quot.sound (or subsets). See PUBLICATION and the
+raw gate002/axioms001 receipts. No fresh independent checker is available. [pcc:unverified]
 
 ## Sources checked
 
@@ -259,6 +263,12 @@ availability gap.
   generalized-Jacobian DLP transfer or finite-field embedding.
 - Petit--Kosters--Messeng2016 and APS2018, read in the earlier cover-transfer
   review; the separate auxiliary-fiber proposal is not an established solver.
+
+No evaluated identity.certificate/v1 record was issued in this no-numerical-
+execution round: its native fixed-modulus evaluation was not run. Generic
+Lean source/audit evidence and unverified attestation standing are supplied
+separately; no independent-checker or signed verification is asserted.
+[pcc:unverified]
 
 No numerical graph is appropriate for proof-only work. The accompanying
 editable flow diagram and PDF show the construction; no canonical performance

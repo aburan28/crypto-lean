@@ -1,0 +1,33 @@
+'CryptoLean.BilinearSketch.surjective_of_value_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.half_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.quarter_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.matrixSketch_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.matrixSketch_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.matrix_half_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.BilinearSketch.matrix_quarter_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.taylor_strip_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.indexed_taylor_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.nonzero_product_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.quadratic_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.secant_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.indexed_resultant' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.ProjectiveProducts.scaled_difference_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.CharacterCarry.line_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.CharacterCarry.quadratic_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'CryptoLean.CharacterCarry.quadratic_key' depends on axioms: [propext, Classical.choice, Quot.sound]
