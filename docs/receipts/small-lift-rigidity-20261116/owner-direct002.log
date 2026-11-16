@@ -1,0 +1,50 @@
+CryptoLean/Polynomial/SmallLiftRigidity.lean:59:2: error: unsolved goals
+case hf
+σ : Type u_1
+p : ℕ
+c d : ℤ
+F A B f g : MvPolynomial σ ℤ
+hf : f = MvPolynomial.C ↑p * A + MvPolynomial.C c * F
+hg : g = MvPolynomial.C ↑p * B + MvPolynomial.C d * F
+hsmall : ∀ (m : σ →₀ ℕ), c.natAbs * (g.coeff m).natAbs + d.natAbs * (f.coeff m).natAbs < p
+m : σ →₀ ℕ
+⊢ ((MvPolynomial.C ↑p * A).coeff + (MvPolynomial.C c * F).coeff) m = ↑p * A.coeff m + c * F.coeff m
+CryptoLean/Polynomial/SmallLiftRigidity.lean:61:2: error: unsolved goals
+case hg
+σ : Type u_1
+p : ℕ
+c d : ℤ
+F A B f g : MvPolynomial σ ℤ
+hf : f = MvPolynomial.C ↑p * A + MvPolynomial.C c * F
+hg : g = MvPolynomial.C ↑p * B + MvPolynomial.C d * F
+hsmall : ∀ (m : σ →₀ ℕ), c.natAbs * (g.coeff m).natAbs + d.natAbs * (f.coeff m).natAbs < p
+m : σ →₀ ℕ
+⊢ ((MvPolynomial.C ↑p * B).coeff + (MvPolynomial.C d * F).coeff) m = ↑p * B.coeff m + d * F.coeff m
+CryptoLean/Polynomial/SmallLiftRigidity.lean:60:42: warning: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AddMonoidAlgebra.coeff_add, MvPolynomial.coeff_C_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/SmallLiftRigidity.lean:60:55: warning: This simp argument is unused:
+  MvPolynomial.coeff_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AddMonoidAlgebra.coeff_add, Pi.add_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/SmallLiftRigidity.lean:62:42: warning: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AddMonoidAlgebra.coeff_add, MvPolynomial.coeff_C_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/SmallLiftRigidity.lean:62:55: warning: This simp argument is unused:
+  MvPolynomial.coeff_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [AddMonoidAlgebra.coeff_add, Pi.add_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

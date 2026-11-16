@@ -47,3 +47,4 @@ import CryptoLean.Polynomial.WeightedRowCertificate
 import CryptoLean.Polynomial.MixedDegreePivots
 import CryptoLean.Polynomial.CurveParameterElimination
 import CryptoLean.Polynomial.TwoChartCoefficients
+import CryptoLean.Polynomial.SmallLiftRigidity

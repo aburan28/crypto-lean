@@ -1,0 +1,20 @@
+import CryptoLean.Polynomial.SmallLiftRigidity
+
+#print axioms CryptoLean.SmallLiftRigidity.small_divisible_zero
+#print axioms CryptoLean.SmallLiftRigidity.cross_abs_bound
+#print axioms CryptoLean.SmallLiftRigidity.cross_exact
+#print axioms CryptoLean.SmallLiftRigidity.same_row_cross_divisible
+#print axioms CryptoLean.SmallLiftRigidity.uniform_cross_exact
+#print axioms CryptoLean.SmallLiftRigidity.polynomial_cross_exact
+#print axioms CryptoLean.SmallLiftRigidity.same_row_polynomials_exact
+#print axioms CryptoLean.SmallLiftRigidity.linear_clear_bound
+#print axioms CryptoLean.SmallLiftRigidity.exceptional_linear_exact
+#print axioms CryptoLean.SmallLiftRigidity.conic_abs_bound
+#print axioms CryptoLean.SmallLiftRigidity.centered_conic_exact
+#print axioms CryptoLean.SmallLiftRigidity.centered_conic_height
+#print axioms CryptoLean.SmallLiftRigidity.modulus_boundary
+#print axioms CryptoLean.SmallLiftRigidity.cleared_scaling
+#print axioms CryptoLean.SmallLiftRigidity.cleared_exceptional_zero
+#print axioms CryptoLean.SmallLiftRigidity.zero_of_scaled_reference
+#print axioms CryptoLean.SmallLiftRigidity.clearedModel_eval
+#print axioms CryptoLean.SmallLiftRigidity.bounded_exceptional_row_zero
