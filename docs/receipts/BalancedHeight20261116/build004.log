@@ -1,0 +1,5 @@
+⚠ [3138/3138] Built CryptoLean.Polynomial.BalancedFiltration (3.3s)
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).

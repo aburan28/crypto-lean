@@ -1,0 +1,137 @@
+import Mathlib.Algebra.MvPolynomial.Basic
+import Mathlib.RingTheory.Ideal.Operations
+import Mathlib.Tactic
+
+/-! A coefficient filtration for ordinary shift ideals whose nonconstant
+generators have projective weight at least two. No saturation statement. -/
+set_option autoImplicit false
+noncomputable section
+
+namespace CryptoLean.BalancedFiltration
+
+variable {σ : Type*}
+
+def Filtered (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ)
+    (f : MvPolynomial σ ℤ) : Prop :=
+  ∀ m, (p : ℤ)^(t-w m/2) ∣ f.coeff m
+
+theorem level_zero (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (f : MvPolynomial σ ℤ) :
+    Filtered p w 0 f := by
+  intro m
+  simp only [Nat.zero_sub, pow_zero, one_dvd]
+
+theorem filtered_add (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ)
+    {f g : MvPolynomial σ ℤ} (hf : Filtered p w t f) (hg : Filtered p w t g) :
+    Filtered p w t (f+g) := by
+  intro m
+  simpa only [AddMonoidAlgebra.coeff_add, Finsupp.add_apply] using dvd_add (hf m) (hg m)
+
+variable [DecidableEq σ]
+
+theorem filtered_mul (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t u : ℕ)
+    {f g : MvPolynomial σ ℤ} (hf : Filtered p w t f) (hg : Filtered p w u g) :
+    Filtered p w (t+u) (f*g) := by
+  intro m
+  rw [MvPolynomial.coeff_mul]
+  apply Finset.dvd_sum
+  intro ab hab
+  have hm := Finset.mem_antidiagonal.mp hab
+  have hw : w m = w ab.1 + w ab.2 := by rw [← hm, map_add]
+  have hd : (p : ℤ)^((t-w ab.1/2)+(u-w ab.2/2)) ∣
+      f.coeff ab.1 * g.coeff ab.2 := by
+    rw [pow_add]
+    exact mul_dvd_mul (hf ab.1) (hg ab.2)
+  apply dvd_trans _ hd
+  apply pow_dvd_pow
+  rw [hw]
+  omega
+
+def filtrationIdeal (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ) :
+    Ideal (MvPolynomial σ ℤ) where
+  carrier := {f | Filtered p w t f}
+  zero_mem' := by intro m; change _ ∣ (0 : ℤ); exact dvd_zero _
+  add_mem' := filtered_add p w t
+  smul_mem' := by
+    intro c f hf
+    change Filtered p w t (c*f)
+    simpa only [zero_add] using
+      filtered_mul p w 0 t (level_zero p w c) hf
+
+theorem mem_filtrationIdeal (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ)
+    (f : MvPolynomial σ ℤ) : f ∈ filtrationIdeal p w t ↔ Filtered p w t f := Iff.rfl
+
+theorem ideal_pow_le (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ) :
+    (filtrationIdeal p w 1)^t ≤ filtrationIdeal p w t := by
+  induction t with
+  | zero => intro f _; exact level_zero p w f
+  | succ t ih =>
+    rw [pow_succ]
+    exact Ideal.mul_le.mpr (fun f hf g hg ↦ filtered_mul p w t 1 (ih hf) hg)
+
+theorem monomial_mem (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ)
+    (m : σ →₀ ℕ) (a : ℤ) (hweight : 2*t ≤ w m) :
+    MvPolynomial.monomial m a ∈ filtrationIdeal p w t := by
+  intro n
+  rw [MvPolynomial.coeff_monomial]
+  split_ifs with h
+  · subst n
+    have he : t-w m/2 = 0 := by omega
+    rw [he, pow_zero]
+    exact one_dvd a
+  · exact dvd_zero _
+
+theorem modulus_mem (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) :
+    MvPolynomial.C (p : ℤ) ∈ filtrationIdeal p w 1 := by
+  intro m
+  by_cases h : m=0
+  · subst m
+    simp
+  · rw [MvPolynomial.coeff_C, ite_eq_right (Ne.symm h)]
+    exact dvd_zero _
+
+theorem quadratic_chart_mem (p : ℕ) (w : (σ →₀ ℕ) →+ ℕ) (u v : σ)
+    (hu : w (Finsupp.single u 1) = 1) (hv : w (Finsupp.single v 1) = 1)
+    (A B C : MvPolynomial σ ℤ) :
+    A*MvPolynomial.X u^2 + B*MvPolynomial.X u*MvPolynomial.X v +
+      C*MvPolynomial.X v^2 ∈ filtrationIdeal p w 1 := by
+  let K := filtrationIdeal p w 1
+  have hsq (i : σ) (hi : w (Finsupp.single i 1) = 1) :
+      MvPolynomial.X i^2 ∈ K := by
+    rw [MvPolynomial.X_pow_eq_monomial]
+    apply monomial_mem
+    rw [show Finsupp.single i 2 = Finsupp.single i 1 + Finsupp.single i 1 by
+      rw [← Finsupp.single_add], map_add, hi]
+  have huv : MvPolynomial.X u * MvPolynomial.X v ∈ K := by
+    rw [MvPolynomial.X, MvPolynomial.X, MvPolynomial.monomial_mul_monomial]
+    apply monomial_mem
+    rw [map_add, hu, hv]
+  have h := K.add_mem (K.add_mem (K.mul_mem_left A (hsq u hu))
+    (K.mul_mem_left B huv)) (K.mul_mem_left C (hsq v hv))
+  simpa only [mul_assoc] using h
+
+theorem coefficient_square_lower (p : ℕ) (hp : 0 < p)
+    (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ) (f : MvPolynomial σ ℤ)
+    (hf : f ∈ filtrationIdeal p w t) (m : σ →₀ ℕ) (hc : f.coeff m ≠ 0) :
+    p^(2*t) ≤ (f.coeff m).natAbs^2 * p^(w m) := by
+  have hd : p^(t-w m/2) ∣ (f.coeff m).natAbs := by
+    simpa only [Int.natAbs_pow, Int.natAbs_natCast] using
+      Int.natAbs_dvd_natAbs.mpr (hf m)
+  have ha := Nat.le_of_dvd (Int.natAbs_pos.mpr hc) hd
+  have he : 2*t ≤ 2*(t-w m/2)+w m := by omega
+  calc
+    p^(2*t) ≤ p^(2*(t-w m/2)+w m) := Nat.pow_le_pow_right hp he
+    _ = (p^(t-w m/2))^2 * p^(w m) := by
+      rw [show 2*(t-w m/2)+w m = (t-w m/2)*2+w m by omega, pow_add, pow_mul]
+    _ ≤ _ := Nat.mul_le_mul_right _ (Nat.pow_le_pow_left ha 2)
+
+theorem span_power_coefficient_lower (p : ℕ) (hp : 0 < p)
+    (w : (σ →₀ ℕ) →+ ℕ) (t : ℕ) (S : Set (MvPolynomial σ ℤ))
+    (hS : ∀ f ∈ S, f ∈ filtrationIdeal p w 1)
+    (f : MvPolynomial σ ℤ) (hf : f ∈ (Ideal.span S)^t)
+    (m : σ →₀ ℕ) (hc : f.coeff m ≠ 0) :
+    p^(2*t) ≤ (f.coeff m).natAbs^2 * p^(w m) := by
+  have hJ : Ideal.span S ≤ filtrationIdeal p w 1 := Ideal.span_le.mpr hS
+  have hpow := (pow_le_pow_left' hJ t).trans (ideal_pow_le p w t)
+  exact coefficient_square_lower p hp w t f (hpow hf) m hc
+
+end CryptoLean.BalancedFiltration

@@ -1,0 +1,27 @@
+docs/receipts/BalancedHeight20261116/ActualInstances.lean:31:34: error: Tactic `rfl` failed: The left-hand side
+  projectiveWeight (Finsupp.single 2 1)
+is not definitionally equal to the right-hand side
+  1
+
+p t : ℕ
+hp : 0 < p
+a b : ℤ
+f : MvPolynomial (Fin 4) ℤ
+hf : f ∈ Ideal.span {MvPolynomial.C ↑p, liftedS3Row a b} ^ t
+m : Fin 4 →₀ ℕ
+hc : f.coeff m ≠ 0
+⊢ projectiveWeight (Finsupp.single 2 1) = 1
+docs/receipts/BalancedHeight20261116/ActualInstances.lean:31:43: error: Tactic `rfl` failed: The left-hand side
+  projectiveWeight (Finsupp.single 3 1)
+is not definitionally equal to the right-hand side
+  1
+
+p t : ℕ
+hp : 0 < p
+a b : ℤ
+f : MvPolynomial (Fin 4) ℤ
+hf : f ∈ Ideal.span {MvPolynomial.C ↑p, liftedS3Row a b} ^ t
+m : Fin 4 →₀ ℕ
+hc : f.coeff m ≠ 0
+⊢ projectiveWeight (Finsupp.single 3 1) = 1
+docs/receipts/BalancedHeight20261116/ActualInstances.lean:45:2: error: No goals to be solved

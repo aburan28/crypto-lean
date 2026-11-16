@@ -1,0 +1,21 @@
+MvPolynomial.coeff_mul.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] [DecidableEq σ] (p q : MvPolynomial σ R)
+  (n : σ →₀ ℕ) : (p * q).coeff n = ∑ x ∈ Finset.antidiagonal n, p.coeff x.1 * q.coeff x.2
+MvPolynomial.coeff_add.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R) :
+  (p + q).coeff m = p.coeff m + q.coeff m
+Finset.HasAntidiagonal.mem_antidiagonal.{u_1} {A : Type u_1} {inst✝ : Add A} [self : Finset.HasAntidiagonal A] {n : A}
+  {a : A × A} : a ∈ Finset.antidiagonal n ↔ a.1 + a.2 = n
+Finset.dvd_sum.{u_1, u_4} {ι : Type u_1} {R : Type u_4} {s : Finset ι} [NonUnitalSemiring R] {f : ι → R} {a : R}
+  (h : ∀ i ∈ s, a ∣ f i) : a ∣ ∑ i ∈ s, f i
+pow_dvd_pow.{u_1} {α : Type u_1} [Monoid α] {m n : ℕ} (a : α) (h : m ≤ n) : a ^ m ∣ a ^ n
+Ideal.mul_le.{u} {R : Type u} [Semiring R] {I J K : Ideal R} : I * J ≤ K ↔ ∀ r ∈ I, ∀ s ∈ J, r * s ∈ K
+Ideal.span_le.{u} {α : Type u} [Semiring α] {s : Set α} {I : Ideal α} : Ideal.span s ≤ I ↔ s ⊆ ↑I
+pow_succ.{u_2} {M : Type u_2} [Monoid M] (a : M) (n : ℕ) : a ^ (n + 1) = a ^ n * a
+Int.natAbs_dvd_natAbs {a b : ℤ} : a.natAbs ∣ b.natAbs ↔ a ∣ b
+Int.natAbs_pos {a : ℤ} : 0 < a.natAbs ↔ a ≠ 0
+Int.natAbs_pow (n : ℤ) (k : ℕ) : (n ^ k).natAbs = n.natAbs ^ k
+Nat.pow_le_pow_right {n : ℕ} (hx : n > 0) {i j : ℕ} : i ≤ j → n ^ i ≤ n ^ j
+Nat.pow_le_pow_left {n m : ℕ} (h : n ≤ m) (i : ℕ) : n ^ i ≤ m ^ i
+MvPolynomial.X_pow_eq_monomial.{u, u_1} {R : Type u} {σ : Type u_1} {e : ℕ} {n : σ} [CommSemiring R] :
+  MvPolynomial.X n ^ e = (MvPolynomial.monomial (Finsupp.single n e)) 1
+MvPolynomial.monomial_mul_monomial.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] {s s' : σ →₀ ℕ} {a b : R} :
+  (MvPolynomial.monomial s) a * (MvPolynomial.monomial s') b = (MvPolynomial.monomial (s + s')) (a * b)

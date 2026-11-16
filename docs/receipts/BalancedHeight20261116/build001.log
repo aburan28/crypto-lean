@@ -1,0 +1,112 @@
+✖ [3138/3138] Building CryptoLean.Polynomial.BalancedFiltration (2.8s)
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/BalancedFiltration.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/BalancedFiltration.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/BalancedFiltration.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/BalancedFiltration.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/BalancedFiltration.setup.json --json
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:18:0: automatically included section variable(s) unused in theorem `CryptoLean.BalancedFiltration.level_zero`:
+  [DecidableEq σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:27:6: `MvPolynomial.coeff_add` has been deprecated: Use `AddMonoidAlgebra.coeff_add` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R] (x y : AddMonoidAlgebra R M), (x + y).coeff = x.coeff + y.coeff
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R),
+    (p + q).coeff m = p.coeff m + q.coeff m
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_add` to `AddMonoidAlgebra.coeff_add x`).
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:23:0: automatically included section variable(s) unused in theorem `CryptoLean.BalancedFiltration.filtered_add`:
+  [DecidableEq σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:51:38: `MvPolynomial.coeff_zero` has been deprecated: Use `AddMonoidAlgebra.coeff_zero` instead
+
+Note: The updated constant has a different type:
+  ∀ {R : Type u_1} {M : Type u_4} [inst : Semiring R], AddMonoidAlgebra.coeff 0 = 0
+instead of
+  ∀ {R : Type u} {σ : Type u_1} [inst : CommSemiring R], AddMonoidAlgebra.coeff 0 = 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.coeff_zero` to `AddMonoidAlgebra.coeff_zero x`).
+error: CryptoLean/Polynomial/BalancedFiltration.lean:51:15: unsolved goals
+σ : Type u_1
+inst✝ : DecidableEq σ
+p : ℕ
+w : (σ →₀ ℕ) →+ ℕ
+t : ℕ
+m : σ →₀ ℕ
+⊢ ↑p ^ (t - w m / 2) ∣ 0 m
+error: CryptoLean/Polynomial/BalancedFiltration.lean:55:4: Type mismatch: After simplification, term
+  filtered_mul p w 0 t (level_zero p w c) hf
+ has type
+  Filtered p w t (c * f)
+but is expected to have type
+  c * f ∈ {f | Filtered p w t f}
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:51:63: This simp argument is unused:
+  dvd_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MvPolynomial.coeff_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CryptoLean/Polynomial/BalancedFiltration.lean:86:62: Unknown constant `MvPolynomial.coeff_C_zero`
+error: CryptoLean/Polynomial/BalancedFiltration.lean:85:2: unsolved goals
+case pos
+σ : Type u_1
+inst✝ : DecidableEq σ
+p : ℕ
+w : (σ →₀ ℕ) →+ ℕ
+⊢ ↑p ∣ (MvPolynomial.C ↑p).coeff 0
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:88:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+error: CryptoLean/Polynomial/BalancedFiltration.lean:88:30: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if m = 0 then ?m.47 else ?m.48
+in the target expression
+  ↑p ^ (1 - w m / 2) ∣ if 0 = m then ↑p else 0
+
+case neg
+σ : Type u_1
+inst✝ : DecidableEq σ
+p : ℕ
+w : (σ →₀ ℕ) →+ ℕ
+m : σ →₀ ℕ
+h : ¬m = 0
+⊢ ↑p ^ (1 - w m / 2) ∣ if 0 = m then ↑p else 0
+warning: CryptoLean/Polynomial/BalancedFiltration.lean:87:6: This simp argument is unused:
+  dvd_refl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_zero, Nat.zero_div, Nat.sub_zero, pow_one, MvPolynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CryptoLean/Polynomial/BalancedFiltration.lean:122:74: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 1
+  g ≥ 0
+  e ≥ 0
+  e - g ≥ 1
+  d ≥ 0
+  d - h ≥ 0
+  c ≥ 0
+  0 ≤ c - 2*h ≤ 1
+  b ≥ 0
+  b - i ≤ 0
+  a ≥ 1
+where
+ a := ↑p
+ b := ↑(p ^ (t - w m / 2))
+ c := ↑(w m)
+ d := ↑t
+ e := ↑(p ^ ((t - w m / 2) * 2))
+ g := ↑(p ^ (2 * (t - w m / 2)))
+ h := ↑(w m) / 2
+ i := f.coeff m
+Some required targets logged failures:
+- CryptoLean.Polynomial.BalancedFiltration
+error: build failed

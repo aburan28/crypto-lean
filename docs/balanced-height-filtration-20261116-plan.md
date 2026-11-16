@@ -108,3 +108,28 @@ the statement, H smaller than sqrt(p) explicitly outside the norm corollary.
 One Lake process at a time, raw failures retained, no trust/limit/linter/
 inventory changes. Canonical audit plus actual named axiom prints before
 publication. Do not modify old hypotheses or signed/unsigned claim records.
+
+## Successor's first exact trial: one projective vertex
+
+Before editing this second family, six fields: (1) CommRing, its polynomial
+quadratic forms, ideals, and a domain for nonzero cancellation; (2) ring
+normalization, Ideal.add_mem/mul_mem_left, mul_eq_zero and pow_ne_zero;
+(3) two actual binary quadratic forms, rather than a new solver syntax;
+(4) compile their existing ring/ideal interfaces, then plug in actual
+homogenized S3 coefficient blocks; (5) only the explicit Bezout witness is
+missing, owned in shared Polynomial.ProjectiveQuadratics; (6) coefficient
+operations inherit CommRing, ideal closure inherits Ideal, nonzero chart
+cancellation inherits the domain laws. No specialized quadratic resultant
+formula/witness was found in the bounded Mathlib Resultant directory search;
+the general resultant is prior art, so no novelty claim.
+
+For F=aU^2+bUV+cV^2, G=dU^2+eUV+fV^2 set L=ae-bd, M=af-cd,
+N=bf-ce and R=M^2-LN. The exact proposed witness is
+
+    R V^3 = [a(MV-LU)-LbV]G + [-d(MV-LU)+LeV]F.
+
+This is obtained by (MV-LU)(aG-dF)-LV(bG-eF). Verify it as a generic
+ring identity, read off membership R V^3 in (F,G), and then R=0 at a
+common root with V!=0. This executes the smallest saturation trial without
+LLL or numeric data. It does not bound growing-chain resultant degrees,
+optimal-shift rank, number of independent equations or root-extraction cost.
