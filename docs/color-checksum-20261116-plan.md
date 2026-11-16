@@ -53,7 +53,9 @@ per-record checksum is not assumed to have a known target.
 3. Objects: weights lambda:I->J->G; legal tuple c:I->J, checksum
    sum_i lambda(i,c(i)); nonnegative partial arrays u:I->J->Nat with
    checksum sum_i sum_j u(i,j) smul lambda(i). Nonempty J supplies a fixed
-   tuple for the converse. No curve or uniform-group-output hypothesis.
+   tuple for the converse. Finset.image requires DecidableEq of the hash
+   codomain, supplied classically at actual endpoints. No curve or
+   uniform-group-output hypothesis.
 4. Assembly floor: use existing finite-sum deletion/update and scalar-sum
    distribution laws directly, and finite image/function cardinality.
    Repeat additive-group/cancellation at an actual prime-field Weierstrass
