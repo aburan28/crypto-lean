@@ -35,3 +35,5 @@ retained; indexed primary PDF text, not a downloaded PDF, was inspected.
 No scientific/numerical/native qualification/paid/image/job/control execution.
 Scientific admission and hosted billing lock remain separate; monitor remains
 disabled after task-service errors, no unchanged retry/duplicate. [pcc:unverified]
+
+Registered PCC-20261116-a9c067 with66 attestation subjects, interpretive/unsigned/unverified. verify-all exit2; ledgerverify0. All560 hashes match, including494 older subjects;25 rows preserve exact byte/parsed published46824/main0179 prefixes, both ancestors; old claims and journal byte prefix retained. Exact proposed PR body001 lint0 before metadata edit. [pcc:unverified]
