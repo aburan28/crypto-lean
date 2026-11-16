@@ -1,0 +1,62 @@
+'CryptoLean.FieldRectangles.mem_rectangleImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.rectangleImage_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.intWindow_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.mem_intWindow_of_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.integer_rectangle_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.from_integer_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.rectangle_miss_count_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.integer_rectangle_miss_count_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.coefficient_bound_of_short' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.integer_bounds_of_natAbs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShortCoefficientWindows.short_has_nondivisible_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.scalar_cast_ne_zero_of_short' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.offset_of_short_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.endpoint_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.endpoint_x_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.translated_y_square_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.translated_u_square_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.first_endpoint_coefficient_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.first_endpoint_coefficient_offset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.last_endpoint_coefficient_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.last_endpoint_coefficient_offset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.first_exponents_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.first_vector_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.integer_monomial_bound' depends on axioms: [propext]
+'CryptoLean.EndpointCoefficients.first_monomials_bound' depends on axioms: [propext]
+'CryptoLean.RankOneSelector.centered_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_norm_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.coordinate_bound_of_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.integer_scalar_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.cutoff_of_positive' depends on axioms: [propext, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_scalar_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_offset_in_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_integer_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_complete_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_iff_integer_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.weighted_value_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.row_value_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.short_row_value_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

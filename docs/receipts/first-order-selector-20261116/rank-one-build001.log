@@ -1,0 +1,118 @@
+⚠ [3138/3143] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3143] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3143] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3142/3143] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3143/3143] Building CryptoLean.Polynomial.RankOneSelector (6.9s)
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/RankOneSelector.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/RankOneSelector.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/RankOneSelector.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/RankOneSelector.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/RankOneSelector.setup.json --json
+warning: CryptoLean/Polynomial/RankOneSelector.lean:22:0: automatically included section variable(s) unused in theorem `CryptoLean.RankOneSelector.centered_cast`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: CryptoLean/Polynomial/RankOneSelector.lean:28:4: Function expected at
+  rowNorm ↑p ?m.11
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  (centeredRow p scalar F)
+error: CryptoLean/Polynomial/RankOneSelector.lean:28:48: Function expected at
+  rowNorm ↑p ?m.20
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  row
+error: CryptoLean/Polynomial/RankOneSelector.lean:28:58: Application type mismatch: The argument
+  weight
+has type
+  ι → ℕ
+but is expected to have type
+  ?m.16 → ℤ
+in the application
+  rowNorm (↑p) weight
+error: CryptoLean/Polynomial/RankOneSelector.lean:37:50: Function expected at
+  rowNorm ↑p ?m.17
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  row
+error: CryptoLean/Polynomial/RankOneSelector.lean:37:60: Application type mismatch: The argument
+  weight
+has type
+  ι → ℕ
+but is expected to have type
+  ?m.13 → ℤ
+in the application
+  rowNorm (↑p) weight
+error: CryptoLean/Polynomial/RankOneSelector.lean:64:2: Type mismatch: After simplification, term
+  ha
+ has type
+  a ≠ 0
+but is expected to have type
+  scalar ≠ 0
+error: CryptoLean/Polynomial/RankOneSelector.lean:77:16: Function expected at
+  rowNorm ↑p ?m.12
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  (centeredRow p pair.1 (F pair.2))
+error: CryptoLean/Polynomial/RankOneSelector.lean:77:26: Application type mismatch: The argument
+  weight
+has type
+  ι → ℕ
+but is expected to have type
+  ?m.8 → ℤ
+in the application
+  rowNorm (↑p) weight
+error: CryptoLean/Polynomial/RankOneSelector.lean:83:4: invalid 'calc' step, left-hand side is
+  (Finset.filter ?m.46 (pairCandidates p scale center (intWindow (ZMod p) a) (intWindow (ZMod p) b))).card : ℕ
+but is expected to be
+  (selectedPairs p scale center a b weight F).card : ℕ
+error: CryptoLean/Polynomial/RankOneSelector.lean:91:17: Function expected at
+  rowNorm ↑p ?m.14
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  (centeredRow p scalar (F offset))
+error: CryptoLean/Polynomial/RankOneSelector.lean:91:27: Application type mismatch: The argument
+  weight
+has type
+  ι → ℕ
+but is expected to have type
+  ?m.10 → ℤ
+in the application
+  rowNorm (↑p) weight
+error: CryptoLean/Polynomial/RankOneSelector.lean:103:14: Function expected at
+  rowNorm ↑p ?m.53
+but this term has type
+  ℕ
+
+Note: Expected a function because this term is being applied to the argument
+  row
+error: CryptoLean/Polynomial/RankOneSelector.lean:103:24: Application type mismatch: The argument
+  weight
+has type
+  ι → ℕ
+but is expected to have type
+  ?m.49 → ℤ
+in the application
+  rowNorm (↑p) weight
+Some required targets logged failures:
+- CryptoLean.Polynomial.RankOneSelector
+error: build failed

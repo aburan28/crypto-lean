@@ -1,0 +1,4 @@
+⚠ [3138/3138] Built CryptoLean.Polynomial.EndpointCoefficients (3.3s)
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).

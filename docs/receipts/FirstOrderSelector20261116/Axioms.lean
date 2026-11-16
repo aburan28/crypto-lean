@@ -1,0 +1,49 @@
+import CryptoLean.Combinatorics.FieldRectangles
+import CryptoLean.Polynomial.ShortCoefficientWindows
+import CryptoLean.Polynomial.EndpointCoefficients
+import CryptoLean.Polynomial.RankOneSelector
+import CryptoLean.Polynomial.WeightedRowCertificate
+#print axioms CryptoLean.FieldRectangles.mem_rectangleImage
+#print axioms CryptoLean.FieldRectangles.rectangleImage_card_le
+#print axioms CryptoLean.FieldRectangles.intWindow_card_le
+#print axioms CryptoLean.FieldRectangles.mem_intWindow_of_bounds
+#print axioms CryptoLean.FieldRectangles.integer_rectangle_card_le
+#print axioms CryptoLean.FieldRectangles.from_integer_coefficients
+#print axioms CryptoLean.FieldRectangles.rectangle_miss_count_lower
+#print axioms CryptoLean.FieldRectangles.integer_rectangle_miss_count_lower
+#print axioms CryptoLean.ShortCoefficientWindows.coefficient_bound_of_short
+#print axioms CryptoLean.ShortCoefficientWindows.integer_bounds_of_natAbs
+#print axioms CryptoLean.ShortCoefficientWindows.short_has_nondivisible_coefficient
+#print axioms CryptoLean.ShortCoefficientWindows.scalar_cast_ne_zero_of_short
+#print axioms CryptoLean.ShortCoefficientWindows.offset_of_short_coefficients
+#print axioms CryptoLean.EndpointCoefficients.endpoint_expansion
+#print axioms CryptoLean.EndpointCoefficients.endpoint_x_square
+#print axioms CryptoLean.EndpointCoefficients.translated_y_square_coeffs
+#print axioms CryptoLean.EndpointCoefficients.translated_u_square_coeffs
+#print axioms CryptoLean.EndpointCoefficients.first_endpoint_coefficient_one
+#print axioms CryptoLean.EndpointCoefficients.first_endpoint_coefficient_offset
+#print axioms CryptoLean.EndpointCoefficients.last_endpoint_coefficient_one
+#print axioms CryptoLean.EndpointCoefficients.last_endpoint_coefficient_offset
+#print axioms CryptoLean.EndpointCoefficients.first_exponents_injective
+#print axioms CryptoLean.EndpointCoefficients.first_vector_expansion
+#print axioms CryptoLean.EndpointCoefficients.integer_monomial_bound
+#print axioms CryptoLean.EndpointCoefficients.first_monomials_bound
+#print axioms CryptoLean.RankOneSelector.centered_cast
+#print axioms CryptoLean.RankOneSelector.centered_norm_minimal
+#print axioms CryptoLean.RankOneSelector.coordinate_bound_of_short
+#print axioms CryptoLean.RankOneSelector.integer_scalar_nonzero
+#print axioms CryptoLean.RankOneSelector.cutoff_of_positive
+#print axioms CryptoLean.RankOneSelector.pairCandidates_card_le
+#print axioms CryptoLean.RankOneSelector.pairCandidates_scalar_ne_zero
+#print axioms CryptoLean.RankOneSelector.pairCandidates_of_relation
+#print axioms CryptoLean.RankOneSelector.selected_card_le
+#print axioms CryptoLean.RankOneSelector.selected_sound
+#print axioms CryptoLean.RankOneSelector.selected_offset_in_rectangle
+#print axioms CryptoLean.RankOneSelector.selected_complete
+#print axioms CryptoLean.RankOneSelector.centered_nonzero
+#print axioms CryptoLean.RankOneSelector.centered_integer_witness
+#print axioms CryptoLean.RankOneSelector.selected_complete_integer
+#print axioms CryptoLean.RankOneSelector.selected_iff_integer_short
+#print axioms CryptoLean.WeightedRowCertificate.weighted_value_bound
+#print axioms CryptoLean.WeightedRowCertificate.row_value_divisible
+#print axioms CryptoLean.WeightedRowCertificate.short_row_value_zero

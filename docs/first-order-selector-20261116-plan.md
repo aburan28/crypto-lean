@@ -46,3 +46,20 @@ axiom; source committed before canonical audit; one Lake process at a time.
 Fresh paths for failures; no sorry/custom axiom/native_decide or proof-limit/
 trust/inventory/linter exception. Full audit and final report scope only after
 outputs are inspected. Record conclusion before selecting the next idea.
+
+Constructive successor revealed by the count: coefficient-first rank-one
+selection, without LLL. Enumerate a nonzero first coefficient in its small
+window and the second coefficient in its window, solve tau=center+c2/(scale*c1)
+mod p, then center every coefficient of c1*F(tau). In pZ^N+ZF, coefficientwise
+centered representatives minimize every positive weighted L1 for fixed
+scalar. Verify the generic completeness and minimality through the maintained
+ZMod.valMinAbs owner, rather than using rarity as a blanket failure conclusion.
+Every short row must have its scalar/offset pair represented by a no-worse
+centered row among these candidates; this is not enumeration of all integer
+lifts. A centered candidate
+below the exact bound carries an explicit p-row combination witness. The
+candidate count can be subexponential although useful yield may be zero.
+This is a complete candidate enumeration for the DECLARED rank-one model,
+not a complete ECDLP algorithm or an asymptotic useful-yield theorem. An actual
+coded endpoint search may be source-only; no scientific arithmetic run is
+authorized by this plan. Record all exceptions, caps and zero-window cases.

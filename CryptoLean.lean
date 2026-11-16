@@ -39,3 +39,8 @@ import CryptoLean.Polynomial.BalancedFiltration
 import CryptoLean.Polynomial.ProjectiveQuadratics
 import CryptoLean.Polynomial.HeightBudget
 import CryptoLean.Combinatorics.ChainPowerBlocks
+import CryptoLean.Combinatorics.FieldRectangles
+import CryptoLean.Polynomial.ShortCoefficientWindows
+import CryptoLean.Polynomial.EndpointCoefficients
+import CryptoLean.Polynomial.RankOneSelector
+import CryptoLean.Polynomial.WeightedRowCertificate
