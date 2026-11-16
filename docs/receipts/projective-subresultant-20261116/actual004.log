@@ -1,0 +1,7 @@
+docs/receipts/ProjectiveSubresultant20261116/ActualInstances.lean:21:82: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [actualCode, h.1, h.2.1, h.2.2.2.1, h.2.2.2.2, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

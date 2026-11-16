@@ -18,7 +18,7 @@ theorem actual_model_cover (a b τ σ scalar : K) (S : Finset K)
     (hS : ∀ i, actualCode a b τ σ scalar i ∈ S) : (a,b) ∈ modelCandidates S := by
   have h := exact_source_anchors a b τ σ
   apply model_curve_cover S (actualCode a b τ σ scalar) scalar σ a b hl h₂ hS
-  all_goals simp [actualCode,h.1,h.2.1,h.2.2.2.1,h.2.2.2.2]
+  all_goals simp [actualCode,h.1,h.2.1,h.2.2.2.1,h.2.2.2.2,mul_comm,mul_left_comm]
 
 theorem entire_source_nonzero (a b τ σ : K) : shiftedResidual a b τ σ ≠ 0 := by
   intro hz
