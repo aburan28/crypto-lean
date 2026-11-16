@@ -1,0 +1,24 @@
+import CryptoLean.Polynomial.ResidualLeafRank
+
+#print axioms CryptoLean.ResidualLeafRank.source_homogeneous_blocks
+#print axioms CryptoLean.ResidualLeafRank.source_block_identity
+#print axioms CryptoLean.ResidualLeafRank.core_x_square
+#print axioms CryptoLean.ResidualLeafRank.core_xy_coeffs
+#print axioms CryptoLean.ResidualLeafRank.vectors_map
+#print axioms CryptoLean.ResidualLeafRank.block_map
+#print axioms CryptoLean.ResidualLeafRank.nested_block
+#print axioms CryptoLean.ResidualLeafRank.rowSupport_card_lower
+#print axioms CryptoLean.ResidualLeafRank.honestSupport_card_lower
+#print axioms CryptoLean.ResidualLeafRank.no_leaf_linear_relation
+#print axioms CryptoLean.ResidualLeafRank.realized_source
+#print axioms CryptoLean.ResidualLeafRank.source_witness_values
+#print axioms CryptoLean.ResidualLeafRank.highest_leaf_chart_anchors
+#print axioms CryptoLean.ResidualLeafRank.highest_chart_decode
+#print axioms CryptoLean.ResidualLeafRank.witnessValues_nonzero
+#print axioms CryptoLean.ResidualLeafRank.sourceBlocks_nonzero
+#print axioms CryptoLean.ResidualLeafRank.source_honest_support_lower
+#print axioms CryptoLean.ResidualLeafRank.source_no_linear_relation
+#print axioms CryptoLean.ResidualLeafRank.six_block_codimension
+#print axioms CryptoLean.ResidualLeafRank.volume_charge
+#print axioms CryptoLean.ResidualLeafRank.short_volume_forces_height
+#print axioms CryptoLean.ResidualLeafRank.standardThreeRing

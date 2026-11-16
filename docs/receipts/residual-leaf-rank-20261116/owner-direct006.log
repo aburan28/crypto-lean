@@ -1,0 +1,174 @@
+CryptoLean/Polynomial/ResidualLeafRank.lean:150:2: error: Type mismatch
+  MvPolynomial.eval₂Hom ?m.14 fun i => ![X, C X, C (C X)] i
+has type
+  @RingHom (MvPolynomial (Fin (Nat.succ 0).succ.succ) ?m.7) ?m.38[X][X][X] AddMonoidAlgebra.nonAssocSemiring
+    (@Semiring.toNonAssocSemiring ?m.38[X][X][X] CommSemiring.toSemiring)
+but is expected to have type
+  @RingHom (Leaf K) K[X][X][X] AddMonoidAlgebra.nonAssocSemiring (@Semiring.toNonAssocSemiring K[X][X][X] semiring)
+CryptoLean/Polynomial/ResidualLeafRank.lean:156:19: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?f (block ?a ?b ?x ?y ?w ?τ ?σ ?i)
+in the target expression
+  realize
+      (block (MvPolynomial.C a) (MvPolynomial.C b) (MvPolynomial.X 0) (MvPolynomial.X 1) (MvPolynomial.X 2)
+        (MvPolynomial.C τ) (MvPolynomial.C σ) i) =
+    coreXY (C a) (C b) (alpha (C τ) (C σ) X i) (beta (C a) (C b) (C τ) (C σ) X i) (gamma (C σ) X i)
+
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+i : Fin 6
+⊢ realize
+      (block (MvPolynomial.C a) (MvPolynomial.C b) (MvPolynomial.X 0) (MvPolynomial.X 1) (MvPolynomial.X 2)
+        (MvPolynomial.C τ) (MvPolynomial.C σ) i) =
+    coreXY (C a) (C b) (alpha (C τ) (C σ) X i) (beta (C a) (C b) (C τ) (C σ) X i) (gamma (C σ) X i)
+CryptoLean/Polynomial/ResidualLeafRank.lean:173:79: error: unsolved goals
+case «0»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨0, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨0, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨0, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨0, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨0, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨0, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨0, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨0, ⋯⟩)
+⊢ (((coreXY (C a) (C b) 2 (beta (C a) (C b) (C τ) (C σ) X 0) 0).coeff 2).coeff 1).coeff 0 = 2
+
+case «1»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨1, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨1, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨1, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨1, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨1, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨1, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨1, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨1, ⋯⟩)
+⊢ (((coreXY (C a) (C b) (4 * (C σ - X)) (beta (C a) (C b) (C τ) (C σ) X 1) 0).coeff 2).coeff 1).coeff 1 = -4
+
+case «2»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨2, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨2, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨2, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨2, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨2, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨2, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨2, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨2, ⋯⟩)
+⊢ (((coreXY (C a) (C b) (2 * ((C σ - X) * (C σ - X))) (beta (C a) (C b) (C τ) (C σ) X 2) 0).coeff 2).coeff 1).coeff 2 =
+    2
+
+case «3»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨3, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨3, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨3, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨3, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨3, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨3, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨3, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨3, ⋯⟩)
+⊢ (((coreXY (C a) (C b) (2 * C τ) (beta (C a) (C b) (C τ) (C σ) X 3) (-1)).coeff 2).coeff 2).coeff 0 = -1
+
+case «4»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨4, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨4, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨4, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨4, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨4, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨4, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨4, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨4, ⋯⟩)
+⊢ (((coreXY (C a) (C b) (4 * C τ * (C σ - X)) (beta (C a) (C b) (C τ) (C σ) X 4) (-(2 * (C σ - X)))).coeff 2).coeff
+          2).coeff
+      1 =
+    2
+
+case «5»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨5, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨5, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨5, ⋯⟩))).coeff
+            2).coeff
+        1 =
+      alpha (C τ) (C σ) X ((fun i => i) ⟨5, ⋯⟩) ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X ((fun i => i) ⟨5, ⋯⟩))
+                (beta (C a) (C b) (C τ) (C σ) X ((fun i => i) ⟨5, ⋯⟩)) (gamma (C σ) X ((fun i => i) ⟨5, ⋯⟩))).coeff
+            2).coeff
+        2 =
+      gamma (C σ) X ((fun i => i) ⟨5, ⋯⟩)
+⊢ (((coreXY (C a) (C b) (2 * C τ * ((C σ - X) * (C σ - X))) (beta (C a) (C b) (C τ) (C σ) X 5)
+                  (-((C σ - X) * (C σ - X)))).coeff
+              2).coeff
+          2).coeff
+      2 =
+    -1
+CryptoLean/Polynomial/ResidualLeafRank.lean:177:73: warning: This simp argument is unused:
+  h.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coefficientWitness, yDegree, wDegree, witnessValues, h.2, alpha, gamma, pow_two, Polynomial.coeff_mul,
+    Finset.Nat.antidiagonal_succ, Finset.Nat.antidiagonal_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ResidualLeafRank.lean:177:77: warning: This simp argument is unused:
+  h.2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coefficientWitness, yDegree, wDegree, witnessValues, h.1, alpha, gamma, pow_two, Polynomial.coeff_mul,
+    Finset.Nat.antidiagonal_succ, Finset.Nat.antidiagonal_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ResidualLeafRank.lean:178:24: warning: This simp argument is unused:
+  Polynomial.coeff_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coefficientWitness, yDegree, wDegree, witnessValues, h.1, h.2, alpha, gamma, pow_two,
+    Finset.Nat.antidiagonal_succ, Finset.Nat.antidiagonal_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ResidualLeafRank.lean:178:45: warning: This simp argument is unused:
+  Finset.Nat.antidiagonal_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coefficientWitness, yDegree, wDegree, witnessValues, h.1, h.2, alpha, gamma, pow_two,
+    Polynomial.coeff_mul, Finset.Nat.antidiagonal_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ResidualLeafRank.lean:179:4: warning: This simp argument is unused:
+  Finset.Nat.antidiagonal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coefficientWitness, yDegree, wDegree, witnessValues, h.1, h.2, alpha, gamma, pow_two,
+    Polynomial.coeff_mul, Finset.Nat.antidiagonal_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
