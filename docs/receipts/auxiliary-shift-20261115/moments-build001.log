@@ -1,0 +1,45 @@
+⚠ [3137/3253] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3595/3595] Building CryptoLean.Group.ShiftMoments (3.0s)
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Group/ShiftMoments.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/ShiftMoments.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/ShiftMoments.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/ShiftMoments.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/ShiftMoments.setup.json --json
+warning: CryptoLean/Group/ShiftMoments.lean:47:0: automatically included section variable(s) unused in theorem `CryptoLean.ShiftRepresentations.acceptedCount_real_eq_sum`:
+  [Fintype G]
+  [MeasurableSpace G]
+  [DiscreteMeasurableSpace G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] [MeasurableSpace G] [DiscreteMeasurableSpace G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Group/ShiftMoments.lean:67:6: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+error: CryptoLean/Group/ShiftMoments.lean:68:2: `simp` made no progress
+error: CryptoLean/Group/ShiftMoments.lean:78:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Var[∑ i, fun ω => ?m.72 i (ω i); Measure.pi ?m.70]
+in the target expression
+  Var[∑ j, fun T => if U + T j ∈ S then 1 else 0; Measure.pi fun x => uniformOn Set.univ] =
+    ↑k * (↑S.card / ↑(Fintype.card G)) * (1 - ↑S.card / ↑(Fintype.card G))
+
+G : Type u_1
+inst✝⁴ : AddCommGroup G
+inst✝³ : Fintype G
+inst✝² : DecidableEq G
+inst✝¹ : MeasurableSpace G
+inst✝ : DiscreteMeasurableSpace G
+k : ℕ
+U V : G
+S : Finset G
+hzero : U + V = 0
+hsym : ∀ (g : G), g ∈ S ↔ -g ∈ S
+⊢ Var[∑ j, fun T => if U + T j ∈ S then 1 else 0; Measure.pi fun x => uniformOn Set.univ] =
+    ↑k * (↑S.card / ↑(Fintype.card G)) * (1 - ↑S.card / ↑(Fintype.card G))
+Some required targets logged failures:
+- CryptoLean.Group.ShiftMoments
+error: build failed

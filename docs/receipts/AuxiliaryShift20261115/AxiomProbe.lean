@@ -1,0 +1,31 @@
+import CryptoLean.Group.ShiftMoments
+import CryptoLean.Group.RankThreshold
+
+#print axioms CryptoLean.ShiftRepresentations.vector_sum
+#print axioms CryptoLean.ShiftRepresentations.vector_residual
+#print axioms CryptoLean.ShiftRepresentations.auxiliary_eq_iff
+#print axioms CryptoLean.ShiftRepresentations.vector_sum_eq_original_iff
+#print axioms CryptoLean.ShiftRepresentations.original_eval_zero
+#print axioms CryptoLean.ShiftRepresentations.auxiliary_eval_original
+#print axioms CryptoLean.ShiftRepresentations.original_ne_zero
+#print axioms CryptoLean.ShiftRepresentations.vector_sum_ne_zero
+#print axioms CryptoLean.ShiftRepresentations.right_shift_eq_neg_left
+#print axioms CryptoLean.ShiftRepresentations.both_filters_iff
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_eq_sum
+#print axioms CryptoLean.ShiftRepresentations.shifted_hit_mean
+#print axioms CryptoLean.ShiftRepresentations.shifted_hit_variance
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_real_eq_sum
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_function_eq_sum
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_mean
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_variance
+#print axioms CryptoLean.ShiftRepresentations.acceptedCount_second_moment
+#print axioms CryptoLean.RankThreshold.minimum_spec
+#print axioms CryptoLean.RankThreshold.poolSwap_apply
+#print axioms CryptoLean.RankThreshold.success_iff
+#print axioms CryptoLean.RankThreshold.success_tag_iff
+#print axioms CryptoLean.RankThreshold.success_swap_iff
+#print axioms CryptoLean.RankThreshold.success_or_swap
+#print axioms CryptoLean.RankThreshold.raw_card_le_twice_success
+#print axioms CryptoLean.RankThreshold.pairedSuccess_iff
+#print axioms CryptoLean.RankThreshold.pairedSuccess_iff_success
+#print axioms CryptoLean.RankThreshold.raw_card_le_twice_paired

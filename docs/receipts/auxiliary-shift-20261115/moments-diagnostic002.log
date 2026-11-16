@@ -1,0 +1,17 @@
+/workspace/scratch/moments-diagnostic002.lean:20:5: error: typeclass instance problem is stuck
+  NormedAddCommGroup ?m.153
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `NormedAddCommGroup` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+G : Type u_1
+inst✝⁴ : AddCommGroup G
+inst✝³ : Fintype G
+inst✝² : DecidableEq G
+inst✝¹ : MeasurableSpace G
+inst✝ : DiscreteMeasurableSpace G
+k : ℕ
+U : G
+S : Finset G
+⊢ (∑ i, ∫ (a : Fin k → G), if U + a i ∈ S then 1 else 0 ∂Measure.pi fun x => uniformOn Set.univ) =
+    ∑ j, ∫ (g : G), if U + g ∈ S then 1 else 0 ∂uniformOn Set.univ
