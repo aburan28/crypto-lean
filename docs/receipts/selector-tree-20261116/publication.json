@@ -1,0 +1,41 @@
+{
+  "schema": "selector-component-publication/v1",
+  "source_commit": "0ad80123c063587b110041d8f2ff4d02727aa6ac",
+  "lean": "4.35.0",
+  "mathlib": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "gate": {
+    "command": "tools/proof-gate.sh --out docs/receipts/selector-tree-20261116/gate001 .",
+    "exit_code": 0,
+    "theorems": 215,
+    "failures": 0,
+    "trusted_native": 0
+  },
+  "axioms": {
+    "command": "lake env lean docs/receipts/SelectorTree20261116/AxiomProbe.lean",
+    "exit_code": 0,
+    "named_laws": 3,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "pdf": {
+    "pages": 3,
+    "sha256": "a0f1fb9f6afb18b81ef6c8a2ecb06dc6e4d9eb735f91adf607514d71e319b21e",
+    "inspection": "All three final pages rendered1250px and visually inspected."
+  },
+  "formal": "Target-fiber scaling, arbitrary side-local explicit shortlist count, existing partite-sum instance; actual prime-field assembly",
+  "hand": "Balanced independent-half consequence; supplied-tuple tree representation, conditional pool survival, cost/provenance; overlapping sparse coefficient identity",
+  "proposed": "Both-input-dependent implicit query or filtered overlapping-support generation, neither implemented nor bounded",
+  "fresh_checker": {
+    "available": false,
+    "run": false
+  },
+  "native_numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "hosted": "No outcome inferred for unpublished head",
+  "complete_algorithm": "criterion remains unmet",
+  "standing": "unverified"
+}

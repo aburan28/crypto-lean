@@ -1,0 +1,16 @@
+{
+  "exit_code": 1,
+  "findings": [
+    {
+      "file": "docs/selector-tree-20261116.md",
+      "line": 159,
+      "word": "speedup"
+    },
+    {
+      "file": "docs/selector-tree-20261116-plan.md",
+      "line": 50,
+      "word": "prove"
+    }
+  ],
+  "remedy": "Tag the negative exponent-transfer sentence; change prospective build wording only. No result, hypothesis or evidence changed."
+}

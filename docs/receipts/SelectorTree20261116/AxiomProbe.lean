@@ -1,0 +1,5 @@
+import CryptoLean.Group.ShortlistCompletion
+
+#print axioms CryptoLean.ShortlistCompletion.fiber_card_mul
+#print axioms CryptoLean.ShortlistCompletion.adaptive_shortlist_count
+#print axioms CryptoLean.ShortlistCompletion.partite_shortlist_count
