@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-11-16T11:38:39Z",
+  "success": true,
+  "id": "Automation_31d40f4fc778819196a143e55c1a5984",
+  "is_enabled": true,
+  "next_run_time": "2026-11-16T04:28:39-08:00",
+  "unchanged_count": 0,
+  "reason": "substantive new publication resets safety-net",
+  "cadence": "50minutes then4hours; stop after3unchanged; closure disables"
+}
