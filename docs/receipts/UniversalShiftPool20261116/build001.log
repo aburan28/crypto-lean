@@ -1,0 +1,18 @@
+⚠ [3138/3139] Built CryptoLean.Group.TranslatedSupports (2.5s)
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3139/3139] Building CryptoLean.Combinatorics.UniversalPools (2.5s)
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Combinatorics/UniversalPools.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/UniversalPools.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/UniversalPools.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/UniversalPools.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/UniversalPools.setup.json --json
+error: CryptoLean/Combinatorics/UniversalPools.lean:55:6: Type mismatch
+  Nat.sub_le_sub_left (hA i hi) ?m.108
+has type
+  ?m.108 - (A i).card ≤ ?m.108 - a
+but is expected to have type
+  a ≤ (A i).card
+Some required targets logged failures:
+- CryptoLean.Combinatorics.UniversalPools
+error: build failed

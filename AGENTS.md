@@ -68,3 +68,12 @@ experiment or action, and the specific input or condition needed to resume.
 Never claim success from effort alone or claim that every avenue is exhausted
 without evidence. Apply this loop proportionately: routine edits need direct
 checks; substantive research needs an explicit experimental record.
+
+## PR prose checks
+
+Before creating or editing a PR body, run the shared PCC tool's
+`lint-prose --stdin` against this checkout and the exact proposed body.
+Post only after the lint passes; a lint after posting does not satisfy this
+ordering. Use a body file or structured API input to preserve literal text.
+This applies adopted lesson `L-77b44d3fe205`; the two distinct confirmations
+are retained in the append-only lesson entries.

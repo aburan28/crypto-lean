@@ -1,0 +1,11 @@
+{
+  "context": "",
+  "created": "2026-11-16T06:11:48Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/blob/f8d8e5334c867b94f300a0e6d5305272043dc8b2/docs/receipts/pair-colour-isolation-20261116/pr-body-lint001.log"
+  ],
+  "kind": "test",
+  "lesson": "L-77b44d3fe205",
+  "outcome": "confirm",
+  "schema": "crypto.lesson/v1"
+}
