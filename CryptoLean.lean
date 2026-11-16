@@ -44,3 +44,4 @@ import CryptoLean.Polynomial.ShortCoefficientWindows
 import CryptoLean.Polynomial.EndpointCoefficients
 import CryptoLean.Polynomial.RankOneSelector
 import CryptoLean.Polynomial.WeightedRowCertificate
+import CryptoLean.Polynomial.MixedDegreePivots

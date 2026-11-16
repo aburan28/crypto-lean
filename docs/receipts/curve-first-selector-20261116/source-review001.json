@@ -1,0 +1,24 @@
+{
+  "primary_model": "CryptoLean.Polynomial.EndpointCoefficients.first_vector_expansion and nested endpointInX",
+  "new_owner": "CryptoLean/Polynomial/MixedDegreePivots.lean",
+  "generic_laws": 7,
+  "actual_symbolic_declarations": 4,
+  "named_axioms": "propext/Classical.choice/Quot.sound only",
+  "hand_scope": [
+    "disjoint-column norm lower bound and pruning",
+    "random-model parameter counts and short-Weierstrass scaling union bound",
+    "homogeneous-multiplier warning",
+    "general mixed-degree triangular reconstruction, linear anchor and cost"
+  ],
+  "root_finding_context": {
+    "author": "Victor Shoup",
+    "url": "https://shoup.net/ntb/ntb-b1.pdf",
+    "edition": "beta1",
+    "reviewed": "chapter20.2, Theorem20.13, printed306; expected finite-field factoring cost",
+    "actual_successor_needs_factoring": false,
+    "original_ams_fetch": "403; bounded author-primary fallback"
+  },
+  "source_ast_partition": "20 columns,9+5+3+3; metadata only, no selector import or execution",
+  "numerical_cases": 0,
+  "complete_algorithm_criterion_met": false
+}

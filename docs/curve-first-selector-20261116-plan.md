@@ -31,3 +31,14 @@ receipts, current daily log. All new asymptotic and multi-row arguments are hand
 analysis, tagged unverified. No new source runtime is needed to decide this algebraic
 question; a future known-answer/full-residue implementation comparison still requires
 existing scientific execution and budget/image/caller/capacity/custody admission.
+
+Constructive successor to check during this phase: mixed leaf degrees0..d.
+The V² coefficient of F has unique top leaf monomial x²y² with coefficient1;
+all remaining terms have smaller total leaf degree. Small output coefficients
+at x^(i+2)y^(j+2)V² can therefore reconstruct multiplier coefficients
+triangularly as polynomials in tau. A nonconstant remaining coefficient gives
+univariate offset recovery. Audit whether the two top layers give a LINEAR
+anchor for actual S3, removing the need for general finite-field factoring.
+State exact indexing/out-of-range conventions and prove completeness by matching
+any existing short row to its pivot values. This is hand analysis until separately
+compiled; do not attach the previous347 count to a new law. [pcc:unverified]
