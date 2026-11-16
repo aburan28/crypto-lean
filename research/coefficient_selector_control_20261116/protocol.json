@@ -1,0 +1,18 @@
+{
+  "schema": "coefficient-selector-control/v1",
+  "status": "UNEXECUTED_PROPOSAL_NO_LAUNCH_AUTHORIZATION",
+  "component": "frozen first-endpoint selector; not the new two-chart source model",
+  "selector_source_sha256": "3e06648f3f1b6e1ad8a8153b4410035593a3e2d4c272a8a0fda91af27e704096",
+  "cases": [
+    {"id": "empty17", "p": "17", "a": "-3", "b": "1", "B": "2", "H": "1", "prediction": "complete_empty", "fast_pairs": "18", "baseline_pairs": "272"},
+    {"id": "positive257", "p": "257", "a": "-3", "b": "1", "B": "2", "H": "1", "prediction": "complete_nonempty", "fast_pairs": "4128", "baseline_pairs": "65792", "known_control": {"scalar": "1", "offset": "0", "l1": "141"}}
+  ],
+  "shared_limits": {"max_pairs": "70210", "max_certificates": "128", "max_field_bits": "16", "wall_seconds_proposed": "120", "address_bytes_proposed": "2147483648", "raw_output_bytes_proposed": "134217728", "compressed_output_bytes_proposed": "33554432"},
+  "cap_control": "After the main cases, repeat empty17 with the SAME exhausted shared Budget; require incomplete, zero visited pairs, never complete_empty. Failed reservation attempts are retained.",
+  "reference": "Independent Sage GF(p) polynomial expansion of the original S3 endpoint, then all p(p-1) scalar/offset pairs. No implementation coefficient-table reuse.",
+  "acceptance": "Both main searches finish, complete accepted scalar/offset/centered-row MULTISETS match, all fast pair rows and accepted exact modulus witnesses replay against the reference, predictions and known positive hold, shared-cap control is incomplete. Any timeout/output/certificate cap is incomplete.",
+  "source_image_base_only_unbuilt": "docker.io/sagemath/sagemath@sha256:fb96c7fb10d672f3be0d088399db3aeac52650416d1bb71f74f26429ea35778f",
+  "proposed_total_usd_ceiling_not_grant": "2.00",
+  "admission": "No image built/pulled/qualified and no job submitted. Requires existing live charged/reserved daily/monthly balance, source-bound built image, actual caller/pool/quota/L2 and private S3 Job/Pod custody. Do not switch provider, raise caps or use a local scientific substitute.",
+  "complete_algorithm_criterion_met": false
+}

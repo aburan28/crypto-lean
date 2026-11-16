@@ -1,0 +1,20 @@
+{
+  "scope": "AST/JSON parsing and source hashes only; no module import, Sage/field arithmetic or selector/control execution",
+  "files": [
+    {
+      "path": "research/coefficient_selector_control_20261116/control.py",
+      "sha256": "7a3432d021a21f04ad1925265b50ad3372fd985d894793fb0a6eb35cab94d07f"
+    },
+    {
+      "path": "research/coefficient_selector_control_20261116/protocol.json",
+      "sha256": "4513d838826412811a519005a2a0943c765d7a44cc3c03d23a4f5e9323485656"
+    }
+  ],
+  "python_files_parsed": 1,
+  "json_files_parsed": 1,
+  "old_selector_hash_matches": true,
+  "scientific_cases_executed": 0,
+  "new_image_builds": 0,
+  "job_submissions": 0,
+  "protocol_status": "UNEXECUTED_PROPOSAL_NO_LAUNCH_AUTHORIZATION"
+}
