@@ -1,0 +1,17 @@
+digraph CoefficientFirst {
+ graph [rankdir=TB,bgcolor="white",pad="0.22",nodesep="0.3",ranksep="0.32"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#475569",fillcolor="#eef2ff",margin="0.16,0.1"];
+ edge [color="#64748b",arrowsize=0.7];
+ model [label="One-generator modular block p Z^N + Z F(tau)\nPrime input + positive weights + two verified anchors"];
+ windows [label="Exact signed coefficient windows\nn1=floor((p-1)/w1), n2=floor((p-1)/w2)",fillcolor="#dbeafe"];
+ derive [label="Enumerate c1 != 0 and c2\nDerive tau = q + c2/(s c1)"];
+ center [label="Center all coefficients of c1 F(tau)\nMinimum weighted L1 for this scalar/offset pair"];
+ decision [label="Nonzero + exact L1 < p?",fillcolor="#fef3c7"];
+ cert [label="Retain row, pair and exact p-row witness\nBounded modular roots imply integer vanishing",fillcolor="#dcfce7"];
+ complete [label="Exhausted family: complete empty/nonempty\nOnly in the declared block"];
+ cap [label="Any cap/interruption: incomplete\nNo absence certificate",fillcolor="#fee2e2"];
+ gap [label="Still missing: independent equations,\nuseful decompositions and complete ECDLP cost",fillcolor="#fef3c7",color="#b45309"];
+ model -> windows -> derive -> center -> decision -> cert -> complete -> gap;
+ windows -> cap [style=dashed];
+ decision -> derive [label="next pair",constraint=false];
+}
