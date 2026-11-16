@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-11-16T12:06:16Z",
+  "id": "Automation_31d40f4fc778819196a143e55c1a5984",
+  "success": true,
+  "is_enabled": true,
+  "next_run_time": "2026-11-16T04:56:16-08:00",
+  "unchanged_count": 0,
+  "cadence": "50minutes then4hours; stop3unchanged; mergeclose disables"
+}
