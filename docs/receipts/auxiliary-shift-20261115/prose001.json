@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "/workspace/scratch/selector-kernel-assessment/tools/pcc/pcc.py",
+    "--repo",
+    "/workspace/scratch/crypto-lean",
+    "lint-prose",
+    "docs/auxiliary-shift-20261115.md",
+    "docs/auxiliary-shift-20261115-plan.md",
+    "docs/rank-threshold-20261115-plan.md"
+  ],
+  "exit_code": 1,
+  "stdout": "docs/auxiliary-shift-20261115.md: line 11: 'proves' with no [pcc:ID] citation and no [pcc:unverified] tag\ndocs/rank-threshold-20261115-plan.md: line 40: 'proved' with no [pcc:ID] citation and no [pcc:unverified] tag\nlint-prose: 2 finding(s)\n",
+  "stderr": "",
+  "decision": "Correct the unpinned report; preserve frozen rank plan byte-for-byte. Its line40 is a scoped prospective disclaimer, not a claimed proved theorem. No lint policy change."
+}

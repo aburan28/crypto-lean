@@ -1,0 +1,19 @@
+digraph C {
+  graph [rankdir=TB, bgcolor="white", pad=0.16, nodesep=0.3, ranksep=0.32];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11,
+        color="#355b76", fillcolor="#edf5fb", margin="0.16,0.10"];
+  edge [color="#355b76", fontname="DejaVu Sans", fontsize=10];
+  raw [label="Raw independent ordered pools\nmarkers M and auxiliary shifts T\nall multiplicities and ties retained"];
+  rule [label="Threshold = minimum marker key\ncompatible tag j passes BOTH child gates"];
+  swap [label="Analysis swap (M,T) -> (U+T,-U+M)\nminimum comparisons reverse\nsuccess OR swap-success covers every pool"];
+  exact [label="Shared finite endpoint\nr^(2b) <= 2 * successful raw pools\nU+V=0; symmetric ordered key; b>0", fillcolor="#e7f3e8", color="#3d7542"];
+  provenance [label="Full primitive coefficients\nsame tag cancels auxiliary part\noriginal coefficient vector remains nonzero"];
+  cost [label="Explicit construction (hand count)\ntwo b^2 pair families x b shifts\n2 b^3 translated-point/key tests", fillcolor="#fff4df", color="#a07124"];
+  missing [label="OPEN: charged coordinate-aware batch query\nreport retained actual (center,shift) pairs\nwithout testing every raw pair", fillcolor="#ffffff", color="#a07124", style="rounded,dashed"];
+  raw -> rule;
+  rule -> swap;
+  swap -> exact;
+  exact -> provenance;
+  rule -> cost;
+  cost -> missing [style=dashed, label="counting does not pay construction"];
+}
