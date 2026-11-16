@@ -1,0 +1,11 @@
+⚠ [3138/3143] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3143] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3143] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [3143/3143] Built CryptoLean.Polynomial.TwoChartCoefficients (6.5s)
+Build completed successfully (3143 jobs).

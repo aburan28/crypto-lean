@@ -1,0 +1,26 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:26:4: error: Tactic `rfl` failed: equality lhs
+  C Z + C V * (X + C y)
+is not definitionally equal to rhs
+  C Z + (X * C V + C y * C V)
+
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = endpointInX a b y Z V 0
+ha : adjacentSum (C w) (C Z) (C V) (C T) (C W) = C (adjacentSum w Z V T W)
+hg : adjacent (C a) (C b) (C w) (C Z) (C V) (C T) (C W) = C (adjacent a b w Z V T W)
+⊢ C Z + C V * (X + C y) = C Z + (X * C V + C y * C V)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:105:62: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+A B C₀ : R
+⊢ C (C (C (C A))) * X * C (C X) ^ 2 * C (C (C X)) ^ 2 + C (C (C (C B))) * C X * C (C X) ^ 3 * C (C (C X)) +
+      C (C (C (C C₀))) * C (C X) ^ 3 * C (C (C X)) ^ 2 =
+    C (C (C (C A))) * C (C X) ^ 2 * C (C (C X)) ^ 2 * X +
+      (C (C (C (C B))) * C (C X) ^ 3 * C (C (C X)) * C X + C (C (C (C C₀))) * C (C X) ^ 3 * C (C (C X)) ^ 2)

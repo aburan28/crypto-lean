@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T12:38:44Z",
+  "evidence": [
+    "CryptoLean/Polynomial/TwoChartCoefficients.lean",
+    "docs/receipts/two-chart-coefficients-20261116/actual002.log"
+  ],
+  "kind": "outcome",
+  "note": "Three source anchors, decoder, model b-invariance and exceptional raw zero compile. Full search implementation/qualification and useful yield remain absent.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "research",
+  "task": "Exact primitive two-chart coefficient audit and exceptional raw branch"
+}

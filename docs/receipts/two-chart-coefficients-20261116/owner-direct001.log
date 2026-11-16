@@ -1,0 +1,165 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:18:33: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+⊢ -(X * C y * C Z ^ 2 * 2) - X * C y * C a * C V ^ 2 * 2 - X * C y ^ 2 * C Z * C V * 2 - X * C Z * C a * C V * 2 -
+                      X * C b * C V ^ 2 * 4 -
+                    X ^ 2 * C y * C Z * C V * 2 +
+                  X ^ 2 * C y ^ 2 * C V ^ 2 +
+                X ^ 2 * C Z ^ 2 -
+              C y * C Z * C a * C V * 2 -
+            C y * C b * C V ^ 2 * 4 +
+          C y ^ 2 * C Z ^ 2 -
+        C Z * C b * C V * 4 +
+      C a ^ 2 * C V ^ 2 =
+    -(X * C y * C Z * C V * C 0 * 4) - X * C y * C Z ^ 2 * 2 - X * C y * C a * C V ^ 2 * 2 -
+                                              X * C y * C V ^ 2 * C 0 ^ 2 * 2 -
+                                            X * C y ^ 2 * C Z * C V * 2 -
+                                          X * C y ^ 2 * C V ^ 2 * C 0 * 2 -
+                                        X * C Z * C a * C V * 2 -
+                                      X * C a * C V ^ 2 * C 0 * 2 -
+                                    X * C b * C V ^ 2 * 4 -
+                                  X ^ 2 * C y * C Z * C V * 2 -
+                                X ^ 2 * C y * C V ^ 2 * C 0 * 2 +
+                              X ^ 2 * C y ^ 2 * C V ^ 2 +
+                            X ^ 2 * C Z * C V * C 0 * 2 +
+                          X ^ 2 * C Z ^ 2 +
+                        X ^ 2 * C V ^ 2 * C 0 ^ 2 -
+                      C y * C Z * C a * C V * 2 -
+                    C y * C a * C V ^ 2 * C 0 * 2 -
+                  C y * C b * C V ^ 2 * 4 +
+                C y ^ 2 * C Z * C V * C 0 * 2 +
+              C y ^ 2 * C Z ^ 2 +
+            C y ^ 2 * C V ^ 2 * C 0 ^ 2 -
+          C Z * C b * C V * 4 +
+        C a ^ 2 * C V ^ 2 -
+      C b * C V ^ 2 * C 0 * 4
+CryptoLean/Polynomial/TwoChartCoefficients.lean:24:36: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = endpointInX a b y Z V 0
+ha : adjacentSum (C w) (C Z) (C V) (C T) (C W) = C (adjacentSum w Z V T W)
+⊢ (C Z - C w * C V) ^ 2 * C T ^ 2 - 2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + 2 * C b * C V ^ 2) * C T * C W +
+      ((C Z * C w - C a * C V) ^ 2 - 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2 =
+    (C Z - C w * C V) ^ 2 * C T ^ 2 -
+        C 2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + C 2 * C b * C V ^ 2) * C T * C W +
+      ((C Z * C w - C a * C V) ^ 2 - C 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2
+CryptoLean/Polynomial/TwoChartCoefficients.lean:16:73: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = endpointInX a b y Z V 0
+ha : adjacentSum (C w) (C Z) (C V) (C T) (C W) = C (adjacentSum w Z V T W)
+hg : adjacent (C a) (C b) (C w) (C Z) (C V) (C T) (C W) = C (adjacent a b w Z V T W)
+hs : firstSum X (C y) (C Z) (C V) = C V * X + C (Z + y * V)
+⊢ adjacentSum w Z V T W * W * (Z + -(y * V)) ^ 2 - V * X.coeff 2 * adjacent a b w Z V T W =
+    adjacentSum w Z V T W * W * (Z - y * V) ^ 2
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:41: warning: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_add, map_mul, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:57: warning: This simp argument is unused:
+  map_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_add, map_sub, map_mul, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:65: warning: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_add, map_sub, map_mul, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:30:4: warning: This simp argument is unused:
+  Polynomial.coeff_C_mul_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [inX, primitive, hf, ha, hg, hs, ← map_mul, Polynomial.coeff_sub, Polynomial.coeff_C_mul,
+    Polynomial.coeff_mul_C, Polynomial.coeff_add, Polynomial.coeff_C, endpoint_x_square]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:55:69: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:55:69: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:102:63: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+A B C₀ : R
+⊢ ((eval 0 (eval 0 (C (C (C (C A))) * X * C (C X) ^ 2 * C (C (C X)) ^ 2))).coeff 3).coeff 2 +
+      ((C (C C₀) * X ^ 3 * C X ^ 2).coeff 3).coeff 2 =
+    C₀
+CryptoLean/Polynomial/TwoChartCoefficients.lean:104:44: warning: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, zero_add, add_zero, ← map_pow, ← map_mul,
+    Polynomial.coeff_C_mul, Polynomial.coeff_mul_C, Polynomial.coeff_X_pow, Polynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:105:58: warning: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, add_zero, ← map_pow, ← map_mul,
+    Polynomial.coeff_C_mul, Polynomial.coeff_mul_C, Polynomial.coeff_X_pow, Polynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:106:24: warning: This simp argument is unused:
+  Polynomial.coeff_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, zero_add, add_zero, ← map_pow,
+    ← map_mul, Polynomial.coeff_mul_C, Polynomial.coeff_X_pow, Polynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:106:47: warning: This simp argument is unused:
+  Polynomial.coeff_mul_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, zero_add, add_zero, ← map_pow,
+    ← map_mul, Polynomial.coeff_C_mul, Polynomial.coeff_X_pow, Polynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:107:4: warning: This simp argument is unused:
+  Polynomial.coeff_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, zero_add, add_zero, ← map_pow,
+    ← map_mul, Polynomial.coeff_C_mul, Polynomial.coeff_mul_C, Polynomial.coeff_C_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:107:27: warning: This simp argument is unused:
+  Polynomial.coeff_C_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [projectiveAnchor, lift4, uVar, xVar, vVar, wVar, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_pow, Polynomial.eval_C, Polynomial.eval_X, mul_zero, zero_mul, zero_add, add_zero, ← map_pow,
+    ← map_mul, Polynomial.coeff_C_mul, Polynomial.coeff_mul_C, Polynomial.coeff_X_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

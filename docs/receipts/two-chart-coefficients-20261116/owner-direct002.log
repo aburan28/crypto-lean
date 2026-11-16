@@ -1,0 +1,47 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:20:4: error: No goals to be solved
+CryptoLean/Polynomial/TwoChartCoefficients.lean:24:36: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = endpointInX a b y Z V 0
+ha : adjacentSum (C w) (C Z) (C V) (C T) (C W) = C (adjacentSum w Z V T W)
+⊢ (C Z - C w * C V) ^ 2 * C T ^ 2 - 2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + 2 * C b * C V ^ 2) * C T * C W +
+      ((C Z * C w - C a * C V) ^ 2 - 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2 =
+    (C Z - C w * C V) ^ 2 * C T ^ 2 -
+        C 2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + C 2 * C b * C V ^ 2) * C T * C W +
+      ((C Z * C w - C a * C V) ^ 2 - C 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:33: warning: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_mul, map_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:41: warning: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_add, map_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:19:49: warning: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [first, endpointInX, map_add, map_mul, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:106:62: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+A B C₀ : R
+⊢ C (C (C (C A))) * X * C (C X) ^ 2 * C (C (C X)) ^ 2 + C (C (C (C B))) * C X * C (C X) ^ 3 * C (C (C X)) +
+      C (C (C (C C₀))) * C (C X) ^ 3 * C (C (C X)) ^ 2 =
+    C (C (C (C A))) * C (C X) ^ 2 * C (C (C X)) ^ 2 * X +
+      (C (C (C (C B))) * C (C X) ^ 3 * C (C (C X)) * C X + C (C (C (C C₀))) * C (C X) ^ 3 * C (C (C X)) ^ 2)
