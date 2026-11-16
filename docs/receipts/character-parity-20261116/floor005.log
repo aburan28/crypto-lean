@@ -1,0 +1,21 @@
+AddMonoidHom.flip.{uM, uN, uP} {M : Type uM} {N : Type uN} {P : Type uP} {mM : AddZeroClass M} {mN : AddZeroClass N}
+  {mP : AddCommMonoid P} (f : M →+ N →+ P) : N →+ M →+ P
+CryptoLean.ShortlistCompletion.fiber_card_mul.{u_1, u_2} {H : Type u_1} {G : Type u_2} [AddGroup H] [AddGroup G]
+  [Fintype H] [Fintype G] (f : H →+ G) (hsur : Function.Surjective ⇑f) (g : G) :
+  Nat.card { x // f x = g } * Nat.card G = Nat.card H
+Polynomial.resultant_prod_left.{u_1, u_3} {R : Type u_1} [CommRing R] {ι : Type u_3} (s : Finset ι) (f : ι → R[X])
+  (g : R[X]) (n : ℕ) (hf : ∏ i ∈ s, (f i).leadingCoeff ≠ 0) (hn : g.natDegree ≤ n) :
+  (∏ i ∈ s, f i).resultant g (∏ i ∈ s, f i).natDegree n = ∏ i ∈ s, (f i).resultant g (f i).natDegree n
+Polynomial.resultant_X_sub_C_left.{u_1} {R : Type u_1} [CommRing R] (g : R[X]) (n : ℕ) (r : R) (hg : g.natDegree ≤ n) :
+  (X - C r).resultant g 1 n = eval r g
+Fintype.card_sigma.{u_7, u_8} {ι : Type u_8} {α : ι → Type u_7} [Fintype ι] [(i : ι) → Fintype (α i)] :
+  Fintype.card (Sigma α) = ∑ i, Fintype.card (α i)
+docs/receipts/CharacterParity20261116/FloorProbe.lean:50:44: error: Invalid argument name `S₁` for function `Matrix.toLinearMap₂'_single`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `N₂`: S̵₁̵N̲₂̲
+  • `n`: S̵₁̵n̲
+  • `m`: S̵₁̵m̲
+  • `M`: S̵₁̵M̲
+  • `i`: S̵₁̵i̲
+  • `j`: S̵₁̵j̲

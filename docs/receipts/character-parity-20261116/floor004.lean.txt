@@ -1,0 +1,50 @@
+import CryptoLean.Group.ShortlistCompletion
+import Mathlib.RingTheory.Polynomial.Resultant.Basic
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.LinearAlgebra.Matrix.SesquilinearForm
+import Mathlib.Tactic
+
+set_option autoImplicit false
+noncomputable section
+open Polynomial
+open scoped BigOperators
+
+#check AddMonoidHom.flip
+#check CryptoLean.ShortlistCompletion.fiber_card_mul
+#check Polynomial.resultant_prod_left
+#check Polynomial.resultant_X_sub_C_left
+#check Fintype.card_sigma
+
+example {R C : Type*} [AddGroup R] [AddGroup C]
+    (B : R →+ C →+ ZMod 2) (r : R) (c : C) : B.flip c r = B r c := rfl
+
+example {R : Type*} [AddGroup R] [Fintype R]
+    (f : R →+ ZMod 2) (hs : Function.Surjective f) :
+    Nat.card {r : R // f r = 1} * 2 = Nat.card R := by
+  simpa [Nat.card_eq_fintype_card] using
+    CryptoLean.ShortlistCompletion.fiber_card_mul f hs 1
+
+example {F I : Type*} [Field F] [Fintype I]
+    (u : I → F) (g : F[X]) :
+    (∏ i : I, (X-C (u i))).resultant g = ∏ i : I, g.eval (u i) := by
+  classical
+  rw [Polynomial.resultant_prod_left]
+  · simp
+  · simp
+  · exact le_rfl
+
+example (p : ℕ) [Fact p.Prime] {I J : Type*} [Fintype I] [Fintype J]
+    (u : I → ZMod p) (v : J → ZMod p) :
+    (∏ i : I, (X-C (u i))).resultant (∏ j : J, (X-C (v j))) =
+      ∏ i : I, ∏ j : J, (u i-v j) := by
+  classical
+  rw [Polynomial.resultant_prod_left]
+  · simp [Polynomial.eval_prod]
+  · simp
+  · exact le_rfl
+
+example {I J : Type*} [Fintype I] [Fintype J] [DecidableEq I] [DecidableEq J]
+    (M : Matrix I J (ZMod 2)) (i : I) (j : J) :
+    Matrix.toLinearMap₂' (ZMod 2) M
+      (Pi.single i (1 : ZMod 2)) (Pi.single j (1 : ZMod 2)) = M i j :=
+  Matrix.toLinearMap₂'_single M i j
