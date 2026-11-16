@@ -1,0 +1,13 @@
+{
+  "applied": [],
+  "created": "2026-11-16T00:16:12Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/19"
+  ],
+  "kind": "outcome",
+  "note": "Metadata-only archive merged with CI-green false; actual head has explicit zero-step billing failure. No mathematical source or pinned evidence changed.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "report-evidence",
+  "task": "PR19 preserves exact source-head hosted failures and scoped PR18 landing; queued for next substantive owner PR"
+}
