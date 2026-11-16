@@ -25,3 +25,8 @@ missing. All346 old subjects/20rows stay frozen. Raw default-heartbeat/interface
 tactic failures retained, no limit/trust/inventory/linter exception. Source/prose
 whitespace0/archival2 preserves raw bytes. No independent signed verdict or identity
 certificate. [pcc:unverified]
+
+Registered PCC-20261116-2b1bc7 with32 attestation subjects, standing unverified
+(verify-all exit2). Twenty-one-row ledger verifies; published1e55 twenty rows and
+main017 nine rows remain exact byte/parsed prefixes. All378 subject hashes match,
+including346 older pins. No independently signed verification. [pcc:unverified]

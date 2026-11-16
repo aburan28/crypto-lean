@@ -1,0 +1,240 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T18:07:07Z",
+ "id": "PCC-20261116-2b1bc7",
+ "kind": "statement",
+ "producer": {
+  "commit": "c85706ffb2de0037edb37d32637d5208c1b3d01d",
+  "model": "",
+  "session": "residual-leaf-rank-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/ResidualLeafRank.lean",
+    "sha256": "578476af5d4f103f14879505479299ea05d7eb16e00d4df63c2bcbd1d704f0d9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ResidualLeafRank20261116/ActualInstances.lean",
+    "sha256": "b3e82ca066eded1159600fe215db4e9854ec35a2753c00ce022101852b9f811b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ResidualLeafRank20261116/Axioms.lean",
+    "sha256": "54582f747ffeef17b9f088d4ac3aa1d20d0628081ba061685021092c170b86b1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/archival-whitespace001.log",
+    "sha256": "1702453737633dfbbf0928012346525544f78fd8f5b964f9bc0e504f2cc384c5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/audit-delta001.json",
+    "sha256": "7e25e636adf1b42cd5f6c68219a0d7a94ad7bda6d6582d4cbaea0b17aafe594f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/axioms001.log",
+    "sha256": "ebdc26acbc5502e31ec7c4badd499097b9652c3b9af42f14358d2962cb5e6b77"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate-launch001.log",
+    "sha256": "04a87fd814589c84a404110fcd2e0c6a10a945bec774669df186a823c67a2db9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/audit.log",
+    "sha256": "e14017cc15c2e037f4e099c034548242eb7f4f92319efc92f4f3297a28ce10a0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/build.log",
+    "sha256": "8a4c0abdd4dbd37b657578b71f93dc3af257bc666c4ce7de8d50f38af7832a7c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/cache.log",
+    "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/source-target.log",
+    "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/sources.log",
+    "sha256": "760dce66bc1657d7a22df468234366797109c38e082215335a7875bc6ae1af1f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-build001.log",
+    "sha256": "dd9d149fadd9707096bf8126ab3fa98e6e93996917bf790e053d1c4df0f1f79b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-build002.log",
+    "sha256": "0cc255e47e1ba0f43e4ccd70202a7df1885ac54aaa7cebf7224ec0a8700b0ecd"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-build003.log",
+    "sha256": "607b4881a85ce21c654004090a20bc37bae047c8abb6f5adad6ff1229c6f0b42"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct001.log",
+    "sha256": "a0afccb9ece72c683023b082b4cbb63f14d697e53ee2471b490e496c338780a8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct002.log",
+    "sha256": "82b69013dc87b3fa9ede918bc38d2f99b77492b90981ee8d82f8cf7c67fefa52"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct003.log",
+    "sha256": "4ba85cb4c23ac3ead2abcfca1d7d9ba3bd6bade232834e94a8940afe73bd1eb0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct004.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct005.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct006.log",
+    "sha256": "ac0be611d2782147d15f67be50cf1b9c3abe3a79a1bec3a51f9e8692962a33f3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct007.log",
+    "sha256": "703c5d2207af606c5de9db2e23a5f754343341e272f56e9725fa6484e29ed762"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/owner-direct008.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/preservation-pre001.json",
+    "sha256": "cddf199b39ff7a16b333609722d83fc23c911d8b0dfadd3a7e7304dfd481d971"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/source-review001.json",
+    "sha256": "69e31b8a99762087cc3a988508a8a7ca17b1d61ebe234d6031d1a875a8164c24"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/residual-leaf-rank-20261116/whitespace001.json",
+    "sha256": "cda031fcbd573939a7afebf475eb3e9f06cde3bddc30069691add364e7d09a09"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/residual-leaf-rank-20261116-highest-anchor-plan001.md",
+    "sha256": "0f66cbd6ea6b35c7a618b7dc6939df420b6ed1783c635e1f425d458de64516cd"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/residual-leaf-rank-20261116-plan.md",
+    "sha256": "891e7c6575e8b45e71b4d433faa7f76d8fa74fa6599efa4eddb6b8e1ca87273a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/residual-leaf-rank-20261116.md",
+    "sha256": "342a17eddf6a3e900663578b12aec0f9449daaf86f6cbe2b47ca285698a55f89"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/residual-leaf-rank-20261116/publication001.json",
+    "sha256": "ff3a50b38bc2cabe9bbba0568cbf26922cf1e03b1e20727bded7396104bc59bb"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Declared single-residual leaf-monomial module with honest six tagged projective blocks; simplified volume and scalar highest-anchor conditions, not global useful yield.",
+ "statement": "Residual leaf-rank source audit:21 generic laws and5 symbolic applications compile; canonical local566/0/0. Actual homogeneous source blocks have nonzero coefficient witnesses2,-4,2,-1,2,-1 when2!=0. Honest actual-product union supportN>=6|A| and a no-linear-relation field coefficient statement compile; equal blocks retain six tags and zero-block controls are explicit. The finite simplified volume premise impliesL^6<p. Highest-leaf source anchors-1,2sigma,2tau and actual decoder compile. Matrix-index/weighted determinant/LLL and full norm-window/global-yield transfers remain HAND; tighter candidate-box charge is not measured speed or an implemented capped selector. No short-row nonexistence or all-ECDLP lower bound, scientific/numerical/native qualification/paid execution, independent signed verdict or complete subexponential ECDLP algorithm."
+}
