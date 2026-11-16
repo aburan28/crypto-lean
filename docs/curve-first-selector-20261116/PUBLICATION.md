@@ -23,3 +23,9 @@ certificate. No proof-limit/trust/inventory/linter exception. Raw initial failur
 and frozen import warnings remain. Complete end-to-end criterion remains unmet;
 shared live budget and runtime/source-image/caller/capacity/custody admission
 remain missing. [pcc:unverified]
+
+Registered PCC-20261116-31bfeb with20 attestation subjects, standing unverified
+(verify-all exit2). Fifteen-row chain verifies; publishedf902 fourteen rows remain
+exact byte/parsed prefix. All208 subject hashes match, including188 prior pins.
+Source/prose whitespace0; archival diff2 retains raw compiler suggestions.
+No independent signed verdict. [pcc:unverified]

@@ -1,0 +1,156 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T11:36:33Z",
+ "id": "PCC-20261116-31bfeb",
+ "kind": "statement",
+ "producer": {
+  "commit": "7508822f28e9a4ae546948c01a736345da70cd8b",
+  "model": "",
+  "session": "curve-first-selector-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/MixedDegreePivots.lean",
+    "sha256": "f3c8ee1133f4aedeb2961b21cb875f4941777d4897b9b2bb9a4cf8517f2df350"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/curve-first-selector-20261116-plan.md",
+    "sha256": "d9005f049e53964fa1a04909e08c02ff8600c7b35673b5152cf89de435752bfb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/curve-first-selector-20261116.md",
+    "sha256": "72f9d9d3ffefa96ae44f6c3e7043438ec24fd189a4b8e563ea35a7f982aa356e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CurveFirstSelector20261116/ActualDegreeOne.lean",
+    "sha256": "2932e3aecd1b326925be5d0d54dcd2f05190cb2aea4982aa56631c0571710c2e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CurveFirstSelector20261116/Axioms.lean",
+    "sha256": "ed1a9772020bde803c9869a5f3cb033a51d007e13497d112a1a968cac95451fc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/curve-first-selector-20261116/publication001.json",
+    "sha256": "d731420a3eff4de02aeb2da45ad3727277d3d75034003219cb13b332a39d6550"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-0df78d59e598.json",
+    "sha256": "0a22288b60b10e22fe2f977af1f0d7f7c6cf68b364ef010d285840e04c778aed"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-4f5c8ff8fab9.json",
+    "sha256": "423448a1e04514c7d54074a961a816d07faaccc0304faf2f39ab57da9f832ad8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/axioms001.log",
+    "sha256": "ef53267c442e1692ac6c7286e9f0fa939441356ce72c4bbcee514a2f4d6037ac"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/owner-direct001.log",
+    "sha256": "c60d730a8714ba1f6f42e18a07fada4d0f7b8ee69c8e2ede220b55990915085e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/owner-direct002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/source-partition001.json",
+    "sha256": "d368b7c607b1a8bff0c2a4d8ee23bf8932adc8e7f869c52fc4dfb106fe6105f7"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/source-review001.json",
+    "sha256": "efcadc030b7b7b1f9e559fd239a46e59d78ca2c5c41c8d160bc7b970022c010d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/audit-delta001.json",
+    "sha256": "aa6f4acc680193bd321aae701d315f66c56135d2d1431f9719aa4c36dd7a17ae"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/gate001/_/audit.log",
+    "sha256": "8b0279b182c5f3e6124ef56ec02e85d7778df17f38ec66a492ca10415ea94f19"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/gate001/_/sources.log",
+    "sha256": "c45daabcda433164353ff7c283860313517eded8d58801bb1cc389231e2b8124"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/gate-launch001.log",
+    "sha256": "a288fd067427e9d73072278475d5ce3a079ff760bd44525823a4d70a3c335dd2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/curve-first-selector-20261116/next-generator-test001.md",
+    "sha256": "0a560f4371201a701cc1a623e8e20ce89941ec0cb13d769090b9509be244b5a8"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Odd-characteristic nonsingular S3 model; fixed declared support/weights, bounded output condition and explicit random-model distribution.",
+ "statement": "Curve-first and mixed-degree selector assessment:7 generic degree-one identities and4 actual recovery declarations compile, canonical local audit363/0/0. Formal scope is actual endpoint coefficient splitting, three pivots and linear offset recovery branches for F,xF,yF. Exact norm pruning, all-degree triangular search/cost and single-irreducible-factor random-model bounds are hand analysis. They identify a generic-model yield bottleneck in the declared single-generator family, not an ECDLP lower bound or fixed-curve impossibility. Distinct-generator b-elimination is prospective, not implemented or compiled. No numerical or complete-algorithm claim."
+}
