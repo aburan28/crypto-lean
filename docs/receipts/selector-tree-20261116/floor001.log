@@ -1,0 +1,60 @@
+AddMonoidHom.card_fiber_eq_of_mem_range.{u_1, u_2, u_3} {G : Type u_1} {M : Type u_2} {F : Type u_3} [AddGroup G]
+  [Fintype G] [AddMonoid M] [DecidableEq M] [FunLike F G M] [AddMonoidHomClass F G M] (f : F) {x y : M}
+  (hx : x ∈ Set.range ⇑f) (hy : y ∈ Set.range ⇑f) : {g | f g = x}.card = {g | f g = y}.card
+AddSubgroup.card_ker_mul_card_of_surjective.{u_1, u_2} {G : Type u_1} {G' : Type u_2} [AddGroup G] [AddGroup G']
+  {f : G →+ G'} (hf : Function.Surjective ⇑f) : Nat.card ↥f.ker * Nat.card G' = Nat.card G
+Fintype.card_le_of_surjective.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Fintype α] [Fintype β] (f : α → β)
+  (h : Function.Surjective f) : Fintype.card β ≤ Fintype.card α
+Fintype.card_sigma.{u_7, u_8} {ι : Type u_8} {α : ι → Type u_7} [Fintype ι] [(i : ι) → Fintype (α i)] :
+  Fintype.card (Sigma α) = ∑ i, Fintype.card (α i)
+CryptoLean.PartiteCoverage.tupleSum_surjective.{u_1} {G : Type u_1} [AddCommGroup G] {m b : ℕ} (a : Fin m → Fin b)
+  (hm : 0 < m) : Function.Surjective ⇑(CryptoLean.PartiteCoverage.tupleSum a)
+docs/receipts/SelectorTree20261116/FloorProbe.lean:47:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin s × Fin b → ℕ)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/SelectorTree20261116/FloorProbe.lean:47:37: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  AddCommGroup ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/SelectorTree20261116/FloorProbe.lean:49:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:50:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:53:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:54:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:56:2: error: Type mismatch
+  AddMonoidHom.card_fiber_eq_of_mem_range (CryptoLean.PartiteCoverage.tupleSum c)
+    (CryptoLean.PartiteCoverage.tupleSum_surjective c hs g) (CryptoLean.PartiteCoverage.tupleSum_surjective c hs 0)
+has type
+  {g_1 | (CryptoLean.PartiteCoverage.tupleSum c) g_1 = g}.card =
+    (Finset.filter (fun (g : Fin s × Fin b → ↥H) => (CryptoLean.PartiteCoverage.tupleSum c) g = 0) Finset.univ).card
+but is expected to have type
+  {x | (CryptoLean.PartiteCoverage.tupleSum c) x = g}.card =
+    (Finset.filter (fun (x : Fin s × Fin b → ℕ) => (CryptoLean.PartiteCoverage.tupleSum c) x = 0) Finset.univ).card
