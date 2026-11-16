@@ -24,3 +24,5 @@ plan/report/PDF/control/raw edit or journal-block loss. New source/prose0; broad
 scan1 unchanged intentional bad fixture, full archival diff-check exit2 preserves
 raw bytes. No limit/trust/inventory/linter exception. Earlier scientific control
 UNEXECUTED; live cost and actual runtime admission still missing. [pcc:unverified]
+
+Registered PCC-20261116-bda7ce with28 attestation subjects, unverified (verify-all exit2); ledgerverify0. All406 pins match;22 rows retain published f30821-row and main0179-row exact byte/parsed prefixes. No independently signed verdict. [pcc:unverified]
