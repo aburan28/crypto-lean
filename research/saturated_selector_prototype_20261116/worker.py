@@ -111,7 +111,7 @@ def point_key(point):
     return None if point.is_zero() else (int(point[0]), int(point[1]))
 
 
-def make_path(p, a, b, target_x, length):
+def make_path(p, a, b, target_x, length, offsets):
     names = ([f"x{i}" for i in range(length)]
              + [f"u{i}" for i in range(length-2)]
              + [f"v{i}" for i in range(length-2)])
@@ -120,7 +120,7 @@ def make_path(p, a, b, target_x, length):
     xs = variables[:length]
     us = variables[length:2*length-2]
     vs = variables[2*length-2:]
-    pairs = list(zip(us, vs))
+    pairs = [(u+offset*v, v) for u, v, offset in zip(us, vs, offsets)]
     rows = [homogeneous_s3(a, b, (xs[0], 1), (xs[1], 1), pairs[0])]
     for j in range(1, length-2):
         rows.append(homogeneous_s3(a, b, pairs[j-1], (xs[j+1], 1), pairs[j]))
@@ -140,6 +140,49 @@ def localized_generators(ring, original, denominator, mode, length, evidence):
         generators, exponent = list(original), 0
         witnesses = [[ring.one() if i == j else ring.zero()
                       for i in range(len(original))] for j in range(len(original))]
+    elif mode == "local_minors":
+        # A finite subset of saturation, not a claim of the whole colon ideal.
+        exponent = 3
+        require_at_most(exponent, caps.max_saturation_exponent, "saturation exponent")
+        generators = list(original)
+        witnesses = [[denominator**3 if i == j else ring.zero()
+                      for i in range(len(original))] for j in range(len(original))]
+        variables = ring.gens()
+        for slot in range(length-2):
+            u, v = variables[length+slot], variables[2*length-2+slot]
+            def coefficients(poly):
+                result = [ring.zero(), ring.zero(), ring.zero()]
+                for powers, coefficient in poly.dict().items():
+                    powers = list(powers)
+                    du, dv = powers[length+slot], powers[2*length-2+slot]
+                    if du+dv != 2:
+                        raise ValueError("local source is not a homogeneous quadratic")
+                    powers[length+slot] = powers[2*length-2+slot] = 0
+                    result[2-du] += coefficient*monomial(ring, powers)
+                return result
+            a, b, c = coefficients(original[slot])
+            d, e, f = coefficients(original[slot+1])
+            L, M, N = a*e-b*d, a*f-c*d, b*f-c*e
+            R = M*M-L*N
+            local = [
+                (1, L*u+M*v, -d, a),
+                (2, M*u+N*v, -d*u-e*v, a*u+b*v),
+                (3, R, -d*(M*v-L*u)+L*e*v, a*(M*v-L*u)-L*b*v),
+            ]
+            for power, poly, left, right in local:
+                if not poly:
+                    continue
+                if v**power*poly != left*original[slot]+right*original[slot+1]:
+                    raise ValueError("local subresultant identity failed")
+                # Convert the vertex witness into one common D^3 witness.
+                powers = [0]*ring.ngens()
+                for j in range(length-2):
+                    powers[2*length-2+j] = 3-(power if j == slot else 0)
+                multiplier = monomial(ring, powers)
+                witness = [ring.zero() for _ in original]
+                witness[slot], witness[slot+1] = multiplier*left, multiplier*right
+                generators.append(poly)
+                witnesses.append(witness)
     else:
         saturated, exponent = ideal.saturation(ring.ideal(denominator))
         exponent = int(exponent)
@@ -163,6 +206,15 @@ def localized_generators(ring, original, denominator, mode, length, evidence):
                 raise ValueError("saturation identity failed exact verification")
             witnesses.append(witness)
     require_at_most(len(generators), caps.max_generators, "generators")
+    # Also check the explicit and ordinary paths using the same contract.
+    for poly, witness in zip(generators, witnesses):
+        check_poly(poly, caps)
+        for coefficient in witness:
+            check_poly(coefficient, caps)
+        if denominator**exponent*poly != sum(
+                (coefficient*source for coefficient, source in zip(witness, original)),
+                ring.zero()):
+            raise ValueError("common denominator witness failed exact verification")
     record = evidence.write("saturation", {
         "mode": mode, "length": length, "exponent": exponent,
         "original": [encoded_poly(f, caps) for f in original],
@@ -369,41 +421,48 @@ class Selector:
         p = int(self.curve.base_ring().characteristic())
         a, b = int(self.curve.a4()), int(self.curve.a6())
         for length in range(3, search["max_length"]+1):
-            try:
-                ring, rows, denominator = make_path(p, a, b, int(target[0]), length)
-                integers, generators = localized_generators(
-                    ring, rows, denominator, search["mode"], length, evidence)
-            except GlobalCap:
-                raise
-            except CapExceeded as error:
-                evidence.event("profile_cap", length=length, reason=str(error))
-                continue
-            short = []
-            for multiplicity, degree in product(search["multiplicities"], search["shift_degrees"]):
+            for offsets in search["chart_offsets"].get(str(length), [[0]*(length-2)]):
+                evidence.take("charts", 1, evidence.caps.max_chart_trials)
+                evidence.event("coordinate_chart", length=length, offsets=offsets,
+                               height_bound=search["height_bound"])
                 try:
-                    blocks = shifted_blocks(p, integers, generators, length,
-                                            multiplicity, degree, evidence)
-                    for block in blocks.values():
-                        short.extend(certified_short_rows(
-                            p, block, length, search["x_bound"], search["height_bound"],
-                            multiplicity, evidence))
-                    require_at_most(len(short), evidence.caps.max_short_relations, "all short rows")
-                    candidates = leaf_candidates(short, length, evidence)
-                    for leaves in candidates:
-                        if any(not 0 <= x < search["x_bound"] or x not in self.lookup for x in leaves):
-                            continue
-                        ids = [self.lookup[x] for x in leaves]
-                        for signs in product((-1, 1), repeat=length):
-                            evidence.take("sign_trials", 1, evidence.caps.max_sign_trials)
-                            total = sum((s*self.catalog[i] for i, s in zip(ids, signs)), self.curve(0))
-                            if total == target:
-                                return self.checked(target, ids, list(signs),
-                                                    search["mode"]+"_lattice")
+                    ring, rows, denominator = make_path(p, a, b, int(target[0]), length, offsets)
+                    integers, generators = localized_generators(
+                        ring, rows, denominator, search["mode"], length, evidence)
                 except GlobalCap:
                     raise
                 except CapExceeded as error:
-                    evidence.event("profile_cap", length=length, multiplicity=multiplicity,
-                                   shift_degree=degree, reason=str(error))
+                    evidence.event("profile_cap", length=length, reason=str(error))
+                    continue
+                short = []
+                for multiplicity, degree in product(search["multiplicities"], search["shift_degrees"]):
+                    try:
+                        blocks = shifted_blocks(p, integers, generators, length,
+                                                multiplicity, degree, evidence)
+                        for block in blocks.values():
+                            short.extend(certified_short_rows(
+                                p, block, length, search["x_bound"], search["height_bound"],
+                                multiplicity, evidence))
+                        require_at_most(len(short), evidence.caps.max_short_relations, "all short rows")
+                        candidates = leaf_candidates(short, length, evidence)
+                        for leaves in candidates:
+                            if any(not 0 <= x < search["x_bound"] or x not in self.lookup for x in leaves):
+                                continue
+                            ids = [self.lookup[x] for x in leaves]
+                            for signs in product((-1, 1), repeat=length):
+                                evidence.take("sign_trials", 1, evidence.caps.max_sign_trials)
+                                total = sum((s*self.catalog[i] for i, s in zip(ids, signs)), self.curve(0))
+                                if total == target:
+                                    result = self.checked(target, ids, list(signs),
+                                                          search["mode"]+"_lattice")
+                                    result.update(chart_offsets=offsets,
+                                                  height_bound=search["height_bound"])
+                                    return result
+                    except GlobalCap:
+                        raise
+                    except CapExceeded as error:
+                        evidence.event("profile_cap", length=length, multiplicity=multiplicity,
+                                       shift_degree=degree, reason=str(error))
         return None
 
 
@@ -430,10 +489,10 @@ def run(config, evidence):
     if generator.is_zero() or r*generator != curve(0) or r*target != curve(0):
         raise ValueError("invalid subgroup input")
     required = {"x_bound", "max_length", "mode", "multiplicities", "shift_degrees"}
-    if set(search) - (required | {"height_bound"}) or not required <= set(search):
+    if set(search) - (required | {"height_bound", "chart_offsets"}) or not required <= set(search):
         raise ValueError("unexpected/missing search fields")
     search.setdefault("height_bound", isqrt(p)+2)
-    if search["mode"] not in ("ordinary", "saturated"):
+    if search["mode"] not in ("ordinary", "saturated", "local_minors"):
         raise ValueError("unknown mode")
     if any(type(search[k]) is not int for k in ("x_bound", "max_length", "height_bound")):
         raise ValueError("integer bounds required")
@@ -447,6 +506,19 @@ def run(config, evidence):
                 type(v) is not int or not low <= v <= high for v in search[name]):
             raise ValueError("invalid finite profile list")
         require_at_most(len(search[name]), 5, "profile list length")
+    search.setdefault("chart_offsets", {})
+    if not isinstance(search["chart_offsets"], dict):
+        raise ValueError("chart_offsets must be a length-keyed object")
+    if set(search["chart_offsets"])-{str(i) for i in range(3, search["max_length"]+1)}:
+        raise ValueError("chart length outside admitted range")
+    for key, panel in search["chart_offsets"].items():
+        if not isinstance(panel, list) or not panel:
+            raise ValueError("chart panel must be nonempty")
+        require_at_most(len(panel), caps.max_chart_trials, "chart panel length")
+        if any(not isinstance(offsets, list) or len(offsets) != int(key)-2 or any(
+                type(tau) is not int or not 0 <= tau < p for tau in offsets)
+               for offsets in panel):
+            raise ValueError("chart offsets must be canonical vectors")
     catalog = []
     for x in range(search["x_bound"]):
         rhs = GF(p)(x)**3 + GF(p)(a)*x + GF(p)(b)

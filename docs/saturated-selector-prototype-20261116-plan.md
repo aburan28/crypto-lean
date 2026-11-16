@@ -153,3 +153,40 @@ free-label probability statement is conditional on its uniform/label-free
 hypotheses; no such distribution theorem is asserted for wall-time-interrupted
 or otherwise censored pilot runs. Every final scalar still requires its own
 exact curve check.
+
+
+## Successor fork: explicit local minors and subcritical translated charts
+
+Source-review extension,16 November2026; no numerical job. Keep the original
+paired ordinary/global-saturation pilot and its inputs unchanged. Add a
+local_minors source mode with explicit V,V²,V³ certificates, plus a separate
+bounded chart-offset panel interface. These are source candidates only.
+
+The first local-minors hypothesis is REJECTED at balanced height for chain
+length at least4: every nonzero added generator has total projective degree
+at least2. A boundary linear subresultant has degree1 in its eliminated
+slot and degree2 in its neighbor; its resultant has degree4 in that neighbor.
+Interior versions have more projective degree. The existing generic
+filtration therefore still excludes an HHG-short row. Length3 is an explicit
+exception. Keep the mode as a falsifiable negative control; do not present
+its constant degree alone as a selector breakthrough.
+
+A distinct positive opening uses H=floor(sqrt(p)/2) and x_i=tau_i+U_i/V_i.
+For positive primitive pairs 1<=u,v<=H with H²<p, rational reduction is
+injective. A union bound over common divisors gives at least H²/4 pairs.
+For fixed x and uniform tau in Fp, the representable probability is at least
+H²/(4p). Independent offsets across s=m-2 slots therefore retain any fixed
+finite intermediate tuple with probability at least(H²/(4p))^s. For p>=16,
+H>=sqrt(p)/4, so this is at least64^(-s). An iid pool of
+N>=64^s*(s*ln(p)+ln(1/epsilon)) offset vectors simultaneously covers all p^s
+finite tuples with failure probability at most epsilon. This is hand
+counting and the existing generic pool logic, not a new compiled theorem.
+
+Use the original polynomial system with (U+tau V,V) substituted per slot.
+This is coordinate translation, not group translation, and requires no
+character-sum or selected-output uniformity assumption. Keep infinity cases
+separate. The old H>=sqrt(p) obstruction does not apply. This does not prove
+short rows exist: coefficient height, determinants, equation independence,
+finite projection, all branch costs and useful random-target yield remain.
+The prototype accepts only a capped externally frozen offset panel; it does
+not generate or claim the asymptotic covering pool in the numerical code.

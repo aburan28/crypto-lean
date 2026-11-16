@@ -15,6 +15,7 @@ class Caps:
     max_catalog: int = 64
     max_leaf_length: int = 6
     max_targets: int = 128
+    max_chart_trials: int = 64
     max_pair_entries: int = 16384
     max_saturation_exponent: int = 32
     max_generators: int = 32

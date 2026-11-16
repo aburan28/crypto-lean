@@ -3,24 +3,13 @@
 
 import argparse
 from collections import Counter
+from dataclasses import replace
 import json
-import os
 from pathlib import Path
 import shutil
-import signal
-import subprocess
 import time
 
-
-def command(argv, stdout, stderr, seconds):
-    with stdout.open("xb") as out, stderr.open("xb") as err:
-        process = subprocess.Popen(argv, stdout=out, stderr=err, start_new_session=True)
-        try:
-            return process.wait(timeout=seconds), False
-        except subprocess.TimeoutExpired:
-            os.killpg(process.pid, signal.SIGKILL)
-            process.wait()
-            return process.returncode, True
+from launch import capped_command, request_metadata, run_request
 
 
 def main():
@@ -43,10 +32,13 @@ def main():
         if remaining <= 0:
             modes[mode] = {"status": "controller_deadline"}
             break
-        code, timeout = command(
-            [sage, "--python", str(root / "launch.py"), "--input", str(case),
-             "--output", str(destination)], args.output / f"{mode}.stdout.log",
-            args.output / f"{mode}.stderr.log", min(150, remaining))
+        # Reuse the launcher in this process: nested detached worker groups
+        # would defeat an outer kill of only the launcher process group.
+        if remaining < 150:
+            modes[mode] = {"status": "controller_deadline"}
+            break
+        manifest = run_request(case, destination, sage)
+        code, timeout = manifest["exit_code"], manifest["wall_timeout"]
         result_path = destination / "result.json"
         result = json.loads(result_path.read_text()) if result_path.exists() else {}
         events_path = destination / "events.jsonl"
@@ -58,10 +50,13 @@ def main():
         if result.get("status") == "success":
             remaining = 360-(time.monotonic()-started)
             if remaining > 0:
-                replay_code, replay_timeout = command(
+                replay_caps = replace(request_metadata(case)[1], cpu_seconds=30, wall_seconds=30)
+                replay = capped_command(
                     [sage, "--python", str(root / "verify.py"), "--input", str(case),
                      "--result", str(result_path)], args.output / f"{mode}.replay.stdout.log",
-                    args.output / f"{mode}.replay.stderr.log", min(30, remaining))
+                    args.output / f"{mode}.replay.stderr.log", replay_caps,
+                    wall_seconds=min(30, remaining))
+                replay_code, replay_timeout = replay["exit_code"], replay["wall_timeout"]
         modes[mode] = {
             "launcher_exit_code": code, "launcher_timeout": timeout,
             "worker_status": result.get("status", "no_result"),
@@ -70,6 +65,8 @@ def main():
             "known_answer_matches": result.get("status") == "success"
                 and int(result["scalar"]) == expected["scalar"],
         }
+        if timeout or code != 0:
+            break
     ordinary = modes.get("ordinary", {})
     saturated = modes.get("saturated", {})
     report = {

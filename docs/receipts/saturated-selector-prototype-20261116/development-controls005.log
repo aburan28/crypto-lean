@@ -1,0 +1,14 @@
+test_finite_staircase_is_counted_exactly_at_the_cap (test_metadata.MetadataControls.test_finite_staircase_is_counted_exactly_at_the_cap) ... ok
+test_full_family_count_and_lazy_exponents (test_metadata.MetadataControls.test_full_family_count_and_lazy_exponents) ... ok
+test_infinite_staircase_does_not_pass_admission (test_metadata.MetadataControls.test_infinite_staircase_does_not_pass_admission) ... ok
+test_invalid_caps_are_rejected_before_a_worker (test_metadata.MetadataControls.test_invalid_caps_are_rejected_before_a_worker) ... ok
+test_large_degree_is_not_trusted_as_a_wrapped_scalar (test_metadata.MetadataControls.test_large_degree_is_not_trusted_as_a_wrapped_scalar) ... ok
+test_unit_ideal_and_invalid_exponents (test_metadata.MetadataControls.test_unit_ideal_and_invalid_exponents) ... ok
+test_existing_evidence_is_never_overwritten (test_launch_metadata.LauncherControls.test_existing_evidence_is_never_overwritten) ... ok
+test_missing_runtime_does_not_create_output (test_launch_metadata.LauncherControls.test_missing_runtime_does_not_create_output) ... ok
+test_wall_deadline_stops_the_direct_worker_group (test_launch_metadata.LauncherControls.test_wall_deadline_stops_the_direct_worker_group) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.006s
+
+OK

@@ -19,6 +19,21 @@ This Macaulay control is not Ryan's optimal D-Groebner shift selector.
 Neither a short row nor a successful toy case proves independent equations,
 useful random-target yield, or a growing-system complexity bound.
 
+The source also accepts `local_minors`, a finite, explicit subset of
+saturation with V, V² and V³ witnesses. At balanced height and length at
+least4, its generators still have total projective degree at least2; the
+existing filtration excludes HHG-short rows. Length3 is an exception.
+Constant local degree alone does not solve the obstruction.
+
+A separate successor uses subcritical H=floor(sqrt(p)/2) and translated
+internal coordinates x=tau+U/V. `search.chart_offsets` maps each leaf length
+to a frozen list of offset vectors. Every chart trial is charged to the
+global `max_chart_trials` cap and retained in events. Default offsets are0.
+Primitive-pair counting gives constant coverage per coordinate under
+uniform offsets, hence exp(O(m)) chart coverage for m-2 finite slots.
+The supplied toy offset panel is a fixed control, not that random pool.
+No lattice-success or finite-root consequence follows from coverage.
+
 ## Files
 
 - `metadata.py`: dependency-free caps and monomial-count admission.
@@ -29,8 +44,8 @@ useful random-target yield, or a growing-system complexity bound.
 - `fixtures/`: copied public toy input; no curve case was evaluated here.
 - `Dockerfile`: digest-pinned runtime recipe; no image was built here.
 
-Static verification consists of source parsing, launcher help and six generic
-resource/count controls. These tests do not import Sage or perform curve/LLL
+Static verification consists of source parsing, launcher help and nine generic
+resource/count/process controls. These tests use a fake client, do not import Sage or perform curve/LLL
 calculations. Prior Lean271/0/0 evidence covers the existing mathematical
 components; it does not verify this Python/Sage implementation.
 
@@ -49,15 +64,16 @@ Within an admitted image the intended argv is:
 sage --python /opt/selector/pilot.py --output /work/results
 ```
 
-The controller has a360-second bound; two workers each have120-second wall
+The controller stops new modes at360seconds; two workers each have120-second wall
 and90-second CPU limits, with one8GiB container requested and limited. The
-future Job has a600-second total deadline and zero automatic retries. The
+future Job has a600-second whole-process-tree deadline and zero automatic retries. The
 proposed total ceiling is USD2 including image build, idle/queue, storage,
 transfer and failed attempts. It is not a cost estimate or a budget grant.
 No job may start while the shared remaining daily/monthly balance is unknown.
 
 Worker artifacts share one output cap, with another per-log cap for stdout
-and stderr. RLIMIT_AS is per process: the EKS container memory limit must
+and stderr. Replay uses the same group wrapper with30-second CPU/wall limits.
+RLIMIT_AS is per process: the EKS container memory limit must
 bound the whole tree. A timeout, output cap, positive-dimensional projection
 or missing dependency is a recorded failure, not an emptiness certificate.
 Every worker output directory must be fresh. Preserve all raw stage evidence.
