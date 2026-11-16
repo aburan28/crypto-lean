@@ -43,4 +43,3 @@ these composites. The paired predicate receives its own single rfl interface.
 
 No run-time claim follows from the counting proof. Swap is an analysis
 equivalence only, not an input sampler or a planted closing witness.
-

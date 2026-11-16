@@ -26,4 +26,3 @@ else. Raw Measure.pi of uniformOn univ, fixed S=-S and U+V=0 remain explicit.
 The moment arithmetic is exactly k*delta, k*delta*(1-delta), and
 k*delta+k*(k-1)*delta^2 with the subtraction in R. Moment values and costs
 are separate; these laws do not supply a fast generator.
-
