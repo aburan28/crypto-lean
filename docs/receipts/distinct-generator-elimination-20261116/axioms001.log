@@ -1,0 +1,26 @@
+'CryptoLean.CurveParameterElimination.b_free_identity' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.shared_denominator_factor' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_b_free' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.first_symmetric' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.adjacent_symmetric' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_independent_b' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.original_roots_primitive_zero' depends on axioms: [propext]
+'CryptoLean.CurveParameterElimination.primitive_v_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_w_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_scaling' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.symmetric_s3' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.first_clears_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.adjacent_clears_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.retained_equation_equiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.CurveParameterElimination.retained_with_zero_branch' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.CurveParameterElimination.profile_product_lower' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.profile_short_product' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.coverage_charge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.cover_union_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.nonzero_norm_min_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

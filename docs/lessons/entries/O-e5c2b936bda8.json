@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T11:54:27Z",
+  "evidence": [
+    "docs/distinct-generator-elimination-20261116.md",
+    "docs/receipts/distinct-generator-elimination-20261116/actual001.log"
+  ],
+  "kind": "outcome",
+  "note": "Cancellation/retained branch compile; universal ordinary-certificate coverage requires linear-in-p charts. Adaptive original-decomposition yield remains open.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "research",
+  "task": "Distinct-generator parameter cancellation and primitive coverage cost"
+}

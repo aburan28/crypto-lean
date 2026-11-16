@@ -45,3 +45,4 @@ import CryptoLean.Polynomial.EndpointCoefficients
 import CryptoLean.Polynomial.RankOneSelector
 import CryptoLean.Polynomial.WeightedRowCertificate
 import CryptoLean.Polynomial.MixedDegreePivots
+import CryptoLean.Polynomial.CurveParameterElimination
