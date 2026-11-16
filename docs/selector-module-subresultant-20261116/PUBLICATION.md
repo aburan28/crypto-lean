@@ -31,3 +31,9 @@ No numerical/scientific/native qualification/paid/image/job execution. Earlier
 frozen first-endpoint Sage control remains UNEXECUTED. Live cost/runtime admission
 remains missing; no signed verdict, identity certificate or measured speed.
 [pcc:unverified]
+
+Registered PCC-20261116-0e8ec7 with55 attestation subjects; standing unverified
+(verify-all exit2). Twenty-row ledger verifies; published0ab nineteen-row and
+earlier430 seventeen-row exact byte/parsed prefixes retained. All346 subject
+hashes match, including291 older pins. No independently signed verdict.
+[pcc:unverified]

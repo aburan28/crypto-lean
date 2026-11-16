@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-16T17:23:08.906241+00:00",
+  "owned_findings": [],
+  "owned_source_prose_exit": 0,
+  "raw_archival_previous_exit": 2,
+  "all_raw_bytes_preserved": true,
+  "paths": [
+    "CryptoLean.lean",
+    "CryptoLean/Polynomial/LeafModuleAnchors.lean",
+    "CryptoLean/Polynomial/ProjectiveSubresultant.lean",
+    "docs/leaf-module-anchors-20261116-plan.md",
+    "docs/projective-subresultant-20261116-plan.md",
+    "docs/projective-subresultant-20261116-cover-plan001.md",
+    "docs/leaf-module-anchors-20261116.md",
+    "docs/projective-subresultant-20261116.md",
+    "docs/receipts/LeafModuleAnchors20261116/ActualInstances.lean",
+    "docs/receipts/LeafModuleAnchors20261116/Axioms.lean",
+    "docs/receipts/ProjectiveSubresultant20261116/ActualInstances.lean",
+    "docs/receipts/ProjectiveSubresultant20261116/Axioms.lean",
+    "docs/selector-module-subresultant-20261116/PUBLICATION.md",
+    "docs/receipts/selector-module-subresultant-20261116/pr-body001.md"
+  ]
+}

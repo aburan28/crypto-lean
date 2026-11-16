@@ -1,0 +1,401 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T17:21:22Z",
+ "id": "PCC-20261116-0e8ec7",
+ "kind": "statement",
+ "producer": {
+  "commit": "d976a1ab1deff0dd7aaa5d86f9ffde56e7cd49cc",
+  "model": "",
+  "session": "selector-module-subresultant-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/LeafModuleAnchors.lean",
+    "sha256": "26a6be71890b5262c2c014b831177c45734beace316ab29e14cf6086f41f7aab"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/ProjectiveSubresultant.lean",
+    "sha256": "7bd0a1b95c3ece813b1f13f2059484d9c8e409d489ffcfe78b77acba4ba0c009"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/leaf-module-anchors-20261116-plan.md",
+    "sha256": "8615df3adb5ab725cd00fda16a8a9a4bfd702c7ba9cc3243318eb3a1e9f7fb67"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/leaf-module-anchors-20261116.md",
+    "sha256": "5ea80799e0326ab07720b4e9c287c8654bebdfbbf0e94e15fa6b91a55601977a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/projective-subresultant-20261116-cover-plan001.md",
+    "sha256": "3eb63f2fbda7931dcb89aaf73714a53b1177f715cdd6bda9d97953df85c48452"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/projective-subresultant-20261116-plan.md",
+    "sha256": "f99bc11c8756fb5d949baf2f3ea5df8bd0d3f26ec59206606c907d64bd25c409"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/projective-subresultant-20261116.md",
+    "sha256": "697b48972f1116748a12343a1dd3e0ba444ae242cfac717574a181a0fcb47d4d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/LeafModuleAnchors20261116/ActualInstances.lean",
+    "sha256": "0e6c7c7beecf175099ea916ac0748420b96d5cb49ce35b9ad91715bbdb35b486"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/LeafModuleAnchors20261116/Axioms.lean",
+    "sha256": "8629ee0f03c1e07d37d08b68e4bdbb8b896b2d1c6d2ca3580cb23762a0c19f42"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ProjectiveSubresultant20261116/ActualInstances.lean",
+    "sha256": "b47f98cc2662bccc6e67f8ed2787c2f1c7dc22ae00b28ef9a38e2af66144b2cb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/ProjectiveSubresultant20261116/Axioms.lean",
+    "sha256": "71be6815ab57762f2e5481113c6eb5d5f613f4d1711755e83b62fb10ad77efe6"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/actual001.log",
+    "sha256": "97158374824105822afb8e720ec1a1a16ef7186a3fb33f096fe6cc3bd417aa9b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/actual002.log",
+    "sha256": "77c7a1cf2d44a41c092218f5be8ebe6ccc39ac310d5a050a3f5984736f405b3b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/actual003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/axioms001.log",
+    "sha256": "d9b8801822646088e8f68b8ea43f0bc79818e7d55e5e46412b2672a38de91f6f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-build001.log",
+    "sha256": "459dd044f2ec6c549d215ce524a283eed5615be3d376a67a6669a47a59974ec3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct003.log",
+    "sha256": "fce25cc76462dfc88a5844c232595fe55981bff32058c81c4db98fd731c0b0a3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct004.log",
+    "sha256": "31115060dbe25ff84f55fac415eb1e4daeae5c8e440457da1db8a26433311816"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct005.log",
+    "sha256": "abc292952b464970acc8c529ac1738284bf403ba7715c03fe5518fa58e62feb1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct006.log",
+    "sha256": "ba5036a42c72fa546460fa1500433a1badd327ea41bbbf3b45c5f29ab05aadae"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/leaf-module-anchors-20261116/owner-direct007.log",
+    "sha256": "19d392ab6287ed99b6d0f592e2df9870551a1625d33b705286079929d3fc8e94"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/actual001.log",
+    "sha256": "65ad4b1a1a8f9e8b2686cac8cced77b9f33526b3032d20b92412ad76bb14b0fb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/actual002.log",
+    "sha256": "c3e52a07f817f7cbc7fc7f74212d75835b53f73942f9868e9e651d64e92e87e8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/actual003.log",
+    "sha256": "79b7974035ca7a411f788c48d0370b4caf977af98d9e432009d916d0de9a71e8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/actual004.log",
+    "sha256": "26b0a7dd9569b7af74040c7a0037049ffa977bfaa7d0b27d6b861cfdbc218e48"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/actual005.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/axioms001.log",
+    "sha256": "c5d6b3b872eeaea2863568ae05fff5f5a687dc59920bdd75202eab02a208ffe1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/axioms002.log",
+    "sha256": "e4215992c7adb5d363592f86f9fd28be3f0bca0915e82b1f2f6d3d5006dc8c8e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-build001.log",
+    "sha256": "36b77988d18f9ec560341b10c31b7f6c533cfda76fd56b011ab7d5809b5ed67e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-build002.log",
+    "sha256": "11597c283a9b2dd86066a062945c8792e2758f45ac133becc40513d740a5cd96"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct001.log",
+    "sha256": "978473db4dac611a161b2c2d2f78cac85f05590544ff3fba3aa11b01ad912b36"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct002.log",
+    "sha256": "f4f58eb52c1a55a6baed59e650e8a285a7387e54dfc7418369b5bdc0ac3804ca"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct004.log",
+    "sha256": "e0c5dff5d312eff96f48e9132ffe08b49377c16f8f04b393e4d29017a589d197"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct005.log",
+    "sha256": "e0c5dff5d312eff96f48e9132ffe08b49377c16f8f04b393e4d29017a589d197"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct006.log",
+    "sha256": "01627d822f16f93fe81ace462b8af551ff1514d19686ad40a7d51fc5a092873e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct007.log",
+    "sha256": "2480720e6c1e361c154d0fd0d51f40cbe7fbe7d67a2c69c6afdadc84187f94ae"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct008.log",
+    "sha256": "02cd332eda0c5ee05ae78c38add0be9639e6aca21f257a1479ca3e3fc794d4b8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/projective-subresultant-20261116/owner-direct009.log",
+    "sha256": "848b66b7213861144b0290255b0eec1ea2d1f095368f89185935f90705ca8805"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/archival-whitespace001.log",
+    "sha256": "ff064ba4ef03817ed91d9871656456d45b381c6a028d1a5137ae8e60f49fe261"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/audit-delta001.json",
+    "sha256": "f97525c18422c234f36e36f5c6fa34044611a78a5001e1d0a1bdc7b524fa83ed"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate-aborted001.json",
+    "sha256": "d588c0561fc0247d6ab862a90433982c9b1a04bc36a32c5372f6f70fe8463131"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate-launch001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate-launch002.log",
+    "sha256": "bfe234eba6cccdcd075e136de0120363515a296f2ee4a27520136811fb831f1d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/audit.log",
+    "sha256": "62fbb1544229b75e1ea6c43a49af079b9c61a0a3ad3cb450b7b1bf7f03a8725b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/build.log",
+    "sha256": "84475bdd64f54dcf83807b75df53893ad9179659627194baff7605e0e720df0e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/cache.log",
+    "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/source-target.log",
+    "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/sources.log",
+    "sha256": "ab1931f6b2075957a8fe0993d87bd829e4db91ad1eb9faa2a1a05b1b2292b989"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/gate002/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/source-review001.json",
+    "sha256": "153246cb34a45113061628cb7fba3bc66436a2e55f658fe1901790ac373c511f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-module-subresultant-20261116/whitespace001.json",
+    "sha256": "bf1319bdb43cc2996ff9fcbedc240affe5349c6bb1eb95e57498bdb8f2382c06"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/selector-module-subresultant-20261116/publication001.json",
+    "sha256": "769c9d5125f12f1985739c865f1f8fea9f25edb97e83b7a1aaac7442fe7f06d4"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Original arbitrary-leaf two-source module and scalar finite-chart lower-profile residual; full weighted/asymptotic and growing-residual-module diagnostics hand only.",
+ "statement": "Selector module/subresultant source audit:27 generic laws and10 symbolic applications compile; final all-tracked canonical gate002 exits0:526/0/0. Arbitrary leaf multipliers of original F1W\u00b2/F2 retain a five-coefficient curve code through least-degree extraction. Exact finite-chart factor removal yields residual profile1,2, preserves all original exceptional branches, and has full projective chart/model anchors and a four-window finite model bound. Conditional finite universal-cover arithmetic gives p<729Q\u00b2. Full modular-row/weighted-norm/asymptotic/pool instantiation and growing saturated-residual rank diagnostic remain HAND; selector unimplemented, useful original yield absent. Earlier gate001 aborted after an incorrectly reported application pass; raw evidence and append-only correction preserved, final actual005 pass. No scientific/numerical/native qualification/paid execution, independent signed verdict or complete subexponential ECDLP algorithm."
+}
