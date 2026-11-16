@@ -127,3 +127,25 @@ proof-limit/trust/inventory/linter changes. Final canonical audit and every
 new named axiom print before publication. Record the hand sampling bound
 separately from compiled finite laws, and retain the original full-algorithm
 criterion. Continue actual joint-gate construction after this component.
+
+
+Recovery clarification before endpoint assembly: point/key preprocessing may
+be shared, but no global direct-case witness is returned before hashing.
+Each selected matching-colour bucket executes its own direct scans, then
+all-row parity with column mask1. On a unique retained edge, one of those
+paths recovers it. All other buckets are empty of passing edges and cannot
+return a checked pair first. This singleton-completeness argument is hand
+algorithm reasoning; it is not a claim of an executable implementation.
+
+
+Primary wrapper refinement: retain at most one checked pair from EVERY
+dyadic level rather than selecting one random level. A round returns at
+most L candidates and costs the sum of L near-linear bucket searches. The
+correct unknown scale is present, so any fixed W is hit with probability
+at least theta/8 per round. Checking all candidates for a fixed useful
+predicate and repeating q independent complete rounds gives miss at most
+(1-theta/8)^q. Each level uses fresh independent vertex-record colours;
+charge O((N+M)L^2) random bits per round and all candidate validation.
+No independence between hypothetical selected outputs is assumed. The
+one-random-level/one-output interface remains valid with its extra L loss.
+Both are hand algorithm/probability applications of the compiled count.

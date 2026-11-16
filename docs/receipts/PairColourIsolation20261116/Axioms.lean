@@ -1,0 +1,15 @@
+import CryptoLean.Group.PairColourIsolation
+
+set_option autoImplicit false
+
+#print axioms CryptoLean.FiniteIsolation.single_cover_count
+#print axioms CryptoLean.FiniteIsolation.target_events_disjoint
+#print axioms CryptoLean.FiniteIsolation.target_union_count
+#print axioms CryptoLean.FiniteIsolation.scaled_target_isolation
+#print axioms CryptoLean.FiniteIsolation.half_scaled_target_isolation
+#print axioms CryptoLean.PairColourIsolation.edgeColour_apply
+#print axioms CryptoLean.PairColourIsolation.edgeColour_surjective
+#print axioms CryptoLean.PairColourIsolation.two_edge_surjective
+#print axioms CryptoLean.PairColourIsolation.single_fibre_scaled
+#print axioms CryptoLean.PairColourIsolation.pair_fibre_scaled
+#print axioms CryptoLean.PairColourIsolation.target_colour_count

@@ -1,0 +1,53 @@
+⚠ [3138/3141] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3141] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3141] Built CryptoLean.Combinatorics.FiniteIsolation (2.8s)
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3141/3141] Building CryptoLean.Group.PairColourIsolation (13s)
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Group/PairColourIsolation.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/PairColourIsolation.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/PairColourIsolation.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/PairColourIsolation.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/PairColourIsolation.setup.json --json
+warning: CryptoLean/Group/PairColourIsolation.lean:37:29: This simp argument is unused:
+  hj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CryptoLean/Group/PairColourIsolation.lean:39:29: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hi]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CryptoLean/Group/PairColourIsolation.lean:45:2: failed to synthesize instance of type class
+  Fintype ((I → H) × (J → H))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CryptoLean/Group/PairColourIsolation.lean:53:4: failed to synthesize instance of type class
+  AddGroup (ℕ × ?m.68)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CryptoLean/Group/PairColourIsolation.lean:53:4: failed to synthesize instance of type class
+  Fintype (ℕ × ?m.68)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: CryptoLean/Group/PairColourIsolation.lean:54:6: Application type mismatch: The argument
+  two_edge_surjective e f hne
+has type
+  Function.Surjective ⇑((edgeColour e).prod (edgeColour f))
+but is expected to have type
+  Function.Surjective ⇑?m.58
+in the application
+  ShortlistCompletion.fiber_card_mul ?m.58 (two_edge_surjective e f hne)
+Some required targets logged failures:
+- CryptoLean.Group.PairColourIsolation
+error: build failed

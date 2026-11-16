@@ -1,0 +1,41 @@
+Pi.evalAddMonoidHom.{u, v} {I : Type u} (f : I → Type v) [(i : I) → AddZeroClass (f i)] (i : I) : ((i : I) → f i) →+ f i
+AddMonoidHom.fst.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ M
+AddMonoidHom.snd.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ N
+AddMonoidHom.prod.{u_3, u_4, u_5} {M : Type u_3} {N : Type u_4} {P : Type u_5} [AddZeroClass M] [AddZeroClass N]
+  [AddZeroClass P] (f : M →+ N) (g : M →+ P) : M →+ N × P
+Finset.card_biUnion.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [DecidableEq M] {t : ι → Finset M}
+  (h : (↑s).PairwiseDisjoint t) : (s.biUnion t).card = ∑ u ∈ s, (t u).card
+Finset.card_biUnion_le.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [DecidableEq M] {s : Finset ι} {t : ι → Finset M} :
+  (s.biUnion t).card ≤ ∑ a ∈ s, (t a).card
+docs/receipts/PairColourIsolation20261116/FloorProbe.lean:25:5: error: Function expected at
+  (Pi.evalAddMonoidHom (fun x => H) i).comp (AddMonoidHom.fst (I → H) ?m.16) +
+    (Pi.evalAddMonoidHom (fun x => H) j).comp (AddMonoidHom.snd ?m.27 (J → H))
+but this term has type
+  ?m.33
+
+Note: Expected a function because this term is being applied to the argument
+  (r, c)
+docs/receipts/PairColourIsolation20261116/FloorProbe.lean:31:5: error: Function expected at
+  (Pi.evalAddMonoidHom (fun x => Fin ell → ZMod 2) i).comp (AddMonoidHom.fst (I → Fin ell → ZMod 2) ?m.24) +
+    (Pi.evalAddMonoidHom (fun x => Fin ell → ZMod 2) j).comp (AddMonoidHom.snd ?m.37 (J → Fin ell → ZMod 2))
+but this term has type
+  ?m.43
+
+Note: Expected a function because this term is being applied to the argument
+  (r, c)
+docs/receipts/PairColourIsolation20261116/FloorProbe.lean:40:13: error: Function expected at
+  Finset.card_le_card_sdiff_add_card
+but this term has type
+  Finset.card ?m.29 ≤ (?m.29 \ ?m.30).card + Finset.card ?m.30
+
+Note: Expected a function because this term is being applied to the argument
+  (A e)
+docs/receipts/PairColourIsolation20261116/FloorProbe.lean:39:43: error: unsolved goals
+E : Type u_1
+O : Type u_2
+inst✝¹ : DecidableEq E
+inst✝ : DecidableEq O
+S : Finset E
+A : E → Finset O
+e : E
+⊢ (A e).card ≤ (A e \ (S.erase e).biUnion A).card + ∑ f ∈ S.erase e, (A e ∩ A f).card

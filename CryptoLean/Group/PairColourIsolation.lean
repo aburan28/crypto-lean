@@ -1,0 +1,84 @@
+import CryptoLean.Group.ShortlistCompletion
+import CryptoLean.Combinatorics.FiniteIsolation
+import Mathlib.Algebra.Group.Pi.Basic
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.Tactic
+
+/-! Product-compatible colour hashes on actual record-index pairs.
+Uniform fibers come from the existing finite additive-homomorphism law. -/
+set_option autoImplicit false
+noncomputable section
+
+namespace CryptoLean.PairColourIsolation
+
+def edgeColour {I J H : Type*} [AddCommGroup H] (e : I × J) :
+    ((I → H) × (J → H)) →+ H :=
+  (Pi.evalAddMonoidHom (fun _ : I ↦ H) e.1).comp
+      (AddMonoidHom.fst (I → H) (J → H)) +
+    (Pi.evalAddMonoidHom (fun _ : J ↦ H) e.2).comp
+      (AddMonoidHom.snd (I → H) (J → H))
+
+@[simp]
+theorem edgeColour_apply {I J H : Type*} [AddCommGroup H] (e : I × J)
+    (w : (I → H) × (J → H)) : edgeColour e w = w.1 e.1+w.2 e.2 := rfl
+
+theorem edgeColour_surjective {I J H : Type*} [AddCommGroup H] (e : I × J) :
+    Function.Surjective (edgeColour (H := H) e) := by
+  intro h
+  exact ⟨((fun _ ↦ h), (fun _ ↦ 0)), by simp⟩
+
+theorem two_edge_surjective {I J H : Type*} [AddCommGroup H]
+    (e f : I × J) (hne : e ≠ f) :
+    Function.Surjective ((edgeColour (H := H) e).prod (edgeColour f)) := by
+  classical
+  intro z
+  by_cases hi : e.1 = f.1
+  · have hj : e.2 ≠ f.2 := fun h ↦ hne (Prod.ext hi h)
+    refine ⟨((fun _ ↦ 0), (fun j ↦ if j=e.2 then z.1 else if j=f.2 then z.2 else 0)), ?_⟩
+    apply Prod.ext <;> simp [Ne.symm hj]
+  · refine ⟨((fun i ↦ if i=e.1 then z.1 else if i=f.1 then z.2 else 0), (fun _ ↦ 0)), ?_⟩
+    apply Prod.ext <;> simp [Ne.symm hi]
+
+theorem single_fibre_scaled {I J H : Type*} [AddCommGroup H]
+    [Fintype I] [Fintype J] [Fintype H] (e : I × J) (h : H) :
+    Nat.card {w : (I → H) × (J → H) // edgeColour e w = h} * Nat.card H =
+      Nat.card ((I → H) × (J → H)) := by
+  classical
+  exact ShortlistCompletion.fiber_card_mul (edgeColour e) (edgeColour_surjective e) h
+
+theorem pair_fibre_scaled {I J H : Type*} [AddCommGroup H]
+    [Fintype I] [Fintype J] [Fintype H] (e f : I × J) (hne : e ≠ f) :
+    Nat.card {w : (I → H) × (J → H) // edgeColour e w = 0 ∧ edgeColour f w = 0} *
+        (Nat.card H)^2 = Nat.card ((I → H) × (J → H)) := by
+  classical
+  simpa [AddMonoidHom.prod_apply, Nat.card_eq_fintype_card, pow_two] using
+    ShortlistCompletion.fiber_card_mul ((edgeColour (H := H) e).prod (edgeColour f))
+      (two_edge_surjective (H := H) e f hne) ((0 : H), (0 : H))
+
+theorem target_colour_count {I J H : Type*} [AddCommGroup H]
+    [Fintype I] [Fintype J] [Fintype H] [DecidableEq I] [DecidableEq J] [DecidableEq H]
+    (S T : Finset (I × J)) (hT : T ⊆ S) (hsize : 2*S.card ≤ Fintype.card H) :
+    let A := fun e : I × J ↦
+      Finset.univ.filter (fun w : (I → H) × (J → H) ↦ edgeColour e w = 0)
+    T.card*Fintype.card ((I → H) × (J → H)) ≤
+      2*Fintype.card H*(T.biUnion (fun e ↦ A e \ (S.erase e).biUnion A)).card := by
+  intro A
+  apply FiniteIsolation.half_scaled_target_isolation S T hT A (Fintype.card H)
+    (Fintype.card ((I → H) × (J → H))) ?_ ?_ hsize Fintype.card_pos
+  · intro e _he
+    have h := single_fibre_scaled (H := H) e 0
+    simp [A, Nat.card_eq_fintype_card, Fintype.card_subtype, Nat.mul_comm] at h ⊢
+    convert h using 1; congr
+  · intro e _he f hf
+    have hne : e ≠ f := Ne.symm (Finset.mem_erase.mp hf).1
+    have hset : A e ∩ A f = Finset.univ.filter
+        (fun w : (I → H) × (J → H) ↦ edgeColour e w = 0 ∧ edgeColour f w = 0) := by
+      ext w
+      simp only [A, Finset.mem_inter, Finset.mem_filter, Finset.mem_univ, true_and]
+    rw [hset]
+    have h := pair_fibre_scaled (H := H) e f hne
+    have hl := h.le
+    simp [Nat.card_eq_fintype_card, Fintype.card_subtype, Nat.mul_comm] at hl ⊢
+    convert hl using 1; congr
+
+end CryptoLean.PairColourIsolation

@@ -1,0 +1,58 @@
+⚠ [3138/3141] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3141] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3141] Replayed CryptoLean.Combinatorics.FiniteIsolation
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3141/3141] Building CryptoLean.Group.PairColourIsolation (6.6s)
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Group/PairColourIsolation.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/PairColourIsolation.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/PairColourIsolation.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/PairColourIsolation.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/PairColourIsolation.setup.json --json
+error: CryptoLean/Group/PairColourIsolation.lean:69:4: Type mismatch: After simplification, term
+  single_fibre_scaled e 0
+ has type
+  @Eq ℕ (Fintype.card H * {x | x.1 e.1 + x.2 e.2 = 0}.card)
+    (Fintype.card H ^ Fintype.card I * Fintype.card H ^ Fintype.card J)
+but is expected to have type
+  @Eq ℕ (Fintype.card H * {w | w.1 e.1 + w.2 e.2 = 0}.card)
+    (Fintype.card H ^ Fintype.card I * Fintype.card H ^ Fintype.card J)
+error: CryptoLean/Group/PairColourIsolation.lean:74:81: unsolved goals
+I : Type u_1
+J : Type u_2
+H : Type u_3
+inst✝⁶ : AddCommGroup H
+inst✝⁵ : Fintype I
+inst✝⁴ : Fintype J
+inst✝³ : Fintype H
+inst✝² : DecidableEq I
+inst✝¹ : DecidableEq J
+inst✝ : DecidableEq H
+S T : Finset (I × J)
+hT : T ⊆ S
+hsize : 2 * S.card ≤ Fintype.card H
+A : I × J → Finset ((I → H) × (J → H)) := fun e => {w | (edgeColour e) w = 0}
+e : I × J
+_he : e ∈ T
+f : I × J
+hf : f ∈ S.erase e
+hne : e ≠ f
+w : (I → H) × (J → H)
+⊢ w ∈ {w | w.1 e.1 + w.2 e.2 = 0} ∧ w ∈ {w | w.1 f.1 + w.2 f.2 = 0} ↔
+    w ∈ {w | w.1 e.1 + w.2 e.2 = 0 ∧ w.1 f.1 + w.2 f.2 = 0}
+error: CryptoLean/Group/PairColourIsolation.lean:79:4: Type mismatch: After simplification, term
+  Eq.le h
+ has type
+  @LE.le ℕ Nat.instPreorder.toLE (Fintype.card H ^ 2 * {x | x.1 e.1 + x.2 e.2 = 0 ∧ x.1 f.1 + x.2 f.2 = 0}.card)
+    (Fintype.card H ^ Fintype.card I * Fintype.card H ^ Fintype.card J)
+but is expected to have type
+  @LE.le ℕ instLENat (Fintype.card H ^ 2 * {w | w.1 e.1 + w.2 e.2 = 0 ∧ w.1 f.1 + w.2 f.2 = 0}.card)
+    (Fintype.card H ^ Fintype.card I * Fintype.card H ^ Fintype.card J)
+Some required targets logged failures:
+- CryptoLean.Group.PairColourIsolation
+error: build failed
