@@ -1,0 +1,60 @@
+add_sub_add_left_eq_sub.{u_3} {G : Type u_3} [AddCommGroup G] (a b c : G) : c + a - (c + b) = a - b
+Finset.card_filter.{u_1} {ι : Type u_1} (p : ι → Prop) [DecidablePred p] (s : Finset ι) :
+  {i ∈ s | p i}.card = ∑ i ∈ s, if p i then 1 else 0
+CryptoLean.ShiftRepresentations.shifted_hit_mean.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  ∫ (g : G), if U + g ∈ S then 1 else 0 ∂uniformOn Set.univ = ↑S.card / ↑(Fintype.card G)
+CryptoLean.ShiftRepresentations.shifted_hit_variance.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  Var[fun g => if U + g ∈ S then 1 else 0; uniformOn Set.univ] =
+    ↑S.card / ↑(Fintype.card G) * (1 - ↑S.card / ↑(Fintype.card G))
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:15:33: error: Type mismatch
+  add_sub_add_left_eq_sub U V t
+has type
+  t + U - (t + V) = U - V
+but is expected to have type
+  U + V - (U + t) = V - t
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:41:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:42:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:45:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:46:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:47:2: error: Type mismatch
+  shifted_hit_mean U ?m.133
+has type
+  ∫ (g : ↥H),
+      @ite ℝ (U + g ∈ ?m.133) (@Finset.decidableMem (↥H) (fun a b => a.instDecidableEq b) (U + g) ?m.133) 1
+        0 ∂uniformOn Set.univ =
+    ↑(Finset.card ?m.133) / ↑(Fintype.card ↥H)
+but is expected to have type
+  ∫ (t : ↥H),
+      @ite ℝ (U + t ∈ {P ∈ S | U + V - P ∈ S})
+        (@Finset.decidableMem (↥H) (Classical.decEq ↥H) (U + t) ({P ∈ S | U + V - P ∈ S})) 1 0 ∂uniformOn Set.univ =
+    ↑{P ∈ S | U + V - P ∈ S}.card / ↑(Fintype.card ↥H)
