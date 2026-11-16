@@ -1,0 +1,38 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T05:18:06.637830Z",
+  "ended": "2026-11-16T05:14:35Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/23",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43808916444"
+  ],
+  "incidents": [
+    {
+      "kind": "matrix-scalar-and-dependent-subtype-assembly",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "finite-filter-decidability-scope",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "actual-indexed-instance-congruence",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 23,
+  "result": "partial",
+  "schema": "crypto.autonomy/v1",
+  "session": "character-parity-20261116",
+  "started": "2026-11-16T04:15:56Z",
+  "task": "PR23 owned character-parity study from prospective plan through landing:17 shared laws and scoped hand search design; executable joint selector and complete algorithm remain open; hosted billing unresolved",
+  "task_class": "lean",
+  "tokens": null,
+  "usd": null
+}

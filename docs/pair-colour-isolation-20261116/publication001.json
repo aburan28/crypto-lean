@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-16T06:04:15.390484+00:00",
+  "source_commit": "a39b093fa803b412b541e4671681861394ce17f3",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "canonical_gate": {
+    "status_receipt": "docs/receipts/pair-colour-isolation-20261116/gate001/_/status",
+    "status": "PASS",
+    "theorems": 247,
+    "failing": 0,
+    "trusted_native": 0,
+    "process_exit_code_recovered": false,
+    "completion_basis": "saved PASS status, console and complete audit; expired PTY handle was not rerun"
+  },
+  "named_theorems": [
+    "CryptoLean.FiniteIsolation.single_cover_count",
+    "CryptoLean.FiniteIsolation.target_events_disjoint",
+    "CryptoLean.FiniteIsolation.target_union_count",
+    "CryptoLean.FiniteIsolation.scaled_target_isolation",
+    "CryptoLean.FiniteIsolation.half_scaled_target_isolation",
+    "CryptoLean.PairColourIsolation.edgeColour_apply",
+    "CryptoLean.PairColourIsolation.edgeColour_surjective",
+    "CryptoLean.PairColourIsolation.two_edge_surjective",
+    "CryptoLean.PairColourIsolation.single_fibre_scaled",
+    "CryptoLean.PairColourIsolation.pair_fibre_scaled",
+    "CryptoLean.PairColourIsolation.target_colour_count"
+  ],
+  "axiom_log": "docs/receipts/pair-colour-isolation-20261116/axioms001.log",
+  "fresh_checker_available": false,
+  "pcc_standing": "attestation only; no signed verification asserted",
+  "algorithm_status": "hand capped-list sampler and charged cost; no executable or measurement",
+  "new_numerical_cases": 0,
+  "new_paid_jobs": 0,
+  "new_qualification_runs": 0,
+  "identity_certificate_issued": false,
+  "pdf_inspection": {
+    "pages": 3,
+    "all_final_pages_rendered_and_visually_inspected": true,
+    "inspected_at": "2026-11-16T06:06:22.063525+00:00",
+    "renderer": "Typst0.15.1 + pdftoppm110dpi",
+    "sha256": "ec6c66cef04b15bed80a94e3411b455104c798a3adf240fe3d57bb6d1567d90d"
+  }
+}

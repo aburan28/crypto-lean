@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-16T05:14:36.194860+00:00",
+  "pr": {
+    "headRefOid": "911c04bd11a166a2232ba339eec42a282e6db98b",
+    "number": 23,
+    "url": "https://github.com/aburan28/crypto-lean/pull/23"
+  },
+  "local_head": "911c04bd11a166a2232ba339eec42a282e6db98b",
+  "auto_merge_argv": [
+    "gh",
+    "pr",
+    "merge",
+    "23",
+    "--repo",
+    "aburan28/crypto-lean",
+    "--auto",
+    "--merge",
+    "--match-head-commit",
+    "911c04bd11a166a2232ba339eec42a282e6db98b"
+  ],
+  "auto_merge_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

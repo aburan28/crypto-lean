@@ -1,0 +1,15 @@
+{
+  "action": "Expose equality obligations with convert; close structural instance equalities by congruence, applying the generic law unchanged; preserve failed source/log and rerun the full tracked-source audit",
+  "created": "2026-11-16T05:18:06Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/blob/911c04bd11a166a2232ba339eec42a282e6db98b/docs/receipts/character-parity-20261116/gate001/_/build.log",
+    "https://github.com/aburan28/crypto-lean/blob/911c04bd11a166a2232ba339eec42a282e6db98b/docs/receipts/CharacterParity20261116/ActualInstances.lean"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "lean-instance-gate"
+  ],
+  "trigger": "Applying generic indexed Finset product/filter laws at ZMod p gives identical printed types but a type mismatch",
+  "why": "Named filter congruence alone did not normalize actual endpoint types; conversion/congruence resolved them without changing hypotheses, proof limits or generic proofs."
+}

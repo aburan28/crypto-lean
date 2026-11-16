@@ -1,0 +1,9 @@
+docs/receipts/PairColourIsolation20261116/ActualInstances.lean:33:82: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+docs/receipts/PairColourIsolation20261116/ActualInstances.lean:33:86: warning: Unused tactic linter: `congr` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+docs/receipts/PairColourIsolation20261116/ActualInstances.lean:33:86: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`

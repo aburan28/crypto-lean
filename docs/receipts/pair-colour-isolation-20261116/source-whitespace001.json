@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "origin/main",
+    "--",
+    "CryptoLean.lean",
+    "CryptoLean/Combinatorics/FiniteIsolation.lean",
+    "CryptoLean/Group/PairColourIsolation.lean",
+    "docs/pair-colour-isolation-20261116.md",
+    "docs/pair-colour-isolation-20261116-plan.md"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

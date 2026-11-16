@@ -1,0 +1,107 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T06:06:22Z",
+ "id": "PCC-20261116-9902ee",
+ "kind": "statement",
+ "producer": {
+  "commit": "83cc2e149da54cbce07b0333b7fdbd9bd18a1f1d",
+  "model": "",
+  "session": "pair-colour-isolation-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116.md",
+    "sha256": "e370108646a0394d97f06a4025d26b671bf9c5206aee3d6a8c4b465bf521fec9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Combinatorics/FiniteIsolation.lean",
+    "sha256": "d26799d7b6ba59b91ee10da3bffd6f31d7d768ff192c5411b761b9872dfe1dcb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/PairColourIsolation.lean",
+    "sha256": "1b51b4ed719c4e790dab84ad51d98c832d7a0c4083e7a1fc536a7b34cce0aaa4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/PairColourIsolation20261116/ActualInstances.lean",
+    "sha256": "59af46cc29db7abaecde8019164bc311676b654376fc4d097fd6f50eb4c19cf6"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/PairColourIsolation20261116/Axioms.lean",
+    "sha256": "0731c6419922790814667869366d3853c510a65ffa6367fb38447711d78aa583"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/pair-colour-isolation-20261116/gate001/_/audit.log",
+    "sha256": "b03dade9623567440c5963e47f250c356244798196c20487642193395f8f9bed"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/pair-colour-isolation-20261116/axioms001.log",
+    "sha256": "56af852ddfc6d47fece997849b6529eea32820951dd66632a222c887b8558ea4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116/report.pdf",
+    "sha256": "ec6c66cef04b15bed80a94e3411b455104c798a3adf240fe3d57bb6d1567d90d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116/flow.svg",
+    "sha256": "4187c290b42c932cd141fe2cdc5e206e0384a75d89890cdeef6a024c3cb38cd8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116/publication001.json",
+    "sha256": "df639f53fd2e58749b64354a4978dec598112a3812413e7101b9fa54539e9c96"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116/source-review001.json",
+    "sha256": "117cb6ca779667cf0e3582f43ad7bdcdbcc2c6d07ad7a8ebaae909d5fa1a4be2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/pair-colour-isolation-20261116-plan.md",
+    "sha256": "99baf28b2dab2f9bdaf07efe8c0b37e85889e2a1b26815b2dfeacb2cc97a8db9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/PairColourIsolation20261116/FloorProbe.lean",
+    "sha256": "33bedd2718453fb4bb413a50bff013bc02e5cff3bd9ecc7b490e25128353c0ff"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "bounded candidate-list sampling of an explicit elliptic one-character graph with fixed useful-subset coverage",
+ "statement": "Eleven shared finite-isolation and product-colour laws with actual F2/prime-field point-graph applications, saved canonical PASS247/0/0 and standard-axiom prints. A hand all-dyadic-level candidate-list wrapper derives hit at least theta/8 per complete round for a fixed useful subset of indexed passing pairs, with all bucket and validation costs charged. No executable sampler, measured speedup, useful relation-fraction bound, implicit joint-gate extractor or complete ECDLP algorithm is claimed."
+}

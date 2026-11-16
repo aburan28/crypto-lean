@@ -1,0 +1,9 @@
+Pi.evalAddMonoidHom.{u, v} {I : Type u} (f : I → Type v) [(i : I) → AddZeroClass (f i)] (i : I) : ((i : I) → f i) →+ f i
+AddMonoidHom.fst.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ M
+AddMonoidHom.snd.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ N
+AddMonoidHom.prod.{u_3, u_4, u_5} {M : Type u_3} {N : Type u_4} {P : Type u_5} [AddZeroClass M] [AddZeroClass N]
+  [AddZeroClass P] (f : M →+ N) (g : M →+ P) : M →+ N × P
+Finset.card_biUnion.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [DecidableEq M] {t : ι → Finset M}
+  (h : (↑s).PairwiseDisjoint t) : (s.biUnion t).card = ∑ u ∈ s, (t u).card
+Finset.card_biUnion_le.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [DecidableEq M] {s : Finset ι} {t : ι → Finset M} :
+  (s.biUnion t).card ≤ ∑ a ∈ s, (t a).card
