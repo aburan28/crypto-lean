@@ -22,3 +22,9 @@ Raw failures remain. Shared budget remainder and execution admission are
 still unknown; three bounded Drive metadata searches returned no match,
 which is not a zero-spend or global-absence assertion. Original complete
 subexponential prime-field ECDLP criterion remains unmet. [pcc:unverified]
+
+Registered PCC-20261116-0327b2 with30 attestation subjects, standing unverified
+(verify-all exit2). Fourteen-row chain verifies; published thirteen rows
+remain exact byte/parsed prefix. All188 pinned subject hashes match,
+including158 prior pins. No independently signed verdict is asserted.
+[pcc:unverified]
