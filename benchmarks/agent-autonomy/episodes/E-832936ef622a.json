@@ -1,0 +1,35 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T00:53:32.646053Z",
+  "ended": "2026-11-16T00:51:16Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/20",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43782617973",
+    "https://github.com/aburan28/crypto-lean/blob/ee5a84db2490ceb2e1c4067554864a63d7eb0a3f/docs/receipts/batch-selector-query-20261116/publication.json"
+  ],
+  "incidents": [
+    {
+      "kind": "inherited-group-law-argument-order",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "actual-subgroup-DecidableEq-context",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 20,
+  "result": "success",
+  "schema": "crypto.autonomy/v1",
+  "session": "batch-selector-query-20261116",
+  "started": "2026-11-16T00:29:05Z",
+  "task": "PR20 arbitrary-subtotal finite interface and batch-query assessment; source-editing window starts at prospective plan; scoped component landed, original algorithm criterion open; billing remains unresolved external action",
+  "task_class": "lean",
+  "tokens": null,
+  "usd": null
+}
