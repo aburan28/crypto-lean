@@ -186,13 +186,72 @@ O(d³ log B) in the exponent, all support/record costs and the entire search.
 None of this supplies a useful-yield lower bound or a complete ECDLP cost bound.
 [pcc:unverified]
 
-## 5. What this attempt changed, and the next discriminator
+## 5. Stronger hand count: mixed degrees retain a single-factor bottleneck
+
+The faster mixed-degree selector above does NOT itself cure generic model yield.
+There is a separate counting argument for the entire declared family, including
+mixed degrees. Put T=floor((p-1)/H²) and N=3*(d+5)*(d+6)/2. There are at most
+
+    K=(2T+1)^N-1
+
+nonzero integer polynomials of projective degree2, leaf degree<=d+4 and
+weighted L1<p. This is an overcount: each coordinate has absolute value<=T,
+and N counts all leaf monomials of degree<=d+4 times U²,UV,V². A nonzero
+short polynomial has NONZERO reduction modulo p, since positive weights and
+p-divisibility of every coefficient would force L1>=p. [pcc:unverified]
+
+For every nonsingular model in characteristic above3, F_(a,b,tau) is irreducible
+in Fp[x,y,U,V]. One direct justification is that S3, as a quadratic in z over
+Fp(x,y), has discriminant16*(x³+ax+b)*(y³+ay+b). The squarefree cubic in x
+has a factor of odd valuation that does not divide the cubic in y, so this is
+not a square. Its three polynomial coefficients have content1: a common factor
+would divide (x-y)², whereas the middle coefficient restricted to x=y is
+-4*(x³+ax+b). Gauss's lemma gives irreducibility; homogenization in z and the
+invertible shear U->U+tau*V preserve it. The leading U² coefficient prevents
+a spurious V factor. This is hand reasoning, not a new Lean theorem.
+[pcc:unverified]
+
+Distinct parameter triples give distinct normalized irreducibles: the
+x²y²V², x²UV, xUV and UV coefficients are respectively1,2tau,-2a,-4b.
+All these F have total degree6. Every short output G in the mixed-degree
+family reduces to M*F with total degree<=d+6. Unique factorization therefore
+allows at most floor((d+6)/6) distinct such F factors per nonzero G modulo p.
+Consequently the TOTAL number of parameter triples (a,b,tau) admitting any
+nonzero short row in this family is at most
+
+    floor((d+6)/6) * K.
+
+The same bound applies to the number of curve-model pairs after forgetting tau.
+For uniformly sampled nonsingular (a,b), divide by p²-p. If
+N*log(2T+1)+log(d+6)=o(log p), this fraction is p^(-2+o(1)); allowing every
+nonzero short-Weierstrass scaling still leaves p^(-1+o(1)). For fixed d and
+H~sqrt(p)/B^kappa with fixed kappa and B=p^o(1), this condition holds.
+[pcc:unverified]
+
+Thus cheap enumeration and rare output can coexist even in the mixed-degree
+block. This count does not apply to arbitrary combinations of DISTINCT S3
+generators: their sum need not have a common F factor. Nor does it cover all
+presentations, saturation families, fixed special curves or all ECDLP methods.
+The result redirects generic-model work toward a family that breaks the shared
+irreducible factor; it is not a proof that those alternatives have useful yield.
+[pcc:unverified]
+
+Primary cross-check: Diem2011, *On the discrete logarithm problem in elliptic
+curves*, section3/Proposition3.2 and the section2 irreducible summation-polynomial
+construction; [publisher PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/59B877810708C90F6287972486A5BF0C/S0010437X10005075a.pdf/on_the_discrete_logarithm_problem_in_elliptic_curves.pdf).
+Only the irreducible-polynomial context is reused; its extension-field ECDLP
+bound is not a general prime-field result. Original Semaev2004/031 fetch returned
+403; no claim of reading the unavailable PDF. [pcc:unverified]
+
+## 6. What this attempt changed, and the next discriminator
 
 The one-row branch gained an exact hand pruning formula and a scoped random-model
 warning. Homogeneous multiplier growth retains a parameter restriction. Mixed
 degrees give a concrete higher-rank search with triangular pivots and linear
 offset recovery; this replaces the preliminary general univariate-root idea.
-Its curve-model intersection and useful equation independence remain unknown.
+The independent irreducible-factor count then exposes a generic-model yield
+bottleneck for that entire single-generator family, including mixed degrees.
+Useful yield for fixed special models remains unknown.
 [pcc:unverified]
 
 The smallest degree<=1 check has now passed: seven generic laws in
@@ -202,10 +261,14 @@ pivots and compile each x/y/constant linear-recovery branch over a field with
 2!=0. All seven actual named axiom prints use only standard axioms. This does
 not formalize the all-degree search, the pruning norm or the curve-model count.
 
-Next smallest authorized proof obligation: test the first interior degree-two
-branch M_top=alpha*x*y, then formalize the finite triangular reconstruction and
-centered existence-search equivalence for arbitrary fixed d. Preserve all raw
-failures, and only afterward consider an admitted implementation trial.
+The next GENERIC-MODEL discriminator should use at least two distinct S3
+generators and identify an explicit combination with no forced common endpoint
+factor. First check that both generators vanish on the original decomposition,
+that their projective profiles can be aligned at charged cost, and that the
+combination has a usable bounded pivot/offset system. A rank count alone is
+insufficient. The degree-two interior branch and generic triangular formalization
+remain optional component obligations, not evidence that this family fixes yield.
+Preserve all raw failures before any admitted implementation trial.
 The existing rank-one frozen source is not silently extended. No numerical trial
 can be called successful or empty without actually running under admission.
 [pcc:unverified]

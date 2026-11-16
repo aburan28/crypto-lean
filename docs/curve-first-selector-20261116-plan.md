@@ -42,3 +42,12 @@ anchor for actual S3, removing the need for general finite-field factoring.
 State exact indexing/out-of-range conventions and prove completeness by matching
 any existing short row to its pivot values. This is hand analysis until separately
 compiled; do not attach the previous347 count to a new law. [pcc:unverified]
+
+Before implementing the mixed-degree candidate, test a stronger alternative:
+count all bounded output polynomials and the distinct irreducible S3 factors
+they can contain. Establish nonzero reduction, a fixed ambient support count,
+irreducibility/normalization and the distribution of curve parameters. If this
+also bounds mixed-degree models, deprioritize the single-generator family and
+select a multiple-distinct-generator successor. This is a scoped family count,
+not an ECDLP lower bound. Preserve the constructive algorithm even if generic
+model yield fails. [pcc:unverified]
