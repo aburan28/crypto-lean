@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-11-16T18:06:13.979918+00:00",
+  "final_source_commit": "8897b91f64605c6dd85715a6c78331a359a55f11",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 566,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/residual-leaf-rank-20261116/gate001/_/status"
+  },
+  "named_owner_laws": 21,
+  "actual_declarations": 5,
+  "generated_or_maintained_equations": 14,
+  "formal_scope": [
+    "Actual homogeneous six-block residual and nonzero coefficient witnesses",
+    "Honest actual product-union supportN>=6|A|",
+    "No coefficient-linear relation of distinct leaf-monomial rows",
+    "Finite simplified volume-condition implicationL^6<p",
+    "Highest-leaf coefficient anchors and actual chart decoder"
+  ],
+  "hand_scope": [
+    "Matrix index and weighted determinant/LLL transfer",
+    "Full modular-row weighted-norm to tighter windows",
+    "Local candidate-box comparison/rounding and capped search",
+    "Global chain/useful original yield",
+    "Further total-degree height diagnosticB^(D+6)L<p"
+  ],
+  "selector_implemented": false,
+  "measured_speed": false,
+  "useful_yield_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "numerical_cases": 0,
+  "native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "independent_signed_verdict": false,
+  "old_frozen_subjects": 346,
+  "old_frozen_ledger_rows": 20,
+  "local_ring_binding": "three maintained Polynomial.commRing constructors; no trust/limit exception"
+}

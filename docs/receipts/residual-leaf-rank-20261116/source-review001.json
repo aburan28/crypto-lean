@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-16T17:58:19.062143+00:00",
+  "source_commit": "8897b91f64605c6dd85715a6c78331a359a55f11",
+  "owner": "CryptoLean.Polynomial.ResidualLeafRank",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "generic_laws": 21,
+  "actual_applications": 5,
+  "standard_constructor_binding": "three maintained Polynomial.commRing constructors, local target interface only",
+  "formal_scope": [
+    "Full homogeneous six-block residual source",
+    "Actual leaf coefficient nonzero witnesses for every allowed field/curve/chart",
+    "Honest actual-product union support boundN>=6|A|",
+    "No field-linear relation of distinct leaf monomial rows",
+    "Finite natural volume-condition implicationL^6<p",
+    "Highest-leaf chart anchors and decoder"
+  ],
+  "hand_scope": [
+    "Matrix rank/index and weighted determinant/LLL transfer",
+    "Full modular-row weighted-norm anchor-window transfer",
+    "Capped selector search implementation/completeness/cost",
+    "Useful original/global relation yield and higher projective/modulus families"
+  ],
+  "numerical_cases": 0,
+  "paid_jobs": 0,
+  "native_qualification_runs": 0,
+  "control_module_imported_or_run": false,
+  "complete_algorithm_criterion_met": false,
+  "independent_signed_verdict": false,
+  "novelty_claim": false
+}

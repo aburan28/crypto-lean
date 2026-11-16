@@ -1,0 +1,16 @@
+{
+  "owned_paths": [
+    "CryptoLean.lean",
+    "CryptoLean/Polynomial/ResidualLeafRank.lean",
+    "docs/residual-leaf-rank-20261116-plan.md",
+    "docs/residual-leaf-rank-20261116-highest-anchor-plan001.md",
+    "docs/residual-leaf-rank-20261116.md",
+    "docs/receipts/ResidualLeafRank20261116/ActualInstances.lean",
+    "docs/receipts/ResidualLeafRank20261116/Axioms.lean"
+  ],
+  "owned_findings": [],
+  "owned_source_prose_exit": 0,
+  "raw_archival_exit": 2,
+  "raw_compiler_bytes_preserved": true,
+  "untracked_report_checked_directly": true
+}
