@@ -53,7 +53,7 @@ supports and implicit unexpanded families are outside this bound.
    AddSubgroup.card_ker_mul_card_of_surjective, Fintype.card_le_of_surjective,
    Fintype.card_sigma, Finset.sum_mul/sum bounds, Nat.card identities;
    tupleSum_surjective and the actual right-array type are inherited.
-3. Objects: first prove a generic bound for an arbitrary finite family of
+3. Objects: first build a generic bound for an arbitrary finite family of
    surjective additive homomorphisms f:C->(H->+G), arbitrary F:A->Finset G,
    with H the independent right-world group. Success is a predicate on
    the actual product A x H. No proxy syntax or assumed sampler equation.

@@ -1,0 +1,19 @@
+digraph Tree {
+  graph [rankdir=TB, bgcolor="white", pad=0.14, nodesep=0.25, ranksep=0.30];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11,
+        color="#355b76", fillcolor="#edf5fb", margin="0.14,0.09"];
+  edge [color="#355b76", fontname="DejaVu Sans", fontsize=10];
+  known [label="CONTROL: original tuple already supplied\nlocal children U+a+t and V-t\nparent value U+V+a preserved",fillcolor="#e7f3e8",color="#3d7542"];
+  tree [label="Hand independent-node pool bound\nJ nodes: failure <= J exp(-q0 k)\nrepresentation constructor, not hidden-tuple search"];
+  left [label="Any first-world target shortlist F(a)\nsize <= L; arbitrary coordinate-dependent selection\nno right-input access"];
+  right [label="Independent raw right colors\ns colors x b records; all b^s tuples allowed"];
+  bound [label="Checked finite count / hand probability reading\nsuccess <= min(1,L b^s/r)\nno uniform-selected-output hypothesis",fillcolor="#fff0df",color="#a07124"];
+  scope [label="At balanced s about m/2\nsmall independent explicit root lists miss yield target\nnot a general selector or ECDLP lower bound"];
+  joint [label="PROPOSED joint successor\nimplicit block decisions depending on both inputs\nor overlapping original-support representations",style="rounded,dashed",fillcolor="#ffffff",color="#a07124"];
+  known -> tree;
+  left -> bound;
+  right -> bound;
+  bound -> scope;
+  tree -> joint [style=dashed,label="finding the tuple remains"];
+  scope -> joint [style=dashed,label="change information flow / representation"];
+}
