@@ -1,0 +1,43 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T01:33:13.779027Z",
+  "ended": "2026-11-16T01:32:34Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/21",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43786796510",
+    "https://github.com/aburan28/crypto-lean/pull/21#issuecomment-6904853383"
+  ],
+  "incidents": [
+    {
+      "kind": "implicit-zero-codomain",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "natural-self-cast-normalization",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "prose-tagging",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "incorrect-full-head-sha-rejected",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 21,
+  "result": "success",
+  "schema": "crypto.autonomy/v1",
+  "session": "selector-tree-20261116",
+  "started": "2026-11-16T01:05:00Z",
+  "task": "PR21 independent-half explicit shortlist finite count, actual-field instance and tree/joint successor assessment; scoped component landed, complete algorithm open; billing remains external",
+  "task_class": "lean",
+  "tokens": null,
+  "usd": null
+}
