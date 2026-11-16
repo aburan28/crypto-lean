@@ -27,3 +27,10 @@ frozen source/protocol and actual budget/image/caller/capacity/custody admission
 The live cost/reservation record remains unknown. Original full end-to-end
 algorithm criterion is unmet. PR25 closing episode due only on merge/close.
 [pcc:unverified]
+
+Registered interpretive PCC-20261116-58f919 with21 attestation subjects,
+standing unverified (verify-all exit2). The thirteen-row chain verifies;
+published twelve rows remain exact byte/parsed prefix. All158 subject hashes
+match, including137 previous pins. Owned source/prose whitespace check exits0;
+whole archival diff exits2 because raw compiler suggestions retain trailing
+spaces. No raw evidence was trimmed. [pcc:unverified]

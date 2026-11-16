@@ -1,0 +1,23 @@
+[
+  "CryptoLean/Polynomial/HeightBudget.lean",
+  "CryptoLean/Combinatorics/ChainPowerBlocks.lean",
+  "docs/anisotropic-height-budget-20261116.md",
+  "docs/anisotropic-height-budget-20261116-plan.md",
+  "docs/receipts/AnisotropicHeight20261116/ActualInstances.lean",
+  "docs/receipts/AnisotropicHeight20261116/Axioms.lean",
+  "docs/receipts/anisotropic-height-budget-20261116/actual003.log",
+  "docs/receipts/anisotropic-height-budget-20261116/axioms001.log",
+  "docs/receipts/anisotropic-height-budget-20261116/gate-launch001.log",
+  "docs/receipts/anisotropic-height-budget-20261116/gate001/_/audit.log",
+  "docs/receipts/anisotropic-height-budget-20261116/gate001/_/status",
+  "docs/receipts/anisotropic-height-budget-20261116/gate001/_/sources.log",
+  "docs/receipts/anisotropic-height-budget-20261116/next-hypothesis001.md",
+  "docs/anisotropic-height-budget-20261116/flow.dot",
+  "docs/anisotropic-height-budget-20261116/flow.svg",
+  "docs/anisotropic-height-budget-20261116/report.typ",
+  "docs/anisotropic-height-budget-20261116/report.pdf",
+  "docs/anisotropic-height-budget-20261116/source-review001.json",
+  "docs/anisotropic-height-budget-20261116/publication001.json",
+  "docs/lessons/entries/O-12cb288a9c11.json",
+  "docs/lessons/entries/L-ea26265bb760.json"
+]
