@@ -1,0 +1,9 @@
+import CryptoLean.Group.TranslatedIntersections
+
+#print axioms CryptoLean.TranslatedIntersections.mem_completionFilter
+#print axioms CryptoLean.TranslatedIntersections.both_gates_iff
+#print axioms CryptoLean.TranslatedIntersections.acceptedCount_eq_sum
+#print axioms CryptoLean.TranslatedIntersections.indicator_eq
+#print axioms CryptoLean.TranslatedIntersections.zero_completionFilter
+#print axioms CryptoLean.TranslatedIntersections.raw_tag_mean
+#print axioms CryptoLean.TranslatedIntersections.raw_tag_variance
