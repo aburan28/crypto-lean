@@ -32,3 +32,9 @@ Raw failures and prior PR publication receipts remain. Owner lessons and
 consumer follow-up metadata stay separate. PR25 closure episode remains due
 only on merge/close; PR4352's monitor stopped after its third unchanged review
 without resolving its frozen-history conflict. [pcc:unverified]
+
+Registered interpretive statement PCC-20261116-2c3e0c with31 attestation
+subjects, standing unverified (verify-all exit2). Twelve-row ledger chain verifies; the
+published predecessor eleven rows are exact byte/parsed prefix. All137
+subject hashes match, including all106 previous pins. No signed verification
+or numerical outcome. [pcc:unverified]
