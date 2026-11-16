@@ -1,0 +1,79 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T01:30:39Z",
+ "id": "PCC-20261116-d003a9",
+ "kind": "statement",
+ "producer": {
+  "commit": "0f3fccc4caa5e62b6d6c868c59727a13af13825b",
+  "model": "",
+  "session": "selector-tree-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/selector-tree-20261116.md",
+    "sha256": "2261c6dc1e1abb65ba468bad99b1cf11642023170b49b594007e0c4601c369e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/ShortlistCompletion.lean",
+    "sha256": "3aa4821490b729bda86049454e774f3c8aeb75bed91e2414876283979ca313d3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/SelectorTree20261116/FinalProbe.lean",
+    "sha256": "946754a44e31554460145aa9b536c597dfb80bf35d7094bbfcef0603403efe85"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-tree-20261116/gate001/_/audit.log",
+    "sha256": "6e24b40ffd78f86b63c1086620ac701b201c00b020729feea10568900ce55639"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-tree-20261116/axioms001.log",
+    "sha256": "c6d14a727501b5dd76c712e5dd6c986e61fc54be26043a57ab867afcdb105377"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/selector-tree-20261116/report.pdf",
+    "sha256": "a0f1fb9f6afb18b81ef6c8a2ecb06dc6e4d9eb735f91adf607514d71e319b21e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/selector-tree-20261116/publication.json",
+    "sha256": "8a703b9a1b1f6d8ec0100a2274f590c3dfa063422dbfc50e992e63ff342f4f39"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/selector-tree-20261116-plan.md",
+    "sha256": "d320586976aaf53b95937771f06e4d922c93181df1e9ab495e858b75fb2ac19d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/SelectorTree20261116/FloorProbe.lean",
+    "sha256": "87b50f12ee55d2208392b55a9f360fa70b444837ee1aecaa5265348d8bf284b0"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Formal finite count and actual instance; hand architecture-specific asymptotics, known-witness tree probability/cost and overlapping coefficient identity. No general selector lower bound, joint construction/yield bound, complete ECDLP algorithm, measured speed, signed verification, native numerical, paid or qualification execution.",
+ "statement": "Three shared finite-group laws count arbitrary explicit target shortlists formed without access to an independent completion world, with no uniform-selected-output assumption. The actual prime-field subgroup endpoint type-checks; the canonical local audit covers 215 theorems with zero failures or trusted-native exceptions and three standard-axiom prints. The report separately analyzes a known-tuple tree representation and overlapping-support successors without claiming a hidden-tuple extractor."
+}
