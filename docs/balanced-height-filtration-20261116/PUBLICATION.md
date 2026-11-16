@@ -24,3 +24,8 @@ The separate universal-pool claim PCC-20261116-8ad24e and all91 previous
 subjects stay frozen. Prior ten ledger rows remain append-only. New scoped
 proof outcomes are recorded while PR25 is open; its closing episode remains
 due only on merge/close. No producer attestation is a signed verification.
+
+Registered interpretive PCC-20261116-c2eaec with15 attestation subjects,
+standing2/unverified. Published predecessor ten-row ledger is the exact
+byte/parsed prefix of the eleven-row ledger; all106 subjects match.
+No signed verification or native identity certificate. [pcc:unverified]
