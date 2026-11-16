@@ -1,0 +1,32 @@
+CryptoLean/Polynomial/CubicAdicLifting.lean:156:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?n • ?a + ?n • ?b
+in the target expression
+  (q / 2 + 1) • P + (q / 2 + 1) • P = 0
+
+G : Type u_3
+inst✝ : AddGroup G
+P : G
+hP : P ≠ 0
+q : ℕ
+hodd : q % 2 = 1
+hq : q • P = 0
+hz : P + P = 0
+hh : (q / 2 + 1) • P + (q / 2 + 1) • P = P
+⊢ (q / 2 + 1) • P + (q / 2 + 1) • P = 0
+CryptoLean/Polynomial/CubicAdicLifting.lean:175:36: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.some` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `DenseRange.some`
+  [apply] `Finsupp.some`
+  [apply] `Nonempty.some`
+  [apply] `some`
+  [apply] `Part.some`
+  [apply] `WithBot.some`
+  [apply] `WithTop.some`
+  [apply] `Function.Embedding.some`
+  [apply] `Lean.LOption.some`
+  [apply] `Option.Rel.some`
+  [apply] `Set.Nonempty.some`
+  [apply] `WeierstrassCurve.Affine.Point.some`
+  [apply] `Lean.Language.SnapshotTask.ReportingRange.some`
+CryptoLean/Polynomial/CubicAdicLifting.lean:233:32: error(lean.unknownIdentifier): Unknown identifier `h`

@@ -1,0 +1,18 @@
+{
+  "kind": "reproduction notes relative to final source; not claimed to be raw failed-input snapshots",
+  "direct001": "all-precisions zero case used simpa only [pow_one], leaving exponent0+1; final uses simpa",
+  "direct003": [
+    "odd_ann_double_ne_zero initially used AddGroup and reverse nsmul_add; final requires actual AddCommGroup model with explicit nsmul_add equality",
+    "point constructor .some was unqualified; final qualified Mathlib constructor",
+    "nonunit proof destructed h then reused it; final retains hLift before destructuring"
+  ],
+  "direct005": "passed with unreachable first|ring|simp tail; final owner-build removes redundant branches",
+  "actual001": "missing parentheses made curve-condition arrow and iff parse differently; final explicitly parenthesizes iff",
+  "actual002": "simpa did not unfold local x; final uses simpa [x]",
+  "final": [
+    "owner-build001 exit0",
+    "actual003 exit0 empty",
+    "mixed001 exit0 empty",
+    "axioms001 exit0 standard25"
+  ]
+}

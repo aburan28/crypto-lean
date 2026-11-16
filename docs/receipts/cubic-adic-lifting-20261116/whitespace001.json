@@ -1,0 +1,12 @@
+{
+  "new_owner_source_prose_findings": [],
+  "paths": [
+    "CryptoLean/Polynomial/CubicAdicLifting.lean",
+    "docs/receipts/CubicAdicLifting20261116/Axioms.lean",
+    "docs/receipts/CubicAdicLifting20261116/MixedInstances.lean",
+    "docs/receipts/CubicAdicLifting20261116/ActualInstances.lean",
+    "docs/cubic-adic-lifting-20261116-corrected-norm-plan001.md",
+    "docs/cubic-adic-lifting-20261116-plan.md"
+  ],
+  "older_raw_whitespace_immutable_reference": "docs/receipts/monic-norm-selector-20261116/staged-whitespace002.json"
+}

@@ -1,0 +1,27 @@
+import CryptoLean.Polynomial.CubicAdicLifting
+
+#print axioms CryptoLean.CubicAdicLifting.inverse_residue_transport
+#print axioms CryptoLean.CubicAdicLifting.unit_square_root_step
+#print axioms CryptoLean.CubicAdicLifting.unit_square_root_all_precisions
+#print axioms CryptoLean.CubicAdicLifting.unit_square_root_power
+#print axioms CryptoLean.CubicAdicLifting.inverse_from_square
+#print axioms CryptoLean.CubicAdicLifting.residue_inverse_mul
+#print axioms CryptoLean.CubicAdicLifting.residue_inverse_product
+#print axioms CryptoLean.CubicAdicLifting.abscissa_factor_identity
+#print axioms CryptoLean.CubicAdicLifting.abscissa_inverse_residue
+#print axioms CryptoLean.CubicAdicLifting.reduce_monic_square_residue
+#print axioms CryptoLean.CubicAdicLifting.cubic_unit_roots_all_powers
+#print axioms CryptoLean.CubicAdicLifting.cubic_unit_roots_below_cap
+#print axioms CryptoLean.CubicAdicLifting.odd_ann_double_ne_zero
+#print axioms CryptoLean.CubicAdicLifting.odd_point_unit_coordinates
+#print axioms CryptoLean.CubicAdicLifting.odd_point_unit_square
+#print axioms CryptoLean.CubicAdicLifting.every_colored_odd_tuple_all_powers
+#print axioms CryptoLean.CubicAdicLifting.nonunit_X_control
+#print axioms CryptoLean.CubicAdicLifting.one_sub_cubic_degree
+#print axioms CryptoLean.CubicAdicLifting.one_sub_cubic_not_square
+#print axioms CryptoLean.CubicAdicLifting.cubic_power_small_degree_zero
+#print axioms CryptoLean.CubicAdicLifting.bounded_full_norm_precision_iff
+#print axioms CryptoLean.CubicAdicLifting.capped_lift_rejects_full_norm
+#print axioms CryptoLean.CubicAdicLifting.full_norm_without_capped_root
+#print axioms CryptoLean.CubicAdicLifting.horizontal_norm_family
+#print axioms CryptoLean.CubicAdicLifting.horizontal_curve_records
