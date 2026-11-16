@@ -1,0 +1,23 @@
+{
+  "old_subjects": 449,
+  "new_subjects": 45,
+  "all_subjects": 494,
+  "all_hashes_match": true,
+  "rows": 24,
+  "prefixes": {
+    "1eb06425d5d4930998b5586056b81514978f90e4": {
+      "rows": 23,
+      "byte": true,
+      "parsed": true
+    },
+    "01750b4044989583e70e4886b4ab5a79fe83f128": {
+      "rows": 9,
+      "byte": true,
+      "parsed": true
+    }
+  },
+  "new_claim": "PCC-20261116-9142c5",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0,
+  "standing": "unverified"
+}

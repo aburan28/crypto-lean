@@ -28,3 +28,5 @@ trust/inventory/linter exception, custom axiom/native_decide. No scientific/
 numerical/native qualification/paid/image/job/control execution; earlier
 admission missing. PR monitor disabled after service rearm failures, tracked
 separately. [pcc:unverified]
+
+Registered PCC-20261116-9142c5 with45 attestation subjects, unverified (verify-all exit2); ledgerverify0. All494 hashes match;24 rows retain exact published1eb23/main0179 byte/parsed prefixes. [pcc:unverified]

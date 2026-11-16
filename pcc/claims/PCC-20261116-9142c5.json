@@ -1,0 +1,331 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T20:07:16Z",
+ "id": "PCC-20261116-9142c5",
+ "kind": "statement",
+ "producer": {
+  "commit": "a822445b568fabcdb17fd743d925e1b0bd3988ea",
+  "model": "",
+  "session": "cubic-adic-lifting-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/CubicAdicLifting.lean",
+    "sha256": "cd400b27be1a493a42c389a85cd5bf83f5d00ed4972a0dbf5d8d21f85ab205f6"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CubicAdicLifting20261116/ActualInstances.lean",
+    "sha256": "1a173a647705d865174a82a745bd90e73ebee09a048f0e1507e28e98307c78c8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CubicAdicLifting20261116/MixedInstances.lean",
+    "sha256": "6babfe4333691f304389bb3b660fe8066b3666791f27245fcca28f78f5f6bc67"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CubicAdicLifting20261116/Axioms.lean",
+    "sha256": "4d2b05efa131ba7960a7ff44ee05b73cba3fb058b95d20b758a84dd5bfbcf289"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/cubic-adic-lifting-20261116-plan.md",
+    "sha256": "4a4175a84a798d95c510d94c70aeedf4a7b7043fa80e0829145f4995b6f85f03"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/cubic-adic-lifting-20261116-corrected-norm-plan001.md",
+    "sha256": "78ea7c77b57b36744dfc8743c57cb19da9cfdad6e69913fd322c01871e3bc852"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/cubic-adic-lifting-20261116.md",
+    "sha256": "04fbe727c2f6f59bddf37804e23da0a023edf1afa1b11160dead399001d2d154"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/cubic-adic-lifting-20261116/publication001.json",
+    "sha256": "b4e4839dcfd01e4eaded0a3abfb9dbd95cb2908dab9bcacc6dd8a4dc66c8777e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual001-status001.json",
+    "sha256": "4db7c6b87061703e007d05a2a3ded460a785678419f05ffec945f9d14ddca078"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual001.log",
+    "sha256": "56cdbacc8b1d0dced812030111c03b4410bdb0f62ecd7cc32016933eac8aac93"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual002-status001.json",
+    "sha256": "b6c126e67fe85b0ec8ed7eaa691d1e3b0defc13a680938b5cf87fa5c8bbc1aef"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual002.log",
+    "sha256": "6ed60b10b5e3183d37a88a1e35de97e179a069643a90830f2867162a4dc5f046"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual003-status001.json",
+    "sha256": "07452e0d47d15e25d87d282a336c209bf12a7ab5c449e61f74bade02f83cd33c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/actual003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/audit-delta001.json",
+    "sha256": "280e26ba8e9f81d8a6199de088af8240247c09a45acd7e497b3677dbb2b94ad1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/axioms001-status001.json",
+    "sha256": "62f2d6b449c3aac77a7c5d2b166119d04f789a3432f0984f73de8ce88de405f3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/axioms001.log",
+    "sha256": "15916087310d303b8b288e5f404422be8283fca0678dae7f4563445a60167b48"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct001-status001.json",
+    "sha256": "0a01cea35b7b422b894ee3c11021e48843fc01369d764066daeea51d01eb354a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct001.log",
+    "sha256": "ff8996bd892fe6946dc2c018c29c04b811ac27b3b6f5d7ff59efc5b4b50dd368"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct002-status001.json",
+    "sha256": "d23752056244a6b6e35aa1a2a781361114d94a49be6c83f5a238f45569953937"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct003-status001.json",
+    "sha256": "61dc0a20eb89d47c12f072bd068369b1a585aa521a92466ae6457aaa7c88d96a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct003.log",
+    "sha256": "4a4fac8b1d5bc143843f6bac3bafda809a7a43e31fd904671d2f1a9c8cbb2877"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct004-status001.json",
+    "sha256": "d74ec6705e51b6148d384069c6b9723842a74d2de2361a6c1b55c32a1a539816"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct004.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct005-status001.json",
+    "sha256": "91ad53d93304adfe2b1985fb9d9e7b188945cf3935d33a0cf99b4b581409b12e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/direct005.log",
+    "sha256": "4f67e763c7304e5584ede8d218b8479c52ad7d99e92d003e0e667b157738bb89"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/failure-reproduction001.json",
+    "sha256": "2a048a5aebef97e68a594fb0e8061a5f0c194d56ae63bb805bd7d6b33a175f73"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate-launch001.log",
+    "sha256": "002a436e3e39ca8297dfe9b38fdc4d42caf10d814068c2b3c6ca6a1a6d338777"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001-exit001.json",
+    "sha256": "4ad59092470e49fbc4c32845f31baf4c7f26edafc51752be9c948f73ce5e7b39"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/audit.log",
+    "sha256": "99c512294e81365114d52177726253f8481a138f9dc218f830e02246004ef309"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/build.log",
+    "sha256": "85f138e88015dba557c13b8e0c547904534b894775439988b8a4885c687579a9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/cache.log",
+    "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/source-target.log",
+    "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/sources.log",
+    "sha256": "4391a86fef20401370363bfd88483ed6d7da358dbea522f1f186780bb6358026"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/mixed001-status001.json",
+    "sha256": "008af3d6ff4922d41a0b27c2064225a16380a943062db78aece23791f3463322"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/mixed001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/owner-build001-status001.json",
+    "sha256": "2af4101bd108874bd3fea3096409aafb7313be984cc86d3092a3564075167ec0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/owner-build001.log",
+    "sha256": "ca781fc51345991f1ec029c489b63948de1bf034791009ea0ec514bb94bd307e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/preservation-pre001.json",
+    "sha256": "54702d478a7b95891c3402f01dd570be95c6180b249ef7a07cfac96f17a4441e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/source-review001.json",
+    "sha256": "2ca37dcc5abd8a99f3c0118adb2c48e831b12c588e371092bc15d7982fa30f4a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/staged-whitespace001.json",
+    "sha256": "e07bb6cc4a085437d2efd6599118cfb1bda2050a65e6ba926181593b5886dcb5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/staged-whitespace002.json",
+    "sha256": "15c978a333a45568c37bb509993758bdf6aee4aab20a23c733aee11891c3f304"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/cubic-adic-lifting-20261116/whitespace001.json",
+    "sha256": "161c41dd55077b61f45b19369be95df154e3eb24aff0747d6e2853c3900bcf47"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Finalsource7e503fa16bccb0fb801fa1e6c70e8a4c455b494d; explicit unit/characteristic/short-model/nonzero odd-annihilation and degree hypotheses. Default Lean4.35/Mathlib pin. Runtime, full algorithm and unproved useful-yield/zero-sum transfer excluded.",
+ "statement": "Local source/audit records report unit square-root lifting through all cubic powers on actual nonzero common-odd-annihilated mixed point inputs, low-cap no-pruning, a valid full-norm counterexample to independently capped roots, and exact retained norm congruence under degree caps with3k>t.25 owner laws+5 symbolic applications, canonical665/0/0. Counterexample family has no asserted original subgroup-yield frequency. Fast useful nonzero search, norm group-zero-sum bridge, original yield and complete classical subexponential prime-field ECDLP remain open. No scientific execution or independent signed verdict."
+}
