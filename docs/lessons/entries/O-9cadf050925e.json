@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T00:12:36Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/18",
+    "https://github.com/aburan28/crypto-lean/blob/3c36164f5e28c9bf4f60c64202a3472c11d42972/docs/receipts/auxiliary-shift-20261115/diff003.json"
+  ],
+  "kind": "outcome",
+  "note": "Prospective floors and unchanged Mathlib laws assembled at actual points; dependent product APIs needed explicit families. Corrected a premature whitespace interpretation with original failure retained. Local205/0/0 and inspected PDF; hosted zero-step billing failure remains unresolved. No native/paid numerical execution.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "research-visuals",
+  "task": "Shared PR18 exact raw shift moments and marker-rank finite survival; source component success, full algorithm criterion open"
+}

@@ -1,0 +1,43 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T00:12:36.532794Z",
+  "ended": "2026-11-16T00:11:15Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/18",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43778816377",
+    "https://github.com/aburan28/crypto-lean/blob/3c36164f5e28c9bf4f60c64202a3472c11d42972/docs/receipts/auxiliary-shift-20261115/publication.json"
+  ],
+  "incidents": [
+    {
+      "kind": "actual-subgroup-instance-context",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "Finsupp-computability",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "dependent-product-API",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "whitespace-receipt-correction",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 18,
+  "result": "success",
+  "schema": "crypto.autonomy/v1",
+  "session": "auxiliary-shift-20261115",
+  "started": "2026-11-15T22:49:46Z",
+  "task": "Shared PR18 compatible shift moments and marker-rank component; exact component landed, overall algorithm criterion open; hosted billing incident unresolved, requires external action",
+  "task_class": "lean",
+  "tokens": null,
+  "usd": null
+}
