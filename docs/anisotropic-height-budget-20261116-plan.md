@@ -53,3 +53,28 @@ compiler/audit and generic development checks. No scientific numerical pilot.
 Record outcome before next attempt. Report derivation, editable visual/PDF
 and exact publication scope only after evidence. No complete algorithm claim
 from this local support test or from planned code.
+
+The next mathematical discriminator includes ordinary-chain block size.
+For m-1 generator powers e_0,...,e_(m-2), the projective multidegree at
+slot j is2(e_j+e_(j+1)). Head e_0 and all adjacent sums determine e by
+successive natural-number cancellation. In a fixed degree block with
+sum(e)<=t, there are at most t+1 power vectors. With a finite monomial-shift
+menu M, at most(t+1)|M| rows have one given shifted profile. Prove the
+finite injection/counting owner separately; actual S3 multihomogeneity
+connects the semantic instance by hand unless directly compiled. This
+bounds LLL row rank per block, not equation independence, determinants or
+the full generator family of arbitrary saturation. Total blocks, columns
+and every failed profile still count. No numerical evidence is inferred.
+
+Support-separation refinement before further lattice work: if all original
+integer lifts have projective degree at least2, their ideal has no terms of
+weight0/1. Pure p^t shifts of degree at most1 occupy only those low weights.
+An integer combination with L1<p^t cannot retain any such low-weight part
+when all coordinate scales>=1. Prove that every short row then remains in
+the original integer-lift ideal. This does NOT imply global impossibility:
+the centered-lift ideal's properness and leaf-projection dimension must be
+established separately; arbitrary saturation/new lifts are outside scope.
+Do not conflate centered modular lifts with the exact characteristic-zero
+S3 ideal. A matched higher-degree modulus menu is needed before assuming
+new independent constraints; full total degree/row/column/LLL loss still
+count. No scientific run is introduced by this proof obligation.

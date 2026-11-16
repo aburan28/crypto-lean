@@ -37,3 +37,5 @@ import CryptoLean.Group.TranslatedSupports
 import CryptoLean.Combinatorics.UniversalPools
 import CryptoLean.Polynomial.BalancedFiltration
 import CryptoLean.Polynomial.ProjectiveQuadratics
+import CryptoLean.Polynomial.HeightBudget
+import CryptoLean.Combinatorics.ChainPowerBlocks

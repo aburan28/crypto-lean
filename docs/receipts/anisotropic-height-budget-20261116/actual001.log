@@ -1,0 +1,17 @@
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:63:4: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:46:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:87:77: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:87:77: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:89:0: error: (kernel) unknown constant 'AnisotropicActual.chain_generators_mem'
