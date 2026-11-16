@@ -1,0 +1,18 @@
+import CryptoLean.Polynomial.RankTwoSourceAnchors
+
+#print axioms CryptoLean.RankTwoSourceAnchors.original_roots_source_zero
+#print axioms CryptoLean.RankTwoSourceAnchors.source_scaling
+#print axioms CryptoLean.RankTwoSourceAnchors.zero_second_source
+#print axioms CryptoLean.RankTwoSourceAnchors.source_b_difference
+#print axioms CryptoLean.RankTwoSourceAnchors.t_coeffs
+#print axioms CryptoLean.RankTwoSourceAnchors.tu_anchors
+#print axioms CryptoLean.RankTwoSourceAnchors.leaf_x_square
+#print axioms CryptoLean.RankTwoSourceAnchors.leaf_xy_anchor
+#print axioms CryptoLean.RankTwoSourceAnchors.constant_leaf_anchors
+#print axioms CryptoLean.RankTwoSourceAnchors.bihomogeneous_anchor
+#print axioms CryptoLean.RankTwoSourceAnchors.exact_projective_anchors
+#print axioms CryptoLean.RankTwoSourceAnchors.decode_curve_and_charts
+#print axioms CryptoLean.RankTwoSourceAnchors.curveCode_eq
+#print axioms CryptoLean.RankTwoSourceAnchors.curveCandidates_card_le
+#print axioms CryptoLean.RankTwoSourceAnchors.curve_mem_candidates
+#print axioms CryptoLean.RankTwoSourceAnchors.curveWindow_card_le

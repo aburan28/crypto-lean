@@ -1,0 +1,24 @@
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:109:41: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b x y V W scalar₁ scalar₂ τ σ : R
+h :
+  ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 2).coeff 2 = C scalar₂ ∧
+    ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 2).coeff 1 =
+        2 * C scalar₂ * (C τ - X) * C V ∧
+      ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 2 =
+          2 * C scalar₂ * (C σ - X) * C W ∧
+        ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 1 =
+            4 * C scalar₂ * C σ * C W * (C τ - X) * C V - 2 * C scalar₂ * (2 * C τ * X + C a + X ^ 2) * C V * C W ∧
+          ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 0 =
+            2 * C scalar₂ * C σ * C W * (C τ - X) ^ 2 * C V ^ 2 -
+              2 * C scalar₂ * ((C τ + X) * (C τ * X + C a) + 2 * C b) * C V ^ 2 * C W
+hC : ∀ (z : R), constantCoeff (C z) = z
+hX : constantCoeff X = 0
+⊢ True ∧
+    2 * scalar₂ * (τ - 0) * V = 2 * scalar₂ * τ * V ∧
+      2 * scalar₂ * (σ - 0) * W = 2 * scalar₂ * σ * W ∧
+        4 * scalar₂ * σ * W * (τ - 0) * V - 2 * scalar₂ * (2 * τ * 0 + a + 0 ^ 2) * V * W =
+            2 * scalar₂ * (2 * τ * σ - a) * V * W ∧
+          2 * scalar₂ * σ * W * (τ - 0) ^ 2 * V ^ 2 - 2 * scalar₂ * ((τ + 0) * (τ * 0 + a) + 2 * b) * V ^ 2 * W =
+            2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b) * V ^ 2 * W

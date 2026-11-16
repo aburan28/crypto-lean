@@ -48,3 +48,4 @@ import CryptoLean.Polynomial.MixedDegreePivots
 import CryptoLean.Polynomial.CurveParameterElimination
 import CryptoLean.Polynomial.TwoChartCoefficients
 import CryptoLean.Polynomial.SmallLiftRigidity
+import CryptoLean.Polynomial.RankTwoSourceAnchors

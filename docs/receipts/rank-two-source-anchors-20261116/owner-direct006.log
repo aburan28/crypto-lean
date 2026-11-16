@@ -1,0 +1,40 @@
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:174:4: error: Type mismatch: After simplification, term
+  bihomogeneous_anchor (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b)) 2 1
+ has type
+  @Eq R (((C (C (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b))) * X ^ 2 * C X).coeff 2).coeff 1)
+    (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b))
+but is expected to have type
+  @Eq R (((lift2 (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b)) * X ^ 2 * C X).coeff 2).coeff 1)
+    (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b))
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:167:16: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lift2, map_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:167:35: warning: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lift2, Polynomial.C_ofNat, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:168:16: warning: This simp argument is unused:
+  Polynomial.C_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lift2, map_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:168:35: warning: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lift2, Polynomial.C_ofNat, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:236:22: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidableEq K
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
