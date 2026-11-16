@@ -1,0 +1,10 @@
+{
+  "published_head": "0ecd9f8e3912886ea3db3876830b7bb11f68ce94",
+  "old_rows": 11,
+  "old_ledger_sha256": "451b0b9b59158453f4dbaf972a5b6d9877a4419459547e27238a0aa388680ae1",
+  "byte_prefix_preserved": true,
+  "parsed_prefix_preserved": true,
+  "old_subject_count": 106,
+  "all_old_subject_hashes_match": true,
+  "mismatches": []
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-16T09:11:37.900497+00:00",
+  "source_commit": "23640c93952af7000f63e24bcc9b11f836d90399",
+  "scope": "unexecuted Sage candidate plus hand local-minors falsification and subcritical translated-chart coverage bounds",
+  "python_sources_parsed": 7,
+  "json_files_parsed": 7,
+  "development_controls": {
+    "passed": 9,
+    "exit_code": 0,
+    "receipt": "docs/receipts/saturated-selector-prototype-20261116/development-controls005.log",
+    "scope": "generic count/cap/fake-client process tests; no Sage or curve work"
+  },
+  "syntax_receipt": "docs/receipts/saturated-selector-prototype-20261116/static005.json",
+  "launcher_help_exit": 0,
+  "prior_lean_gate": "271/0/0 for earlier frozen modules only; no Lean changes or rerun here",
+  "new_numerical_cases": 0,
+  "new_lll_runs": 0,
+  "new_paid_jobs": 0,
+  "new_qualification_runs": 0,
+  "image_built": false,
+  "asymptotic_solver_proved": false,
+  "independent_signed_verdict": false,
+  "identity_certificate_issued": false,
+  "complete_algorithm_criterion_met": false,
+  "pdf_inspection": {
+    "pages": 4,
+    "all_final_pages_rendered_and_visually_inspected": true,
+    "renderer": "Typst0.15.1 + pdftoppm scale1250",
+    "sha256": "b44a64632b745c4efdb2804cf44bdc7f7092c27afac0c66887d15741a1e634f5"
+  },
+  "remaining_budget": "unknown; existing cost/reservation record requested; no launch"
+}

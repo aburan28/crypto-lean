@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-11-16T07:30:14.667649+00:00",
+  "run": "43824257608",
+  "jobs": {
+    "total_count": 2,
+    "jobs": [
+      {
+        "id": 133154208828,
+        "run_id": 43824257608,
+        "workflow_name": "CI",
+        "head_branch": "codex/universal-shift-pool-20261116",
+        "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43824257608",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVLvUDc8AAAAfAJv8PA",
+        "head_sha": "0ecd9f8e3912886ea3db3876830b7bb11f68ce94",
+        "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133154208828",
+        "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43824257608/job/133154208828",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-16T07:29:45Z",
+        "started_at": "2026-11-16T07:29:45Z",
+        "completed_at": "2026-11-16T07:29:47Z",
+        "name": "selftest",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133154208828",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      },
+      {
+        "id": 133154209300,
+        "run_id": 43824257608,
+        "workflow_name": "CI",
+        "head_branch": "codex/universal-shift-pool-20261116",
+        "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43824257608",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVLvUDc8AAAAfAJv-FA",
+        "head_sha": "0ecd9f8e3912886ea3db3876830b7bb11f68ce94",
+        "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133154209300",
+        "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43824257608/job/133154209300",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-16T07:29:45Z",
+        "started_at": "2026-11-16T07:29:45Z",
+        "completed_at": "2026-11-16T07:29:47Z",
+        "name": "build-and-audit",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133154209300",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      }
+    ]
+  },
+  "annotations": {
+    "133154208828": [
+      {
+        "path": ".github",
+        "blob_href": "https://github.com/aburan28/crypto-lean/blob/0ecd9f8e3912886ea3db3876830b7bb11f68ce94/.github",
+        "start_line": 1,
+        "start_column": null,
+        "end_line": 1,
+        "end_column": null,
+        "annotation_level": "failure",
+        "title": "",
+        "message": "The job was not started because your account is locked due to a billing issue.",
+        "raw_details": ""
+      }
+    ],
+    "133154209300": [
+      {
+        "path": ".github",
+        "blob_href": "https://github.com/aburan28/crypto-lean/blob/0ecd9f8e3912886ea3db3876830b7bb11f68ce94/.github",
+        "start_line": 1,
+        "start_column": null,
+        "end_line": 1,
+        "end_column": null,
+        "annotation_level": "failure",
+        "title": "",
+        "message": "The job was not started because your account is locked due to a billing issue.",
+        "raw_details": ""
+      }
+    ]
+  }
+}

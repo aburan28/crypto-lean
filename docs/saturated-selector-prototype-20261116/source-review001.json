@@ -1,0 +1,61 @@
+{
+  "primary": [
+    {
+      "name": "Ryan2025",
+      "url": "https://escholarship.org/content/qt8bz3g5b6/qt8bz3g5b6.pdf",
+      "reviewed": "chapter3 printed pp55--68 and88--89",
+      "scope": "HHG and fixed-ideal/monomial optimal shifts; no generic independence guarantee",
+      "sha256": "7e0bde57bdcaa791c801240ea7c30be7263861ad2329cf998f1c5628bad0eec3"
+    },
+    {
+      "name": "CHHS2016",
+      "url": "https://arxiv.org/pdf/1605.08065",
+      "reviewed": "theorems2--4,19--22, section4; theorem21 hypotheses",
+      "scope": "univariate/binomial integer-valued scope; not a multivariate S3 impossibility",
+      "sha256": "79b95315c2db050aacd5e19c4dd36a41adc86d89e34a120a79d27f7057ecb639"
+    },
+    {
+      "name": "CHHS2021",
+      "url": "https://arxiv.org/pdf/2111.14180",
+      "reviewed": "introduction and linear two-variable independence scope",
+      "scope": "auxiliary independence can fail; no arbitrary nonlinear solver",
+      "sha256": "1b6a9f1660145406769c95b98e60d2b159b3736ca39cc26246270efdc2c91196"
+    },
+    {
+      "name": "Ahlqvist2022",
+      "url": "https://www.diva-portal.org/smash/get/diva2%3A1728933/FULLTEXT01.pdf",
+      "reviewed": "title, pp15--16/table1 and references",
+      "scope": "public toy copied, reproducing Paar--Pelzl Example9.5; no curve case evaluated here",
+      "sha256": "3258e2abb8d2c4ad4994d3b49216ff381a8e9aa8098858f58ebc6be6b32ee3e8"
+    }
+  ],
+  "cuso": {
+    "url": "https://github.com/keeganryan/cuso",
+    "commit": "fb2747d2105a8e48499bf10a3a717cf80c14d079",
+    "reviewed": [
+      "README",
+      "optimal.py shift selection",
+      "hastad_howgrave_graham.py default integer L1",
+      "coppersmith.py partial multivariate solver"
+    ],
+    "scope": "API/default context only; no code copied and no optimal-shift implementation claimed"
+  },
+  "sage": {
+    "url": "https://doc.sagemath.org/html/en/reference/polynomial_rings/sage/rings/polynomial/multi_polynomial_ideal.html",
+    "reviewed": [
+      "saturation returns ideal, exponent",
+      "polynomial lift identity",
+      "LLL transformation option",
+      "lex Groebner/variety",
+      "dimension count overflow warning"
+    ],
+    "scope": "interfaces read; code unexecuted; documentation version10.10 and pinned runtime10.8 remain a compatibility risk"
+  },
+  "subcritical_chart_argument": "hand elementary rational injection, primitive pair count, union bound and universal cover lower bound; no novelty claim",
+  "bounded_search": {
+    "query": "Coppersmith small modular roots rational representations coordinate translation elliptic curve summation polynomial",
+    "result": "related EC-generator/small-root prior art, no absence/novelty claim"
+  },
+  "kb": "MCP unavailable; bounded primary/owner/Mathlib fallback",
+  "numerical_execution_performed": false
+}

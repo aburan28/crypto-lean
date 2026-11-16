@@ -190,3 +190,11 @@ short rows exist: coefficient height, determinants, equation independence,
 finite projection, all branch costs and useful random-target yield remain.
 The prototype accepts only a capped externally frozen offset panel; it does
 not generate or claim the asymptotic covering pool in the numerical code.
+
+A subsequent counting refinement pins the universal chart cost on both
+sides. Each offset vector covers at most H^(2s) of the p^s finite tuples,
+so any universal pool needs N>=(p/H²)^s. With L=sqrt(p)/H exactly, the upper
+bound is ceil((4L²)^s*(s ln(p)+ln(1/epsilon))). For fixed epsilon and L>=2,
+subexponential universal coverage is equivalent to s ln(L)=o(ln(p)). This
+is a hand bound for these rational boxes, not an ECDLP lower bound or a
+restriction on a promise set of realizable tuples. No experiment was run.
