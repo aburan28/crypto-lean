@@ -108,6 +108,59 @@ adaptive coefficient-selected charts, nonuniform useful decompositions,
 factor-aware certificates, saturation, different norms or all ECDLP methods.
 [pcc:unverified]
 
+## A sharper HAND adaptive test: three coefficient anchors
+
+Assume p>3 prime, B>=2 and H1,H2>=1, fixed independently of b. The
+universal-cover failure is not the only discriminator. For
+Z=U+tau V,T=X+sigma W, the displayed G0 has the following coefficients:
+
+    x²y²w V³W² : 1,
+    x²yw  V³W² : -2tau,
+    x²y²  V³W² : tau+sigma.
+
+These are HAND extractions from the leaf-degree5 and4 parts, not new compiled
+coefficient theorems. At degree4 the subtraction A1F2 contributes nothing;
+the relevant terms of A2WF1 are
+
+    x²y²(ZV²W²+TV³W)-2wxy(x+y)ZV²W².
+
+Thus a rank-one row family pZ^N+ZG0(tau,sigma), with full matching-profile
+modulus rows, admits a three-coefficient existence search. Enumerate a nonzero
+small lambda and two small integers c,d, then set
+
+    tau=-c/(2lambda), sigma=d/lambda-tau.
+
+Center ALL coefficients and retain an exact full-row witness/norm test. The
+same positive-weight/centering argument as before gives a complete HAND search
+for this declared row family, not arbitrary distinct-generator spans. With
+L=H1³H2², the cutoffs are n0=floor((p-1)/(B^5 L)) and
+n1=floor((p-1)/(B^4 L)); there are at most2n0(2n1+1)² raw records. All candidates
+depend on p,a,B,heights but NOT b. If the cutoffs are p^o(1), the entire eligible
+offset-pair image has size S=p^o(1), even when an algorithm chooses its subset
+after seeing b. This is not a tested implementation or a new Lean equivalence.
+[pcc:unverified]
+
+For each such first chart, at most3H1² rational residues and (2B+1)² bounded
+leaf pairs (x,y) occur. On A1!=0, the first ORIGINAL S3 equation determines a
+unique b from those three abscissas. Therefore, for fixed a, the number of b
+values admitting ANY original nonzero-pivot decomposition inside these charts
+is at most
+
+    S * 3H1² * (2B+1)².
+
+Shortness requires H1³H2²<p, hence H1²<p^(2/3) when H2>=1. For B,S=p^o(1),
+the fraction among uniform b is at most p^(-1/3+o(1)) on THIS branch. Restricting
+to nonsingular b changes only a bounded number of excluded values. This bounds
+a whole b-independent compatible-chart image, not an unjustified fixed pool
+chosen after seeing b. [pcc:unverified]
+
+The exceptional branch is essential: A1=0 and F1=0 give z=-(x+y) and
+a=-(x²+xy+y²). Then the first equation imposes no condition on b, and G0 adds
+no replacement for F2 at that branch. It cannot be dropped or included in the
+preceding b count. The complete original second equation and its recovery cost
+remain. No useful-yield or independent-equation conclusion for this exceptional
+branch is asserted. [pcc:unverified]
+
 ## Evidence and next discriminator
 
 Owner CryptoLean.Polynomial.CurveParameterElimination has20 named generic laws,
@@ -118,12 +171,13 @@ the declared profile/coverage premises. No new scientific arithmetic, curve/LLL,
 native qualification, paid or numerical run. Raw failures remain. [pcc:unverified]
 
 This attempt removes a parameter without losing the original equations, but its
-universal-cover cost fails. The useful next discriminator is ADAPTIVE coverage:
-can a coefficient-selected, subexponential collection of primitive b-free charts
-meet a nonnegligible fraction of ORIGINAL decompositions? A uniform-pair argument
-cannot be imposed without proving the relevant distribution. Known prefix sums
-can be precomputed, but fixing a prefix and substituting F1=0 makes G0=-A1F2;
-that alone returns to a one-generator endpoint family. No useful-yield claim.
+universal-cover cost fails. The three-anchor adaptive test then limits generic
+b yield on the nonzero-pivot branch. Next check those exact coefficient anchors
+against the source and analyze the EXCEPTIONAL branch's retained F2 cost and
+useful equation independence. A higher-rank distinct-generator span is outside
+this rank-one G0 count. Known prefix sums can be precomputed, but fixing a prefix
+and substituting F1=0 makes G0=-A1F2; that alone returns to a one-generator
+endpoint family. No useful-yield claim.
 [pcc:unverified]
 
 Before another driver, require a precise selected-chart family, complete original
