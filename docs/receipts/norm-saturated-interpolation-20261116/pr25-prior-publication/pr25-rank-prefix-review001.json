@@ -1,0 +1,20 @@
+{
+  "head": "f308e8d9a7084af3c5cec9ff1d72c07be973ce1c",
+  "observed_at": "2026-11-16T18:12:28.999741+00:00",
+  "rows": 21,
+  "sources": {
+    "1e559e62fbb5ca099050ff18873627d9a78e7c9c": {
+      "byte_prefix": true,
+      "parsed_prefix": true,
+      "rows": 20,
+      "ancestor": true
+    },
+    "01750b4044989583e70e4886b4ab5a79fe83f128": {
+      "byte_prefix": true,
+      "parsed_prefix": true,
+      "rows": 9,
+      "ancestor": true
+    }
+  },
+  "journal_byte_prefix": true
+}
