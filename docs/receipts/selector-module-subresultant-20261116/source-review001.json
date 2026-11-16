@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-16T17:12:29.246346+00:00",
+  "final_source_commit": "ce9db6ae420a1a365d75ceffcb206015073eb24d",
+  "owners": {
+    "LeafModuleAnchors": {
+      "generic_laws": 8,
+      "actual_applications": 5,
+      "scope": "Arbitrary polynomial leaf multipliers; least-degree source anchors and code cover, D=0 retained."
+    },
+    "ProjectiveSubresultant": {
+      "generic_laws": 19,
+      "actual_applications": 5,
+      "scope": "Exact finite-chart factor removal, branches, actual source anchors, model decoder/cardinality, conditional universal-pool arithmetic."
+    }
+  },
+  "formal_projection": "Actual leaf and U/X/V/W coefficient extraction; no leaf sampling",
+  "hand_scope": [
+    "Full modular-row/weighted-norm transfer",
+    "Near-critical generic model/scaling asymptotics",
+    "Actual projective-image/cover instantiation of finite universal count",
+    "Capped selector implementation/completeness/runtime",
+    "Growing saturated-residual-module determinant and useful yield"
+  ],
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "scientific_cases": 0,
+  "native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "independent_signed_verdict": false,
+  "complete_algorithm_criterion_met": false,
+  "aborted_gate": "gate001",
+  "final_application_receipts": [
+    "leaf-module-anchors-20261116/actual003.log",
+    "projective-subresultant-20261116/actual005.log"
+  ],
+  "novelty_claim": false
+}

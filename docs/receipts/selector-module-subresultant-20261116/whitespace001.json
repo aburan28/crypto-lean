@@ -1,0 +1,21 @@
+{
+  "owned_checked_paths": [
+    "CryptoLean.lean",
+    "CryptoLean/Polynomial/LeafModuleAnchors.lean",
+    "CryptoLean/Polynomial/ProjectiveSubresultant.lean",
+    "docs/leaf-module-anchors-20261116-plan.md",
+    "docs/projective-subresultant-20261116-plan.md",
+    "docs/projective-subresultant-20261116-cover-plan001.md",
+    "docs/leaf-module-anchors-20261116.md",
+    "docs/projective-subresultant-20261116.md",
+    "docs/receipts/LeafModuleAnchors20261116/ActualInstances.lean",
+    "docs/receipts/LeafModuleAnchors20261116/Axioms.lean",
+    "docs/receipts/ProjectiveSubresultant20261116/ActualInstances.lean",
+    "docs/receipts/ProjectiveSubresultant20261116/Axioms.lean"
+  ],
+  "owned_findings": [],
+  "owned_source_prose_exit": 0,
+  "tracked_full_archival_exit": 2,
+  "raw_compiler_bytes_preserved": true,
+  "untracked_reports_checked_directly": true
+}
