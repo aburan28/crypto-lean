@@ -47,8 +47,8 @@ per-record checksum is not assumed to have a known target.
    coefficients are actual finite arrays of integers/naturals, equivalent
    to full finitely supported arrays here, rather than group-value proxies.
 2. Existing laws as stated: Finset.sum_erase_add, Finset.sum_congr,
-   Function.update_same/update_of_ne, additive cancellation,
-   Finset.sum_nsmul, Finset.card_le_card/card_image_le, Fintype.card_fun
+   Function.update_self/update_of_ne, additive cancellation,
+   Finset.sum_nsmul_assoc, Finset.card_le_card/card_image_le, Fintype.card_fun
    and card_fin. Missing only the generic interfaces named below.
 3. Objects: weights lambda:I->J->G; legal tuple c:I->J, checksum
    sum_i lambda(i,c(i)); nonnegative partial arrays u:I->J->Nat with
@@ -68,7 +68,7 @@ per-record checksum is not assumed to have a known target.
 |---|---|---|
 | Compare two legal tuples | sum_erase_add, sum_congr, cancellation | change one coordinate |
 | Constant color weights | finite sum congruence | common target endpoint |
-| Sum coefficients per color | sum_nsmul | scalar-action factorization |
+| Sum coefficients per color | sum_nsmul_assoc | scalar-action factorization |
 | Color-profile container | Pi of Fin(K+1), card_fun/card_fin | bounded total witnesses |
 | Image cardinality | card_le_card, card_image_le | subset witness |
 | Actual group instance | Mathlib point group, subgroup inherited operations | unchanged endpoint |
