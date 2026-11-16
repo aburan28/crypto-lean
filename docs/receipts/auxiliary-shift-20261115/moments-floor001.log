@@ -1,0 +1,27 @@
+docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean:16:21: error: Application type mismatch: The argument
+  fun hq1 => MemLp.integrable hq1 MemLp.of_discrete
+has type
+  1 ≤ 2 → Integrable f ?m.54
+but is expected to have type
+  Integrable ?m.35 ?m.39
+in the application
+  integral_fintype fun hq1 => MemLp.integrable hq1 MemLp.of_discrete
+docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean:24:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (U + g ∈ S)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean:26:33: error: Application type mismatch: The argument
+  fun g => if g ∈ S then 1 else 0
+has type
+  G → ℝ
+but is expected to have type
+  Finset G
+in the application
+  Equiv.Perm.sum_comp (Equiv.addLeft U) fun g => if g ∈ S then 1 else 0
+docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean:24:60: error: unsolved goals
+G : Type u_1
+inst✝¹ : AddCommGroup G
+inst✝ : Fintype G
+U : G
+S : Finset G
+⊢ ∑ g, sorry = ↑S.card

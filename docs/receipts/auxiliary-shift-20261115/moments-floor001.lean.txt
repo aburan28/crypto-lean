@@ -1,0 +1,27 @@
+import Mathlib.Probability.Moments.Variance
+import Mathlib.Probability.UniformOn
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.MeasureTheory.Integral.Bochner.SumMeasure
+import Mathlib.Tactic
+
+set_option autoImplicit false
+open MeasureTheory ProbabilityTheory
+open scoped BigOperators
+
+example {G : Type*} [AddCommGroup G] [Fintype G]
+    [MeasurableSpace G] [DiscreteMeasurableSpace G] (f : G → ℝ) :
+    ∫ x, f x ∂uniformOn (Set.univ : Set G) =
+      ∑ x, (uniformOn (Set.univ : Set G)).real {x} * f x := by
+  simpa only [smul_eq_mul] using
+    integral_fintype (MemLp.of_discrete (f := f) (p := 2)).integrable
+
+example {G : Type*} [AddCommGroup G] [Fintype G]
+    [MeasurableSpace G] [DiscreteMeasurableSpace G] (x : G) :
+    (uniformOn (Set.univ : Set G)).real {x} = 1 / (Fintype.card G : ℝ) := by
+  simp [measureReal_def, uniformOn_univ]
+
+example {G : Type*} [AddCommGroup G] [Fintype G] (U : G) (S : Finset G) :
+    ∑ g : G, (if U + g ∈ S then (1 : ℝ) else 0) = S.card := by
+  classical
+  rw [(Equiv.addLeft U).sum_comp (fun g : G ↦ if g ∈ S then (1 : ℝ) else 0)]
+  simp
