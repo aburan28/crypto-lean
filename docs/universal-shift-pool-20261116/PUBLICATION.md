@@ -22,3 +22,8 @@ not verify the package. Old nine-row ledger prefix and76 subjects stay frozen.
 PR24 closing episode/lessons/receipts are included in this substantive PR;
 the two adopted global workflow lessons are applied with their retained tests.
 The unrelated Velu probe stays untracked and outside this publication.
+
+Registered interpretive PCC-20261116-8ad24e with15 attestation subjects.
+Standing2/unverified; no signed verdict. Old nine-row ledger is the exact
+byte/parsed prefix of the ten-row ledger, and all91 subject hashes match.
+[pcc:unverified]
