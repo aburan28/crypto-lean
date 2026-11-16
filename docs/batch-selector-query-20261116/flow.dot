@@ -1,0 +1,21 @@
+digraph Query {
+  graph [rankdir=TB, bgcolor="white", pad=0.14, nodesep=0.26, ranksep=0.28];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11,
+        color="#355b76", fillcolor="#edf5fb", margin="0.14,0.08"];
+  edge [color="#355b76", fontname="DejaVu Sans", fontsize=10];
+  gates [label="Arbitrary subtotal W=U+V\nBOTH U+T in S and V-T in S"];
+  exact [label="Checked finite interface\nC_W = S intersect(W-S)\nq(W)=|C_W|/|G|; actual compatible count"];
+  hand [label="Hand interval application\nW!=O: |C_W|=(r-2)(L/p)^2 +/- error\nerror <= 8 sqrt(p)(1+ln p)^2", fillcolor="#e7f3e8",color="#3d7542"];
+  survival [label="With explicit subgroup-size condition\nk=16 b^2 gives fixed-subtotal survival >=1-exp(-1)\nNo multilevel selected-state law follows"];
+  supplied [label="Known multipoint evaluation\nsupplied coefficient vector + supplied points\nfull raw grid still costs input/output work"];
+  query [label="PROPOSED: exact block emptiness\ncharged preprocessing + cheap block queries\nthen split blocks to recover actual pairs",fillcolor="#fff4df",color="#a07124",style="rounded,dashed"];
+  algebra [label="Candidate implicit algebra\nR_AB = product(Z-x(U_a+T_j))\ninterval-gcd decision; cost OPEN",fillcolor="#ffffff",color="#a07124",style="rounded,dashed"];
+  growth [label="Independent all-color cost obligation\nwhole-level current-filter states ~ b^s delta\nkeep provenance and actual output-law accounting"];
+  gates -> exact;
+  exact -> hand;
+  hand -> survival;
+  supplied -> query [style=dashed,label="needs a new aggregate"];
+  query -> algebra [style=dashed];
+  survival -> growth;
+  algebra -> growth [style=dashed];
+}

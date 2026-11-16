@@ -15,6 +15,7 @@ import CryptoLean.Group.PartiteCoverage
 import CryptoLean.Group.ShiftRepresentations
 import CryptoLean.Group.ShiftMoments
 import CryptoLean.Group.RankThreshold
+import CryptoLean.Group.TranslatedIntersections
 import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.InterpolationKernels

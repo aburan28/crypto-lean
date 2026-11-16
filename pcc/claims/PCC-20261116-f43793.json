@@ -1,0 +1,79 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T00:47:36Z",
+ "id": "PCC-20261116-f43793",
+ "kind": "statement",
+ "producer": {
+  "commit": "84849c176327d1d80f678cb11b83ed2a445e94d3",
+  "model": "",
+  "session": "batch-selector-query-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/batch-selector-query-20261116.md",
+    "sha256": "6db835f75b33fb2f5b0ae7798d9e0ec5b5e63d37fb1e0f0b0d839918b75ca3bb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/TranslatedIntersections.lean",
+    "sha256": "8898e15d9e8f2f87772029488fa1f493aa58070b363b4938a7623a32840e1372"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean",
+    "sha256": "b57d68d3dfe8b425df009f7ce1e1625af6d9171213a8e1bd3b00b86cbc3f9ce4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/batch-selector-query-20261116/gate001/_/audit.log",
+    "sha256": "96f3a1feab32eccabaa594714841c06025555494fcf2e7b7d7efff78809e43cc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/batch-selector-query-20261116/axioms001.log",
+    "sha256": "0523d402f9df950e89fdad189b5786a6c80d9e07d2bd621d862796714161a649"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/batch-selector-query-20261116/report.pdf",
+    "sha256": "ef6ead79c79ab17da16fcc17b4451e2f543c2c1276d6c114a8be242d1a711d6e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/batch-selector-query-20261116/publication.json",
+    "sha256": "8045c85fc9a8571d19ff73d9d01a60543de96d83d195b52409cec9c1cb7b3d93"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/batch-selector-query-20261116-plan.md",
+    "sha256": "e9c19036ca0592f591c23fb1de281d794e43082459d643238a5110cf0e4b43ee"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean",
+    "sha256": "785359f3b1f8939f6a9e3f5102534eb0055d533575b0b97f82e504bdaa5683a6"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Formal finite interface and actual assembly; hand analytic and architecture-specific cost analysis; proposed block query. No multilevel output law, complete selector/end-to-end algorithm, measured speed, signed verification, native numerical/paid/qualification execution.",
+ "statement": "Seven shared finite-group laws identify the actual arbitrary-subtotal two-gate count with a translated intersection and apply existing single-tag mean/variance laws. Actual prime-field subgroup endpoints type-check; canonical local audit covers 212 theorems with zero failures or trusted-native exceptions and seven standard-axiom prints. The report separately derives an interval character-sum estimate with explicit subgroup-size conditions and raw whole-level state/collision counts; a block-decision/implicit resultant-interval-gcd query remains proposed without a cost bound."
+}

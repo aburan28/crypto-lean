@@ -1,0 +1,26 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T00:16:12.632230Z",
+  "ended": "2026-11-16T00:15:07Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/19",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43779214985"
+  ],
+  "incidents": [
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 19,
+  "result": "success",
+  "schema": "crypto.autonomy/v1",
+  "session": "shift-component-landing-20261116",
+  "started": "2026-11-16T00:13:23Z",
+  "task": "PR19 archives PR18 landing, hosted annotations and autonomy outcome; queued record for next substantive owner PR",
+  "task_class": "docs-tooling",
+  "tokens": null,
+  "usd": null
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "selector-component-publication/v1",
+  "source_commit": "b4b9f528bef64da8cc2fe9f5169ff4e49583da79",
+  "lean": "4.35.0",
+  "mathlib": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "gate": {
+    "command": "tools/proof-gate.sh --out docs/receipts/batch-selector-query-20261116/gate001 .",
+    "exit_code": 0,
+    "theorems": 212,
+    "failures": 0,
+    "trusted_native": 0
+  },
+  "axioms": {
+    "command": "lake env lean docs/receipts/BatchSelectorQuery20261116/AxiomProbe.lean",
+    "exit_code": 0,
+    "named_laws": 7,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "pdf": {
+    "pages": 3,
+    "sha256": "ef6ead79c79ab17da16fcc17b4451e2f543c2c1276d6c114a8be242d1a711d6e",
+    "inspection": "All three final pages rendered1250px and visually inspected."
+  },
+  "formal": "Exact arbitrary-subtotal completion subset, original acceptedCount reading, single-tag mean/variance, actual prime-field assembly",
+  "hand": "Character-sum application with explicit poles/subgroup condition; whole-level raw count/collision analysis; conditional self-reduction query count",
+  "proposed": "Exact cheap block-decision/implicit resultant-interval gcd oracle, not implemented or bounded",
+  "fresh_checker": {
+    "available": false,
+    "run": false
+  },
+  "native_numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "hosted": "No outcome inferred for unpublished head",
+  "complete_algorithm": "criterion remains unmet",
+  "standing": "unverified"
+}

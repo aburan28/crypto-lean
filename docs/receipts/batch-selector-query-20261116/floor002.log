@@ -1,0 +1,50 @@
+add_sub_add_left_eq_sub.{u_3} {G : Type u_3} [AddCommGroup G] (a b c : G) : c + a - (c + b) = a - b
+Finset.card_filter.{u_1} {ι : Type u_1} (p : ι → Prop) [DecidablePred p] (s : Finset ι) :
+  {i ∈ s | p i}.card = ∑ i ∈ s, if p i then 1 else 0
+CryptoLean.ShiftRepresentations.shifted_hit_mean.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  ∫ (g : G), if U + g ∈ S then 1 else 0 ∂uniformOn Set.univ = ↑S.card / ↑(Fintype.card G)
+CryptoLean.ShiftRepresentations.shifted_hit_variance.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  Var[fun g => if U + g ∈ S then 1 else 0; uniformOn Set.univ] =
+    ↑S.card / ↑(Fintype.card G) * (1 - ↑S.card / ↑(Fintype.card G))
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:41:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:42:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:45:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:46:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:47:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
