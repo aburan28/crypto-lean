@@ -1,0 +1,31 @@
+import CryptoLean.Polynomial.DoublingNormResidues
+
+#print axioms CryptoLean.MonicNormSelector.curveCubic_monic
+#print axioms CryptoLean.MonicNormSelector.curveNorm_scale
+#print axioms CryptoLean.MonicNormSelector.row_scale
+#print axioms CryptoLean.MonicNormSelector.normalization_monic
+#print axioms CryptoLean.MonicNormSelector.normalization_degree
+#print axioms CryptoLean.MonicNormSelector.normalization_recover
+#print axioms CryptoLean.MonicNormSelector.normalization_row_iff
+#print axioms CryptoLean.MonicNormSelector.norm_leading_shape
+#print axioms CryptoLean.MonicNormSelector.normalized_even_norm
+#print axioms CryptoLean.MonicNormSelector.normalized_odd_norm
+#print axioms CryptoLean.MonicNormSelector.tight_monic_normal_form
+#print axioms CryptoLean.MonicNormSelector.tight_color_zero_graph
+#print axioms CryptoLean.MonicNormSelector.tight_color_unique_choice
+#print axioms CryptoLean.MonicNormSelector.tight_zeroChoices_singletons
+#print axioms CryptoLean.MonicNormSelector.normalization_zeroChoices
+#print axioms CryptoLean.DoublingNormResidues.cleared_tangent_residue
+#print axioms CryptoLean.DoublingNormResidues.unit_tangent_residue
+#print axioms CryptoLean.DoublingNormResidues.polynomial_tangent_residue
+#print axioms CryptoLean.DoublingNormResidues.doubled_abscissa_square_residue
+#print axioms CryptoLean.DoublingNormResidues.square_residue_mul
+#print axioms CryptoLean.DoublingNormResidues.square_residue_product
+#print axioms CryptoLean.DoublingNormResidues.doubled_point_product_residue
+#print axioms CryptoLean.DoublingNormResidues.cubic_reduce_square_residue
+#print axioms CryptoLean.DoublingNormResidues.public_odd_half
+#print axioms CryptoLean.DoublingNormResidues.short_tangent_interfaces
+#print axioms CryptoLean.DoublingNormResidues.short_group_double_residue
+#print axioms CryptoLean.DoublingNormResidues.odd_point_square_residue
+#print axioms CryptoLean.DoublingNormResidues.bounded_odd_point_square_residue
+#print axioms CryptoLean.DoublingNormResidues.every_colored_odd_tuple_passes_residue

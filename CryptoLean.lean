@@ -53,3 +53,5 @@ import CryptoLean.Polynomial.LeafModuleAnchors
 import CryptoLean.Polynomial.ProjectiveSubresultant
 import CryptoLean.Polynomial.ResidualLeafRank
 import CryptoLean.Polynomial.NormSaturatedInterpolation
+import CryptoLean.Polynomial.MonicNormSelector
+import CryptoLean.Polynomial.DoublingNormResidues

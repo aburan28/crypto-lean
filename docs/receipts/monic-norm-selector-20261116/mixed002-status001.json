@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "recorded_at": "2026-11-16T19:05:47.987798+00:00",
+  "reason": "original mixed001 command finished with empty output but a later JS snapshot typo lost observed polling exit; verify once with durable status"
+}

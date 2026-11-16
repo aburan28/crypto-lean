@@ -1,0 +1,37 @@
+'CryptoLean.MonicNormSelector.curveCubic_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.curveNorm_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.row_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalization_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalization_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalization_recover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalization_row_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.norm_leading_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalized_even_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalized_odd_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.tight_monic_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.tight_color_zero_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.tight_color_unique_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.tight_zeroChoices_singletons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MonicNormSelector.normalization_zeroChoices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.cleared_tangent_residue' depends on axioms: [propext, Quot.sound]
+'CryptoLean.DoublingNormResidues.unit_tangent_residue' depends on axioms: [propext, Quot.sound]
+'CryptoLean.DoublingNormResidues.polynomial_tangent_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.doubled_abscissa_square_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.DoublingNormResidues.square_residue_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.square_residue_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.doubled_point_product_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.DoublingNormResidues.cubic_reduce_square_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.public_odd_half' depends on axioms: [propext, Quot.sound]
+'CryptoLean.DoublingNormResidues.short_tangent_interfaces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.short_group_double_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.odd_point_square_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.DoublingNormResidues.bounded_odd_point_square_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.DoublingNormResidues.every_colored_odd_tuple_passes_residue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
