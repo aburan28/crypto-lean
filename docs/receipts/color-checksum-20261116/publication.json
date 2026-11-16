@@ -1,0 +1,41 @@
+{
+  "schema": "selector-component-publication/v1",
+  "source_commit": "a3c5a775e5861eb2874dd827b44ec4f98bbd649a",
+  "lean": "4.35.0",
+  "mathlib": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "gate": {
+    "command": "tools/proof-gate.sh --out docs/receipts/color-checksum-20261116/gate001 .",
+    "exit_code": 0,
+    "theorems": 219,
+    "failures": 0,
+    "trusted_native": 0
+  },
+  "axioms": {
+    "command": "lake env lean docs/receipts/ColorChecksum20261116/AxiomProbe.lean",
+    "exit_code": 0,
+    "named_laws": 4,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "pdf": {
+    "pages": 2,
+    "sha256": "257d06b6820fe86b461a99350de80f813937957438e17b63174c59b60f79e620",
+    "inspection": "Both final render002 pages visually inspected at1250px"
+  },
+  "formal": "Universal common-target weight characterization, natural profile factorization and finite checksum image; actual prime-field point and ZMod endpoints",
+  "hand": "Independent uniform residue probability and balanced sparse-representation application",
+  "proposed": "Compatibility checksum combined with joint coordinate-sensitive extraction; no construction/yield bound",
+  "fresh_checker": {
+    "available": false,
+    "run": false
+  },
+  "native_numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "hosted": "No outcome inferred for unpublished head",
+  "complete_algorithm": "criterion remains unmet",
+  "standing": "unverified"
+}
