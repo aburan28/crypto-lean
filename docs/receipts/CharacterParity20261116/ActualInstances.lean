@@ -33,13 +33,15 @@ example {I J : Type*} [Fintype I] [Fintype J] [DecidableEq I] [DecidableEq J]
 open Classical in
 example (p : ℕ) [Fact p.Prime] {I : Type*} (s : Finset I) (u : I → ZMod p) (a : ZMod p) :
     (taylor a (∏ j ∈ s, (X-C (u j)))).coeff (s.filter (fun j ↦ u j = a)).card =
-      ∏ j ∈ s.filter (fun j ↦ u j ≠ a), (a-u j) :=
-  CryptoLean.ProjectiveProducts.indexed_taylor_nonzero s u a
+      ∏ j ∈ s.filter (fun j ↦ u j ≠ a), (a-u j) := by
+  convert
+    CryptoLean.ProjectiveProducts.indexed_taylor_nonzero s u a using 1 <;> congr
 
 open Classical in
 example (p : ℕ) [Fact p.Prime] {I : Type*} (s : Finset I) (u : I → ZMod p) (B : I → Prop)
     (h : ∀ j ∈ s, ¬B j → u j ≠ 0) :
     (∏ j ∈ s.filter (fun j ↦ u j ≠ 0), u j) /
         (∏ j ∈ (s.filter (fun j ↦ u j ≠ 0)).filter B, u j) =
-      ∏ j ∈ s.filter (fun j ↦ ¬B j), u j :=
-  CryptoLean.ProjectiveProducts.nonzero_product_correction s u B h
+      ∏ j ∈ s.filter (fun j ↦ ¬B j), u j := by
+  convert
+    CryptoLean.ProjectiveProducts.nonzero_product_correction s u B h using 1; congr

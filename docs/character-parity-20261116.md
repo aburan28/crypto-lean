@@ -180,7 +180,7 @@ so no false positive is accepted. [pcc:unverified]
 The earlier two-mask rectangle construction and quarter-count remain in
 the prospective plan and receipts. The all-row method improves its success
 bound and avoids the earlier rectangle cover/descent. Its matrix law is
-the standard nonzero-linear-functional principle, not a novelty claim.
+the standard nonzero-linear-functional principle, not a novelty claim. [pcc:unverified]
 
 ## Requirement and evidence boundary
 

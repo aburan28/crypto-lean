@@ -112,7 +112,7 @@ resultant, hidden Cartesian-product construction or measured speed is used.
 
 1. Structures: finite additive groups and homomorphisms into ZMod2;
    finite Sigma/subtype counts; univariate polynomials over a field;
-   actual Weierstrass norm/intersection semantics already in Mathlib.
+   actual Weierstrass norm/intersection semantics already in Mathlib. [pcc:unverified]
 2. Existing laws as stated: ShortlistCompletion.fiber_card_mul;
    AddMonoidHom.flip; Nat/Fintype Sigma cardinality; card_le_of_injective;
    Polynomial.resultant_prod_left, resultant_X_sub_C_left and polynomial
@@ -199,7 +199,7 @@ quadraticChar. Apply addPolynomial_slope/C_addPolynomial as in the already
 passing scratch norm assembly003; do not re-prove their curve laws.
 Apply the generic map_mul instance for MulChar and quadraticChar_sq_one to an abstract norm
 equality with the two input factors nonzero. That is the first floor;
-then combine it with the actual Weierstrass norm and ZMod p endpoints.
+then combine it with the actual Weierstrass norm and ZMod p endpoints. [pcc:unverified]
 
 Missing reusable glue: the generic evaluation norm interface and its
 quadratic-character consequence. They belong in Curve.CharacterCarry
@@ -300,7 +300,7 @@ Assembly floor first uses exactly this partition identity and generic
 Taylor law; instantiate the resulting indexed coefficient at ZMod p.
 Missing glue: expose the coefficient after splitting equal keys; expose
 nonzero-product quotient after removing B, with all kept u nonzero.
-These belong ProjectiveProducts and are not curve-specific facts.
+These belong ProjectiveProducts and are not curve-specific facts. [pcc:unverified]
 Inheritance: filter partition by the existing product law, equal-key
 factors by substitution and prod_const, coefficient by taylor_strip_root,
 nonzero denominator by prod_ne_zero_iff, cancellation by div_eq_iff.
@@ -313,3 +313,12 @@ by the supplied nonzero-on-kept hypothesis. Product of B's nonzero factors
 is nonzero. Divide to recover the kept product. Apply this scalar law
 once per anchor and multiply. This retains repetitions and never divides
 by a zero projection factor. No curve/sampling assumption is hidden here.
+
+
+Actual-instance normalization: the two ZMod p indexed laws need convert/congr
+to identify hidden finite-filter/operation instance presentations. Existing
+filter_congr_decidable alone did not close both endpoint types. Focused
+actual-instances004 passes with structural congruence only; it does not
+rerun the generic factorization or correction proof. Preserve the full
+gate001 and actual-instances002/003 failures. No hypothesis, proof limit,
+trust or linter policy change.
