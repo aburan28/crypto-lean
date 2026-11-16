@@ -21,3 +21,8 @@ or identity certificate. No proof-limit/trust/inventory/linter exception. Raw
 failures/frozen warnings retained. Complete end-to-end ECDLP goal unmet; current
 budget and runtime/source-image/caller/capacity/custody admission remain missing.
 [pcc:unverified]
+
+Registered PCC-20261116-9a4778 with20 attestation subjects, standing unverified
+(verify-all exit2). Sixteen-row chain verifies; published9122 fifteen rows remain
+exact byte/parsed prefix. All228 subject hashes match, including208 previous pins.
+No independent signed verdict. [pcc:unverified]
