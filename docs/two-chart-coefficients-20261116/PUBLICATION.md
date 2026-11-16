@@ -20,3 +20,8 @@ All228 prior subjects/16rows stay frozen. Raw errors and default-heartbeat failu
 preserved; no proof-limit/trust/inventory/linter exception. No signed verdict,
 identity certificate, measured speed or full ECDLP algorithm. Closing episode only
 mergeclose; current source/proof preparation remains partial. [pcc:unverified]
+
+Registered PCC-20261116-e6dc6e with22 attestation subjects, standing unverified
+(verify-all exit2). Seventeen-row chain verifies; published999b sixteen rows remain
+exact byte/parsed prefix. All250 subject hashes match, including228 prior pins.
+No independently signed verification or identity certificate. [pcc:unverified]
