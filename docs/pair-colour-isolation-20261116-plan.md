@@ -43,7 +43,7 @@ the sum of per-bucket direct/parity work, final original-index recovery and
 predicate checks. Hand target: quasilinear per sample, up to the existing
 one-character polynomial arithmetic/logarithms. This is a design, not an
 implemented or measured sampler. Direct uniform pair rejection remains
-the comparison for dense gates; no speedup follows solely from coverage.
+the comparison for dense gates; no speedup follows solely from coverage. [pcc:unverified]
 
 ## Literature first
 
@@ -60,7 +60,7 @@ KB tools unavailable. Bounded repository/Mathlib plus primary fallback:
   exact/noisy-BIS error and pointwise distribution transfer must be charged.
 - Dumas--Pernet--Saunders2009, https://arxiv.org/pdf/0901.4747,
   trace discussion: pure black-box trace uses n matvecs; structured cases
-  can be faster. This does not prove the elliptic joint oracle impossible.
+  can be faster. This does not prove the elliptic joint oracle impossible. [pcc:unverified]
 - Existing CharacterCarry/ProjectiveProducts/BilinearSketch, source PR23:
   actual one-character row parities and raw-mask counts. Mathlib finite
   products/cardinality, additive hom evaluation/product and finite union

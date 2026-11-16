@@ -1,0 +1,22 @@
+digraph isolation {
+ graph [rankdir=TB,bgcolor="white",pad="0.15",nodesep="0.2",ranksep="0.24"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#35546b",fillcolor="#eaf2f7",margin="0.15,0.10"];
+ edge [color="#35546b",arrowsize=0.7];
+ input [label="Explicit indexed point records A, B
+Keep full labels, supports and repeated records"];
+ levels [label="Every dyadic colour size B = 2^ell
+ell = 1,...,L with L = ceil(log2(2NM))"];
+ colours [label="Independent colour per ORIGINAL RECORD
+Keep pairs whose row and column colours agree"];
+ buckets [label="Only occupied matching-colour buckets
+Total record input across buckets = N+M"];
+ recover [label="Inside each bucket: direct scans, then row parity
+Sound; guaranteed recovery on a singleton passing graph"];
+ list [label="At most ONE checked pair per level
+Keep up to L candidates per complete round",fillcolor="#dff0e5"];
+ accept [label="Check EVERY candidate for original usefulness
+q rounds, at most qL candidates",fillcolor="#dff0e5"];
+ bound [label="If theta = useful passing pairs / all passing pairs:
+hit per round >= theta/8; miss <= (1-theta/8)^q",fillcolor="#fff1d8"];
+ input -> levels -> colours -> buckets -> recover -> list -> accept -> bound;
+}

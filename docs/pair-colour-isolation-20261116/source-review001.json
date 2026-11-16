@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-16T06:04:15.390338+00:00",
+  "kb_available": false,
+  "fallback": "bounded primary papers and exact pinned Mathlib declarations",
+  "novelty_claim": false,
+  "sources": [
+    {
+      "name": "Valiant-Vazirani1986",
+      "url": "https://ics.uci.edu/~vazirani/ValVaz.pdf",
+      "local_path": "/workspace/scratch/joint-gate-isolation-20261116/sources/Valiant-Vazirani1986.pdf",
+      "sha256": "80ab86355e85e0c0ab86e97032144400f4b9b8d490b44713c2b364b0113e61ec",
+      "sections_reviewed": "proof pp87--90; standard isolation"
+    },
+    {
+      "name": "Addanki-McGregor-Musco2022",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol244-esa2022/LIPIcs.ESA.2022.2/LIPIcs.ESA.2022.2.pdf",
+      "local_path": "/workspace/scratch/joint-gate-isolation-20261116/sources/Addanki-McGregor-Musco2022.pdf",
+      "sha256": "0365d08dbcf893cb180c0973dfb53c1de414349c65a8177811986b205fb9da6a",
+      "sections_reviewed": "Theorem2/7, section4 and exact-BIS model"
+    },
+    {
+      "name": "Addanki-McGregor-Musco2022-full",
+      "url": "https://arxiv.org/pdf/2207.02817",
+      "local_path": "/workspace/scratch/joint-gate-isolation-20261116/sources/Addanki-McGregor-Musco2022-full.pdf",
+      "sha256": "e3b9a1d5240f0c9a92dfbb7d93611eab861832b62a77553839d472d15e7a3b15",
+      "sections_reviewed": "Algorithm6, Theorem38 and surrounding proof context; no elliptic-runtime import"
+    },
+    {
+      "name": "Dumas-Pernet-Saunders2009",
+      "url": "https://arxiv.org/pdf/0901.4747",
+      "local_path": "/workspace/scratch/joint-gate-isolation-20261116/sources/Dumas-Pernet-Saunders2009.pdf",
+      "sha256": "a4cf98ef8ce674b277cae80b1e96f14130dab1af1134c9afa1e3e3ff5c98ada1",
+      "sections_reviewed": "trace discussion; structured faster cases explicitly allowed"
+    }
+  ]
+}
