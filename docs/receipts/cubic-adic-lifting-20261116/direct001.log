@@ -1,0 +1,6 @@
+CryptoLean/Polynomial/CubicAdicLifting.lean:38:25: error: Type mismatch: After simplification, term
+  hroot
+ has type
+  f ∣ u0 ^ 2 - g
+but is expected to have type
+  f ^ (0 + 1) ∣ u0 ^ 2 - g

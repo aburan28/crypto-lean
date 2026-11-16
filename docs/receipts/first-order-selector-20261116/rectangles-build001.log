@@ -1,0 +1,79 @@
+⚠ [3138/3139] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3139/3139] Building CryptoLean.Combinatorics.FieldRectangles (8.7s)
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Combinatorics/FieldRectangles.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/FieldRectangles.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/FieldRectangles.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/FieldRectangles.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/FieldRectangles.setup.json --json
+error: CryptoLean/Combinatorics/FieldRectangles.lean:23:2: unsolved goals
+case mp
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : DecidableEq K
+scale center : K
+hscale : scale ≠ 0
+A B : Finset K
+a b : K
+hab : (a, b) ∈ A.erase 0 ×ˢ B
+h : center + (scale * (a, b).1)⁻¹ * (a, b).2 ∈ rectangleImage scale center A B
+ha : (a, b).1 ∈ A.erase 0
+hb : (a, b).2 ∈ B
+ha0 : (a, b).1 ≠ 0
+⊢ b = scale * (a * (a⁻¹ * (scale⁻¹ * b)))
+error: CryptoLean/Combinatorics/FieldRectangles.lean:29:2: unsolved goals
+case mpr
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : DecidableEq K
+scale center offset : K
+hscale : scale ≠ 0
+A B : Finset K
+a : K
+ha : a ∈ A
+ha0 : a ≠ 0
+b : K
+hb : b ∈ B
+heq : b = scale * a * (offset - center)
+⊢ center + a⁻¹ * (scale⁻¹ * (scale * (a * (offset - center)))) = offset
+warning: CryptoLean/Combinatorics/FieldRectangles.lean:28:21: This simp argument is unused:
+  mul_ne_zero hscale ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: CryptoLean/Combinatorics/FieldRectangles.lean:34:21: This simp argument is unused:
+  mul_ne_zero hscale ha0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CryptoLean/Combinatorics/FieldRectangles.lean:45:2: Application type mismatch: The argument
+  Finset.Icc (-↑n) ↑n
+has type
+  Finset.{0} ℤ
+of sort `Type` but is expected to have type
+  Finset.{u_2} K
+of sort `Type u_2` in the application
+  Finset.image (fun z => z) (Finset.Icc (-↑n) ↑n)
+error: CryptoLean/Combinatorics/FieldRectangles.lean:50:35: No goals to be solved
+error: CryptoLean/Combinatorics/FieldRectangles.lean:49:4: invalid 'calc' step, left-hand side is
+  (Finset.image ?m.32 (Finset.Icc (-↑n) ↑n)).card : ℕ
+but is expected to be
+  (intWindow K n).card : ℕ
+error: CryptoLean/Combinatorics/FieldRectangles.lean:50:4: invalid 'calc' step, right-hand side is
+  (↑n + 1 - -↑n).toNat : ℕ
+but is expected to be
+  2 * n + 1 : ℕ
+warning: CryptoLean/Combinatorics/FieldRectangles.lean:52:8: declaration uses `sorry`
+warning: CryptoLean/Combinatorics/FieldRectangles.lean:53:5: Variable name `hz` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hz
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Some required targets logged failures:
+- CryptoLean.Combinatorics.FieldRectangles
+error: build failed

@@ -1,0 +1,36 @@
+CryptoLean/Polynomial/MonicNormSelector.lean:19:28: error: unexpected token 'λ'; expected ')'
+CryptoLean/Polynomial/MonicNormSelector.lean:24:22: error: unexpected token 'λ'; expected ')'
+CryptoLean/Polynomial/MonicNormSelector.lean:44:30: error(lean.unknownIdentifier): Unknown identifier `row_scale`
+CryptoLean/Polynomial/MonicNormSelector.lean:43:31: error: unsolved goals
+K : Type u_1
+inst✝ : Field K
+q u v : K[X]
+hq : q ≠ 0
+x y : K
+⊢ eval x (u * C q.leadingCoeff⁻¹) + y * eval x (v * C q.leadingCoeff⁻¹) = 0 ↔ eval x u + y * eval x v = 0
+CryptoLean/Polynomial/MonicNormSelector.lean:89:30: error(lean.unknownIdentifier): Unknown identifier `curveNorm_scale`
+CryptoLean/Polynomial/MonicNormSelector.lean:85:59: error: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b : K
+u v : K[X]
+hu : u ≠ 0
+g : K[X]
+hfactor : curveNorm a b u v = C (curveNorm a b u v).leadingCoeff * g
+hlc : (curveNorm a b u v).leadingCoeff = u.leadingCoeff ^ 2
+hc : u.leadingCoeff ≠ 0
+hi : u.leadingCoeff⁻¹ ^ 2 * u.leadingCoeff ^ 2 = 1
+⊢ curveNorm a b (u * C u.leadingCoeff⁻¹) (v * C u.leadingCoeff⁻¹) = g
+CryptoLean/Polynomial/MonicNormSelector.lean:98:30: error(lean.unknownIdentifier): Unknown identifier `curveNorm_scale`
+CryptoLean/Polynomial/MonicNormSelector.lean:94:61: error: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b : K
+u v : K[X]
+hv : v ≠ 0
+g : K[X]
+hfactor : curveNorm a b u v = C (curveNorm a b u v).leadingCoeff * g
+hlc : (curveNorm a b u v).leadingCoeff = -v.leadingCoeff ^ 2
+hc : v.leadingCoeff ≠ 0
+hi : v.leadingCoeff⁻¹ ^ 2 * -v.leadingCoeff ^ 2 = -1
+⊢ curveNorm a b (u * C v.leadingCoeff⁻¹) (v * C v.leadingCoeff⁻¹) = -g

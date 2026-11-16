@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-16T17:10:21.328494+00:00",
+  "aborted_gate": "gate001",
+  "source_commit": "3aa6cd9",
+  "reason": "actual003 had two unresolved multiplicative associativity goals; shared gate was started before inspecting its nonzero exit. No pass inferred. Stop before source correction; rerun only after actual004 passes and final source commit.",
+  "terminated_owned_processes": [
+    282272,
+    280399
+  ],
+  "raw_application_failure": "docs/receipts/projective-subresultant-20261116/actual003.log",
+  "scientific_or_paid_execution": false
+}

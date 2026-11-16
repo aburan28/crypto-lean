@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-11-16T06:53:51.643618+00:00",
+  "source_commit": "1dd5011",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "canonical_gate": {
+    "status": "PASS",
+    "process_exit_code": 0,
+    "theorems": 258,
+    "failing": 0,
+    "trusted_native": 0,
+    "status_receipt": "docs/receipts/universal-shift-pool-20261116/gate001/_/status"
+  },
+  "named_theorems": [
+    "CryptoLean.TranslatedSupports.sum_reflection",
+    "CryptoLean.TranslatedSupports.centered_reflection_nsmul",
+    "CryptoLean.TranslatedSupports.centered_reflection_ne",
+    "CryptoLean.TranslatedSupports.sum_symmetric_union",
+    "CryptoLean.UniversalPools.fixed_miss_count",
+    "CryptoLean.UniversalPools.mem_badPools",
+    "CryptoLean.UniversalPools.miss_union_bound",
+    "CryptoLean.UniversalPools.universal_miss_bound",
+    "CryptoLean.UniversalPools.exists_universal_pool"
+  ],
+  "axiom_log": "docs/receipts/universal-shift-pool-20261116/axioms001.log",
+  "analytic_status": "Hand character-sum and real exponential/logarithmic applications, not Lean theorems",
+  "actual_endpoint": "Actual prime-field Weierstrass subgroup and quadratic gate, density left as explicit contract",
+  "implementation": false,
+  "new_numerical_cases": 0,
+  "new_paid_jobs": 0,
+  "new_qualification_runs": 0,
+  "identity_certificate_issued": false,
+  "fresh_checker_available": false,
+  "pdf_inspection": {
+    "pages": 4,
+    "all_final_pages_rendered_and_visually_inspected": true,
+    "inspected_at": "2026-11-16T06:53:51.643809+00:00",
+    "renderer": "Typst0.15.1 + pdftoppm scale1250",
+    "sha256": "abd1a1737ee7bb02f34f9acf79993ff972222f930b6283b482c4c8b3a456cd89"
+  },
+  "pcc_standing": "Attestation only; no signed verification asserted"
+}

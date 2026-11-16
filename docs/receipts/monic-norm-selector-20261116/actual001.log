@@ -1,0 +1,14 @@
+docs/receipts/MonicNormSelector20261116/ActualInstances.lean:49:12: error: unsolved goals
+K : Type u_1
+inst✝ : Field K
+a b c : K
+hc : c ≠ 0
+hn : normalizeBy (C c) (C c) = 1
+⊢ C c * C c⁻¹ = 1 ∨ C c * C c⁻¹ = -1
+docs/receipts/MonicNormSelector20261116/ActualInstances.lean:49:21: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [normalizeBy, curveNorm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

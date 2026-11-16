@@ -1,0 +1,14 @@
+{
+  "old_subjects": 250,
+  "new_subjects": 18,
+  "all_subjects": 268,
+  "all_hashes_match": true,
+  "old_ledger_rows": 17,
+  "current_ledger_rows": 18,
+  "byte_prefix_retained": true,
+  "parsed_prefix_retained": true,
+  "claim": "PCC-20261116-35ecee",
+  "standing": "unverified",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0
+}

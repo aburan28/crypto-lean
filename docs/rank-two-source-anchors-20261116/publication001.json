@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-16T16:23:53.069004+00:00",
+  "source_commit": "fbf2ed31bb945a5064ea5ae27ccd0fe693705e6a",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 474,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/rank-two-source-anchors-20261116/gate001/_/status"
+  },
+  "named_owner_laws": 16,
+  "actual_declarations": 4,
+  "generated_defining_equations": 10,
+  "actual_source_anchors_formal": true,
+  "finite_curve_code_bound_formal": true,
+  "bounded_integer_anchor_cover_formal": true,
+  "full_modular_row_weighted_norm_transfer_formal": false,
+  "capped_rank_two_selector_implemented": false,
+  "asymptotic_generic_model_count_formal": false,
+  "useful_yield_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "numerical_cases": 0,
+  "scientific_native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "independent_signed_verdict": false,
+  "previous_frozen_subjects": 268,
+  "previous_ledger_rows": 18
+}

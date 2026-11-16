@@ -1,0 +1,8 @@
+{
+  "scalar": 2,
+  "source": "David Ahlqvist, Elliptic Curves and Cryptography, U.U.D.M.Project Report2022:49, pp15--16/table1; underlying Paar--Pelzl Example9.5",
+  "source_url": "https://www.diva-portal.org/smash/get/diva2%3A1728933/FULLTEXT01.pdf",
+  "source_sha256": "3258e2abb8d2c4ad4994d3b49216ff381a8e9aa8098858f58ebc6be6b32ee3e8",
+  "status": "copied public known-answer data; not evaluated in this phase",
+  "scope": "functional control only; outside worker input; not an asymptotic or random-yield panel"
+}

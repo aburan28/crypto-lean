@@ -1,0 +1,30 @@
+CryptoLean/Polynomial/DoublingNormResidues.lean:105:47: error: unsolved goals
+G : Type u_3
+inst✝ : AddGroup G
+P : G
+q : ℕ
+hodd : q % 2 = 1
+hq : q • P = 0
+hd : 2 * (q / 2 + 1) = q + 1
+⊢ (q / 2 + 1) • P + (q / 2 + 1) • P = (q / 2 + 1) • (P + P)
+CryptoLean/Polynomial/DoublingNormResidues.lean:157:24: error: Type mismatch: After simplification, term
+  Eq.symm hH
+ has type
+  P = H + H
+but is expected to have type
+  P = 0
+CryptoLean/Polynomial/DoublingNormResidues.lean:164:30: error: Application type mismatch: The argument
+  hp0
+has type
+  WeierstrassCurve.Affine.Point.some r s hR + WeierstrassCurve.Affine.Point.some r s hR = 0
+but is expected to have type
+  H + H = 0
+in the application
+  Eq.trans (Eq.symm hH) hp0
+CryptoLean/Polynomial/DoublingNormResidues.lean:167:20: error: Type mismatch
+  hd.left
+has type
+  (WeierstrassCurve.Affine.Point.some r s hR + WeierstrassCurve.Affine.Point.some r s hR).xRep =
+    ![W.addX r r (W.slope r r s s), 1]
+but is expected to have type
+  (H + H).xRep = ![W.addX r r (W.slope r r s s), 1]

@@ -1,0 +1,97 @@
+import CryptoLean.Polynomial.NormSaturatedInterpolation
+import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+/-! Tight affine interpolation rows and actual elliptic-curve relations.
+This is an output certificate; it does not find a useful row quickly. -/
+set_option autoImplicit false
+noncomputable section
+open scoped BigOperators Polynomial.Bivariate nonZeroDivisors
+
+namespace CryptoLean.TightNormRelation
+open Polynomial WeierstrassCurve.Affine
+variable {K : Type*} [Field K]
+
+theorem ideal_eq_of_le_equal_quotient_dimension {A : Type*} [CommRing A]
+    [Algebra K A] (I J : Ideal A) (hle : I ≤ J)
+    (hdim : Module.finrank K (A ⧸ I) = Module.finrank K (A ⧸ J))
+    (hpos : 0 < Module.finrank K (A ⧸ I)) : I = J := by
+  let := Module.finite_of_finrank_pos hpos
+  let := Module.finite_of_finrank_pos (hdim ▸ hpos)
+  let f : (A ⧸ I) →ₐ[K] A ⧸ J := Ideal.quotientMapₐ J (AlgHom.id K A) hle
+  have hs : Function.Surjective f :=
+    Ideal.quotientMap_surjective (H := hle) Function.surjective_id
+  have hi : Function.Injective f :=
+    (LinearMap.injective_iff_surjective_of_finrank_eq_finrank hdim).mpr hs
+  apply le_antisymm hle
+  intro a ha
+  apply (Ideal.Quotient.eq_zero_iff_mem).mp
+  apply hi
+  simpa only [f, Ideal.quotient_map_mkₐ, AlgHom.id_apply, map_zero] using
+    (Ideal.Quotient.eq_zero_iff_mem.mpr ha : Ideal.Quotient.mk J a = 0)
+
+noncomputable def coprimeQuotientEquiv {A : Type*} [CommRing A] [Algebra K A]
+    {ι : Type*} [Fintype ι] (I : ι → Ideal A)
+    (hc : Pairwise (fun i j ↦ IsCoprime (I i) (I j))) :
+    (A ⧸ ⨅ i, I i) ≃ₐ[K] ∀ i, A ⧸ I i :=
+  AlgEquiv.ofRingEquiv (f := Ideal.quotientInfRingEquivPiQuotient I hc) (by
+    intro k
+    ext i
+    rfl)
+
+theorem coprime_quotient_dimension {A : Type*} [CommRing A] [Algebra K A]
+    {ι : Type*} [Fintype ι] (I : ι → Ideal A)
+    (hc : Pairwise (fun i j ↦ IsCoprime (I i) (I j)))
+    (he : ∀ i, (A ⧸ I i) ≃ₐ[K] K) :
+    Module.finrank K (A ⧸ ⨅ i, I i) = Fintype.card ι := by
+  let (i : ι) : Module.Finite K (A ⧸ I i) :=
+    Module.Finite.equiv (he i).symm.toLinearEquiv
+  rw [(coprimeQuotientEquiv I hc).toLinearEquiv.finrank_eq, Module.finrank_pi_fintype]
+  simp only [fun i ↦ (he i).toLinearEquiv.finrank_eq, Module.finrank_self,
+    Finset.sum_const, Finset.card_univ, smul_eq_mul, mul_one]
+
+variable (W : WeierstrassCurve.Affine K)
+
+def rowFunction (u v : K[X]) : W.CoordinateRing :=
+  u • (1 : W.CoordinateRing) + v • CoordinateRing.mk W Y
+
+theorem rowFunction_nonzero (u v : K[X]) (hp : (u,v) ≠ 0) :
+    rowFunction W u v ≠ 0 := by
+  intro hz
+  obtain ⟨hu,hv⟩ := CoordinateRing.smul_basis_eq_zero hz
+  exact hp (by simp [hu,hv])
+
+theorem rowFunction_mem_pointIdeal (u v : K[X]) (x y : K)
+    (hr : u.eval x+y*v.eval x=0) :
+    rowFunction W u v ∈ CoordinateRing.XYIdeal W x (C y) := by
+  have hm : C u+C v*Y ∈ Ideal.span {C (X-C x), Y-C (C y)} := by
+    apply Polynomial.mem_span_C_X_sub_C_X_sub_C_iff_eval_eval_eq_zero.mpr
+    simpa only [eval_add,eval_C,eval_mul,eval_X,mul_comm] using hr
+  have hmap := Ideal.mem_map_of_mem (CoordinateRing.mk W) hm
+  simpa only [rowFunction, CoordinateRing.smul, mul_one, map_add, map_mul,
+    Ideal.map_span, Set.image_pair, CoordinateRing.XYIdeal, CoordinateRing.XClass,
+    CoordinateRing.YClass] using hmap
+
+theorem pointIdeals_coprime (x₁ x₂ y₁ y₂ : K) (hx : x₁ ≠ x₂) :
+    IsCoprime (CoordinateRing.XYIdeal W x₁ (C y₁))
+      (CoordinateRing.XYIdeal W x₂ (C y₂)) := by
+  let c := CoordinateRing.mk W (C (C ((x₂-x₁)⁻¹)))
+  apply Ideal.isCoprime_iff_exists.mpr
+  refine ⟨c*CoordinateRing.XClass W x₁, Ideal.mul_mem_left _ _
+    (Ideal.subset_span (by simp)), -c*CoordinateRing.XClass W x₂,
+    Ideal.mul_mem_left _ _ (Ideal.subset_span (by simp)), ?_⟩
+  have hi : (x₂-x₁)⁻¹*(x₂-x₁)=1 := inv_mul_cancel₀ (sub_ne_zero.mpr hx.symm)
+  calc
+    c*CoordinateRing.XClass W x₁ + -c*CoordinateRing.XClass W x₂ =
+      CoordinateRing.mk W (C (C ((x₂-x₁)⁻¹)*((X-C x₁)-(X-C x₂)))) := by
+        simp only [c, CoordinateRing.XClass, map_mul, map_sub]
+        ring
+    _ = 1 := by
+      have hp : C ((x₂-x₁)⁻¹)*((X-C x₁)-(X-C x₂)) = (1 : K[X]) := by
+        calc
+          _ = C ((x₂-x₁)⁻¹*(x₂-x₁)) := by simp only [C_mul,C_sub]; ring
+          _ = 1 := by rw [hi, C_1]
+      rw [hp, C_1, map_one]
+
+end CryptoLean.TightNormRelation

@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T09:11:38Z",
+  "evidence": [
+    "docs/saturated-selector-prototype-20261116.md",
+    "docs/receipts/saturated-selector-prototype-20261116/development-controls005.log"
+  ],
+  "kind": "outcome",
+  "note": "Source prepared,9 development controls pass; local-minors shortcut rejected at balanced heights; coverage bounds hand-derived. No Sage run or complete algorithm.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "selector-source",
+  "task": "Certifying saturation source and subcritical translated chart coverage"
+}

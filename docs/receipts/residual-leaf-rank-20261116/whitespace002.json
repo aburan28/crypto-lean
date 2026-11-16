@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-16T18:09:39.661689+00:00",
+  "owned_findings": [],
+  "owned_source_prose_exit": 0,
+  "raw_archival_previous_exit": 2,
+  "raw_bytes_preserved": true,
+  "paths": [
+    "CryptoLean.lean",
+    "CryptoLean/Polynomial/ResidualLeafRank.lean",
+    "docs/residual-leaf-rank-20261116-plan.md",
+    "docs/residual-leaf-rank-20261116-highest-anchor-plan001.md",
+    "docs/residual-leaf-rank-20261116.md",
+    "docs/receipts/ResidualLeafRank20261116/ActualInstances.lean",
+    "docs/receipts/ResidualLeafRank20261116/Axioms.lean",
+    "docs/residual-leaf-rank-20261116/PUBLICATION.md",
+    "docs/receipts/residual-leaf-rank-20261116/pr-body001.md"
+  ]
+}

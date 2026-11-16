@@ -1,0 +1,17 @@
+digraph Selector {
+ graph [rankdir=TB,bgcolor="white",pad="0.25",nodesep="0.25",ranksep="0.3"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#475569",fillcolor="#eef2ff",margin="0.16,0.1"];
+ edge [color="#64748b",arrowsize=0.7];
+ input [label="Public E, G, Q + fixed interval catalog\nMixed target; scalar labels outside selector"];
+ charts [label="Frozen internal coordinate offsets\nx = tau + U/V; globally capped attempts",fillcolor="#dbeafe"];
+ system [label="Ordinary / full saturation / local minors\nVerify every modular denominator witness"];
+ short [label="Finite shifts + checked LLL transformation\nPromote only exact integer L1 < p^t rows"];
+ root [label="Checked projective leaf projection\nCapped staircase + rational candidates"];
+ recover [label="Original signs, indices and point sum\nCatalog cancellation + scalar multiplication"];
+ replay [label="Separate point/scalar replay\nAll Sage stages UNEXECUTED",fillcolor="#dcfce7"];
+ control [label="Balanced H >= sqrt(p), m >= 4:\nlocal minors still obstructed",fillcolor="#fee2e2",color="#b91c1c"];
+ opening [label="Subcritical H = sqrt(p)/polylog(p):\nsubexponential chart overhead;\nuseful short equations UNKNOWN",fillcolor="#fef3c7",color="#b45309"];
+ input -> charts -> system -> short -> root -> recover -> replay;
+ system -> control [style=dashed];
+ charts -> opening [style=dashed];
+}

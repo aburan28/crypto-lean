@@ -1,0 +1,20 @@
+✖ [3138/3138] Building CryptoLean.Polynomial.EndpointCoefficients (3.3s)
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/EndpointCoefficients.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/EndpointCoefficients.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/EndpointCoefficients.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/EndpointCoefficients.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/EndpointCoefficients.setup.json --json
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean:41:35: This simp argument is unused:
+  Polynomial.coeff_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.coeff_add, Polynomial.coeff_C_mul_X, Polynomial.coeff_C]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: CryptoLean/Polynomial/EndpointCoefficients.lean:49:54: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+V τ : R
+h : (X + C τ * C V) ^ 2 = X ^ 2 + C (2 * τ * V) * X + C ((τ * V) ^ 2)
+⊢ ((C τ * C V) ^ 2).coeff 2 = 0 ∧ ((C τ * C V) ^ 2).coeff 1 = 0
+Some required targets logged failures:
+- CryptoLean.Polynomial.EndpointCoefficients
+error: build failed

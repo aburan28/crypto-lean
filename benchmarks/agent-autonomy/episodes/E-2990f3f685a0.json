@@ -1,0 +1,42 @@
+{
+  "ci_green_at_merge": false,
+  "created": "2026-11-16T06:11:48.665764Z",
+  "ended": "2026-11-16T06:08:29Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/24",
+    "https://github.com/aburan28/crypto-lean/actions/runs/43814722393"
+  ],
+  "incidents": [
+    {
+      "kind": "explicit-projection-and-finite-Pi-assembly",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "finite-event-membership-instance-congruence",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "expired-PTY-completion-receipt-inspection",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "report-markup-rendering",
+      "recovery": "SELF"
+    },
+    {
+      "kind": "hosted-billing-unresolved-external-action",
+      "recovery": "HUMAN"
+    }
+  ],
+  "kind": "episode",
+  "merged": true,
+  "pr": 24,
+  "result": "partial",
+  "schema": "crypto.autonomy/v1",
+  "session": "pair-colour-isolation-20261116",
+  "started": "2026-11-16T05:29:18Z",
+  "task": "PR24 owned pair-colour isolation component from prospective plan through merge:11 shared laws and bounded-list coverage design; actual useful-relation fraction and full ECDLP criterion remain open",
+  "task_class": "lean",
+  "tokens": null,
+  "usd": null
+}

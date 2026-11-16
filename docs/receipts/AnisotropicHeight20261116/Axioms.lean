@@ -1,0 +1,17 @@
+import CryptoLean.Polynomial.HeightBudget
+import CryptoLean.Combinatorics.ChainPowerBlocks
+#print axioms CryptoLean.HeightBudget.coefficient_height_lower
+#print axioms CryptoLean.HeightBudget.shifted_quadratic_mem
+#print axioms CryptoLean.HeightBudget.filtered_coefficient_height_lower
+#print axioms CryptoLean.HeightBudget.coefficient_le_norm
+#print axioms CryptoLean.HeightBudget.leaf_term_norm_lower
+#print axioms CryptoLean.HeightBudget.short_leaf_coeff_zero
+#print axioms CryptoLean.HeightBudget.span_power_short_leaf_coeff_zero
+#print axioms CryptoLean.HeightBudget.product_height_lower
+#print axioms CryptoLean.HeightBudget.anisotropic_short_leaf_coeff_zero
+#print axioms CryptoLean.ChainPowerBlocks.eq_of_head_adjacent
+#print axioms CryptoLean.ChainPowerBlocks.block_card_le
+#print axioms CryptoLean.ChainPowerBlocks.shifted_block_card_le
+#print axioms CryptoLean.HeightBudget.zero_filter_low_coeff
+#print axioms CryptoLean.HeightBudget.short_modulus_part_zero
+#print axioms CryptoLean.HeightBudget.short_mem_original_ideal

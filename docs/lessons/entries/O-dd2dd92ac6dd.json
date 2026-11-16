@@ -1,0 +1,18 @@
+{
+  "applied": [
+    "L-77b44d3fe205",
+    "L-1e09e78e395f",
+    "L-de497cb8fc70"
+  ],
+  "created": "2026-11-16T06:11:48Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/24",
+    "https://github.com/aburan28/crypto-lean/blob/f8d8e5334c867b94f300a0e6d5305272043dc8b2/docs/receipts/pair-colour-isolation-20261116/gate001/_/audit.log"
+  ],
+  "kind": "outcome",
+  "note": "Scoped source component247/0/0 and11 standard-axiom prints; actual F2/prime-field graph probes pass. All76 landed subjects and8-row prefix retained. Saved PASS completion checked after PTY expiry, no repeated command or invented exit observation. Hand bounded-list coverage does not supply full-relation theta or implicit extraction; hosted billing failure remains CI-green=false.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate",
+  "task": "PR24 finite target-isolation count, pair-colour hom fibers and actual prime-field graph endpoint"
+}

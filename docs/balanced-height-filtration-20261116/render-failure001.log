@@ -1,0 +1,7 @@
+error: unclosed delimiter
+   ┌─ docs/balanced-height-filtration-20261116/report.typ:46:21
+   │
+46 │ with e=(t−floor(d/2))_+, and 2e+d≥2t. This covers ALL ordinary polynomial
+   │                      ^
+
+

@@ -1,0 +1,48 @@
+⚠ [3138/3139] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3139/3139] Building CryptoLean.Polynomial.HeightBudget (8.1s)
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/HeightBudget.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/HeightBudget.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/HeightBudget.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/HeightBudget.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/HeightBudget.setup.json --json
+error: CryptoLean/Polynomial/HeightBudget.lean:28:69: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 1
+  j ≥ 0
+  i ≥ 0
+  i - j ≥ 1
+  h ≥ 0
+  h - k ≥ 0
+  g ≥ 0
+  0 ≤ g - 2*k ≤ 1
+  f ≥ 0
+  f - l ≤ 0
+  e ≥ 0
+  b ≥ 0
+  b - e ≥ 0
+  a ≥ 1
+where
+ a := ↑H
+ b := ↑p
+ e := ↑(H ^ 2)
+ f := ↑(p ^ (t - d / 2))
+ g := ↑d
+ h := ↑t
+ i := ↑((H ^ 2) ^ (t - d / 2))
+ j := ↑((H ^ (t - d / 2)) ^ 2)
+ k := ↑d / 2
+ l := c
+warning: CryptoLean/Polynomial/HeightBudget.lean:37:0: automatically included section variable(s) unused in theorem `CryptoLean.HeightBudget.filtered_coefficient_height_lower`:
+  [DecidableEq σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+error: CryptoLean/Polynomial/HeightBudget.lean:47:2: Type mismatch
+  Finset.single_le_sum (fun x x_1 => Nat.zero_le (?m.27 x)) (MvPolynomial.mem_support_iff.mpr hc)
+has type
+  ?m.27 m ≤ ∑ x ∈ f.support, ?m.27 x
+but is expected to have type
+  (f.coeff m).natAbs * W m ≤ coefficientNorm W f
+Some required targets logged failures:
+- CryptoLean.Polynomial.HeightBudget
+error: build failed

@@ -1,0 +1,56 @@
+'CryptoLean.NormSaturatedInterpolation.curveCubic_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.curveCubic_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.curveNorm_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.curveNorm_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.curveNorm_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.selected_norm_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.curveNorm_degree_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_roots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.simple_roots_exclude_common_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.signed_coordinate_decode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.opposite_sign_not_selected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_curve_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_curve_certificate_of_caps' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_curve_zero_locus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_norm_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_norm_square_congruence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.polynomial_X_not_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.cubic_congruence_false_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.pure_nodal_norm_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.nonempty_pure_nodal_rejected' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.pure_u_kernel_zero_above_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.kernel_same_v_unique_u' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.kernel_second_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.NormSaturatedInterpolation.tight_cap_above_pure_u_range' depends on axioms: [propext, Quot.sound]

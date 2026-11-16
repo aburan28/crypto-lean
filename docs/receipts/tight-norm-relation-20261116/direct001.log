@@ -1,0 +1,90 @@
+CryptoLean/Curve/TightNormRelation.lean:20:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+CryptoLean/Curve/TightNormRelation.lean:21:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+CryptoLean/Curve/TightNormRelation.lean:23:37: error: don't know how to synthesize implicit argument `H`
+  @Ideal.quotientMap_surjective A inst✝¹.toRing A inst✝¹.toRing I J (Ideal.instIsTwoSided_1 J)
+    (Ideal.instIsTwoSided_1 I) ↑(AlgHom.id K A) ?m.87 Function.surjective_id
+context:
+K : Type u_1
+inst✝² : Field K
+A : Type u_2
+inst✝¹ : CommRing A
+inst✝ : Algebra K A
+I J : Ideal A
+hle : I ≤ J
+hdim : Module.finrank K (A ⧸ I) = Module.finrank K (A ⧸ J)
+hpos : 0 < Module.finrank K (A ⧸ I)
+this✝ : Module.Finite K (A ⧸ I) := ⋯
+this : Module.Finite K (A ⧸ J) := ⋯
+f : A ⧸ I →ₐ[K] A ⧸ J := ⋯
+⊢ I ≤ Ideal.comap (↑(AlgHom.id K A)) J
+CryptoLean/Curve/TightNormRelation.lean:19:53: error: unsolved goals
+K : Type u_1
+inst✝² : Field K
+A : Type u_2
+inst✝¹ : CommRing A
+inst✝ : Algebra K A
+I J : Ideal A
+hle : I ≤ J
+hdim : Module.finrank K (A ⧸ I) = Module.finrank K (A ⧸ J)
+hpos : 0 < Module.finrank K (A ⧸ I)
+this✝ : Module.Finite K (A ⧸ I) := Module.finite_of_finrank_pos hpos
+this : Module.Finite K (A ⧸ J) := Module.finite_of_finrank_pos (hdim ▸ hpos)
+f : A ⧸ I →ₐ[K] A ⧸ J := Ideal.quotientMapₐ J (AlgHom.id K A) hle
+⊢ I = J
+CryptoLean/Curve/TightNormRelation.lean:47:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+CryptoLean/Curve/TightNormRelation.lean:49:60: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Module.finrank ?R (?ι → ?R)
+in the target expression
+  Module.finrank K ((i : ι) → A ⧸ I i) = Fintype.card ι
+
+K : Type u_1
+inst✝³ : Field K
+A : Type u_2
+inst✝² : CommRing A
+inst✝¹ : Algebra K A
+ι : Type u_3
+inst✝ : Fintype ι
+I : ι → Ideal A
+hc : Pairwise fun i j => IsCoprime (I i) (I j)
+he : (i : ι) → (A ⧸ I i) ≃ₐ[K] K
+this : ∀ (i : ι), Module.Finite K (A ⧸ I i) := fun i => Module.Finite.equiv ↑(he i).symm
+⊢ Module.finrank K ((i : ι) → A ⧸ I i) = Fintype.card ι
+CryptoLean/Curve/TightNormRelation.lean:56:55: error(lean.unknownIdentifier): Unknown identifier `Y`
+CryptoLean/Curve/TightNormRelation.lean:61:54: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+CryptoLean/Curve/TightNormRelation.lean:67:47: error(lean.unknownIdentifier): Unknown identifier `Y`
+CryptoLean/Curve/TightNormRelation.lean:67:20: error(lean.unknownIdentifier): Unknown identifier `Y`
+CryptoLean/Curve/TightNormRelation.lean:68:4: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+CryptoLean/Curve/TightNormRelation.lean:64:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

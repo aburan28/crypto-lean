@@ -1,0 +1,30 @@
+✖ [3138/3138] Building CryptoLean.Combinatorics.ChainPowerBlocks (2.4s)
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Fin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Combinatorics/ChainPowerBlocks.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/ChainPowerBlocks.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Combinatorics/ChainPowerBlocks.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/ChainPowerBlocks.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Combinatorics/ChainPowerBlocks.setup.json --json
+error: CryptoLean/Combinatorics/ChainPowerBlocks.lean:34:55: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≤ -1
+where
+ a := ↑t
+ b := ↑(e 0)
+ c := ↑((fun e => e 0) e)
+error: CryptoLean/Combinatorics/ChainPowerBlocks.lean:51:51: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 0
+  a - c ≤ -1
+where
+ a := ↑t
+ b := ↑(r.1 0)
+ c := ↑((fun r => (r.2, r.1 0)) r).2
+Some required targets logged failures:
+- CryptoLean.Combinatorics.ChainPowerBlocks
+error: build failed

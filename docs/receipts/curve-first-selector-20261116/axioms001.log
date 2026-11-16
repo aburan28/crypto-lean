@@ -1,0 +1,7 @@
+'CryptoLean.MixedDegreePivots.v2_as_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.endpoint_coefficient_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.linear_quadratic_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_v2_pivots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_uv_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_anchor_branch_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_anchor_branch_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

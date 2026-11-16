@@ -1,0 +1,694 @@
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `α`
+  @Eq (MvPolynomial ?m.279 K) (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a)
+    (MvPolynomial.C (2 * τ * σ - a))
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `self`
+  @HSub.hSub (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHSub
+    (2 * MvPolynomial.C τ * MvPolynomial.C σ) (MvPolynomial.C a)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ HSub (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `γ`
+  @HSub.hSub (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHSub
+    (2 * MvPolynomial.C τ * MvPolynomial.C σ) (MvPolynomial.C a)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `β`
+  @HSub.hSub (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHSub
+    (2 * MvPolynomial.C τ * MvPolynomial.C σ) (MvPolynomial.C a)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `α`
+  @HSub.hSub (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHSub
+    (2 * MvPolynomial.C τ * MvPolynomial.C σ) (MvPolynomial.C a)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `self`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul (2 * MvPolynomial.C τ)
+    (MvPolynomial.C σ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ HMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `γ`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul (2 * MvPolynomial.C τ)
+    (MvPolynomial.C σ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `β`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul (2 * MvPolynomial.C τ)
+    (MvPolynomial.C σ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `α`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul (2 * MvPolynomial.C τ)
+    (MvPolynomial.C σ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `self`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul 2 (MvPolynomial.C τ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ HMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `γ`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul 2 (MvPolynomial.C τ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `β`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul 2 (MvPolynomial.C τ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument `α`
+  @HMul.hMul (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) (MvPolynomial ?m.279 K) instHMul 2 (MvPolynomial.C τ)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type (max u_3 ?u.253)
+CryptoLean/Polynomial/LeafModuleAnchors.lean:149:6: error: don't know how to synthesize implicit argument `σ`
+  @DFunLike.coe (K →+* MvPolynomial ?m.279 K) K (fun x => MvPolynomial ?m.279 K) RingHom.instFunLike MvPolynomial.C
+    (2 * τ * σ - a)
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type ?u.253
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:48: error: don't know how to synthesize implicit argument `σ`
+  @DFunLike.coe (K →+* MvPolynomial ?m.279 K) K (fun x => MvPolynomial ?m.279 K) RingHom.instFunLike MvPolynomial.C a
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type ?u.253
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:31: error: don't know how to synthesize implicit argument `σ`
+  @DFunLike.coe (K →+* MvPolynomial ?m.279 K) K (fun x => MvPolynomial ?m.279 K) RingHom.instFunLike MvPolynomial.C σ
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type ?u.253
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:14: error: don't know how to synthesize implicit argument `σ`
+  @DFunLike.coe (K →+* MvPolynomial ?m.279 K) K (fun x => MvPolynomial ?m.279 K) RingHom.instFunLike MvPolynomial.C τ
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ Type ?u.253
+CryptoLean/Polynomial/LeafModuleAnchors.lean:148:12: error: don't know how to synthesize implicit argument
+  @OfNat.ofNat (MvPolynomial ?m.279 K) 2 instOfNatAtLeastTwo
+context:
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ OfNat (MvPolynomial ?m.279 K) 2
+CryptoLean/Polynomial/LeafModuleAnchors.lean:137:50: error: unsolved goals
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+⊢ leafCode a b τ σ x y A D n m =
+    ![(D.coeff n).coeff m, 2 * (D.coeff n).coeff m * τ, 2 * (D.coeff n).coeff m * σ,
+      2 * (D.coeff n).coeff m * (2 * τ * σ - a), 2 * (D.coeff n).coeff m * (τ ^ 2 * σ - a * τ - 2 * b)]

@@ -1,0 +1,78 @@
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:678: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:25:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:686: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:26:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:694: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:29:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:702: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:30:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:729: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:46:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:737: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:47:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:745: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:50:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:753: trailing whitespace.
++docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:51:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:808: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:28:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:816: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:29:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:824: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:32:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:832: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:33:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:840: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:34:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:859: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:41:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:867: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:42:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:875: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:45:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:883: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:46:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:891: trailing whitespace.
++docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:47:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:972: trailing whitespace.
++docs/receipts/ColorChecksum20261116/FinalProbe.lean:23:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1159: trailing whitespace.
++docs/receipts/RankThreshold20261115/FinalProbe.lean:17:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1167: trailing whitespace.
++docs/receipts/RankThreshold20261115/FinalProbe.lean:18:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1175: trailing whitespace.
++docs/receipts/RankThreshold20261115/FinalProbe.lean:21:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1194: trailing whitespace.
++docs/receipts/RankThreshold20261115/FloorProbe.lean:43:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1202: trailing whitespace.
++docs/receipts/RankThreshold20261115/FloorProbe.lean:44:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1215: trailing whitespace.
++docs/receipts/SelectorTree20261116/FinalProbe.lean:15:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1223: trailing whitespace.
++docs/receipts/SelectorTree20261116/FinalProbe.lean:16:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1231: trailing whitespace.
++docs/receipts/SelectorTree20261116/FinalProbe.lean:19:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1251: trailing whitespace.
++docs/receipts/SelectorTree20261116/FloorProbe.lean:49:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1259: trailing whitespace.
++docs/receipts/SelectorTree20261116/FloorProbe.lean:50:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1267: trailing whitespace.
++docs/receipts/SelectorTree20261116/FloorProbe.lean:53:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/gate001/_/build.log:1275: trailing whitespace.
++docs/receipts/SelectorTree20261116/FloorProbe.lean:54:2: warning: Try this: 
+docs/receipts/two-chart-coefficients-20261116/owner-direct001.log:3: trailing whitespace.
++  
+docs/receipts/two-chart-coefficients-20261116/owner-direct001.log:5: trailing whitespace.
++    
+docs/receipts/two-chart-coefficients-20261116/owner-direct001.log:95: trailing whitespace.
++  
+docs/receipts/two-chart-coefficients-20261116/owner-direct001.log:97: trailing whitespace.
++    
+docs/receipts/two-chart-coefficients-20261116/owner-direct002.log:36: trailing whitespace.
++  
+docs/receipts/two-chart-coefficients-20261116/owner-direct002.log:38: trailing whitespace.
++    
+docs/receipts/two-chart-coefficients-20261116/owner-direct003.log:15: trailing whitespace.
++  
+docs/receipts/two-chart-coefficients-20261116/owner-direct003.log:17: trailing whitespace.
++    

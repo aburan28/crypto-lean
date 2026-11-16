@@ -1,0 +1,13 @@
+{
+  "scope": "syntax only; modules not imported, no selector/field arithmetic run",
+  "files": [
+    {
+      "path": "research/coefficient_first_selector_20261116/selector.py",
+      "sha256": "3e06648f3f1b6e1ad8a8153b4410035593a3e2d4c272a8a0fda91af27e704096"
+    },
+    {
+      "path": "research/coefficient_first_selector_20261116/translate_source_table.py",
+      "sha256": "b0f2e0ef5f42cda588fd7881e66bcad0dd207fa2fc024b4838f5e859c82b63ae"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-16T16:26:47.457739+00:00",
+  "head": "0ab1e6f75e558417a9674185e22244fa7a236a8f",
+  "annotations": {
+    "133439895601": [
+      {
+        "path": ".github",
+        "blob_href": "https://github.com/aburan28/crypto-lean/blob/0ab1e6f75e558417a9674185e22244fa7a236a8f/.github",
+        "start_line": 1,
+        "start_column": null,
+        "end_line": 1,
+        "end_column": null,
+        "annotation_level": "failure",
+        "title": "",
+        "message": "The job was not started because your account is locked due to a billing issue.",
+        "raw_details": ""
+      }
+    ],
+    "133439895314": [
+      {
+        "path": ".github",
+        "blob_href": "https://github.com/aburan28/crypto-lean/blob/0ab1e6f75e558417a9674185e22244fa7a236a8f/.github",
+        "start_line": 1,
+        "start_column": null,
+        "end_line": 1,
+        "end_column": null,
+        "annotation_level": "failure",
+        "title": "",
+        "message": "The job was not started because your account is locked due to a billing issue.",
+        "raw_details": ""
+      }
+    ]
+  }
+}

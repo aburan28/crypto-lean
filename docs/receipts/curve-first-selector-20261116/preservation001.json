@@ -1,0 +1,13 @@
+{
+  "all_subjects": 208,
+  "all_hashes_match": true,
+  "previous_subjects": 188,
+  "previous_subjects_unchanged": true,
+  "previous_published_head": "f902c549c96b55bfb0664e26ad7c2c83baa46d26",
+  "previous_ledger_rows": 14,
+  "current_ledger_rows": 15,
+  "byte_prefix_retained": true,
+  "parsed_prefix_retained": true,
+  "new_claim": "PCC-20261116-31bfeb",
+  "new_subjects": 20
+}

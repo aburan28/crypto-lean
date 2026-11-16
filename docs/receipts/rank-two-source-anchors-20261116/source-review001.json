@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-16T16:17:45.192460+00:00",
+  "source_commit": "fbf2ed31bb945a5064ea5ae27ccd0fe693705e6a",
+  "owner": "CryptoLean.Polynomial.RankTwoSourceAnchors",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "formal_scope": [
+    "Original-root preservation, source profile2,2, b difference and mu=0 branch",
+    "Actual source T/U/w/V/W projective anchors",
+    "Field curve/chart decoder",
+    "Generic finite curve-code image/cardinality",
+    "Actual source membership, same-code curve uniqueness, bounded integer-anchor cover"
+  ],
+  "hand_scope": [
+    "Complete mod-p polynomial-row and weighted-norm transfer",
+    "Capped four-window selector search equivalence/implementation/runtime",
+    "Near-critical asymptotic generic-model count and coordinate-scaling union"
+  ],
+  "generic_named_laws": 16,
+  "actual_symbolic_declarations": 4,
+  "numerical_cases": 0,
+  "scientific_native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "source_control_imported_or_executed": false,
+  "useful_yield_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "novelty_claim": false
+}

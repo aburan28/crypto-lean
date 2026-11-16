@@ -1,0 +1,15 @@
+{
+  "action": "inspect the two leading coefficient layers for a nonzero linear parameter anchor before adding a root-finding backend",
+  "created": "2026-11-16T11:28:06Z",
+  "evidence": [
+    "docs/curve-first-selector-20261116.md",
+    "CryptoLean/Polynomial/MixedDegreePivots.lean"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "research"
+  ],
+  "trigger": "a parameterized polynomial block appears to require general modular root finding",
+  "why": "The S3 mixed-degree multiplier reconstruction exposes an odd-characteristic linear anchor, though useful relation yield remains unproved."
+}

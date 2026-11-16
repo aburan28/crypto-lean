@@ -1,0 +1,16 @@
+{
+  "previous_subjects": 268,
+  "published430_subjects": 250,
+  "new_subjects": 23,
+  "all_subjects": 291,
+  "all_hashes_match": true,
+  "published430_rows": 17,
+  "previous_rows": 18,
+  "current_rows": 19,
+  "byte_prefixes_retained": true,
+  "parsed_prefixes_retained": true,
+  "new_claim": "PCC-20261116-e8d73d",
+  "standing": "unverified",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0
+}

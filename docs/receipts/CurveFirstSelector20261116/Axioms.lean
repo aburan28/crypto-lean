@@ -1,0 +1,8 @@
+import CryptoLean.Polynomial.MixedDegreePivots
+#print axioms CryptoLean.MixedDegreePivots.v2_as_endpoint
+#print axioms CryptoLean.MixedDegreePivots.endpoint_coefficient_split
+#print axioms CryptoLean.MixedDegreePivots.linear_quadratic_coeffs
+#print axioms CryptoLean.MixedDegreePivots.mixed_v2_pivots
+#print axioms CryptoLean.MixedDegreePivots.mixed_uv_anchors
+#print axioms CryptoLean.MixedDegreePivots.mixed_anchor_branch_y
+#print axioms CryptoLean.MixedDegreePivots.mixed_anchor_branch_constant

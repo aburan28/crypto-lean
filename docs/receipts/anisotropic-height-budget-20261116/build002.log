@@ -1,0 +1,15 @@
+⚠ [3138/3139] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3139/3139] Building CryptoLean.Polynomial.HeightBudget (2.5s)
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/HeightBudget.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/HeightBudget.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/HeightBudget.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/HeightBudget.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/HeightBudget.setup.json --json
+error: CryptoLean/Polynomial/HeightBudget.lean:53:2: Type mismatch
+  Finset.single_le_sum (fun x x_1 => Nat.zero_le (?m.54 x)) (MvPolynomial.mem_support_iff.mpr hc)
+has type
+  ?m.54 m ≤ ∑ x ∈ f.support, ?m.54 x
+but is expected to have type
+  (f.coeff m).natAbs * W m ≤ ∑ n ∈ f.support, (f.coeff n).natAbs * W n
+Some required targets logged failures:
+- CryptoLean.Polynomial.HeightBudget
+error: build failed

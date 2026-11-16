@@ -1,0 +1,27 @@
+{
+  "first_broad_scan_exit": 1,
+  "first_broad_scan_assertion": [
+    {
+      "path": "tools/selftest/fail/BuildError.lean",
+      "line": 1
+    }
+  ],
+  "full_tracked_lean_markdown_findings": [
+    {
+      "path": "tools/selftest/fail/BuildError.lean",
+      "line": 1
+    }
+  ],
+  "new_owner_source_prose_findings": [],
+  "new_paths": [
+    "CryptoLean/Polynomial/NormSaturatedInterpolation.lean",
+    "docs/receipts/NormSaturatedInterpolation20261116/ActualInstances.lean",
+    "docs/receipts/NormSaturatedInterpolation20261116/Axioms.lean",
+    "docs/norm-saturated-interpolation-20261116-plan.md",
+    "docs/norm-saturated-interpolation-20261116-quotient-plan001.md",
+    "docs/norm-saturated-interpolation-20261116.md"
+  ],
+  "intentional_failure_fixture_unchanged": true,
+  "fixture_sha256": "92267391bf83ba46b22808acc372ff7186b794b36b1e56b04f862b51245d0a59",
+  "proof_gate_inventory_or_linter_changes": false
+}

@@ -1,0 +1,58 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:168:27: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b τ σ : R
+e : P4 R →+* R[X][X][X] := constantCoeff
+hu : e uVar = 0
+hx : e xVar = X
+hv : e vVar = C X
+hw : e wVar = C (C X)
+hl : ∀ (c : R), e (lift4 c) = C (C (C c))
+v : R[X][X][X] := C X
+w : R[X][X][X] := C (C X)
+t : R[X][X][X] := X + C (C (C σ)) * w
+g : R[X][X][X] := -2 * (C (C (C a)) * t * w + 2 * C (C (C b)) * w ^ 2)
+h : R[X][X][X] := g * (C (C (C τ)) * v) + (C (C (C a)) ^ 2 * w ^ 2 - 4 * C (C (C b)) * t * w) * v
+f : P4 R :=
+  -2 * (lift4 a * (xVar + lift4 σ * wVar) * wVar + 2 * lift4 b * wVar ^ 2) * (uVar + lift4 τ * vVar) +
+    (lift4 a ^ 2 * wVar ^ 2 - 4 * lift4 b * (xVar + lift4 σ * wVar) * wVar) * vVar
+⊢ -(C (C (C (C a))) * C X * C (C (C X)) * X * 2) - C (C (C (C a))) * C X * C (C (C X)) * C (C (C (C τ))) * C (C X) * 2 -
+                  C (C (C (C a))) * C (C (C (C σ))) * C (C (C X)) ^ 2 * X * 2 -
+                C (C (C (C a))) * C (C (C (C σ))) * C (C (C X)) ^ 2 * C (C (C (C τ))) * C (C X) * 2 +
+              C (C (C (C a))) ^ 2 * C (C (C X)) ^ 2 * C (C X) -
+            C X * C (C (C X)) * C (C (C (C b))) * C (C X) * 4 -
+          C (C (C (C σ))) * C (C (C X)) ^ 2 * C (C (C (C b))) * C (C X) * 4 -
+        C (C (C X)) ^ 2 * C (C (C (C b))) * X * 4 -
+      C (C (C X)) ^ 2 * C (C (C (C b))) * C (C (C (C τ))) * C (C X) * 4 =
+    C (C (C (C a))) * C X * C (C (C X)) * X * C (-Nat.rawCast 2) +
+                C (C (C (C a))) * C X * C (C (C X)) * C (C (C (C τ))) * C (C X) * C (-Nat.rawCast 2) +
+              C (C (C (C a))) * C (C (C (C σ))) * C (C (C X)) ^ 2 * X * C (-Nat.rawCast 2) +
+            C (C (C (C a))) * C (C (C (C σ))) * C (C (C X)) ^ 2 * C (C (C (C τ))) * C (C X) * C (-Nat.rawCast 2) +
+          C (C (C X)) ^ 2 * C (C (C (C b))) * X * C (-Nat.rawCast 2) * 2 +
+        C (C (C X)) ^ 2 * C (C (C (C b))) * C (C (C (C τ))) * C (C X) * C (-Nat.rawCast 2) * 2 +
+      C (C X) *
+        C
+          (C (C (C a)) ^ 2 * C (C X) ^ 2 - C (C X) * C (C (C b)) * X * Nat.rawCast 4 -
+            C (C X) ^ 2 * C (C (C b)) * C (C (C σ)) * Nat.rawCast 4)
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:170:6: warning: This simp argument is unused:
+  Polynomial.C_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [f, g, h, t, v, w, lift4, uVar, xVar, vVar, wVar, map_add, map_mul, map_pow, Polynomial.C_sub,
+    map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:170:23: warning: This simp argument is unused:
+  Polynomial.C_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [f, g, h, t, v, w, lift4, uVar, xVar, vVar, wVar, map_add, map_mul, map_pow, Polynomial.C_neg,
+    map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

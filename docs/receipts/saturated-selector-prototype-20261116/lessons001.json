@@ -1,0 +1,9 @@
+{
+  "helper": "/workspace/scratch/selector-kernel-assessment/tools/lessons.py",
+  "owner_root": "/workspace/scratch/crypto-lean",
+  "initial_cli_failure": "shared helper ROOT is inferred from its script path; --dir alone does not select repository root for --base",
+  "owner_binding": "unchanged module loaded, ROOT and DEFAULT_DIR explicitly bound to owner checkout",
+  "entries": 22,
+  "errors": [],
+  "missing_owner_evidence": []
+}

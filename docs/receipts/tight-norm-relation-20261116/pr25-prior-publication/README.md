@@ -1,0 +1,1 @@
+Carry snapshots and journal-entry001.md with NEXT substantive owner work after fetchmain, no metadata-only recursion. Published468a0a9/source665/494pins24rows. Executor transport recovered; PRmonitor stillDISABLED/no next after service failure.

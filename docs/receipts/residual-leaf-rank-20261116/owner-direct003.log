@@ -1,0 +1,18 @@
+CryptoLean/Polynomial/ResidualLeafRank.lean:82:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  alpha (f τ) (f σ) (f w) i
+in the target expression
+  core (C (C a)) (C (C b)) X (C X) (alpha (C (C τ)) (C (C σ)) (C (C w)) i)
+      (beta (C (C a)) (C (C b)) (C (C τ)) (C (C σ)) (C (C w)) i) (gamma (C (C σ)) (C (C w)) i) =
+    coreXY a b (alpha τ σ w i) (beta a b τ σ w i) (gamma σ w i)
+
+R : Type u_1
+inst✝ : CommRing R
+a b τ σ w : R
+i : Fin 6
+f : R →+* R[X][X] := C.comp C
+h :
+  f (alpha τ σ w i) = alpha (f τ) (f σ) (f w) i ∧
+    f (beta a b τ σ w i) = beta (f a) (f b) (f τ) (f σ) (f w) i ∧ f (gamma σ w i) = gamma (f σ) (f w) i
+⊢ core (C (C a)) (C (C b)) X (C X) (alpha (C (C τ)) (C (C σ)) (C (C w)) i)
+      (beta (C (C a)) (C (C b)) (C (C τ)) (C (C σ)) (C (C w)) i) (gamma (C (C σ)) (C (C w)) i) =
+    coreXY a b (alpha τ σ w i) (beta a b τ σ w i) (gamma σ w i)

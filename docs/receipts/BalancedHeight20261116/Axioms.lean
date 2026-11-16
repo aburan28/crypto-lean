@@ -1,0 +1,18 @@
+import CryptoLean.Polynomial.BalancedFiltration
+import CryptoLean.Polynomial.ProjectiveQuadratics
+
+set_option autoImplicit false
+
+#print axioms CryptoLean.BalancedFiltration.level_zero
+#print axioms CryptoLean.BalancedFiltration.filtered_add
+#print axioms CryptoLean.BalancedFiltration.filtered_mul
+#print axioms CryptoLean.BalancedFiltration.mem_filtrationIdeal
+#print axioms CryptoLean.BalancedFiltration.ideal_pow_le
+#print axioms CryptoLean.BalancedFiltration.monomial_mem
+#print axioms CryptoLean.BalancedFiltration.modulus_mem
+#print axioms CryptoLean.BalancedFiltration.quadratic_chart_mem
+#print axioms CryptoLean.BalancedFiltration.coefficient_square_lower
+#print axioms CryptoLean.BalancedFiltration.span_power_coefficient_lower
+#print axioms CryptoLean.ProjectiveQuadratics.bezout_identity
+#print axioms CryptoLean.ProjectiveQuadratics.ideal_witness
+#print axioms CryptoLean.ProjectiveQuadratics.common_root

@@ -1,0 +1,121 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T07:28:09Z",
+ "id": "PCC-20261116-c2eaec",
+ "kind": "statement",
+ "producer": {
+  "commit": "bbf0a8e4bf92cac981fcad60708ccfd3672452d0",
+  "model": "",
+  "session": "balanced-height-filtration-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116.md",
+    "sha256": "e7cc97e2a2e772cc9e4562903e6f7e74df4b840f95c4432bd5f9b029548cd35c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116-plan.md",
+    "sha256": "d2d8f514a7c0bad652f801b4be390e84836f9d03078898552ec96d7b76753989"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/BalancedFiltration.lean",
+    "sha256": "5e901233d06fbd1548eda750f9351a49a36372d9e18759ef06ee9d1e058d512a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/ProjectiveQuadratics.lean",
+    "sha256": "a3f23ad20773bef5467bba0c67e6b810f98882d2610a0bd78bb009cebf5830ee"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/BalancedHeight20261116/ActualInstances.lean",
+    "sha256": "048be02eae90463f36c26c2e862121af1168273d95d0881a3f00fef08ab49ad5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/BalancedHeight20261116/Floor.lean",
+    "sha256": "3a02bf53ecad5bcc2bd09949707b73de9144cf6233ab913be1e8e4c0d45f0659"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/BalancedHeight20261116/Axioms.lean",
+    "sha256": "4e9880c3bdbb8cbd2953830e2a16f69ab9ecc0cfef3de9db08834579a35d19cb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/balanced-height-filtration-20261116/axioms001.log",
+    "sha256": "8f9bd1ba71563f3d42e899dc33db6d0f65a1a4e53bf680cd045a5e7e087d6d89"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/balanced-height-filtration-20261116/gate001/_/audit.log",
+    "sha256": "7b028a1e0b13955bc769e568683de7703670d82f61493af3ae7f394793e0fe9e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/source-review001.json",
+    "sha256": "8c37cbbcf0e1b8d5f9a9c2e38737e08bd7ca5bf2116b9e68ac0e33ffdc9dd66e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/publication001.json",
+    "sha256": "54cdbcd2091d2a4254edb6701dc5d054576142b478dfdec10fdd6f930957d39b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/report.pdf",
+    "sha256": "11b4032fb868e79564505184cf6749699ab9d884207d7d54d8dfa0f898469e24"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/report.typ",
+    "sha256": "25003b0b2aa4607cade31d262e97bb9ae3e6b12475bcfe31c5c645ca71f2646e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/flow.svg",
+    "sha256": "25d7be2a46ec5cbbff5400cbabb090c3415c3a42b727e78637af5dfcfb99ebf1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/balanced-height-filtration-20261116/flow.dot",
+    "sha256": "56e5f583a306e97ba930f187ede61333a214870eee8d4c4cb6d61bb92764e6e3"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "Scoped ordinary-shift filtration and projective saturation package:13 generic laws and actual S3 semantic probes, canonical local audit271/0/0. Squared coefficient and finite V^3 elimination statements compile; real HHG and general localization interpretations remain hand analysis; no capped growing solver or useful relation yield."
+}

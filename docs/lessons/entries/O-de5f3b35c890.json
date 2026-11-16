@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T09:11:38Z",
+  "evidence": [
+    "research/saturated_selector_prototype_20261116/pilot-protocol.json",
+    "research/saturated_selector_prototype_20261116/base-image-metadata001.json"
+  ],
+  "kind": "outcome",
+  "note": "Read-only official runtime manifest pinned; no image build or job. Shared remaining daily/monthly balance, custody and actual caller/capacity still required.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "isolab-eks",
+  "task": "Prepare source-bound selector pilot packet without an unknown-balance launch"
+}

@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-16T11:36:00.579931+00:00",
+  "lean_source_commit": "478232dcedd351e01a1df44a889b69e3642e1c42",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 363,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/curve-first-selector-20261116/gate001/_/status"
+  },
+  "new_named_owner_laws": 7,
+  "actual_symbolic_declarations": 4,
+  "generated_definition_equations": 5,
+  "formal_scope": "Degree-at-most-one mixed leaf multiplier S3 coefficient split, pivots, anchor identities and all three linear-recovery branches.",
+  "hand_scope": [
+    "curve-first exact norm lower bound/pruning",
+    "random-model counts including short-Weierstrass scaling",
+    "homogeneous and mixed-degree one-generator searches and cost",
+    "irreducible-factor/short-output generic-model count"
+  ],
+  "all_degree_completeness_formalized": false,
+  "new_python_selector_implemented": false,
+  "previous_python_selector_executed": false,
+  "multi_generator_successor": "Prospective b-elimination identity and branch/weight test only; not compiled or implemented.",
+  "independent_equations_proved": false,
+  "useful_yield_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "numerical_cases": 0,
+  "lll_runs": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "independent_signed_verdict": false,
+  "identity_certificate": false,
+  "prior_subjects_preserved": 188,
+  "prior_ledger_rows_preserved": 14,
+  "remaining_budget": "unknown; no launch"
+}

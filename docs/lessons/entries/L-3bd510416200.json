@@ -1,0 +1,15 @@
+{
+  "action": "test whether the inverse coefficient image gives a complete constructive candidate enumeration, then prove coverage and useful yield separately",
+  "created": "2026-11-16T11:10:37Z",
+  "evidence": [
+    "docs/first-order-selector-20261116.md",
+    "CryptoLean/Polynomial/RankOneSelector.lean"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "research"
+  ],
+  "trigger": "two short coefficient windows bound the image of a parameterized row family",
+  "why": "Uniform-sampling rarity can motivate a deterministic inverse-image selector without proving it produces useful decompositions."
+}

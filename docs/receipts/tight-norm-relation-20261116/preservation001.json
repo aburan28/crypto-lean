@@ -1,0 +1,28 @@
+{
+  "old_subjects": 494,
+  "new_subjects": 66,
+  "all_subjects": 560,
+  "all_hashes_match": true,
+  "rows": 25,
+  "prefixes": {
+    "468a0a9bb0b96fc141db3008deba403b73bdb642": {
+      "rows": 24,
+      "byte": true,
+      "parsed": true,
+      "ancestor": true
+    },
+    "01750b4044989583e70e4886b4ab5a79fe83f128": {
+      "rows": 9,
+      "byte": true,
+      "parsed": true,
+      "ancestor": true
+    }
+  },
+  "old_claims_identical": true,
+  "journal_byte_prefix": true,
+  "claim": "PCC-20261116-a9c067",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0,
+  "prose_lint_exit": 0,
+  "standing": "unverified"
+}

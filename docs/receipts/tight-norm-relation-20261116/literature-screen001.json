@@ -1,0 +1,46 @@
+{
+  "utc": "2026-11-16T20:41:24.873602+00:00",
+  "kind": "primary literature screen; not a computational experiment",
+  "sources": [
+    {
+      "url": "https://www.renyi.hu/~barany/cikkek/69.pdf",
+      "inspected": "section5, Theorems5.1 and5.3",
+      "scope": "rational colorful dependence versus independence; does not by itself establish finite-field elliptic complexity"
+    },
+    {
+      "url": "https://arxiv.org/html/2304.02091v3",
+      "inspected": "Theorems1.3,1.5,1.6",
+      "scope": "nonsingular-support detection, including general fields; not required singular-support finder"
+    },
+    {
+      "url": "https://arxiv.org/html/2502.13654v1",
+      "inspected": "abstract, representation and pivot identity",
+      "scope": "feasible delta-matroid support, no obtained representation for dependent transversals"
+    },
+    {
+      "url": "https://arxiv.org/abs/2012.05037",
+      "inspected": "abstract",
+      "scope": "binary rainbow circuit or alternate cut; no original row-family bridge"
+    },
+    {
+      "url": "https://eprint.iacr.org/2018/795",
+      "inspected": "metadata/abstract and indexed primary PDF sections3.2,4,equation16,conclusion",
+      "access": "direct PDF403; indexed primary PDF text accessible",
+      "scope": "rare-success repetition remains a bottleneck; not a subexponential criterion pass"
+    },
+    {
+      "url": "https://arxiv.org/abs/cs/0507026",
+      "inspected": "abstract",
+      "scope": "randomized general elliptic-code hardness with exponential alphabets; not a lower bound for original random pools"
+    },
+    {
+      "url": "https://arxiv.org/abs/1501.01138",
+      "inspected": "abstract",
+      "scope": "distance formula for evaluation sets at least two thirds of group; no small-pool finder"
+    }
+  ],
+  "next_candidate": "translation folding; full-orbit cardinality and partial-orbit pole-cost discriminators",
+  "translation_bound_status": "HAND, not yet Lean",
+  "new_scientific_execution": false,
+  "subexponential_ECDLP": false
+}

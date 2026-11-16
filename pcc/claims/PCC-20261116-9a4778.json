@@ -1,0 +1,156 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T12:04:09Z",
+ "id": "PCC-20261116-9a4778",
+ "kind": "statement",
+ "producer": {
+  "commit": "ae060c715fc614f1461f6f37356c3b85eaaad625",
+  "model": "",
+  "session": "distinct-generator-elimination-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/CurveParameterElimination.lean",
+    "sha256": "a80f8e35f91a4daaf9a91d773eeb525e66bf6a09a7e0c6a38c80808719b62179"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/distinct-generator-elimination-20261116-plan.md",
+    "sha256": "b8d97b79289134eb7ed360c193180a88b976bf89fd9d048432dfd149021abd97"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/distinct-generator-elimination-20261116.md",
+    "sha256": "a9f7f45700dcb82c16ab21a1d7635da4c615e1c336bfa7c97bad5ef327e76c45"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/DistinctGenerator20261116/ActualInstances.lean",
+    "sha256": "2bf598d629edbbe51807b0682b4f8f21d6a96ccf2ef6ec7f611488cc83aa0fc6"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/DistinctGenerator20261116/Axioms.lean",
+    "sha256": "13f1071c80bb81f5545bf13096895737d8f1240af8b4e135ab20ed0591a83d4c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/distinct-generator-elimination-20261116/publication001.json",
+    "sha256": "16770889cd2c012b90fededa0a6fdb6bb2d2d870569328111d90780ae16dce63"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-e5c2b936bda8.json",
+    "sha256": "d78d2b93db5f20e3f85bddc63cd619bce0eb6d2ddca392325046a8bc0f2ff7ca"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-6b71cb1b77e6.json",
+    "sha256": "c3515500f59b98e67567145b556b49163654d04ec120db57b78284f977c0149d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/axioms001.log",
+    "sha256": "07f4c54ab2b9a02d57cd03b480c4fdd8ec56cc5c2b3b885d8fd0fd30969baef1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/owner-direct001.log",
+    "sha256": "f3333aaf82cc611a1e6d7181ed02d7590b9a6307ca42d343d3e0a846556f65b9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/owner-direct002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/owner-build001.log",
+    "sha256": "c53cafa07543184147cd2f425cdd37b653f663db38337aa16c490b3bb6e96cdb"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/source-review001.json",
+    "sha256": "f3e953bb550bec4788be4ca70fa75a470fbd1c769d46def6855d822861d3b994"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/audit-delta001.json",
+    "sha256": "fc5b05c2dba1ef41360f73aa6f3e7163e1c066ad31be630b775b80ccabc0f12e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/gate001/_/audit.log",
+    "sha256": "a853b6391ca5c87cbf371053b422cf287a8d50265d4bbc6713dc4c9a425926d5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/gate001/_/sources.log",
+    "sha256": "f87b476328bd765776e420c2efdd7ddcbcef222cbfbc9a04145389914b3ba19d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/gate-launch001.log",
+    "sha256": "3d8b3df8601a4fb79bad20816e48712a8b8f6c85dc99222a834422d1781b66c5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/distinct-generator-elimination-20261116/next-adaptive-test001.md",
+    "sha256": "fc284aaef910e41a69e5e3088377791fa2ef28f82fffb650480f68422ef493bc"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Declared adjacent endpoint/interior S3 combination and ordinary L1<p fixed-profile family; nonzero-pivot adaptive count excludes and retains its original zero branch.",
+ "statement": "Distinct-generator b-elimination package:20 generic laws and5 symbolic applications compile; canonical local all-tracked audit389/0/0. Exact S3 clearing/cancellation, retained-original/zero branches, primitive denominator/scaling identities and conditional min-weight/finite-cover cost laws are formal. Ordinary universal two-chart coverage has linear-in-p cost under the stated profile/card premises. Three coefficient anchors, adaptive rank-one search and a uniform-b nonzero-pivot count are hand analysis; the exceptional branch retains original F2. No all-adaptive impossibility, useful-yield, numerical execution or complete subexponential ECDLP algorithm claim."
+}

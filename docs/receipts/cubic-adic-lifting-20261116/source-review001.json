@@ -1,0 +1,31 @@
+{
+  "source_commit": "7e503fa16bccb0fb801fa1e6c70e8a4c455b494d",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "owner_laws": 25,
+  "actual_applications": 5,
+  "named_axiom_prints": 25,
+  "final_build_exit": 0,
+  "actual_final_exit": 0,
+  "mixed_final_exit": 0,
+  "axioms_final_exit": 0,
+  "application_outputs_empty": true,
+  "formal_scope": [
+    "constructive unit-root step and all finite powers with fixed residue inverse",
+    "explicit cubic factor/product inverse and actual odd-point nonzero ordinate/unit bridge",
+    "every colored mixed odd-annihilated tuple all powers with degree below3k",
+    "sufficient cap no-pruning range and mixed cap6k<=t+2",
+    "generic nonunit X fails at X squared",
+    "full norm1,1 counterexample to independently capped lifted roots",
+    "actual signed horizontal tight-row family and explicit degree3 lift",
+    "retained full norm congruence iff equality under caps and3k>t"
+  ],
+  "hand_scope": [
+    "runtime/asymptotic field and group costs",
+    "nonzero discovery in correct joint norm/colored system",
+    "norm-function principal divisor/pole/group-zero-sum bridge",
+    "original useful yield and mixed-label nonzero denominator",
+    "frequency/subgroup yield of horizontal counterexample family"
+  ],
+  "new_scientific_execution": false,
+  "complete_classical_subexponential_ECDLP": false
+}

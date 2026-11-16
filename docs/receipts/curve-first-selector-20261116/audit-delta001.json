@@ -1,0 +1,26 @@
+{
+  "previous": 347,
+  "current": 363,
+  "new_named_owner_laws": 7,
+  "new_actual_declarations": 4,
+  "new_generated_defining_equations": 5,
+  "added": [
+    "CryptoLean.MixedDegreePivots.endpoint_coefficient_split",
+    "CryptoLean.MixedDegreePivots.linear_quadratic_coeffs",
+    "CryptoLean.MixedDegreePivots.mixedUV.eq_1",
+    "CryptoLean.MixedDegreePivots.mixedV2.eq_1",
+    "CryptoLean.MixedDegreePivots.mixed_anchor_branch_constant",
+    "CryptoLean.MixedDegreePivots.mixed_anchor_branch_y",
+    "CryptoLean.MixedDegreePivots.mixed_uv_anchors",
+    "CryptoLean.MixedDegreePivots.mixed_v2_pivots",
+    "CryptoLean.MixedDegreePivots.multiplier.eq_1",
+    "CryptoLean.MixedDegreePivots.uvInX.eq_1",
+    "CryptoLean.MixedDegreePivots.v2InX.eq_1",
+    "CryptoLean.MixedDegreePivots.v2_as_endpoint",
+    "CurveFirstActual.actual_endpoint_pivots",
+    "CurveFirstActual.constant_branch_recovery",
+    "CurveFirstActual.x_branch_recovery",
+    "CurveFirstActual.y_branch_recovery"
+  ],
+  "removed": []
+}

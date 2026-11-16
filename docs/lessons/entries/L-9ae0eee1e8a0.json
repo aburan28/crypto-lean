@@ -1,0 +1,14 @@
+{
+  "action": "Charge its total degree in every remaining projective slot before inferring HHG shortness or launching a trial",
+  "created": "2026-11-16T09:11:38Z",
+  "evidence": [
+    "docs/saturated-selector-prototype-20261116.md"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "selector-source"
+  ],
+  "trigger": "A local resultant or subresultant has low degree in an eliminated slot",
+  "why": "At chain length>=4 neighboring projective degrees keep local minors inside the existing balanced-height filtration."
+}

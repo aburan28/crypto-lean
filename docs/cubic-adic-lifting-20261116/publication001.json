@@ -1,0 +1,15 @@
+{
+  "source_commit": "7e503fa16bccb0fb801fa1e6c70e8a4c455b494d",
+  "canonical_theorems": 665,
+  "failures": 0,
+  "trusted_native": 0,
+  "canonical_exit": 0,
+  "baseline": 635,
+  "delta": 30,
+  "owner_laws": 25,
+  "actual_applications": 5,
+  "generated_equations": 0,
+  "standing": "unverified",
+  "new_scientific_execution": false,
+  "complete_algorithm": false
+}

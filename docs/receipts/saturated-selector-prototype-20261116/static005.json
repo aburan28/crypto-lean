@@ -1,0 +1,42 @@
+{
+  "scope": "syntax and JSON data only; no Sage/curve/LLL execution",
+  "python_files": [
+    {
+      "path": "research/saturated_selector_prototype_20261116/launch.py",
+      "sha256": "a3ba54344b2396d0aba99f8e2d6d3ecb9ee15e1c93f0f2309c6aed2381f883b3"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/metadata.py",
+      "sha256": "ed8c4553ea3e7805ce965da2c766c51f80774d3c8d9a86893edb39ec815f4fbe"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/pilot.py",
+      "sha256": "6dc5fb7bb39b2666ffeb49a24dd2821d669c1ec545a39ca686e1dcf0e68f4c77"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/test_launch_metadata.py",
+      "sha256": "f3d1c748cf439e971770177bffd023f34e87770a52b922fc6179286f48e11689"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/test_metadata.py",
+      "sha256": "ca64d9af9212208d727fa5ece152917a5400c1287677c9a8b72879f13be124d0"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/verify.py",
+      "sha256": "3c0bf3db519d6db1bbd6428fcd8f24116166de28f770a807fc8a8f510cba9b2e"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/worker.py",
+      "sha256": "69fcf64ea4a800e8f27880a7e609664a81685ccc51a1d52c75f235b83941c271"
+    }
+  ],
+  "json_files": [
+    "research/saturated_selector_prototype_20261116/base-image-metadata001.json",
+    "research/saturated_selector_prototype_20261116/fixtures/public17.expected.json",
+    "research/saturated_selector_prototype_20261116/fixtures/public17.ordinary.json",
+    "research/saturated_selector_prototype_20261116/fixtures/public17.saturated.json",
+    "research/saturated_selector_prototype_20261116/fixtures/public17.subcritical.json",
+    "research/saturated_selector_prototype_20261116/pilot-protocol.json",
+    "research/saturated_selector_prototype_20261116/subcritical-protocol.json"
+  ]
+}

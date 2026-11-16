@@ -1,0 +1,121 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T06:54:33Z",
+ "id": "PCC-20261116-8ad24e",
+ "kind": "statement",
+ "producer": {
+  "commit": "a5004a977fb4c8d36cedc4257abecfdf7aa2f183",
+  "model": "",
+  "session": "universal-shift-pool-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116.md",
+    "sha256": "82b19a70b6844d54a8ee822cb6e5b87f03280d5ce0bd61c04c4d563a94821728"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116-plan.md",
+    "sha256": "7396895adb967f23633d85c63212bd3d9f9e1da34e40242fd30d88d56b2ae7bc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/TranslatedSupports.lean",
+    "sha256": "89c83df21303043047d0186255542f222d37af0efbb99cfc9f7e6db6b885ed7f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Combinatorics/UniversalPools.lean",
+    "sha256": "265f4921ba2d55bdf1ad8f7f513545d57949a137c453096f6921e2616b132551"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/UniversalShiftPool20261116/ActualInstances.lean",
+    "sha256": "cf1d51f62eab782470fc48bb1c55d6a470b9f877490032a803d0881966306d01"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/UniversalShiftPool20261116/Floor.lean",
+    "sha256": "3392317315715efe68254ef04ef376415344230c22c68f4cced8ff4e7413189e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/UniversalShiftPool20261116/Axioms.lean",
+    "sha256": "79c8edf7aaf43d31ac917c88390b472525faaf6450160939494891d1c9c4d867"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/universal-shift-pool-20261116/axioms001.log",
+    "sha256": "d56d1fa7ec6898400d33eb90e12df64eb744f068215a57206bc7cb7c7b4d6858"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/universal-shift-pool-20261116/gate001/_/audit.log",
+    "sha256": "f6e8db5085aa67d0003c8b078c5ef2fcdac10a551643b8c3edc85cf0bee27a9d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/source-review001.json",
+    "sha256": "c6acfb14e08d1f8a1d019a10c93084c3cd4976e6da60e0a88fe66372c8ffce59"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/publication001.json",
+    "sha256": "cd2ab6b914256e7b5d9a5e77e668742f0876bd0e89011becc1725eb1c42396a4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/report.pdf",
+    "sha256": "abd1a1737ee7bb02f34f9acf79993ff972222f930b6283b482c4c8b3a456cd89"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/report.typ",
+    "sha256": "1bdddc0cf85a7dbff49832e96940506ae135677e01945c612e8014bb3ea4f4f8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/flow.svg",
+    "sha256": "1bc6bc94a678d55cea52b2c533a80065cfc2203a55f6f3f3051e068a9855f589"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/universal-shift-pool-20261116/flow.dot",
+    "sha256": "87446c33665a9e08346c32bf2e6801ab46aea21c0780b6f7c83487c1f9b54cbe"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "Scoped universal-shift-retention package: nine generic finite-support/pool laws and actual prime-field semantic probes with local canonical audit258/0/0; character-sum density and real pool cap remain hand analysis, with no executable or capped hidden-tuple extraction."
+}

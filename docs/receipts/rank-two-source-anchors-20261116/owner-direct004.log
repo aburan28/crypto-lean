@@ -1,0 +1,20 @@
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:166:4: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [lift2, Polynomial.C_ofNat, map_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:168:4: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [lift2, Polynomial.C_ofNat, map_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:172:4: error: Type mismatch: After simplification, term
+  bihomogeneous_anchor (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b)) 2 1
+ has type
+  ((C (C (2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b))) * C X * X ^ 2).coeff 2).coeff 1 =
+    2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b)
+but is expected to have type
+  2 * (scalar₂ * (((C (C τ) ^ 2 * C (C σ) - C (C a) * C (C τ) - 2 * C (C b)) * (C X * X ^ 2)).coeff 2).coeff 1) =
+    2 * (scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b))

@@ -1,0 +1,21 @@
+import CryptoLean.Polynomial.CurveParameterElimination
+#print axioms CryptoLean.CurveParameterElimination.b_free_identity
+#print axioms CryptoLean.CurveParameterElimination.shared_denominator_factor
+#print axioms CryptoLean.CurveParameterElimination.primitive_b_free
+#print axioms CryptoLean.CurveParameterElimination.first_symmetric
+#print axioms CryptoLean.CurveParameterElimination.adjacent_symmetric
+#print axioms CryptoLean.CurveParameterElimination.primitive_independent_b
+#print axioms CryptoLean.CurveParameterElimination.original_roots_primitive_zero
+#print axioms CryptoLean.CurveParameterElimination.primitive_v_zero
+#print axioms CryptoLean.CurveParameterElimination.primitive_w_zero
+#print axioms CryptoLean.CurveParameterElimination.primitive_scaling
+#print axioms CryptoLean.CurveParameterElimination.symmetric_s3
+#print axioms CryptoLean.CurveParameterElimination.first_clears_s3
+#print axioms CryptoLean.CurveParameterElimination.adjacent_clears_s3
+#print axioms CryptoLean.CurveParameterElimination.retained_equation_equiv
+#print axioms CryptoLean.CurveParameterElimination.retained_with_zero_branch
+#print axioms CryptoLean.CurveParameterElimination.profile_product_lower
+#print axioms CryptoLean.CurveParameterElimination.profile_short_product
+#print axioms CryptoLean.CurveParameterElimination.coverage_charge
+#print axioms CryptoLean.CurveParameterElimination.cover_union_card
+#print axioms CryptoLean.CurveParameterElimination.nonzero_norm_min_weight

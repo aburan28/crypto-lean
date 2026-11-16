@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-16T12:49:21.926834+00:00",
+  "lean_source_commit": "52ba6163e3bb2eb076c2be99c210d7de4e2f35c1",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 420,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/two-chart-coefficients-20261116/gate001/_/status"
+  },
+  "named_new_owner_laws": 11,
+  "actual_symbolic_declarations": 5,
+  "generated_defining_equations": 15,
+  "named_axioms": "standard only; includes explicit standard Polynomial.commRing constructors",
+  "control_python_files_ast_parsed": 1,
+  "control_json_files_parsed": 1,
+  "control_module_imported_or_run": false,
+  "new_selector_implemented": false,
+  "two_parameter_integer_search_equivalence_formalized": false,
+  "centered_lift_exceptional_information_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "numerical_cases": 0,
+  "lll_runs": 0,
+  "native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "image_builds": 0,
+  "independent_signed_verdict": false,
+  "identity_certificate": false,
+  "previous_frozen_subjects": 228,
+  "previous_ledger_rows": 16,
+  "remaining_budget": "unknown; no launch"
+}

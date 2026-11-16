@@ -1,0 +1,10 @@
+import CryptoLean.Polynomial.LeafModuleAnchors
+
+#print axioms CryptoLean.LeafModuleAnchors.lowest_mul_coeff
+#print axioms CryptoLean.LeafModuleAnchors.least_leaf_anchors
+#print axioms CryptoLean.LeafModuleAnchors.lift2Hom_apply
+#print axioms CryptoLean.LeafModuleAnchors.projective_least_anchors
+#print axioms CryptoLean.LeafModuleAnchors.exists_nonzero_least_leaf
+#print axioms CryptoLean.LeafModuleAnchors.leafCode_values
+#print axioms CryptoLean.LeafModuleAnchors.leaf_code_curve_cover
+#print axioms CryptoLean.LeafModuleAnchors.nonzero_module_curve_cover

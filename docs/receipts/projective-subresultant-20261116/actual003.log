@@ -1,0 +1,32 @@
+docs/receipts/ProjectiveSubresultant20261116/ActualInstances.lean:18:79: error: unsolved goals
+case hc
+K : Type u_1
+inst✝ : Field K
+a b τ σ scalar : K
+S : Finset K
+hl : scalar ≠ 0
+h₂ : 2 ≠ 0
+hS : ∀ (i : Fin 4), actualCode a b τ σ scalar i ∈ S
+h :
+  coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 2).coeff 0) 0 2 1 0 = -1 ∧
+    coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 2).coeff 0) 0 1 1 1 = -2 * σ ∧
+      coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 1).coeff 0) 0 2 1 0 = 2 * τ ∧
+        coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 0).coeff 0) 1 1 0 1 = -2 * a ∧
+          coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 0).coeff 0) 1 0 0 2 = -2 * a * σ - 4 * b
+⊢ scalar * (2 * σ) = 2 * scalar * σ
+
+case he
+K : Type u_1
+inst✝ : Field K
+a b τ σ scalar : K
+S : Finset K
+hl : scalar ≠ 0
+h₂ : 2 ≠ 0
+hS : ∀ (i : Fin 4), actualCode a b τ σ scalar i ∈ S
+h :
+  coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 2).coeff 0) 0 2 1 0 = -1 ∧
+    coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 2).coeff 0) 0 1 1 1 = -2 * σ ∧
+      coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 1).coeff 0) 0 2 1 0 = 2 * τ ∧
+        coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 0).coeff 0) 1 1 0 1 = -2 * a ∧
+          coefficient4 ((((shiftedResidual a b τ σ).coeff 2).coeff 0).coeff 0) 1 0 0 2 = -2 * a * σ - 4 * b
+⊢ scalar * (2 * a) = 2 * scalar * a

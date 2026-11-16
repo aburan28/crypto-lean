@@ -1,0 +1,357 @@
+CryptoLean/Polynomial/ResidualLeafRank.lean:33:4: error: Invalid simp theorem: Expected a proposition, but found
+  (X : Type u_5) → [TopologicalSpace X] → Filter X
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/ResidualLeafRank.lean:31:57: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b x y w τ σ U T : R
+⊢ ProjectiveSubresultant.residual a b x y w (U + τ) 1 (T + σ) 1 =
+    ⋯ + ⋯ + U * x * a * ⋯ - U * x * b * ⋯ * 4 + U * x ^ 2 * y * Matrix.vecCons 2 (Matrix.vecCons ⋯ ⋯) 2 +
+                                                                                                U * x ^ 2 * y ^ 2 *
+                                                                                                  Matrix.vecCons 0
+                                                                                                    (Matrix.vecCons 0
+                                                                                                      (Matrix.vecCons 0
+                                                                                                        ⋯))
+                                                                                                    2 +
+                                                                                              U * x ^ 2 *
+                                                                                                Matrix.vecCons
+                                                                                                  (-(w * 2))
+                                                                                                  (Matrix.vecCons
+                                                                                                    (⋯ - a * 2 -
+                                                                                                      w ^ 2 * 2)
+                                                                                                    (Matrix.vecCons
+                                                                                                      (⋯ - b * 4)
+                                                                                                      (Matrix.vecCons ⋯
+                                                                                                        ⋯)))
+                                                                                                  2 +
+                                                                                            U * y * a *
+                                                                                              Matrix.vecCons 2
+                                                                                                (Matrix.vecCons
+                                                                                                  (σ * 4 - w * 4)
+                                                                                                  (Matrix.vecCons
+                                                                                                    (⋯ + ⋯ + w ^ 2 * 2)
+                                                                                                    (Matrix.vecCons
+                                                                                                      (τ * 2)
+                                                                                                      (Matrix.vecCons ⋯
+                                                                                                        ⋯))))
+                                                                                                2 -
+                                                                                          U * y * b *
+                                                                                              Matrix.vecCons 0
+                                                                                                (Matrix.vecCons 0
+                                                                                                  (Matrix.vecCons 0
+                                                                                                    (Matrix.vecCons (-1)
+                                                                                                      (Matrix.vecCons ⋯
+                                                                                                        ⋯))))
+                                                                                                2 *
+                                                                                            4 +
+                                                                                        U * y ^ 2 *
+                                                                                          ![-(w * 2),
+                                                                                              -(σ * w * 4) - a * 2 -
+                                                                                                w ^ 2 * 2,
+                                                                                              ⋯ - ⋯ - ⋯ * 2 -
+                                                                                                  a * w * 2 -
+                                                                                                b * 4,
+                                                                                              -(τ * w * 2) + w ^ 2,
+                                                                                              ⋯ - a * w * 2 - b * 4,
+                                                                                              ⋯ - b * w * 4]
+                                                                                            2 +
+                                                                                      U * a ^ 2 *
+                                                                                        ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                                            σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                                          2 +
+                                                                                    U * b *
+                                                                                        ![2, σ * 4 - w * 4,
+                                                                                            -(σ * w * 4) + σ ^ 2 * 2 +
+                                                                                              w ^ 2 * 2,
+                                                                                            τ * 2,
+                                                                                            τ * σ * 4 - τ * w * 4,
+                                                                                            ⋯ + ⋯ + τ * w ^ 2 * 2]
+                                                                                          2 *
+                                                                                      2 -
+                                                                                  T * x * y * a *
+                                                                                      ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                                          σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                                        4 *
+                                                                                    2 -
+                                                                                T * x * y *
+                                                                                    ![-(w * 2),
+                                                                                        -(σ * w * 4) - a * 2 -
+                                                                                          w ^ 2 * 2,
+                                                                                        -(σ * a * 2) - σ * w ^ 2 * 2 -
+                                                                                              σ ^ 2 * w * 2 -
+                                                                                            a * w * 2 -
+                                                                                          b * 4,
+                                                                                        -(τ * w * 2) + w ^ 2,
+                                                                                        ⋯ - τ * a * 2 - τ * w ^ 2 * 2 +
+                                                                                              σ * w ^ 2 * 2 -
+                                                                                            a * w * 2 -
+                                                                                          b * 4,
+                                                                                        ⋯ - σ * b * 4 + σ ^ 2 * w ^ 2 +
+                                                                                            a ^ 2 -
+                                                                                          b * w * 4]
+                                                                                      4 *
+                                                                                  2 +
+                                                                              T * x * y ^ 2 *
+                                                                                ![2, σ * 4 - w * 4,
+                                                                                    -(σ * w * 4) + σ ^ 2 * 2 +
+                                                                                      w ^ 2 * 2,
+                                                                                    τ * 2, τ * σ * 4 - τ * w * 4,
+                                                                                    -(τ * σ * w * 4) + τ * σ ^ 2 * 2 +
+                                                                                      τ * w ^ 2 * 2]
+                                                                                  4 +
+                                                                            T * x * a *
+                                                                              ![2, σ * 4 - w * 4,
+                                                                                  -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2,
+                                                                                  τ * 2, τ * σ * 4 - τ * w * 4,
+                                                                                  -(τ * σ * w * 4) + τ * σ ^ 2 * 2 +
+                                                                                    τ * w ^ 2 * 2]
+                                                                                4 -
+                                                                          T * x * b *
+                                                                              ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                                  σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                                4 *
+                                                                            4 +
+                                                                        T * x ^ 2 * y *
+                                                                          ![2, σ * 4 - w * 4,
+                                                                              -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2,
+                                                                              τ * 2, τ * σ * 4 - τ * w * 4,
+                                                                              -(τ * σ * w * 4) + τ * σ ^ 2 * 2 +
+                                                                                τ * w ^ 2 * 2]
+                                                                            4 +
+                                                                      T * x ^ 2 * y ^ 2 *
+                                                                        ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                            σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                          4 +
+                                                                    T * x ^ 2 *
+                                                                      ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                                                          -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 -
+                                                                              a * w * 2 -
+                                                                            b * 4,
+                                                                          -(τ * w * 2) + w ^ 2,
+                                                                          -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 +
+                                                                                σ * w ^ 2 * 2 -
+                                                                              a * w * 2 -
+                                                                            b * 4,
+                                                                          -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 -
+                                                                                          τ * σ ^ 2 * w * 2 -
+                                                                                        τ * a * w * 2 -
+                                                                                      τ * b * 4 -
+                                                                                    σ * a * w * 2 -
+                                                                                  σ * b * 4 +
+                                                                                σ ^ 2 * w ^ 2 +
+                                                                              a ^ 2 -
+                                                                            b * w * 4]
+                                                                        4 +
+                                                                  T * y * a *
+                                                                    ![2, σ * 4 - w * 4,
+                                                                        -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                                                        τ * σ * 4 - τ * w * 4,
+                                                                        -(τ * σ * w * 4) + τ * σ ^ 2 * 2 +
+                                                                          τ * w ^ 2 * 2]
+                                                                      4 -
+                                                                T * y * b *
+                                                                    ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                        σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                      4 *
+                                                                  4 +
+                                                              T * y ^ 2 *
+                                                                ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                                                    -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 -
+                                                                        a * w * 2 -
+                                                                      b * 4,
+                                                                    -(τ * w * 2) + w ^ 2,
+                                                                    -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 +
+                                                                          σ * w ^ 2 * 2 -
+                                                                        a * w * 2 -
+                                                                      b * 4,
+                                                                    -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 -
+                                                                                    τ * σ ^ 2 * w * 2 -
+                                                                                  τ * a * w * 2 -
+                                                                                τ * b * 4 -
+                                                                              σ * a * w * 2 -
+                                                                            σ * b * 4 +
+                                                                          σ ^ 2 * w ^ 2 +
+                                                                        a ^ 2 -
+                                                                      b * w * 4]
+                                                                  4 +
+                                                            T * a ^ 2 *
+                                                              ![0, 0, 0, -1, -(σ * 2) + w * 2,
+                                                                  σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                                4 +
+                                                          T * b *
+                                                              ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2,
+                                                                  τ * 2, τ * σ * 4 - τ * w * 4,
+                                                                  -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                                                4 *
+                                                            2 -
+                                                        T ^ 2 * x * y * a *
+                                                            ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2]
+                                                              3 *
+                                                          2 -
+                                                      T ^ 2 * x * y *
+                                                          ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                                              -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 -
+                                                                b * 4,
+                                                              -(τ * w * 2) + w ^ 2,
+                                                              -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 +
+                                                                    σ * w ^ 2 * 2 -
+                                                                  a * w * 2 -
+                                                                b * 4,
+                                                              -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 -
+                                                                            τ * a * w * 2 -
+                                                                          τ * b * 4 -
+                                                                        σ * a * w * 2 -
+                                                                      σ * b * 4 +
+                                                                    σ ^ 2 * w ^ 2 +
+                                                                  a ^ 2 -
+                                                                b * w * 4]
+                                                            3 *
+                                                        2 +
+                                                    T ^ 2 * x * y ^ 2 *
+                                                      ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                                          τ * σ * 4 - τ * w * 4,
+                                                          -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                                        3 +
+                                                  T ^ 2 * x * a *
+                                                    ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                                        τ * σ * 4 - τ * w * 4,
+                                                        -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                                      3 -
+                                                T ^ 2 * x * b *
+                                                    ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 3 *
+                                                  4 +
+                                              T ^ 2 * x ^ 2 * y *
+                                                ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                                    τ * σ * 4 - τ * w * 4,
+                                                    -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                                  3 +
+                                            T ^ 2 * x ^ 2 * y ^ 2 *
+                                              ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 3 +
+                                          T ^ 2 * x ^ 2 *
+                                            ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                                -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 - b * 4,
+                                                -(τ * w * 2) + w ^ 2,
+                                                -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 + σ * w ^ 2 * 2 -
+                                                    a * w * 2 -
+                                                  b * 4,
+                                                -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 -
+                                                              τ * a * w * 2 -
+                                                            τ * b * 4 -
+                                                          σ * a * w * 2 -
+                                                        σ * b * 4 +
+                                                      σ ^ 2 * w ^ 2 +
+                                                    a ^ 2 -
+                                                  b * w * 4]
+                                              3 +
+                                        T ^ 2 * y * a *
+                                          ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                              τ * σ * 4 - τ * w * 4, -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                            3 -
+                                      T ^ 2 * y * b * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 3 *
+                                        4 +
+                                    T ^ 2 * y ^ 2 *
+                                      ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                          -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 - b * 4,
+                                          -(τ * w * 2) + w ^ 2,
+                                          -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 + σ * w ^ 2 * 2 - a * w * 2 -
+                                            b * 4,
+                                          -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 - τ * a * w * 2 -
+                                                      τ * b * 4 -
+                                                    σ * a * w * 2 -
+                                                  σ * b * 4 +
+                                                σ ^ 2 * w ^ 2 +
+                                              a ^ 2 -
+                                            b * w * 4]
+                                        3 +
+                                  T ^ 2 * a ^ 2 * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 3 +
+                                T ^ 2 * b *
+                                    ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2,
+                                        τ * σ * 4 - τ * w * 4, -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                                      3 *
+                                  2 -
+                              x * y * a * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 5 * 2 -
+                            x * y *
+                                ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                                    -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 - b * 4,
+                                    -(τ * w * 2) + w ^ 2,
+                                    -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 + σ * w ^ 2 * 2 - a * w * 2 - b * 4,
+                                    -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 - τ * a * w * 2 -
+                                                τ * b * 4 -
+                                              σ * a * w * 2 -
+                                            σ * b * 4 +
+                                          σ ^ 2 * w ^ 2 +
+                                        a ^ 2 -
+                                      b * w * 4]
+                                  5 *
+                              2 +
+                          x * y ^ 2 *
+                            ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2, τ * σ * 4 - τ * w * 4,
+                                -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                              5 +
+                        x * a *
+                          ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2, τ * σ * 4 - τ * w * 4,
+                              -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                            5 -
+                      x * b * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 5 * 4 +
+                    x ^ 2 * y *
+                      ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2, τ * σ * 4 - τ * w * 4,
+                          -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                        5 +
+                  x ^ 2 * y ^ 2 * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 5 +
+                x ^ 2 *
+                  ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                      -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 - b * 4, -(τ * w * 2) + w ^ 2,
+                      -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 + σ * w ^ 2 * 2 - a * w * 2 - b * 4,
+                      -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 - τ * a * w * 2 - τ * b * 4 -
+                                σ * a * w * 2 -
+                              σ * b * 4 +
+                            σ ^ 2 * w ^ 2 +
+                          a ^ 2 -
+                        b * w * 4]
+                    5 +
+              y * a *
+                ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2, τ * σ * 4 - τ * w * 4,
+                    -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+                  5 -
+            y * b * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 5 * 4 +
+          y ^ 2 *
+            ![-(w * 2), -(σ * w * 4) - a * 2 - w ^ 2 * 2,
+                -(σ * a * 2) - σ * w ^ 2 * 2 - σ ^ 2 * w * 2 - a * w * 2 - b * 4, -(τ * w * 2) + w ^ 2,
+                -(τ * σ * w * 4) - τ * a * 2 - τ * w ^ 2 * 2 + σ * w ^ 2 * 2 - a * w * 2 - b * 4,
+                -(τ * σ * a * 2) - τ * σ * w ^ 2 * 2 - τ * σ ^ 2 * w * 2 - τ * a * w * 2 - τ * b * 4 - σ * a * w * 2 -
+                        σ * b * 4 +
+                      σ ^ 2 * w ^ 2 +
+                    a ^ 2 -
+                  b * w * 4]
+              5 +
+        a ^ 2 * ![0, 0, 0, -1, -(σ * 2) + w * 2, σ * w * 2 - σ ^ 2 - w ^ 2] 5 +
+      b *
+          ![2, σ * 4 - w * 4, -(σ * w * 4) + σ ^ 2 * 2 + w ^ 2 * 2, τ * 2, τ * σ * 4 - τ * w * 4,
+              -(τ * σ * w * 4) + τ * σ ^ 2 * 2 + τ * w ^ 2 * 2]
+            5 *
+        2
+CryptoLean/Polynomial/ResidualLeafRank.lean:32:62: warning: This simp argument is unused:
+  Matrix.cons_val_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [block, core, alpha, beta, gamma, Matrix.cons_val_zero, residual, firstLinear, firstConstant,
+    adjacentLinear, adjacentConstant]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/ResidualLeafRank.lean:40:49: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y α β γ : R
+q : R := α * y + β + γ * y ^ 2
+he : coreInX a b y α β γ = C q * X ^ 2 + C (core a b 1 y α β γ - core a b 0 y α β γ - q) * X + C (core a b 0 y α β γ)
+⊢ ((C α * C y + C β + C γ * C y ^ 2) * X ^ 2).coeff 2 + -(γ * (C y ^ 2).coeff 1) = α * y + β + γ * y ^ 2
+CryptoLean/Polynomial/ResidualLeafRank.lean:79:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

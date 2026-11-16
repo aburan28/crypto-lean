@@ -1,0 +1,1407 @@
+⚠ [769/1080] Replayed CryptoLean.Bridge.Iterate
+warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1180/1383] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1181/1383] Replayed CryptoLean.Curve.QuadraticNormTransport
+warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1182/1383] Replayed CryptoLean.Curve.Identities
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3154/3384] Replayed CryptoLean.Curve.LineIncidence
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3157/3384] Replayed CryptoLean.Polynomial.ProjectiveProducts
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3164/3384] Replayed CryptoLean.Curve.CharacterCarry
+warning: CryptoLean/Curve/CharacterCarry.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3165/3384] Replayed CryptoLean.Group.CyclicTwists
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3167/3384] Replayed CryptoLean.Curve.Twists
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3168/3384] Replayed CryptoLean.Curve.SubfieldTwists
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.RingTheory.IntegralDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.Algebra.GroupWithZero.Units.Fintype` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3169/3384] Replayed CryptoLean.Group.Torsion
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3171/3384] Replayed CryptoLean.Group.SingleRelation
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Data.Nat.Choose.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3365/3384] Replayed CryptoLean.Group.SubsetFourier
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Combinatorics.Additive.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3366/3384] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3367/3384] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3753/3793] Replayed CryptoLean.Group.ShiftMoments
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3754/3793] Replayed CryptoLean.Group.RankThreshold
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Logic.Equiv.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Algebra.Group.Equiv.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3756/3793] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3757/3793] Replayed CryptoLean.Group.ColorChecksums
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Data.Fintype.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3758/3793] Replayed CryptoLean.Group.BilinearSketch
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.LinearAlgebra.Matrix.SesquilinearForm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3759/3793] Replayed CryptoLean.Polynomial.NormCharts
+warning: CryptoLean/Polynomial/NormCharts.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3760/3793] Replayed CryptoLean.Polynomial.EllipticMaps
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3762/3793] Replayed CryptoLean.Polynomial.InterpolationKernels
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.LinearAlgebra.Lagrange` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Logic.Equiv.Set` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3763/3793] Replayed CryptoLean.Curve.CenteredCompletion
+warning: CryptoLean/Curve/CenteredCompletion.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3764/3793] Replayed CryptoLean.Polynomial.ProjectiveVelu
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.RingTheory.Coprime.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3765/3793] Replayed CryptoLean.Polynomial.RetainedRemainder
+warning: CryptoLean/Polynomial/RetainedRemainder.lean: imports `Mathlib.Algebra.Ring.GeomSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3766/3793] Replayed CryptoLean.Polynomial.RootCertificate
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3767/3793] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3768/3793] Replayed CryptoLean.SplitPrime.Obstruction
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.Coset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3769/3793] Replayed CryptoLean.Combinatorics.FiniteIsolation
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3770/3793] Replayed CryptoLean.Group.PairColourIsolation
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3771/3793] Replayed CryptoLean.Group.TranslatedSupports
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3772/3793] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3773/3793] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3774/3793] Replayed CryptoLean.Polynomial.ProjectiveQuadratics
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3776/3793] Replayed CryptoLean.Combinatorics.ChainPowerBlocks
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Fin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3777/3793] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3778/3793] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3779/3793] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3780/3793] Replayed CryptoLean.Polynomial.RankOneSelector
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [3792/3793] Built CryptoLean (4.9s)
+Build completed successfully (3793 jobs).
+⚠ [773/795] Replayed CryptoLean.Bridge.Iterate
+warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1184/1203] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1185/1203] Replayed CryptoLean.Curve.QuadraticNormTransport
+warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1186/1203] Replayed CryptoLean.Curve.Identities
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3158/3403] Replayed CryptoLean.Curve.LineIncidence
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3161/3403] Replayed CryptoLean.Polynomial.ProjectiveProducts
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3168/3403] Replayed CryptoLean.Curve.CharacterCarry
+warning: CryptoLean/Curve/CharacterCarry.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3169/3403] Replayed CryptoLean.Group.CyclicTwists
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3171/3403] Replayed CryptoLean.Curve.Twists
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3172/3403] Replayed CryptoLean.Curve.SubfieldTwists
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.RingTheory.IntegralDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.Algebra.GroupWithZero.Units.Fintype` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3173/3403] Replayed CryptoLean.Group.Torsion
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3175/3403] Replayed CryptoLean.Group.SingleRelation
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Data.Nat.Choose.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3369/3403] Replayed CryptoLean.Group.SubsetFourier
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Combinatorics.Additive.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3370/3403] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3371/3403] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3749/3758] Replayed CryptoLean.Group.RankThreshold
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Logic.Equiv.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Algebra.Group.Equiv.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3758/3791] Replayed CryptoLean.Group.ShiftMoments
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3760/3791] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3761/3791] Replayed CryptoLean.Group.ColorChecksums
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Data.Fintype.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3762/3791] Replayed CryptoLean.Group.BilinearSketch
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.LinearAlgebra.Matrix.SesquilinearForm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3763/3791] Replayed CryptoLean.Polynomial.NormCharts
+warning: CryptoLean/Polynomial/NormCharts.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3764/3791] Replayed CryptoLean.Polynomial.EllipticMaps
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3766/3791] Replayed CryptoLean.Polynomial.InterpolationKernels
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.LinearAlgebra.Lagrange` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Logic.Equiv.Set` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3767/3791] Replayed CryptoLean.Curve.CenteredCompletion
+warning: CryptoLean/Curve/CenteredCompletion.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3768/3791] Replayed CryptoLean.Polynomial.ProjectiveVelu
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.RingTheory.Coprime.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3769/3791] Replayed CryptoLean.Polynomial.RetainedRemainder
+warning: CryptoLean/Polynomial/RetainedRemainder.lean: imports `Mathlib.Algebra.Ring.GeomSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3770/3791] Replayed CryptoLean.Polynomial.RootCertificate
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3771/3791] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3772/3791] Replayed CryptoLean.SplitPrime.Obstruction
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.Coset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3773/3791] Replayed CryptoLean.Combinatorics.FiniteIsolation
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3774/3791] Replayed CryptoLean.Group.PairColourIsolation
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3775/3791] Replayed CryptoLean.Group.TranslatedSupports
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3776/3791] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3777/3791] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3778/3791] Replayed CryptoLean.Polynomial.ProjectiveQuadratics
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3780/3791] Replayed CryptoLean.Combinatorics.ChainPowerBlocks
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Fin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3781/3791] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3782/3791] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3783/3791] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3784/3791] Replayed CryptoLean.Polynomial.RankOneSelector
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3791 jobs).
+⚠ [770/770] Replayed CryptoLean.Bridge.Iterate
+warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (770 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Combinatorics.ChainPowerBlocks
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Data.Fin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/ChainPowerBlocks.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3139] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3139] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Combinatorics.FiniteIsolation
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [2059/2059] Replayed CryptoLean.Curve.CenteredCompletion
+warning: CryptoLean/Curve/CenteredCompletion.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (2059 jobs).
+⚠ [3150/3160] Replayed CryptoLean.Curve.LineIncidence
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3153/3160] Replayed CryptoLean.Polynomial.ProjectiveProducts
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3160/3160] Replayed CryptoLean.Curve.CharacterCarry
+warning: CryptoLean/Curve/CharacterCarry.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3160 jobs).
+⚠ [1171/1171] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1171 jobs).
+⚠ [853/853] Replayed CryptoLean.Curve.Identities
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (853 jobs).
+⚠ [3150/3150] Replayed CryptoLean.Curve.LineIncidence
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3150 jobs).
+⚠ [1171/1172] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1172/1172] Replayed CryptoLean.Curve.QuadraticNormTransport
+warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1172 jobs).
+⚠ [1517/1608] Replayed CryptoLean.Group.CyclicTwists
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1649/1653] Replayed CryptoLean.Curve.Twists
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1653/1653] Replayed CryptoLean.Curve.SubfieldTwists
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.RingTheory.IntegralDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.Algebra.GroupWithZero.Units.Fintype` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1653 jobs).
+⚠ [1171/1183] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1182/1183] Replayed CryptoLean.Group.Torsion
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1183 jobs).
+⚠ [1586/1586] Replayed CryptoLean.Curve.Twists
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1586 jobs).
+⚠ [3138/3140] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3140] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3140] Replayed CryptoLean.Group.BilinearSketch
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.LinearAlgebra.Matrix.SesquilinearForm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3140 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Group.ColorChecksums
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Data.Fintype.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [1518/1518] Replayed CryptoLean.Group.CyclicTwists
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1518 jobs).
+⚠ [3138/3141] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3141] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3141] Replayed CryptoLean.Combinatorics.FiniteIsolation
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3141/3141] Replayed CryptoLean.Group.PairColourIsolation
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3141 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3139] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3139] Replayed CryptoLean.Group.RankThreshold
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Logic.Equiv.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Algebra.Group.Equiv.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [3137/3319] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3595/3595] Replayed CryptoLean.Group.ShiftMoments
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3595 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3139] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3139] Replayed CryptoLean.Group.ShortlistCompletion
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [1064/1064] Replayed CryptoLean.Group.SingleRelation
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Data.Nat.Choose.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1064 jobs).
+⚠ [3331/3331] Replayed CryptoLean.Group.SubsetFourier
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Combinatorics.Additive.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CryptoLean/Group/SubsetFourier.lean:129:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3331 jobs).
+⚠ [668/668] Replayed CryptoLean.Group.Torsion
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (668 jobs).
+⚠ [3137/3297] Replayed CryptoLean.Group.ShiftRepresentations
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3595/3596] Replayed CryptoLean.Group.ShiftMoments
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3596 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Group.TranslatedSupports
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/TranslatedSupports.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3142] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3142] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3142] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3142 jobs).
+⚠ [814/814] Replayed CryptoLean.Polynomial.EllipticMaps
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (814 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [3138/3139] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [3139/3139] Replayed CryptoLean.Polynomial.InterpolationKernels
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.LinearAlgebra.Lagrange` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Logic.Equiv.Set` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [3138/3139] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3139 jobs).
+⚠ [1942/1942] Replayed CryptoLean.Polynomial.NormCharts
+warning: CryptoLean/Polynomial/NormCharts.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1942 jobs).
+⚠ [3140/3140] Replayed CryptoLean.Polynomial.ProjectiveProducts
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3140 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Polynomial.ProjectiveQuadratics
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveQuadratics.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [933/933] Replayed CryptoLean.Polynomial.ProjectiveVelu
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.RingTheory.Coprime.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (933 jobs).
+⚠ [3138/3143] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3143] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3143] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3142/3143] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3143/3143] Replayed CryptoLean.Polynomial.RankOneSelector
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3143 jobs).
+⚠ [3138/3147] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3147] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3147] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3144/3147] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3145/3147] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3146/3147] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3147 jobs).
+⚠ [1942/1943] Replayed CryptoLean.Polynomial.NormCharts
+warning: CryptoLean/Polynomial/NormCharts.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1943/1943] Replayed CryptoLean.Polynomial.RetainedRemainder
+warning: CryptoLean/Polynomial/RetainedRemainder.lean: imports `Mathlib.Algebra.Ring.GeomSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1943 jobs).
+⚠ [2011/2011] Replayed CryptoLean.Polynomial.RootCertificate
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (2011 jobs).
+⚠ [3138/3142] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3142] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3141/3142] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3142/3142] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3142 jobs).
+⚠ [3138/3147] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3147] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3147] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3144/3147] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3145/3147] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3146/3147] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3147 jobs).
+⚠ [3138/3143] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3143] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3143] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3143 jobs).
+⚠ [3138/3144] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3144] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3144] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3142/3144] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3143/3144] Replayed CryptoLean.Polynomial.RankOneSelector
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3144 jobs).
+⚠ [3138/3138] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (3138 jobs).
+⚠ [1558/1558] Replayed CryptoLean.SplitPrime.Obstruction
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.Coset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+Build completed successfully (1558 jobs).
+Build completed successfully (6 jobs).
+Build completed successfully (2 jobs).
+Build completed successfully (2 jobs).
+Build completed successfully (2 jobs).
+Build completed successfully (2 jobs).
+direct source compile: docs/receipts/AnisotropicHeight20261116/ActualInstances.lean
+direct source compile: docs/receipts/AnisotropicHeight20261116/Axioms.lean
+'CryptoLean.HeightBudget.coefficient_height_lower' depends on axioms: [propext, Quot.sound]
+'CryptoLean.HeightBudget.shifted_quadratic_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.filtered_coefficient_height_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.coefficient_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.leaf_term_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.short_leaf_coeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.span_power_short_leaf_coeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.product_height_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.anisotropic_short_leaf_coeff_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ChainPowerBlocks.eq_of_head_adjacent' depends on axioms: [propext, Quot.sound]
+'CryptoLean.ChainPowerBlocks.block_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ChainPowerBlocks.shifted_block_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.zero_filter_low_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.short_modulus_part_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.HeightBudget.short_mem_original_ideal' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/AuxiliaryShift20261115/AxiomProbe.lean
+'CryptoLean.ShiftRepresentations.vector_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.vector_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.auxiliary_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.vector_sum_eq_original_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.original_eval_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.auxiliary_eval_original' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.original_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.vector_sum_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.right_shift_eq_neg_left' depends on axioms: [propext]
+'CryptoLean.ShiftRepresentations.both_filters_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.shifted_hit_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.shifted_hit_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_real_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_function_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShiftRepresentations.acceptedCount_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.minimum_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.poolSwap_apply' depends on axioms: [propext, Quot.sound]
+'CryptoLean.RankThreshold.success_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.success_tag_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.success_swap_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.success_or_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.raw_card_le_twice_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.pairedSuccess_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.pairedSuccess_iff_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankThreshold.raw_card_le_twice_paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/AuxiliaryShift20261115/FinalProbe.lean
+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:25:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:26:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:29:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FinalProbe.lean:30:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/AuxiliaryShift20261115/FloorProbe.lean
+ProbabilityTheory.variance_sum_pi.{u_2, u_3} {ι : Type u_2} [Fintype ι] {Ω : ι → Type u_3}
+  {mΩ : (i : ι) → MeasurableSpace (Ω i)} {μ : (i : ι) → Measure (Ω i)} [∀ (i : ι), IsProbabilityMeasure (μ i)]
+  {X : (i : ι) → Ω i → ℝ} (h : ∀ (i : ι), MemLp (X i) 2 (μ i)) :
+  Var[∑ i, fun ω => X i (ω i); Measure.pi μ] = ∑ i, Var[X i; μ i]
+MeasureTheory.integral_comp_eval.{u_2, u_3, u_4} {ι : Type u_2} [Fintype ι] {X : ι → Type u_3}
+  {mX : (i : ι) → MeasurableSpace (X i)} {μ : (i : ι) → Measure (X i)} {E : Type u_4} [NormedAddCommGroup E]
+  [NormedSpace ℝ E] [∀ (i : ι), IsProbabilityMeasure (μ i)] {i : ι} {f : X i → E} (hf : AEStronglyMeasurable f (μ i)) :
+  ∫ (x : (i : ι) → X i), f (x i) ∂Measure.pi μ = ∫ (x : X i), f x ∂μ i
+MeasureTheory.integral_indicator_one.{u_1} {X : Type u_1} {mX : MeasurableSpace X} {μ : Measure X} ⦃s : Set X⦄
+  (hs : MeasurableSet s) : ∫ (x : X), s.indicator 1 x ∂μ = μ.real s
+ProbabilityTheory.variance_eq_sub.{u_1} {Ω : Type u_1} {mΩ : MeasurableSpace Ω} {μ : Measure Ω} [IsProbabilityMeasure μ]
+  {X : Ω → ℝ} (hX : MemLp X 2 μ) : Var[X; μ] = ∫ (x : Ω), (X ^ 2) x ∂μ - (∫ (x : Ω), X x ∂μ) ^ 2
+MeasureTheory.MemLp.of_discrete.{u_1, u_6} {α : Type u_1} {F : Type u_6} {m0 : MeasurableSpace α} {p : ENNReal}
+  {μ : Measure α} [NormedAddCommGroup F] {f : α → F} [DiscreteMeasurableSpace α] [Finite α] [IsFiniteMeasure μ] :
+  MemLp f p μ
+Finite.of_equiv.{u_2, u_3} {β : Sort u_2} (α : Sort u_3) [h : Finite α] (f : α ≃ β) : Finite β
+Finsupp.single_left_inj.{u_1, u_4} {α : Type u_1} {M : Type u_4} [Zero M] {a a' : α} {b : M} (h : b ≠ 0) :
+  Finsupp.single a b = Finsupp.single a' b ↔ a = a'
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:46:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:47:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:50:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/AuxiliaryShift20261115/FloorProbe.lean:51:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean
+direct source compile: docs/receipts/BalancedHeight20261116/ActualInstances.lean
+direct source compile: docs/receipts/BalancedHeight20261116/Axioms.lean
+'CryptoLean.BalancedFiltration.level_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.filtered_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.filtered_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.mem_filtrationIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.ideal_pow_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.monomial_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.modulus_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.quadratic_chart_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.coefficient_square_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BalancedFiltration.span_power_coefficient_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveQuadratics.bezout_identity' depends on axioms: [propext, Quot.sound]
+'CryptoLean.ProjectiveQuadratics.ideal_witness' depends on axioms: [propext, Quot.sound]
+'CryptoLean.ProjectiveQuadratics.common_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/BalancedHeight20261116/Floor.lean
+MvPolynomial.coeff_mul.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] [DecidableEq σ] (p q : MvPolynomial σ R)
+  (n : σ →₀ ℕ) : (p * q).coeff n = ∑ x ∈ Finset.antidiagonal n, p.coeff x.1 * q.coeff x.2
+MvPolynomial.coeff_add.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] (m : σ →₀ ℕ) (p q : MvPolynomial σ R) :
+  (p + q).coeff m = p.coeff m + q.coeff m
+Finset.HasAntidiagonal.mem_antidiagonal.{u_1} {A : Type u_1} {inst✝ : Add A} [self : Finset.HasAntidiagonal A] {n : A}
+  {a : A × A} : a ∈ Finset.antidiagonal n ↔ a.1 + a.2 = n
+Finset.dvd_sum.{u_1, u_4} {ι : Type u_1} {R : Type u_4} {s : Finset ι} [NonUnitalSemiring R] {f : ι → R} {a : R}
+  (h : ∀ i ∈ s, a ∣ f i) : a ∣ ∑ i ∈ s, f i
+pow_dvd_pow.{u_1} {α : Type u_1} [Monoid α] {m n : ℕ} (a : α) (h : m ≤ n) : a ^ m ∣ a ^ n
+Ideal.mul_le.{u} {R : Type u} [Semiring R] {I J K : Ideal R} : I * J ≤ K ↔ ∀ r ∈ I, ∀ s ∈ J, r * s ∈ K
+Ideal.span_le.{u} {α : Type u} [Semiring α] {s : Set α} {I : Ideal α} : Ideal.span s ≤ I ↔ s ⊆ ↑I
+pow_succ.{u_2} {M : Type u_2} [Monoid M] (a : M) (n : ℕ) : a ^ (n + 1) = a ^ n * a
+Int.natAbs_dvd_natAbs {a b : ℤ} : a.natAbs ∣ b.natAbs ↔ a ∣ b
+Int.natAbs_pos {a : ℤ} : 0 < a.natAbs ↔ a ≠ 0
+Int.natAbs_pow (n : ℤ) (k : ℕ) : (n ^ k).natAbs = n.natAbs ^ k
+Nat.pow_le_pow_right {n : ℕ} (hx : n > 0) {i j : ℕ} : i ≤ j → n ^ i ≤ n ^ j
+Nat.pow_le_pow_left {n m : ℕ} (h : n ≤ m) (i : ℕ) : n ^ i ≤ m ^ i
+MvPolynomial.X_pow_eq_monomial.{u, u_1} {R : Type u} {σ : Type u_1} {e : ℕ} {n : σ} [CommSemiring R] :
+  MvPolynomial.X n ^ e = (MvPolynomial.monomial (Finsupp.single n e)) 1
+MvPolynomial.monomial_mul_monomial.{u, u_1} {R : Type u} {σ : Type u_1} [CommSemiring R] {s s' : σ →₀ ℕ} {a b : R} :
+  (MvPolynomial.monomial s) a * (MvPolynomial.monomial s') b = (MvPolynomial.monomial (s + s')) (a * b)
+direct source compile: docs/receipts/BatchSelectorQuery20261116/AxiomProbe.lean
+'CryptoLean.TranslatedIntersections.mem_completionFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.both_gates_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.acceptedCount_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.indicator_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.zero_completionFilter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.raw_tag_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedIntersections.raw_tag_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean
+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:28:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:29:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:32:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:33:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FinalProbe.lean:34:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean
+add_sub_add_left_eq_sub.{u_3} {G : Type u_3} [AddCommGroup G] (a b c : G) : c + a - (c + b) = a - b
+Finset.card_filter.{u_1} {ι : Type u_1} (p : ι → Prop) [DecidablePred p] (s : Finset ι) :
+  {i ∈ s | p i}.card = ∑ i ∈ s, if p i then 1 else 0
+CryptoLean.ShiftRepresentations.shifted_hit_mean.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  ∫ (g : G), if U + g ∈ S then 1 else 0 ∂uniformOn Set.univ = ↑S.card / ↑(Fintype.card G)
+CryptoLean.ShiftRepresentations.shifted_hit_variance.{u_1} {G : Type u_1} [AddCommGroup G] [Fintype G] [DecidableEq G]
+  [MeasurableSpace G] [DiscreteMeasurableSpace G] (U : G) (S : Finset G) :
+  Var[fun g => if U + g ∈ S then 1 else 0; uniformOn Set.univ] =
+    ↑S.card / ↑(Fintype.card G) * (1 - ↑S.card / ↑(Fintype.card G))
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:41:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:42:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:45:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:46:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/BatchSelectorQuery20261116/FloorProbe.lean:47:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/CenteredCompletion20261115/FinalAssemblyProbe.lean
+'CryptoLean.CenteredCompletion.centered_xRep_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CenteredCompletion.centered_completion_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/CenteredCompletion20261115/FloorProbe.lean
+WeierstrassCurve.Affine.Point.xRep_eq_xRep_iff.{u} {F : Type u} [Field F] {W : WeierstrassCurve.Affine F}
+  {P Q : W.Point} : P.xRep = Q.xRep ↔ P = Q ∨ P = -Q
+sub_left_inj.{u_3} {G : Type u_3} [AddGroup G] {a b c : G} : b - a = c - a ↔ b = c
+sub_right_inj.{u_3} {G : Type u_3} [AddGroup G] {a b c : G} : a - b = a - c ↔ b = c
+neg_sub.{u_1} {α : Type u_1} [SubtractionMonoid α] (a b : α) : -(a - b) = b - a
+sub_eq_sub_iff_add_eq_add.{u_3} {G : Type u_3} [AddCommGroup G] {a b c d : G} : a - b = c - d ↔ a + d = c + b
+direct source compile: docs/receipts/CharacterParity20261116/ActualInstances.lean
+direct source compile: docs/receipts/CharacterParity20261116/Axioms.lean
+'CryptoLean.BilinearSketch.surjective_of_value_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.half_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.quarter_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.matrixSketch_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.matrixSketch_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.matrix_half_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.BilinearSketch.matrix_quarter_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.taylor_strip_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.indexed_taylor_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.nonzero_product_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.quadratic_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.secant_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.indexed_resultant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ProjectiveProducts.scaled_difference_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CharacterCarry.line_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CharacterCarry.quadratic_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CharacterCarry.quadratic_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/CharacterParity20261116/CarryFloor.lean
+WeierstrassCurve.Affine.addPolynomial_slope.{u} {F : Type u} [Field F] {W : WeierstrassCurve.Affine F} [DecidableEq F]
+  {x₁ x₂ y₁ y₂ : F} (h₁ : W.Equation x₁ y₁) (h₂ : W.Equation x₂ y₂) (hxy : ¬(x₁ = x₂ ∧ y₁ = W.negY x₂ y₂)) :
+  W.addPolynomial x₁ y₁ (W.slope x₁ x₂ y₁ y₂) =
+    -((X - C x₁) * (X - C x₂) * (X - C (W.addX x₁ x₂ (W.slope x₁ x₂ y₁ y₂))))
+WeierstrassCurve.Affine.C_addPolynomial.{r} {R : Type r} [CommRing R] {W' : WeierstrassCurve.Affine R} (x y ℓ : R) :
+  C (W'.addPolynomial x y ℓ) =
+    (X - C (WeierstrassCurve.Affine.linePolynomial x y ℓ)) *
+        (W'.negPolynomial - C (WeierstrassCurve.Affine.linePolynomial x y ℓ)) +
+      W'.polynomial
+Polynomial.evalEval.{u_1} {R : Type u_1} [Semiring R] (x y : R) (p : R[X][X]) : R
+direct source compile: docs/receipts/CharacterParity20261116/CharacterFloor.lean
+quadraticChar_sq_one.{u_1} {F : Type u_1} [Field F] [Fintype F] [DecidableEq F] {a : F} (ha : a ≠ 0) :
+  (quadraticChar F) a ^ 2 = 1
+map_mul.{u_4, u_5, u_9} {M : Type u_4} {N : Type u_5} {F : Type u_9} [Mul M] [Mul N] [FunLike F M N] [MulHomClass F M N]
+  (f : F) (x y : M) : f (x * y) = f x * f y
+direct source compile: docs/receipts/CharacterParity20261116/FloorProbe.lean
+AddMonoidHom.flip.{uM, uN, uP} {M : Type uM} {N : Type uN} {P : Type uP} {mM : AddZeroClass M} {mN : AddZeroClass N}
+  {mP : AddCommMonoid P} (f : M →+ N →+ P) : N →+ M →+ P
+CryptoLean.ShortlistCompletion.fiber_card_mul.{u_1, u_2} {H : Type u_1} {G : Type u_2} [AddGroup H] [AddGroup G]
+  [Fintype H] [Fintype G] (f : H →+ G) (hsur : Function.Surjective ⇑f) (g : G) :
+  Nat.card { x // f x = g } * Nat.card G = Nat.card H
+Polynomial.resultant_prod_left.{u_1, u_3} {R : Type u_1} [CommRing R] {ι : Type u_3} (s : Finset ι) (f : ι → R[X])
+  (g : R[X]) (n : ℕ) (hf : ∏ i ∈ s, (f i).leadingCoeff ≠ 0) (hn : g.natDegree ≤ n) :
+  (∏ i ∈ s, f i).resultant g (∏ i ∈ s, f i).natDegree n = ∏ i ∈ s, (f i).resultant g (f i).natDegree n
+Polynomial.resultant_X_sub_C_left.{u_1} {R : Type u_1} [CommRing R] (g : R[X]) (n : ℕ) (r : R) (hg : g.natDegree ≤ n) :
+  (X - C r).resultant g 1 n = eval r g
+Fintype.card_sigma.{u_7, u_8} {ι : Type u_8} {α : ι → Type u_7} [Fintype ι] [(i : ι) → Fintype (α i)] :
+  Fintype.card (Sigma α) = ∑ i, Fintype.card (α i)
+Matrix.toLinearMap₂'_single.{u_1, u_10, u_11, u_12} {R : Type u_1} {N₂ : Type u_10} {n : Type u_11} {m : Type u_12}
+  [CommSemiring R] [AddCommMonoid N₂] [Module R N₂] [Fintype n] [Fintype m] [DecidableEq n] [DecidableEq m]
+  (M : Matrix n m N₂) (i : n) (j : m) : (((Matrix.toLinearMap₂' R) M) (Pi.single i 1)) (Pi.single j 1) = M i j
+Matrix.toLinearMap₂'_apply'.{u_11, u_12, u_16} {n : Type u_11} {m : Type u_12} [Fintype n] [Fintype m] [DecidableEq n]
+  [DecidableEq m] {T : Type u_16} [CommSemiring T] (M : Matrix n m T) (v : n → T) (w : m → T) :
+  (((Matrix.toLinearMap₂' T) M) v) w = v ⬝ᵥ M.mulVec w
+direct source compile: docs/receipts/CharacterParity20261116/HalfFloor.lean
+direct source compile: docs/receipts/CharacterParity20261116/IndexedFloor.lean
+direct source compile: docs/receipts/CharacterParity20261116/TaylorFloor.lean
+direct source compile: docs/receipts/ColorChecksum20261116/AxiomProbe.lean
+'CryptoLean.ColorChecksums.weights_eq_of_common_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ColorChecksums.common_target_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ColorChecksums.checksum_eq_profile' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ColorChecksums.checksum_image_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/ColorChecksum20261116/FinalProbe.lean
+docs/receipts/ColorChecksum20261116/FinalProbe.lean:23:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/ColorChecksum20261116/FloorProbe.lean
+Finset.sum_erase_add.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [AddCommMonoid M] [DecidableEq ι] (s : Finset ι)
+  (f : ι → M) {a : ι} (h : a ∈ s) : ∑ x ∈ s.erase a, f x + f a = ∑ x ∈ s, f x
+Function.update_self.{u, v} {α : Sort u} {β : α → Sort v} [DecidableEq α] (a : α) (v : β a) (f : (a : α) → β a) :
+  Function.update f a v a = v
+Function.update_of_ne.{u, v} {α : Sort u} {β : α → Sort v} [DecidableEq α] {a a' : α} (h : a ≠ a') (v : β a')
+  (f : (a : α) → β a) : Function.update f a' v a = f a
+Finset.sum_nsmul_assoc.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [AddCommMonoid M] (s : Finset ι) (f : ι → ℕ) (a : M) :
+  ∑ i ∈ s, f i • a = (∑ i ∈ s, f i) • a
+Finset.card_image_le.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Finset α} {f : α → β} [DecidableEq β] :
+  (Finset.image f s).card ≤ s.card
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α
+direct source compile: docs/receipts/CurveFirstSelector20261116/ActualDegreeOne.lean
+direct source compile: docs/receipts/CurveFirstSelector20261116/Axioms.lean
+'CryptoLean.MixedDegreePivots.v2_as_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.endpoint_coefficient_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.linear_quadratic_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_v2_pivots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_uv_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_anchor_branch_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.MixedDegreePivots.mixed_anchor_branch_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/DistinctGenerator20261116/ActualInstances.lean
+direct source compile: docs/receipts/DistinctGenerator20261116/Axioms.lean
+'CryptoLean.CurveParameterElimination.b_free_identity' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.shared_denominator_factor' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_b_free' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.first_symmetric' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.adjacent_symmetric' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_independent_b' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.original_roots_primitive_zero' depends on axioms: [propext]
+'CryptoLean.CurveParameterElimination.primitive_v_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_w_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.primitive_scaling' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.symmetric_s3' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.first_clears_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.adjacent_clears_s3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.retained_equation_equiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.CurveParameterElimination.retained_with_zero_branch' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.CurveParameterElimination.profile_product_lower' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.profile_short_product' depends on axioms: [propext, Quot.sound]
+'CryptoLean.CurveParameterElimination.coverage_charge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.cover_union_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.CurveParameterElimination.nonzero_norm_min_weight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+direct source compile: docs/receipts/FirstOrderSelector20261116/ActualInstances.lean
+direct source compile: docs/receipts/FirstOrderSelector20261116/Axioms.lean
+'CryptoLean.FieldRectangles.mem_rectangleImage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.rectangleImage_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.intWindow_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.mem_intWindow_of_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.integer_rectangle_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.from_integer_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.rectangle_miss_count_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FieldRectangles.integer_rectangle_miss_count_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.coefficient_bound_of_short' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.integer_bounds_of_natAbs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShortCoefficientWindows.short_has_nondivisible_coefficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.scalar_cast_ne_zero_of_short' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.ShortCoefficientWindows.offset_of_short_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.endpoint_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.endpoint_x_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.translated_y_square_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.translated_u_square_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.first_endpoint_coefficient_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.first_endpoint_coefficient_offset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.last_endpoint_coefficient_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.last_endpoint_coefficient_offset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.EndpointCoefficients.first_exponents_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.first_vector_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.EndpointCoefficients.integer_monomial_bound' depends on axioms: [propext]
+'CryptoLean.EndpointCoefficients.first_monomials_bound' depends on axioms: [propext]
+'CryptoLean.RankOneSelector.centered_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_norm_minimal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.coordinate_bound_of_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.integer_scalar_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.cutoff_of_positive' depends on axioms: [propext, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_scalar_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.pairCandidates_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_offset_in_rectangle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.centered_integer_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_complete_integer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankOneSelector.selected_iff_integer_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.weighted_value_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.row_value_divisible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.WeightedRowCertificate.short_row_value_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/FirstOrderSelector20261116/PythonTableProbe001.lean
+'PythonTableProbe001.sourceVector_eq_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/InterpolationKernels20261115/FinalAssemblyProbe.lean
+'CryptoLean.InterpolationKernels.mem_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.nodal_eval_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.nodal_pair_mem_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.nodal_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.supports_eq_of_kernels_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.prefixSupport_eq_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.mem_prefixSupport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.prefixSupport_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.prefixSupport_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.prefix_kernel_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.prefix_kernel_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.colorProduct_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.colorProduct_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.colorProducts_zero_iff_choice' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.InterpolationKernels.mem_prefix_kernel_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.mem_symbolic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.InterpolationKernels.symbolic_mem_iff_exists_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.InterpolationKernels.symbolic_nonzero_iff_exists_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+direct source compile: docs/receipts/InterpolationKernels20261115/FloorProbe.lean
+Finset.card_image_of_injective.{u_1, u_2} {α : Type u_1} {β : Type u_2} {f : α → β} [DecidableEq β] (s : Finset α)
+  (H : Function.Injective f) : (Finset.image f s).card = s.card
+Finset.card_image_iff.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Finset α} {f : α → β} [DecidableEq β] :
+  (Finset.image f s).card = s.card ↔ Set.InjOn f ↑s
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α
+'Lagrange.natDegree_nodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lagrange.eval_nodal_not_at_node' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/InterpolationKernels20261115/SymbolicFloorProbe.lean
+Equiv.ofInjective.{u_3, u_4} {α : Sort u_3} {β : Type u_4} (f : α → β) (hf : Function.Injective f) : α ≃ ↑(Set.range f)
+Nat.card_congr.{u_1, u_2} {α : Type u_1} {β : Type u_2} (f : α ≃ β) : Nat.card α = Nat.card β
+Finset.prod_eq_zero_iff.{u_1, u_4} {ι : Type u_1} {M₀ : Type u_4} [CommMonoidWithZero M₀] {f : ι → M₀} {s : Finset ι}
+  [Nontrivial M₀] [NoZeroDivisors M₀] : ∏ x ∈ s, f x = 0 ↔ ∃ a ∈ s, f a = 0
+direct source compile: docs/receipts/PairColourIsolation20261116/ActualInstances.lean
+direct source compile: docs/receipts/PairColourIsolation20261116/Axioms.lean
+'CryptoLean.FiniteIsolation.single_cover_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FiniteIsolation.target_events_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FiniteIsolation.target_union_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FiniteIsolation.scaled_target_isolation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.FiniteIsolation.half_scaled_target_isolation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.PairColourIsolation.edgeColour_apply' depends on axioms: [propext, Quot.sound]
+'CryptoLean.PairColourIsolation.edgeColour_surjective' depends on axioms: [propext, Quot.sound]
+'CryptoLean.PairColourIsolation.two_edge_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.PairColourIsolation.single_fibre_scaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.PairColourIsolation.pair_fibre_scaled' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.PairColourIsolation.target_colour_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/PairColourIsolation20261116/FloorProbe.lean
+Pi.evalAddMonoidHom.{u, v} {I : Type u} (f : I → Type v) [(i : I) → AddZeroClass (f i)] (i : I) : ((i : I) → f i) →+ f i
+AddMonoidHom.fst.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ M
+AddMonoidHom.snd.{u_3, u_4} (M : Type u_3) (N : Type u_4) [AddZeroClass M] [AddZeroClass N] : M × N →+ N
+AddMonoidHom.prod.{u_3, u_4, u_5} {M : Type u_3} {N : Type u_4} {P : Type u_5} [AddZeroClass M] [AddZeroClass N]
+  [AddZeroClass P] (f : M →+ N) (g : M →+ P) : M →+ N × P
+Finset.card_biUnion.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [DecidableEq M] {t : ι → Finset M}
+  (h : (↑s).PairwiseDisjoint t) : (s.biUnion t).card = ∑ u ∈ s, (t u).card
+Finset.card_biUnion_le.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [DecidableEq M] {s : Finset ι} {t : ι → Finset M} :
+  (s.biUnion t).card ≤ ∑ a ∈ s, (t a).card
+direct source compile: docs/receipts/RankThreshold20261115/FinalProbe.lean
+docs/receipts/RankThreshold20261115/FinalProbe.lean:17:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/RankThreshold20261115/FinalProbe.lean:18:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/RankThreshold20261115/FinalProbe.lean:21:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/RankThreshold20261115/FloorProbe.lean
+Finset.min'.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (H : s.Nonempty) : α
+Finset.min'_mem.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (H : s.Nonempty) : s.min' H ∈ s
+Finset.min'_le.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (x : α) (H2 : x ∈ s) : s.min' ⋯ ≤ x
+Finset.card_union_le.{u_1} {α : Type u_1} [DecidableEq α] (s t : Finset α) : (s ∪ t).card ≤ s.card + t.card
+Equiv.piCongrRight.{u_1, u_8, u_9} {α : Sort u_1} {β₁ : α → Sort u_8} {β₂ : α → Sort u_9} (F : (a : α) → β₁ a ≃ β₂ a) :
+  ((a : α) → β₁ a) ≃ ((a : α) → β₂ a)
+Equiv.addLeft.{u_5} {G : Type u_5} [AddGroup G] (a : G) : Equiv.Perm G
+Equiv.subtypeEquivOfSubtype.{u_1, u_4} {α : Sort u_1} {β : Sort u_4} {p : β → Prop} (e : α ≃ β) :
+  { a // p (e a) } ≃ { b // p b }
+Nat.card_congr.{u_1, u_2} {α : Type u_1} {β : Type u_2} (f : α ≃ β) : Nat.card α = Nat.card β
+docs/receipts/RankThreshold20261115/FloorProbe.lean:43:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/RankThreshold20261115/FloorProbe.lean:44:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/RankTwoSourceAnchors20261116/ActualInstances.lean
+direct source compile: docs/receipts/RankTwoSourceAnchors20261116/Axioms.lean
+'CryptoLean.RankTwoSourceAnchors.original_roots_source_zero' depends on axioms: [propext]
+'CryptoLean.RankTwoSourceAnchors.source_scaling' depends on axioms: [propext, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.zero_second_source' depends on axioms: [propext]
+'CryptoLean.RankTwoSourceAnchors.source_b_difference' depends on axioms: [propext, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.t_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.tu_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.leaf_x_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.leaf_xy_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.constant_leaf_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.bihomogeneous_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.exact_projective_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.decode_curve_and_charts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.curveCode_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.curveCandidates_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.curve_mem_candidates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.RankTwoSourceAnchors.curveWindow_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/SelectorTree20261116/AxiomProbe.lean
+'CryptoLean.ShortlistCompletion.fiber_card_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShortlistCompletion.adaptive_shortlist_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.ShortlistCompletion.partite_shortlist_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/SelectorTree20261116/FinalProbe.lean
+docs/receipts/SelectorTree20261116/FinalProbe.lean:15:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FinalProbe.lean:16:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FinalProbe.lean:19:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/SelectorTree20261116/FloorProbe.lean
+AddMonoidHom.card_fiber_eq_of_mem_range.{u_1, u_2, u_3} {G : Type u_1} {M : Type u_2} {F : Type u_3} [AddGroup G]
+  [Fintype G] [AddMonoid M] [DecidableEq M] [FunLike F G M] [AddMonoidHomClass F G M] (f : F) {x y : M}
+  (hx : x ∈ Set.range ⇑f) (hy : y ∈ Set.range ⇑f) : {g | f g = x}.card = {g | f g = y}.card
+AddSubgroup.card_ker_mul_card_of_surjective.{u_1, u_2} {G : Type u_1} {G' : Type u_2} [AddGroup G] [AddGroup G']
+  {f : G →+ G'} (hf : Function.Surjective ⇑f) : Nat.card ↥f.ker * Nat.card G' = Nat.card G
+Fintype.card_le_of_surjective.{u_1, u_2} {α : Type u_1} {β : Type u_2} [Fintype α] [Fintype β] (f : α → β)
+  (h : Function.Surjective f) : Fintype.card β ≤ Fintype.card α
+Fintype.card_sigma.{u_7, u_8} {ι : Type u_8} {α : ι → Type u_7} [Fintype ι] [(i : ι) → Fintype (α i)] :
+  Fintype.card (Sigma α) = ∑ i, Fintype.card (α i)
+CryptoLean.PartiteCoverage.tupleSum_surjective.{u_1} {G : Type u_1} [AddCommGroup G] {m b : ℕ} (a : Fin m → Fin b)
+  (hm : 0 < m) : Function.Surjective ⇑(CryptoLean.PartiteCoverage.tupleSum a)
+docs/receipts/SelectorTree20261116/FloorProbe.lean:49:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:50:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:53:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/SelectorTree20261116/FloorProbe.lean:54:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+direct source compile: docs/receipts/SmallLiftRigidity20261116/ActualInstances.lean
+direct source compile: docs/receipts/SmallLiftRigidity20261116/Axioms.lean
+'CryptoLean.SmallLiftRigidity.small_divisible_zero' depends on axioms: [propext]
+'CryptoLean.SmallLiftRigidity.cross_abs_bound' depends on axioms: [propext]
+'CryptoLean.SmallLiftRigidity.cross_exact' depends on axioms: [propext]
+'CryptoLean.SmallLiftRigidity.same_row_cross_divisible' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.uniform_cross_exact' depends on axioms: [propext]
+'CryptoLean.SmallLiftRigidity.polynomial_cross_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.same_row_polynomials_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.linear_clear_bound' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.exceptional_linear_exact' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.conic_abs_bound' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.centered_conic_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.centered_conic_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.modulus_boundary' depends on axioms: [propext]
+'CryptoLean.SmallLiftRigidity.cleared_scaling' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.cleared_exceptional_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.SmallLiftRigidity.zero_of_scaled_reference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.clearedModel_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.SmallLiftRigidity.bounded_exceptional_row_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/TwoChartCoefficients20261116/ActualInstances.lean
+direct source compile: docs/receipts/TwoChartCoefficients20261116/Axioms.lean
+'CryptoLean.TwoChartCoefficients.x_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.scalar_square_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.xy_coeffs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.leaf_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.shifted_leaf_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.projective_anchor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.exact_source_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.exceptional_raw_zero' depends on axioms: [propext, Quot.sound]
+'CryptoLean.TwoChartCoefficients.recover_two_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.exceptional_s3_square' depends on axioms: [propext, Quot.sound]
+'CryptoLean.TwoChartCoefficients.exceptional_s3_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TwoChartCoefficients.p4CommRing' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/UniversalShiftPool20261116/ActualInstances.lean
+direct source compile: docs/receipts/UniversalShiftPool20261116/Axioms.lean
+'CryptoLean.TranslatedSupports.sum_reflection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedSupports.centered_reflection_nsmul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedSupports.centered_reflection_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TranslatedSupports.sum_symmetric_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.UniversalPools.fixed_miss_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.UniversalPools.mem_badPools' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.UniversalPools.miss_union_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.UniversalPools.universal_miss_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.UniversalPools.exists_universal_pool' depends on axioms: [propext, Classical.choice, Quot.sound]
+direct source compile: docs/receipts/UniversalShiftPool20261116/Floor.lean
+Finset.sum_image.{u_1, u_2, u_4} {ι : Type u_1} {κ : Type u_2} {M : Type u_4} [AddCommMonoid M] {f : ι → M}
+  [DecidableEq ι] {s : Finset κ} {g : κ → ι} : Set.InjOn g ↑s → ∑ x ∈ Finset.image g s, f x = ∑ x ∈ s, f (g x)
+Finset.sum_sub_distrib.{u_1, u_5} {ι : Type u_1} {G : Type u_5} {s : Finset ι} [SubtractionCommMonoid G] (f g : ι → G) :
+  ∑ x ∈ s, (f x - g x) = ∑ x ∈ s, f x - ∑ x ∈ s, g x
+Finset.sum_const.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [AddCommMonoid M] (b : M) :
+  ∑ _x ∈ s, b = s.card • b
+addOrderOf_dvd_iff_nsmul_eq_zero.{u_1} {G : Type u_1} [AddMonoid G] {x : G} {n : ℕ} : addOrderOf x ∣ n ↔ n • x = 0
+Nat.le_of_dvd {m n : ℕ} (h : 0 < n) : m ∣ n → m ≤ n
+Equiv.subtypePiEquivPi.{v, u_1} {α : Sort u_1} {β : α → Sort v} {p : (a : α) → β a → Prop} :
+  { f // ∀ (a : α), p a (f a) } ≃ ((a : α) → { b // p a b })
+Fintype.card_congr.{u_3, u_4} {α : Type u_3} {β : Type u_4} [Fintype α] [Fintype β] (f : α ≃ β) :
+  Fintype.card α = Fintype.card β
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α
+Fintype.card_subtype_compl.{u_1} {α : Type u_1} [Fintype α] (p : α → Prop) [Fintype { x // p x }]
+  [Fintype { x // ¬p x }] : Fintype.card { x // ¬p x } = Fintype.card α - Fintype.card { x // p x }
+Fintype.card_subtype.{u_1} {α : Type u_1} [Fintype α] (p : α → Prop) [Fintype { a // p a }] [DecidablePred p] :
+  Fintype.card { x // p x } = {x | p x}.card
+Finset.card_biUnion_le.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [DecidableEq M] {s : Finset ι} {t : ι → Finset M} :
+  (s.biUnion t).card ≤ ∑ a ∈ s, (t a).card
+Finset.card_lt_card.{u_1} {α : Type u_1} {s t : Finset α} (h : s ⊂ t) : s.card < t.card
+Finset.card_filter_le_iff.{u_1} {α : Type u_1} (s : Finset α) (P : α → Prop) [DecidablePred P] (n : ℕ) :
+  (Finset.filter P s).card ≤ n ↔ ∀ s' ⊆ s, n < s'.card → ∃ a ∈ s', ¬P a

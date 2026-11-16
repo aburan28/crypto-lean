@@ -1,0 +1,14 @@
+import CryptoLean.Group.TranslatedSupports
+import CryptoLean.Combinatorics.UniversalPools
+
+set_option autoImplicit false
+
+#print axioms CryptoLean.TranslatedSupports.sum_reflection
+#print axioms CryptoLean.TranslatedSupports.centered_reflection_nsmul
+#print axioms CryptoLean.TranslatedSupports.centered_reflection_ne
+#print axioms CryptoLean.TranslatedSupports.sum_symmetric_union
+#print axioms CryptoLean.UniversalPools.fixed_miss_count
+#print axioms CryptoLean.UniversalPools.mem_badPools
+#print axioms CryptoLean.UniversalPools.miss_union_bound
+#print axioms CryptoLean.UniversalPools.universal_miss_bound
+#print axioms CryptoLean.UniversalPools.exists_universal_pool
