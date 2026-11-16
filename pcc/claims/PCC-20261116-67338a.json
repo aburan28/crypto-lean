@@ -1,0 +1,107 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T05:12:52Z",
+ "id": "PCC-20261116-67338a",
+ "kind": "statement",
+ "producer": {
+  "commit": "8d167a068280d3a7078232a45bff0ef40a4cd6c4",
+  "model": "",
+  "session": "character-parity-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/character-parity-20261116.md",
+    "sha256": "f7358b8c0bd81fc72d96cf0b54023a3c93713dffaf5e9e8449a463f630be39a2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Group/BilinearSketch.lean",
+    "sha256": "5d2c37bcf8ae1a32b18b2d759d0f13e1d2d51721dd96409e1ce803760ec6db8b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/ProjectiveProducts.lean",
+    "sha256": "ef311bb99e22b90624d7d60fc5463af0b3cd6a8d01dabde8876bf7a3ac9d607a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Curve/CharacterCarry.lean",
+    "sha256": "81b1b2ed1b8e329c0b6c78b0e059a400b801262eb151bdf4917c66a5b59c7507"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CharacterParity20261116/ActualInstances.lean",
+    "sha256": "46e326592ba0eacf5ce9e183f00eaadb79fdbe589fee530be22768f51b777995"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CharacterParity20261116/Axioms.lean",
+    "sha256": "0bbc4bf38a0a5611fa831bf23e7c51dcbe9e2be10bd47cdf104a76be294ff3f8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/character-parity-20261116/gate002/_/audit.log",
+    "sha256": "d7146d516a40b178ae56b6537b9ed79d1c6870913792e89c6996016c880ba667"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/character-parity-20261116/axioms001.log",
+    "sha256": "92aeac485a31d769771b50978f99eb5239eb6cd8a8e06aa1835fb04c0e591c6d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/character-parity-20261116/report.pdf",
+    "sha256": "c4f4fdc786dbfee19b56fda34dc79c2a724538a3b480872c4771d1566db03850"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/character-parity-20261116/flow.svg",
+    "sha256": "438b202c776f15aa1d1f2c5feed21bb359c4828b47e1fc75e869b6f8ff079eaa"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/character-parity-20261116/publication001.json",
+    "sha256": "ae8607cb391a3deba022a3fc21b72773797c359ee8b44e4402ce722870426a96"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/character-parity-20261116-plan.md",
+    "sha256": "57e27f945d350b590d0ed236ee2db29e390d210b18be1cc922a12e4cd5a87e49"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/CharacterParity20261116/FloorProbe.lean",
+    "sha256": "e1ba6a13ad26c306c78c70c8988d527e81d6f9791faa86570f52ad04223979f6"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "single-character explicit elliptic pair-search design and shared component proofs",
+ "statement": "Seventeen shared laws for binary-mask detection, indexed repeated-root Taylor products and actual Weierstrass quadratic-character carry, with local canonical audit236/0/0 and prime-field assembly. The report supplies a hand-derived bounded one-character explicit-list search using all row parities, miss bound2^(-t) and charged quasilinear symbolic cost. No executable search, numerical benchmark, multi-gate extraction, useful relation yield or complete ECDLP algorithm is claimed."
+}
