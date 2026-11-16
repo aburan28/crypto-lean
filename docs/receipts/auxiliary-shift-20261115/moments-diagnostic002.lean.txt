@@ -1,0 +1,20 @@
+import CryptoLean.Group.ShiftRepresentations
+import Mathlib.Probability.Moments.Variance
+import Mathlib.Probability.UniformOn
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.MeasureTheory.Integral.Bochner.SumMeasure
+open MeasureTheory ProbabilityTheory
+open scoped BigOperators
+example {G : Type*} [AddCommGroup G] [Fintype G] [DecidableEq G]
+    [MeasurableSpace G] [DiscreteMeasurableSpace G] (k : ℕ) (U : G) (S : Finset G) :
+    (∫ T : Fin k → G, ∑ j : Fin k, if U + T j ∈ S then (1 : ℝ) else 0
+      ∂Measure.pi (fun _ : Fin k ↦ uniformOn (Set.univ : Set G))) =
+    ∑ j : Fin k, ∫ g : G, (if U + g ∈ S then (1 : ℝ) else 0)
+      ∂uniformOn (Set.univ : Set G) := by
+  rw [integral_finsetSum _ (fun _ _ ↦ (MemLp.of_discrete (p := 2)).integrable one_le_two)]
+  trace_state
+  apply Finset.sum_congr rfl
+  intro i _
+  exact integral_comp_eval (ι := Fin k) (X := fun _ ↦ G)
+    (μ := fun _ ↦ uniformOn (Set.univ : Set G))
+    (MemLp.of_discrete (p := 2)).aestronglyMeasurable

@@ -1,0 +1,5 @@
+Equiv.sum_comp.{u_1, u_2, u_3} {ι : Type u_1} {κ : Type u_2} {M : Type u_3} [Fintype ι] [Fintype κ] [AddCommMonoid M]
+  (e : ι ≃ κ) (g : κ → M) : ∑ i, g (e i) = ∑ i, g i
+/workspace/scratch/moments-floor-api001.lean:4:7: error(lean.unknownIdentifier): Unknown constant `Equiv.addLeft_apply`
+protected def Equiv.addLeft.{u_5} : {G : Type u_5} → [AddGroup G] → G → Equiv.Perm G :=
+fun {G} [AddGroup G] a => (toAddUnits a).addLeft

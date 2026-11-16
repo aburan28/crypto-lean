@@ -1,0 +1,12 @@
+{
+  "command": "git diff --cached --check",
+  "exit_code": 2,
+  "capture": "Findings transcribed from actual tool output, before the floor checkpoint commit.",
+  "findings": [
+    {"path": "docs/receipts/auxiliary-shift-20261115/floor004.log", "line": 19, "kind": "trailing whitespace in Lean warning: Try this: "},
+    {"path": "docs/receipts/auxiliary-shift-20261115/floor004.log", "line": 27, "kind": "trailing whitespace in Lean warning: Try this: "},
+    {"path": "docs/receipts/auxiliary-shift-20261115/floor004.log", "line": 35, "kind": "trailing whitespace in Lean warning: Try this: "},
+    {"path": "docs/receipts/auxiliary-shift-20261115/floor004.log", "line": 43, "kind": "trailing whitespace in Lean warning: Try this: "}
+  ],
+  "decision": "Preserve original compiler-output bytes. No source-whitespace finding was reported. Do not claim a clean diff check, strip raw evidence, disable a linter or change whitespace policy."
+}

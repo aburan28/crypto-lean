@@ -12,6 +12,9 @@ import CryptoLean.Group.Torsion
 import CryptoLean.Group.SingleRelation
 import CryptoLean.Group.SubsetFourier
 import CryptoLean.Group.PartiteCoverage
+import CryptoLean.Group.ShiftRepresentations
+import CryptoLean.Group.ShiftMoments
+import CryptoLean.Group.RankThreshold
 import CryptoLean.Polynomial.NormCharts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.InterpolationKernels

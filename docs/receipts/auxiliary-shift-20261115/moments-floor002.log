@@ -1,0 +1,12 @@
+docs/receipts/AuxiliaryShift20261115/MomentsFloorProbe.lean:26:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ i, if (Equiv.addLeft U) i ∈ S then 1 else 0
+in the target expression
+  (∑ g, if U + g ∈ S then 1 else 0) = ↑S.card
+
+G : Type u_1
+inst✝² : AddCommGroup G
+inst✝¹ : Fintype G
+inst✝ : DecidableEq G
+U : G
+S : Finset G
+⊢ (∑ g, if U + g ∈ S then 1 else 0) = ↑S.card

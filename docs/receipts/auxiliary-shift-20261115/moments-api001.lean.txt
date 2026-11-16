@@ -1,0 +1,5 @@
+import Mathlib.Probability.Moments.Variance
+import Mathlib.Tactic
+#check Equiv.sum_comp
+#check Equiv.addLeft_apply
+#print Equiv.addLeft

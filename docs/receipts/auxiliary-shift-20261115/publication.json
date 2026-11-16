@@ -1,0 +1,39 @@
+{
+  "schema": "selector-component-publication/v1",
+  "source_commit": "a078981171458959ef935ba33d5222e1eaa0dbf6",
+  "lean": "4.35.0",
+  "mathlib": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "gate": {
+    "command": "PATH=/home/agent/.elan/bin:$PATH tools/proof-gate.sh --out docs/receipts/auxiliary-shift-20261115/gate001 .",
+    "exit_code": 0,
+    "theorems": 205,
+    "failures": 0,
+    "trusted_native": 0
+  },
+  "axioms": {
+    "command": "lake env lean docs/receipts/AuxiliaryShift20261115/AxiomProbe.lean",
+    "exit_code": 0,
+    "named_laws": 28,
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "fresh_checker": {
+    "available": false,
+    "run": false
+  },
+  "pdf": {
+    "pages": 3,
+    "sha256": "f21f7c3a65cfe4cac60910a640df099d3f26fb10ed9e795b8a4d8b1010b38ec2",
+    "inspection": "All three final pages inspected: final pages1/2 have identical rendered pixel hashes to inspected first render; final page3 re-rendered and visually re-inspected."
+  },
+  "native_numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "mathematics": "28 named shared laws; actual prime-field assembly; finite-count survival. Density/fiber and cost derivations are hand analysis.",
+  "hosted": "No conclusion for an unpublished head. Prior PR17 billing failures are retained separately, not inherited.",
+  "complete_algorithm": "criterion remains unmet",
+  "standing": "unverified"
+}

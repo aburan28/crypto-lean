@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-11-15T22:39:24.500221+00:00",
+  "pr": "https://github.com/aburan28/crypto-lean/pull/17",
+  "head": "d3aef1b1d1e622d7d888c58bc3aeccece64171cf",
+  "state": "MERGED",
+  "merge_commit": "56925ceec529eeffea319b7ca1b59b66bbdd60ba",
+  "merged_at": "2026-11-15T22:35:11Z",
+  "hosted_ci_green": false,
+  "billing_comment": "https://github.com/aburan28/crypto-lean/pull/17#issuecomment-6902502000",
+  "autonomy_episode": "E-083adcb1071f",
+  "matching_scoped_outcome": "O-6822bc790b14",
+  "billing_incident": "Unresolved external dependency; HUMAN denotes external action needed, not a human repair that occurred.",
+  "pcc_claim": "PCC-20261115-e80d3e",
+  "pcc_standing": "unverified"
+}

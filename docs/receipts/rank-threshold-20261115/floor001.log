@@ -1,0 +1,26 @@
+Finset.min'.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (H : s.Nonempty) : α
+Finset.min'_mem.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (H : s.Nonempty) : s.min' H ∈ s
+Finset.min'_le.{u_1} {α : Type u_1} [LinearOrder α] (s : Finset α) (x : α) (H2 : x ∈ s) : s.min' ⋯ ≤ x
+Finset.card_union_le.{u_1} {α : Type u_1} [DecidableEq α] (s t : Finset α) : (s ∪ t).card ≤ s.card + t.card
+Equiv.piCongrRight.{u_1, u_8, u_9} {α : Sort u_1} {β₁ : α → Sort u_8} {β₂ : α → Sort u_9} (F : (a : α) → β₁ a ≃ β₂ a) :
+  ((a : α) → β₁ a) ≃ ((a : α) → β₂ a)
+Equiv.addLeft.{u_5} {G : Type u_5} [AddGroup G] (a : G) : Equiv.Perm G
+Equiv.subtypeEquivOfSubtype.{u_1, u_4} {α : Sort u_1} {β : Sort u_4} {p : β → Prop} (e : α ≃ β) :
+  { a // p (e a) } ≃ { b // p b }
+Nat.card_congr.{u_1, u_2} {α : Type u_1} {β : Type u_2} (f : α ≃ β) : Nat.card α = Nat.card β
+docs/receipts/RankThreshold20261115/FloorProbe.lean:43:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+docs/receipts/RankThreshold20261115/FloorProbe.lean:44:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
