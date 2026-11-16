@@ -1,0 +1,13 @@
+digraph Budget {
+ graph [rankdir=TB,bgcolor="white",pad="0.25",nodesep="0.3",ranksep="0.35"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=11,color="#475569",fillcolor="#eef2ff",margin="0.15,0.1"];
+ edge [color="#64748b",arrowsize=0.7];
+ profiles [label="Freeze unequal heights + chart offsets\nTotal shrink sum log(L_i) = o(log p)",fillcolor="#dbeafe"];
+ threshold [label="Exact leaf-support test\nB H_min^(2t) >= p^t forbids leaf terms",fillcolor="#fee2e2"];
+ menu [label="Match modulus monomials to constraint support\nDegree 0/1 short rows remain in the lift ideal",fillcolor="#fef3c7"];
+ block [label="Ordinary adjacent-sum profiles\nAt most (t+1)|M| row records per block"];
+ lll [label="Next: determinant gain vs LLL loss\n+ independent useful equations",fillcolor="#fef3c7",color="#b45309"];
+ recover [label="Then charged finite-root recovery\nOriginal point/sign + scalar replay"];
+ missing [label="No complete ECDLP algorithm established\nNo scientific numerical run",fillcolor="#fee2e2"];
+ profiles -> threshold -> menu -> block -> lll -> recover -> missing;
+}

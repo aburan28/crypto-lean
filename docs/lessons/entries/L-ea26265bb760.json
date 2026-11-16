@@ -1,0 +1,15 @@
+{
+  "action": "Check overlap of pure modulus rows with constraint coefficient support before inferring new integer constraints; prove support separation when they do not overlap",
+  "created": "2026-11-16T09:56:57Z",
+  "evidence": [
+    "docs/anisotropic-height-budget-20261116.md",
+    "CryptoLean/Polynomial/HeightBudget.lean"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "selector-source"
+  ],
+  "trigger": "A truncated monomial menu gives an attractive small lattice degree-block rank",
+  "why": "Degree0/1 modulus shifts cannot leave the chosen positive-degree integer-lift ideal at L1 below the modulus; independence needs an additional argument."
+}
