@@ -1,0 +1,28 @@
+[
+  {
+    "file": "Ryan2025.pdf",
+    "url": "https://eprint.iacr.org/2024/1577.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "Jochemsz-May2006.pdf",
+    "url": "https://www.cits.ruhr-uni-bochum.de/imperia/md/content/may/paper/jochemszmay.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "Jochemsz-May2006.pdf",
+    "url": "https://www.crypto.ruhr-uni-bochum.de/imperia/md/content/may/paper/jochemszmay.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "Ryan2025-mirror.pdf",
+    "url": "https://www.eprint.mirror.cypherpunks.su/2024/1577/1740806812.pdf",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "file": "Ryan-thesis.pdf",
+    "url": "https://escholarship.org/content/qt8bz3g5b6/qt8bz3g5b6.pdf",
+    "bytes": 1527809,
+    "sha256": "7e0bde57bdcaa791c801240ea7c30be7263861ad2329cf998f1c5628bad0eec3"
+  }
+]

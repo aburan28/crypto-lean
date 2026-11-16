@@ -1,0 +1,13 @@
+{
+  "applied": [],
+  "created": "2026-11-16T07:27:25Z",
+  "evidence": [
+    "docs/receipts/balanced-height-filtration-20261116/gate001/_/audit.log"
+  ],
+  "kind": "outcome",
+  "note": "",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate",
+  "task": "Ordinary shift filtration and exact projective elimination owners with actual S3 semantic assembly"
+}
