@@ -1,0 +1,9 @@
+{
+  "tag": "sagemath/sagemath:10.8",
+  "index_digest": "sha256:e2e4747b0e1ea8753a9cb5a399314a8b2c25fcefaf69ba85b22ee075829d09ea",
+  "amd64_digest": "sha256:fb96c7fb10d672f3be0d088399db3aeac52650416d1bb71f74f26429ea35778f",
+  "base_image": "docker.io/sagemath/sagemath@sha256:fb96c7fb10d672f3be0d088399db3aeac52650416d1bb71f74f26429ea35778f",
+  "config_digest": "sha256:aeef59a8c17212357aeb83bd7f1cfac43bb1c789ae3fa2d887227c763bdfcac3",
+  "compressed_layer_bytes": 1469317214,
+  "scope": "registry metadata only; image not pulled or executed"
+}

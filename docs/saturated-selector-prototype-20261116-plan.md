@@ -78,13 +78,21 @@ Reconstruct polynomials only when scale divisibility holds. Promote a
 nonzero row only if sum |c_m|*X^m < p^t, using integers, with its complete
 row-combination witness retained. No floating norm or heuristic promotion.
 
-Only after homogeneous integer vanishing is certified, set V_i=1 and
-recover ratios over Q. Require a zero-dimensional quotient and bounded
-vector-space degree before rational root enumeration. Test integer leaf
-coordinates, primitive numerator/denominator height, nonzero denominator
-modp, original S3 equations and actual point signs. A returned decomposition
-must satisfy sum(sign_j*catalog[id_j])=R on the actual curve. Do not call a
-positive-dimensional or capped attempt an emptiness proof.
+Only after homogeneous integer vanishing is certified, set V_i=1, then
+eliminate ratio coordinates over Q with a checked lexicographic Groebner
+basis. Require a finite bounded LEAF standard-monomial staircase before
+rational root enumeration. Unused/projected ratios need not be enumerated.
+Sage's current official documentation
+warns that vector_space_dimension can have a 32-bit overflow, so its scalar
+return is not a safe admission cap. Check the Groebner membership/critical
+pairs and enumerate the downward-closed staircase with a hard cap; an
+unfinished enumeration is a capped failure. Test integer leaves against the
+fixed catalog, then enumerate capped original point signs. The projection
+can include extra leaves or points outside the bounded-height chart; a
+decomposition is accepted only after sum(sign_j*catalog[id_j])=R on the
+actual curve. This sound overapproximation does not claim bounded-ratio
+reconstruction or root-search completeness. Do not call a positive-dimensional
+or capped attempt an emptiness proof.
 
 Accumulate checked relation rows c with R=alphaG+betaQ. Incremental modular
 elimination keeps original target-index provenance. A dependence cancels
@@ -115,3 +123,33 @@ review only. No numerical success, speed, rank trend or complete algorithm
 is inferred from unexecuted code. Any later execution needs the existing
 admission/backend/budget rules and a frozen, reviewable trial plan. No
 independent signed PCC verification or evaluated identity certificate exists.
+
+## Concrete implementation choices after the interface read
+
+Use Sage's Fp ideal.saturation(principal_ideal_D), returning an ideal and
+exponent n; VERIFY each D^n*g with polynomial.lift against the original
+generators and an exact dot-product equality. No unproved lift is accepted.
+Use a local bounded Macaulay implementation, not copied cuso code; cite
+cuso's pinned API/default-L1 behavior as source context. No L2/float branch.
+Keep all standard-monomial cap logic in a dependency-free metadata helper
+so cap/termination controls can be checked without importing Sage or doing
+curve/lattice computations. Actual worker stages remain unexecuted.
+
+The end-to-end worker fixes the interval catalog before label draws and
+passes only R to decomposition. Preserve original target-index coefficients
+through incremental field row elimination; a new dependent row has newest
+provenance entry1, so its original target vector is nonzero. Its factor-base
+cancellation gives A G+B Q=O; validate -A/B by actual multiplication. Do not
+ask for full factor-base rank when a useful dependency suffices. The unknown
+decomposition yield is not removed by this standard free-label argument.
+
+Future ordinary/saturated controls must share an external frozen query-label
+panel; raw accepted and rejected targets remain, not only soluble cases.
+No concrete curve panel is generated or executed in this source-only phase.
+
+Label metadata must not change the selector's byte budget: use fixed-width
+decimal encodings for alpha,beta and recovery/dependence scalars. The algebraic
+free-label probability statement is conditional on its uniform/label-free
+hypotheses; no such distribution theorem is asserted for wall-time-interrupted
+or otherwise censored pilot runs. Every final scalar still requires its own
+exact curve check.

@@ -1,0 +1,13 @@
+usage: launch.py [-h] --input INPUT --output OUTPUT [--sage SAGE]
+                 [--validate-only]
+
+Capped launcher for an UNEXECUTED Sage research prototype. No worker is run by
+importing this module or by requesting --help. Use the existing
+execution/admission rules before running a numerical job.
+
+options:
+  -h, --help       show this help message and exit
+  --input INPUT
+  --output OUTPUT
+  --sage SAGE
+  --validate-only
