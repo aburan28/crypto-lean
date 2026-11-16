@@ -32,3 +32,5 @@ exception or native_decide. New owner source/prose0, old raw whitespace
 referenced without recursive copies. No scientific/nativequalification/paid/
 image/job/control execution; earlier scientific admission still missing.
 [pcc:unverified]
+
+Registered PCC-20261116-c3231e with43 attestation subjects, unverified (verify-all exit2); ledgerverify0. All449 subject hashes match;23 rows retain exact published23322-row/main0179-row byte/parsed prefixes. [pcc:unverified]
