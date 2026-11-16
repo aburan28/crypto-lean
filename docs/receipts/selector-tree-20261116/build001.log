@@ -1,0 +1,64 @@
+⚠ [3138/3139] Replayed CryptoLean.Group.PartiteCoverage
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3139/3139] Building CryptoLean.Group.ShortlistCompletion (2.5s)
+warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Group/ShortlistCompletion.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/ShortlistCompletion.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Group/ShortlistCompletion.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/ShortlistCompletion.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Group/ShortlistCompletion.setup.json --json
+error: CryptoLean/Group/ShortlistCompletion.lean:47:55: unsolved goals
+A : Type u_1
+C : Type u_2
+H : Type u_3
+G : Type u_4
+inst✝⁵ : Fintype A
+inst✝⁴ : Fintype C
+inst✝³ : AddGroup H
+inst✝² : AddGroup G
+inst✝¹ : Fintype H
+inst✝ : Fintype G
+F : A → Finset G
+f : C → H →+ G
+hsur : ∀ (c : C), Function.Surjective ⇑(f c)
+L : ℕ
+hcap : ∀ (a : A), (F a).card ≤ L
+Success : Type (max 0 u_1 u_3) := { ω // ∃ g ∈ F ω.1, ∃ c, (f c) ω.2 = g }
+Witness : Type (max u_1 (max u_3 u_2) u_4) := (a : A) × (g : ↥(F a)) × (c : C) × { x // (f c) x = ↑g }
+projection : Witness → Success := fun w => ⟨(w.fst, ↑w.snd.snd.snd), ⋯⟩
+hprojection : Function.Surjective projection
+hcover : Nat.card Success ≤ Nat.card Witness
+hfiber : ∀ (c : C) (g : G), Fintype.card { x // (f c) x = g } * Fintype.card G = Fintype.card H
+⊢ ∑ x, ↑(F x).card * (↑(Fintype.card C) * Fintype.card H) = ∑ x, (F x).card * (Fintype.card C * Fintype.card H)
+info: CryptoLean/Group/ShortlistCompletion.lean:59:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: CryptoLean/Group/ShortlistCompletion.lean:57:52: unsolved goals
+A : Type u_1
+C : Type u_2
+H : Type u_3
+G : Type u_4
+inst✝⁵ : Fintype A
+inst✝⁴ : Fintype C
+inst✝³ : AddGroup H
+inst✝² : AddGroup G
+inst✝¹ : Fintype H
+inst✝ : Fintype G
+F : A → Finset G
+f : C → H →+ G
+hsur : ∀ (c : C), Function.Surjective ⇑(f c)
+L : ℕ
+hcap : ∀ (a : A), (F a).card ≤ L
+Success : Type (max 0 u_1 u_3) := { ω // ∃ g ∈ F ω.1, ∃ c, (f c) ω.2 = g }
+Witness : Type (max u_1 (max u_3 u_2) u_4) := (a : A) × (g : ↥(F a)) × (c : C) × { x // (f c) x = ↑g }
+projection : Witness → Success := fun w => ⟨(w.fst, ↑w.snd.snd.snd), ⋯⟩
+hprojection : Function.Surjective projection
+hcover : Nat.card Success ≤ Nat.card Witness
+hfiber : ∀ (c : C) (g : G), Fintype.card { x // (f c) x = g } * Fintype.card G = Fintype.card H
+hwitness : Nat.card Witness * Nat.card G = ∑ a, (F a).card * Nat.card C * Nat.card H
+⊢ ↑(Fintype.card A) * L * Fintype.card C * Fintype.card H = L * Fintype.card C * Fintype.card H * Fintype.card A
+Some required targets logged failures:
+- CryptoLean.Group.ShortlistCompletion
+error: build failed

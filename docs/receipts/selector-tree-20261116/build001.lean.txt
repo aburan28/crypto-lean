@@ -1,0 +1,70 @@
+import CryptoLean.Group.PartiteCoverage
+import Mathlib.Data.Fintype.BigOperators
+
+/-! Exact raw product-space budget for a target shortlist generated without
+access to the independently sampled completion world. Selection within the
+first world is arbitrary; no uniform-output hypothesis is introduced. -/
+set_option autoImplicit false
+
+noncomputable section
+
+open scoped BigOperators
+
+namespace CryptoLean.ShortlistCompletion
+
+theorem fiber_card_mul {H G : Type*} [AddGroup H] [AddGroup G] [Fintype H] [Fintype G]
+    (f : H →+ G) (hsur : Function.Surjective f) (g : G) :
+    Nat.card {x : H // f x = g} * Nat.card G = Nat.card H := by
+  classical
+  have hcount := AddMonoidHom.card_fiber_eq_of_mem_range f (hsur g) (hsur 0)
+  have hker : Nat.card {x : H // f x = g} = Nat.card f.ker := by
+    change Nat.card {x : H // f x = g} = Nat.card {x : H // f x = 0}
+    simpa only [Nat.card_eq_fintype_card, Fintype.card_subtype] using hcount
+  rw [hker]
+  exact AddSubgroup.card_ker_mul_card_of_surjective hsur
+
+theorem adaptive_shortlist_count {A C H G : Type*}
+    [Fintype A] [Fintype C] [AddGroup H] [AddGroup G] [Fintype H] [Fintype G]
+    (F : A → Finset G) (f : C → H →+ G) (hsur : ∀ c, Function.Surjective (f c))
+    (L : ℕ) (hcap : ∀ a, (F a).card ≤ L) :
+    Nat.card {ω : A × H // ∃ g ∈ F ω.1, ∃ c : C, f c ω.2 = g} * Nat.card G ≤
+      Nat.card A * L * Nat.card C * Nat.card H := by
+  classical
+  let Success := {ω : A × H // ∃ g ∈ F ω.1, ∃ c : C, f c ω.2 = g}
+  let Witness := Σ a : A, Σ g : {g : G // g ∈ F a}, Σ c : C, {x : H // f c x = g.val}
+  let projection : Witness → Success := fun w ↦
+    ⟨(w.1, w.2.2.2.val), ⟨w.2.1.val, w.2.1.property, w.2.2.1, w.2.2.2.property⟩⟩
+  have hprojection : Function.Surjective projection := by
+    rintro ⟨⟨a, x⟩, g, hg, c, hx⟩
+    exact ⟨⟨a, ⟨g, hg⟩, c, ⟨x, hx⟩⟩, rfl⟩
+  have hcover : Nat.card Success ≤ Nat.card Witness := by
+    simpa only [Nat.card_eq_fintype_card] using
+      Fintype.card_le_of_surjective projection hprojection
+  have hfiber (c : C) (g : G) :
+      Fintype.card {x : H // f c x = g} * Fintype.card G = Fintype.card H := by
+    simpa only [Nat.card_eq_fintype_card] using fiber_card_mul (f c) (hsur c) g
+  have hwitness : Nat.card Witness * Nat.card G =
+      ∑ a : A, (F a).card * Nat.card C * Nat.card H := by
+    simp only [Witness, Nat.card_eq_fintype_card, Fintype.card_sigma, Finset.sum_mul]
+    simp_rw [hfiber]
+    simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, Fintype.card_coe, mul_assoc]
+  calc
+    Nat.card Success * Nat.card G ≤ Nat.card Witness * Nat.card G :=
+      Nat.mul_le_mul_right _ hcover
+    _ = ∑ a : A, (F a).card * Nat.card C * Nat.card H := hwitness
+    _ ≤ ∑ _a : A, L * Nat.card C * Nat.card H :=
+      Finset.sum_le_sum fun a _ ↦ Nat.mul_le_mul_right _ (Nat.mul_le_mul_right _ (hcap a))
+    _ = Nat.card A * L * Nat.card C * Nat.card H := by
+      simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, Nat.card_eq_fintype_card]
+      ring
+
+theorem partite_shortlist_count {A G : Type*} [Fintype A] [AddCommGroup G] [Fintype G]
+    {s b : ℕ} (hs : 0 < s) (F : A → Finset G) (L : ℕ) (hcap : ∀ a, (F a).card ≤ L) :
+    Nat.card {ω : A × ((Fin s × Fin b) → G) //
+      ∃ g ∈ F ω.1, ∃ c : Fin s → Fin b, PartiteCoverage.tupleSum c ω.2 = g} * Nat.card G ≤
+      Nat.card A * L * b ^ s * (Nat.card G) ^ (s * b) := by
+  have h := adaptive_shortlist_count F (fun c : Fin s → Fin b ↦ PartiteCoverage.tupleSum c)
+    (fun c ↦ PartiteCoverage.tupleSum_surjective c hs) L hcap
+  simpa only [Nat.card_fun, Nat.card_prod, Nat.card_fin] using h
+
+end CryptoLean.ShortlistCompletion
