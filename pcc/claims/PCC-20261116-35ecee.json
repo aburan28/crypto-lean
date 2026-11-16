@@ -1,0 +1,142 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T16:09:47Z",
+ "id": "PCC-20261116-35ecee",
+ "kind": "statement",
+ "producer": {
+  "commit": "64e3f9e82340edc33181130c03191ef394fcc68a",
+  "model": "",
+  "session": "small-lift-rigidity-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/SmallLiftRigidity.lean",
+    "sha256": "c2b59dbac0c8e3fa33a30d2d9a4e8ead3738635462b010f43947454fb8bc252c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/small-lift-rigidity-20261116-plan.md",
+    "sha256": "1b30e1688a26c0dbeb7e64c42b12dd9b91d1adfed4dc9fbfdb008b2dc25517cd"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/small-lift-rigidity-20261116.md",
+    "sha256": "37e5f782dd2318e8e5b276bdc234e8afbd3438ce69879be99a93372b4b0aa99b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/SmallLiftRigidity20261116/ActualInstances.lean",
+    "sha256": "db5429405b0b85a6630ec399b10d44da0a2b72e9a1da4413c678b0e1cfc076be"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/SmallLiftRigidity20261116/Axioms.lean",
+    "sha256": "17726952a0bfbc82d31dea231aeade1b401c32710e999b68cddbab08d6371979"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/small-lift-rigidity-20261116/publication001.json",
+    "sha256": "528201027634beb8eb9a50f9686b8e5df46c9788f2e1758033df1df94ee6394b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/axioms001.log",
+    "sha256": "687ee0bb878fc34231e965189f7d1abb259d17fec68c93970ab95e46a7897d36"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/owner-direct001.log",
+    "sha256": "d2f494521bba311314ad3e233c20aabc95b83b1ee0647426596b9cc88bc4dfc2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/owner-direct002.log",
+    "sha256": "bbce4def4f503972d914f4baa25361bb970d8b793be55f273d51a40a3fbad296"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/owner-direct003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/owner-build001.log",
+    "sha256": "7b29028a6bdf94280fe3d3bae6fab2296d698a77b8aa12c9d564ae92a6696c80"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/source-review001.json",
+    "sha256": "4a419776c94f273be59a559af1343b8cedafb9cb263c21396add11768f016e82"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/audit-delta001.json",
+    "sha256": "290ee18e819263bf10ac2ae1c5c786f728819b5ff462b9309996e8509d53940b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/gate001/_/audit.log",
+    "sha256": "e58210fb6bf4acdf24cbadf266b0f3d03b498489791b8c3b5fc02d26c9867f69"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/gate001/_/sources.log",
+    "sha256": "9e7c9958877d1cf21a5600fc2efc48e4217c1d93070f1f7281f472a91a25dc54"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/small-lift-rigidity-20261116/gate-launch001.log",
+    "sha256": "dd3fe0f161f4a458c33c456bf58626fb3a0d3cc9856d405653b7de9d2d4021dd"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Declared one-generator primitive family under explicit finite strict bounds; coefficient mass/asymptotic transfer hand only.",
+ "statement": "Conditional integer small-lift rigidity:18 generic laws and4 actual source applications compile, canonical local444/0/0. Coefficient cross divisibility and strict bounds force literal scaled equality; bounded exceptional conic/linear congruences, actual seven-variable cleared primitive and nonzero denominator force row vanishing. HAND1152M^7 mass and fixed-support critical-height transfer are not fully formalized. No higher-rank/all-lift/all-ECDLP exclusion, useful-yield claim, scientific/numerical/paid qualification execution, independently signed verdict or complete algorithm."
+}

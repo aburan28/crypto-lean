@@ -16,3 +16,8 @@ No scientific/numerical/field/curve/LLL/native qualification/paid/image/job
 execution; numerical admission remains missing. All250 old subjects/17rows frozen.
 Raw compiler warnings/errors retained, no proof-limit/trust/inventory/linter
 exception. No independent signed verdict or identity certificate. [pcc:unverified]
+
+Registered PCC-20261116-35ecee with18 attestation subjects, standing unverified
+(verify-all exit2). Eighteen-row chain verifies; published430 seventeen-row
+ledger remains exact byte/parsed prefix. All268 subject hashes match, including
+250 older pins. No independently signed verification. [pcc:unverified]
