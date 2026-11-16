@@ -1,0 +1,4 @@
+quadraticChar_sq_one.{u_1} {F : Type u_1} [Field F] [Fintype F] [DecidableEq F] {a : F} (ha : a ≠ 0) :
+  (quadraticChar F) a ^ 2 = 1
+map_mul.{u_4, u_5, u_9} {M : Type u_4} {N : Type u_5} {F : Type u_9} [Mul M] [Mul N] [FunLike F M N] [MulHomClass F M N]
+  (f : F) (x y : M) : f (x * y) = f x * f y

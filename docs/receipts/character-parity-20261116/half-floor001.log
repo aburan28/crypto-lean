@@ -1,0 +1,8 @@
+docs/receipts/CharacterParity20261116/HalfFloor.lean:19:44: error: Application type mismatch: The argument
+  h
+has type
+  embed c = embed d
+but is expected to have type
+  c = d
+in the application
+  congrArg Subtype.val h

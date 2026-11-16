@@ -1,0 +1,29 @@
+CryptoLean/Group/BilinearSketch.lean:46:4: error: Tactic `apply` failed: could not unify the conclusion of `Sigma.ext rfl`
+  ?m.247 = ?m.247
+with the goal
+  ⟨r, c⟩ = ⟨r, c'⟩
+
+Note: The full type of `Sigma.ext rfl` is
+  Sigma.snd ?m.247 ≍ Sigma.snd ?m.247 → ?m.247 = ?m.247
+
+R : Type u_1
+C : Type u_2
+inst✝³ : AddGroup R
+inst✝² : AddGroup C
+inst✝¹ : Fintype R
+inst✝ : Fintype C
+B : R →+ C →+ ZMod 2
+r0 : R
+c0 : C
+hentry : (B r0) c0 = 1
+Rows : Type (max 0 u_1) := { r // (B r) c0 = 1 }
+Witness : Type (max u_1 u_2) := (r : Rows) × { c // (B ↑r) c = 1 }
+Success : Type (max 0 u_1 u_2) := { w // (B w.1) w.2 = 1 }
+hrow : Nat.card Rows * 2 = Nat.card R
+hfiber : ∀ (r : Rows), Fintype.card { c // (B ↑r) c = 1 } * 2 = Fintype.card C
+hwitness : Nat.card Witness * 2 = Nat.card Rows * Nat.card C
+embed : Witness → Success := fun w => ⟨(↑w.fst, ↑w.snd), ⋯⟩
+r : Rows
+c c' : { c // (B ↑r) c = 1 }
+h : embed ⟨r, c⟩ = embed ⟨r, c'⟩
+⊢ ⟨r, c⟩ = ⟨r, c'⟩

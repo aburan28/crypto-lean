@@ -4,6 +4,7 @@ import CryptoLean.Curve.Conductor
 import CryptoLean.Curve.QuadraticNormTransport
 import CryptoLean.Curve.Identities
 import CryptoLean.Curve.LineIncidence
+import CryptoLean.Curve.CharacterCarry
 import CryptoLean.Curve.SubfieldTwists
 import CryptoLean.Curve.TorsionDepth
 import CryptoLean.Curve.Twists
@@ -18,7 +19,9 @@ import CryptoLean.Group.RankThreshold
 import CryptoLean.Group.TranslatedIntersections
 import CryptoLean.Group.ShortlistCompletion
 import CryptoLean.Group.ColorChecksums
+import CryptoLean.Group.BilinearSketch
 import CryptoLean.Polynomial.NormCharts
+import CryptoLean.Polynomial.ProjectiveProducts
 import CryptoLean.Polynomial.EllipticMaps
 import CryptoLean.Polynomial.InterpolationKernels
 import CryptoLean.Curve.CenteredCompletion

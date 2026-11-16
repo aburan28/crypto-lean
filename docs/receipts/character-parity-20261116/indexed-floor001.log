@@ -1,0 +1,20 @@
+docs/receipts/CharacterParity20261116/IndexedFloor.lean:10:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun j => u j ≠ a
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CharacterParity20261116/IndexedFloor.lean:9:45: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun j => u j = a
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CharacterParity20261116/IndexedFloor.lean:26:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun j => u j ≠ 0
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CharacterParity20261116/IndexedFloor.lean:28:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun j => ¬B j
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/CharacterParity20261116/IndexedFloor.lean:27:16: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  DecidablePred fun j => u j ≠ 0
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
