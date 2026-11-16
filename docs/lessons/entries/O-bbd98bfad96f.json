@@ -1,0 +1,17 @@
+{
+  "applied": [
+    "L-77b44d3fe205",
+    "L-1e09e78e395f"
+  ],
+  "created": "2026-11-16T05:19:37Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/23",
+    "https://github.com/aburan28/crypto-lean/blob/911c04bd11a166a2232ba339eec42a282e6db98b/docs/receipts/character-parity-20261116/gate002/_/audit.log"
+  ],
+  "kind": "outcome",
+  "note": "Scoped proof component:236/0/0,17 standard-axiom prints,3 inspected pages, all63 landed subjects and old7-row prefix retained. Actual finite-filter instances required convert/congr without theorem weakening. Hosted zero-step billing failures remain CI-green=false. Hand single-character search is not an executable joint selector or complete ECDLP algorithm.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate",
+  "task": "PR23 generic character-carry, repeated-root correction and finite-mask interfaces with actual prime-field assemblies"
+}

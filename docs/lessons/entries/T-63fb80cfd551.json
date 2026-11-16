@@ -1,0 +1,11 @@
+{
+  "context": "",
+  "created": "2026-11-16T05:19:37Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/blob/911c04bd11a166a2232ba339eec42a282e6db98b/docs/receipts/character-parity-20261116/pr-body-lint001.log"
+  ],
+  "kind": "test",
+  "lesson": "L-77b44d3fe205",
+  "outcome": "confirm",
+  "schema": "crypto.lesson/v1"
+}
