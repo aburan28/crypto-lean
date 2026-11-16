@@ -1,0 +1,9 @@
+{
+  "evidence_type": "derived incident note; original error remains in tool transcript",
+  "action": "final read-only annotation/hash/prefix receipt command",
+  "observed_error": "Failed to create unified exec process: exec-server transport disconnected; failed to resume exec-server session: recovery timed out after 45s",
+  "original_command_started": false,
+  "recovery": "brief pwd/gitstatus probe succeeded; checked receipt paths absent BEFORE repeating read-only command; remaining checks completed",
+  "source_tests_repeated": false,
+  "monitor_service_recovered": false
+}

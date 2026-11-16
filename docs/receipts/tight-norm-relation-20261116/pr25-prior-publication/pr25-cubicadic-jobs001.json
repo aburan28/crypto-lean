@@ -1,0 +1,59 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 133577979030,
+      "run_id": 43946651280,
+      "workflow_name": "CI",
+      "head_branch": "codex/universal-shift-pool-20261116",
+      "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43946651280",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLvUDc8AAAAfGd40lg",
+      "head_sha": "468a0a9bb0b96fc141db3008deba403b73bdb642",
+      "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133577979030",
+      "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43946651280/job/133577979030",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-16T20:08:32Z",
+      "started_at": "2026-11-16T20:08:32Z",
+      "completed_at": "2026-11-16T20:08:34Z",
+      "name": "selftest",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133577979030",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 0,
+      "runner_name": "",
+      "runner_group_id": 0,
+      "runner_group_name": ""
+    },
+    {
+      "id": 133577979645,
+      "run_id": 43946651280,
+      "workflow_name": "CI",
+      "head_branch": "codex/universal-shift-pool-20261116",
+      "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43946651280",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVLvUDc8AAAAfGd42_Q",
+      "head_sha": "468a0a9bb0b96fc141db3008deba403b73bdb642",
+      "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133577979645",
+      "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43946651280/job/133577979645",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-16T20:08:32Z",
+      "started_at": "2026-11-16T20:08:32Z",
+      "completed_at": "2026-11-16T20:08:34Z",
+      "name": "build-and-audit",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133577979645",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 0,
+      "runner_name": "",
+      "runner_group_id": 0,
+      "runner_group_name": ""
+    }
+  ]
+}

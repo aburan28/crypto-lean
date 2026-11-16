@@ -1,0 +1,21 @@
+{
+  "head": "468a0a9bb0b96fc141db3008deba403b73bdb642",
+  "observed_at": "2026-11-16T20:13:10.732216+00:00",
+  "rows": 24,
+  "histories": {
+    "1eb06425d5d4930998b5586056b81514978f90e4": {
+      "rows": 23,
+      "byte_prefix": true,
+      "parsed_prefix": true,
+      "ancestor": true
+    },
+    "01750b4044989583e70e4886b4ab5a79fe83f128": {
+      "rows": 9,
+      "byte_prefix": true,
+      "parsed_prefix": true,
+      "ancestor": true
+    }
+  },
+  "old_claim_files_identical": true,
+  "old_journal_byte_prefix": true
+}
