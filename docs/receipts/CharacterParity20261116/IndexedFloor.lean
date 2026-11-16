@@ -1,0 +1,47 @@
+import CryptoLean.Polynomial.ProjectiveProducts
+
+set_option autoImplicit false
+noncomputable section
+open Polynomial
+open scoped BigOperators
+
+open Classical in
+example {R I : Type*} [CommRing R] (s : Finset I) (u : I → R) (a : R) :
+    (taylor a (∏ j ∈ s, (X-C (u j)))).coeff (s.filter (fun j ↦ u j = a)).card =
+      ∏ j ∈ s.filter (fun j ↦ u j ≠ a), (a-u j) := by
+  classical
+  have he : (∏ j ∈ s.filter (fun j ↦ u j = a), (X-C (u j))) =
+      (X-C a : R[X])^(s.filter (fun j ↦ u j = a)).card := by
+    calc
+      _ = ∏ j ∈ s.filter (fun j ↦ u j = a), (X-C a : R[X]) := by
+        apply Finset.prod_congr rfl
+        intro j hj
+        rw [(Finset.mem_filter.mp hj).2]
+      _ = _ := Finset.prod_const _
+  rw [← Finset.prod_filter_mul_prod_filter_not s (fun j ↦ u j = a) (fun j ↦ (X-C (u j))),
+    he, CryptoLean.ProjectiveProducts.taylor_strip_root]
+  simp [Polynomial.eval_prod]
+
+open Classical in
+example {F I : Type*} [Field F] (s : Finset I) (u : I → F) (B : I → Prop)
+    (hu : ∀ j ∈ s, ¬B j → u j ≠ 0) :
+    (∏ j ∈ s.filter (fun j ↦ u j ≠ 0), u j) /
+        (∏ j ∈ (s.filter (fun j ↦ u j ≠ 0)).filter B, u j) =
+      ∏ j ∈ s.filter (fun j ↦ ¬B j), u j := by
+  classical
+  have he : (s.filter (fun j ↦ u j ≠ 0)).filter (fun j ↦ ¬B j) =
+      s.filter (fun j ↦ ¬B j) := by
+    ext j
+    simp only [Finset.mem_filter]
+    constructor
+    · exact fun h ↦ ⟨h.1.1, h.2⟩
+    · intro h
+      exact ⟨⟨h.1, hu j h.1 h.2⟩, h.2⟩
+  have hd : (∏ j ∈ (s.filter (fun j ↦ u j ≠ 0)).filter B, u j) ≠ 0 := by
+    apply Finset.prod_ne_zero_iff.mpr
+    intro j hj
+    exact (Finset.mem_filter.mp (Finset.mem_filter.mp hj).1).2
+  apply (div_eq_iff hd).mpr
+  have hs := Finset.prod_filter_mul_prod_filter_not (s.filter (fun j ↦ u j ≠ 0)) B u
+  rw [he] at hs
+  exact hs.symm.trans (mul_comm _ _)

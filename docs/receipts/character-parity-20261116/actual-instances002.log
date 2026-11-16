@@ -1,0 +1,12 @@
+docs/receipts/CharacterParity20261116/ActualInstances.lean:37:2: error: Type mismatch: After simplification, term
+  CryptoLean.ProjectiveProducts.indexed_taylor_nonzero s u a
+ has type
+  ((taylor a) (∏ j ∈ s, (X - C (u j)))).coeff {j ∈ s | u j = a}.card = ∏ j ∈ s with u j ≠ a, (a - u j)
+but is expected to have type
+  ((taylor a) (∏ j ∈ s, (X - C (u j)))).coeff {j ∈ s | u j = a}.card = ∏ j ∈ s with u j ≠ a, (a - u j)
+docs/receipts/CharacterParity20261116/ActualInstances.lean:46:2: error: Type mismatch: After simplification, term
+  CryptoLean.ProjectiveProducts.nonzero_product_correction s u B h
+ has type
+  (∏ j ∈ {j ∈ s | u j ≠ 0}, u j) / ∏ j ∈ {j ∈ s | u j ≠ 0} with B j, u j = ∏ j ∈ s with ¬B j, u j
+but is expected to have type
+  (∏ j ∈ {j ∈ s | u j ≠ 0}, u j) / ∏ j ∈ {j ∈ s | u j ≠ 0} with B j, u j = ∏ j ∈ s with ¬B j, u j

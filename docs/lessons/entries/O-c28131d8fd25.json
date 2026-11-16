@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T01:52:30Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/pull/22",
+    "https://github.com/aburan28/crypto-lean/blob/a8ace786fd32a5a182ee3d8af04a036c103979e8/docs/color-checksum-20261116.md"
+  ],
+  "kind": "outcome",
+  "note": "A known coefficient checksum target is possible with constant color weights; distinguish that valid interface from unknown-target hashes. Universal known targets force color-constant weights, so full representation counts cannot be treated as distinct hash opportunities. Explicit finite-image equality interface and existing sum_nsmul_assoc close generic proofs. Local219/0/0, four standard-axiom prints, actual group/ZMod probes; hosted zero-step billing failure, CI-green=false. Complete algorithm remains open.",
+  "result": "success",
+  "schema": "crypto.lesson/v1",
+  "scope": "lean-instance-gate",
+  "task": "PR22 known-target checksum and color-profile image law"
+}

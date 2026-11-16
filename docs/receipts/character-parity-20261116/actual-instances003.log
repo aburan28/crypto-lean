@@ -1,0 +1,29 @@
+docs/receipts/CharacterParity20261116/ActualInstances.lean:36:51: error: unsolved goals
+case e'_2
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+I : Type u_1
+s : Finset I
+u : I → ZMod p
+a : ZMod p
+⊢ ((taylor a) (∏ j ∈ s, (X - C (u j)))).coeff {j ∈ s | u j = a}.card =
+    ((taylor a) (∏ j ∈ s, (X - C (u j)))).coeff {j ∈ s | u j = a}.card
+
+case e'_3
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+I : Type u_1
+s : Finset I
+u : I → ZMod p
+a : ZMod p
+⊢ ∏ j ∈ s with u j ≠ a, (a - u j) = ∏ j ∈ s with u j ≠ a, (a - u j)
+docs/receipts/CharacterParity20261116/ActualInstances.lean:45:44: error: unsolved goals
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+I : Type u_1
+s : Finset I
+u : I → ZMod p
+B : I → Prop
+h : ∀ j ∈ s, ¬B j → u j ≠ 0
+⊢ (∏ j ∈ s with u j ≠ 0, u j) / ∏ j ∈ {j ∈ s | u j ≠ 0} with B j, u j =
+    (∏ j ∈ s with u j ≠ 0, u j) / ∏ j ∈ {j ∈ s | u j ≠ 0} with B j, u j

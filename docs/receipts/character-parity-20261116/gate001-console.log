@@ -1,0 +1,3 @@
+FAIL_build_source         0 thm   0 trusted  .
+    /tmp/tmp.mOj8q5QAEQ/_/build.log:docs/receipts/CharacterParity20261116/ActualInstances.lean:37:2: error: Type mismatch
+    /tmp/tmp.mOj8q5QAEQ/_/build.log:docs/receipts/CharacterParity20261116/ActualInstances.lean:45:2: error: Type mismatch

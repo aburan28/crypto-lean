@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-11-16T01:51:13.670839+00:00",
+  "jobs": {
+    "total_count": 2,
+    "jobs": [
+      {
+        "id": 133041756651,
+        "run_id": 43788617507,
+        "workflow_name": "CI",
+        "head_branch": "codex/color-checksum-budget-20261116",
+        "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43788617507",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVLvUDc8AAAAe-egZ6w",
+        "head_sha": "a8ace786fd32a5a182ee3d8af04a036c103979e8",
+        "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133041756651",
+        "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43788617507/job/133041756651",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-16T01:50:43Z",
+        "started_at": "2026-11-16T01:50:43Z",
+        "completed_at": "2026-11-16T01:50:45Z",
+        "name": "selftest",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133041756651",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      },
+      {
+        "id": 133041756928,
+        "run_id": 43788617507,
+        "workflow_name": "CI",
+        "head_branch": "codex/color-checksum-budget-20261116",
+        "run_url": "https://api.github.com/repos/aburan28/crypto-lean/actions/runs/43788617507",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOVLvUDc8AAAAe-egbAA",
+        "head_sha": "a8ace786fd32a5a182ee3d8af04a036c103979e8",
+        "url": "https://api.github.com/repos/aburan28/crypto-lean/actions/jobs/133041756928",
+        "html_url": "https://github.com/aburan28/crypto-lean/actions/runs/43788617507/job/133041756928",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-11-16T01:50:44Z",
+        "started_at": "2026-11-16T01:50:44Z",
+        "completed_at": "2026-11-16T01:50:45Z",
+        "name": "build-and-audit",
+        "steps": [],
+        "check_run_url": "https://api.github.com/repos/aburan28/crypto-lean/check-runs/133041756928",
+        "labels": [
+          "ubuntu-24.04"
+        ],
+        "runner_id": 0,
+        "runner_name": "",
+        "runner_group_id": 0,
+        "runner_group_name": ""
+      }
+    ]
+  }
+}

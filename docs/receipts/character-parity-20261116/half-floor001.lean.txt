@@ -1,0 +1,32 @@
+import CryptoLean.Group.ShortlistCompletion
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.LinearAlgebra.Matrix.SesquilinearForm
+import Mathlib.Tactic
+
+set_option autoImplicit false
+noncomputable section
+
+example {C : Type*} [AddGroup C] [Fintype C] (f : C →+ ZMod 2)
+    (hsurj : Function.Surjective f) (S : C → Prop)
+    (hS : ∀ c, f c = 1 → S c) : Nat.card C ≤ 2 * Nat.card {c : C // S c} := by
+  classical
+  have hf : Nat.card {c : C // f c = 1} * 2 = Nat.card C := by
+    simpa [Nat.card_eq_fintype_card] using
+      CryptoLean.ShortlistCompletion.fiber_card_mul f hsurj 1
+  let embed : {c : C // f c = 1} → {c : C // S c} := fun c ↦ ⟨c.val, hS c.val c.property⟩
+  have hinj : Function.Injective embed := by
+    intro c d h
+    exact Subtype.ext (congrArg Subtype.val h)
+  have hc : Nat.card {c : C // f c = 1} ≤ Nat.card {c : C // S c} := by
+    simpa only [Nat.card_eq_fintype_card] using Fintype.card_le_of_injective embed hinj
+  calc
+    Nat.card C = Nat.card {c : C // f c = 1} * 2 := hf.symm
+    _ ≤ Nat.card {c : C // S c} * 2 := Nat.mul_le_mul_right 2 hc
+    _ = 2 * Nat.card {c : C // S c} := Nat.mul_comm _ _
+
+example {I J : Type*} [Fintype I] [Fintype J] [DecidableEq I] [DecidableEq J]
+    (M : Matrix I J (ZMod 2)) (i : I) (c : J → ZMod 2) :
+    Matrix.toLinearMap₂' (S₁ := ZMod 2) (S₂ := ZMod 2) (ZMod 2) M
+      (Pi.single i 1) c = (M.mulVec c) i := by
+  rw [Matrix.toLinearMap₂'_apply']
+  simp

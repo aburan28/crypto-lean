@@ -1,0 +1,42 @@
+CryptoLean/Group/BilinearSketch.lean:24:75: error: unsolved goals
+case this
+R : Type u_1
+C : Type u_2
+inst✝³ : AddGroup R
+inst✝² : AddGroup C
+inst✝¹ : Fintype R
+inst✝ : Fintype C
+B : R →+ C →+ ZMod 2
+r0 : R
+c0 : C
+hentry : (B r0) c0 = 1
+Rows : Type (max 0 u_1) := { r // (B r) c0 = 1 }
+Witness : Type (max u_1 u_2) := (r : Rows) × { c // (B ↑r) c = 1 }
+Success : Type (max 0 u_1 u_2) := { w // (B w.1) w.2 = 1 }
+hrow : Nat.card Rows * 2 = Nat.card R
+hfiber : ∀ (r : Rows), Fintype.card { c // (B ↑r) c = 1 } * 2 = Fintype.card C
+hwitness : Nat.card Witness * 2 = Nat.card Rows * Nat.card C
+⊢ ?m.178
+
+R : Type u_1
+C : Type u_2
+inst✝³ : AddGroup R
+inst✝² : AddGroup C
+inst✝¹ : Fintype R
+inst✝ : Fintype C
+B : R →+ C →+ ZMod 2
+r0 : R
+c0 : C
+hentry : (B r0) c0 = 1
+Rows : Type (max 0 u_1) := { r // (B r) c0 = 1 }
+Witness : Type (max u_1 u_2) := (r : Rows) × { c // (B ↑r) c = 1 }
+Success : Type (max 0 u_1 u_2) := { w // (B w.1) w.2 = 1 }
+hrow : Nat.card Rows * 2 = Nat.card R
+hfiber : ∀ (r : Rows), Fintype.card { c // (B ↑r) c = 1 } * 2 = Fintype.card C
+hwitness : Nat.card Witness * 2 = Nat.card Rows * Nat.card C
+this : ?m.178 := ?this
+⊢ Nat.card R * Nat.card C ≤ 4 * Nat.card { w // (B w.1) w.2 = 1 }
+CryptoLean/Group/BilinearSketch.lean:41:13: error: unexpected token ':'; expected identifier
+CryptoLean/Group/BilinearSketch.lean:42:40: error: unexpected token ':='; expected identifier
+CryptoLean/Group/BilinearSketch.lean:49:77: error: invalid 'include', variable `hinj` has not been declared in the current scope
+CryptoLean/Group/BilinearSketch.lean:50:2: error: unexpected token 'calc'; expected command

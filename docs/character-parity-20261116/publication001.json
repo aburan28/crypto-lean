@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-16T05:12:10.733621+00:00",
+  "mathematical_source_commit": "e730b61409a82a8bc94417b365575b9dffcda500",
+  "actual_assembly_commit": "c1bc4ce3d9d9ed3e93401f11ebe5006a806d25d8",
+  "audit": {
+    "command": "PATH=/home/agent/.elan/bin:$PATH tools/proof-gate.sh --out docs/receipts/character-parity-20261116/gate002 .",
+    "exit_code": 0,
+    "theorems": 236,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/character-parity-20261116/gate002/_/audit.log"
+  },
+  "named_theorems": [
+    "CryptoLean.BilinearSketch.surjective_of_value_one",
+    "CryptoLean.BilinearSketch.half_count",
+    "CryptoLean.BilinearSketch.quarter_count",
+    "CryptoLean.BilinearSketch.matrixSketch_single",
+    "CryptoLean.BilinearSketch.matrixSketch_row",
+    "CryptoLean.BilinearSketch.matrix_half_count",
+    "CryptoLean.BilinearSketch.matrix_quarter_count",
+    "CryptoLean.ProjectiveProducts.taylor_strip_root",
+    "CryptoLean.ProjectiveProducts.indexed_taylor_nonzero",
+    "CryptoLean.ProjectiveProducts.nonzero_product_correction",
+    "CryptoLean.ProjectiveProducts.quadratic_transfer",
+    "CryptoLean.ProjectiveProducts.secant_key",
+    "CryptoLean.ProjectiveProducts.indexed_resultant",
+    "CryptoLean.ProjectiveProducts.scaled_difference_product",
+    "CryptoLean.CharacterCarry.line_norm",
+    "CryptoLean.CharacterCarry.quadratic_norm",
+    "CryptoLean.CharacterCarry.quadratic_key"
+  ],
+  "axiom_output": "docs/receipts/character-parity-20261116/axioms001.log",
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_checker_available": false,
+  "algorithm_implementation_supplied": false,
+  "algorithm_and_complexity": "hand derivation for single-character explicit-list search",
+  "new_numerical_cases": 0,
+  "new_paid_jobs": 0,
+  "new_qualification_runs": 0,
+  "identity_certificate_issued": false,
+  "pcc_standing": "attestation only; no signed verification asserted",
+  "pdf_inspection": {
+    "pages": 3,
+    "all_pages_rendered_and_visually_inspected": true,
+    "inspected_at": "2026-11-16T05:12:51.721764+00:00",
+    "renderer": "Typst0.15.1 + pdftoppm110dpi",
+    "pdf_sha256": "c4f4fdc786dbfee19b56fda34dc79c2a724538a3b480872c4771d1566db03850"
+  }
+}

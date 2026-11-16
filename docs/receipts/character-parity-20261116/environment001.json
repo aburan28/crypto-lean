@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-16T05:08:01.949610+00:00",
+  "source_commit": "c1bc4ce3d9d9ed3e93401f11ebe5006a806d25d8",
+  "mathematical_source_commit": "e730b61",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib": {
+    "url": "https://github.com/leanprover-community/mathlib4",
+    "type": "git",
+    "subDir": null,
+    "scope": "",
+    "rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+    "name": "mathlib",
+    "manifestFile": "lake-manifest.json",
+    "inputRev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+    "inherited": false,
+    "configFile": "lakefile.lean"
+  },
+  "fresh_lean4checker_available": false,
+  "native_numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0
+}

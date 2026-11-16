@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "origin/main",
+    "--",
+    "CryptoLean.lean",
+    "CryptoLean/Curve/CharacterCarry.lean",
+    "CryptoLean/Group/BilinearSketch.lean",
+    "CryptoLean/Polynomial/ProjectiveProducts.lean",
+    "docs/character-parity-20261116.md",
+    "docs/character-parity-20261116-plan.md"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}
