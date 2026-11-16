@@ -19,3 +19,8 @@ earlier Sage control remains unexecuted. All268 old subjects/18rows preserved.
 Raw errors/warnings retained, no proof-limit/trust/inventory/linter exception.
 Source/prose whitespace0/full archival2 preserves raw bytes. No independently
 signed verification or identity certificate. [pcc:unverified]
+
+Registered PCC-20261116-e8d73d with23 attestation subjects, standing unverified
+(verify-all exit2). Nineteen-row chain verifies; published430 seventeen rows and
+cc8856e eighteen rows remain exact byte/parsed prefixes. All291 subject hashes
+match, including268 previous pins. No independently signed verdict. [pcc:unverified]
