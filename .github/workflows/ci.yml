@@ -4,36 +4,53 @@ on:
     branches: [main]
     tags: ['v*']
   pull_request:
+  merge_group:
   schedule:
     - cron: '23 5 * * 1'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   selftest:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - name: Install elan
-        run: |
-          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up the pinned Lean toolchain and caches
+        uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1.7.1
+        with:
+          auto-config: false
       - run: tools/selftest/run.sh
   build-and-audit:
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-      - name: Install elan
-        run: |
-          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain "$(cat lean-toolchain)"
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up the pinned Lean toolchain and caches
+        uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1.7.1
+        with:
+          auto-config: false
       - name: Build and audit every theorem
         run: tools/proof-gate.sh --out receipts
       - if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: receipts
           path: receipts
           if-no-files-found: ignore
+
+  check:
+    name: check
+    if: ${{ always() }}
+    needs: [selftest, build-and-audit]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      SELFTEST_RESULT: ${{ needs.selftest.result }}
+      AUDIT_RESULT: ${{ needs.build-and-audit.result }}
+    steps:
+      - name: Require the gate self-test and proof audit to pass
+        run: test "$SELFTEST_RESULT" = success && test "$AUDIT_RESULT" = success
