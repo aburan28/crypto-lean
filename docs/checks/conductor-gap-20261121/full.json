@@ -1,1 +1,2 @@
-{"range": [5, 1500], "cases": 1233, "curves": 24300, "failures": [], "n_fail": 0}
+{"range": [5, 1500], "class_N_pairs": 1324, "classes": 1316, "pairs_by_height": {"1": 1233, "2": 89, "3": 2}, "curve_checks": 26339, "negative_control": {"tested": 1070, "failed": 1070}, "failures": [], "n_fail": 0}
+exit=0

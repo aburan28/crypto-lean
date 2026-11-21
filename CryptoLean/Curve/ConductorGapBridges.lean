@@ -242,4 +242,67 @@ theorem dlog_transfer_comp (φ₁ : G →+ H) (ψ₁ : H →+ G) (φ₂ : H →+
 
 end Chain
 
+/-! ## 5. General levels: Kohel's bound between any two levels, floor and
+non-floor criteria for any volcano height, and the criterion inside `ℤ[ω]` -/
+
+/-- **Kohel's bound between arbitrary levels.** If `d · O_c ⊆ O_{c'}` with
+`c, d ≠ 0`, then `v_N(c') ≤ v_N(d) + v_N(c)`. With the reverse inclusion
+(the dual isogeny) this gives `|v_N(c) − v_N(c')| ≤ v_N(deg φ)`. -/
+theorem level_le_degree_add (N : ℕ) [Fact N.Prime] {c c' d : ℤ} (hc : c ≠ 0) (hd : d ≠ 0)
+    (hcont : ∀ z ∈ conductorOrder a b c, d • z ∈ conductorOrder a b c') :
+    padicValInt N c' ≤ padicValInt N d + padicValInt N c := by
+  have h := smul_conductorOrder_le_iff.mp hcont
+  have hdc : d * c ≠ 0 := mul_ne_zero hd hc
+  have := (padicValInt_dvd_iff (p := N) (padicValInt N c') (d * c)).mp
+    ((padicValInt_dvd c').trans h)
+  rw [← padicValInt.mul hd hc]
+  exact this.resolve_left hdc
+
+/-- Both directions: `|v_N(c) − v_N(c')| ≤ v_N(d)` for an isogeny of degree
+`d` between curves with conductors `c, c'`. -/
+theorem level_difference_le_degree (N : ℕ) [Fact N.Prime] {c c' d : ℤ}
+    (hc : c ≠ 0) (hc' : c' ≠ 0) (hd : d ≠ 0)
+    (hdown : ∀ z ∈ conductorOrder a b c, d • z ∈ conductorOrder a b c')
+    (hup : ∀ z ∈ conductorOrder a b c', d • z ∈ conductorOrder a b c) :
+    (padicValInt N c' : ℤ) - padicValInt N c ≤ padicValInt N d ∧
+      (padicValInt N c : ℤ) - padicValInt N c' ≤ padicValInt N d := by
+  have h1 := level_le_degree_add N hc hd hdown
+  have h2 := level_le_degree_add N hc' hd hup
+  omega
+
+/-- **Floor, any height.** `N ∤ e` (`e = f/c`, i.e. `v_N(c) = v_N(f)`) ⇒
+`π − 1 ∉ N · O_c`: no full rational `N`-torsion. -/
+theorem floor_not_full_of_not_dvd {a' b' : ℤ} {N e x : ℤ} (he : ¬ N ∣ e) :
+    ¬ ∃ α : QuadraticAlgebra ℤ a' b', (⟨x, e⟩ : QuadraticAlgebra ℤ a' b') - 1 = N • α := by
+  rw [sub_one_mem_smul_iff]
+  exact fun h => he h.1
+
+/-- **Above the floor, any height.** `N ∣ e` ⇒ (`π − 1 ∈ N · O_c` ↔ `N ∣ x − 1`). -/
+theorem above_floor_full_iff {a' b' : ℤ} {N e x : ℤ} (he : N ∣ e) :
+    (∃ α : QuadraticAlgebra ℤ a' b', (⟨x, e⟩ : QuadraticAlgebra ℤ a' b') - 1 = N • α) ↔
+      N ∣ x - 1 := by
+  rw [sub_one_mem_smul_iff]
+  exact ⟨And.right, fun h => ⟨he, h⟩⟩
+
+/-- **The criterion inside `ℤ[ω]`.** For `c ≠ 0` and `π = x + c e ω`
+(`f = c e`): `π − 1 ∈ N · O_c` (with `O_c = conductorOrder c ⊆ ℤ[ω]`) iff
+`N ∣ e` and `N ∣ x − 1`. This is `sub_one_mem_smul_iff` transported along
+`orderEmbed`, stated with no auxiliary presentation. -/
+theorem sub_one_mem_smul_conductorOrder_iff {c : ℤ} (hc : c ≠ 0) (N x e : ℤ) :
+    (∃ α ∈ conductorOrder a b c, (⟨x, c * e⟩ : QuadraticAlgebra ℤ a b) - 1 = N • α) ↔
+      (N ∣ e ∧ N ∣ x - 1) := by
+  constructor
+  · rintro ⟨α, ⟨v, hv⟩, hα⟩
+    have hre := congrArg QuadraticAlgebra.re hα
+    have him := congrArg QuadraticAlgebra.im hα
+    simp only [re_sub, re_one, re_smul, smul_eq_mul, im_sub, im_one, sub_zero, im_smul] at hre him
+    refine ⟨⟨v, ?_⟩, ⟨α.re, hre⟩⟩
+    rw [hv] at him
+    exact mul_left_cancel₀ hc (by rw [him]; ring)
+  · rintro ⟨⟨k, hk⟩, ⟨l, hl⟩⟩
+    refine ⟨⟨l, c * k⟩, by simp, ?_⟩
+    ext
+    · simp [hl]
+    · simp [hk]; ring
+
 end CryptoLean.ConductorGap
