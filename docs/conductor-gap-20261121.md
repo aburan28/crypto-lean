@@ -4,6 +4,8 @@
 Receipts: [`receipts/ConductorGap20261121/`](receipts/ConductorGap20261121/)
 (proof gate PASS, 268 theorems, 0 trusted; `InstanceProbe.lean`).
 Exact check: [`checks/conductor-gap-20261121/`](checks/conductor-gap-20261121/).
+**Full write-up with proofs:** [`conductor-gap-20261121/manuscript.pdf`](conductor-gap-20261121/manuscript.pdf)
+(source `manuscript.typ`); bridges in `CryptoLean/Curve/ConductorGapBridges.lean`.
 
 ## Question and what was open
 
@@ -48,10 +50,15 @@ class numbers (`t² − 4p = −11·(2⁶·631409)²`, `N ∣ t + 2`, `N ∤ #E`
   bridge `d·End(E) ⊆ End(E')`). Transfer cost across the gap is therefore at
   least one degree-`N` step; for `N` large it is the dominant term (Vélu
   `O(N)`, √élu `Õ(√N)`, or Kani/Robert-style representations).
-* **Where the sides differ.** Only in the `N`-part: via Lenstra's
-  `E[N] ≅ O_c/NO_c`, the crater side has scalar Frobenius on `E[N]`
-  (eigenvalue `t/2`), so `E(F_p)[N]` or its twist's is all of `(Z/N)²`;
-  on the floor side every rational `N`-torsion subgroup is cyclic (8, 9).
+* **Where the sides differ.** Only in the `N`-part. `E[N] ⊆ E(F_p)` iff
+  `π − 1 ∈ N·End(E)` (Silverman III.4.11), i.e. iff `N ∣ f/c` and
+  `x ≡ 1 (mod N)` (`ConductorGapBridges.sub_one_mem_smul_iff`). On the floor
+  (`N ∤ f/c`) this never happens, so `E(F_p)[N]` is cyclic
+  (`floor_not_full`). Above the floor it happens iff `t ≡ 2 (mod N)`, and for
+  the twist iff `t ≡ −2` (`crater_full_iff`, `crater_trace_congr`).
+  **Erratum:** an earlier version of this note said the crater side always
+  has full rational `N`-torsion on `E` or its twist. That holds only when
+  `t ≡ ±2 (mod N)`.
 * **Prime-order DLP subgroups are untouched.** For the DLP prime `n ≠ N`,
   `gcd(N^k·ℓ^j, n) = 1` and 11–12 carry every instance across with the
   answer and the subgroup order preserved, for every solver.
@@ -102,14 +109,17 @@ Output: `checks/conductor-gap-20261121/full.json` (4 min, one core).
 
 No `maxHeartbeats`, no `native_decide`, no composite opened.
 
-## Bridges still unformalized (named hypotheses, not proved)
+## Bridges: what is now proved and what remains a hypothesis
 
-* `End(E) ≅ O_c` inside `K = Q(√D0)`, `π ↦ (t + f√D0)/2` (Deuring/CM);
-* `α ↦ φ α φ̂` identifies with `d·α` in `K`, so `d·End(E) ⊆ End(E')`
-  (input to 2);
-* `E[N] ≅ O_c/NO_c` as `O_c`-modules (Lenstra 1996; input to 8, 9);
-* isogenies/duals as `W.Point →+ W'.Point` with `ψ ∘ φ = [d]` (input to 11);
-* `#E(F_p) = p + 1 − t` (input to 10).
+Proved in `ConductorGapBridges.lean`: the order classification (every subring
+between `ℤ[fω]` and `ℤ[ω]` is `ℤ[cω]`, `c ∣ f`); Kohel's bridge
+`ι'(ψ ≫ α ≫ φ) = d·ι(α)` in any preadditive category, hence `d·O_c ⊆ O_{c'}`
+and `N^k ∣ deg φ` across `k` levels; the rational-torsion criterion;
+`n ∤ f` for cryptographic `n`; transfer along chains.
 
-Mathlib has `WeierstrassCurve` and its point group but no isogenies or
-endomorphism rings; these need that layer first.
+Still hypotheses (textbook facts, listed F1–F9 in the manuscript), because
+Mathlib has no isogenies or endomorphism rings: `End(E)` is an order of `K`
+containing `ℤ[π]`; the normalized embedding; duals and `φπ = π'φ`;
+factorization through `[N]` (Silverman III.4.11); `E[N] ≅ (ℤ/N)²`; Tate's
+isogeny theorem; existence of ascending edges; the `Pic(O)`-torsor;
+ideals of norm prime to `M` in every class.
