@@ -2,6 +2,7 @@ import CryptoLeanCore
 import CryptoLean.Bridge.Iterate
 import CryptoLean.Curve.Conductor
 import CryptoLean.Curve.ConductorGap
+import CryptoLean.Curve.ConductorGapBridges
 import CryptoLean.Curve.QuadraticNormTransport
 import CryptoLean.Curve.Identities
 import CryptoLean.Curve.LineIncidence
