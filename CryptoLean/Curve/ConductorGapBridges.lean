@@ -197,4 +197,49 @@ theorem crater_trace_congr {a' b' : ℤ} {N e x : ℤ} (he : N ∣ e) :
   rw [trace_def]
   simpa using dvd_mul_of_dvd_right he b'
 
+/-! ## 4. Volcano depth, cryptographic subgroups and chains -/
+
+/-- **Level difference divides the degree.** `d · O_c ⊆ O_{c'}`,
+`N^k ∣ c'`, `N ∤ c` (prime `N`) ⇒ `N^k ∣ d`: an isogeny from level `0` to
+level `k` of the `N`-volcano has degree divisible by `N^k`. -/
+theorem prime_pow_dvd_degree_of_gap {c c' d N : ℤ} (k : ℕ) (hN : Prime N)
+    (hcont : ∀ z ∈ conductorOrder a b c, d • z ∈ conductorOrder a b c')
+    (hNk : N ^ k ∣ c') (hNc : ¬ N ∣ c) : N ^ k ∣ d := by
+  have h := smul_conductorOrder_le_iff.mp hcont
+  have hcop : IsCoprime (N ^ k) c :=
+    ((Prime.coprime_iff_not_dvd hN).mpr hNc).pow_left
+  exact hcop.dvd_of_dvd_mul_right (hNk.trans h)
+
+/-- **A cryptographic DLP prime never divides the conductor gap.** If `n` is
+prime, `n ∣ #E = p + 1 − t`, `n² ∤ #E` (e.g. `n > √#E`), `n` odd and
+`t² − 4p = D f²`, then `n ∤ f`. So every prime dividing `f` (every volcano
+prime, every gap prime) is coprime to `n`. -/
+theorem dlp_prime_not_dvd_conductor {p t D f n : ℤ} (hn : Prime n) (hodd : ¬ n ∣ 2)
+    (hdisc : t ^ 2 - 4 * p = D * f ^ 2) (hnE : n ∣ p + 1 - t) (hsq : ¬ n ^ 2 ∣ p + 1 - t) :
+    ¬ n ∣ f := fun hnf => hsq (gap_prime_dvd_order hn hodd hdisc hnf hnE).2.2
+
+section Chain
+
+variable {G H I : Type*} [AddCommGroup G] [AddCommGroup H] [AddCommGroup I]
+
+/-- Duals compose: `(ψ₁ ∘ ψ₂) ∘ (φ₂ ∘ φ₁) = [d₂ d₁]`. -/
+theorem dual_comp (φ₁ : G →+ H) (ψ₁ : H →+ G) (φ₂ : H →+ I) (ψ₂ : I →+ H) (d₁ d₂ : ℕ)
+    (h₁ : ∀ x, ψ₁ (φ₁ x) = d₁ • x) (h₂ : ∀ y, ψ₂ (φ₂ y) = d₂ • y) :
+    ∀ x, (ψ₁.comp ψ₂) ((φ₂.comp φ₁) x) = (d₁ * d₂) • x := by
+  intro x
+  simp only [AddMonoidHom.comp_apply, h₂, map_nsmul, h₁]
+  rw [smul_smul, mul_comm]
+
+/-- **Transfer along a chain** of two maps with duals of degrees coprime to
+`ord P`. Iterating gives any finite chain. -/
+theorem dlog_transfer_comp (φ₁ : G →+ H) (ψ₁ : H →+ G) (φ₂ : H →+ I) (ψ₂ : I →+ H)
+    (d₁ d₂ : ℕ) (h₁ : ∀ x, ψ₁ (φ₁ x) = d₁ • x) (h₂ : ∀ y, ψ₂ (φ₂ y) = d₂ • y)
+    {P Q : G} (hc₁ : Nat.Coprime d₁ (addOrderOf P)) (hc₂ : Nat.Coprime d₂ (addOrderOf P))
+    (hQ : Q ∈ AddSubgroup.zmultiples P) {k : ℤ}
+    (hk : φ₂ (φ₁ Q) = k • φ₂ (φ₁ P)) : Q = k • P :=
+  dlog_transfer (φ₂.comp φ₁) (ψ₁.comp ψ₂) (d₁ * d₂) (dual_comp φ₁ ψ₁ φ₂ ψ₂ d₁ d₂ h₁ h₂)
+    (Nat.coprime_mul_iff_left.mpr ⟨hc₁, hc₂⟩) hQ hk
+
+end Chain
+
 end CryptoLean.ConductorGap
