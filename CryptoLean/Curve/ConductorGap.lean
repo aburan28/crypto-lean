@@ -12,7 +12,7 @@ Laws behind the "large prime conductor gap" study
 stated over Mathlib structures, not over one curve:
 
 * `QuadraticAlgebra ℤ a b` is an imaginary quadratic order `ℤ[ω]`,
-  `ω² = a + bω`. `conductorOrder f` is its suborder `ℤ[fω]` of index `|f|`.
+  `ω² = a + bω`. `conductorOrder f` is its suborder `ℤ[fω]` (of index `|f|` when `f ≠ 0`; `ℤ` when `f = 0`).
 * **Kohel, order form** (`smul_conductorOrder_le_iff`,
   `prime_dvd_degree_of_gap`): `d·O_f ⊆ O_g ↔ g ∣ d f`; so a prime `N` that
   divides one conductor and not the other divides every `d` with
@@ -44,7 +44,7 @@ variable {a b : ℤ}
 
 /-! ## Orders of conductor `f` inside `ℤ[ω]` -/
 
-/-- The order `ℤ[fω] = {x + yω : f ∣ y}` of index `|f|` in `ℤ[ω]`. -/
+/-- `ℤ[fω] = {x + yω : f ∣ y}`; for `f ≠ 0` the order of index `|f|` in `ℤ[ω]`, for `f = 0` just `ℤ`. -/
 def conductorOrder (a b : ℤ) (f : ℤ) : Subring (QuadraticAlgebra ℤ a b) where
   carrier := {z | f ∣ z.im}
   mul_mem' := by

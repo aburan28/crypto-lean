@@ -8,20 +8,22 @@ N with h = v_N(f) >= 1 and N | #E = p + 1 - t, count #E(F_p)[N] by brute force
 on every curve of the class (one model per j-invariant = one F_p-isomorphism
 class of trace t, since t != 0).
 
-  (A) Theorem 3.4 (gap_prime_dvd_order): N | p-1, N | t-2, N^2 | #E.
-  (S) sanity (not a prediction: forced by N | #E and E[N] = (Z/N)^2):
+  (A) Theorem 3.6 (gap_prime_dvd_order): N | p-1, N | t-2, N^2 | #E.
+  (S) sanity, not reported as a test (forced by N | #E and E[N] = (Z/N)^2):
       #E(F_p)[N] in {N, N^2}.
   (C) Theorem 3.2 + F8 + class-number formula, for any height h: the curves with
       full rational N-torsion are exactly those above the floor, so
         #cyclic * (1 + (N - chi)(N^(h-1) - 1)/(N - 1)) == #full * N^(h-1) (N - chi),
       chi = (d_K / N).  For h = 1: #cyclic == (N - chi) * #full.
-  (NC) negative control: the wrong relation #cyclic == N^h * #full must fail on
+  (NC) non-vacuity check: the wrong closed form #cyclic == N^h * #full must fail on
       classes with chi != 0 (reported, not a failure of the check).
 
-Classes with N not dividing #E have t != 2 (mod N) and no rational N-torsion; the
-t = -2 (twist) branch of Theorem 3.2 is the class of trace -t, enumerated too.
-Not tested here: Theorems 2.3 and 4.3, and levels computed independently of
-torsion. No randomness. Prints one JSON line; exit 1 on any failure.
+Only the branch t = 2 (mod N) of Theorem 3.2(3) is exercised: N | #E forces it.
+The twist branch t = -2 is not tested independently (the twist's own class has
+trace -t = 2 and re-tests the same branch); t != +-2 is trivially true over F_p
+(no rational N-torsion) and is not exercised. (C) is an aggregate count per
+class, so it cannot exclude compensating per-curve errors. Not tested here:
+Theorems 2.3 and 4.3, and levels computed independently of torsion. No randomness. Prints one JSON line; exit 1 on any failure.
 """
 import json, sys
 P_LO, P_HI = (int(sys.argv[1]), int(sys.argv[2])) if len(sys.argv) > 2 else (5, 1500)
@@ -122,7 +124,7 @@ def main():
                                       other=other, okA=okA))
     print(json.dumps(dict(range=[P_LO, P_HI], class_N_pairs=pairs, classes=len(classes_seen),
                           pairs_by_height=by_h, curve_checks=curve_checks,
-                          negative_control=dict(tested=nc_tested, failed=nc_failed),
+                          non_vacuity_check=dict(tested=nc_tested, failed=nc_failed),
                           failures=fails[:20], n_fail=len(fails))))
     return 1 if fails else 0
 

@@ -22,9 +22,14 @@ proved.
    `π, π' ↦ π_K`, then `ι'(ψ ≫ α ≫ φ) = d · ι(α)`. Hence
    `d · End X ⊆ End Y` inside `ℤ[ω]`, and a prime dividing exactly one of the
    two conductors divides `d`.
-3. **Rational `N`-torsion** (`sub_one_mem_smul_iff`, `floor_not_full`,
-   `crater_full_iff`): `π − 1 ∈ N · O_c` iff `N ∣ (f/c)` and
-   `N ∣ x − 1`. By Silverman III.4.11 this is `E[N] ⊆ E(F_p)`.
+3. **Rational `N`-torsion, algebraic criterion** (`sub_one_mem_smul_iff`,
+   `sub_one_mem_smul_conductorOrder_iff`; any volcano height:
+   `floor_not_full_of_not_dvd`, `above_floor_full_iff`; height one:
+   `floor_not_full`, `crater_full_iff`): `π − 1 ∈ N · O_c` iff `N ∣ (f/c)` and
+   `N ∣ x − 1`. That this is `E[N] ⊆ E(F_p)` (Silverman III.4.11) is a curve
+   fact, not formalized here.
+4. **Levels, cryptographic primes, chains** (`level_difference_le_degree`,
+   `dlp_prime_not_dvd_conductor`, `HasDual.comp`, `dlog_transfer_of_hasDual`).
 
 Category-level conventions: `f ≫ g` is "first `f`, then `g`".
 -/
@@ -120,9 +125,9 @@ theorem hom_conj_eq_smul (φ : X ⟶ Y) (ψ : Y ⟶ X) (d : ℤ)
     simp only [im_smul, smul_eq_mul] at this
     simpa using mul_left_cancel₀ hm this
 
-/-- **`d · End X ⊆ End Y`.** If `ι` maps `End X` into `O_c` and `ι'` maps
-`End Y` *onto* nothing more than `O_{c'}` (every element of `O_c` is some
-`ι α`, every `ι' β ∈ O_{c'}`), then `d · O_c ⊆ O_{c'}`. -/
+/-- **`d · End X ⊆ End Y`.** If every element of `O_c` is `ι α` for some
+`α ∈ End X` (`ι` maps onto `O_c`) and every `ι' β` lies in `O_{c'}`, then
+`d · O_c ⊆ O_{c'}`. -/
 theorem kohel_smul_le (φ : X ⟶ Y) (ψ : Y ⟶ X) (d : ℤ)
     (hψφ : ψ ≫ φ = d • 𝟙 Y) (π : X ⟶ X) (π' : Y ⟶ Y) (hcomm : π ≫ φ = φ ≫ π')
     (hindex : ∀ α : X ⟶ X, ∃ m : ℤ, m ≠ 0 ∧ ∃ u v : ℤ, m • α = u • 𝟙 X + v • π)
@@ -304,5 +309,40 @@ theorem sub_one_mem_smul_conductorOrder_iff {c : ℤ} (hc : c ≠ 0) (N x e : �
     ext
     · simp [hl]
     · simp [hk]; ring
+
+/-! ## 6. Chains of any length -/
+
+section HasDual
+
+variable {G H I : Type*} [AddCommGroup G] [AddCommGroup H] [AddCommGroup I]
+
+/-- `φ` has a dual of degree `d`: some `ψ` with `ψ ∘ φ = [d]`. -/
+def HasDual (φ : G →+ H) (d : ℕ) : Prop := ∃ ψ : H →+ G, ∀ x, ψ (φ x) = d • x
+
+/-- Composition of maps with duals has a dual of the product degree; by
+induction this covers every finite chain `φ_r ∘ ⋯ ∘ φ_1`. -/
+theorem HasDual.comp {φ₁ : G →+ H} {φ₂ : H →+ I} {d₁ d₂ : ℕ}
+    (h₁ : HasDual φ₁ d₁) (h₂ : HasDual φ₂ d₂) : HasDual (φ₂.comp φ₁) (d₁ * d₂) := by
+  obtain ⟨ψ₁, hψ₁⟩ := h₁
+  obtain ⟨ψ₂, hψ₂⟩ := h₂
+  exact ⟨ψ₁.comp ψ₂, dual_comp φ₁ ψ₁ φ₂ ψ₂ d₁ d₂ hψ₁ hψ₂⟩
+
+/-- The identity has a dual of degree one (base of the chain induction). -/
+theorem HasDual.id : HasDual (AddMonoidHom.id G) 1 := ⟨AddMonoidHom.id G, by simp⟩
+
+/-- **Transfer along any map with a dual of degree prime to `ord P`**
+(in particular along any finite chain built with `HasDual.comp`). -/
+theorem dlog_transfer_of_hasDual {φ : G →+ H} {d : ℕ} (h : HasDual φ d) {P Q : G}
+    (hcop : Nat.Coprime d (addOrderOf P)) (hQ : Q ∈ AddSubgroup.zmultiples P) {k : ℤ}
+    (hk : φ Q = k • φ P) : Q = k • P := by
+  obtain ⟨ψ, hψ⟩ := h
+  exact dlog_transfer φ ψ d hψ hcop hQ hk
+
+theorem addOrderOf_map_eq_of_hasDual {φ : G →+ H} {d : ℕ} (h : HasDual φ d) {P : G}
+    (hcop : Nat.Coprime d (addOrderOf P)) : addOrderOf (φ P) = addOrderOf P := by
+  obtain ⟨ψ, hψ⟩ := h
+  exact addOrderOf_map_eq φ ψ d hψ hcop
+
+end HasDual
 
 end CryptoLean.ConductorGap

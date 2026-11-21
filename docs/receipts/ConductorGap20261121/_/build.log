@@ -1,50 +1,44 @@
-⚠ [769/827] Replayed CryptoLean.Bridge.Iterate
+⚠ [769/824] Replayed CryptoLean.Bridge.Iterate
 warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [1180/1415] Replayed CryptoLean.Curve.Conductor
+⚠ [1180/1379] Replayed CryptoLean.Curve.Conductor
 warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3142/3331] Replayed CryptoLean.Curve.ConductorGap
-warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Algebra.QuadraticAlgebra.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.FieldTheory.Finiteness` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3143/3331] Replayed CryptoLean.Curve.QuadraticNormTransport
+⚠ [3142/3239] Replayed CryptoLean.Curve.QuadraticNormTransport
 warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3144/3331] Replayed CryptoLean.Curve.Identities
+⚠ [3143/3239] Replayed CryptoLean.Curve.Identities
 warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3157/3331] Replayed CryptoLean.Curve.LineIncidence
+⚠ [3156/3239] Replayed CryptoLean.Curve.LineIncidence
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3160/3331] Replayed CryptoLean.Polynomial.ProjectiveProducts
+⚠ [3159/3239] Replayed CryptoLean.Polynomial.ProjectiveProducts
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3167/3331] Replayed CryptoLean.Curve.CharacterCarry
+⚠ [3166/3239] Replayed CryptoLean.Curve.CharacterCarry
 warning: CryptoLean/Curve/CharacterCarry.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3168/3331] Replayed CryptoLean.Group.CyclicTwists
+⚠ [3167/3239] Replayed CryptoLean.Group.CyclicTwists
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3170/3331] Replayed CryptoLean.Curve.Twists
+⚠ [3169/3239] Replayed CryptoLean.Curve.Twists
 warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3171/3331] Replayed CryptoLean.Curve.SubfieldTwists
+⚠ [3170/3239] Replayed CryptoLean.Curve.SubfieldTwists
 warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.RingTheory.IntegralDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.Algebra.GroupWithZero.Units.Fintype` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3172/3331] Replayed CryptoLean.Group.Torsion
+⚠ [3171/3239] Replayed CryptoLean.Group.Torsion
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3174/3331] Replayed CryptoLean.Group.SingleRelation
+⚠ [3173/3239] Replayed CryptoLean.Group.SingleRelation
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Data.Nat.Choose.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3368/3448] Replayed CryptoLean.Group.SubsetFourier
+⚠ [3367/3442] Replayed CryptoLean.Group.SubsetFourier
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Combinatorics.Additive.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -54,130 +48,136 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: CryptoLean/Group/SubsetFourier.lean:129:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3369/3448] Replayed CryptoLean.Group.PartiteCoverage
+⚠ [3368/3442] Replayed CryptoLean.Group.PartiteCoverage
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3370/3448] Replayed CryptoLean.Group.ShiftRepresentations
+⚠ [3369/3442] Replayed CryptoLean.Group.ShiftRepresentations
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3756/3781] Replayed CryptoLean.Group.ShiftMoments
+⚠ [3755/3781] Replayed CryptoLean.Group.ShiftMoments
 warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.Moments.Variance` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.Probability.UniformOn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftMoments.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3757/3781] Replayed CryptoLean.Group.RankThreshold
+⚠ [3756/3781] Replayed CryptoLean.Group.RankThreshold
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Logic.Equiv.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Algebra.Group.Equiv.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3759/3781] Replayed CryptoLean.Group.ShortlistCompletion
+⚠ [3758/3781] Replayed CryptoLean.Group.ShortlistCompletion
 warning: CryptoLean/Group/ShortlistCompletion.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3760/3781] Replayed CryptoLean.Group.ColorChecksums
+⚠ [3759/3781] Replayed CryptoLean.Group.ColorChecksums
 warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Data.Fintype.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ColorChecksums.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3761/3781] Replayed CryptoLean.Group.BilinearSketch
+⚠ [3760/3781] Replayed CryptoLean.Group.BilinearSketch
 warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.LinearAlgebra.Matrix.SesquilinearForm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/BilinearSketch.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3762/3781] Replayed CryptoLean.Polynomial.NormCharts
+⚠ [3761/3781] Replayed CryptoLean.Polynomial.NormCharts
 warning: CryptoLean/Polynomial/NormCharts.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3763/3781] Replayed CryptoLean.Polynomial.EllipticMaps
+⚠ [3762/3781] Replayed CryptoLean.Polynomial.EllipticMaps
 warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/EllipticMaps.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3765/3781] Replayed CryptoLean.Polynomial.InterpolationKernels
+⚠ [3764/3781] Replayed CryptoLean.Polynomial.InterpolationKernels
 warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.LinearAlgebra.Lagrange` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Logic.Equiv.Set` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/InterpolationKernels.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3766/3781] Replayed CryptoLean.Curve.CenteredCompletion
+⚠ [3765/3781] Replayed CryptoLean.Curve.CenteredCompletion
 warning: CryptoLean/Curve/CenteredCompletion.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3767/3781] Replayed CryptoLean.Polynomial.ProjectiveVelu
+⚠ [3766/3781] Replayed CryptoLean.Polynomial.ProjectiveVelu
 warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.RingTheory.Coprime.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveVelu.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3768/3781] Replayed CryptoLean.Polynomial.RetainedRemainder
+⚠ [3767/3781] Replayed CryptoLean.Polynomial.RetainedRemainder
 warning: CryptoLean/Polynomial/RetainedRemainder.lean: imports `Mathlib.Algebra.Ring.GeomSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3769/3781] Replayed CryptoLean.Polynomial.RootCertificate
+⚠ [3768/3781] Replayed CryptoLean.Polynomial.RootCertificate
 warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/RootCertificate.lean: imports `Mathlib.FieldTheory.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3770/3781] Replayed CryptoLean.Semaev.S3
+⚠ [3769/3781] Replayed CryptoLean.Semaev.S3
 warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3771/3781] Replayed CryptoLean.SplitPrime.Obstruction
+⚠ [3770/3781] Replayed CryptoLean.SplitPrime.Obstruction
 warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.GroupTheory.Coset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/SplitPrime/Obstruction.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3772/3781] Replayed CryptoLean.Combinatorics.FiniteIsolation
+⚠ [3771/3781] Replayed CryptoLean.Combinatorics.FiniteIsolation
 warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Combinatorics/FiniteIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3773/3781] Replayed CryptoLean.Group.PairColourIsolation
+⚠ [3772/3781] Replayed CryptoLean.Group.PairColourIsolation
 warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Group.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Algebra.Field.ZMod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PairColourIsolation.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3779/3781] Built CryptoLean.Curve.ConductorGapBridges (3.4s)
-warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.CategoryTheory.Preadditive.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.RingTheory.PrincipalIdealDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.Algebra.EuclideanDomain.Int` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-✔ [3780/3781] Built CryptoLean (3.3s)
-Build completed successfully (3781 jobs).
-⚠ [773/978] Replayed CryptoLean.Bridge.Iterate
-warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [1184/1218] Replayed CryptoLean.Curve.Conductor
-warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3146/3287] Replayed CryptoLean.Curve.ConductorGap
+⚠ [3778/3781] Built CryptoLean.Curve.ConductorGap (3.6s)
 warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Algebra.QuadraticAlgebra.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.FieldTheory.Finiteness` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3147/3287] Replayed CryptoLean.Curve.ConductorGapBridges
+⚠ [3779/3781] Built CryptoLean.Curve.ConductorGapBridges (2.7s)
 warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.CategoryTheory.Preadditive.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.RingTheory.PrincipalIdealDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.Algebra.EuclideanDomain.Int` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3148/3287] Replayed CryptoLean.Curve.QuadraticNormTransport
+✔ [3780/3781] Built CryptoLean (2.8s)
+Build completed successfully (3781 jobs).
+⚠ [773/961] Replayed CryptoLean.Bridge.Iterate
+warning: CryptoLean/Bridge/Iterate.lean: imports `Mathlib.Dynamics.PeriodicPts.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [1184/1267] Replayed CryptoLean.Curve.Conductor
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.NumberTheory.Padics.PadicVal.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3146/3269] Replayed CryptoLean.Curve.ConductorGap
+warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Algebra.QuadraticAlgebra.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.FieldTheory.Finiteness` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.GroupTheory.OrderOfElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGap.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3147/3269] Replayed CryptoLean.Curve.ConductorGapBridges
+warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.CategoryTheory.Preadditive.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.RingTheory.PrincipalIdealDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Curve/ConductorGapBridges.lean: imports `Mathlib.Algebra.EuclideanDomain.Int` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3148/3269] Replayed CryptoLean.Curve.QuadraticNormTransport
 warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3149/3287] Replayed CryptoLean.Curve.Identities
+⚠ [3149/3269] Replayed CryptoLean.Curve.Identities
 warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/Identities.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3162/3287] Replayed CryptoLean.Curve.LineIncidence
+⚠ [3162/3269] Replayed CryptoLean.Curve.LineIncidence
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Formula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/LineIncidence.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3165/3287] Replayed CryptoLean.Polynomial.ProjectiveProducts
+⚠ [3165/3269] Replayed CryptoLean.Polynomial.ProjectiveProducts
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.RingTheory.Polynomial.Resultant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Algebra.Polynomial.Taylor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Polynomial/ProjectiveProducts.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3172/3287] Replayed CryptoLean.Curve.CharacterCarry
+⚠ [3172/3269] Replayed CryptoLean.Curve.CharacterCarry
 warning: CryptoLean/Curve/CharacterCarry.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3173/3287] Replayed CryptoLean.Group.CyclicTwists
+⚠ [3173/3269] Replayed CryptoLean.Group.CyclicTwists
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3175/3287] Replayed CryptoLean.Curve.Twists
+⚠ [3175/3269] Replayed CryptoLean.Curve.Twists
 warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/Twists.lean: imports `Mathlib.Tactic.FieldSimp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3176/3287] Replayed CryptoLean.Curve.SubfieldTwists
+⚠ [3176/3269] Replayed CryptoLean.Curve.SubfieldTwists
 warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.RingTheory.IntegralDomain` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Curve/SubfieldTwists.lean: imports `Mathlib.Algebra.GroupWithZero.Units.Fintype` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3177/3287] Replayed CryptoLean.Group.Torsion
+⚠ [3177/3269] Replayed CryptoLean.Group.Torsion
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3179/3287] Replayed CryptoLean.Group.SingleRelation
+⚠ [3179/3269] Replayed CryptoLean.Group.SingleRelation
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Data.Nat.Choose.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SingleRelation.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3373/3525] Replayed CryptoLean.Group.SubsetFourier
+⚠ [3373/3519] Replayed CryptoLean.Group.SubsetFourier
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Combinatorics.Additive.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/SubsetFourier.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -187,12 +187,12 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: CryptoLean/Group/SubsetFourier.lean:129:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [3374/3525] Replayed CryptoLean.Group.PartiteCoverage
+⚠ [3374/3519] Replayed CryptoLean.Group.PartiteCoverage
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.GroupTheory.Index` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Algebra.Order.BigOperators.Ring.Finset` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/PartiteCoverage.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [3375/3525] Replayed CryptoLean.Group.ShiftRepresentations
+⚠ [3375/3519] Replayed CryptoLean.Group.ShiftRepresentations
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -315,7 +315,7 @@ warning: CryptoLean/Curve/Conductor.lean: imports `Mathlib.Tactic.Ring` from pac
 ⚠ [1172/1172] Replayed CryptoLean.Curve.QuadraticNormTransport
 warning: CryptoLean/Curve/QuadraticNormTransport.lean: imports `Mathlib.Tactic.Linarith` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 Build completed successfully (1172 jobs).
-⚠ [1517/1531] Replayed CryptoLean.Group.CyclicTwists
+⚠ [1517/1539] Replayed CryptoLean.Group.CyclicTwists
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Data.Int.GCD` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.GroupTheory.SpecificGroups.Cyclic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/CyclicTwists.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -392,7 +392,7 @@ warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Algebra.Group.Equ
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.SetTheory.Cardinal.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/RankThreshold.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 Build completed successfully (3139 jobs).
-⚠ [3137/3253] Replayed CryptoLean.Group.ShiftRepresentations
+⚠ [3137/3254] Replayed CryptoLean.Group.ShiftRepresentations
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -437,7 +437,7 @@ Build completed successfully (3331 jobs).
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/Torsion.lean: imports `Mathlib.Algebra.Group.Hom.Instances` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 Build completed successfully (668 jobs).
-⚠ [3137/3224] Replayed CryptoLean.Group.ShiftRepresentations
+⚠ [3137/3393] Replayed CryptoLean.Group.ShiftRepresentations
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Data.Finsupp.Single` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: CryptoLean/Group/ShiftRepresentations.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file

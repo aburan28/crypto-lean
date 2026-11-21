@@ -38,8 +38,10 @@ transfers in both directions with the answer preserved. Consequently, for such
 $n$, floor and crater are equally hard up to the cost of computing and
 evaluating a connecting isogeny (a non-uniform reduction); bounding that
 cost is the subject of [Gal99, JMV05, Gal25, GGR25] and is not addressed here.
-The algebraic steps are verified in Lean 4 / Mathlib; the inputs about elliptic
-curves (F1–F10 below) are standard, stated as explicit hypotheses and cited.
+The order-theoretic and group-theoretic steps marked [Lean] are verified in
+Lean 4 / Mathlib; Lemma 3.1 and Proposition 3.4 are proved on paper only; the
+inputs about elliptic curves (F1–F10 below) are standard, stated as explicit
+hypotheses and cited.
 
 = Setting, conventions and what is machine-checked
 
@@ -53,9 +55,10 @@ $ cal(O)_c = ZZ[c omega] = { x + y omega : c | y } $
 Then $d_K = b^2 + 4a$, $ZZ[pi] = cal(O)_f$, and after replacing $omega$ by its conjugate if necessary
 $pi = x_0 + f omega$ with $f >= 1$; every curve in the isogeny class has the same $t$, $f$, $d_K$.
 
-For a prime $N$ and $h = v_N (f) >= 1$, the $N$-*volcano* of the class has
-levels $0, dots, h$; a curve with $"End"(E) tilde.equiv cal(O)_c$ is on level
-$v_N (c)$, the *crater* is level $0$ and the *floor* is level $h$. "Large prime
+For a prime $N$ and $h = v_N (f) >= 1$, the $N$-isogeny graph of the class is a
+union of $N$-volcanoes (one family for each $N$-free part of the conductor).
+We define the *level* of a curve with $"End"(E) tilde.equiv cal(O)_c$ as $v_N (c) in {0, dots, h}$;
+the *crater* side is level $0$ and the *floor* is level $h$. "Large prime
 conductor gap" means $h >= 1$ for a large prime $N$; most statements are for
 general $h$.
 
@@ -63,12 +66,11 @@ general $h$.
 `cfc55fc`) in `aburan28/crypto-lean`, modules `CryptoLean.Curve.ConductorGap`
 and `CryptoLean.Curve.ConductorGapBridges`; every such declaration depends only
 on `propext`, `Classical.choice`, `Quot.sound` (library-wide proof-gate receipt in
-`docs/receipts/ConductorGap20261121/`: PASS, 0 trusted; the two modules contribute 40 audited declarations). #src("F_i")
+`docs/receipts/ConductorGap20261121/`: PASS, 0 trusted; the two modules contribute 42 theorems and 2 equation lemmas). #src("F_i")
 marks one of the standard facts below, which Mathlib does not yet contain
 (it has Weierstrass curves and their point groups but no isogenies or
 endomorphism rings); in Lean they appear as hypotheses of the theorems that
-use them. Pinpoint references (theorem numbers) are given to the best of
-our knowledge and should be checked against the editions cited.
+use them.
 
 == Standard facts used (not formalized)
 
@@ -77,7 +79,7 @@ our knowledge and should be checked against the editions cited.
 / F3 (duals): an $FF_p$-isogeny $phi : E -> E'$ of degree $d$ has a dual $hat(phi)$ with $hat(phi) phi = [d]_E$ #src("Sil09, III.6.1") and $phi hat(phi) = [d]_(E')$ #src("Sil09, III.6.2(a)"); $phi pi_E = pi_(E') phi$ because $phi$ is defined over $FF_p$; then $(hat(phi) pi_(E') - pi_E hat(phi)) phi = hat(phi) phi pi_E - pi_E hat(phi) phi = 0$, so $hat(phi) pi_(E') = pi_E hat(phi)$ (as $phi$ is surjective on $overline(FF)_p$-points) and $hat(phi)$ is defined over $FF_p$.
 / F4 (factorization): for $N != p$ ($[N]$ separable), if $psi : E -> E$ is an isogeny and $E[N] subset.eq ker psi$, then $psi = lambda compose [N]$ for an endomorphism $lambda$ #src("Sil09, III.4.11").
 / F5 (torsion): $E[N] tilde.equiv (ZZ slash N)^2$ for $N != p$ #src("Sil09, III.6.4(b)").
-/ F6 (Tate): $FF_p$-isogenous curves have the same $\#E(FF_p) = p + 1 - t$ #src("Tat66").
+/ F6 (equal point counts): $FF_p$-isogenous curves have the same $\#E(FF_p) = p + 1 - t$: from $phi (1 - pi_E) = (1 - pi_(E')) phi$ and multiplicativity of degrees, $deg(1 - pi_E) = deg(1 - pi_(E'))$, and $\#E(FF_p) = deg(1 - pi_E)$ since $1 - pi_E$ is separable #src("Sil09, III.5.5"). (The converse is Tate's theorem [Tat66].)
 / F7 (volcano structure): if $ell | c$ is prime, $E$ has an $FF_p$-rational $ell$-isogeny to a curve with endomorphism ring $cal(O)_(c slash ell)$ (the ascending edge) #src("Koh96, Ch. 4; FM02; Sut13, §2").
 / F8 (CM torsor): the $FF_p$-isomorphism classes of curves with trace $t$ and endomorphism ring $cal(O)$ form a principal homogeneous space under $"Pic"(cal(O))$; an invertible integral ideal $frak(a)$ gives an $FF_p$-isogeny $E -> frak(a) * E$ of degree $"Nm"(frak(a))$ #src("Wat69, §5; Sch87, §4").
 / F9 (ideals prime to $M$): every class of $"Pic"(cal(O))$ contains an invertible integral ideal of norm prime to any given $M != 0$ #src("Cox13, Cor. 7.17").
@@ -117,7 +119,7 @@ $N$-volcano has degree divisible by $N^(|k - k'|)$.
 
 = Rational $N$-torsion: what separates floor from crater
 
-#thm("Lemma 3.1", none, [For $N != p$: $E[N] subset.eq E(FF_p)$ iff $pi - 1 in N dot "End"(E)$.])
+#thm("Lemma 3.1", none, [For a prime $N != p$: $E[N] subset.eq E(FF_p)$ iff $pi - 1 in N dot "End"(E)$.])
 
 _Proof._ If $pi - 1 = N lambda$ then $(pi - 1)(E[N]) = lambda(N E[N]) = 0$.
 Conversely $E(FF_p) = ker(pi - 1)$ and $pi - 1 != 0$, so F4 gives
@@ -127,10 +129,10 @@ Write $cal(O)_c = ZZ[omega_c]$, $omega_c = c omega$,
 $omega_c^2 = c^2 a + c b omega_c$ (`orderEmbed`, `range_orderEmbed`), and
 $pi = x + e omega_c$ with $e = f slash c$. Then $"tr" pi = t = 2x + c b e$.
 
-#thm("Theorem 3.2", [floor/crater torsion], [Let $N$ be an odd prime, $N | f$, and $E$ a curve with conductor $c$, $e = f slash c$.
+#thm("Theorem 3.2", [floor/crater torsion], [Let $N$ be an odd prime, $N | f$ (so $N != p$, as $p divides.not f$), and $E$ a curve with conductor $c$, $e = f slash c$.
 1. $E[N] subset.eq E(FF_p)$ iff $N | e$ and $x equiv 1 med (mod N)$.
 2. *Floor* ($v_N (c) = v_N (f)$, i.e. $N divides.not e$): $E[N] subset.eq.not E(FF_p)$, so $E(FF_p)[N]$ is cyclic (of order $1$ or $N$).
-3. *Above the floor* ($N | e$, any level $< h$; in particular the crater): $t equiv 2x med (mod N)$, and $E[N] subset.eq E(FF_p)$ iff $t equiv 2 med (mod N)$; for the quadratic twist, iff $t equiv -2$. If $t equiv.not plus.minus 2$, neither $E$ nor its twist has full rational $N$-torsion.]) #lean("sub_one_mem_smul_iff, sub_one_mem_smul_conductorOrder_iff, floor_not_full_of_not_dvd, above_floor_full_iff, crater_trace_congr")
+3. *Above the floor* ($N | e$, any level $< h$; in particular the crater): $t equiv 2x med (mod N)$, and $E[N] subset.eq E(FF_p)$ iff $t equiv 2 med (mod N)$; for the quadratic twist, iff $t equiv -2$. If $t equiv.not plus.minus 2$, neither $E$ nor its twist has full rational $N$-torsion.]) #lean("algebraic criterion only: sub_one_mem_smul_iff, sub_one_mem_smul_conductorOrder_iff, floor_not_full_of_not_dvd, above_floor_full_iff, crater_trace_congr")
 
 _Proof._ (1) Lemma 3.1 and $(x - 1) + e omega_c in N cal(O)_c$ iff
 $N | x - 1$ and $N | e$. (2) By (1); a subgroup of $E[N] tilde.equiv (ZZ slash N)^2$
@@ -142,8 +144,8 @@ classical (it follows from F10 [Len96]) and is used to compute volcano heights
 and to walk volcanoes [MMSTV08, IJ13]; Theorem 3.2 is recorded here for its
 formal proof and its exact hypotheses.
 
-*Remark 3.3 (module structure).* With Lenstra's theorem
-$E[N] tilde.equiv cal(O)_c slash N cal(O)_c$ as $cal(O)_c$-modules [Len96],
+*Remark 3.3 (module structure).* Applying F10 over $FF_(p^k)$ with $E[N] subset.eq E(FF_(p^k))$
+(Frobenius $pi^k$) gives $E[N] tilde.equiv cal(O)_c slash N cal(O)_c$ as $cal(O)_c$-modules [Len96]. With this,
 the algebra gives more: above the floor $pi$ acts on $E[N]$ as the scalar
 $x equiv t slash 2$, so its eigenspace is all $N^2$ points
 #lean("frobenius_scalar_iff, frobenius_eigen_card_full, scalar_trace_congr, crater_side_full");
@@ -151,6 +153,10 @@ on the floor every eigenspace of $pi$ on $E[N]$ has at most $N$ points
 #lean("frobenius_eigen_card_le"). Theorem 3.2 does not need this. (`crater_side_full` and `floor_side_line` are the special cases $v_N (c) = 0$ and $h = 1$.)
 
 #thm("Proposition 3.4", [group structure by level], [Let $pi = x + e omega_c$ in $cal(O)_c$ and $g = gcd(x - 1, e)$. Then $E(FF_p) tilde.equiv ZZ slash g times ZZ slash (\#E(FF_p) slash g)$. In particular, for a prime $ell$, the $ell$-primary parts of $E(FF_p)$ and $E'(FF_p)$ for two curves of the class can differ only if $ell | f$.])
+
+This is classical: by [Len96], $E(FF_p) tilde.equiv ZZ slash n_1 times ZZ slash n_2$ with $n_1$ the largest
+integer such that $(pi - 1) slash n_1 in "End"(E)$; see also [MMSTV08, IJ13]. We record the
+explicit form and a proof.
 
 _Proof._ By F10, $E(FF_p) tilde.equiv cal(O)_c slash (pi - 1) cal(O)_c$ as groups. Write
 $cal(O)_c = ZZ[omega_c]$, $omega_c^2 = A + B omega_c$, and $pi - 1 = g beta$ with
@@ -187,13 +193,13 @@ $N | p - 1$, the Tate pairing $E(FF_p)[N] times E(FF_p) slash N E(FF_p) -> mu_N$
 non-degenerate [FR94], which reduces the DLP in $E(FF_p)[N]$ to $mu_N subset FF_p^*$
 also on the floor, where the $N$-part is cyclic of order $N^k$, $k >= 2$; this
 holds on every curve of the class (F6). In any case $N^2 | \#E$ forces
-$N < sqrt(p) + 1$, so this DLP is also easy by generic means.
+$N^2 <= \#E <= (sqrt(p) + 1)^2$, i.e. $N <= sqrt(p) + 1$, so this DLP is also easy by generic means.
 
 = Transfer of the ECDLP across the gap
 
 #thm("Corollary 4.1", [cryptographic subgroups avoid the conductor], [If $n$ is an odd prime with $n | \#E(FF_p)$ and $n^2 divides.not \#E(FF_p)$ (e.g. $n > sqrt(\#E)$), then $n divides.not f$. Hence $n$ divides no conductor $c(E')$ and is different from every gap prime.]) #lean("dlp_prime_not_dvd_conductor")
 
-#thm("Theorem 4.2", [transfer], [Let $phi : G -> H$, $psi : H -> G$ be homomorphisms of abelian groups with $psi compose phi = [d]$, and $P in G$ of order $n$ with $gcd(d, n) = 1$. Then $phi(P)$ has order $n$, and for $Q in chevron.l P chevron.r$ and $k in ZZ$: $phi(Q) = k phi(P) arrow.r.double Q = k P$. The same holds for a chain $phi_r compose dots.c compose phi_1$ with duals of degrees $d_i$ prime to $n$.]) #lean("dlog_transfer, addOrderOf_map_eq, dual_comp, dlog_transfer_comp")
+#thm("Theorem 4.2", [transfer], [Let $phi : G -> H$, $psi : H -> G$ be homomorphisms of abelian groups with $psi compose phi = [d]$, and $P in G$ of order $n$ with $gcd(d, n) = 1$. Then $phi(P)$ has order $n$, and for $Q in chevron.l P chevron.r$ and $k in ZZ$: $phi(Q) = k phi(P) arrow.r.double Q = k P$. The same holds for a chain $phi_r compose dots.c compose phi_1$ with duals of degrees $d_i$ prime to $n$, since maps with duals of degree $d_i$ compose to a map with a dual of degree $product d_i$.]) #lean("dlog_transfer, addOrderOf_map_eq, HasDual.comp, HasDual.id, dlog_transfer_of_hasDual, addOrderOf_map_eq_of_hasDual")
 
 Transferring ECDLP instances along isogenies is classical (e.g. [Gal99, JMV05, GHS02]).
 Applied to $G = E(FF_p)$, $H = E'(FF_p)$ (Mathlib's `WeierstrassCurve.Affine.Point`
@@ -214,22 +220,33 @@ $E_0 -> E'_0$ of that degree; compose with the dual of $E' -> E'_0$ (degree $c'$
 The total degree $c "Nm"(frak(a)) c'$ is prime to $n p$. Theorem 4.2 for the chain
 gives the reductions. #h(1fr) $square$
 
-#thm("Corollary 4.4", [no floor/crater ECDLP gap], [Let $N$ be a prime with $v_N (f) >= 1$, $E$ on the crater and $E'$ on the floor of the $N$-volcano, and $n$ as in Corollary 4.1. Then: (a) $\#E(FF_p) = \#E'(FF_p)$, both order-$n$ subgroups are cyclic of order $n$, and the embedding degree $"ord"_n (p)$ and anomalousness coincide, so every attack whose applicability and cost depend only on $(p, \#E, n)$ — Pohlig–Hellman on the $n$-part, MOV/Frey–Rück, Smart–Satoh–Araki–Semaev, and generic algorithms with the $Omega(sqrt(n))$ lower bound of [Sho97] — is identical; (b) for every algorithm $A'$ on $E'$ there is $A$ on $E$, given $phi$ as advice (a non-uniform reduction), with $T_A <= T_(A') + 2 C(phi)$ and the same success probability on uniformly random instances ($phi$ is a bijection between the order-$n$ subgroups), and conversely, where $phi$ is a connecting isogeny of degree prime to $n$ (Theorem 4.3), which necessarily has degree divisible by $N^(v_N (f))$ when it goes directly from crater to floor (Theorem 2.3); (c) the groups $E(FF_p)$ and $E'(FF_p)$ differ only in their $ell$-primary parts for primes $ell | f$ (Proposition 3.4; not only at $ell = N$, see Example 3.5), all of which are prime to $n$.])
+#thm("Corollary 4.4", [no floor/crater ECDLP gap], [Let $N$ be a prime with $v_N (f) >= 1$, $E$ on the crater and $E'$ on the floor of the $N$-volcano, and $n$ as in Corollary 4.1. Then: (a) $\#E(FF_p) = \#E'(FF_p)$, both order-$n$ subgroups are cyclic of order $n$, and the embedding degree $"ord"_n (p)$ and anomalousness coincide, so every attack whose applicability and cost depend only on $(p, \#E, n)$ — Pohlig–Hellman on the $n$-part, MOV/Frey–Rück, Smart–Satoh–Araki–Semaev, and generic algorithms with the $Omega(sqrt(n))$ lower bound of [Sho97] — is identical; (b) for every algorithm $A'$ on $E'$ there is $A$ on $E$, given $phi$ as advice (a non-uniform reduction), with $T_A <= T_(A') + 2 C(phi)$ and the same success probability on uniformly random instances ($phi$ is a bijection between the order-$n$ subgroups), and conversely with $C(hat(phi))$ in place of $C(phi)$, where $phi$ is a connecting isogeny of degree prime to $n$ (Theorem 4.3); every $FF_p$-isogeny between $E$ and $E'$, composite or not, has degree divisible by $N^(v_N (f))$ (Theorem 2.3); (c) the groups $E(FF_p)$ and $E'(FF_p)$ differ only in their $ell$-primary parts for primes $ell | f$ (Proposition 3.4; not only at $ell = N$, see Example 3.5), all of which are prime to $n$.])
 
 _Proof._ (a) F6; $n^2 > \#E$ or $n^2 divides.not \#E$ makes the $n$-part
 cyclic of order $n$; $"ord"_n (p)$ depends on $n, p$ only. (b) Theorems 4.2,
 4.3 and 2.3. (c) Proposition 3.4 and Corollary 4.1. #h(1fr) $square$
 
+Nothing in Corollary 4.4 uses that $E$ is on the crater and $E'$ on the floor:
+it holds for any two curves of the class. The floor/crater case is the one
+where the connecting isogenies are forced to have large degree.
+
 *Scope and what is not claimed.*
 - The statements concern a prime $n$ with $n parallel \#E(FF_p)$. Theorem 4.3 asserts
   *existence* of a connecting isogeny. It says nothing about the cost of finding
   or evaluating one, and Corollary 4.4(b) is non-uniform: $phi$ is given to $A$.
-- Evaluating a direct crater-to-floor isogeny can be expensive: its degree is
-  divisible by $N^h$ (Theorem 2.3), and on the crater $pi$ acts on $E[N]$ as the
-  scalar $x equiv t slash 2$ (Remark 3.3), so the kernel of an $N$-isogeny is defined
-  over $FF_(p^k)$ with $k = "ord"_N (x)$, which may be as large as $N - 1$. Vélu-type
-  evaluation is then far from cheap; only special classes (e.g. $t equiv plus.minus 2 med (mod N)$,
-  where kernels are rational on $E$ or its twist) give $O(N)$ evaluation.
+- Moving between levels costs at least one $N$-isogeny step per level (Theorem 2.3:
+  degree divisible by $N^h$ between crater and floor), and $N$ can be large:
+  $N^2 | t^2 - 4p$ gives only $N <= 2 sqrt(p)$. Above the floor $pi$ acts on $E[N]$
+  as the scalar $x equiv t slash 2$ (Remark 3.3), so every subgroup of order $N$ is
+  $pi$-stable and all $N + 1$ $N$-isogenies are $FF_p$-rational, with kernel
+  polynomials over $FF_p$; given a kernel polynomial, Kohel's formulas evaluate
+  the isogeny in $O(N)$ operations in $FF_p$. The expensive part is *finding* the
+  kernel: its points lie in $E[N] subset.eq E(FF_(p^k))$ with $k = "ord"_N (x)$, which may
+  be as large as $N - 1$, and the alternative, factoring the modular polynomial
+  $Phi_N$, is out of reach for $N$ of cryptographic interest. When
+  $t equiv plus.minus 2 med (mod N)$ the kernel points are rational on $E$ or its twist,
+  and the whole step costs $O(N)$ (the lab's 52-bit class is of this kind).
+  For large $N$ this cost can be comparable to $sqrt(n)$.
 - For two given curves of an ordinary isogeny class, [Gal25] gives (according to
   its abstract) a rigorous $tilde(O)(q^(1 slash 4))$ algorithm to compute an isogeny
   between any two curves of the class for flat volcanoes and for tall volcanoes
@@ -243,8 +260,8 @@ cyclic of order $n$; $"ord"_n (p)$ depends on $n, p$ only. (b) Theorems 4.2,
 - [JMV05] proves random self-reducibility (under GRH) among curves with the
   *same* endomorphism ring, i.e. on one level of the volcano; it does not
   connect levels separated by a large prime $N$. That is exactly the gap
-  considered here, and the setting of the concern in [KKM11] that a weakness
-  might be confined to curves beyond such a gap. Corollary 4.4 shows that no such
+  considered here; the possibility that a weakness might be confined to
+  curves beyond such a gap is discussed in [KKM11]. Corollary 4.4 shows that no such
   weakness can come from the group order, the order-$n$ subgroup, the embedding
   degree, or (via any isogeny of degree prime to $n$) from any algorithm applied
   to a curve on the other side; it does not bound the cost of reaching that curve.
@@ -264,33 +281,34 @@ with $h = v_N (f) >= 1$ and $N | \#E$. It counts $\#E(FF_p)[N]$ by brute force o
 every curve and tests:
 (A) Theorem 3.6 on every class;
 (C) Theorem 3.2 jointly with F8 and the class-number formula
-$h(cal(O)_(c N^k)) = h(cal(O)_c) N^(k-1) (N - (d_K slash N))$ for any height $h$: the number of
-curves with full rational $N$-torsion (levels $< h$) and with cyclic $N$-torsion
-(level $h$) must satisfy
-$\#"cyc" dot (1 + (N - chi)(N^(h-1) - 1) slash (N - 1)) = \#"full" dot N^(h-1) (N - chi)$, $chi = (d_K slash N)$;
-(NC) a built-in negative control, the false relation $\#"cyc" = N^h dot \#"full"$.
-Result: 1,324 (class, $N$) pairs over 1,316 distinct classes (heights $h = 1, 2, 3$: 1,233, 89, 2 pairs), 26,339 curve checks; (A) and (C) hold in every case; (NC) fails on all 1,070 pairs with $chi != 0$, as it must.
-That $\#E(FF_p)[N] in {N, N^2}$ is automatic (F5 and $N | \#E$) and is only a
-sanity check. Since $N | \#E$ forces $t equiv 2 med (mod N)$, the branch
-$t equiv -2$ of Theorem 3.2(3) is tested through the twist's class and the branch
-$t equiv.not plus.minus 2$ is vacuous over $FF_p$. Not tested: Theorems 2.3 and 4.3,
-and levels computed independently of torsion. Example 3.5 was checked
-separately by computing both group structures.
+$h(cal(O)_(c N^k)) = h(cal(O)_c) N^(k-1) (N - (d_K slash N))$, valid for $N divides.not c$,
+$k >= 1$ and $cal(O)_c^times = cal(O)_(c N^k)^times = {plus.minus 1}$ (guaranteed by $d_K in.not {-3, -4}$), for
+any height $h$: the numbers of curves with full rational $N$-torsion (levels $< h$)
+and with cyclic $N$-torsion (level $h$) must satisfy
+$\#"cyc" dot (1 + (N - chi)(N^(h-1) - 1) slash (N - 1)) = \#"full" dot N^(h-1) (N - chi)$, $chi = (d_K slash N)$.
+Result: 1,324 (class, $N$) pairs over 1,316 distinct classes (heights $h = 1, 2, 3$:
+1,233, 89 and 2 pairs), 26,339 curve checks; (A) and (C) hold in every case.
+As a non-vacuity check, the false closed form $\#"cyc" = N^h dot \#"full"$
+fails on all 1,070 pairs with $chi != 0$; this shows that (C) has content, not that
+the check would detect every false variant of Theorem 3.2.
 
-= Errata to earlier internal notes
+Limits of this check. (C) is an aggregate count per class, so compensating
+per-curve errors are not excluded; levels are not computed independently of
+torsion. $N | \#E$ forces $t equiv 2 med (mod N)$, so only that branch of
+Theorem 3.2(3) is exercised: the twist branch is not tested independently (the
+twist's own class has trace $-t equiv 2$), and the branch $t equiv.not plus.minus 2$ is trivially
+true over $FF_p$ and not exercised. That $\#E(FF_p)[N] in {N, N^2}$ is automatic
+(F5 and $N | \#E$). Theorems 2.3 and 4.3 are not tested. Example 3.5 is
+reproduced by `check_example35.py` (output `example35.txt`).
 
-- The 2026-11-21 PR note stated that on the crater side "$E(FF_p)[N]$ or its twist's is all of $(ZZ slash N)^2$". This is true only when $t equiv plus.minus 2 med (mod N)$; Theorem 3.2(3) is the correct statement. (The 2026-10-22 class had $t equiv -2$, where the statement holds for the twist.)
-- A first draft of this note stated, in Corollary 4.4(c), that floor and crater groups differ only in their $N$-primary parts. This is false (Example 3.5); the correct statement is Proposition 3.4. The draft also miscounted the exact check ((class, $N$) pairs, not classes) and listed an automatic property as a prediction. Both errors were found by an independent review and are corrected here.
-- Earlier Lean transfer statements used structures without group laws; Theorem 4.2 replaces them with statements over abelian groups and Mathlib's point groups.
-
-= References
+#heading(numbering: none)[References]
 
 #set text(size: 9.5pt)
 / [Cox13]: D. A. Cox, _Primes of the form $x^2 + n y^2$_, 2nd ed., Wiley, 2013.
 / [FM02]: M. Fouquet, F. Morain, Isogeny volcanoes and the SEA algorithm, ANTS-V, LNCS 2369, 2002.
 / [FR94]: G. Frey, H.-G. Rück, A remark concerning $m$-divisibility and the discrete logarithm in the divisor class group of curves, Math. Comp. 62 (1994).
 / [Gal99]: S. D. Galbraith, Constructing isogenies between elliptic curves over finite fields, LMS J. Comput. Math. 2 (1999).
-/ [Gal25]: S. D. Galbraith, Climbing and descending tall isogeny volcanos, IACR ePrint 2024/924 (rev. 2025); the ePrint page lists publication in Research in Number Theory 11, no. 7 (2025), doi:10.1007/s40993-024-00586-7 (not independently verified).
+/ [Gal25]: S. D. Galbraith, Climbing and descending tall isogeny volcanos, IACR ePrint 2024/924 (rev. 2025); the ePrint page lists publication in Research in Number Theory 11, no. 7 (2025), doi:10.1007/s40993-024-00586-7.
 / [GGR25]: S. D. Galbraith, V. Gilchrist, D. Robert, Improved algorithms for ascending isogeny volcanoes, and applications, LATINCRYPT 2025; IACR ePrint 2025/1243.
 / [GHS02]: S. D. Galbraith, F. Hess, N. P. Smart, Extending the GHS Weil descent attack, EUROCRYPT 2002.
 / [IJ13]: S. Ionica, A. Joux, Pairing the volcano, Math. Comp. 82 (2013).
