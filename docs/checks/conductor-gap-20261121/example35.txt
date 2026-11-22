@@ -1,0 +1,3 @@
+crater j=182: t=-43 E(F_p)=Z/15 x Z/105  predicted Z/15 x Z/105
+floor j=51: t=-43 E(F_p)=Z/1 x Z/1575  predicted Z/1 x Z/1575
+PASS
