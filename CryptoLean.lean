@@ -33,4 +33,5 @@ import CryptoLean.Polynomial.RootCertificate
 import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
+import CryptoLean.Combinatorics.LargePrimeGraph
 import CryptoLean.Group.PairColourIsolation
