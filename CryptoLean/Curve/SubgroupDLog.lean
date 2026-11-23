@@ -84,18 +84,37 @@ def pointGuess (P : G) (observe : ∀ n, Pattern n → View n) (samples : ℕ �
     (strategy : Strategy r View 3 q) (x : ZMod r) : ZMod r :=
   (run observe (pointOracle P samples) strategy ![0, P, x.val • P]).answer
 
+/-- The number of actual oracle calls for this challenge, excluding the starting handles. -/
+def pointQueryCount (P : G) (observe : ∀ n, Pattern n → View n) (samples : ℕ → ZMod r)
+    (strategy : Strategy r View 3 q) (x : ZMod r) : ℕ :=
+  (run observe (pointOracle P samples) strategy ![0, P, x.val • P]).size - 3
+
 variable [Fact r.Prime]
+
+private theorem pointRun_eq_scalarRun (P : G) (horder : addOrderOf P = r)
+    (observe : ∀ n, Pattern n → View n) (samples : ℕ → ZMod r)
+    (strategy : Strategy r View 3 q) (x : ZMod r) :
+    let pointRun := run observe (pointOracle P samples) strategy ![0, P, x.val • P]
+    let scalarRun := run observe (scalarOracle r samples) strategy (eval x ∘ startingForms r)
+    (pointRun.size, pointRun.answer) = (scalarRun.size, scalarRun.answer) := by
+  let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
+  dsimp only
+  rw [← startingTable_eq P horder x]
+  exact run_size_answer_eq_of_injOn observe (scalarOracle r samples) (pointOracle P samples)
+    (scalarToPoint P horder) (scalarToPoint_oracle P horder samples) strategy _
+    (scalarToPoint_injective P horder).injOn
 
 theorem pointGuess_eq_scalarGuess (P : G) (horder : addOrderOf P = r)
     (observe : ∀ n, Pattern n → View n) (samples : ℕ → ZMod r)
     (strategy : Strategy r View 3 q) (x : ZMod r) :
-    pointGuess P observe samples strategy x = scalarGuess observe samples strategy x := by
-  let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
-  unfold pointGuess scalarGuess
-  rw [← startingTable_eq P horder x]
-  exact run_answer_eq_of_injOn observe (scalarOracle r samples) (pointOracle P samples)
-    (scalarToPoint P horder) (scalarToPoint_oracle P horder samples) strategy _
-    (scalarToPoint_injective P horder).injOn
+    pointGuess P observe samples strategy x = scalarGuess observe samples strategy x :=
+  congrArg Prod.snd (pointRun_eq_scalarRun P horder observe samples strategy x)
+
+theorem pointQueryCount_eq_scalarQueryCount (P : G) (horder : addOrderOf P = r)
+    (observe : ∀ n, Pattern n → View n) (samples : ℕ → ZMod r)
+    (strategy : Strategy r View 3 q) (x : ZMod r) :
+    pointQueryCount P observe samples strategy x = scalarQueryCount observe samples strategy x :=
+  congrArg (fun result => result.1 - 3) (pointRun_eq_scalarRun P horder observe samples strategy x)
 
 noncomputable def pointSuccessProbability (P : G) (observe : ∀ n, Pattern n → View n)
     (samples : ℕ → ZMod r) (strategy : Strategy r View 3 q) : ℝ := by
@@ -122,6 +141,28 @@ noncomputable def mixedPointSuccessProbability {Seed : Type*} [Fintype Seed] (P 
     (strategy : Seed → Strategy r View 3 q) : ℝ :=
   ∑ s, weights s * pointSuccessProbability P (observe s) (samples s) (strategy s)
 
+theorem mixedPointSuccessProbability_eq_scalar {Seed : Type*} [Fintype Seed] (P : G)
+    (horder : addOrderOf P = r) (weights : Seed → ℝ) (observe : Seed → ∀ n, Pattern n → View n)
+    (samples : Seed → ℕ → ZMod r) (strategy : Seed → Strategy r View 3 q) :
+    mixedPointSuccessProbability P weights observe samples strategy =
+      mixedSuccessProbability weights observe samples strategy := by
+  unfold mixedPointSuccessProbability mixedSuccessProbability
+  simp only [pointSuccessProbability_eq_scalar P horder]
+
+/-- The mean actual query count on independently sampled secrets and seeds. -/
+noncomputable def mixedPointExpectedQueries {Seed : Type*} [Fintype Seed] (P : G) (weights : Seed → ℝ)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) : ℝ :=
+  ∑ s, weights s * expectedQueries (pointQueryCount P (observe s) (samples s) (strategy s))
+
+theorem mixedPointExpectedQueries_eq_scalar {Seed : Type*} [Fintype Seed] (P : G)
+    (horder : addOrderOf P = r) (weights : Seed → ℝ) (observe : Seed → ∀ n, Pattern n → View n)
+    (samples : Seed → ℕ → ZMod r) (strategy : Seed → Strategy r View 3 q) :
+    mixedPointExpectedQueries P weights observe samples strategy =
+      mixedExpectedQueries weights observe samples strategy := by
+  unfold mixedPointExpectedQueries mixedExpectedQueries expectedQueries
+  simp only [pointQueryCount_eq_scalarQueryCount P horder]
+
 /-- Every generic strategy has the same success probability in subgroups of the same prime order. -/
 theorem mixedPointSuccessProbability_eq_of_same_order {G' : Type*} [AddCommGroup G'] [DecidableEq G']
     {Seed : Type*} [Fintype Seed] (P : G) (P' : G')
@@ -130,8 +171,17 @@ theorem mixedPointSuccessProbability_eq_of_same_order {G' : Type*} [AddCommGroup
     (strategy : Seed → Strategy r View 3 q) :
     mixedPointSuccessProbability P weights observe samples strategy =
       mixedPointSuccessProbability P' weights observe samples strategy := by
-  unfold mixedPointSuccessProbability
-  simp only [pointSuccessProbability_eq_scalar P horder, pointSuccessProbability_eq_scalar P' horder']
+  simp only [mixedPointSuccessProbability_eq_scalar P horder, mixedPointSuccessProbability_eq_scalar P' horder']
+
+/-- A generic strategy preserves the mean of its adaptive stopping time at fixed subgroup order. -/
+theorem mixedPointExpectedQueries_eq_of_same_order {G' : Type*} [AddCommGroup G'] [DecidableEq G']
+    {Seed : Type*} [Fintype Seed] (P : G) (P' : G')
+    (horder : addOrderOf P = r) (horder' : addOrderOf P' = r) (weights : Seed → ℝ)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) :
+    mixedPointExpectedQueries P weights observe samples strategy =
+      mixedPointExpectedQueries P' weights observe samples strategy := by
+  simp only [mixedPointExpectedQueries_eq_scalar P horder, mixedPointExpectedQueries_eq_scalar P' horder']
 
 /-- A query budget suffices if some randomized strategy attains the required success probability. -/
 def genericSuccessAtLeast {Seed : Type*} [Fintype Seed] (P : G) (budget : ℕ) (threshold : ℝ) : Prop :=
@@ -155,8 +205,7 @@ theorem mixedPointSuccessProbability_le {Seed : Type*} [Fintype Seed] (P : G) (h
     (strategy : Seed → Strategy r View 3 q) :
     mixedPointSuccessProbability P weights observe samples strategy ≤
       (successNumerator q : ℝ) / (2 * (r : ℝ)) := by
-  unfold mixedPointSuccessProbability
-  simp only [pointSuccessProbability_eq_scalar P horder]
+  rw [mixedPointSuccessProbability_eq_scalar P horder]
   exact mixedSuccessProbability_le weights hnonneg hnorm observe samples strategy
 
 theorem order_le_of_half_success (P : G) (horder : addOrderOf P = r)
@@ -266,5 +315,25 @@ theorem generic_hardness_of_equal_point_counts {F : Type*} [Field F] [Finite F] 
     W₁.toAffine.nonsingularPointEquiv.symm
   obtain ⟨P₁, hP₁⟩ := exists_prime_addOrderOf_dvd_card' r hdiv
   exact ⟨P₁, hP₁, genericSuccessAtLeast_iff_of_same_order P₀ P₁ hP₀ hP₁⟩
+
+/-- Equal point counts give matching subgroups with the same success and mean query count for every strategy. -/
+theorem generic_success_and_expectedQueries_of_equal_point_counts {F : Type*} [Field F] [Finite F] [DecidableEq F]
+    (W₀ W₁ : WeierstrassCurve F) [W₀.IsElliptic] [W₁.IsElliptic]
+    (hcount : Nat.card W₀.toAffine.Point = Nat.card W₁.toAffine.Point)
+    {r : ℕ} [Fact r.Prime] (P₀ : W₀.toAffine.Point) (hP₀ : addOrderOf P₀ = r)
+    {View : ℕ → Type*} {Seed : Type*} [Fintype Seed] :
+    ∃ P₁ : W₁.toAffine.Point, addOrderOf P₁ = r ∧
+      ∀ {q : ℕ} (weights : Seed → ℝ) (observe : Seed → ∀ n, Pattern n → View n)
+        (samples : Seed → ℕ → ZMod r) (strategy : Seed → Strategy r View 3 q),
+        (mixedPointSuccessProbability P₀ weights observe samples strategy,
+          mixedPointExpectedQueries P₀ weights observe samples strategy) =
+        (mixedPointSuccessProbability P₁ weights observe samples strategy,
+          mixedPointExpectedQueries P₁ weights observe samples strategy) := by
+  obtain ⟨P₁, hP₁, _⟩ :=
+    generic_hardness_of_equal_point_counts (View := View) (Seed := Seed) W₀ W₁ hcount P₀ hP₀
+  refine ⟨P₁, hP₁, ?_⟩
+  intro q weights observe samples strategy
+  exact Prod.ext (mixedPointSuccessProbability_eq_of_same_order P₀ P₁ hP₀ hP₁ weights observe samples strategy)
+    (mixedPointExpectedQueries_eq_of_same_order P₀ P₁ hP₀ hP₁ weights observe samples strategy)
 
 end CryptoLean.ECDLP

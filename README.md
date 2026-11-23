@@ -24,12 +24,17 @@ mathematical reference.
 
 `CryptoLean.Group.GenericDLog` and `CryptoLean.Curve.SubgroupDLog` bound
 adaptive generic discrete-log success by `(q + 3)(q + 2)/(2r) + 1/r`
-for `q` queries and prime subgroup order `r`. At fixed order, every query
-budget has the same attainable success on either curve. These modules
-formalize the affine collision argument from [Shoup](https://www.shoup.net/papers/dlbounds1.pdf).
+for `q` queries and prime subgroup order `r`. At fixed order, the same
+strategy has identical success and mean actual query count on either curve.
+At half success, the mean actual query count `μ` satisfies `sqrt r ≤ 8μ + 4`
+even when the stopping time depends on the challenge. The affine collision
+argument follows [Shoup](https://www.shoup.net/papers/dlbounds1.pdf).
 
 `CryptoLean.Curve.ConductorGapQueryBound` combines the Frobenius
-discriminant identity and a cofactor cap with the generic query bound.
+discriminant identity and a cofactor cap with the generic query bounds.
+With cofactor cap `H` and field discriminant `D₀`, a conductor gap of
+valuation difference `Δ` at `N` gives `N^Δ sqrt(|D₀|/H) ≤ 16μ + 8`
+at half success.
 `CryptoLean.Curve.DLogSolverTransport` preserves exact success for
 coordinate-aware solvers given additive maps with the dual-degree identity
 and degree coprime to `r`. The maps are inputs to the theorem, and the

@@ -1,4 +1,5 @@
 import CryptoLean.Curve.SubgroupDLog
+import Mathlib.NumberTheory.Padics.PadicVal.Basic
 
 /-! The conductor discriminant identity bounds the size of a subgroup used in generic ECDLP. -/
 
@@ -28,6 +29,21 @@ theorem conductor_divisor_sq_le_four_point_count {q pointCount f N : ℕ} {t D�
       linear_combination -4 * hcount
     _ ≤ _ := sub_le_self _ (sq_nonneg _)
 
+/-- A point-count bound and a cofactor cap give a corresponding subgroup-order bound. -/
+theorem sqrt_conductor_divisor_le_sqrt_order {G : Type*} [AddCommGroup G] {r H d : ℕ} {D₀ : ℤ}
+    (P : G) (horder : addOrderOf P = r) (hH : 0 < H) (hcofactor : cofactor P ≤ H)
+    (hcount : (d : ℤ) ^ 2 * |D₀| ≤ 4 * (Nat.card G : ℤ)) :
+    Real.sqrt ((d : ℝ) ^ 2 * |(D₀ : ℝ)| / (4 * (H : ℝ))) ≤ Real.sqrt r := by
+  have hsize : Nat.card G ≤ H * r := by
+    rw [← cofactor_mul_order P, horder]
+    exact Nat.mul_le_mul_right r hcofactor
+  have hcountReal : (d : ℝ) ^ 2 * |(D₀ : ℝ)| ≤ 4 * (Nat.card G : ℝ) := by exact_mod_cast hcount
+  have hsizeReal : (Nat.card G : ℝ) ≤ (H : ℝ) * (r : ℝ) := by exact_mod_cast hsize
+  have hwork := hcountReal.trans (mul_le_mul_of_nonneg_left hsizeReal (by norm_num))
+  apply Real.sqrt_le_sqrt
+  apply (div_le_iff₀ (mul_pos (by norm_num) (by exact_mod_cast hH))).mpr
+  simpa only [mul_left_comm (r : ℝ) 4 (H : ℝ), mul_comm (r : ℝ) (H : ℝ)] using hwork
+
 /-- With a cofactor cap, the conductor divisor bounds every generic half-success budget. -/
 theorem half_success_from_conductor_divisor {G : Type*} [AddCommGroup G] [DecidableEq G]
     {p r q f N H : ℕ} [Fact r.Prime] {t D₀ : ℤ}
@@ -49,6 +65,31 @@ theorem half_success_from_conductor_divisor {G : Type*} [AddCommGroup G] [Decida
   refine hbound.trans ?_
   rw [mul_assoc]
   exact mul_le_mul_of_nonneg_left (by exact_mod_cast hsize) (by norm_num)
+
+/-- Every prime power in the valuation gap divides the Frobenius conductor. -/
+theorem conductor_gap_power_dvd_frobenius {f₀ f₁ f N : ℕ} (hdiv : f₁ ∣ f) :
+    N ^ (padicValNat N f₁ - padicValNat N f₀) ∣ f :=
+  ((pow_dvd_pow N (Nat.sub_le _ _)).trans pow_padicValNat_dvd).trans hdiv
+
+/-- A conductor divisor and cofactor cap bound the mean actual query count at half success. -/
+theorem sqrt_conductor_divisor_le_of_half_success_with_expectedQueries {G : Type*}
+    [AddCommGroup G] [DecidableEq G] {p r q f d H : ℕ} [Fact r.Prime] {t D₀ : ℤ}
+    (hD : t ^ 2 - 4 * (p : ℤ) = (f : ℤ) ^ 2 * D₀) (hnegative : t ^ 2 - 4 * (p : ℤ) < 0)
+    (hdiv : d ∣ f) (hcount : (Nat.card G : ℤ) = (p : ℤ) + 1 - t)
+    (P : G) (horder : addOrderOf P = r) (hH : 0 < H) (hcofactor : cofactor P ≤ H)
+    {View : ℕ → Type*} {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
+    (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q)
+    (hsuccess : (1 : ℝ) / 2 ≤ mixedPointSuccessProbability P weights observe samples strategy) :
+    Real.sqrt ((d : ℝ) ^ 2 * |(D₀ : ℝ)| / (4 * (H : ℝ))) ≤
+      8 * mixedPointExpectedQueries P weights observe samples strategy + 4 := by
+  have hbound := conductor_divisor_sq_le_four_point_count hD hnegative hdiv hcount
+  have hsubgroup := sqrt_conductor_divisor_le_sqrt_order P horder hH hcofactor hbound
+  rw [mixedPointSuccessProbability_eq_scalar P horder] at hsuccess
+  exact hsubgroup.trans (by
+    rw [mixedPointExpectedQueries_eq_scalar P horder]
+    exact sqrt_order_le_of_half_success_with_expectedQueries weights hnonneg hnorm observe samples strategy hsuccess)
 
 /-- Solve the quadratic query bound for the budget. -/
 theorem sqrt_gap_lower_bound_le_budget {N H m : ℕ} {D₀ : ℤ} (hH : 0 < H)

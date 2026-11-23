@@ -42,6 +42,16 @@ inductive Strategy (r : ℕ) (View : ℕ → Type*) : ℕ → ℕ → Type _ whe
   | query {n q} (choose : View n → Query r n) (next : View n → Strategy r View (n + 1) q) :
       Strategy r View n (q + 1)
 
+/-- Keep the strategy's own guess if it finishes within the cutoff. -/
+def Strategy.truncate {r : ℕ} {View : ℕ → Type*} {n q : ℕ} (fallback : ZMod r)
+    (strategy : Strategy r View n q) (cutoff : ℕ) : Strategy r View n cutoff :=
+  match strategy, cutoff with
+  | .finish guess, _ => .finish guess
+  | .query _ _, 0 => .finish fun _ => fallback
+  | .query choose next, cutoff + 1 =>
+    .query choose fun view => (next view).truncate fallback cutoff
+termination_by cutoff
+
 abbrev Oracle (r : ℕ) (V : Type*) := ∀ n, Query r n → (Fin n → V) → V
 
 /-- All handles remain in the table throughout a run. -/
@@ -146,6 +156,43 @@ theorem run_size_le {r : ℕ} {V : Type*} [DecidableEq V] {View : ℕ → Type*}
       change (run observe oracle (next view) (Fin.snoc table (oracle n (choose view) table))).size ≤ _
       omega
 
+theorem run_size_ge {r : ℕ} {V : Type*} [DecidableEq V] {View : ℕ → Type*}
+    (observe : ∀ n, Pattern n → View n) (oracle : Oracle r V) {n q : ℕ}
+    (strategy : Strategy r View n q) (table : Fin n → V) :
+    n ≤ (run observe oracle strategy table).size := by
+  induction q generalizing n with
+  | zero => cases strategy; simp [run]
+  | succ q ih =>
+    cases strategy with
+    | finish => simp [run]
+    | query choose next =>
+      rw [run]
+      exact (Nat.le_succ n).trans (ih _ _)
+
+/-- Truncation preserves the whole execution whenever its actual query count fits. -/
+theorem run_truncate_eq_of_size_le {r : ℕ} {V : Type*} [DecidableEq V] {View : ℕ → Type*}
+    (observe : ∀ n, Pattern n → View n) (oracle : Oracle r V) {n q cutoff : ℕ}
+    (strategy : Strategy r View n q) (table : Fin n → V) (fallback : ZMod r)
+    (hsize : (run observe oracle strategy table).size ≤ n + cutoff) :
+    run observe oracle (strategy.truncate fallback cutoff) table = run observe oracle strategy table := by
+  induction q generalizing n cutoff with
+  | zero => cases strategy; simp [Strategy.truncate, run]
+  | succ q ih =>
+    cases strategy with
+    | finish => simp [Strategy.truncate, run]
+    | query choose next =>
+      let view := observe n (equalityPattern table)
+      let extended : Fin (n + 1) → V := Fin.snoc table (oracle n (choose view) table)
+      have hsize' : (run observe oracle (next view) extended).size ≤ n + cutoff := by
+        simpa only [run] using hsize
+      cases cutoff with
+      | zero =>
+        have hmin := run_size_ge observe oracle (next view) extended
+        omega
+      | succ cutoff =>
+        simp only [Strategy.truncate, run]
+        exact ih _ _ (by simpa only [Nat.succ_add, Nat.add_succ] using hsize')
+
 theorem run_contains_table {r : ℕ} {V : Type*} [DecidableEq V] {View : ℕ → Type*}
     (observe : ∀ n, Pattern n → View n) (oracle : Oracle r V) {n q : ℕ}
     (strategy : Strategy r View n q) (table : Fin n → V) :
@@ -169,14 +216,15 @@ private theorem equalityPattern_map {A B : Type*} [DecidableEq A] [DecidableEq B
   unfold equalityPattern
   exact decide_eq_decide.mpr ⟨fun h => hf ⟨i, rfl⟩ ⟨j, rfl⟩ h, congrArg f⟩
 
-/-- If observations are preserved on the final table, map the entire adaptive execution. -/
-theorem run_answer_eq_of_injOn {r : ℕ} {A B : Type*} [DecidableEq A] [DecidableEq B]
+/-- An injective oracle map preserves both the stopping time and the guess. -/
+theorem run_size_answer_eq_of_injOn {r : ℕ} {A B : Type*} [DecidableEq A] [DecidableEq B]
     {View : ℕ → Type*} (observe : ∀ n, Pattern n → View n) (oracleA : Oracle r A)
     (oracleB : Oracle r B) (f : A → B)
     (hmap : ∀ n cmd (table : Fin n → A), f (oracleA n cmd table) = oracleB n cmd (f ∘ table))
     {n q : ℕ} (strategy : Strategy r View n q) (table : Fin n → A)
     (hinj : Set.InjOn f (Set.range (run observe oracleA strategy table).table)) :
-    (run observe oracleB strategy (f ∘ table)).answer = (run observe oracleA strategy table).answer := by
+    ((run observe oracleB strategy (f ∘ table)).size, (run observe oracleB strategy (f ∘ table)).answer) =
+      ((run observe oracleA strategy table).size, (run observe oracleA strategy table).answer) := by
   induction q generalizing n with
   | zero =>
     cases strategy with
@@ -197,10 +245,18 @@ theorem run_answer_eq_of_injOn {r : ℕ} {A B : Type*} [DecidableEq A] [Decidabl
         refine Fin.lastCases ?_ (fun j => ?_) i
         · simpa [Function.comp_def] using (hmap n (choose view) table).symm
         · simp [Function.comp_def]
-      change (run observe oracleB (next view) (Fin.snoc (f ∘ table) _)).answer =
-        (run observe oracleA (next view) (Fin.snoc table _)).answer
       rw [htable]
       exact ih _ _ hinj
+
+/-- If observations are preserved on the final table, the algorithm returns the same guess. -/
+theorem run_answer_eq_of_injOn {r : ℕ} {A B : Type*} [DecidableEq A] [DecidableEq B]
+    {View : ℕ → Type*} (observe : ∀ n, Pattern n → View n) (oracleA : Oracle r A)
+    (oracleB : Oracle r B) (f : A → B)
+    (hmap : ∀ n cmd (table : Fin n → A), f (oracleA n cmd table) = oracleB n cmd (f ∘ table))
+    {n q : ℕ} (strategy : Strategy r View n q) (table : Fin n → A)
+    (hinj : Set.InjOn f (Set.range (run observe oracleA strategy table).table)) :
+    (run observe oracleB strategy (f ∘ table)).answer = (run observe oracleA strategy table).answer :=
+  congrArg Prod.snd (run_size_answer_eq_of_injOn observe oracleA oracleB f hmap strategy table hinj)
 
 /-- The constant and linear coefficients of a handle's formal discrete logarithm. -/
 abbrev Affine (r : ℕ) := ZMod r × ZMod r
@@ -291,6 +347,10 @@ variable {View : ℕ → Type*} (observe : ∀ n, Pattern n → View n) (samples
 def scalarGuess (strategy : Strategy r View 3 q) (x : ZMod r) : ZMod r :=
   (run observe (scalarOracle r samples) strategy (eval x ∘ startingForms r)).answer
 
+/-- Every oracle call appends one handle to the three starting handles. -/
+def scalarQueryCount (strategy : Strategy r View 3 q) (x : ZMod r) : ℕ :=
+  (run observe (scalarOracle r samples) strategy (eval x ∘ startingForms r)).size - 3
+
 noncomputable def successSecrets (strategy : Strategy r View 3 q) : Finset (ZMod r) := by
   let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
   exact univ.filter fun x => scalarGuess observe samples strategy x = x
@@ -362,6 +422,107 @@ theorem mixedSuccessProbability_le {Seed : Type*} [Fintype Seed] (weights : Seed
       Finset.sum_le_sum fun s _ => mul_le_mul_of_nonneg_left
         (successProbability_le (observe s) (samples s) (strategy s)) (hnonneg s)
     _ = _ := by rw [← Finset.sum_mul, hnorm, one_mul]
+
+/-- Average a query count over the uniform secret. -/
+noncomputable def expectedQueries (count : ZMod r → ℕ) : ℝ := by
+  let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
+  exact (∑ x : ZMod r, (count x : ℝ)) / r
+
+/-- A successful run either agrees with the truncated run or pays for at least `cutoff + 1` calls. -/
+theorem successProbability_le_of_expectedQueries (observe : ∀ n, Pattern n → View n)
+    (samples : ℕ → ZMod r) (strategy : Strategy r View 3 q) (cutoff : ℕ) :
+    successProbability observe samples strategy ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      expectedQueries (scalarQueryCount observe samples strategy) / ((cutoff : ℝ) + 1) := by
+  let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
+  let truncated := strategy.truncate 0 cutoff
+  let long := (univ : Finset (ZMod r)).filter fun x => cutoff < scalarQueryCount observe samples strategy x
+  have hsub : successSecrets observe samples strategy ⊆ successSecrets observe samples truncated ∪ long := by
+    intro x hx
+    by_cases hlong : cutoff < scalarQueryCount observe samples strategy x
+    · exact Finset.mem_union.mpr (Or.inr (mem_filter.mpr ⟨mem_univ _, hlong⟩))
+    · apply Finset.mem_union.mpr
+      left
+      have hsize : (run observe (scalarOracle r samples) strategy (eval x ∘ startingForms r)).size ≤
+          3 + cutoff := by
+        unfold scalarQueryCount at hlong
+        omega
+      have hguess : scalarGuess observe samples truncated x = scalarGuess observe samples strategy x :=
+        congrArg Execution.answer (run_truncate_eq_of_size_le observe (scalarOracle r samples)
+          strategy (eval x ∘ startingForms r) 0 hsize)
+      exact mem_filter.mpr ⟨mem_univ _, hguess.trans (mem_filter.mp hx).2⟩
+  have hcard := (Finset.card_le_card hsub).trans (Finset.card_union_le _ _)
+  have hcost : long.card * (cutoff + 1) ≤ ∑ x : ZMod r, scalarQueryCount observe samples strategy x := by
+    calc
+      _ = ∑ _x ∈ long, (cutoff + 1) := by simp
+      _ ≤ ∑ x ∈ long, scalarQueryCount observe samples strategy x :=
+        Finset.sum_le_sum fun x hx => Nat.succ_le_of_lt (mem_filter.mp hx).2
+      _ ≤ _ := Finset.sum_le_sum_of_subset (filter_subset ..)
+  have hr : 0 < (r : ℝ) := by exact_mod_cast (Fact.out : r.Prime).pos
+  have htail : (long.card : ℝ) / r ≤
+      expectedQueries (scalarQueryCount observe samples strategy) / ((cutoff : ℝ) + 1) := by
+    apply (le_div_iff₀ (by positivity)).mpr
+    rw [div_mul_eq_mul_div₀, expectedQueries]
+    exact div_le_div_of_nonneg_right (by exact_mod_cast hcost) hr.le
+  have hsuccess : successProbability observe samples strategy ≤
+      successProbability observe samples truncated + (long.card : ℝ) / r := by
+    unfold successProbability
+    rw [← add_div]
+    exact div_le_div_of_nonneg_right (by exact_mod_cast hcard) hr.le
+  exact hsuccess.trans (add_le_add (successProbability_le observe samples truncated) htail)
+
+/-- Average the actual query count over seeds independent of the uniform secret. -/
+noncomputable def mixedExpectedQueries {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) : ℝ :=
+  ∑ s, weights s * expectedQueries (scalarQueryCount (observe s) (samples s) (strategy s))
+
+/-- A bound at every cutoff, expressed in terms of the mean of the actual query count. -/
+theorem mixedSuccessProbability_le_of_expectedQueries {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
+    (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) (cutoff : ℕ) :
+    mixedSuccessProbability weights observe samples strategy ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      mixedExpectedQueries weights observe samples strategy / ((cutoff : ℝ) + 1) := by
+  calc
+    _ ≤ ∑ s, weights s * ((successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+        expectedQueries (scalarQueryCount (observe s) (samples s) (strategy s)) / ((cutoff : ℝ) + 1)) :=
+      Finset.sum_le_sum fun s _ => mul_le_mul_of_nonneg_left
+        (successProbability_le_of_expectedQueries (observe s) (samples s) (strategy s) cutoff) (hnonneg s)
+    _ = _ := by
+      simp_rw [mul_add]
+      rw [Finset.sum_add_distrib, ← Finset.sum_mul, hnorm, one_mul, mixedExpectedQueries]
+      simp only [div_eq_mul_inv, Finset.sum_mul, mul_assoc]
+
+/-- Half success requires a mean query count of at least `sqrt r / 8 - 1 / 2`. -/
+theorem sqrt_order_le_of_half_success_with_expectedQueries {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
+    (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q)
+    (hsuccess : (1 : ℝ) / 2 ≤ mixedSuccessProbability weights observe samples strategy) :
+    Real.sqrt r ≤ 8 * mixedExpectedQueries weights observe samples strategy + 4 := by
+  let mean := mixedExpectedQueries weights observe samples strategy
+  have hmean : 0 ≤ mean := Finset.sum_nonneg fun s _ =>
+    mul_nonneg (hnonneg s) (by unfold expectedQueries; positivity)
+  let cutoff := ⌊4 * mean⌋₊
+  have hcutoff : (cutoff : ℝ) ≤ 4 * mean := Nat.floor_le (by positivity)
+  have htail : mean / ((cutoff : ℝ) + 1) < 1 / 4 := by
+    have hf : 4 * mean < (cutoff : ℝ) + 1 := Nat.lt_floor_add_one _
+    exact (div_lt_iff₀ (by positivity)).mpr (by linarith)
+  have hbound := hsuccess.trans
+    (mixedSuccessProbability_le_of_expectedQueries weights hnonneg hnorm observe samples strategy cutoff)
+  change (1 : ℝ) / 2 ≤ _ + mean / ((cutoff : ℝ) + 1) at hbound
+  have hcollision : (1 : ℝ) / 4 < (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) := by
+    linarith only [hbound, htail]
+  have hr : (0 : ℝ) < r := by exact_mod_cast (Fact.out : r.Prime).pos
+  have horder : (r : ℝ) ≤ 2 * (successNumerator cutoff : ℝ) := by
+    linarith only [(lt_div_iff₀ (mul_pos two_pos hr)).mp hcollision]
+  have hnum : (successNumerator cutoff : ℝ) = ((cutoff : ℝ) + 3) * ((cutoff : ℝ) + 2) + 2 := by
+    simp [successNumerator]
+  have hsquare : (r : ℝ) ≤ (2 * ((cutoff : ℝ) + 2)) ^ 2 := by
+    nlinarith only [horder, hnum, sq_nonneg (cutoff : ℝ), Nat.cast_nonneg (α := ℝ) cutoff]
+  calc
+    Real.sqrt r ≤ 2 * ((cutoff : ℝ) + 2) := (Real.sqrt_le_left (by positivity)).mpr hsquare
+    _ ≤ 8 * mean + 4 := by linarith only [hcutoff]
 
 end Probability
 
