@@ -1,0 +1,84 @@
+{
+  "recorded": "2026-11-23T10:13:48.970096+00:00",
+  "source_F": "2cebc126b329bdd4aa7d7e12db6a1b01d7c47145",
+  "generic_exit": 1,
+  "instance_and_audit_not_reached": true,
+  "full_diagnostic": "CryptoLean/Group/UniqueDouble.lean:1:0: error: failed to read file '/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/Lean/Elab/Command.olean.private'\n",
+  "mentioned_library_file_exists": true,
+  "mentioned_library_bytes": 5286816,
+  "mentioned_library_sha256": "c2ae88e67c4c2f257f42ffc011398d044dfb5e67d33ed9a9ea9afeeb005c4600",
+  "precise_cause_not_yet_observed": true,
+  "no_scientific_limit_change": true,
+  "files": [
+    {
+      "file": "overall.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "file": "POST_MANIFEST.json",
+      "bytes": 5319,
+      "sha256": "bd07172316538296284e56f0058fd4594cf717b679020029a85bdc5f496c0daf"
+    },
+    {
+      "file": "final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "generic.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "file": "generic.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "generic.stdout",
+      "bytes": 167,
+      "sha256": "f4c62e348dd5c698d944bf36555a522bebe7cac763784597e59beaf8b7cba1de"
+    },
+    {
+      "file": "generic.argv",
+      "bytes": 134,
+      "sha256": "d4114c9f443c0b5b720e64e19190f00e50f3e032df08384cfd67470d30df5569"
+    },
+    {
+      "file": "BUILD_MANIFEST.json",
+      "bytes": 5319,
+      "sha256": "478821213eb621f701d307339ded635ac3f9a11860ce65ef2069660ceed06bc2"
+    },
+    {
+      "file": "init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "outer.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "file": "outer.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "outer.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

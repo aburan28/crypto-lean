@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T10:07:34Z",
+ "id": "PCC-20261123-62dc75",
+ "kind": "statement",
+ "producer": {
+  "commit": "2cebc126b329bdd4aa7d7e12db6a1b01d7c47145",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-official-cache-E-success/ACTUAL_FIRST_OFFICIAL_CACHE_E.json",
+    "sha256": "676a7463c4552fd3163541ea4a795cfd2f18b05dce26a33e1cc3870934f1a17c"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Observed dependency acquisition; no study proof, solver result, geometric map or whole-project gate verdict.",
+ "statement": "First original bundled Lake cache profile E exits0 and reports1727 decompressed official pinned prebuilt files with matching source/runtime guards. All small raw records are retained; whole trace remains private/store-pending with hash. This is a four-GiB software-install success only; all earlier two-GiB failures and later scientific two-GiB/120s/default logic limits remain unchanged."
+}

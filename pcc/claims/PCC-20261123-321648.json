@@ -1,0 +1,30 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T10:13:49Z",
+ "id": "PCC-20261123-321648",
+ "kind": "statement",
+ "producer": {
+  "commit": "2cebc126b329bdd4aa7d7e12db6a1b01d7c47145",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-generic-F-loader-negative/ACTUAL_FIRST_GENERIC_F_LOADER_FAILURE.json",
+    "sha256": "4e53359a0e1c8a6b227bd98aaef2abd2aca610ae6b4e1ba3f687c24e7749fc62"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_G.json",
+    "sha256": "bd35a5441fd82e459729d0704dd3ae03b1400c159e2f2701bf054d9e6c22b5ad"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Observed F loader failure and prospective software diagnosis only; not a missing-file, precise-cause or theorem claim.",
+ "statement": "First F generic build exits1 while reading an existing5286816B Lean private-library file; complete raw/guards and file hash are retained. Instance/audit phases were not reached. Four import-only G controls are frozen with unchanged two-GiB/120s/default logic and no study proof outcome."
+}

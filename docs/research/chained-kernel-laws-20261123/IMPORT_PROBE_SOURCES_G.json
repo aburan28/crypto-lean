@@ -1,0 +1,6 @@
+{
+  "InitProbeG.lean": "import Init\n#check Nat\n",
+  "LegacyProbeG.lean": "import Mathlib.Algebra.Group.Hom.Instances\n#check AddMonoidHom\n",
+  "ModuleProbeG.lean": "module\npublic import Mathlib.Algebra.Group.Hom.Instances\npublic section\n#check AddMonoidHom\n",
+  "ModuleZModProbeG.lean": "module\npublic import Mathlib.Algebra.Field.ZMod\npublic import Mathlib.Algebra.Group.Prod\npublic section\n#check ZMod\n"
+}

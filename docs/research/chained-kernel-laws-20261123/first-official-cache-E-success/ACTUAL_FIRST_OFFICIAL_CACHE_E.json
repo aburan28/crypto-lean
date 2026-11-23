@@ -1,0 +1,98 @@
+{
+  "recorded": "2026-11-23T10:07:34.801620+00:00",
+  "source_E": "f6c3685dab8c222aeb98b42d956b29854276326b",
+  "phase_and_overall_exit": 0,
+  "official_reported_prebuilt_files": 1727,
+  "all_small_streams_guards_exits_retained": true,
+  "whole_trace_private_path": "/dev/shm/law34-cacheE/cache-startup.trace",
+  "whole_trace_remote_custody_pending": true,
+  "files": [
+    {
+      "path": "BUILD_MANIFEST.json",
+      "bytes": 5824,
+      "sha256": "7fe717d684fe67ceea0531178b363ec6fd164cb656c6a9b1cac0f7ad122fa821",
+      "whole_file_public": true
+    },
+    {
+      "path": "POST_MANIFEST.json",
+      "bytes": 5824,
+      "sha256": "ba6f7388e643b296d4f9396d981ce5c428ca9f4eeb67a9addbcc13afb9fdc011",
+      "whole_file_public": true
+    },
+    {
+      "path": "cache-startup.trace",
+      "bytes": 20068750,
+      "sha256": "d96608a49ea80e103d86398c4a6fb4e8cf9194502d56ca96b767667f20627620",
+      "whole_file_public": false
+    },
+    {
+      "path": "dependency-verification.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "path": "dependency-verification.stdout",
+      "bytes": 452,
+      "sha256": "427c37992373e7976ab181b317bc8ced3bee5e37b29a58b27315ee661fc8aacd",
+      "whole_file_public": true
+    },
+    {
+      "path": "final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "path": "final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "path": "init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "path": "init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "path": "official-cache.argv",
+      "bytes": 229,
+      "sha256": "4074eeb7f106b46f43e4eab5b941aa41ae40c1123c7c6311e501bbc31e6b1c54",
+      "whole_file_public": true
+    },
+    {
+      "path": "official-cache.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "whole_file_public": true
+    },
+    {
+      "path": "official-cache.stderr",
+      "bytes": 10612,
+      "sha256": "3fba8c89b5fdd79c29e9543914967970f1298f38a5f9631bfe3905d6f1f53b78",
+      "whole_file_public": true
+    },
+    {
+      "path": "official-cache.stdout",
+      "bytes": 265,
+      "sha256": "7b75e450a50bdbbce1d4f36550379619061eba32c5968de2d88e5860bc9524a8",
+      "whole_file_public": true
+    },
+    {
+      "path": "setup.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "whole_file_public": true
+    }
+  ],
+  "profile": "software-only four-GiB/600s; not an earlier two-GiB pass",
+  "no_new_study_proof_or_native_qualifier": true,
+  "later_science_limits_unchanged": true
+}

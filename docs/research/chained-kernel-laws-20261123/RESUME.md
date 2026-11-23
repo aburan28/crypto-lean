@@ -31,3 +31,11 @@ baseline gate failures and follow normal merge requirements. E/software
 changes reset PR34 first-CI cadence to at least50min after substantive push.
 No locked crypto-autoresearcher contents; PaidSTOP remains binding.
 [pcc:unverified]
+
+Latest: official bundled software E succeeds with1727 prebuilt files;
+F source2cebc126 first generic build fails1 reading an existing Lean private
+library file; instance/audit not reached. G is now frozen as an import-only
+visibility/load diagnostic, same2GiB/120s/one-worker. No new study theorem
+accepted and no scientific cap raised. Read actual F failure before choosing
+a repair. Keep F source/lock unchanged; a module-system repair would need a
+new source revision and readback. [pcc:unverified]
