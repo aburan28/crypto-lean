@@ -1,0 +1,78 @@
+{
+  "recorded_before_H": "2026-11-23T10:17:44.376674+00:00",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020"
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    "lakefile.toml": {
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b"
+    },
+    "lake-manifest.json": {
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75"
+    },
+    "CryptoLean.lean": {
+      "bytes": 1514,
+      "sha256": "d770da809f9e4c5b765022a0f4a78b400fe760c6bc9253ecddd00a62aad8fc8e"
+    },
+    "CryptoLean/Group/UniqueDouble.lean": {
+      "bytes": 1548,
+      "sha256": "13a9639c2929c09f263f3c59170a8f44bff1f2b4c182748145ca18fd2f7e9adc"
+    },
+    "CryptoLean/Group/UniqueDoubleExamples.lean": {
+      "bytes": 2774,
+      "sha256": "8575acf2a4bd432e971d70367c0f2bc7f6ef6526663f1215a2d6b03ac6567352"
+    },
+    "tools/AuditAxioms.lean": {
+      "bytes": 3855,
+      "sha256": "fdb8bd3af4301a9f50c7d8d0049994459f15b07abe397b8dddc1e49532dad96d"
+    },
+    "tools/proof-gate.sh": {
+      "bytes": 7963,
+      "sha256": "ad2d957a305313d2f478e3fdd459557cc5e20edf2a66e74dd8752a95a342377a"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md": {
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_GENERIC_LAW_F.md": {
+      "bytes": 2627,
+      "sha256": "dbfc7ca73e66389dda83e017909573cdaadbe460e59fabb6a4c82c0e90b9b429"
+    },
+    "docs/research/chained-kernel-laws-20261123/run_generic_law_F.sh": {
+      "bytes": 4128,
+      "sha256": "2c4bf14e480e4b8698eaab2f3d43b22a11691691bdf1bb38c1cd3da4c0fda8bb"
+    },
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_F.json": {
+      "bytes": 3154,
+      "sha256": "c0a29a301ad0f4e8d78992549977a1e862bc3d2471dc44ec76227236ccac13ab"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_LATE_SHELL_WORKER_H.md": {
+      "bytes": 2206,
+      "sha256": "1902252df7ec0021f8da0539803f56680c70b6fabcf705b8e0eb28f6e5991160"
+    },
+    "docs/research/chained-kernel-laws-20261123/run_late_shell_worker_H.sh": {
+      "bytes": 4201,
+      "sha256": "6b5cc758896e0962518a6d2b797dc010e319940ab0c4c033fc9854dc98ea3972"
+    }
+  },
+  "tool_and_runtime_sha256": {
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libLake_shared.so": "d68867df340056b40726fde3939a9d2021901cc6944f971dd6a6a778bd9ea25b",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libInit_shared.so": "7831b707e868cee76c353d26649fbd8981b2f4d7e0329af55bbf4fa9e0c69350",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared.so": "efef27df56f2197139afe12f1a2b63913a05f1aba81ce88824c44100431ed8c4",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_1.so": "691bf49d9e542a15808fad9d1f8c5df45860166f77efa57961b5335e65a3a0ed",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_2.so": "141cbfdb3bc2016cd68e0bebc2e5494818213b462ed985afa6d975d4872fb8ec"
+  },
+  "unchanged_law_instance_and_auditor": true,
+  "unchanged_two_GiB_120s_and_default_logic": true,
+  "early_worker_count": 0,
+  "explicit_late_shell_workers": 1
+}

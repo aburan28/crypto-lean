@@ -1,0 +1,1 @@
+strace -f -e trace=mmap\,munmap\,openat\,clone\,clone3 -o /dev/shm/law34-importG/LegacyProbeG.trace lean -j1 -DwarningAsError=true --root=/dev/shm/law34-importG/probe -o /dev/shm/law34-importG/olean/LegacyProbeG.olean /dev/shm/law34-importG/probe/LegacyProbeG.lean 
