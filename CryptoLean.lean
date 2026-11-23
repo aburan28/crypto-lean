@@ -34,3 +34,11 @@ import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Group.PairColourIsolation
+import CryptoLean.Semaev.Projective.FixedDegreeResultant
+import CryptoLean.Semaev.Projective.SylvesterConvention
+import CryptoLean.Semaev.Projective.RecursiveFamily
+import CryptoLean.Semaev.Projective.RecursiveWitness
+import CryptoLean.Semaev.Projective.GuardSystem
+import CryptoLean.Semaev.Projective.ChartSystem
+import CryptoLean.Semaev.Projective.InfinityStrata
+import CryptoLean.Semaev.Projective.LeftFoldAffine
