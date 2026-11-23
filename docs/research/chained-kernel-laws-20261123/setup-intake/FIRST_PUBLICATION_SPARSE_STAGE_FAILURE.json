@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-11-23T09:15:19.780877+00:00",
+  "exit": 1,
+  "phase": "git add of new protocol directory outside sparse patterns",
+  "observed_complete_rejected_paths": [
+    "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md",
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_DEPENDENCY_SETUP_0.md",
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_0.json",
+    "docs/research/chained-kernel-laws-20261123/setup-intake/FIRST_METADATA_SETUP_ERROR.json",
+    "docs/research/chained-kernel-laws-20261123/setup-intake/first-missing-CLI.stderr",
+    "docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh"
+  ],
+  "diagnostic": "The following paths and/or pathspecs matched paths that exist outside of your sparse-checkout definition, so will not be updated in the index. If you intend to update such entries, try --sparse or disable/modify sparsity rules.",
+  "repair": "Explicitly add the study directory to this owned sparse checkout; no source/caller/lock or scientific criterion changes.",
+  "no_compiler_cache_proof_or_native_call_occurred": true
+}

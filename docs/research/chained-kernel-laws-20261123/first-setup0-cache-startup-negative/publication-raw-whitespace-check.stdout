@@ -1,0 +1,74 @@
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Cli-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Cli checkout --detach c24fe6078c630e89b489bffe59b3e20ac30d12c8 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Cli-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Cli fetch --depth=1 --no-tags origin c24fe6078c630e89b489bffe59b3e20ac30d12c8 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Cli-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Cli 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Cli-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Cli remote add origin https://github.com/leanprover/lean4-cli 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/LeanSearchClient-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient checkout --detach d6b4c7be5be75ec4917c873ac50c756dc1436372 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/LeanSearchClient-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient fetch --depth=1 --no-tags origin d6b4c7be5be75ec4917c873ac50c756dc1436372 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/LeanSearchClient-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/LeanSearchClient-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient remote add origin https://github.com/leanprover-community/LeanSearchClient 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Qq-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Qq checkout --detach dce0ad79c486cb1fb504af04f953c3466b0c6db8 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Qq-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Qq fetch --depth=1 --no-tags origin dce0ad79c486cb1fb504af04f953c3466b0c6db8 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Qq-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Qq 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/Qq-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/Qq remote add origin https://github.com/leanprover-community/quote4 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/aesop-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop checkout --detach 4a174c490d8707121c4a9290800489f105d85e07 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/aesop-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop fetch --depth=1 --no-tags origin 4a174c490d8707121c4a9290800489f105d85e07 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/aesop-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/aesop-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop remote add origin https://github.com/leanprover-community/aesop 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/batteries-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/batteries checkout --detach 66e469188fe07963e5cf666c7d4433f45b8131c5 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/batteries-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/batteries fetch --depth=1 --no-tags origin 66e469188fe07963e5cf666c7d4433f45b8131c5 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/batteries-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/batteries 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/batteries-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/batteries remote add origin https://github.com/leanprover-community/batteries 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/importGraph-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/importGraph checkout --detach a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/importGraph-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/importGraph fetch --depth=1 --no-tags origin a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/importGraph-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/importGraph 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/importGraph-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/importGraph remote add origin https://github.com/leanprover-community/import-graph 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/mathlib-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/mathlib checkout --detach cfc55fc58714a59dc06e6e79edc6d1d95140d3c2 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/mathlib-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/mathlib fetch --depth=1 --no-tags origin cfc55fc58714a59dc06e6e79edc6d1d95140d3c2 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/mathlib-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/mathlib 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/mathlib-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/mathlib remote add origin https://github.com/leanprover-community/mathlib4 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/official-cache.argv:1: trailing whitespace.
++lake exe cache get Mathlib.Algebra.Group.Hom.Instances Mathlib.Algebra.Field.ZMod Mathlib.LinearAlgebra.BilinearForm.Orthogonal 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/plausible-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/plausible checkout --detach dfa4f38190d07c37e315953e08b90fe2d95b3c24 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/plausible-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/plausible fetch --depth=1 --no-tags origin dfa4f38190d07c37e315953e08b90fe2d95b3c24 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/plausible-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/plausible 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/plausible-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/plausible remote add origin https://github.com/leanprover-community/plausible 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/proofwidgets-checkout.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/proofwidgets checkout --detach df72b022e558978a1c50264cfc4d7fec86fa8e04 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/proofwidgets-fetch.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/proofwidgets fetch --depth=1 --no-tags origin df72b022e558978a1c50264cfc4d7fec86fa8e04 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/proofwidgets-init.argv:1: trailing whitespace.
++git init /dev/shm/crypto-lean-kernel-laws23/.lake/packages/proofwidgets 
+docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/proofwidgets-remote.argv:1: trailing whitespace.
++git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/proofwidgets remote add origin https://github.com/leanprover-community/ProofWidgets4 

@@ -1,0 +1,192 @@
+{
+  "recorded": "2026-11-23T09:37:47.885180+00:00",
+  "source_C": "1526cf23111c8527bc3520e8c0f1fef6c81a6c31",
+  "cache_and_outer_exit": 1,
+  "complete_stderr": "Could not find native implementation of external declaration 'Lake.cli' (symbols 'l_Lake_cli___boxed' or 'l_Lake_cli').\nFor declarations from `Init`, `Std`, or `Lean`, you need to set `supportInterpreter := true` in the relevant `lean_exe` statement in your `lakefile.lean`.\n",
+  "diagnosis": "Official interpreted LakeMain reaches a missing native Lake.cli implementation; existing libLake_shared exports both requested symbols. No successful cache or study proof.",
+  "full_trace_bytes": 388473,
+  "full_trace_sha256": "6cb089883cc4af3ee1661d0d968fd9c0ba1781c7d9b095160f755c626d2b1c2b",
+  "full_trace_private_path": "/dev/shm/law34-cacheC/cache-startup.trace",
+  "whole_trace_remote_custody_pending": true,
+  "whole_small_raw_streams_copied": true,
+  "files": [
+    {
+      "path": "BUILD_MANIFEST.json",
+      "bytes": 4491,
+      "sha256": "59dfbf85a9e8d2c84a8ea461e35bb75c521481f78c4fb67bf71f45dc2f00430e"
+    },
+    {
+      "path": "POST_MANIFEST.json",
+      "bytes": 4491,
+      "sha256": "f33ee0056f3db877373f8e4560505c2fbc8e3a75614d8acb7945a769fc865502"
+    },
+    {
+      "path": "cache-startup.trace",
+      "bytes": 388473,
+      "sha256": "6cb089883cc4af3ee1661d0d968fd9c0ba1781c7d9b095160f755c626d2b1c2b"
+    },
+    {
+      "path": "dependency-verification.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "dependency-verification.stdout",
+      "bytes": 452,
+      "sha256": "427c37992373e7976ab181b317bc8ced3bee5e37b29a58b27315ee661fc8aacd"
+    },
+    {
+      "path": "final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "official-cache.argv",
+      "bytes": 229,
+      "sha256": "c176cd0c9b7d9d12ffe51c6c95f87ebe943009c9505931824c70b5bc88eedb19"
+    },
+    {
+      "path": "official-cache.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "official-cache.stderr",
+      "bytes": 275,
+      "sha256": "38c4f426fb8ca3ce5d73ba97c904986e1a8b61ab0fba3edef440058546001d0b"
+    },
+    {
+      "path": "official-cache.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "toolchain-exact/bin/cadical",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/cadical",
+      "bytes": 1115504,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/clang",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/clang",
+      "bytes": 119280,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/con-leche",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/con-leche",
+      "bytes": 17613744,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/con-ron",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/con-ron",
+      "bytes": 2945520,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/lake",
+      "symlink": null,
+      "bytes": 273,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/ld.lld",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/ld.lld",
+      "bytes": 6054672,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/lean",
+      "symlink": null,
+      "bytes": 325,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/lean-real",
+      "symlink": null,
+      "bytes": 9024,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/lean4lean",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean4lean",
+      "bytes": 36897680,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanc",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanc",
+      "bytes": 36168,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanchecker",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanchecker",
+      "bytes": 59656,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanchecker-paranoid",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanchecker-paranoid",
+      "bytes": 8858080,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanexport",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanexport",
+      "bytes": 700728,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanir",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanir",
+      "bytes": 215864,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leanmake",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanmake",
+      "bytes": 839,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/leantar",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leantar",
+      "bytes": 2692960,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/llvm-ar",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/llvm-ar",
+      "bytes": 80920,
+      "tool_bytes_not_duplicated_in_Git": true
+    },
+    {
+      "path": "toolchain-exact/bin/nanoda_bin",
+      "symlink": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/nanoda_bin",
+      "bytes": 1339280,
+      "tool_bytes_not_duplicated_in_Git": true
+    }
+  ]
+}

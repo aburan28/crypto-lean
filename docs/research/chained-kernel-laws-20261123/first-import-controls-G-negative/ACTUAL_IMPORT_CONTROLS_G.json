@@ -1,0 +1,224 @@
+{
+  "recorded": "2026-11-23T10:17:44.376082+00:00",
+  "source_G": "35a36a0d488ec2bb36e53dd1fccc8ad990562540",
+  "driver_exit": 0,
+  "results": [
+    {
+      "name": "InitProbeG",
+      "exit": 0,
+      "full_stdout": "Nat : Type\n",
+      "ENOMEM_count": 0,
+      "last_three_exact_ENOMEM_lines": [],
+      "full_trace_private_path": "/dev/shm/law34-importG/InitProbeG.trace",
+      "whole_trace_remote_custody_pending": true
+    },
+    {
+      "name": "LegacyProbeG",
+      "exit": 1,
+      "full_stdout": "/dev/shm/law34-importG/probe/LegacyProbeG.lean:1:0: error: failed to read file '/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/Lean/Elab/Command.olean.private'\n",
+      "ENOMEM_count": 359,
+      "last_three_exact_ENOMEM_lines": [
+        "70684 mmap(NULL, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70684 mmap(NULL, 5287936, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70684 mmap(NULL, 5419008, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)"
+      ],
+      "full_trace_private_path": "/dev/shm/law34-importG/LegacyProbeG.trace",
+      "whole_trace_remote_custody_pending": true
+    },
+    {
+      "name": "ModuleProbeG",
+      "exit": 1,
+      "full_stdout": "/dev/shm/law34-importG/probe/ModuleProbeG.lean:1:0: error: failed to read file '/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/Lean/Data/AssocList.olean.private'\n",
+      "ENOMEM_count": 692,
+      "last_three_exact_ENOMEM_lines": [
+        "70691 mmap(NULL, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70691 mmap(NULL, 172032, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70691 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)"
+      ],
+      "full_trace_private_path": "/dev/shm/law34-importG/ModuleProbeG.trace",
+      "whole_trace_remote_custody_pending": true
+    },
+    {
+      "name": "ModuleZModProbeG",
+      "exit": 1,
+      "full_stdout": "/dev/shm/law34-importG/probe/ModuleZModProbeG.lean:1:0: error: failed to read file '/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/Lean/Elab/Tactic/Simp.olean'\n",
+      "ENOMEM_count": 275,
+      "last_three_exact_ENOMEM_lines": [
+        "70698 mmap(NULL, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70698 mmap(NULL, 507904, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)",
+        "70698 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)"
+      ],
+      "full_trace_private_path": "/dev/shm/law34-importG/ModuleZModProbeG.trace",
+      "whole_trace_remote_custody_pending": true
+    }
+  ],
+  "visibility_only_remedy_prediction_refuted": true,
+  "existing_private_file_not_missing": true,
+  "all_traces_have_one_successful_1073745920_byte_mapping": true,
+  "scientific_limits_unchanged": true,
+  "no_new_theorem_or_instance_accepted": true,
+  "files": [
+    {
+      "file": "BUILD_MANIFEST.json",
+      "bytes": 6129,
+      "sha256": "939835f92ed7b556e6608fb0aa507ed157491a2cef68ff119e6c13d68860f72e",
+      "whole_file_public": true
+    },
+    {
+      "file": "InitProbeG.argv",
+      "bytes": 260,
+      "sha256": "91aba07098f0bca530caebc76ee28f23b5683145dfc35010f13dc433a54d5583",
+      "whole_file_public": true
+    },
+    {
+      "file": "InitProbeG.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "whole_file_public": true
+    },
+    {
+      "file": "InitProbeG.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "InitProbeG.stdout",
+      "bytes": 11,
+      "sha256": "1a25c8bda2350458f8ed5aa777730e6eff3ebe7ed406bea073fa56f82fc8bc10",
+      "whole_file_public": true
+    },
+    {
+      "file": "InitProbeG.trace",
+      "bytes": 835374,
+      "sha256": "8d8f3a475cff19c0b020ebda807ab1885577f944a2be1541e5ea32233d17efcd",
+      "whole_file_public": false
+    },
+    {
+      "file": "LegacyProbeG.argv",
+      "bytes": 266,
+      "sha256": "388c224d53a63df82db7de2819f08ab0f3b530f06a4365a1097889aab125850d",
+      "whole_file_public": true
+    },
+    {
+      "file": "LegacyProbeG.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "whole_file_public": true
+    },
+    {
+      "file": "LegacyProbeG.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "LegacyProbeG.stdout",
+      "bytes": 179,
+      "sha256": "97e5ea6ae6eaf9d2b0573a4a86f80d3a500041af53aa8db1aadf82d7307ea5f8",
+      "whole_file_public": true
+    },
+    {
+      "file": "LegacyProbeG.trace",
+      "bytes": 1251668,
+      "sha256": "666563636aea3e4cf84ae02f71edc42d0d8e031164daf2dff812c07d48b437e8",
+      "whole_file_public": false
+    },
+    {
+      "file": "ModuleProbeG.argv",
+      "bytes": 266,
+      "sha256": "b28d9aad58fe7fc2a5bbcf3b1029e1abd235301471ac48fee61f45d657dd2d16",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleProbeG.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleProbeG.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleProbeG.stdout",
+      "bytes": 181,
+      "sha256": "cb29ff4d5b06d7b43eb878eaf949e18555b03f0b6036791d7dbdfc9e3cd79282",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleProbeG.trace",
+      "bytes": 1332704,
+      "sha256": "9f6d735a525f7c08f5327c740e039f699df247e2fdd38cc10d4c66f280348a60",
+      "whole_file_public": false
+    },
+    {
+      "file": "ModuleZModProbeG.argv",
+      "bytes": 278,
+      "sha256": "63609f34bb312982053ba4563b7fa1d1fc1c098eb40e29b28c5619c3e5242ef3",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleZModProbeG.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleZModProbeG.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleZModProbeG.stdout",
+      "bytes": 179,
+      "sha256": "a4b36764bdd4b8fe0698071020ca4032cd00a73e0f629c636e511c78e3f0eebf",
+      "whole_file_public": true
+    },
+    {
+      "file": "ModuleZModProbeG.trace",
+      "bytes": 1248245,
+      "sha256": "4c6a1a7bfe995004a2820a3a715f6517add511e887307858b9dd0a7c3b71fbe4",
+      "whole_file_public": false
+    },
+    {
+      "file": "POST_MANIFEST.json",
+      "bytes": 6129,
+      "sha256": "b594979c362ea0a7a54899e6a04bc1be144ad3a3b80710b32307f56a095448c1",
+      "whole_file_public": true
+    },
+    {
+      "file": "final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_file_public": true
+    },
+    {
+      "file": "overall.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "whole_file_public": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T10:05:09Z",
+ "id": "PCC-20261123-327f55",
+ "kind": "statement",
+ "producer": {
+  "commit": "f6c3685dab8c222aeb98b42d956b29854276326b",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_F.json",
+    "sha256": "c0a29a301ad0f4e8d78992549977a1e862bc3d2471dc44ec76227236ccac13ab"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Source-first assembly protocol only, not a geometric theorem or whole-project gate receipt.",
+ "statement": "Prospective F freezes the generic AddMonoid unique-double law, actual inherited ZMod/product instance, zero-map and missing-witness controls, zero-point endpoint, exact caller and canonical focused axiom auditor before any proof call. Scientific two-GiB/120s/default logic limits remain binding; no F result is asserted."
+}

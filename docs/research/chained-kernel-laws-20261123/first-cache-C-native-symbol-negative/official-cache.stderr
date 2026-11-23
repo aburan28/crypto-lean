@@ -1,0 +1,2 @@
+Could not find native implementation of external declaration 'Lake.cli' (symbols 'l_Lake_cli___boxed' or 'l_Lake_cli').
+For declarations from `Init`, `Std`, or `Lean`, you need to set `supportInterpreter := true` in the relevant `lean_exe` statement in your `lakefile.lean`.

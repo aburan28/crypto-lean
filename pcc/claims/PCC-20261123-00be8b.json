@@ -1,0 +1,30 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:24:07Z",
+ "id": "PCC-20261123-00be8b",
+ "kind": "statement",
+ "producer": {
+  "commit": "59480f337716a1fe82c8dc572d52f1a9deb7d230",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_ONLY_B.md",
+    "sha256": "eb8aea381493a2422550eb4dc76c36a0f5f6065abfbf09b685112ac97a250c42"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_B.json",
+    "sha256": "d8f07e0e914c3ce4ad65df76c1d5d9a8c413e907a3f8fa4f7c8574bc2b6c88ea"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Prospective source-supported runtime/software continuation, not an observed cause or accepted proof. Five runtime-library hashes are pinned. No Mathlib source build or unsafe cache scope.",
+ "statement": "Cache-only B resumes the first unfinished prebuilt-cache stage, retaining all completed pinned package installs and first setup0 abort134. Tagged runtime source supports LEAN_NUM_THREADS=0 synchronous task fallback before Lake early worker allocation; the first B call will retain a full startup trace. Same2GiB/600s setup cap, tighter serial execution, unchanged pins and exact selective-cache arguments; no study proof or native call yet."
+}

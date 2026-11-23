@@ -1,0 +1,105 @@
+{
+  "recorded_before_E": "2026-11-23T09:58:27.755916+00:00",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020"
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    "lakefile.toml": {
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b"
+    },
+    "lake-manifest.json": {
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md": {
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_DEPENDENCY_SETUP_0.md": {
+      "bytes": 2115,
+      "sha256": "eaa90dbd56573c43eeb6c9aff523b2ef405d491160901654ab7765badbd9833a"
+    },
+    "docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh": {
+      "bytes": 3883,
+      "sha256": "1d2a69686ff00377d7b22a43a8d38ee8ad03de6b8cde5b2fb545a62775ec5771"
+    },
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_0.json": {
+      "bytes": 1278,
+      "sha256": "cb65e32b7697dda161dd26f0add24a60d66a08694f58a0900dd256abbe82cdf6"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_ONLY_B.md": {
+      "bytes": 1885,
+      "sha256": "eb8aea381493a2422550eb4dc76c36a0f5f6065abfbf09b685112ac97a250c42"
+    },
+    "docs/research/chained-kernel-laws-20261123/setup_cache_only_B.sh": {
+      "bytes": 3984,
+      "sha256": "74ea2f501ae8dbc28c0d37b81aa48692de2807fdbf144220dd2cdde81ce70cb3"
+    },
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_B.json": {
+      "bytes": 2332,
+      "sha256": "d8f07e0e914c3ce4ad65df76c1d5d9a8c413e907a3f8fa4f7c8574bc2b6c88ea"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_FRONTEND_C.md": {
+      "bytes": 2140,
+      "sha256": "f3f8fba4f4adb3059b19ac13c20d9a5d23ab2eba602a58e58b0c878f3ede4f69"
+    },
+    "docs/research/chained-kernel-laws-20261123/lean_frontend_C.sh": {
+      "bytes": 325,
+      "sha256": "50f5eab7df65d60e6f7d07118ca19070221bf86fa977aa1fa13f4d0e6b811b21"
+    },
+    "docs/research/chained-kernel-laws-20261123/lake_frontend_C.sh": {
+      "bytes": 273,
+      "sha256": "fddc92a459a46141751e13f4fcae2297e9330b7f85cbbd282ab264ee2463e66c"
+    },
+    "docs/research/chained-kernel-laws-20261123/setup_cache_frontend_C.sh": {
+      "bytes": 5372,
+      "sha256": "b5eb7e053d0dda159e05a361d59713828a06585771261add8f8b8d2798c514f3"
+    },
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_C.json": {
+      "bytes": 3602,
+      "sha256": "8d3fe105498dc8d3c6b2e621e92ef270fe0769c51ef8847c8bcf72d6851c0bb5"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_LINKAGE_D.md": {
+      "bytes": 1279,
+      "sha256": "2547f021feb93105ab5a07905f0ef7469b8b6c4d514348657569b41d562266b9"
+    },
+    "docs/research/chained-kernel-laws-20261123/lake_frontend_D.sh": {
+      "bytes": 332,
+      "sha256": "5b21b7f95de64e7018c90861a383909f08cc2c8dd5678f6729ce1526acabb65e"
+    },
+    "docs/research/chained-kernel-laws-20261123/setup_cache_linkage_D.sh": {
+      "bytes": 5446,
+      "sha256": "6e23a63c420be1412db557675c2d6a7dcd15d629c48b1823652fa2d96b3c6da9"
+    },
+    "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_D.json": {
+      "bytes": 4345,
+      "sha256": "16ed7bdd206766c8be1485feb585c125e084063d748251d0e1eb24f0370f1a38"
+    },
+    "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_OFFICIAL_CACHE_PROFILE_E.md": {
+      "bytes": 2320,
+      "sha256": "d380933b3245076c6e0e50642ea61dfbc24b7d9863fb658b4457bf679e2407e0"
+    },
+    "docs/research/chained-kernel-laws-20261123/setup_official_cache_profile_E.sh": {
+      "bytes": 4168,
+      "sha256": "e1a14f0e4501aa3e7f980c746636a38f1b1cd673fbe2d1b595a98d66e647bf57"
+    }
+  },
+  "runtime_library_sha256": {
+    "libLake_shared.so": "d68867df340056b40726fde3939a9d2021901cc6944f971dd6a6a778bd9ea25b",
+    "libInit_shared.so": "7831b707e868cee76c353d26649fbd8981b2f4d7e0329af55bbf4fa9e0c69350",
+    "libleanshared.so": "efef27df56f2197139afe12f1a2b63913a05f1aba81ce88824c44100431ed8c4",
+    "libleanshared_1.so": "691bf49d9e542a15808fad9d1f8c5df45860166f77efa57961b5335e65a3a0ed",
+    "libleanshared_2.so": "141cbfdb3bc2016cd68e0bebc2e5494818213b462ed985afa6d975d4872fb8ec"
+  },
+  "software_setup_only": true,
+  "new_software_profile_virtual_KiB": 4194304,
+  "later_scientific_profile_virtual_KiB": 2097152,
+  "later_scientific_profile_seconds": 120,
+  "no_completed_dependency_stage_repeated": true
+}

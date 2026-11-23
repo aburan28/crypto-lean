@@ -1,0 +1,30 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:32:33Z",
+ "id": "PCC-20261123-7a327a",
+ "kind": "statement",
+ "producer": {
+  "commit": "28155d6a89afe719a0627eed064eba0ce96a48af",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_FRONTEND_C.md",
+    "sha256": "f3f8fba4f4adb3059b19ac13c20d9a5d23ab2eba602a58e58b0c878f3ede4f69"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_C.json",
+    "sha256": "8d3fe105498dc8d3c6b2e621e92ef270fe0769c51ef8847c8bcf72d6851c0bb5"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Prospective materially different software-startup continuation after the zero-worker IO.Promise failure. All prior failures remain; no prebuilt-cache or kernel-proof success is claimed.",
+ "statement": "Cache-only C changes the startup method to the unmodified official LakeMain.lean through the exact pinned Lean shell with explicit-j1. A private prefix copies the kernel binary byte-for-byte and uses thin bounded frontends and unchanged library/source links for child calls; original installation, trust/default logical limits,2GiB/600s setup caps and dependency/cache pins remain unchanged. No study proof or consumer assembly has run."
+}

@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T10:20:45Z",
+ "id": "PCC-20261123-a6ac3d",
+ "kind": "statement",
+ "producer": {
+  "commit": "2dfcc2e83bfc37342cd97190b9dc0873d33f5cdf",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-late-worker-H-negative/ACTUAL_FIRST_LATE_WORKER_H_FAILURE.json",
+    "sha256": "b3f5c3941e75de5b2fb35b02011ea3c4ea6a87116828786767f5549832f5700f"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Observed local loader failure and explicitly unresolved formal acceptance; no impossibility or scientific limit relaxation.",
+ "statement": "First H generic phase fails1 under unchanged two-GiB/120s bounds with ENOMEM and the early one-GiB stack still observed; instance/audit were not reached. The early-env-only remedy prediction is refuted. Both runtime/tag resolve to eb6cafb7; small raw and whole-trace hash/custody gap are retained. The generic shared-law candidate remains uncompiled locally and awaits normal canonical CI."
+}

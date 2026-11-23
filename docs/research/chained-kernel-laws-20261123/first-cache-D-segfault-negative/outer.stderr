@@ -1,0 +1,1 @@
+docs/research/chained-kernel-laws-20261123/setup_cache_linkage_D.sh: line 87: 69350 Segmentation fault      ( ulimit -c 0; ulimit -v 2097152; timeout --signal=TERM --kill-after=5s 600s "$@" ) > "$out/$name.stdout" 2> "$out/$name.stderr"

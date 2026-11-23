@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:19:02Z",
+ "id": "PCC-20261123-b1629e",
+ "kind": "statement",
+ "producer": {
+  "commit": "2c495765bde0f816c0bea81ff56705cdd5a45614",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-setup0-cache-startup-negative/ACTUAL_FIRST_SETUP0_CACHE_ABORT.json",
+    "sha256": "33fb266a92d743e6afa11fdd32022e04e058a120f572c46049e04ff053ac9d63"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Software-startup negative only. Outer exit file134 is distinct from the tool completion report1. Preserve first outcome before a source-supported cache-only continuation; do not reclone completed package stages or raise limits.",
+ "statement": "First frozen dependency setup0 materializes all nine exact manifest Git revisions, then its official Lake cache command aborts134 with empty stdout/stderr. Whole small raw streams, every argv/exit, source guard manifests and all156 setup-file inventory are retained. No new study law, consumer assembly or native qualifier ran, and no prebuilt-cache success is inferred."
+}

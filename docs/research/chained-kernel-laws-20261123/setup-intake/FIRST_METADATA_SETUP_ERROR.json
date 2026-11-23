@@ -1,0 +1,12 @@
+{
+  "exit": 2,
+  "argv": [
+    "python3",
+    "tools/pcc/pcc.py",
+    "ledger",
+    "verify",
+    "--base",
+    "origin/main"
+  ],
+  "cause": "This library does not ship tools/pcc/pcc.py; use canonical crypto tool with explicit --repo. No claim/run occurred in that failed lookup."
+}

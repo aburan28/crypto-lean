@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T11:19:03Z",
+ "id": "PCC-20261123-cc36ca",
+ "kind": "statement",
+ "producer": {
+  "commit": "cd0a840aeb35d488712dd45f635444fe6ee44b5a",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/maintenance-first-CI-billing-lock/ACTUAL_FIRST_CI_BILLING_BLOCK.json",
+    "sha256": "54a1cf0a489491a84254bf7c457e0d2d1147a63086abde95ac18ec2a6a4a5d6c"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Observed CI access blocker, not a mathematical rejection or accepted proof.",
+ "statement": "First eligible shared-library CI review enumerates2 all-attempt checks across1 workflow. Both required jobs never started; exact GitHub annotations state an account billing lock, and job logs return404. No generic theorem, inherited assembly or axiom audit ran. Full metadata/annotations/errors are retained; local loader negatives and unsigned formal status remain unchanged, with no paid, identity, resource or gate workaround."
+}
