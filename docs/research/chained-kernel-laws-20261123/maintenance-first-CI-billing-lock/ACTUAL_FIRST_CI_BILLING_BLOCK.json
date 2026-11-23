@@ -1,0 +1,43 @@
+{
+  "review_completed_at": "2026-11-23T11:19:03.551325+00:00",
+  "head": "cd0a840aeb35d488712dd45f635444fe6ee44b5a",
+  "first_review_after_50min": true,
+  "complete_all_attempt_check_count": 2,
+  "complete_all_event_workflow_count": 1,
+  "within_30_check_budget": true,
+  "selftest_and_build_audit_conclusion": "failure before job start",
+  "exact_annotation_reason": "The job was not started because your account is locked due to a billing issue.",
+  "no_proof_or_audit_executed": true,
+  "job_logs_unavailable_BlobNotFound_404": true,
+  "connector_annotation_GET_not_allowed": true,
+  "annotation_read_method": "ordinary unauthenticated GET of the public GitHub REST annotation URLs; no credential change",
+  "next_unchanged_review_not_before": "2026-11-23T15:19:03.551325+00:00",
+  "no_paid_identity_budget_gate_or_verifier_workaround": true,
+  "files": [
+    {
+      "name": "law34-first-CI-checks-all.json",
+      "bytes": 7108,
+      "sha256": "135a1fba15cbb54c4c170106bab517932f5c51b903574260483464cbf2e85896"
+    },
+    {
+      "name": "law34-first-CI-runs-all.json",
+      "bytes": 12826,
+      "sha256": "5da9f086b82a7548dceb0d40f3bc8d630cd0f500f7a6750a143a097e4c40a266"
+    },
+    {
+      "name": "law34-first-CI-connector-failures.json",
+      "bytes": 2642,
+      "sha256": "93541154040ba6a2e6397851f28698ca9645862509633c04af86a3c23360b1cb"
+    },
+    {
+      "name": "law34-first-CI-selftest-public-annotations.json",
+      "bytes": 410,
+      "sha256": "ff5cb0cba8406e917f46429972c47bf4318c260911195be465cf8e24b32e60a2"
+    },
+    {
+      "name": "law34-first-CI-build-public-annotations.json",
+      "bytes": 410,
+      "sha256": "ff5cb0cba8406e917f46429972c47bf4318c260911195be465cf8e24b32e60a2"
+    }
+  ]
+}
