@@ -1,0 +1,37 @@
+{
+  "scope": "Focused56 shared composition and consumer fresh replay; unsigned producer checks",
+  "source_sha256": "7af372d351d1c463393cc0296ad861b36ee85c8a1678bdfba84b6ecb51e87b9d",
+  "lean": "4.35.0",
+  "mathlib_focused": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "mathlib_default_unchanged": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "phase_exit": 0,
+  "physical_stop": 0,
+  "peak_cgroup_bytes": 14816174080,
+  "stop_cgroup_bytes": 15032385536,
+  "phase_seconds_limit": 600,
+  "workers": 1,
+  "default_pin_qualification": "open",
+  "signed_standing": "unverified",
+  "files": [
+    {
+      "path": "axioms.txt",
+      "sha256": "7aefaab689fe322a4cd7a304bb0e5e98b5a2bd949ae77e2967335ef7fce13a36"
+    },
+    {
+      "path": "gates-and-fresh.txt",
+      "sha256": "d9929f48444a9bf626e3b13e8de47878832c47ec72228755d082a64be92ccf82"
+    },
+    {
+      "path": "shared-audit.log",
+      "sha256": "0835cf437516e5afa4388ac3c563fb5770b0b6527872913b1d62f3c3be864ded"
+    },
+    {
+      "path": "shared-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "statement-binding.json",
+      "sha256": "d82692aa78f825056b586a272b2dd285fd87d9da1b363a8a480586b3d48524b7"
+    }
+  ]
+}
