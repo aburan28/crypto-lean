@@ -1,0 +1,9 @@
+{
+  "phase": "file-only B caller generator before any B process",
+  "exit": 1,
+  "observed_error": "SyntaxError: unterminated triple-quoted string literal (detected at line21)",
+  "cause": "The shell here-document delimiter matched an inner literal PY line in the metadata source generator.",
+  "set_e_stopped_follow_on_commands": true,
+  "no_B_caller_lock_claim_commit_or_execution_in_failed_attempt": true,
+  "repair": "Write the complete B caller with apply_patch; use distinct quoted metadata delimiter names. Scientific inputs and dependency pins remain unchanged."
+}
