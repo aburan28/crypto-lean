@@ -34,3 +34,5 @@ import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Group.PairColourIsolation
+import CryptoLean.Group.UniqueDouble
+import CryptoLean.Group.UniqueDoubleExamples
