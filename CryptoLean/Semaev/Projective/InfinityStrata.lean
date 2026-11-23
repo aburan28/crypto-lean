@@ -19,7 +19,8 @@ forced to be affine.  In that case the exact chart cover can be restricted to
 377 interior separated masks, instead of all 16384 masks.  Without the endpoint
 assumptions, the exact separated-mask cover has 987 masks.
 
-The three finite cardinalities use `native_decide`.  The structural identities,
+The two separated-mask counts use `native_decide` (listed in
+`tools/lean/trusted-native.txt`); the powerset count has a kernel proof.  The structural identities,
 mask-necessity theorems, and cover equivalences are ordinary kernel-checked
 proofs.  This file makes no sufficiency, solver, rank, yield, recovery, runtime,
 memory, or ECDLP-complexity claim.
@@ -389,7 +390,7 @@ theorem frozenChartCover_iff_interiorChartCover
 /-- The full fourteen-slot powerset has `2^14 = 16384` masks. -/
 theorem card_infinityMask :
     Fintype.card InfinityMask = 16384 := by
-  native_decide
+  simp [InfinityMask, Fintype.card_finset]
 
 /-- A fourteen-slot path has 987 separated subsets. -/
 def separatedInfinityMasks : Finset InfinityMask :=
