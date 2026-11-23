@@ -1,0 +1,1 @@
+git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop remote add origin https://github.com/leanprover-community/aesop 

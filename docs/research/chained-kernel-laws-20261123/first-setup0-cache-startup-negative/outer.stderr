@@ -1,0 +1,1 @@
+docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh: line 52: 68496 Aborted                 ( ulimit -c 0; ulimit -v 2097152; timeout --signal=TERM --kill-after=5s 600s "$@" ) > "$out/$name.stdout" 2> "$out/$name.stderr"

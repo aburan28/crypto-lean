@@ -1,0 +1,7 @@
+{
+  "recorded": "2026-11-23T09:21:44.589269+00:00",
+  "full_diff_check_exit": 2,
+  "reason": "Frozen argv records intentionally include the shell printf trailing separator; retain exact bytes as archived data. Existing repository practice retains frozen raw whitespace.",
+  "source_only_check": "git diff --cached --check -- *.lean *.sh *.md *.toml *.json",
+  "no_repository_policy_attribute_or_gate_edit": true
+}

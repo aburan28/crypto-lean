@@ -1,0 +1,60 @@
+{
+  "recorded": "2026-11-23T09:16:34.978348+00:00",
+  "source_commit": "2c495765bde0f816c0bea81ff56705cdd5a45614",
+  "source": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md",
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_DEPENDENCY_SETUP_0.md",
+      "bytes": 2115,
+      "sha256": "eaa90dbd56573c43eeb6c9aff523b2ef405d491160901654ab7765badbd9833a"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh",
+      "bytes": 3883,
+      "sha256": "1d2a69686ff00377d7b22a43a8d38ee8ad03de6b8cde5b2fb545a62775ec5771"
+    }
+  ],
+  "lock_sha256": "cb65e32b7697dda161dd26f0add24a60d66a08694f58a0900dd256abbe82cdf6",
+  "tools": {
+    "lean": {
+      "path": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+      "sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38"
+    },
+    "lake": {
+      "path": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+      "sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1"
+    }
+  },
+  "environment": {
+    "TMPDIR": "/dev/shm/law34-deps0-tmp",
+    "MATHLIB_CACHE_DIR": "/dev/shm/law34-deps0/prebuilt-cache",
+    "LEAN_STACK_SIZE_KB": "16384",
+    "LEAN_MAIN_USE_THREAD": "0",
+    "MIMALLOC_ARENA_RESERVE": "65536"
+  },
+  "software_setup_only": true
+}

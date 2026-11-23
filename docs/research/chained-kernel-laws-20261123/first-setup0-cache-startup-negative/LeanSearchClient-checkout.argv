@@ -1,0 +1,1 @@
+git -C /dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient checkout --detach d6b4c7be5be75ec4917c873ac50c756dc1436372 

@@ -1,0 +1,64 @@
+{
+  "recorded_before_setup": "2026-11-23T09:15:47.743519+00:00",
+  "actual_source_commit": "2c495765bde0f816c0bea81ff56705cdd5a45614",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020",
+      "GitHub_blob_sha1": "b83480326d42901d8e38c927f142dcecc7145749",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "GitHub_blob_sha1": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b",
+      "GitHub_blob_sha1": "94adae81f77dddf9b927ea8e3b3e5144245ff890",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75",
+      "GitHub_blob_sha1": "c554d62fdea4fb8df66d34db4fb84e307c98a20f",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md",
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645",
+      "GitHub_blob_sha1": "f71a9298c91bb04ccd42def5de65809fac3bffb8",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_DEPENDENCY_SETUP_0.md",
+      "bytes": 2115,
+      "sha256": "eaa90dbd56573c43eeb6c9aff523b2ef405d491160901654ab7765badbd9833a",
+      "GitHub_blob_sha1": "fa168db02b5b43cef8ddd1d3dbb060bd7cef5057",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh",
+      "bytes": 3883,
+      "sha256": "1d2a69686ff00377d7b22a43a8d38ee8ad03de6b8cde5b2fb545a62775ec5771",
+      "GitHub_blob_sha1": "aa3409f5ae37c7a9600d9f4d124a0688e81e397e",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_0.json",
+      "bytes": 1278,
+      "sha256": "cb65e32b7697dda161dd26f0add24a60d66a08694f58a0900dd256abbe82cdf6",
+      "GitHub_blob_sha1": "6e8b788231972b1e3ded1e39291fb43d23e52784",
+      "complete_bytes_match": true
+    }
+  ],
+  "all8_inputs_including_lock_read_back": true,
+  "no_setup_process_yet": true
+}
