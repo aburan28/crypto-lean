@@ -78,7 +78,7 @@ theorem labelsFromTape_eq_iff {Label V : Type*} [DecidableEq V] {n : ℕ} (tape 
     simpa [S, matchingIndices, equalityPattern] using hm k
   have hlabel (k : Fin n) : labelsFromTape tape n (equalityPattern table) k = tape (first k).val := by
     unfold labelsFromTape
-    exact dif_pos (hs k)
+    exact dite_eq_left (hs k)
   rw [hlabel i, hlabel j]
   constructor
   · intro h
@@ -115,7 +115,7 @@ theorem labelsFromTape_snoc {Label V : Type*} [DecidableEq V] {n : ℕ} (tape : 
     rw [← hj, Fin.castSucc_le_castSucc_iff]
     exact Finset.min'_le _ _ hjmem
   unfold labelsFromTape
-  rw [dif_pos hnew, dif_pos hold]
+  rw [dite_eq_left hnew, dite_eq_left hold]
   change tape firstNew.val = tape first.val
   rw [he]
   rfl

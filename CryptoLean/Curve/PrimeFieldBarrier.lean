@@ -170,6 +170,35 @@ theorem prime_field_query_bound {p r q H : ℕ} [Fact p.Prime] (W : WeierstrassC
   simpa only [Nat.cast_mul, Nat.cast_ofNat] using
     ECDLP.sqrt_field_lower_bound_le_budget (Nat.mul_pos two_pos hH) (hpc.trans hc)
 
+/-- Half success with bounded expected exceptional degree gives the prime-field query bound. -/
+theorem prime_field_query_bound_of_expected_half {p r q H : ℕ} [Fact p.Prime] [Fact r.Prime]
+    (W : WeierstrassCurve (ZMod p)) [W.IsElliptic] (P : W.toAffine.Point)
+    (horder : addOrderOf P = r) (hH : 0 < H) (hcofactor : ECDLP.cofactor P ≤ H)
+    (hHasse : ECDLP.SatisfiesHasse p (Nat.card W.toAffine.Point))
+    {View : ℕ → Type*} {Seed ι : Type*} [Fintype Seed] [Fintype ι]
+    (weights : Seed → ℝ) (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) (guess : Seed → ZMod r → ZMod r)
+    (polynomials : Seed → ι → (ZMod r)[X]) (hnonzero : ∀ s i, polynomials s i ≠ 0)
+    (hmatch : ∀ s x, (∀ i, (polynomials s i).eval x ≠ 0) →
+      guess s x = scalarGuess (observe s) (samples s) (strategy s) x)
+    (hdegree : 4 * ∑ s, weights s * ((∑ i, (polynomials s i).natDegree : ℕ) : ℝ) ≤ (r : ℝ))
+    (hsuccess : (1 : ℝ) / 2 ≤
+      (∑ s, weights s * ((successfulSecrets (guess s)).card : ℝ)) / (r : ℝ)) :
+    Real.sqrt ((Real.sqrt p - 1) ^ 2 / (2 * (H : ℝ)) - 2) ≤ (q : ℝ) + 3 := by
+  have hr : (0 : ℝ) < r := by exact_mod_cast (Fact.out : r.Prime).pos
+  have hscale : (∑ s, weights s * (2 * ((successfulSecrets (guess s)).card : ℝ))) =
+      2 * ∑ s, weights s * ((successfulSecrets (guess s)).card : ℝ) := by
+    rw [Finset.mul_sum]
+    exact Finset.sum_congr rfl (fun s _ => by ring)
+  have hhalf : (r : ℝ) ≤ ∑ s, weights s * (2 * ((successfulSecrets (guess s)).card : ℝ)) := by
+    rw [hscale]
+    linarith only [(le_div_iff₀ hr).mp hsuccess]
+  have hcount := two_mul_expected_success_le_of_polynomial_exceptions weights hnonneg hnorm
+    observe samples strategy guess polynomials hnonzero hmatch
+  exact prime_field_query_bound W P horder hH hcofactor hHasse
+    (order_le_twice_successNumerator_of_expected_half hhalf hcount hdegree)
+
 /-- Arithmetic specialization of the SGGM success estimate to a group of prime order `r`.
 The success estimate is supplied as a hypothesis. -/
 theorem sggm_half_success_tradeoff {r q : ℕ} {δ : ℝ} (hr : 0 < r)
