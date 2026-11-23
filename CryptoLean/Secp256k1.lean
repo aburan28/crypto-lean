@@ -39,3 +39,9 @@ import CryptoLean.Secp256k1.M16FrobeniusPointSplit
 import CryptoLean.Secp256k1.M16DirectPointSemantics
 import CryptoLean.Secp256k1.M16SolverGate
 import CryptoLean.Secp256k1.M16CancellationRootLowerBound
+import CryptoLean.Secp256k1.M16FactorBaseSymmetricGate
+import CryptoLean.Secp256k1.M16PartitionedPointSemantics
+import CryptoLean.Secp256k1.GenericGroupBound
+import CryptoLean.Secp256k1.Secp256k1GenericSecurity
+import CryptoLean.Secp256k1.M16SixWidthNoGo
+import CryptoLean.Secp256k1.M16LiftableSixWidthNoGo

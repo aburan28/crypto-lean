@@ -65,6 +65,17 @@ nontrivial-character bound M yields the triple-count deviation M*|S|. The
 elliptic analytic input and any sampling interpretation remain separate.
 Source, inheritance and audit receipts are in `docs/subset-fourier-20261115.md`.
 
+`CryptoLean.Semaev.Projective` is the recursive projective Semaev family for
+`y² = x³ + b`: fixed-degree resultants, the left fold `C_(s+2)`, its chain,
+guarded-system and chart-cover semantics, and the affine `S17At`.
+`CryptoLean.Secp256k1` is the `b = 7` instance over `ZMod p`. It contains the
+M16 root bridge (System (4) ≃ factor-base roots of `S17`), the point semantics
+in `E(F̄_p)`, and the cancellation-pair root lower bound (more than `B` direct
+roots for some nonzero target). It was ported from
+KeyAIGit/ecdlp-lean-verification PR #347, and its `native_decide` certificates
+are listed in `tools/lean/trusted-native.txt`. See
+`docs/semaev-root-port-20261123.md`.
+
 ## Using it
 
 In the consumer's `lakefile.toml`:
