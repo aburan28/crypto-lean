@@ -1,0 +1,14 @@
+# Proof gate: tools/proof-gate.sh, 2026-11-23, Lean v4.35.0, Mathlib cfc55fc
+# source commit 73c1ebd08fe67b6fcf3a25cb97590eb1498c0a45
+# status: PASS
+ok    CryptoLean.MathSt.card_pow_eq_one_cyclic  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.card_pow_succ_eq_self  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.card_roots_X_pow_sub_X  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.card_roots_X_pow_sub_one  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.card_roots_X_pow_sub_one.ne_zero_of_pow_eq_one  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.exists_char_ker_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.normSq_pow_sub_one_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.normSq_pow_sub_one_ne_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.orbit_divisor_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.MathSt.same_orbit_iff_char_eq  [propext]
+audited 348 theorems; 0 failing, 0 trusted (native_decide)
