@@ -1,0 +1,1 @@
+strace -f -e trace=clone\,clone3\,mmap\,munmap\,execve -o /dev/shm/law34-cacheC/cache-startup.trace lake exe cache get Mathlib.Algebra.Group.Hom.Instances Mathlib.Algebra.Field.ZMod Mathlib.LinearAlgebra.BilinearForm.Orthogonal 

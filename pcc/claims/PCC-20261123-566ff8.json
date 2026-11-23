@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:37:48Z",
+ "id": "PCC-20261123-566ff8",
+ "kind": "statement",
+ "producer": {
+  "commit": "1526cf23111c8527bc3520e8c0f1fef6c81a6c31",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-cache-C-native-symbol-negative/ACTUAL_FIRST_CACHE_C_NATIVE_SYMBOL_FAILURE.json",
+    "sha256": "f1bfc73180d739e8303b65b36b6a86fa5a17576eae3302e28d0d1a2176c3bf32"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Software linkage negative only; default logical/kernel settings, copied binary/source/library bytes and prior failures remain unchanged. A targeted explicit load of the existing library is a future proposal, not an observed repair.",
+ "statement": "First official-entry cache C exits1 because the interpreted LakeMain cannot resolve native Lake.cli. The unchanged installed libLake_shared.so exports both requested native symbols, and the pinned shell source supports --load-dynlib. All small raw/guard/exit streams are retained; full388473B trace stays whole/private with hash and custody gap. No cache success, generic law or consumer proof ran."
+}
