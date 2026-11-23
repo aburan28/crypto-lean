@@ -1,0 +1,148 @@
+{
+  "recorded_before_D": "2026-11-23T09:43:24.476106+00:00",
+  "actual_source_commit": "b323a280a09af78b6fd8c2be7e64d8aa705687a4",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020",
+      "GitHub_blob_sha1": "b83480326d42901d8e38c927f142dcecc7145749",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "GitHub_blob_sha1": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b",
+      "GitHub_blob_sha1": "94adae81f77dddf9b927ea8e3b3e5144245ff890",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75",
+      "GitHub_blob_sha1": "c554d62fdea4fb8df66d34db4fb84e307c98a20f",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md",
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645",
+      "GitHub_blob_sha1": "f71a9298c91bb04ccd42def5de65809fac3bffb8",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_DEPENDENCY_SETUP_0.md",
+      "bytes": 2115,
+      "sha256": "eaa90dbd56573c43eeb6c9aff523b2ef405d491160901654ab7765badbd9833a",
+      "GitHub_blob_sha1": "fa168db02b5b43cef8ddd1d3dbb060bd7cef5057",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_dependencies_0.sh",
+      "bytes": 3883,
+      "sha256": "1d2a69686ff00377d7b22a43a8d38ee8ad03de6b8cde5b2fb545a62775ec5771",
+      "GitHub_blob_sha1": "aa3409f5ae37c7a9600d9f4d124a0688e81e397e",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_0.json",
+      "bytes": 1278,
+      "sha256": "cb65e32b7697dda161dd26f0add24a60d66a08694f58a0900dd256abbe82cdf6",
+      "GitHub_blob_sha1": "6e8b788231972b1e3ded1e39291fb43d23e52784",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_ONLY_B.md",
+      "bytes": 1885,
+      "sha256": "eb8aea381493a2422550eb4dc76c36a0f5f6065abfbf09b685112ac97a250c42",
+      "GitHub_blob_sha1": "8b7e121f13bcf0c7fe4d218d82b5e0563ed233fa",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_cache_only_B.sh",
+      "bytes": 3984,
+      "sha256": "74ea2f501ae8dbc28c0d37b81aa48692de2807fdbf144220dd2cdde81ce70cb3",
+      "GitHub_blob_sha1": "3457cf4bdf13b70a96e9b837c0c74d2385569d17",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_B.json",
+      "bytes": 2332,
+      "sha256": "d8f07e0e914c3ce4ad65df76c1d5d9a8c413e907a3f8fa4f7c8574bc2b6c88ea",
+      "GitHub_blob_sha1": "6c379fb74750db42ebd780d7f34e6b8e47869889",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_FRONTEND_C.md",
+      "bytes": 2140,
+      "sha256": "f3f8fba4f4adb3059b19ac13c20d9a5d23ab2eba602a58e58b0c878f3ede4f69",
+      "GitHub_blob_sha1": "b7475e926a5e1c6bfab2e8eb7aeadd2e0604d54a",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/lean_frontend_C.sh",
+      "bytes": 325,
+      "sha256": "50f5eab7df65d60e6f7d07118ca19070221bf86fa977aa1fa13f4d0e6b811b21",
+      "GitHub_blob_sha1": "47ade73b4edff593658f662a5492e73ce025ed4c",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/lake_frontend_C.sh",
+      "bytes": 273,
+      "sha256": "fddc92a459a46141751e13f4fcae2297e9330b7f85cbbd282ab264ee2463e66c",
+      "GitHub_blob_sha1": "c871d6f86cf60e2f154635cde75465590b20da62",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_cache_frontend_C.sh",
+      "bytes": 5372,
+      "sha256": "b5eb7e053d0dda159e05a361d59713828a06585771261add8f8b8d2798c514f3",
+      "GitHub_blob_sha1": "569176da03eb87397f1673b62ddaa7d5484074a3",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_C.json",
+      "bytes": 3602,
+      "sha256": "8d3fe105498dc8d3c6b2e621e92ef270fe0769c51ef8847c8bcf72d6851c0bb5",
+      "GitHub_blob_sha1": "dbee33525654cb7e9a67039c68c5efc188db20f2",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_LINKAGE_D.md",
+      "bytes": 1279,
+      "sha256": "2547f021feb93105ab5a07905f0ef7469b8b6c4d514348657569b41d562266b9",
+      "GitHub_blob_sha1": "c39837771cc453eef86ab54c2243f981fa88acda",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/lake_frontend_D.sh",
+      "bytes": 332,
+      "sha256": "5b21b7f95de64e7018c90861a383909f08cc2c8dd5678f6729ce1526acabb65e",
+      "GitHub_blob_sha1": "1da72460d528a6b4a44a2b23c8c719d948a5134f",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/setup_cache_linkage_D.sh",
+      "bytes": 5446,
+      "sha256": "6e23a63c420be1412db557675c2d6a7dcd15d629c48b1823652fa2d96b3c6da9",
+      "GitHub_blob_sha1": "a5d58df0a5e77c96328f9a1960cd10436a56fed6",
+      "complete_bytes_match": true
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_D.json",
+      "bytes": 4345,
+      "sha256": "16ed7bdd206766c8be1485feb585c125e084063d748251d0e1eb24f0370f1a38",
+      "GitHub_blob_sha1": "0c1385e0956891c17485546357d14a0f97ac6044",
+      "complete_bytes_match": true
+    }
+  ],
+  "external_LakeMain_source_matches_previous_C_tagged_full_readback": true,
+  "no_D_process_yet": true
+}

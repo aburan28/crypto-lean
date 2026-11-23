@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:50:16Z",
+ "id": "PCC-20261123-1854cb",
+ "kind": "statement",
+ "producer": {
+  "commit": "b323a280a09af78b6fd8c2be7e64d8aa705687a4",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-cache-D-segfault-negative/ACTUAL_FIRST_CACHE_D_SEGFAULT.json",
+    "sha256": "7dfed89f03d9d8b22d7ec8fe9c30fb443a01d4590072472dce9d5a724bd70aa1"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Software-startup/linkage negative only. Preserve exact observed exit139 separately from tool completion1, and do not invent a precise cause from this outcome.",
+ "statement": "First explicit-library official-entry D terminates139 with empty phase stdout/stderr and a recorded outer segmentation-fault diagnostic. Whole389263B trace remains private/custody-pending with hash; all small raw/exit/guard records are retained. No new study theorem, consumer assembly, native qualifier or prebuilt-cache success occurred. Earlier profiles remain failures."
+}
