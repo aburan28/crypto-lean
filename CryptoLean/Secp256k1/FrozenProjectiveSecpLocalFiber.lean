@@ -1,6 +1,7 @@
 import CryptoLean.Semaev.Projective.InfinityStrata
 import CryptoLean.Secp256k1.Secp256k1PrimeP
 import CryptoLean.Semaev.Projective.LeftFoldAffine
+import CryptoLean.Secp256k1.SemaevThree
 
 -- Ported from KeyAIGit/ecdlp-lean-verification Ecdlp/Proved/FrozenProjectiveSecpLocalFiber.lean at 0a47cd62f43d (PR #347).
 /-!
@@ -259,8 +260,8 @@ private theorem HValue_affine_distinct_zero_iff
           barKummer (Point.some x₁ y₁ h₁ - Point.some x₂ y₂ h₂) := by
   have hc₁ := barCurve_curve_of_nonsingular h₁
   have hc₂ := barCurve_curve_of_nonsingular h₂
-  rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S₃]
-  rw [CryptoLean.Secp256k1.Semaev.S₃_eq_zero_iff 0 7 x₁ y₁ x₂ y₂ z
+  rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S3]
+  rw [CryptoLean.Semaev.S3_eq_zero_iff 0 7 x₁ y₁ x₂ y₂ z
     (by linear_combination hc₁) (by linear_combination hc₂) hx]
   rw [barKummer_add_of_X_ne h₁ h₂ hx,
     barKummer_sub_of_X_ne h₁ h₂ hx,
@@ -337,8 +338,8 @@ private theorem HValue_affine_self_affine_zero_iff_of_Y_ne
           (ProjectivePair.affine x).coord
           (ProjectivePair.affine z).coord =
         -(4 * y ^ 2) * (z - r) := by
-    rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S₃]
-    simp only [CryptoLean.Secp256k1.Semaev.S₃]
+    rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S3]
+    simp only [CryptoLean.Semaev.S3]
     linear_combination (4 * z) * hc - hr
   have hcoef : -(4 * y ^ 2) ≠ 0 := by
     have hsquare : ((2 : FpBar) * y) ^ 2 ≠ 0 := pow_ne_zero 2 h2y
@@ -375,8 +376,8 @@ private theorem HValue_affine_self_affine_ne_zero_of_Y_eq
       HValue (ProjectivePair.affine x).coord
           (ProjectivePair.affine x).coord
           (ProjectivePair.affine z).coord = -(63 * x) := by
-    rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S₃]
-    simp only [CryptoLean.Secp256k1.Semaev.S₃]
+    rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S3]
+    simp only [CryptoLean.Semaev.S3]
     linear_combination (-4 * z + x) * hx3
   rw [hvalue]
   exact neg_ne_zero.mpr (mul_ne_zero bar_sixtyThree_ne_zero hx)

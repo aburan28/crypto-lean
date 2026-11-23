@@ -1,5 +1,5 @@
 import CryptoLean.Semaev.Projective.ChartSystem
-import CryptoLean.Secp256k1.SemaevThree
+import CryptoLean.Semaev.S3
 
 -- Ported from KeyAIGit/ecdlp-lean-verification Ecdlp/Proved/SemaevLeftFoldAffine.lean at 0a47cd62f43d (PR #347).
 /-!
@@ -39,9 +39,9 @@ def f3 {R : Type*} [CommRing R]
 
 /-- The local transcription is exactly the repository's already verified
 Semaev `S₃` formula. -/
-theorem f3_eq_S₃
+theorem f3_eq_S3
     {R : Type*} [CommRing R] (a b x₁ x₂ x₃ : R) :
-    f3 a b x₁ x₂ x₃ = CryptoLean.Secp256k1.Semaev.S₃ a b x₁ x₂ x₃ := by
+    f3 a b x₁ x₂ x₃ = CryptoLean.Semaev.S3 a b x₁ x₂ x₃ := by
   rfl
 
 /-- Regard the output of an affine multivariate polynomial as the eliminated
@@ -164,15 +164,15 @@ theorem HValue_affine_eq_f3
   ring
 
 /-- Compatibility spelling against the repository's verified `S₃`. -/
-theorem HValue_affine_eq_S₃
+theorem HValue_affine_eq_S3
     {R : Type*} [CommRing R] [Nontrivial R]
     (x₁ x₂ x₃ : R) :
     CryptoLean.Semaev.FrozenProjective.HValue
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₁).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₂).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₃).coord =
-      CryptoLean.Secp256k1.Semaev.S₃ 0 7 x₁ x₂ x₃ := by
-  rw [HValue_affine_eq_f3, f3_eq_S₃]
+      CryptoLean.Semaev.S3 0 7 x₁ x₂ x₃ := by
+  rw [HValue_affine_eq_f3, f3_eq_S3]
 
 /-- Dehomogenization commutes with selecting the eliminated output slice. -/
 theorem map_outputSlice_dehom

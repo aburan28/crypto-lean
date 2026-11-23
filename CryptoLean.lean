@@ -31,6 +31,7 @@ import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
 import CryptoLean.Polynomial.RootCertificate
 import CryptoLean.Semaev.S3
+import CryptoLean.Semaev.S3Laws
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Group.PairColourIsolation
