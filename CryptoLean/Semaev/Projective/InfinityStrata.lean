@@ -37,9 +37,9 @@ def projectiveDet
 
 /-- An infinity third argument reduces `H` to a squared determinant. -/
 theorem HValue_third_infinity
-    {K : Type*} [CommRing K] [Nontrivial K]
+    {K : Type*} [CommRing K] [Nontrivial K] (b₀ : K)
     (a b : ProjectivePair K) :
-    HValue a.coord b.coord (ProjectivePair.infinity (K := K)).coord =
+    HValue b₀ a.coord b.coord (ProjectivePair.infinity (K := K)).coord =
       projectiveDet a b ^ 2 := by
   simp [HValue, projectiveDet, ProjectivePair.coord,
     ProjectivePair.infinity]
@@ -47,9 +47,9 @@ theorem HValue_third_infinity
 
 /-- An infinity first argument reduces `H` to a squared determinant. -/
 theorem HValue_first_infinity
-    {K : Type*} [CommRing K] [Nontrivial K]
+    {K : Type*} [CommRing K] [Nontrivial K] (b₀ : K)
     (b c : ProjectivePair K) :
-    HValue (ProjectivePair.infinity (K := K)).coord b.coord c.coord =
+    HValue b₀ (ProjectivePair.infinity (K := K)).coord b.coord c.coord =
       projectiveDet b c ^ 2 := by
   simp [HValue, projectiveDet, ProjectivePair.coord,
     ProjectivePair.infinity]
@@ -57,9 +57,9 @@ theorem HValue_first_infinity
 
 /-- An infinity middle argument reduces `H` to a squared determinant. -/
 theorem HValue_middle_infinity
-    {K : Type*} [CommRing K] [Nontrivial K]
+    {K : Type*} [CommRing K] [Nontrivial K] (b₀ : K)
     (a c : ProjectivePair K) :
-    HValue a.coord (ProjectivePair.infinity (K := K)).coord c.coord =
+    HValue b₀ a.coord (ProjectivePair.infinity (K := K)).coord c.coord =
       projectiveDet a c ^ 2 := by
   simp [HValue, projectiveDet, ProjectivePair.coord,
     ProjectivePair.infinity]
@@ -67,9 +67,9 @@ theorem HValue_middle_infinity
 
 /-- Infinity at both recursive endpoints exposes the middle `v` coordinate. -/
 theorem HValue_first_third_infinity
-    {K : Type*} [CommRing K] [Nontrivial K]
+    {K : Type*} [CommRing K] [Nontrivial K] (b₀ : K)
     (b : ProjectivePair K) :
-    HValue (ProjectivePair.infinity (K := K)).coord b.coord
+    HValue b₀ (ProjectivePair.infinity (K := K)).coord b.coord
         (ProjectivePair.infinity (K := K)).coord =
       b.v ^ 2 := by
   simp [HValue, ProjectivePair.coord, ProjectivePair.infinity]
@@ -159,16 +159,16 @@ private theorem eq_zero_of_sq_eq_zero
 slots. -/
 theorem frozenChartSystem_separatedInfinityMask
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
     (hq : AffineInputFamily q)
-    (hx : FrozenChartSystem q y I x) :
+    (hx : FrozenChartSystem b q y I x) :
     SeparatedInfinityMask I := by
   intro i hi
   rcases hi with ⟨hleft, hright⟩
   have h := hx (.step i)
   change
-    HValue (chartPair I x i.castSucc).coord
+    HValue b (chartPair I x i.castSucc).coord
       (q (i + 2)).coord (chartPair I x i.succ).coord = 0 at h
   have hleftPair :
       chartPair I x i.castSucc =
@@ -185,15 +185,15 @@ theorem frozenChartSystem_separatedInfinityMask
 boundary infinity slot. -/
 theorem frozenChartSystem_endpointCompatibleInfinityMask
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
-    (hx : FrozenChartSystem q y I x) :
+    (hx : FrozenChartSystem b q y I x) :
     EndpointCompatibleInfinityMask q y I := by
   constructor
   · intro hzero
     have h := hx .base
     change
-      HValue (q 0).coord (q 1).coord
+      HValue b (q 0).coord (q 1).coord
         (chartPair I x (0 : Fin 14)).coord = 0 at h
     have hpair :
         chartPair I x (0 : Fin 14) =
@@ -204,7 +204,7 @@ theorem frozenChartSystem_endpointCompatibleInfinityMask
   · intro hlast
     have h := hx .final
     change
-      HValue (chartPair I x ⟨13, by decide⟩).coord
+      HValue b (chartPair I x ⟨13, by decide⟩).coord
         (q 15).coord y.coord = 0 at h
     have hpair :
         chartPair I x ⟨13, by decide⟩ =
@@ -217,17 +217,17 @@ theorem frozenChartSystem_endpointCompatibleInfinityMask
 right affine coordinate is forced to the normalized current input. -/
 theorem frozenChartSystem_leftInfinity_forces_rightCoordinate
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
     (i : Fin 13)
     (hleft : i.castSucc ∈ I) (hright : i.succ ∉ I)
     (hq : (q (i + 2)).v ≠ 0)
-    (hx : FrozenChartSystem q y I x) :
+    (hx : FrozenChartSystem b q y I x) :
     x ⟨i.succ, hright⟩ =
       (q (i + 2)).u / (q (i + 2)).v := by
   have h := hx (.step i)
   change
-    HValue (chartPair I x i.castSucc).coord
+    HValue b (chartPair I x i.castSucc).coord
       (q (i + 2)).coord (chartPair I x i.succ).coord = 0 at h
   have hleftPair :
       chartPair I x i.castSucc =
@@ -247,17 +247,17 @@ theorem frozenChartSystem_leftInfinity_forces_rightCoordinate
 left affine coordinate is forced to the normalized current input. -/
 theorem frozenChartSystem_rightInfinity_forces_leftCoordinate
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
     (i : Fin 13)
     (hleft : i.castSucc ∉ I) (hright : i.succ ∈ I)
     (hq : (q (i + 2)).v ≠ 0)
-    (hx : FrozenChartSystem q y I x) :
+    (hx : FrozenChartSystem b q y I x) :
     x ⟨i.castSucc, hleft⟩ =
       (q (i + 2)).u / (q (i + 2)).v := by
   have h := hx (.step i)
   change
-    HValue (chartPair I x i.castSucc).coord
+    HValue b (chartPair I x i.castSucc).coord
       (q (i + 2)).coord (chartPair I x i.succ).coord = 0 at h
   have hleftPair :
       chartPair I x i.castSucc =
@@ -276,13 +276,13 @@ theorem frozenChartSystem_rightInfinity_forces_leftCoordinate
 /-- Every solution mask passes the exact necessary filter. -/
 theorem frozenChartSystem_admissibleInfinityMask
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
     (hq : AffineInputFamily q)
-    (hx : FrozenChartSystem q y I x) :
+    (hx : FrozenChartSystem b q y I x) :
     AdmissibleInfinityMask q y I :=
-  ⟨frozenChartSystem_separatedInfinityMask q y I x hq hx,
-    frozenChartSystem_endpointCompatibleInfinityMask q y I x hx⟩
+  ⟨frozenChartSystem_separatedInfinityMask b q y I x hq hx,
+    frozenChartSystem_endpointCompatibleInfinityMask b q y I x hx⟩
 
 /-- Nonzero endpoint determinants force the first and last intermediate slots
 to be affine. -/
@@ -304,46 +304,46 @@ theorem admissibleInfinityMask_interior
 /-- The chart cover restricted to masks satisfying the necessary filter. -/
 def FrozenAdmissibleChartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ (I : InfinityMask) (x : ChartVar I → K),
-    AdmissibleInfinityMask q y I ∧ FrozenChartSystem q y I x
+    AdmissibleInfinityMask q y I ∧ FrozenChartSystem b q y I x
 
 /-- With affine external inputs, restricting to admissible masks loses no
 solutions. -/
 theorem frozenChartCover_iff_admissibleChartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hq : AffineInputFamily q) :
-    FrozenChartCover q y ↔ FrozenAdmissibleChartCover q y := by
+    FrozenChartCover b q y ↔ FrozenAdmissibleChartCover b q y := by
   constructor
   · rintro ⟨I, x, hx⟩
     exact ⟨I, x,
-      frozenChartSystem_admissibleInfinityMask q y I x hq hx, hx⟩
+      frozenChartSystem_admissibleInfinityMask b q y I x hq hx, hx⟩
   · rintro ⟨I, x, _, hx⟩
     exact ⟨I, x, hx⟩
 
 /-- The corresponding exact restriction of the literal polynomial cover. -/
 def FrozenAdmissibleChartPolynomialCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ (I : InfinityMask) (x : ChartVar I → K),
     AdmissibleInfinityMask q y I ∧
-      FrozenChartPolynomialSystem q y I x
+      FrozenChartPolynomialSystem b q y I x
 
 /-- With affine external inputs, the literal polynomial cover is exactly its
 admissible-mask restriction. -/
 theorem frozenChartPolynomialCover_iff_admissible
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hq : AffineInputFamily q) :
-    FrozenChartPolynomialCover q y ↔
-      FrozenAdmissibleChartPolynomialCover q y := by
+    FrozenChartPolynomialCover b q y ↔
+      FrozenAdmissibleChartPolynomialCover b q y := by
   constructor
   · rintro ⟨I, x, hx⟩
     have hdirect :=
-      (frozenChartPolynomialSystem_iff_chartSystem q y I x).mp hx
+      (frozenChartPolynomialSystem_iff_chartSystem b q y I x).mp hx
     exact ⟨I, x,
-      frozenChartSystem_admissibleInfinityMask q y I x hq hdirect, hx⟩
+      frozenChartSystem_admissibleInfinityMask b q y I x hq hdirect, hx⟩
   · rintro ⟨I, x, _, hx⟩
     exact ⟨I, x, hx⟩
 
@@ -351,35 +351,35 @@ theorem frozenChartPolynomialCover_iff_admissible
 when all external inputs are affine. -/
 theorem frozenProjectiveChain_iff_admissibleChartPolynomialCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hq : AffineInputFamily q) :
-    FrozenProjectiveChain q 14 y ↔
-      FrozenAdmissibleChartPolynomialCover q y := by
+    FrozenProjectiveChain b q 14 y ↔
+      FrozenAdmissibleChartPolynomialCover b q y := by
   exact
-    (frozenProjectiveChain_iff_chartPolynomialCover q y).trans
-      (frozenChartPolynomialCover_iff_admissible q y hq)
+    (frozenProjectiveChain_iff_chartPolynomialCover b q y).trans
+      (frozenChartPolynomialCover_iff_admissible b q y hq)
 
 /-- The chart cover restricted to separated masks whose two boundary slots are
 affine. -/
 def FrozenInteriorChartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ (I : InfinityMask) (x : ChartVar I → K),
-    InteriorSeparatedInfinityMask I ∧ FrozenChartSystem q y I x
+    InteriorSeparatedInfinityMask I ∧ FrozenChartSystem b q y I x
 
 /-- Under affine-input and nonzero-endpoint assumptions, the complete chart
 cover is exactly the 377-mask interior separated cover. -/
 theorem frozenChartCover_iff_interiorChartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hq : AffineInputFamily q)
     (hbase : projectiveDet (q 0) (q 1) ≠ 0)
     (hfinal : projectiveDet (q 15) y ≠ 0) :
-    FrozenChartCover q y ↔ FrozenInteriorChartCover q y := by
+    FrozenChartCover b q y ↔ FrozenInteriorChartCover b q y := by
   constructor
   · rintro ⟨I, x, hx⟩
     have hI :=
-      frozenChartSystem_admissibleInfinityMask q y I x hq hx
+      frozenChartSystem_admissibleInfinityMask b q y I x hq hx
     exact ⟨I, x,
       admissibleInfinityMask_interior q y I hbase hfinal hI, hx⟩
   · rintro ⟨I, x, _, hx⟩

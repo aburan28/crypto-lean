@@ -70,12 +70,12 @@ private noncomputable instance directSystem4Decidable (X : Fp) :
 proofs. -/
 abbrev LiftableReducedRoot (X : Fp) :=
   {x : Fin 16 → LiftableFactorBaseX //
-    S17At (fun i ↦ (x i).1.1) X = 0}
+    S17At 7 (fun i ↦ (x i).1.1) X = 0}
 
 /-- The complete reduced root set, with no liftability restriction. -/
 abbrev ReducedRoot (X : Fp) :=
   {x : Fin 16 → FactorBaseX //
-    S17At (fun i ↦ (x i).1) X = 0}
+    S17At 7 (fun i ↦ (x i).1) X = 0}
 
 /-- The literal sixteen-row, 64-coordinate direct System-(4) root set. -/
 abbrev DirectRoot (X : Fp) :=

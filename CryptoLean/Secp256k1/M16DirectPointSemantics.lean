@@ -139,7 +139,7 @@ The reverse direction uses the complete chart cover, so intermediate
 identity sums and every associated infinity chart are retained. -/
 theorem S17At_eq_zero_iff_exists_point_sum_liesOver
     (x : Fin 16 → Fp) (X : Fp) :
-    S17At x X = 0 ↔
+    S17At 7 x X = 0 ↔
       ∃ P : Fin 16 → BarPoint,
         (∀ i, LiesOver (x i) (P i)) ∧
         LiesOver X (∑ i, P i) := by
@@ -154,7 +154,7 @@ theorem S17At_eq_zero_iff_exists_point_sum_liesOver
       (S17At_eq_zero_iff_chartPolynomialCover_over
         (algebraMap Fp FpBar) (algebraMap Fp FpBar).injective x X).mp hroot
     have hchartMapped :=
-      (frozenChartPolynomialCover_iff_chartCover _ _).mp hpoly
+      (frozenChartPolynomialCover_iff_chartCover _ _ _).mp hpoly
     have hleaves := mapped_projectiveLeaves_eq_barKummer x seed hseed
     have htarget := mapProjectivePair_affine X
     rw [hleaves, htarget] at hchartMapped
@@ -197,7 +197,7 @@ theorem S17At_eq_zero_iff_exists_point_sum_liesOver
           intro i _
           simp [seed, i.isLt]
     have hchain :
-        FrozenChartCover (fun i => barKummer (seed i))
+        FrozenChartCover 7 (fun i => barKummer (seed i))
           (ProjectivePair.affine (algebraMap Fp FpBar X)) := by
       apply
         (frozenChartCover_barKummer_iff_signedPrefixSum seed
@@ -211,7 +211,7 @@ theorem S17At_eq_zero_iff_exists_point_sum_liesOver
     have hleaves := mapped_projectiveLeaves_eq_barKummer x seed hseed
     have htarget := mapProjectivePair_affine X
     have hchartMapped :
-        FrozenChartCover
+        FrozenChartCover 7
           (fun i =>
             mapProjectivePair (algebraMap Fp FpBar)
               (algebraMap Fp FpBar).injective (projectiveLeaves x i))
@@ -220,7 +220,7 @@ theorem S17At_eq_zero_iff_exists_point_sum_liesOver
       rw [hleaves, htarget]
       exact hchain
     have hpoly :=
-      (frozenChartPolynomialCover_iff_chartCover _ _).mpr hchartMapped
+      (frozenChartPolynomialCover_iff_chartCover _ _ _).mpr hchartMapped
     exact
       (S17At_eq_zero_iff_chartPolynomialCover_over
         (algebraMap Fp FpBar) (algebraMap Fp FpBar).injective x X).mpr hpoly
@@ -232,7 +232,7 @@ target; neither branch is privileged. -/
 theorem S17At_eq_zero_iff_exists_point_sum_eq_target_or_neg
     (x : Fin 16 → Fp) (X : Fp) (T : BarPoint)
     (hT : LiesOver X T) :
-    S17At x X = 0 ↔
+    S17At 7 x X = 0 ↔
       ∃ P : Fin 16 → BarPoint,
         (∀ i, LiesOver (x i) (P i)) ∧
         ((∑ i, P i) = T ∨ (∑ i, P i) = -T) := by
@@ -257,7 +257,7 @@ negated simultaneously; `LiesOver` is unchanged and their subtotal becomes
 theorem S17At_eq_zero_iff_exists_point_sum_add_target_eq_zero
     (x : Fin 16 → Fp) (X : Fp) (T : BarPoint)
     (hT : LiesOver X T) :
-    S17At x X = 0 ↔
+    S17At 7 x X = 0 ↔
       ∃ P : Fin 16 → BarPoint,
         (∀ i, LiesOver (x i) (P i)) ∧
         (∑ i, P i) + T = 0 := by
@@ -278,7 +278,7 @@ target coordinate.  The target point is necessarily the inverse of the
 sixteen-point subtotal; no sign of a target lift is privileged. -/
 theorem S17At_eq_zero_iff_exists_point_relation
     (x : Fin 16 → Fp) (X : Fp) :
-    S17At x X = 0 ↔
+    S17At 7 x X = 0 ↔
       ∃ (P : Fin 16 → BarPoint) (T : BarPoint),
         (∀ i, LiesOver (x i) (P i)) ∧
         LiesOver X T ∧

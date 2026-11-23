@@ -14,9 +14,9 @@ normalization is inserted.
 
 The stage index is deliberately offset:
 
-* `frozenC R 0` is the form called `C₂`;
-* `frozenC R s` is the form called `C_(s+2)`;
-* `frozenC R 14` is therefore `C₁₆`.
+* `frozenC R b 0` is the form called `C₂`;
+* `frozenC R b s` is the form called `C_(s+2)`;
+* `frozenC R b 14` is therefore `C₁₆`.
 
 At successor stage `s + 1`, the new form is the fixed resultant of
 `C_(s+2)(Q₁,...,Q_(s+2);T)` and `H(T,Q_(s+3),Y)` at formal degrees
@@ -37,6 +37,9 @@ a direct-S17 equivalence, or any solving-cost result.
 
 The recursive definition is a symbolic DAG.  Nothing here expands, evaluates,
 or materializes `C₁₆`.
+
+The source fixed the curve `y² = x³ + 7` (literal coefficient `28 = 4·7`);
+this port generalizes every definition to `y² = x³ + b` with `b` explicit.
 -/
 
 namespace CryptoLean.Semaev.FrozenProjective
@@ -83,11 +86,11 @@ def coord (q : ProjectivePair K) : Axis → K
 end ProjectivePair
 
 /-- The literal TASK-018 homogeneous triquadratic
-`H(Q₁,Q₂,Q₃)` for `y² = x³ + 7`.
+`H(Q₁,Q₂,Q₃)` for `y² = x³ + b`.
 
 The argument and coordinate order is fixed, and the coefficient of the final
-three-term block is exactly `-28`. -/
-def HValue {R : Type*} [CommRing R]
+three-term block is exactly `-4 * b` (`-28` for `b = 7`). -/
+def HValue {R : Type*} [CommRing R] (b : R)
     (q₁ q₂ q₃ : Axis → R) : R :=
   q₁ .u ^ 2 * q₂ .u ^ 2 * q₃ .v ^ 2 +
   q₁ .u ^ 2 * q₂ .v ^ 2 * q₃ .u ^ 2 +
@@ -95,7 +98,7 @@ def HValue {R : Type*} [CommRing R]
   2 * q₁ .u ^ 2 * q₂ .u * q₂ .v * q₃ .u * q₃ .v -
   2 * q₁ .u * q₁ .v * q₂ .u ^ 2 * q₃ .u * q₃ .v -
   2 * q₁ .u * q₁ .v * q₂ .u * q₂ .v * q₃ .u ^ 2 -
-  28 * (
+  4 * b * (
     q₁ .u * q₁ .v * q₂ .v ^ 2 * q₃ .v ^ 2 +
     q₁ .v ^ 2 * q₂ .u * q₂ .v * q₃ .v ^ 2 +
     q₁ .v ^ 2 * q₂ .v ^ 2 * q₃ .u * q₃ .v)
@@ -124,9 +127,9 @@ noncomputable def outputSlice {R : Type*} [CommRing R]
     p
 
 /-- The right operand `H([T:1],Q_i,Y)` of one frozen resultant step. -/
-noncomputable def localSlice {R : Type*} [CommRing R] (i : ℕ) :
+noncomputable def localSlice {R : Type*} [CommRing R] (b : R) (i : ℕ) :
     Polynomial (MvPolynomial Var R) :=
-  HValue
+  HValue (Polynomial.C (MvPolynomial.C b))
     (fun
       | .u => Polynomial.X
       | .v => 1)
@@ -135,16 +138,16 @@ noncomputable def localSlice {R : Type*} [CommRing R] (i : ℕ) :
 
 /-- The actual frozen TASK-018 recursive family.
 
-`frozenC R s` is the form called `C_(s+2)`.  The recursion is a left fold and
-uses fixed formal degrees even when a specialization later drops actual
-degree. -/
-noncomputable def frozenC (R : Type*) [CommRing R] :
+`frozenC R b s` is the form called `C_(s+2)` for `y² = x³ + b`.  The
+recursion is a left fold and uses fixed formal degrees even when a
+specialization later drops actual degree. -/
+noncomputable def frozenC (R : Type*) [CommRing R] (b : R) :
     ℕ → MvPolynomial Var R
-  | 0 => HValue (leafPair 0) (leafPair 1) outputPair
+  | 0 => HValue (MvPolynomial.C b) (leafPair 0) (leafPair 1) outputPair
   | s + 1 =>
       Polynomial.resultant
-        (outputSlice (frozenC R s))
-        (localSlice (s + 2))
+        (outputSlice (frozenC R b s))
+        (localSlice b (s + 2))
         (2 ^ (s + 1)) 2
 
 /-- The same-field assignment for all leaf and output variables. -/
@@ -173,9 +176,9 @@ noncomputable def previousSliceAt {K : Type*} [Field K]
     p
 
 /-- The concrete local operand `H([T:1],q,y)`. -/
-noncomputable def localSliceAt {K : Type*} [CommRing K]
+noncomputable def localSliceAt {K : Type*} [CommRing K] (b : K)
     (q y : ProjectivePair K) : K[X] :=
-  HValue
+  HValue (Polynomial.C b)
     (fun
       | .u => Polynomial.X
       | .v => 1)
@@ -214,16 +217,16 @@ theorem map_outputSlice {K : Type*} [Field K]
 /-- Same-field specialization of the symbolic right operand is exactly the
 concrete local slice. -/
 theorem map_localSlice {K : Type*} [Field K]
-    (i : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    (localSlice i).map (specialize q y) = localSliceAt (q i) y := by
+    (b : K) (i : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    (localSlice b i).map (specialize q y) = localSliceAt b (q i) y := by
   simp [localSlice, localSliceAt, HValue, specialize, assignment,
     ProjectivePair.coord]
 
 /-- The concrete local operand retains formal degree at most two under every
 projective specialization, including degree drop. -/
 theorem localSliceAt_natDegree_le {K : Type*} [Field K]
-    (q y : ProjectivePair K) :
-    (localSliceAt q y).natDegree ≤ 2 := by
+    (b : K) (q y : ProjectivePair K) :
+    (localSliceAt b q y).natDegree ≤ 2 := by
   unfold localSliceAt HValue
   compute_degree
 
@@ -232,11 +235,11 @@ theorem localSliceAt_natDegree_le {K : Type*} [Field K]
 The right side is the literal TASK-018 Sylvester determinant, so its
 coefficient unit is exactly `1`. -/
 theorem specialize_frozenC_succ {K : Type*} [Field K]
-    (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    specialize q y (frozenC K (s + 1)) =
+    (b : K) (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    specialize q y (frozenC K b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAt (frozenC K s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAt (frozenC K b s) q)
+        (localSliceAt b (q (s + 2)) y)
         (2 ^ (s + 1)) 2).det := by
   rw [CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_resultant]
   rw [frozenC]
@@ -245,23 +248,23 @@ theorem specialize_frozenC_succ {K : Type*} [Field K]
 
 /-- The affine-output branch `[y:1]` of exact frozen-step specialization. -/
 theorem specialize_frozenC_succ_affine {K : Type*} [Field K]
-    (s : ℕ) (q : ℕ → ProjectivePair K) (y : K) :
-    specialize q (.affine y) (frozenC K (s + 1)) =
+    (b : K) (s : ℕ) (q : ℕ → ProjectivePair K) (y : K) :
+    specialize q (.affine y) (frozenC K b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAt (frozenC K s) q)
-        (localSliceAt (q (s + 2)) (.affine y))
+        (previousSliceAt (frozenC K b s) q)
+        (localSliceAt b (q (s + 2)) (.affine y))
         (2 ^ (s + 1)) 2).det :=
-  specialize_frozenC_succ s q (.affine y)
+  specialize_frozenC_succ b s q (.affine y)
 
 /-- The output-infinity branch `[1:0]` of exact frozen-step specialization. -/
 theorem specialize_frozenC_succ_infinity {K : Type*} [Field K]
-    (s : ℕ) (q : ℕ → ProjectivePair K) :
-    specialize q .infinity (frozenC K (s + 1)) =
+    (b : K) (s : ℕ) (q : ℕ → ProjectivePair K) :
+    specialize q .infinity (frozenC K b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAt (frozenC K s) q)
-        (localSliceAt (q (s + 2)) .infinity)
+        (previousSliceAt (frozenC K b s) q)
+        (localSliceAt b (q (s + 2)) .infinity)
         (2 ^ (s + 1)) 2).det :=
-  specialize_frozenC_succ s q .infinity
+  specialize_frozenC_succ b s q .infinity
 
 /-- Reusable one-step reverse interface for the same-field frozen family under
 an explicit predecessor degree bound.
@@ -270,17 +273,17 @@ The root predicate excludes the eliminated irrelevant pair `[0:0]` and
 retains affine and infinity roots.  The bound is discharged uniformly below. -/
 theorem specialize_frozenC_succ_eq_zero_iff_common_projective_root_of_natDegree_le
     {K : Type*} [Field K] [IsAlgClosed K]
-    (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hprev :
-      (previousSliceAt (frozenC K s) q).natDegree ≤ 2 ^ (s + 1)) :
-    specialize q y (frozenC K (s + 1)) = 0 ↔
+      (previousSliceAt (frozenC K b s) q).natDegree ≤ 2 ^ (s + 1)) :
+    specialize q y (frozenC K b (s + 1)) = 0 ↔
       CryptoLean.Semaev.ProjectiveResultant.HasCommonProjectiveRoot
-        (previousSliceAt (frozenC K s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAt (frozenC K b s) q)
+        (localSliceAt b (q (s + 2)) y)
         (2 ^ (s + 1)) 2 := by
   rw [specialize_frozenC_succ]
   exact CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_zero_iff_common_projective_root
-    _ _ (by positivity) (by norm_num) hprev (localSliceAt_natDegree_le _ _)
+    _ _ (by positivity) (by norm_num) hprev (localSliceAt_natDegree_le _ _ _)
 
 /-! ## Explicit coefficient-map specialization -/
 
@@ -339,10 +342,10 @@ theorem map_outputSlice_over {k K : Type*} [CommRing k] [CommRing K]
 /-- Coefficient-map specialization of the symbolic right operand is exactly
 the concrete target-ring local slice. -/
 theorem map_localSlice_over {k K : Type*} [CommRing k] [CommRing K]
-    (φ : k →+* K) (i : ℕ)
+    (φ : k →+* K) (b : k) (i : ℕ)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    (localSlice (R := k) i).map (specializeOver φ q y) =
-      localSliceAt (q i) y := by
+    (localSlice b i).map (specializeOver φ q y) =
+      localSliceAt (φ b) (q i) y := by
   simp [localSlice, localSliceAt, HValue, specializeOver,
     ProjectivePair.coord]
 
@@ -353,12 +356,12 @@ keeps formal degrees `(2^(s+1),2)`, and equals the literal TASK-018 determinant
 with coefficient unit exactly `1`. -/
 theorem specialize_frozenC_succ_over
     {k K : Type*} [CommRing k] [CommRing K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    specializeOver φ q y (frozenC k (s + 1)) =
+    specializeOver φ q y (frozenC k b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAtOver φ (frozenC k s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAtOver φ (frozenC k b s) q)
+        (localSliceAt (φ b) (q (s + 2)) y)
         (2 ^ (s + 1)) 2).det := by
   rw [CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_resultant]
   rw [frozenC]
@@ -368,26 +371,26 @@ theorem specialize_frozenC_succ_over
 /-- The affine-output branch `[y:1]` of coefficient-map specialization. -/
 theorem specialize_frozenC_succ_over_affine
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (y : K) :
-    specializeOver φ q (.affine y) (frozenC k (s + 1)) =
+    specializeOver φ q (.affine y) (frozenC k b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAtOver φ (frozenC k s) q)
-        (localSliceAt (q (s + 2)) (.affine y))
+        (previousSliceAtOver φ (frozenC k b s) q)
+        (localSliceAt (φ b) (q (s + 2)) (.affine y))
         (2 ^ (s + 1)) 2).det :=
-  specialize_frozenC_succ_over φ s q (.affine y)
+  specialize_frozenC_succ_over φ b s q (.affine y)
 
 /-- The output-infinity branch `[1:0]` of coefficient-map specialization. -/
 theorem specialize_frozenC_succ_over_infinity
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) :
-    specializeOver φ q .infinity (frozenC k (s + 1)) =
+    specializeOver φ q .infinity (frozenC k b (s + 1)) =
       (CryptoLean.Semaev.TaskSylvester.taskSylvester
-        (previousSliceAtOver φ (frozenC k s) q)
-        (localSliceAt (q (s + 2)) .infinity)
+        (previousSliceAtOver φ (frozenC k b s) q)
+        (localSliceAt (φ b) (q (s + 2)) .infinity)
         (2 ^ (s + 1)) 2).det :=
-  specialize_frozenC_succ_over φ s q .infinity
+  specialize_frozenC_succ_over φ b s q .infinity
 
 /-- Reusable one-step reverse interface after an explicit coefficient map and
 under an explicit predecessor degree bound.
@@ -397,18 +400,18 @@ convention, and non-irrelevant common-root domain are kernel checked.  The
 predecessor bound is discharged uniformly below. -/
 theorem specialize_frozenC_succ_over_eq_zero_iff_common_projective_root_of_natDegree_le
     {k K : Type*} [CommRing k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (hprev :
-      (previousSliceAtOver φ (frozenC k s) q).natDegree ≤ 2 ^ (s + 1)) :
-    specializeOver φ q y (frozenC k (s + 1)) = 0 ↔
+      (previousSliceAtOver φ (frozenC k b s) q).natDegree ≤ 2 ^ (s + 1)) :
+    specializeOver φ q y (frozenC k b (s + 1)) = 0 ↔
       CryptoLean.Semaev.ProjectiveResultant.HasCommonProjectiveRoot
-        (previousSliceAtOver φ (frozenC k s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAtOver φ (frozenC k b s) q)
+        (localSliceAt (φ b) (q (s + 2)) y)
         (2 ^ (s + 1)) 2 := by
   rw [specialize_frozenC_succ_over]
   exact CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_zero_iff_common_projective_root
-    _ _ (by positivity) (by norm_num) hprev (localSliceAt_natDegree_le _ _)
+    _ _ (by positivity) (by norm_num) hprev (localSliceAt_natDegree_le _ _ _)
 
 /-! ## Narrow determinant-degree tool -/
 
@@ -531,8 +534,8 @@ theorem coeff_map_C_natDegree
 /-- Literal expansion of `H([T:1],q,[X:1])` as a polynomial in `T` whose
 coefficients are polynomials in the new output `X`. -/
 theorem localSliceAt_constantPair_affine_explicit
-    {K : Type*} [Field K] (q : ProjectivePair K) :
-    localSliceAt (constantPair q) (ProjectivePair.affine Polynomial.X) =
+    {K : Type*} [Field K] (c : K) (q : ProjectivePair K) :
+    localSliceAt (Polynomial.C c) (constantPair q) (ProjectivePair.affine Polynomial.X) =
       Polynomial.monomial 2
           (Polynomial.C q.u ^ 2 +
             Polynomial.C q.v ^ 2 * Polynomial.X ^ 2 -
@@ -540,10 +543,10 @@ theorem localSliceAt_constantPair_affine_explicit
         Polynomial.monomial 1
           (-2 * Polynomial.C q.u ^ 2 * Polynomial.X -
             2 * Polynomial.C q.u * Polynomial.C q.v * Polynomial.X ^ 2 -
-            28 * Polynomial.C q.v ^ 2) +
+            4 * Polynomial.C c * Polynomial.C q.v ^ 2) +
         Polynomial.C
           (Polynomial.C q.u ^ 2 * Polynomial.X ^ 2 -
-            28 * (Polynomial.C q.u * Polynomial.C q.v +
+            4 * Polynomial.C c * (Polynomial.C q.u * Polynomial.C q.v +
               Polynomial.C q.v ^ 2 * Polynomial.X)) := by
   simp [localSliceAt, HValue, constantPair, ProjectivePair.affine,
     ProjectivePair.coord]
@@ -554,8 +557,8 @@ theorem localSliceAt_constantPair_affine_explicit
 /-- Every `T`-coefficient of `H([T:1],q,[X:1])` has degree at most two in
 the new output `X`. -/
 theorem localSliceAt_constantPair_affine_coeff_natDegree_le
-    {K : Type*} [Field K] (q : ProjectivePair K) (i : ℕ) :
-    ((localSliceAt (constantPair q)
+    {K : Type*} [Field K] (c : K) (q : ProjectivePair K) (i : ℕ) :
+    ((localSliceAt (Polynomial.C c) (constantPair q)
       (ProjectivePair.affine Polynomial.X)).coeff i).natDegree ≤ 2 := by
   rw [localSliceAt_constantPair_affine_explicit]
   simp only [Polynomial.coeff_add, Polynomial.coeff_monomial,
@@ -604,14 +607,14 @@ theorem taskSylvester_natDegree_le_two_mul_left
 /-- Uniform TASK-020 output-slice degree bound for the actual frozen family,
 after every coefficient map and every valid projective leaf specialization.
 
-For `frozenC k s = C_(s+2)`, the affine output degree is at most
+For `frozenC k b s = C_(s+2)`, the affine output degree is at most
 `2^(s+1)`.  No induction hypothesis is needed: at a successor, the literal
 Sylvester matrix has two output-constant rows and `2^(s+1)` rows of output
 degree at most two. -/
 theorem previousSliceAtOver_frozenC_natDegree_le
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ) (q : ℕ → ProjectivePair K) :
-    (previousSliceAtOver φ (frozenC k s) q).natDegree ≤ 2 ^ (s + 1) := by
+    (φ : k →+* K) (b : k) (s : ℕ) (q : ℕ → ProjectivePair K) :
+    (previousSliceAtOver φ (frozenC k b s) q).natDegree ≤ 2 ^ (s + 1) := by
   cases s with
   | zero =>
       simp only [frozenC, previousSliceAtOver, HValue, leafPair, outputPair,
@@ -628,7 +631,7 @@ theorem previousSliceAtOver_frozenC_natDegree_le
         rw [previousSliceAtOver_constantPair]
         exact (coeff_map_C_natDegree _ _).le
       · intro i
-        exact localSliceAt_constantPair_affine_coeff_natDegree_le _ _
+        exact localSliceAt_constantPair_affine_coeff_natDegree_le _ _ _
 
 /-! ## Unconditional one-step reverse interfaces -/
 
@@ -636,27 +639,27 @@ theorem previousSliceAtOver_frozenC_natDegree_le
 family. -/
 theorem specialize_frozenC_succ_eq_zero_iff_common_projective_root
     {K : Type*} [Field K] [IsAlgClosed K]
-    (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    specialize q y (frozenC K (s + 1)) = 0 ↔
+    (b : K) (s : ℕ) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    specialize q y (frozenC K b (s + 1)) = 0 ↔
       CryptoLean.Semaev.ProjectiveResultant.HasCommonProjectiveRoot
-        (previousSliceAt (frozenC K s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAt (frozenC K b s) q)
+        (localSliceAt b (q (s + 2)) y)
         (2 ^ (s + 1)) 2 :=
   specialize_frozenC_succ_eq_zero_iff_common_projective_root_of_natDegree_le
-    s q y (previousSliceAtOver_frozenC_natDegree_le (RingHom.id K) s q)
+    b s q y (previousSliceAtOver_frozenC_natDegree_le (RingHom.id K) b s q)
 
 /-- Unconditional one-step reverse interface after an explicit coefficient
 map. -/
 theorem specialize_frozenC_succ_over_eq_zero_iff_common_projective_root
     {k K : Type*} [CommRing k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    specializeOver φ q y (frozenC k (s + 1)) = 0 ↔
+    specializeOver φ q y (frozenC k b (s + 1)) = 0 ↔
       CryptoLean.Semaev.ProjectiveResultant.HasCommonProjectiveRoot
-        (previousSliceAtOver φ (frozenC k s) q)
-        (localSliceAt (q (s + 2)) y)
+        (previousSliceAtOver φ (frozenC k b s) q)
+        (localSliceAt (φ b) (q (s + 2)) y)
         (2 ^ (s + 1)) 2 :=
   specialize_frozenC_succ_over_eq_zero_iff_common_projective_root_of_natDegree_le
-    φ s q y (previousSliceAtOver_frozenC_natDegree_le φ s q)
+    φ b s q y (previousSliceAtOver_frozenC_natDegree_le φ b s q)
 
 end CryptoLean.Semaev.FrozenProjective

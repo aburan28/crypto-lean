@@ -124,19 +124,19 @@ noncomputable def guardEquation
 
 /-- The fifteen literal `H` equations and fourteen normalization guards. -/
 noncomputable def guardedEquation
-    {K : Type*} [CommRing K]
+    {K : Type*} [CommRing K] (b : K)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
     GuardedEquation → MvPolynomial GuardVar K
   | .base =>
-      HValue (guardConstantCoordinate (q 0))
+      HValue (MvPolynomial.C b) (guardConstantCoordinate (q 0))
         (guardConstantCoordinate (q 1))
         (guardProjectiveCoordinate ⟨0, by decide⟩)
   | .step i =>
-      HValue (guardProjectiveCoordinate i.castSucc)
+      HValue (MvPolynomial.C b) (guardProjectiveCoordinate i.castSucc)
         (guardConstantCoordinate (q (i + 2)))
         (guardProjectiveCoordinate i.succ)
   | .final =>
-      HValue (guardProjectiveCoordinate ⟨13, by decide⟩)
+      HValue (MvPolynomial.C b) (guardProjectiveCoordinate ⟨13, by decide⟩)
         (guardConstantCoordinate (q 15))
         (guardConstantCoordinate y)
   | .guard i => guardEquation i
@@ -185,12 +185,12 @@ private theorem totalDegree_X_le_one
   simp [MvPolynomial.totalDegree_X]
 
 private theorem HValue_totalDegree_le
-    {K σ : Type*} [CommRing K]
+    {K σ : Type*} [CommRing K] (c : K)
     (q₁ q₂ q₃ : Axis → MvPolynomial σ K) (d₁ d₂ d₃ : ℕ)
     (h₁ : ∀ a, (q₁ a).totalDegree ≤ d₁)
     (h₂ : ∀ a, (q₂ a).totalDegree ≤ d₂)
     (h₃ : ∀ a, (q₃ a).totalDegree ≤ d₃) :
-    (HValue q₁ q₂ q₃).totalDegree ≤ 2 * d₁ + 2 * d₂ + 2 * d₃ := by
+    (HValue (MvPolynomial.C c) q₁ q₂ q₃).totalDegree ≤ 2 * d₁ + 2 * d₂ + 2 * d₃ := by
   have h₁u2 :
       (q₁ .u ^ 2).totalDegree ≤ 2 * d₁ :=
     totalDegree_pow_le_of_le (h₁ .u)
@@ -213,10 +213,10 @@ private theorem HValue_totalDegree_le
       ((2 : MvPolynomial σ K)).totalDegree ≤ 0 := by
     simpa only [map_ofNat] using
       totalDegree_C_le (K := K) (σ := σ) (2 : K) 0
-  have htwentyeight :
-      ((28 : MvPolynomial σ K)).totalDegree ≤ 0 := by
-    simpa only [map_ofNat] using
-      totalDegree_C_le (K := K) (σ := σ) (28 : K) 0
+  have hfourc :
+      ((4 : MvPolynomial σ K) * MvPolynomial.C c).totalDegree ≤ 0 := by
+    simpa only [map_mul, map_ofNat] using
+      totalDegree_C_le (K := K) (σ := σ) (4 * c) 0
   let D := 2 * d₁ + 2 * d₂ + 2 * d₃
   have ht₁ :
       (q₁ .u ^ 2 * q₂ .u ^ 2 * q₃ .v ^ 2).totalDegree ≤ D := by
@@ -297,11 +297,11 @@ private theorem HValue_totalDegree_le
         dsimp [D]
         omega)
   have ht₇₈₉ :
-      (28 * (
+      (4 * MvPolynomial.C c * (
         q₁ .u * q₁ .v * q₂ .v ^ 2 * q₃ .v ^ 2 +
         q₁ .v ^ 2 * q₂ .u * q₂ .v * q₃ .v ^ 2 +
         q₁ .v ^ 2 * q₂ .v ^ 2 * q₃ .u * q₃ .v)).totalDegree ≤ D := by
-    exact (totalDegree_mul_le_of_le htwentyeight
+    exact (totalDegree_mul_le_of_le hfourc
       (totalDegree_add_le_of_le
         (totalDegree_add_le_of_le ht₇ ht₈) ht₉)).trans (by
           dsimp [D]
@@ -321,13 +321,13 @@ private theorem HValue_totalDegree_le
 four.  This is an upper bound: coefficient cancellation in a particular
 characteristic may lower the actual degree. -/
 theorem guardedEquation_totalDegree_le_four
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b : K)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (e : GuardedEquation) :
-    (guardedEquation q y e).totalDegree ≤ 4 := by
+    (guardedEquation b q y e).totalDegree ≤ 4 := by
   cases e with
   | base =>
-      refine (HValue_totalDegree_le
+      refine (HValue_totalDegree_le b
         (guardConstantCoordinate (q 0))
         (guardConstantCoordinate (q 1))
         (guardProjectiveCoordinate ⟨0, by decide⟩)
@@ -340,7 +340,7 @@ theorem guardedEquation_totalDegree_le_four
         cases a <;> simp [guardProjectiveCoordinate, MvPolynomial.totalDegree_X]
       · omega
   | step i =>
-      refine (HValue_totalDegree_le
+      refine (HValue_totalDegree_le b
         (guardProjectiveCoordinate i.castSucc)
         (guardConstantCoordinate (q (i + 2)))
         (guardProjectiveCoordinate i.succ)
@@ -353,7 +353,7 @@ theorem guardedEquation_totalDegree_le_four
         cases a <;> simp [guardProjectiveCoordinate, MvPolynomial.totalDegree_X]
       · omega
   | final =>
-      refine (HValue_totalDegree_le
+      refine (HValue_totalDegree_le b
         (guardProjectiveCoordinate ⟨13, by decide⟩)
         (guardConstantCoordinate (q 15))
         (guardConstantCoordinate y)
@@ -421,19 +421,19 @@ private theorem selectedGuard_spec
 /-- The fixed stage-14 literal polynomial system: an assignment to the 56
 scalar variables on which every one of the 29 indexed polynomials vanishes. -/
 def FrozenGuardedProjectiveSystem
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b : K)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ x : GuardVar → K,
     ∀ e : GuardedEquation,
-      MvPolynomial.eval x (guardedEquation q y e) = 0
+      MvPolynomial.eval x (guardedEquation b q y e) = 0
 
 /-- The finite guarded system is exactly the stage-14 recursive projective
 witness chain. -/
 theorem frozenProjectiveChain_iff_guardedProjectiveSystem
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b : K)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenProjectiveChain q 14 y ↔
-      FrozenGuardedProjectiveSystem q y := by
+    FrozenProjectiveChain b q 14 y ↔
+      FrozenGuardedProjectiveSystem b q y := by
   constructor
   · intro h
     simp only [FrozenProjectiveChain] at h
@@ -459,7 +459,7 @@ theorem frozenProjectiveChain_iff_guardedProjectiveSystem
       | .slot i .a => selectedGuardA (z i)
       | .slot i .b => selectedGuardB (z i)
     have hstep (i : Fin 13) :
-        HValue (z i.castSucc).coord (q (i + 2)).coord
+        HValue b (z i.castSucc).coord (q (i + 2)).coord
           (z i.succ).coord = 0 := by
       fin_cases i <;>
         simp [z, hstep₀, hstep₁, hstep₂, hstep₃, hstep₄, hstep₅,
@@ -488,21 +488,21 @@ theorem frozenProjectiveChain_iff_guardedProjectiveSystem
         v := x (.slot i .v)
         valid := guardEquation_excludes_zero (hguard i) }
     have hbase :
-        HValue (q 0).coord (q 1).coord (z 0).coord = 0 := by
+        HValue b (q 0).coord (q 1).coord (z 0).coord = 0 := by
       simpa [guardedEquation, guardConstantCoordinate,
         guardProjectiveCoordinate, HValue, ProjectivePair.coord, z] using hx .base
     have hstep (i : Fin 13) :
-        HValue (z i.castSucc).coord (q (i + 2)).coord
+        HValue b (z i.castSucc).coord (q (i + 2)).coord
           (z i.succ).coord = 0 := by
       simpa [guardedEquation, guardConstantCoordinate,
         guardProjectiveCoordinate, HValue, ProjectivePair.coord, z] using hx (.step i)
     have hfinal :
-        HValue (z ⟨13, by decide⟩).coord (q 15).coord y.coord = 0 := by
+        HValue b (z ⟨13, by decide⟩).coord (q 15).coord y.coord = 0 := by
       simpa [guardedEquation, guardConstantCoordinate,
         guardProjectiveCoordinate, HValue, ProjectivePair.coord, z] using hx .final
     have hprefix :
         ∀ n : ℕ, (hn : n < 14) →
-          FrozenProjectiveChain q n (z ⟨n, hn⟩) := by
+          FrozenProjectiveChain b q n (z ⟨n, hn⟩) := by
       intro n
       induction n with
       | zero =>
@@ -589,30 +589,30 @@ finite guarded system over an algebraically closed target field.
 The target witnesses need not descend to the source field. -/
 theorem frozenRecS17_iff_guardedProjectiveSystem_over
     {k K : Type*} [Field k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (hφ : Function.Injective φ)
+    (φ : k →+* K) (hφ : Function.Injective φ) (b : k)
     (q : ℕ → ProjectivePair k) (y : ProjectivePair k) :
-    specialize q y (frozenC k 14) = 0 ↔
-      FrozenGuardedProjectiveSystem
+    specialize q y (frozenC k b 14) = 0 ↔
+      FrozenGuardedProjectiveSystem (φ b)
         (fun i => mapProjectivePair φ hφ (q i))
         (mapProjectivePair φ hφ y) := by
   let qK : ℕ → ProjectivePair K :=
     fun i => mapProjectivePair φ hφ (q i)
   let yK : ProjectivePair K := mapProjectivePair φ hφ y
   calc
-    specialize q y (frozenC k 14) = 0 ↔
-        φ (specialize q y (frozenC k 14)) = 0 := by
+    specialize q y (frozenC k b 14) = 0 ↔
+        φ (specialize q y (frozenC k b 14)) = 0 := by
       constructor
       · intro h
         simp [h]
       · intro h
         apply hφ
         simpa using h
-    _ ↔ specializeOver φ qK yK (frozenC k 14) = 0 := by
+    _ ↔ specializeOver φ qK yK (frozenC k b 14) = 0 := by
       rw [map_specialize_eq_specializeOver
-        (φ := φ) (hφ := hφ) (p := frozenC k 14) (q := q) (y := y)]
-    _ ↔ FrozenProjectiveChain qK 14 yK :=
-      specializeOver_frozenC16_eq_zero_iff_projectiveChain φ qK yK
-    _ ↔ FrozenGuardedProjectiveSystem qK yK :=
-      frozenProjectiveChain_iff_guardedProjectiveSystem qK yK
+        (φ := φ) (hφ := hφ) (p := frozenC k b 14) (q := q) (y := y)]
+    _ ↔ FrozenProjectiveChain (φ b) qK 14 yK :=
+      specializeOver_frozenC16_eq_zero_iff_projectiveChain φ b qK yK
+    _ ↔ FrozenGuardedProjectiveSystem (φ b) qK yK :=
+      frozenProjectiveChain_iff_guardedProjectiveSystem (φ b) qK yK
 
 end CryptoLean.Semaev.FrozenProjective

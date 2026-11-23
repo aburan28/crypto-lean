@@ -80,7 +80,7 @@ theorem chainEquations_iff (u : ChainVars) :
 Semaev-2004 left-fold `f17` equation.  It is intentionally not defined through
 the reduced factor-base subtype. -/
 def DirectSystem4 (X : Fp) (u : Fin 16 → ChainVars) : Prop :=
-  S17At (fun i => (u i).x₁) X = 0 ∧
+  S17At 7 (fun i => (u i).x₁) X = 0 ∧
   ∀ i, ChainEquations (u i)
 
 /-- Exact elimination of all 48 transition coordinates at the level of
@@ -88,7 +88,7 @@ distinct solution sets. -/
 noncomputable def directSolEquivReduced (X : Fp) :
     {u : Fin 16 → ChainVars // DirectSystem4 X u} ≃
       {x : Fin 16 → FactorBaseX //
-        S17At (fun i => (x i).1) X = 0} where
+        S17At 7 (fun i => (x i).1) X = 0} where
   toFun u :=
     ⟨fun i =>
         ⟨(u.1 i).x₁,
@@ -124,16 +124,16 @@ theorem S17At_eq_zero_iff_chartPolynomialCover_over
     {K : Type*} [Field K] [IsAlgClosed K]
     (phi : Fp →+* K) (hphi : Function.Injective phi)
     (x : Fin 16 → Fp) (X : Fp) :
-    S17At x X = 0 ↔
-      CryptoLean.Semaev.FrozenProjective.FrozenChartPolynomialCover
+    S17At 7 x X = 0 ↔
+      CryptoLean.Semaev.FrozenProjective.FrozenChartPolynomialCover 7
         (fun i =>
           CryptoLean.Semaev.FrozenProjective.mapProjectivePair
             phi hphi (projectiveLeaves x i))
         (CryptoLean.Semaev.FrozenProjective.mapProjectivePair
           phi hphi (.affine X)) := by
   rw [S17At_eq_frozenSpecialize]
-  exact
+  simpa only [map_ofNat] using
     CryptoLean.Semaev.FrozenProjective.frozenRecS17_iff_chartPolynomialCover_over
-      phi hphi (projectiveLeaves x) (.affine X)
+      phi hphi 7 (projectiveLeaves x) (.affine X)
 
 end CryptoLean.Secp256k1.M16DirectSystemRootBridge

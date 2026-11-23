@@ -188,17 +188,17 @@ noncomputable def localBinaryCoeffTwo
 
 /-- The `T` coefficient of `H([T:1],q,[X₀:X₁])`. -/
 noncomputable def localBinaryCoeffOne
-    {K : Type*} [Field K] (q : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) :
     MvPolynomial (Fin 2) K :=
   binaryQuadratic
-    (-2 * q.u * q.v) (-2 * q.u ^ 2) (-28 * q.v ^ 2)
+    (-2 * q.u * q.v) (-2 * q.u ^ 2) (-(4 * b) * q.v ^ 2)
 
 /-- The constant coefficient of `H([T:1],q,[X₀:X₁])`. -/
 noncomputable def localBinaryCoeffZero
-    {K : Type*} [Field K] (q : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) :
     MvPolynomial (Fin 2) K :=
   binaryQuadratic
-    (q.u ^ 2) (-28 * q.v ^ 2) (-28 * q.u * q.v)
+    (q.u ^ 2) (-(4 * b) * q.v ^ 2) (-(4 * b) * q.u * q.v)
 
 theorem localBinaryCoeffTwo_isHomogeneous
     {K : Type*} [Field K] (q : ProjectivePair K) :
@@ -206,22 +206,22 @@ theorem localBinaryCoeffTwo_isHomogeneous
   binaryQuadratic_isHomogeneous _ _ _
 
 theorem localBinaryCoeffOne_isHomogeneous
-    {K : Type*} [Field K] (q : ProjectivePair K) :
-    (localBinaryCoeffOne q).IsHomogeneous 2 :=
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) :
+    (localBinaryCoeffOne b q).IsHomogeneous 2 :=
   binaryQuadratic_isHomogeneous _ _ _
 
 theorem localBinaryCoeffZero_isHomogeneous
-    {K : Type*} [Field K] (q : ProjectivePair K) :
-    (localBinaryCoeffZero q).IsHomogeneous 2 :=
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) :
+    (localBinaryCoeffZero b q).IsHomogeneous 2 :=
   binaryQuadratic_isHomogeneous _ _ _
 
 /-- Literal expansion of `H([T:1],q,[X₀:X₁])` by powers of `T`. -/
 theorem localSliceAt_binaryPair_explicit
-    {K : Type*} [Field K] (q : ProjectivePair K) :
-    localSliceAt (binaryConstantPair q) binaryPair =
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) :
+    localSliceAt (MvPolynomial.C b) (binaryConstantPair q) binaryPair =
       Polynomial.monomial 2 (localBinaryCoeffTwo q) +
-        Polynomial.monomial 1 (localBinaryCoeffOne q) +
-        Polynomial.C (localBinaryCoeffZero q) := by
+        Polynomial.monomial 1 (localBinaryCoeffOne b q) +
+        Polynomial.C (localBinaryCoeffZero b q) := by
   simp [localSliceAt, HValue, binaryConstantPair, binaryPair,
     ProjectivePair.coord, localBinaryCoeffTwo, localBinaryCoeffOne,
     localBinaryCoeffZero, binaryQuadratic]
@@ -231,19 +231,19 @@ theorem localSliceAt_binaryPair_explicit
       (MvPolynomial.C (2 : K) : MvPolynomial (Fin 2) K) = 2 := by
     simpa using
       (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 2)
-  have hC28 :
-      (MvPolynomial.C (28 : K) : MvPolynomial (Fin 2) K) = 28 := by
+  have hC4 :
+      (MvPolynomial.C (4 : K) : MvPolynomial (Fin 2) K) = 4 := by
     simpa using
-      (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 28)
-  rw [hC2, hC28]
+      (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 4)
+  rw [hC2, hC4]
   simp only [Polynomial.C_ofNat]
   ring
 
 /-- Every `T`-coefficient of the local binary slice is homogeneous of degree
 two in `[X₀:X₁]`. -/
 theorem localSliceAt_binaryPair_coeff_isHomogeneous
-    {K : Type*} [Field K] (q : ProjectivePair K) (i : ℕ) :
-    ((localSliceAt (binaryConstantPair q) binaryPair).coeff i).IsHomogeneous 2 := by
+    {K : Type*} [Field K] (b : K) (q : ProjectivePair K) (i : ℕ) :
+    ((localSliceAt (MvPolynomial.C b) (binaryConstantPair q) binaryPair).coeff i).IsHomogeneous 2 := by
   rw [localSliceAt_binaryPair_explicit]
   by_cases hi2 : i = 2
   · subst i
@@ -258,14 +258,14 @@ theorem localSliceAt_binaryPair_coeff_isHomogeneous
         Polynomial.coeff_C, if_pos]
       rw [if_neg (by omega), if_neg (by omega)]
       simp only [zero_add, add_zero]
-      exact localBinaryCoeffOne_isHomogeneous q
+      exact localBinaryCoeffOne_isHomogeneous b q
     · by_cases hi0 : i = 0
       · subst i
         simp only [Polynomial.coeff_add, Polynomial.coeff_monomial,
           Polynomial.coeff_C, if_pos]
         rw [if_neg (by omega), if_neg (by omega)]
         simp only [zero_add]
-        exact localBinaryCoeffZero_isHomogeneous q
+        exact localBinaryCoeffZero_isHomogeneous b q
       · simp only [Polynomial.coeff_add, Polynomial.coeff_monomial,
           Polynomial.coeff_C]
         rw [if_neg (Ne.symm hi2), if_neg (Ne.symm hi1), if_neg hi0]
@@ -349,17 +349,17 @@ theorem taskSylvester_isHomogeneous_two_mul_left
 /-- The literal `H` at two constant pairs and the universal binary pair is a
 named binary quadratic. -/
 theorem HValue_binaryConstant_binaryPair_eq
-    {K : Type*} [Field K] (q₁ q₂ : ProjectivePair K) :
-    HValue (binaryConstantPair q₁).coord
+    {K : Type*} [Field K] (b : K) (q₁ q₂ : ProjectivePair K) :
+    HValue (MvPolynomial.C b) (binaryConstantPair q₁).coord
         (binaryConstantPair q₂).coord binaryPair.coord =
       binaryQuadratic
         (q₁.u ^ 2 * q₂.v ^ 2 + q₁.v ^ 2 * q₂.u ^ 2 -
           2 * q₁.u * q₁.v * q₂.u * q₂.v)
         (-2 * q₁.u ^ 2 * q₂.u * q₂.v -
           2 * q₁.u * q₁.v * q₂.u ^ 2 -
-          28 * q₁.v ^ 2 * q₂.v ^ 2)
+          4 * b * q₁.v ^ 2 * q₂.v ^ 2)
         (q₁.u ^ 2 * q₂.u ^ 2 -
-          28 * (q₁.u * q₁.v * q₂.v ^ 2 +
+          4 * b * (q₁.u * q₁.v * q₂.v ^ 2 +
             q₁.v ^ 2 * q₂.u * q₂.v)) := by
   simp [HValue, binaryConstantPair, binaryPair, ProjectivePair.coord,
     binaryQuadratic]
@@ -367,11 +367,11 @@ theorem HValue_binaryConstant_binaryPair_eq
       (MvPolynomial.C (2 : K) : MvPolynomial (Fin 2) K) = 2 := by
     simpa using
       (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 2)
-  have hC28 :
-      (MvPolynomial.C (28 : K) : MvPolynomial (Fin 2) K) = 28 := by
+  have hC4 :
+      (MvPolynomial.C (4 : K) : MvPolynomial (Fin 2) K) = 4 := by
     simpa using
-      (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 28)
-  rw [hC2, hC28]
+      (map_ofNat (MvPolynomial.C : K →+* MvPolynomial (Fin 2) K) 4)
+  rw [hC2, hC4]
   ring
 
 /-- The actual frozen output after any coefficient map and leaf
@@ -379,14 +379,14 @@ specialization is homogeneous of its declared output degree.  The successor
 case uses the literal Sylvester row split and needs no induction hypothesis. -/
 theorem projectiveOutputAtOver_frozenC_isHomogeneous
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ) (q : ℕ → ProjectivePair K) :
-    (projectiveOutputAtOver φ (frozenC k s) q).IsHomogeneous
+    (φ : k →+* K) (b : k) (s : ℕ) (q : ℕ → ProjectivePair K) :
+    (projectiveOutputAtOver φ (frozenC k b s) q).IsHomogeneous
       (2 ^ (s + 1)) := by
   cases s with
   | zero =>
       rw [show
-        projectiveOutputAtOver φ (frozenC k 0) q =
-          HValue (binaryConstantPair (q 0)).coord
+        projectiveOutputAtOver φ (frozenC k b 0) q =
+          HValue (MvPolynomial.C (φ b)) (binaryConstantPair (q 0)).coord
             (binaryConstantPair (q 1)).coord binaryPair.coord by
         simp [projectiveOutputAtOver, frozenC, specializeOver, HValue,
           leafPair, outputPair, binaryConstantPair, binaryPair,
@@ -398,8 +398,8 @@ theorem projectiveOutputAtOver_frozenC_isHomogeneous
       rw [specialize_frozenC_succ_over]
       rw [previousSliceAtOver_binaryConstantPair]
       have h := taskSylvester_isHomogeneous_two_mul_left
-        ((previousSliceAtOver φ (frozenC k s) q).map MvPolynomial.C)
-        (localSliceAt (binaryConstantPair (q (s + 2))) binaryPair)
+        ((previousSliceAtOver φ (frozenC k b s) q).map MvPolynomial.C)
+        (localSliceAt (MvPolynomial.C (φ b)) (binaryConstantPair (q (s + 2))) binaryPair)
         (2 ^ (s + 1))
         (by
           intro i
@@ -407,7 +407,7 @@ theorem projectiveOutputAtOver_frozenC_isHomogeneous
           exact MvPolynomial.isHomogeneous_C (Fin 2) _)
         (by
           intro i
-          exact localSliceAt_binaryPair_coeff_isHomogeneous _ _)
+          exact localSliceAt_binaryPair_coeff_isHomogeneous _ _ _)
       convert h using 1
       simp only [pow_succ]
       ring
@@ -416,73 +416,73 @@ theorem projectiveOutputAtOver_frozenC_isHomogeneous
 the actual frozen projective output form. -/
 theorem homogenize_previousSliceAtOver_frozenC
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ) (q : ℕ → ProjectivePair K) :
-    (previousSliceAtOver φ (frozenC k s) q).homogenize
+    (φ : k →+* K) (b : k) (s : ℕ) (q : ℕ → ProjectivePair K) :
+    (previousSliceAtOver φ (frozenC k b s) q).homogenize
         (2 ^ (s + 1)) =
-      projectiveOutputAtOver φ (frozenC k s) q := by
+      projectiveOutputAtOver φ (frozenC k b s) q := by
   apply Polynomial.homogenize_eq_of_isHomogeneous
-    (projectiveOutputAtOver_frozenC_isHomogeneous φ s q)
+    (projectiveOutputAtOver_frozenC_isHomogeneous φ b s q)
   exact dehomogenize_projectiveOutputAtOver φ _ q
 
 /-- Evaluation of the declared predecessor homogenization at every valid
 projective pair, including `[1:0]`, is direct frozen specialization. -/
 theorem eval_homogenize_previousSliceAtOver_frozenC
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (z : ProjectivePair K) :
     MvPolynomial.eval ![z.u, z.v]
-        ((previousSliceAtOver φ (frozenC k s) q).homogenize
+        ((previousSliceAtOver φ (frozenC k b s) q).homogenize
           (2 ^ (s + 1))) =
-      specializeOver φ q z (frozenC k s) := by
+      specializeOver φ q z (frozenC k b s) := by
   rw [homogenize_previousSliceAtOver_frozenC]
   exact eval_projectiveOutputAtOver φ _ q z
 
 /-- Explicit affine-chart fixture for the frozen predecessor bridge. -/
 theorem eval_homogenize_previousSliceAtOver_frozenC_affine
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (t : K) :
     MvPolynomial.eval ![t, 1]
-        ((previousSliceAtOver φ (frozenC k s) q).homogenize
+        ((previousSliceAtOver φ (frozenC k b s) q).homogenize
           (2 ^ (s + 1))) =
-      specializeOver φ q (.affine t) (frozenC k s) :=
-  eval_homogenize_previousSliceAtOver_frozenC φ s q (.affine t)
+      specializeOver φ q (.affine t) (frozenC k b s) :=
+  eval_homogenize_previousSliceAtOver_frozenC φ b s q (.affine t)
 
 /-- Explicit infinity-chart fixture for the frozen predecessor bridge. -/
 theorem eval_homogenize_previousSliceAtOver_frozenC_infinity
     {k K : Type*} [CommRing k] [Field K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) :
     MvPolynomial.eval ![(1 : K), 0]
-        ((previousSliceAtOver φ (frozenC k s) q).homogenize
+        ((previousSliceAtOver φ (frozenC k b s) q).homogenize
           (2 ^ (s + 1))) =
-      specializeOver φ q .infinity (frozenC k s) :=
-  eval_homogenize_previousSliceAtOver_frozenC φ s q .infinity
+      specializeOver φ q .infinity (frozenC k b s) :=
+  eval_homogenize_previousSliceAtOver_frozenC φ b s q .infinity
 
 /-! ## Exact local projective bridge -/
 
 /-- The literal triquadratic is invariant under cyclic permutation of its
 three projective arguments. -/
 theorem HValue_cycle
-    {R : Type*} [CommRing R] (q₁ q₂ q₃ : Axis → R) :
-    HValue q₁ q₂ q₃ = HValue q₂ q₃ q₁ := by
+    {R : Type*} [CommRing R] (b : R) (q₁ q₂ q₃ : Axis → R) :
+    HValue b q₁ q₂ q₃ = HValue b q₂ q₃ q₁ := by
   unfold HValue
   ring
 
 /-- The universal binary form underlying the concrete local operand
 `H([T:1],q,y)`. -/
 noncomputable def localProjectiveAt
-    {K : Type*} [Field K] (q y : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) :
     MvPolynomial (Fin 2) K :=
-  HValue binaryPair.coord
+  HValue (MvPolynomial.C b) binaryPair.coord
     (binaryConstantPair q).coord
     (binaryConstantPair y).coord
 
 /-- The universal local binary form is homogeneous of its declared degree
 two. -/
 theorem localProjectiveAt_isHomogeneous
-    {K : Type*} [Field K] (q y : ProjectivePair K) :
-    (localProjectiveAt q y).IsHomogeneous 2 := by
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) :
+    (localProjectiveAt b q y).IsHomogeneous 2 := by
   unfold localProjectiveAt
   rw [HValue_cycle]
   rw [HValue_binaryConstant_binaryPair_eq]
@@ -491,54 +491,54 @@ theorem localProjectiveAt_isHomogeneous
 /-- Dehomogenizing the universal local binary form on `[X:1]` is exactly the
 concrete local slice. -/
 theorem dehomogenize_localProjectiveAt
-    {K : Type*} [Field K] (q y : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) :
     MvPolynomial.aeval ![(Polynomial.X : K[X]), 1]
-        (localProjectiveAt q y) =
-      localSliceAt q y := by
+        (localProjectiveAt b q y) =
+      localSliceAt b q y := by
   simp [localProjectiveAt, localSliceAt, HValue, binaryPair,
     binaryConstantPair, ProjectivePair.coord]
 
 /-- The declared-degree homogenization of the local affine slice is exactly
 its universal projective form. -/
 theorem homogenize_localSliceAt
-    {K : Type*} [Field K] (q y : ProjectivePair K) :
-    (localSliceAt q y).homogenize 2 = localProjectiveAt q y := by
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) :
+    (localSliceAt b q y).homogenize 2 = localProjectiveAt b q y := by
   apply Polynomial.homogenize_eq_of_isHomogeneous
-    (localProjectiveAt_isHomogeneous q y)
-  exact dehomogenize_localProjectiveAt q y
+    (localProjectiveAt_isHomogeneous b q y)
+  exact dehomogenize_localProjectiveAt b q y
 
 /-- Evaluation of the local universal form is the literal projective
 triquadratic, for finite and infinite representatives alike. -/
 theorem eval_localProjectiveAt
-    {K : Type*} [Field K] (q y z : ProjectivePair K) :
-    MvPolynomial.eval ![z.u, z.v] (localProjectiveAt q y) =
-      HValue z.coord q.coord y.coord := by
+    {K : Type*} [Field K] (b : K) (q y z : ProjectivePair K) :
+    MvPolynomial.eval ![z.u, z.v] (localProjectiveAt b q y) =
+      HValue b z.coord q.coord y.coord := by
   simp [localProjectiveAt, HValue, binaryPair, binaryConstantPair,
     ProjectivePair.coord]
 
 /-- Exact local projective bridge used at every recursive witness step. -/
 theorem eval_homogenize_localSliceAt
-    {K : Type*} [Field K] (q y z : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q y z : ProjectivePair K) :
     MvPolynomial.eval ![z.u, z.v]
-        ((localSliceAt q y).homogenize 2) =
-      HValue z.coord q.coord y.coord := by
+        ((localSliceAt b q y).homogenize 2) =
+      HValue b z.coord q.coord y.coord := by
   rw [homogenize_localSliceAt]
-  exact eval_localProjectiveAt q y z
+  exact eval_localProjectiveAt b q y z
 
 /-- Explicit affine-chart fixture for the local projective bridge. -/
 theorem eval_homogenize_localSliceAt_affine
-    {K : Type*} [Field K] (q y : ProjectivePair K) (t : K) :
-    MvPolynomial.eval ![t, 1] ((localSliceAt q y).homogenize 2) =
-      HValue (ProjectivePair.affine t).coord q.coord y.coord :=
-  eval_homogenize_localSliceAt q y (.affine t)
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) (t : K) :
+    MvPolynomial.eval ![t, 1] ((localSliceAt b q y).homogenize 2) =
+      HValue b (ProjectivePair.affine t).coord q.coord y.coord :=
+  eval_homogenize_localSliceAt b q y (.affine t)
 
 /-- Explicit infinity-chart fixture for the local projective bridge. -/
 theorem eval_homogenize_localSliceAt_infinity
-    {K : Type*} [Field K] (q y : ProjectivePair K) :
+    {K : Type*} [Field K] (b : K) (q y : ProjectivePair K) :
     MvPolynomial.eval ![(1 : K), 0]
-        ((localSliceAt q y).homogenize 2) =
-      HValue (ProjectivePair.infinity (K := K)).coord q.coord y.coord :=
-  eval_homogenize_localSliceAt q y .infinity
+        ((localSliceAt b q y).homogenize 2) =
+      HValue b (ProjectivePair.infinity (K := K)).coord q.coord y.coord :=
+  eval_homogenize_localSliceAt b q y .infinity
 
 /-! ## Recursive projective witness chain -/
 
@@ -546,22 +546,22 @@ theorem eval_homogenize_localSliceAt_infinity
 the literal frozen family.  The level-zero case is `C₂`; each successor adds
 one fresh leaf and one projective intermediate pair. -/
 def FrozenProjectiveChain
-    {K : Type*} [CommRing K] (q : ℕ → ProjectivePair K) :
+    {K : Type*} [CommRing K] (b : K) (q : ℕ → ProjectivePair K) :
     ℕ → ProjectivePair K → Prop
   | 0, y =>
-      HValue (q 0).coord (q 1).coord y.coord = 0
+      HValue b (q 0).coord (q 1).coord y.coord = 0
   | s + 1, y =>
       ∃ z : ProjectivePair K,
-        FrozenProjectiveChain q s z ∧
-        HValue z.coord (q (s + 2)).coord y.coord = 0
+        FrozenProjectiveChain b q s z ∧
+        HValue b z.coord (q (s + 2)).coord y.coord = 0
 
 /-- Direct specialization of the base member `C₂`. -/
 theorem specializeOver_frozenC_zero
     {k K : Type*} [CommRing k] [CommRing K]
-    (φ : k →+* K) (q : ℕ → ProjectivePair K)
+    (φ : k →+* K) (b : k) (q : ℕ → ProjectivePair K)
     (y : ProjectivePair K) :
-    specializeOver φ q y (frozenC k 0) =
-      HValue (q 0).coord (q 1).coord y.coord := by
+    specializeOver φ q y (frozenC k b 0) =
+      HValue (φ b) (q 0).coord (q 1).coord y.coord := by
   simp [frozenC, specializeOver, HValue, leafPair, outputPair,
     ProjectivePair.coord]
 
@@ -574,10 +574,10 @@ chain in `K`; it does not assert descent of intermediate witnesses to a
 smaller source field. -/
 theorem specializeOver_frozenC_eq_zero_iff_projectiveChain
     {k K : Type*} [CommRing k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (s : ℕ)
+    (φ : k →+* K) (b : k) (s : ℕ)
     (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    specializeOver φ q y (frozenC k s) = 0 ↔
-      FrozenProjectiveChain q s y := by
+    specializeOver φ q y (frozenC k b s) = 0 ↔
+      FrozenProjectiveChain (φ b) q s y := by
   induction s generalizing y with
   | zero =>
       rw [specializeOver_frozenC_zero]
@@ -608,10 +608,10 @@ witness-chain semantics: leaves `q 0` through `q 15` and fourteen valid
 intermediate projective pairs. -/
 theorem specializeOver_frozenC16_eq_zero_iff_projectiveChain
     {k K : Type*} [CommRing k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (q : ℕ → ProjectivePair K)
+    (φ : k →+* K) (b : k) (q : ℕ → ProjectivePair K)
     (y : ProjectivePair K) :
-    specializeOver φ q y (frozenC k 14) = 0 ↔
-      FrozenProjectiveChain q 14 y :=
-  specializeOver_frozenC_eq_zero_iff_projectiveChain φ 14 q y
+    specializeOver φ q y (frozenC k b 14) = 0 ↔
+      FrozenProjectiveChain (φ b) q 14 y :=
+  specializeOver_frozenC_eq_zero_iff_projectiveChain φ b 14 q y
 
 end CryptoLean.Semaev.FrozenProjective

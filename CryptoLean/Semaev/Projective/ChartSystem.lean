@@ -75,55 +75,55 @@ noncomputable def chartPair
 /-- The literal value of one of the fifteen chart equations. -/
 noncomputable def chartEquationValue
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K) :
     ChartEquation → K
   | .base =>
-      HValue (q 0).coord (q 1).coord (chartPair I x 0).coord
+      HValue b (q 0).coord (q 1).coord (chartPair I x 0).coord
   | .step i =>
-      HValue (chartPair I x i.castSucc).coord
+      HValue b (chartPair I x i.castSucc).coord
         (q (i + 2)).coord (chartPair I x i.succ).coord
   | .final =>
-      HValue (chartPair I x ⟨13, by decide⟩).coord
+      HValue b (chartPair I x ⟨13, by decide⟩).coord
         (q 15).coord y.coord
 
 /-- A fixed mask chart is the common zero locus of its fifteen literal
 `H` equations. -/
 def FrozenChartSystem
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K) : Prop :=
-  ∀ e : ChartEquation, chartEquationValue q y I x e = 0
+  ∀ e : ChartEquation, chartEquationValue b q y I x e = 0
 
 /-- The finite cover over all choices of affine and infinity charts. -/
 def FrozenChartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ (I : InfinityMask) (x : ChartVar I → K),
-    FrozenChartSystem q y I x
+    FrozenChartSystem b q y I x
 
 /-! ## Projective normalization -/
 
 /-- Simultaneous rescaling of the three projective arguments. -/
 theorem HValue_scale
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     (a b c : K) (q₁ q₂ q₃ : Axis → K) :
-    HValue (fun t => a * q₁ t)
+    HValue b₀ (fun t => a * q₁ t)
         (fun t => b * q₂ t)
         (fun t => c * q₃ t) =
-      a ^ 2 * b ^ 2 * c ^ 2 * HValue q₁ q₂ q₃ := by
+      a ^ 2 * b ^ 2 * c ^ 2 * HValue b₀ q₁ q₂ q₃ := by
   unfold HValue
   ring
 
 /-- Nonzero projective rescaling preserves and reflects vanishing of `H`. -/
 theorem HValue_rescale_zero_iff
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     {a b c : K} (ha : a ≠ 0) (hb : b ≠ 0) (hc : c ≠ 0)
     (q₁ q₂ q₃ : Axis → K) :
-    HValue (fun t => a * q₁ t)
+    HValue b₀ (fun t => a * q₁ t)
         (fun t => b * q₂ t)
         (fun t => c * q₃ t) = 0 ↔
-      HValue q₁ q₂ q₃ = 0 := by
+      HValue b₀ q₁ q₂ q₃ = 0 := by
   rw [HValue_scale]
   simp [ha, hb, hc]
 
@@ -180,10 +180,10 @@ theorem coord_eq_projectiveScale_mul_normalize
 /-- Normalize all three projective arguments without changing whether the
 triquadratic vanishes. -/
 theorem HValue_normalize_zero_iff
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     (z₁ z₂ z₃ : ProjectivePair K) :
-    HValue z₁.coord z₂.coord z₃.coord = 0 ↔
-      HValue (normalizeProjectivePair z₁).coord
+    HValue b₀ z₁.coord z₂.coord z₃.coord = 0 ↔
+      HValue b₀ (normalizeProjectivePair z₁).coord
         (normalizeProjectivePair z₂).coord
         (normalizeProjectivePair z₃).coord = 0 := by
   have hcoord (z : ProjectivePair K) :
@@ -192,17 +192,17 @@ theorem HValue_normalize_zero_iff
     funext t
     exact coord_eq_projectiveScale_mul_normalize z t
   rw [hcoord z₁, hcoord z₂, hcoord z₃]
-  exact HValue_rescale_zero_iff
+  exact HValue_rescale_zero_iff b₀
     (projectiveScale_ne_zero z₁)
     (projectiveScale_ne_zero z₂)
     (projectiveScale_ne_zero z₃)
     _ _ _
 
 theorem HValue_normalize_third_zero_iff
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     (q₁ q₂ : Axis → K) (z : ProjectivePair K) :
-    HValue q₁ q₂ z.coord = 0 ↔
-      HValue q₁ q₂ (normalizeProjectivePair z).coord = 0 := by
+    HValue b₀ q₁ q₂ z.coord = 0 ↔
+      HValue b₀ q₁ q₂ (normalizeProjectivePair z).coord = 0 := by
   have hcoord :
       z.coord =
         fun t => projectiveScale z * (normalizeProjectivePair z).coord t := by
@@ -210,16 +210,16 @@ theorem HValue_normalize_third_zero_iff
     exact coord_eq_projectiveScale_mul_normalize z t
   rw [hcoord]
   simpa using
-    (HValue_rescale_zero_iff
+    (HValue_rescale_zero_iff b₀
       (a := (1 : K)) (b := (1 : K)) (c := projectiveScale z)
       one_ne_zero one_ne_zero (projectiveScale_ne_zero z)
       q₁ q₂ (normalizeProjectivePair z).coord)
 
 theorem HValue_normalize_first_zero_iff
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     (z : ProjectivePair K) (q₂ q₃ : Axis → K) :
-    HValue z.coord q₂ q₃ = 0 ↔
-      HValue (normalizeProjectivePair z).coord q₂ q₃ = 0 := by
+    HValue b₀ z.coord q₂ q₃ = 0 ↔
+      HValue b₀ (normalizeProjectivePair z).coord q₂ q₃ = 0 := by
   have hcoord :
       z.coord =
         fun t => projectiveScale z * (normalizeProjectivePair z).coord t := by
@@ -227,17 +227,17 @@ theorem HValue_normalize_first_zero_iff
     exact coord_eq_projectiveScale_mul_normalize z t
   rw [hcoord]
   simpa using
-    (HValue_rescale_zero_iff
+    (HValue_rescale_zero_iff b₀
       (a := projectiveScale z) (b := (1 : K)) (c := (1 : K))
       (projectiveScale_ne_zero z) one_ne_zero one_ne_zero
       (normalizeProjectivePair z).coord q₂ q₃)
 
 theorem HValue_normalize_first_third_zero_iff
-    {K : Type*} [Field K]
+    {K : Type*} [Field K] (b₀ : K)
     (z₁ : ProjectivePair K) (q₂ : Axis → K)
     (z₃ : ProjectivePair K) :
-    HValue z₁.coord q₂ z₃.coord = 0 ↔
-      HValue (normalizeProjectivePair z₁).coord q₂
+    HValue b₀ z₁.coord q₂ z₃.coord = 0 ↔
+      HValue b₀ (normalizeProjectivePair z₁).coord q₂
         (normalizeProjectivePair z₃).coord = 0 := by
   have hcoord₁ :
       z₁.coord =
@@ -253,7 +253,7 @@ theorem HValue_normalize_first_third_zero_iff
     exact coord_eq_projectiveScale_mul_normalize z₃ t
   rw [hcoord₁, hcoord₃]
   simpa using
-    (HValue_rescale_zero_iff
+    (HValue_rescale_zero_iff b₀
       (a := projectiveScale z₁) (b := (1 : K))
       (c := projectiveScale z₃)
       (projectiveScale_ne_zero z₁) one_ne_zero
@@ -289,18 +289,18 @@ theorem chartPair_infinityMaskOf_eq_normalize
 /-- Exact fixed-length witness-vector semantics for the stage-14 chain. -/
 def FrozenChainVector
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (z : Fin 14 → ProjectivePair K) : Prop :=
-  HValue (q 0).coord (q 1).coord (z 0).coord = 0 ∧
+  HValue b (q 0).coord (q 1).coord (z 0).coord = 0 ∧
   (∀ i : Fin 13,
-    HValue (z i.castSucc).coord (q (i + 2)).coord (z i.succ).coord = 0) ∧
-  HValue (z ⟨13, by decide⟩).coord (q 15).coord y.coord = 0
+    HValue b (z i.castSucc).coord (q (i + 2)).coord (z i.succ).coord = 0) ∧
+  HValue b (z ⟨13, by decide⟩).coord (q 15).coord y.coord = 0
 
 theorem frozenProjectiveChain_iff_chainVector
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenProjectiveChain q 14 y ↔
-      ∃ z : Fin 14 → ProjectivePair K, FrozenChainVector q y z := by
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    FrozenProjectiveChain b q 14 y ↔
+      ∃ z : Fin 14 → ProjectivePair K, FrozenChainVector b q y z := by
   constructor
   · intro h
     simp only [FrozenProjectiveChain] at h
@@ -321,7 +321,7 @@ theorem frozenProjectiveChain_iff_chainVector
     let z : Fin 14 → ProjectivePair K :=
       ![z₀, z₁, z₂, z₃, z₄, z₅, z₆, z₇, z₈, z₉, z₁₀, z₁₁, z₁₂, z₁₃]
     have hstep (i : Fin 13) :
-        HValue (z i.castSucc).coord (q (i + 2)).coord
+        HValue b (z i.castSucc).coord (q (i + 2)).coord
           (z i.succ).coord = 0 := by
       fin_cases i <;>
         simp [z, hstep₀, hstep₁, hstep₂, hstep₃, hstep₄, hstep₅,
@@ -330,7 +330,7 @@ theorem frozenProjectiveChain_iff_chainVector
   · rintro ⟨z, hbase, hstep, hfinal⟩
     have hprefix :
         ∀ n : ℕ, (hn : n < 14) →
-          FrozenProjectiveChain q n (z ⟨n, hn⟩) := by
+          FrozenProjectiveChain b q n (z ⟨n, hn⟩) := by
       intro n
       induction n with
       | zero =>
@@ -356,30 +356,30 @@ theorem frozenProjectiveChain_iff_chainVector
 
 theorem frozenChainVector_normalize
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (z : Fin 14 → ProjectivePair K)
-    (hz : FrozenChainVector q y z) :
-    FrozenChainVector q y (fun i => normalizeProjectivePair (z i)) := by
+    (hz : FrozenChainVector b q y z) :
+    FrozenChainVector b q y (fun i => normalizeProjectivePair (z i)) := by
   rcases hz with ⟨hbase, hstep, hfinal⟩
   constructor
   · exact
-      (HValue_normalize_third_zero_iff
+      (HValue_normalize_third_zero_iff b
         (q 0).coord (q 1).coord (z 0)).mp hbase
   constructor
   · intro i
     exact
-      (HValue_normalize_first_third_zero_iff
+      (HValue_normalize_first_third_zero_iff b
         (z i.castSucc) (q (i + 2)).coord (z i.succ)).mp (hstep i)
   · exact
-      (HValue_normalize_first_zero_iff
+      (HValue_normalize_first_zero_iff b
         (z ⟨13, by decide⟩) (q 15).coord y.coord).mp hfinal
 
 theorem frozenChainVector_iff_chartSystem
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K) :
-    FrozenChainVector q y (chartPair I x) ↔
-      FrozenChartSystem q y I x := by
+    FrozenChainVector b q y (chartPair I x) ↔
+      FrozenChartSystem b q y I x := by
   constructor
   · rintro ⟨hbase, hstep, hfinal⟩ e
     cases e with
@@ -395,8 +395,8 @@ theorem frozenChainVector_iff_chartSystem
 projective witness chain. -/
 theorem frozenProjectiveChain_iff_chartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenProjectiveChain q 14 y ↔ FrozenChartCover q y := by
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    FrozenProjectiveChain b q 14 y ↔ FrozenChartCover b q y := by
   rw [frozenProjectiveChain_iff_chainVector]
   constructor
   · rintro ⟨z, hz⟩
@@ -404,7 +404,7 @@ theorem frozenProjectiveChain_iff_chartCover
     let x := chartCoordinates z
     refine ⟨I, x, ?_⟩
     rw [← frozenChainVector_iff_chartSystem]
-    have hn := frozenChainVector_normalize q y z hz
+    have hn := frozenChainVector_normalize b q y z hz
     have hp :
         chartPair (infinityMaskOf z) (chartCoordinates z) =
           fun i => normalizeProjectivePair (z i) := by
@@ -413,7 +413,7 @@ theorem frozenProjectiveChain_iff_chartCover
     simpa only [I, x, hp] using hn
   · rintro ⟨I, x, hx⟩
     exact ⟨chartPair I x,
-      (frozenChainVector_iff_chartSystem q y I x).mpr hx⟩
+      (frozenChainVector_iff_chartSystem b q y I x).mpr hx⟩
 
 /-! ## Literal polynomial systems on a fixed chart -/
 
@@ -436,19 +436,19 @@ noncomputable def chartPolynomialPair
 /-- The fifteen literal multivariate polynomials for one fixed chart. -/
 noncomputable def chartPolynomialEquation
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) :
     ChartEquation → MvPolynomial (ChartVar I) K
   | .base =>
-      HValue (chartConstantPolynomialPair (I := I) (q 0))
+      HValue (MvPolynomial.C b) (chartConstantPolynomialPair (I := I) (q 0))
         (chartConstantPolynomialPair (I := I) (q 1))
         (chartPolynomialPair I ⟨0, by decide⟩)
   | .step i =>
-      HValue (chartPolynomialPair I i.castSucc)
+      HValue (MvPolynomial.C b) (chartPolynomialPair I i.castSucc)
         (chartConstantPolynomialPair (I := I) (q (i + 2)))
         (chartPolynomialPair I i.succ)
   | .final =>
-      HValue (chartPolynomialPair I ⟨13, by decide⟩)
+      HValue (MvPolynomial.C b) (chartPolynomialPair I ⟨13, by decide⟩)
         (chartConstantPolynomialPair (I := I) (q 15))
         (chartConstantPolynomialPair (I := I) y)
 
@@ -477,11 +477,11 @@ theorem eval_chartConstantPolynomialPair
 equation value. -/
 theorem eval_chartPolynomialEquation
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K)
     (e : ChartEquation) :
-    MvPolynomial.eval x (chartPolynomialEquation q y I e) =
-      chartEquationValue q y I x e := by
+    MvPolynomial.eval x (chartPolynomialEquation b q y I e) =
+      chartEquationValue b q y I x e := by
   cases e with
   | base =>
       simp [chartPolynomialEquation, chartEquationValue, HValue,
@@ -497,41 +497,41 @@ theorem eval_chartPolynomialEquation
 chart. -/
 def FrozenChartPolynomialSystem
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K) : Prop :=
   ∀ e : ChartEquation,
-    MvPolynomial.eval x (chartPolynomialEquation q y I e) = 0
+    MvPolynomial.eval x (chartPolynomialEquation b q y I e) = 0
 
 /-- The literal polynomial assignment semantics is exactly the direct chart
 semantics. -/
 theorem frozenChartPolynomialSystem_iff_chartSystem
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (x : ChartVar I → K) :
-    FrozenChartPolynomialSystem q y I x ↔
-      FrozenChartSystem q y I x := by
+    FrozenChartPolynomialSystem b q y I x ↔
+      FrozenChartSystem b q y I x := by
   simp only [FrozenChartPolynomialSystem, FrozenChartSystem,
     eval_chartPolynomialEquation]
 
 /-- The finite union of all fixed-chart literal polynomial systems. -/
 def FrozenChartPolynomialCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) : Prop :=
   ∃ (I : InfinityMask) (x : ChartVar I → K),
-    FrozenChartPolynomialSystem q y I x
+    FrozenChartPolynomialSystem b q y I x
 
 /-- The literal polynomial cover is exactly the direct finite chart cover. -/
 theorem frozenChartPolynomialCover_iff_chartCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenChartPolynomialCover q y ↔ FrozenChartCover q y := by
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    FrozenChartPolynomialCover b q y ↔ FrozenChartCover b q y := by
   constructor
   · rintro ⟨I, x, hx⟩
     exact ⟨I, x,
-      (frozenChartPolynomialSystem_iff_chartSystem q y I x).mp hx⟩
+      (frozenChartPolynomialSystem_iff_chartSystem b q y I x).mp hx⟩
   · rintro ⟨I, x, hx⟩
     exact ⟨I, x,
-      (frozenChartPolynomialSystem_iff_chartSystem q y I x).mpr hx⟩
+      (frozenChartPolynomialSystem_iff_chartSystem b q y I x).mpr hx⟩
 
 /-! ## Named bridge theorems -/
 
@@ -539,27 +539,27 @@ theorem frozenChartPolynomialCover_iff_chartCover
 witness chain. -/
 theorem frozenProjectiveChain_iff_chartPolynomialCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenProjectiveChain q 14 y ↔
-      FrozenChartPolynomialCover q y := by
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    FrozenProjectiveChain b q 14 y ↔
+      FrozenChartPolynomialCover b q y := by
   calc
-    FrozenProjectiveChain q 14 y ↔ FrozenChartCover q y :=
-      frozenProjectiveChain_iff_chartCover q y
-    _ ↔ FrozenChartPolynomialCover q y :=
-      (frozenChartPolynomialCover_iff_chartCover q y).symm
+    FrozenProjectiveChain b q 14 y ↔ FrozenChartCover b q y :=
+      frozenProjectiveChain_iff_chartCover b q y
+    _ ↔ FrozenChartPolynomialCover b q y :=
+      (frozenChartPolynomialCover_iff_chartCover b q y).symm
 
 /-- The existing guarded polynomial system and the literal chart-polynomial
 cover have exactly the same stage-14 semantics. -/
 theorem frozenGuardedProjectiveSystem_iff_chartPolynomialCover
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
-    FrozenGuardedProjectiveSystem q y ↔
-      FrozenChartPolynomialCover q y := by
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K) :
+    FrozenGuardedProjectiveSystem b q y ↔
+      FrozenChartPolynomialCover b q y := by
   calc
-    FrozenGuardedProjectiveSystem q y ↔ FrozenProjectiveChain q 14 y :=
-      (frozenProjectiveChain_iff_guardedProjectiveSystem q y).symm
-    _ ↔ FrozenChartPolynomialCover q y :=
-      frozenProjectiveChain_iff_chartPolynomialCover q y
+    FrozenGuardedProjectiveSystem b q y ↔ FrozenProjectiveChain b q 14 y :=
+      (frozenProjectiveChain_iff_guardedProjectiveSystem b q y).symm
+    _ ↔ FrozenChartPolynomialCover b q y :=
+      frozenProjectiveChain_iff_chartPolynomialCover b q y
 
 /-- Injective base change binds the source-field frozen `C₁₆` equation to the
 literal chart-polynomial cover over an algebraically closed target field.
@@ -567,22 +567,22 @@ literal chart-polynomial cover over an algebraically closed target field.
 The target witnesses need not descend to the source field. -/
 theorem frozenRecS17_iff_chartPolynomialCover_over
     {k K : Type*} [Field k] [Field K] [IsAlgClosed K]
-    (φ : k →+* K) (hφ : Function.Injective φ)
+    (φ : k →+* K) (hφ : Function.Injective φ) (b : k)
     (q : ℕ → ProjectivePair k) (y : ProjectivePair k) :
-    specialize q y (frozenC k 14) = 0 ↔
-      FrozenChartPolynomialCover
+    specialize q y (frozenC k b 14) = 0 ↔
+      FrozenChartPolynomialCover (φ b)
         (fun i => mapProjectivePair φ hφ (q i))
         (mapProjectivePair φ hφ y) := by
   calc
-    specialize q y (frozenC k 14) = 0 ↔
-        FrozenGuardedProjectiveSystem
+    specialize q y (frozenC k b 14) = 0 ↔
+        FrozenGuardedProjectiveSystem (φ b)
           (fun i => mapProjectivePair φ hφ (q i))
           (mapProjectivePair φ hφ y) :=
-      frozenRecS17_iff_guardedProjectiveSystem_over φ hφ q y
-    _ ↔ FrozenChartPolynomialCover
+      frozenRecS17_iff_guardedProjectiveSystem_over φ hφ b q y
+    _ ↔ FrozenChartPolynomialCover (φ b)
           (fun i => mapProjectivePair φ hφ (q i))
           (mapProjectivePair φ hφ y) :=
-      frozenGuardedProjectiveSystem_iff_chartPolynomialCover _ _
+      frozenGuardedProjectiveSystem_iff_chartPolynomialCover _ _ _
 
 /-! ## Cardinalities -/
 
@@ -646,13 +646,13 @@ private theorem chartTotalDegree_C_le
   simp [MvPolynomial.totalDegree_C]
 
 private theorem chartHValue_totalDegree_le
-    {K σ : Type*} [CommRing K]
+    {K σ : Type*} [CommRing K] (c : K)
     (q₁ q₂ q₃ : Axis → MvPolynomial σ K)
     (d₁ d₂ d₃ : ℕ)
     (h₁ : ∀ a, (q₁ a).totalDegree ≤ d₁)
     (h₂ : ∀ a, (q₂ a).totalDegree ≤ d₂)
     (h₃ : ∀ a, (q₃ a).totalDegree ≤ d₃) :
-    (HValue q₁ q₂ q₃).totalDegree ≤
+    (HValue (MvPolynomial.C c) q₁ q₂ q₃).totalDegree ≤
       2 * d₁ + 2 * d₂ + 2 * d₃ := by
   have h₁u2 :
       (q₁ .u ^ 2).totalDegree ≤ 2 * d₁ :=
@@ -676,10 +676,10 @@ private theorem chartHValue_totalDegree_le
       ((2 : MvPolynomial σ K)).totalDegree ≤ 0 := by
     simpa only [map_ofNat] using
       chartTotalDegree_C_le (K := K) (σ := σ) (2 : K) 0
-  have htwentyeight :
-      ((28 : MvPolynomial σ K)).totalDegree ≤ 0 := by
-    simpa only [map_ofNat] using
-      chartTotalDegree_C_le (K := K) (σ := σ) (28 : K) 0
+  have hfourc :
+      ((4 : MvPolynomial σ K) * MvPolynomial.C c).totalDegree ≤ 0 := by
+    simpa only [map_mul, map_ofNat] using
+      chartTotalDegree_C_le (K := K) (σ := σ) (4 * c) 0
   let D := 2 * d₁ + 2 * d₂ + 2 * d₃
   have ht₁ :
       (q₁ .u ^ 2 * q₂ .u ^ 2 * q₃ .v ^ 2).totalDegree ≤ D := by
@@ -772,11 +772,11 @@ private theorem chartHValue_totalDegree_le
         dsimp [D]
         omega)
   have ht₇₈₉ :
-      (28 * (
+      (4 * MvPolynomial.C c * (
         q₁ .u * q₁ .v * q₂ .v ^ 2 * q₃ .v ^ 2 +
         q₁ .v ^ 2 * q₂ .u * q₂ .v * q₃ .v ^ 2 +
         q₁ .v ^ 2 * q₂ .v ^ 2 * q₃ .u * q₃ .v)).totalDegree ≤ D := by
-    exact (chartTotalDegree_mul_le_of_le htwentyeight
+    exact (chartTotalDegree_mul_le_of_le hfourc
       (chartTotalDegree_add_le_of_le
         (chartTotalDegree_add_le_of_le ht₇ ht₈) ht₉)).trans (by
           dsimp [D]
@@ -810,10 +810,10 @@ private theorem chartPolynomialPair_totalDegree_le_one
 /-- A base chart equation has total degree at most two. -/
 theorem chartPolynomialEquation_base_totalDegree_le_two
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) :
-    (chartPolynomialEquation q y I .base).totalDegree ≤ 2 := by
-  refine (chartHValue_totalDegree_le
+    (chartPolynomialEquation b q y I .base).totalDegree ≤ 2 := by
+  refine (chartHValue_totalDegree_le b
     (chartConstantPolynomialPair (I := I) (q 0))
     (chartConstantPolynomialPair (I := I) (q 1))
     (chartPolynomialPair I ⟨0, by decide⟩)
@@ -829,10 +829,10 @@ theorem chartPolynomialEquation_base_totalDegree_le_two
 /-- Every internal step chart equation has total degree at most four. -/
 theorem chartPolynomialEquation_step_totalDegree_le_four
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (i : Fin 13) :
-    (chartPolynomialEquation q y I (.step i)).totalDegree ≤ 4 := by
-  refine (chartHValue_totalDegree_le
+    (chartPolynomialEquation b q y I (.step i)).totalDegree ≤ 4 := by
+  refine (chartHValue_totalDegree_le b
     (chartPolynomialPair I i.castSucc)
     (chartConstantPolynomialPair (I := I) (q (i + 2)))
     (chartPolynomialPair I i.succ)
@@ -848,10 +848,10 @@ theorem chartPolynomialEquation_step_totalDegree_le_four
 /-- A final chart equation has total degree at most two. -/
 theorem chartPolynomialEquation_final_totalDegree_le_two
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) :
-    (chartPolynomialEquation q y I .final).totalDegree ≤ 2 := by
-  refine (chartHValue_totalDegree_le
+    (chartPolynomialEquation b q y I .final).totalDegree ≤ 2 := by
+  refine (chartHValue_totalDegree_le b
     (chartPolynomialPair I ⟨13, by decide⟩)
     (chartConstantPolynomialPair (I := I) (q 15))
     (chartConstantPolynomialPair (I := I) y)
@@ -868,17 +868,17 @@ theorem chartPolynomialEquation_final_totalDegree_le_two
 This is only an upper bound: coefficient cancellation may lower it. -/
 theorem chartPolynomialEquation_totalDegree_le_four
     {K : Type*} [Field K]
-    (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
+    (b : K) (q : ℕ → ProjectivePair K) (y : ProjectivePair K)
     (I : InfinityMask) (e : ChartEquation) :
-    (chartPolynomialEquation q y I e).totalDegree ≤ 4 := by
+    (chartPolynomialEquation b q y I e).totalDegree ≤ 4 := by
   cases e with
   | base =>
-      exact (chartPolynomialEquation_base_totalDegree_le_two q y I).trans
+      exact (chartPolynomialEquation_base_totalDegree_le_two b q y I).trans
         (by omega)
   | step i =>
-      exact chartPolynomialEquation_step_totalDegree_le_four q y I i
+      exact chartPolynomialEquation_step_totalDegree_le_four b q y I i
   | final =>
-      exact (chartPolynomialEquation_final_totalDegree_le_two q y I).trans
+      exact (chartPolynomialEquation_final_totalDegree_le_two b q y I).trans
         (by omega)
 
 end CryptoLean.Semaev.FrozenProjective

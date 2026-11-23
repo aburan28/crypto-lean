@@ -251,7 +251,7 @@ private theorem HValue_affine_distinct_zero_iff
     (h₁ : BarCurve.Nonsingular x₁ y₁)
     (h₂ : BarCurve.Nonsingular x₂ y₂)
     (hx : x₁ ≠ x₂) (z : FpBar) :
-    HValue (ProjectivePair.affine x₁).coord
+    HValue 7 (ProjectivePair.affine x₁).coord
         (ProjectivePair.affine x₂).coord
         (ProjectivePair.affine z).coord = 0 ↔
       ProjectivePair.affine z =
@@ -306,7 +306,7 @@ private theorem barKummer_add_self_of_Y_ne
 private theorem HValue_affine_self_affine_zero_iff_of_Y_ne
     {x y : FpBar} (h : BarCurve.Nonsingular x y)
     (hy : y ≠ BarCurve.negY x y) (z : FpBar) :
-    HValue (ProjectivePair.affine x).coord
+    HValue 7 (ProjectivePair.affine x).coord
         (ProjectivePair.affine x).coord
         (ProjectivePair.affine z).coord = 0 ↔
       ProjectivePair.affine z =
@@ -334,7 +334,7 @@ private theorem HValue_affine_self_affine_zero_iff_of_Y_ne
       map_zero, sub_zero, zero_mul]
     linear_combination (2 * y * ℓ + 3 * x ^ 2) * hℓ - 8 * x * hc
   have hfactor :
-      HValue (ProjectivePair.affine x).coord
+      HValue 7 (ProjectivePair.affine x).coord
           (ProjectivePair.affine x).coord
           (ProjectivePair.affine z).coord =
         -(4 * y ^ 2) * (z - r) := by
@@ -353,7 +353,7 @@ private theorem HValue_affine_self_affine_zero_iff_of_Y_ne
 private theorem HValue_affine_self_affine_ne_zero_of_Y_eq
     {x y : FpBar} (h : BarCurve.Nonsingular x y)
     (hy : y = BarCurve.negY x y) (z : FpBar) :
-    HValue (ProjectivePair.affine x).coord
+    HValue 7 (ProjectivePair.affine x).coord
         (ProjectivePair.affine x).coord
         (ProjectivePair.affine z).coord ≠ 0 := by
   have hc := barCurve_curve_of_nonsingular h
@@ -373,7 +373,7 @@ private theorem HValue_affine_self_affine_ne_zero_of_Y_eq
     rw [hx0] at hx3
     exact hseven (by linear_combination hx3)
   have hvalue :
-      HValue (ProjectivePair.affine x).coord
+      HValue 7 (ProjectivePair.affine x).coord
           (ProjectivePair.affine x).coord
           (ProjectivePair.affine z).coord = -(63 * x) := by
     rw [CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S3]
@@ -385,7 +385,7 @@ private theorem HValue_affine_self_affine_ne_zero_of_Y_eq
 private theorem HValue_affine_self_normalize_zero_iff
     {x y : FpBar} (h : BarCurve.Nonsingular x y)
     (W : ProjectivePair FpBar) :
-    HValue (ProjectivePair.affine x).coord
+    HValue 7 (ProjectivePair.affine x).coord
         (ProjectivePair.affine x).coord
         (normalizeProjectivePair W).coord = 0 ↔
       normalizeProjectivePair W =
@@ -423,7 +423,7 @@ private theorem HValue_affine_pair_normalize_zero_iff
     (h₁ : BarCurve.Nonsingular x₁ y₁)
     (h₂ : BarCurve.Nonsingular x₂ y₂)
     (W : ProjectivePair FpBar) :
-    HValue (ProjectivePair.affine x₁).coord
+    HValue 7 (ProjectivePair.affine x₁).coord
         (ProjectivePair.affine x₂).coord
         (normalizeProjectivePair W).coord = 0 ↔
       normalizeProjectivePair W =
@@ -473,14 +473,14 @@ coordinates of `P + Q` and `P - Q`, with a disjunction that intentionally
 allows the two roots to coincide. -/
 theorem HValue_barKummer_normalize_zero_iff
     (P Q : BarPoint) (W : ProjectivePair FpBar) :
-    HValue (barKummer P).coord (barKummer Q).coord
+    HValue 7 (barKummer P).coord (barKummer Q).coord
         (normalizeProjectivePair W).coord = 0 ↔
       normalizeProjectivePair W = barKummer (P + Q) ∨
       normalizeProjectivePair W = barKummer (P - Q) := by
   rcases P with _ | ⟨x₁, y₁, h₁⟩ <;>
     rcases Q with _ | ⟨x₂, y₂, h₂⟩
   · change
-      HValue (ProjectivePair.infinity (K := FpBar)).coord
+      HValue 7 (ProjectivePair.infinity (K := FpBar)).coord
           (ProjectivePair.infinity (K := FpBar)).coord
           (normalizeProjectivePair W).coord = 0 ↔
         normalizeProjectivePair W =
@@ -500,7 +500,7 @@ theorem HValue_barKummer_normalize_zero_iff
       normalizeProjectivePair_idem]
     simp
   · change
-      HValue (ProjectivePair.infinity (K := FpBar)).coord
+      HValue 7 (ProjectivePair.infinity (K := FpBar)).coord
           (ProjectivePair.affine x₂).coord
           (normalizeProjectivePair W).coord = 0 ↔
         normalizeProjectivePair W =
@@ -521,7 +521,7 @@ theorem HValue_barKummer_normalize_zero_iff
       normalizeProjectivePair_idem]
     simp
   · change
-      HValue (ProjectivePair.affine x₁).coord
+      HValue 7 (ProjectivePair.affine x₁).coord
           (ProjectivePair.infinity (K := FpBar)).coord
           (normalizeProjectivePair W).coord = 0 ↔
         normalizeProjectivePair W =
@@ -548,7 +548,7 @@ The left side uses the raw valid representative `W`; the right side compares
 only its canonical normalization. -/
 theorem HValue_barKummer_zero_iff
     (P Q : BarPoint) (W : ProjectivePair FpBar) :
-    HValue (barKummer P).coord (barKummer Q).coord W.coord = 0 ↔
+    HValue 7 (barKummer P).coord (barKummer Q).coord W.coord = 0 ↔
       normalizeProjectivePair W = barKummer (P + Q) ∨
       normalizeProjectivePair W = barKummer (P - Q) := by
   rw [HValue_normalize_third_zero_iff]
@@ -557,7 +557,7 @@ theorem HValue_barKummer_zero_iff
 /-- Equivalent determinant form of the complete local fiber. -/
 theorem HValue_barKummer_zero_iff_projectiveDet
     (P Q : BarPoint) (W : ProjectivePair FpBar) :
-    HValue (barKummer P).coord (barKummer Q).coord W.coord = 0 ↔
+    HValue 7 (barKummer P).coord (barKummer Q).coord W.coord = 0 ↔
       projectiveDet W (barKummer (P + Q)) = 0 ∨
       projectiveDet W (barKummer (P - Q)) = 0 := by
   rw [HValue_barKummer_zero_iff,

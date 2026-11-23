@@ -101,7 +101,7 @@ first seed and no distinctness of alternative sums is claimed. -/
 theorem frozenProjectiveChain_barKummer_iff_signedPrefixSum
     (seed : ℕ → BarPoint) (s : ℕ)
     (W : ProjectivePair FpBar) :
-    FrozenProjectiveChain (fun i => barKummer (seed i)) s W ↔
+    FrozenProjectiveChain 7 (fun i => barKummer (seed i)) s W ↔
       ∃ lift : ℕ → BarPoint,
         SignedPointPrefix seed lift (s + 2) ∧
         normalizeProjectivePair W =
@@ -109,7 +109,7 @@ theorem frozenProjectiveChain_barKummer_iff_signedPrefixSum
   induction s generalizing W with
   | zero =>
       change
-        HValue (barKummer (seed 0)).coord (barKummer (seed 1)).coord W.coord = 0 ↔
+        HValue 7 (barKummer (seed 0)).coord (barKummer (seed 1)).coord W.coord = 0 ↔
           ∃ lift : ℕ → BarPoint,
             SignedPointPrefix seed lift (0 + 2) ∧
             normalizeProjectivePair W =
@@ -145,10 +145,10 @@ theorem frozenProjectiveChain_barKummer_iff_signedPrefixSum
       · rintro ⟨z, hz, hlocal⟩
         rcases (ih z).mp hz with ⟨lift, hsigned, hzsum⟩
         have hlocal' :
-            HValue (barKummer (signedPrefixSum lift (s + 2))).coord
+            HValue 7 (barKummer (signedPrefixSum lift (s + 2))).coord
                 (barKummer (seed (s + 2))).coord W.coord = 0 := by
           have hn :=
-            (HValue_normalize_first_zero_iff z
+            (HValue_normalize_first_zero_iff 7 z
               (barKummer (seed (s + 2))).coord W.coord).mp hlocal
           simpa only [hzsum] using hn
         rcases
@@ -190,7 +190,7 @@ theorem frozenProjectiveChain_barKummer_iff_signedPrefixSum
           intro i hi
           exact hsigned i (by omega)
         have hprefix :
-            FrozenProjectiveChain (fun i => barKummer (seed i)) s
+            FrozenProjectiveChain 7 (fun i => barKummer (seed i)) s
               (barKummer S) := by
           apply (ih (barKummer S)).mpr
           exact ⟨lift, hprefixSigned, normalize_barKummer S⟩
@@ -223,7 +223,7 @@ Boolean sign.  Only the first `s + 2` Boolean values are observed. -/
 theorem frozenProjectiveChain_barKummer_iff_explicitSigns
     (seed : ℕ → BarPoint) (s : ℕ)
     (W : ProjectivePair FpBar) :
-    FrozenProjectiveChain (fun i => barKummer (seed i)) s W ↔
+    FrozenProjectiveChain 7 (fun i => barKummer (seed i)) s W ↔
       ∃ positive : ℕ → Bool,
         normalizeProjectivePair W =
           barKummer
@@ -264,13 +264,13 @@ sum semantics for the sixteen consumed seeds.  Infinity-chart intermediate
 slots remain part of `FrozenChartCover`; the theorem does not discard them. -/
 theorem frozenChartCover_barKummer_iff_signedPrefixSum
     (seed : ℕ → BarPoint) (W : ProjectivePair FpBar) :
-    FrozenChartCover (fun i => barKummer (seed i)) W ↔
+    FrozenChartCover 7 (fun i => barKummer (seed i)) W ↔
       ∃ lift : ℕ → BarPoint,
         SignedPointPrefix seed lift 16 ∧
         normalizeProjectivePair W =
           barKummer (signedPrefixSum lift 16) := by
   exact
-    (frozenProjectiveChain_iff_chartCover
+    (frozenProjectiveChain_iff_chartCover 7
       (fun i => barKummer (seed i)) W).symm.trans
         (by simpa using
           (frozenProjectiveChain_barKummer_iff_signedPrefixSum seed 14 W))
@@ -278,14 +278,14 @@ theorem frozenChartCover_barKummer_iff_signedPrefixSum
 /-- Boolean `±` spelling of the stage-fourteen chart-cover corollary. -/
 theorem frozenChartCover_barKummer_iff_explicitSigns
     (seed : ℕ → BarPoint) (W : ProjectivePair FpBar) :
-    FrozenChartCover (fun i => barKummer (seed i)) W ↔
+    FrozenChartCover 7 (fun i => barKummer (seed i)) W ↔
       ∃ positive : ℕ → Bool,
         normalizeProjectivePair W =
           barKummer
             (∑ i ∈ Finset.range 16,
               applyPointSign (positive i) (seed i)) := by
   exact
-    (frozenProjectiveChain_iff_chartCover
+    (frozenProjectiveChain_iff_chartCover 7
       (fun i => barKummer (seed i)) W).symm.trans
         (by simpa using
           (frozenProjectiveChain_barKummer_iff_explicitSigns seed 14 W))

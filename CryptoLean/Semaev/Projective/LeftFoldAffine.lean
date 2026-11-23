@@ -7,14 +7,15 @@ import CryptoLean.Semaev.S3
 
 This file independently transcribes the displayed third summation polynomial
 from Semaev 2004 and the fixed split `k = 1` resultant recurrence.  The
-resulting `C R 14` is one coefficient-normalized representative of `f17`:
-the normalization is the literal fixed-degree resultant normalization, with
-coefficient unit exactly `1` at every bridge below.
+resulting `C R b 14` (for `y² = x³ + b`) is one coefficient-normalized
+representative of `f17`: the normalization is the literal fixed-degree
+resultant normalization, with coefficient unit exactly `1` at every bridge
+below.
 
 The name deliberately says *Semaev 2004 left fold*.  No claim is made that
 this is a unique normalization, or that another source prints these exact
 coefficients.  The recursion remains a symbolic DAG; this module never
-expands `C R 14`.
+expands `C R b 14`.
 -/
 
 namespace CryptoLean.Semaev.LeftFoldAffine
@@ -56,12 +57,13 @@ noncomputable def outputSlice
       | .output => Polynomial.X)
     p
 
-/-- The local Semaev-2004 `k = 1` operand `f3(X_i, Y, T)` for secp256k1,
-written in the source recurrence's argument order. -/
+/-- The local Semaev-2004 `k = 1` operand `f3(X_i, Y, T)` for
+`y² = x³ + b` (secp256k1 is `b = 7`), written in the source recurrence's
+argument order. -/
 noncomputable def localSlice
-    {R : Type*} [CommRing R] (i : ℕ) :
+    {R : Type*} [CommRing R] (b : R) (i : ℕ) :
     Polynomial (MvPolynomial Var R) :=
-  f3 0 7
+  f3 0 (Polynomial.C (MvPolynomial.C b))
     (Polynomial.C (MvPolynomial.X (.leaf i)))
     (Polynomial.C (MvPolynomial.X .output))
     Polynomial.X
@@ -69,9 +71,9 @@ noncomputable def localSlice
 /-- Full symmetry identifies source argument order with the eliminated-variable
 order used by the repository's frozen local operand. -/
 theorem localSlice_eq_eliminationOrder
-    {R : Type*} [CommRing R] (i : ℕ) :
-    localSlice (R := R) i =
-      f3 (R := Polynomial (MvPolynomial Var R)) 0 7
+    {R : Type*} [CommRing R] (b : R) (i : ℕ) :
+    localSlice b i =
+      f3 (R := Polynomial (MvPolynomial Var R)) 0 (Polynomial.C (MvPolynomial.C b))
         Polynomial.X
         (Polynomial.C (MvPolynomial.X (Var.leaf i)))
         (Polynomial.C (MvPolynomial.X Var.output)) := by
@@ -80,20 +82,21 @@ theorem localSlice_eq_eliminationOrder
 
 /-- The Semaev-2004 `k = 1` left-fold representative.
 
-`C R s` represents `f_(s+3)`, so `C R 14` represents `f17`.  The formal
+`C R b s` represents `f_(s+3)` for `y² = x³ + b`, so `C R b 14` represents
+`f17`.  The formal
 resultant degrees are retained even after specializations that lower actual
 degree. -/
-noncomputable def C (R : Type*) [CommRing R] :
+noncomputable def C (R : Type*) [CommRing R] (b : R) :
     ℕ → MvPolynomial Var R
   | 0 =>
-      f3 0 7
+      f3 0 (MvPolynomial.C b)
         (MvPolynomial.X (.leaf 0))
         (MvPolynomial.X (.leaf 1))
         (MvPolynomial.X .output)
   | s + 1 =>
       Polynomial.resultant
-        (outputSlice (C R s))
-        (localSlice (s + 2))
+        (outputSlice (C R b s))
+        (localSlice b (s + 2))
         (2 ^ (s + 1)) 2
 
 /-- Extend sixteen external affine values to the total natural-number leaf
@@ -111,8 +114,8 @@ def assignment
 
 /-- The target-specialized Semaev-2004 left-fold `f17` representative. -/
 noncomputable def S17At
-    {K : Type*} [CommRing K] (x : Fin 16 → K) (X : K) : K :=
-  MvPolynomial.eval (assignment x X) (C K 14)
+    {K : Type*} [CommRing K] (b : K) (x : Fin 16 → K) (X : K) : K :=
+  MvPolynomial.eval (assignment x X) (C K b 14)
 
 /-! ## Exact coefficient-unit-one bridge to the repository frozen family -/
 
@@ -152,12 +155,12 @@ noncomputable def dehom
 Semaev-2004 `f3` formula. -/
 theorem HValue_affine_eq_f3
     {R : Type*} [CommRing R] [Nontrivial R]
-    (x₁ x₂ x₃ : R) :
-    CryptoLean.Semaev.FrozenProjective.HValue
+    (b x₁ x₂ x₃ : R) :
+    CryptoLean.Semaev.FrozenProjective.HValue b
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₁).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₂).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₃).coord =
-      f3 0 7 x₁ x₂ x₃ := by
+      f3 0 b x₁ x₂ x₃ := by
   simp [CryptoLean.Semaev.FrozenProjective.HValue, f3,
     CryptoLean.Semaev.FrozenProjective.ProjectivePair.coord,
     CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine]
@@ -166,12 +169,12 @@ theorem HValue_affine_eq_f3
 /-- Compatibility spelling against the repository's verified `S₃`. -/
 theorem HValue_affine_eq_S3
     {R : Type*} [CommRing R] [Nontrivial R]
-    (x₁ x₂ x₃ : R) :
-    CryptoLean.Semaev.FrozenProjective.HValue
+    (b x₁ x₂ x₃ : R) :
+    CryptoLean.Semaev.FrozenProjective.HValue b
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₁).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₂).coord
         (CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine x₃).coord =
-      CryptoLean.Semaev.S3 0 7 x₁ x₂ x₃ := by
+      CryptoLean.Semaev.S3 0 b x₁ x₂ x₃ := by
   rw [HValue_affine_eq_f3, f3_eq_S3]
 
 /-- Dehomogenization commutes with selecting the eliminated output slice. -/
@@ -207,9 +210,9 @@ theorem map_outputSlice_dehom
 /-- Dehomogenization sends the frozen local operand to the independently
 transcribed affine local operand. -/
 theorem map_localSlice_dehom
-    {R : Type*} [CommRing R] (i : ℕ) :
-    (CryptoLean.Semaev.FrozenProjective.localSlice (R := R) i).map dehom =
-      localSlice i := by
+    {R : Type*} [CommRing R] (b : R) (i : ℕ) :
+    (CryptoLean.Semaev.FrozenProjective.localSlice b i).map dehom =
+      localSlice b i := by
   simp [CryptoLean.Semaev.FrozenProjective.localSlice, localSlice,
     CryptoLean.Semaev.FrozenProjective.HValue, f3, dehom]
   ring
@@ -217,15 +220,15 @@ theorem map_localSlice_dehom
 /-- Exact, non-tautological coefficient-unit-`1` identification of the
 independent affine left-fold recurrence with the repository frozen family. -/
 theorem dehom_frozenC_eq_semaevLeftFoldC
-    {R : Type*} [CommRing R] (s : ℕ) :
-    dehom (CryptoLean.Semaev.FrozenProjective.frozenC R s) = C R s := by
+    {R : Type*} [CommRing R] (b : R) (s : ℕ) :
+    dehom (CryptoLean.Semaev.FrozenProjective.frozenC R b s) = C R b s := by
   induction s with
   | zero =>
       simp only [CryptoLean.Semaev.FrozenProjective.frozenC, C,
         CryptoLean.Semaev.FrozenProjective.HValue, f3,
         CryptoLean.Semaev.FrozenProjective.leafPair,
         CryptoLean.Semaev.FrozenProjective.outputPair, map_add, map_sub,
-        map_mul, map_pow, dehom_X, map_ofNat]
+        map_mul, map_pow, dehom_X, dehom_C, map_ofNat]
       ring
   | succ s ih =>
       rw [CryptoLean.Semaev.FrozenProjective.frozenC, C]
@@ -271,11 +274,11 @@ theorem eval_dehom_eq_frozenSpecialize
 frozen specialization, with no unspecified scalar unit. -/
 theorem S17At_eq_frozenSpecialize
     {K : Type*} [Field K]
-    (x : Fin 16 → K) (X : K) :
-    S17At x X =
+    (b : K) (x : Fin 16 → K) (X : K) :
+    S17At b x X =
       CryptoLean.Semaev.FrozenProjective.specialize
         (projectiveLeaves x) (.affine X)
-        (CryptoLean.Semaev.FrozenProjective.frozenC K 14) := by
+        (CryptoLean.Semaev.FrozenProjective.frozenC K b 14) := by
   rw [S17At, ← dehom_frozenC_eq_semaevLeftFoldC]
   exact eval_dehom_eq_frozenSpecialize x X _
 
