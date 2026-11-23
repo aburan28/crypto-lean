@@ -1,0 +1,141 @@
+{
+  "recorded": "2026-11-23T10:18:39.783322+00:00",
+  "source_commit": "2dfcc2e83bfc37342cd97190b9dc0873d33f5cdf",
+  "source": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75"
+    },
+    {
+      "path": "CryptoLean.lean",
+      "bytes": 1514,
+      "sha256": "d770da809f9e4c5b765022a0f4a78b400fe760c6bc9253ecddd00a62aad8fc8e"
+    },
+    {
+      "path": "CryptoLean/Group/UniqueDouble.lean",
+      "bytes": 1548,
+      "sha256": "13a9639c2929c09f263f3c59170a8f44bff1f2b4c182748145ca18fd2f7e9adc"
+    },
+    {
+      "path": "CryptoLean/Group/UniqueDoubleExamples.lean",
+      "bytes": 2774,
+      "sha256": "8575acf2a4bd432e971d70367c0f2bc7f6ef6526663f1215a2d6b03ac6567352"
+    },
+    {
+      "path": "tools/AuditAxioms.lean",
+      "bytes": 3855,
+      "sha256": "fdb8bd3af4301a9f50c7d8d0049994459f15b07abe397b8dddc1e49532dad96d"
+    },
+    {
+      "path": "tools/proof-gate.sh",
+      "bytes": 7963,
+      "sha256": "ad2d957a305313d2f478e3fdd459557cc5e20edf2a66e74dd8752a95a342377a"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROOF_MAP.md",
+      "bytes": 5785,
+      "sha256": "d90a1b9865b0d9b95a9cdc09ed2d017e31be620b7ba73197af04ebb4091ab645"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_GENERIC_LAW_F.md",
+      "bytes": 2627,
+      "sha256": "dbfc7ca73e66389dda83e017909573cdaadbe460e59fabb6a4c82c0e90b9b429"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/run_generic_law_F.sh",
+      "bytes": 4128,
+      "sha256": "2c4bf14e480e4b8698eaab2f3d43b22a11691691bdf1bb38c1cd3da4c0fda8bb"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_F.json",
+      "bytes": 3154,
+      "sha256": "c0a29a301ad0f4e8d78992549977a1e862bc3d2471dc44ec76227236ccac13ab"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_LATE_SHELL_WORKER_H.md",
+      "bytes": 2206,
+      "sha256": "1902252df7ec0021f8da0539803f56680c70b6fabcf705b8e0eb28f6e5991160"
+    },
+    {
+      "path": "docs/research/chained-kernel-laws-20261123/run_late_shell_worker_H.sh",
+      "bytes": 4201,
+      "sha256": "6b5cc758896e0962518a6d2b797dc010e319940ab0c4c033fc9854dc98ea3972"
+    }
+  ],
+  "lock_sha256": "d89c46e0897f766459ce6c34df9dd7347ad00bd3efc82e11a9cd20a3adb6943d",
+  "tool_and_runtime_sha256": {
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libLake_shared.so": "d68867df340056b40726fde3939a9d2021901cc6944f971dd6a6a778bd9ea25b",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libInit_shared.so": "7831b707e868cee76c353d26649fbd8981b2f4d7e0329af55bbf4fa9e0c69350",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared.so": "efef27df56f2197139afe12f1a2b63913a05f1aba81ce88824c44100431ed8c4",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_1.so": "691bf49d9e542a15808fad9d1f8c5df45860166f77efa57961b5335e65a3a0ed",
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_2.so": "141cbfdb3bc2016cd68e0bebc2e5494818213b462ed985afa6d975d4872fb8ec"
+  },
+  "packages": [
+    {
+      "name": "mathlib",
+      "rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2"
+    },
+    {
+      "name": "plausible",
+      "rev": "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
+    },
+    {
+      "name": "LeanSearchClient",
+      "rev": "d6b4c7be5be75ec4917c873ac50c756dc1436372"
+    },
+    {
+      "name": "importGraph",
+      "rev": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
+    },
+    {
+      "name": "proofwidgets",
+      "rev": "df72b022e558978a1c50264cfc4d7fec86fa8e04"
+    },
+    {
+      "name": "aesop",
+      "rev": "4a174c490d8707121c4a9290800489f105d85e07"
+    },
+    {
+      "name": "Qq",
+      "rev": "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
+    },
+    {
+      "name": "batteries",
+      "rev": "66e469188fe07963e5cf666c7d4433f45b8131c5"
+    },
+    {
+      "name": "Cli",
+      "rev": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    }
+  ],
+  "environment": {
+    "TMPDIR": "/dev/shm/law34-proofH-tmp",
+    "LEAN_PATH": "/dev/shm/law34-proofH/olean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/mathlib/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/crypto-lean-kernel-laws23/.lake/packages/Cli/.lake/build/lib/lean",
+    "LEAN_STACK_SIZE_KB": "16384",
+    "LEAN_MAIN_USE_THREAD": "0",
+    "MIMALLOC_ARENA_RESERVE": "65536",
+    "LEAN_NUM_THREADS": "0"
+  },
+  "per_phase_virtual_KiB": 2097152,
+  "per_phase_seconds": 120,
+  "default_logical_limits": true,
+  "focused_audit_not_whole_project_gate": true
+}

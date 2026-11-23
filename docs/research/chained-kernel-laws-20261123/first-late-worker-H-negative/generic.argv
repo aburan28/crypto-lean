@@ -1,0 +1,1 @@
+lean -j1 -DwarningAsError=true -o /dev/shm/law34-proofH/olean/CryptoLean/Group/UniqueDouble.olean CryptoLean/Group/UniqueDouble.lean 
