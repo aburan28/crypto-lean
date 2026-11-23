@@ -34,4 +34,5 @@ import CryptoLean.Semaev.S3
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Combinatorics.LargePrimeGraph
+import CryptoLean.Combinatorics.GainDsu
 import CryptoLean.Group.PairColourIsolation
