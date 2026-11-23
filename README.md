@@ -22,6 +22,25 @@ must build on the same toolchain (Lake requires it).
 Promoted files name their source; new laws document their consumer and
 mathematical reference.
 
+`CryptoLean.Group.GenericDLog` and `CryptoLean.Curve.SubgroupDLog` bound
+adaptive generic discrete-log success by `(q + 3)(q + 2)/(2r) + 1/r`
+for `q` queries and prime subgroup order `r`. At fixed order, every query
+budget has the same attainable success on either curve. These modules
+formalize the affine collision argument from [Shoup](https://www.shoup.net/papers/dlbounds1.pdf).
+
+`CryptoLean.Curve.ConductorGapQueryBound` combines the Frobenius
+discriminant identity and a cofactor cap with the generic query bound.
+`CryptoLean.Curve.DLogSolverTransport` preserves exact success for
+coordinate-aware solvers given additive maps with the dual-degree identity
+and degree coprime to `r`. The maps are inputs to the theorem, and the
+running-time overhead depends on the cost of evaluating them.
+
+`CryptoLean.Curve.PrimeFieldBarrier` extends the generic collision bound
+to explicitly supplied polynomial zero tests over the scalar field. Its
+randomized version uses the expected total degree over seeds independent
+of the challenge. The prime-field estimate also takes the Hasse inequality
+and a cofactor cap as hypotheses.
+
 `CryptoLean.Polynomial.EllipticMaps` supplies the cleared doubling quartic,
 degree-two Vélu curve residual and its kernel-root/affine specializations.
 They concern semantic rings and fields. Native source binding, rational-root

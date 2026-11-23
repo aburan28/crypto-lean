@@ -3,6 +3,11 @@ import CryptoLean.Bridge.Iterate
 import CryptoLean.Curve.Conductor
 import CryptoLean.Curve.ConductorGap
 import CryptoLean.Curve.ConductorGapBridges
+import CryptoLean.Group.GenericDLog
+import CryptoLean.Curve.SubgroupDLog
+import CryptoLean.Curve.DLogSolverTransport
+import CryptoLean.Curve.ConductorGapQueryBound
+import CryptoLean.Curve.PrimeFieldBarrier
 import CryptoLean.Curve.QuadraticNormTransport
 import CryptoLean.Curve.Identities
 import CryptoLean.Curve.LineIncidence
