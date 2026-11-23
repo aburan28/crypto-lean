@@ -1,0 +1,30 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:39:09Z",
+ "id": "PCC-20261123-658c66",
+ "kind": "statement",
+ "producer": {
+  "commit": "d1aa14bdc428420ca3b69b7f983d076740f284be",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/PROSPECTIVE_CACHE_LINKAGE_D.md",
+    "sha256": "2547f021feb93105ab5a07905f0ef7469b8b6c4d514348657569b41d562266b9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/SOURCE_LOCK_D.json",
+    "sha256": "16ed7bdd206766c8be1485feb585c125e084063d748251d0e1eb24f0370f1a38"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Targeted linkage/cache-location proposal, not a successful repair or isolated causal/performance experiment. No native hook, trust override, Mathlib source build, unsafe scope or paid job.",
+ "statement": "Prospective cache-only D explicitly loads the same pinned libLake_shared implementation for the official LakeMain entry, retaining the byte-identical kernel and one-worker frontends. It also locates the software cache in fresh RAM under the observed full-overlay constraint. Same2GiB/600s setup caps and dependency/cache module pins; no prior failure, new study proof or consumer acceptance is changed."
+}
