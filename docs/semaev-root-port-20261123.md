@@ -2,7 +2,8 @@
 
 2026-11-23. Source: [KeyAIGit/ecdlp-lean-verification#347](https://github.com/KeyAIGit/ecdlp-lean-verification/pull/347)
 at head `0a47cd62f43d` (Lean v4.31, Mathlib v4.31.0). Target: this repository's pin
-(Lean v4.35.0, Mathlib `cfc55fc`). Receipt: [`receipts/SemaevRootPort20261123/`](receipts/SemaevRootPort20261123/).
+(Lean v4.35.0, Mathlib `cfc55fc`). Receipt: [`receipts/SemaevRootPort20261123/`](receipts/SemaevRootPort20261123/)
+(`tools/proof-gate.sh`: **PASS, 861 theorems, 248 trusted (native_decide), 0 failing**).
 Trust manifest: [`../tools/lean/trusted-native.txt`](../tools/lean/trusted-native.txt).
 
 ## What was ported
