@@ -1,0 +1,100 @@
+{
+  "recorded": "2026-11-23T09:31:06.242325+00:00",
+  "source_B": "cda881e381eefdd7464df03ccd9cf7a211e5f37f",
+  "overall_exit_file": 1,
+  "cache_exit": 1,
+  "complete_cache_stderr": "INTERNAL PANIC: `IO.Promise.new` called before the task manager is running; this typically happens when called (directly or transitively, e.g. via `IO.CancelToken.new`) from an `initialize` block. Construct lazily on first use instead.\n",
+  "prediction_refuted": "Synchronous Task.spawn fallback is insufficient for Lake because IO.Promise requires a running task manager.",
+  "trace_full_bytes": 601566,
+  "trace_full_sha256": "7e4888f84b7cdb328e57833989d50351815d397a1e278a29e3c18facf3a91f5f",
+  "trace_whole_private_path": "/dev/shm/law34-cacheB/cache-startup.trace",
+  "trace_remote_custody_pending": true,
+  "trace_observation": "Full trace additionally records ENOMEM mappings. Do not isolate a sole cause from this multi-process observation.",
+  "no_study_law_native_or_consumer_proof_executed": true,
+  "files": [
+    {
+      "path": "BUILD_MANIFEST.json",
+      "bytes": 3210,
+      "sha256": "4a8f563b6a2a4374c406fa676ead2ed90be4b83fb4abeec2dfae912308bea438",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "POST_MANIFEST.json",
+      "bytes": 3210,
+      "sha256": "16dd8fff4b3ed06b5efd8eb462cd92888352c8c1749fedc836bde5bbedafcc36",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "cache-startup.trace",
+      "bytes": 601566,
+      "sha256": "7e4888f84b7cdb328e57833989d50351815d397a1e278a29e3c18facf3a91f5f",
+      "whole_small_file_public": false
+    },
+    {
+      "path": "dependency-verification.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "dependency-verification.stdout",
+      "bytes": 452,
+      "sha256": "427c37992373e7976ab181b317bc8ced3bee5e37b29a58b27315ee661fc8aacd",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "official-cache.argv",
+      "bytes": 229,
+      "sha256": "228648955b36ee05ff4dcf207ddaa325361f615a452b076cbe654ec680d66ec9",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "official-cache.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "official-cache.stderr",
+      "bytes": 236,
+      "sha256": "9850bde7f941f2bedce243070a55b70ff9b1090a4376f431234c8a32d69797c5",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "official-cache.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "whole_small_file_public": true
+    },
+    {
+      "path": "setup.exit",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "whole_small_file_public": true
+    }
+  ]
+}

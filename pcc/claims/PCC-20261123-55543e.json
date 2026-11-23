@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-23T09:31:06Z",
+ "id": "PCC-20261123-55543e",
+ "kind": "statement",
+ "producer": {
+  "commit": "cda881e381eefdd7464df03ccd9cf7a211e5f37f",
+  "model": "",
+  "session": "chained-kernel-laws-20261123"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-kernel-laws-20261123/first-cache-B-promise-negative/ACTUAL_FIRST_CACHE_B_PROMISE_FAILURE.json",
+    "sha256": "9f3c110d62d73639d16605b8cae730b3228135bac0f901316d0f79fd5e810cb9"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Software-startup negative. No sole-cause or prebuilt-cache-success claim; setup0 abort134 and completed package installs remain unchanged. Trace is not truncated or split for Git.",
+ "statement": "First cache-only B exits1: complete stderr says IO.Promise.new requires a running task manager, refuting the prediction that synchronous Task.spawn fallback suffices for Lake. Full601566B trace also records ENOMEM mappings and stays whole/private with hash/custody pending. All small raw files, exact source/runtime/package guards and outer exits are retained. No study law/native/consumer proof ran."
+}
