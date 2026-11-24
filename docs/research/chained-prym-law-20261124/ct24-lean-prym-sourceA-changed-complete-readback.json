@@ -1,0 +1,104 @@
+{
+  "repository": "aburan28/crypto-lean",
+  "commit": "3fdefca01ed574948b38ac4cc03a905273b33cc6",
+  "recorded": "2026-11-24T03:04:18.359Z",
+  "files": [
+    {
+      "path": "docs/ACTIVE.md",
+      "blob": "8c81d9f63b643669b9069969df0892be1a3aa9ef",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "CryptoLean.lean",
+      "blob": "f953f5ab7686d37b57e9ed99b56012f6aeadcfc3",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "CryptoLean/Group/PairIncidence.lean",
+      "blob": "8093ae86418925c69c78ea05ae39a18d78dfe243",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/ledger.jsonl",
+      "blob": "b5437210a8634965896bbe271d64003817657b66",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-ea40c6.json",
+      "blob": "b007525de01b27a7c37a20a42b04ffcae9ca620f",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-078490.json",
+      "blob": "bf8d6a74dbe3cf7870efa3cd9893d21c206df5cb",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/BOOTSTRAP_A.json",
+      "blob": "73ef46bf87dd27ea5cf1ba216019edf8fd1e820b",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/CRYPTO_APPLICATION_LINK_A.json",
+      "blob": "a00d280586644e370f58bda563e7194749f967de",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/INSTALLED_RUNTIME_A.json",
+      "blob": "e37c377dedf37cb57e2f41ddba77c95b3571c131",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PRELOCK_PROOF_MAP_RESTORATION_A.json",
+      "blob": "53aed3ea61765409eb8fdcae6bf29f0527355066",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A.md",
+      "blob": "e1b498c55f0e1929dcb57f45b13e8988716ce06e",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A_ORIGINAL.md",
+      "blob": "e1b498c55f0e1929dcb57f45b13e8988716ce06e",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PROTOCOL_A.md",
+      "blob": "1b9946fc0690c7138e7db91ae2dd079dc4ee58a5",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/SOURCE_LOCK_A.json",
+      "blob": "cb2727e776460d7fc56d381786d9451008ffdec5",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/custody_metadata_A.py",
+      "blob": "e0bf6653b153b6d8ae54e203c9b4585e4927f811",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/run_first_A.sh",
+      "blob": "4aecf38967711c9e483eaa23da9c46caec8b131c",
+      "whole_bytes_equal": true,
+      "binary": false
+    }
+  ],
+  "errors": []
+}

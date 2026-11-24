@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-24T03:08:51Z",
+ "id": "PCC-20261124-76aa8c",
+ "kind": "statement",
+ "producer": {
+  "commit": "3fdefca01ed574948b38ac4cc03a905273b33cc6",
+  "model": "GPT-6",
+  "session": "chained-transfers-20261124"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-prym-law-20261124/SOURCE_LOCK_B.json",
+    "sha256": "3f8fd767ce390d95056e9d273beb06667b08752ad97ea36242c8bab474074aaf"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "First module-interface B source/input/runtime lock, preserving firstA originals and negative. Same genuine public Mathlib Hom.Defs, original theorem contracts, canonical auditor, pinned software and120s2GiB1worker/default logic. Whole locked inputs/lock must be published/read back before first strict B calls; unsigned commitment only."
+}

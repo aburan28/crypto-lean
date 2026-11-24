@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-24T03:06:13Z",
+ "id": "PCC-20261124-a852b6",
+ "kind": "statement",
+ "producer": {
+  "commit": "3fdefca01ed574948b38ac4cc03a905273b33cc6",
+  "model": "GPT-6",
+  "session": "chained-transfers-20261124"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-prym-law-20261124/FIRST_A_FORMAL_NEGATIVE.json",
+    "sha256": "0149f15d80fb5abfecf963b64e0e3d6fec239ab5244c02014bd93e1e19eead70"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "First source3fdefca0 genuine AddMonoidHom formal A after full18 whole-input/lock readback: version exits0, law compile exits1 before theorem checking with failed-to-read Lean/Meta/Tactic/Simp/Main.olean.private, canonical audit not reached, guards unchanged. File actually exists/readable with pinned hash, cause not established by wording; retain original negative, no unchanged rerun."
+}
