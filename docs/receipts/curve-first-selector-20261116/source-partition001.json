@@ -1,0 +1,217 @@
+{
+  "scope": "Static AST metadata only; no source import, field arithmetic or selector execution. Group norm/curve counting are separate hand derivations.",
+  "source_sha256": "3e06648f3f1b6e1ad8a8153b4410035593a3e2d4c272a8a0fda91af27e704096",
+  "column_partition_exact": true,
+  "groups": {
+    "offset_independent": [
+      {
+        "index": 0,
+        "monomial": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "expression": "1"
+      },
+      {
+        "index": 1,
+        "monomial": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "expression": "-2"
+      },
+      {
+        "index": 2,
+        "monomial": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "expression": "1"
+      },
+      {
+        "index": 6,
+        "monomial": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "expression": "-2"
+      },
+      {
+        "index": 7,
+        "monomial": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "expression": "-2"
+      },
+      {
+        "index": 8,
+        "monomial": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "expression": "-2 * a"
+      },
+      {
+        "index": 9,
+        "monomial": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "expression": "-2 * a"
+      },
+      {
+        "index": 10,
+        "monomial": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "expression": "-4 * b"
+      },
+      {
+        "index": 19,
+        "monomial": [
+          2,
+          2,
+          0,
+          2
+        ],
+        "expression": "1"
+      }
+    ],
+    "linear_offset": [
+      {
+        "index": 3,
+        "monomial": [
+          2,
+          0,
+          1,
+          1
+        ],
+        "expression": "2 * tau"
+      },
+      {
+        "index": 4,
+        "monomial": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "expression": "-4 * tau"
+      },
+      {
+        "index": 5,
+        "monomial": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "expression": "2 * tau"
+      },
+      {
+        "index": 14,
+        "monomial": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "expression": "-2 * tau"
+      },
+      {
+        "index": 15,
+        "monomial": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "expression": "-2 * tau"
+      }
+    ],
+    "quadratic_offset": [
+      {
+        "index": 11,
+        "monomial": [
+          2,
+          0,
+          0,
+          2
+        ],
+        "expression": "tau * tau"
+      },
+      {
+        "index": 12,
+        "monomial": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "expression": "-2 * tau * tau - 2 * a"
+      },
+      {
+        "index": 13,
+        "monomial": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "expression": "tau * tau"
+      }
+    ],
+    "remaining": [
+      {
+        "index": 16,
+        "monomial": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "expression": "-2 * a * tau - 4 * b"
+      },
+      {
+        "index": 17,
+        "monomial": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "expression": "-2 * a * tau - 4 * b"
+      },
+      {
+        "index": 18,
+        "monomial": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "expression": "a * a - 4 * b * tau"
+      }
+    ]
+  },
+  "formal_new_laws": 0,
+  "numerical_cases": 0
+}

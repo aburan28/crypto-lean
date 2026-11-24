@@ -1,0 +1,18 @@
+⚠ [3138/3139] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3139] Built CryptoLean.Polynomial.HeightBudget (3.2s)
+warning: CryptoLean/Polynomial/HeightBudget.lean:48:20: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: CryptoLean/Polynomial/HeightBudget.lean:48:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: CryptoLean/Polynomial/HeightBudget.lean:68:0: automatically included section variable(s) unused in theorem `CryptoLean.HeightBudget.leaf_term_norm_lower`:
+  [DecidableEq σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq σ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3139 jobs).

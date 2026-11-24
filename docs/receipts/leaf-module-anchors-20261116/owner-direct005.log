@@ -1,0 +1,26 @@
+CryptoLean/Polynomial/LeafModuleAnchors.lean:157:12: error: Type mismatch
+  hs ?m.1025
+has type
+  (2 * D.coeff n * MvPolynomial.C ?m.1025).coeff m = 2 * (D.coeff n).coeff m * ?m.1025
+but is expected to have type
+  ![(D.coeff n).coeff m, (2 * D.coeff n * MvPolynomial.C τ).coeff m, (2 * D.coeff n * MvPolynomial.C σ).coeff m,
+        (2 * D.coeff n * MvPolynomial.C (2 * τ * σ - a)).coeff m,
+        (2 * D.coeff n * MvPolynomial.C (τ ^ 2 * σ - a * τ - 2 * b)).coeff m]
+      ⟨0, ⋯⟩ =
+    ![(D.coeff n).coeff m, 2 * (D.coeff n).coeff m * τ, 2 * (D.coeff n).coeff m * σ,
+        2 * (D.coeff n).coeff m * (2 * τ * σ - a), 2 * (D.coeff n).coeff m * (τ ^ 2 * σ - a * τ - 2 * b)]
+      ⟨0, ⋯⟩
+CryptoLean/Polynomial/LeafModuleAnchors.lean:155:38: warning: This simp argument is unused:
+  Matrix.cons_val_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [leafCode, Matrix.cons_val_succ, h.1, h.2.1, h.2.2.1, h.2.2.2.1, h.2.2.2.2, he, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/LeafModuleAnchors.lean:155:59: warning: This simp argument is unused:
+  Matrix.cons_val_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [leafCode, Matrix.cons_val_zero, h.1, h.2.1, h.2.2.1, h.2.2.2.1, h.2.2.2.2, he, hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

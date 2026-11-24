@@ -1,0 +1,117 @@
+#set page(paper:"a4",margin:17mm)
+#set text(font:"DejaVu Sans",size:10pt)
+#set par(leading:0.4em)
+#text(size:18pt,weight:"bold")[Test the whole shift ideal, then change it]
+#v(4pt)
+16 November 2026 · source77da60e · PCC unverified
+
+The balanced rational-coordinate trial now has a whole-ideal test,
+covering arbitrary mixed shifts and cancellations. A different saturation
+trial has an exact one-vertex witness. Neither component is a full
+root-extraction algorithm. No LLL or cryptographic numerical run occurred.
+
+#image("flow.svg",width:100%,height:145mm,fit:"contain")
+
+*Coordinate and height.* Clear the denominator in S3(x,y,U/V), with V≠0:
+#raw("F=(x−y)² U² − 2((x+y)(xy+a)+2b) U V
+    + ((xy−a)²−4b(x+y)) V².",block:true)
+With leaf bound B and numerator/denominator bound H, the coefficient1
+monomial x²y²V² has weight B⁴H². The old B²p figure was only a selected
+monomial lower bound at balanced H, not the complete norm. Its frozen
+source remains intact. Internal rows also contain weight B²H⁴ terms.
+The new argument does not infer a whole norm from one monomial.
+
+#pagebreak()
+#text(size:16pt,weight:"bold")[The generic filtration and its exact scope]
+
+Work in the existing integer multivariate polynomial ring. An additive
+monomial weight gives projective U,V variables weight1 and leaf variables
+weight0. Define
+#raw("Filter(p,w,t,g) iff p^(t−floor(w(m)/2)) divides coeff_m(g)
+for every monomial m, using natural subtraction.",block:true)
+Each level is an ideal. Addition uses common divisors. For multiplication,
+apply the inherited coefficient antidiagonal sum and additive weights:
+#raw("t+u−floor((d+e)/2)
+ <= (t−floor(d/2))_+ + (u−floor(e/2))_+.",block:true)
+Multiply divisibilities, weaken the exponent and sum. Therefore levelt
+times levelu is contained in level(t+u). The constant p and every monomial
+of projective degree at least2 belong to level1. So does every quadratic
+chart A U²+B U V+C V², with arbitrary polynomial A,B,C.
+
+Every homogenized S3 path row has that shape. For J=(p,F₁,…,F_s):
+#raw("J^t is contained in levelt.
+For every nonzero coefficient c of projective degree d:
+    p^(2t) <= |c|² p^d.",block:true)
+The second inequality is compiled: p^e divides c implies |c|≥p^e,
+with e=(t−floor(d/2))_+, and 2e+d≥2t. This covers ALL ordinary polynomial
+multiples, mixed powers, cancellations and coefficient recentering.
+Actual S3 polynomial and prime-field denominator-clearing probes pass.
+
+*Hand HHG consequence.* If every projective bound H≥√p and every leaf
+bound B≥1, any nonzero weighted coefficient satisfies
+#raw("|c| H^d >= |c| p^(d/2) >= p^t.",block:true)
+Thus no nonzero g∈J^t can meet the usual sufficient norm threshold below
+p^t/sqrt(number of monomials). This is a hand weighted-norm consequence
+of the compiled coefficient theorem. No real norm result is asserted as
+a Lean theorem.
+
+*Scope.* This ordinary-ideal balanced construction cannot obtain that
+certificate by adding more mixed shifts. Saturation, extra justified
+integer identities, smaller or skew height regions and other methods
+are outside the statement. This is not a general Coppersmith or ECDLP
+impossibility result.
+
+*Primary prior art.* Ryan2025 UCSD thesis chapter3 is the author's full
+EUROCRYPT reprint. Printed pp55–68: HHG lemma6; zero-dimensional heuristic3;
+ideal-power shifts; Algorithm5 and theorem3 optimality for a fixed ideal
+and monomial set. Optimal shifts do not prove equation independence or
+a runtime bound as variable count grows. KB unavailable; exact Mathlib/
+owner and accessible primary fallback, no novelty claim.
+
+#pagebreak()
+#text(size:16pt,weight:"bold")[Executed saturation trial and the remaining cap]
+
+For one projective vertex let
+#raw("F=aU²+bUV+cV²,  G=dU²+eUV+fV²;
+L=ae−bd, M=af−cd, N=bf−ce, R=M²−LN.",block:true)
+The shared ring identity and ideal/domain consequences are compiled:
+#raw("R V³ = [a(MV−LU)−LbV] G + [−d(MV−LU)+LeV] F.
+Thus R V³ is in any ideal containing F,G.
+At a common root with V≠0, R=0.",block:true)
+This follows by expanding (MV−LU)(aG−dF)−LV(bG−eF). An actual prime-field
+probe substitutes two S3 coefficient triples. It is standard quadratic
+elimination with an explicit finite denominator witness, not a novelty
+claim or an independent relation generator.
+
+At a modular root with p not dividing V, cancel Vⁿ from divisibility by
+p^t. That motivates the genuinely different candidate family
+#raw("((p,F_1,…,F_s)^t : (product V_i)^infinity).",block:true)
+A denominator division can leave the old coefficient filtration. Powers
+of the one-vertex witness give V^(3t)R^t∈J^t, but those powers remain
+algebraically dependent; no independence follows. This localization/power
+interpretation is hand algebra, separate from the compiled finite witness.
+
+*Concrete successor obligations.* Saturate with explicit bounded witnesses
+before optimal shift selection. Charge denominator exponents, multiplicity,
+monomial count, coefficient bit height, ideal computation, lattice rank,
+root degree, all candidate branches and original provenance. Enforce
+nonzero denominators and cover infinity/coincident charts. A bounded
+routine may return failure when its total cap is exceeded; that alone
+would not establish useful yield.
+
+For homogeneous short equations, root recovery may pass to the projective
+quotient. The affine cone retains scaling dimensions. Dehomogenizing AFTER
+a homogeneous integer identity is proved differs from assuming the small
+integer denominator was1 before the lattice. Quotient root finiteness
+still needs proof. Direct elimination can double successive projective
+degrees: quadratic to quartic to higher degrees. A small local map does
+not bound the full frontier. Next test: bounded-width saturation with
+short independent equations and a charged total recovery cap.
+
+*Evidence.* Ten filtration and three projective-quadratic laws, plus actual
+semantic probes. Final canonical audit and all thirteen named axiom prints
+are indexed in PUBLICATION. No sorry, custom axiom, native_decide, proof-
+limit/trust/inventory/linter exception; raw failures retained. No native
+identity certificate, numerical, paid or qualification run. PCC attestation
+is unverified without signed standing. The complete algorithm criterion
+remains unmet; capped useful hidden-tuple extraction is still required.

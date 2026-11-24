@@ -1,0 +1,40 @@
+{
+  "reviewed_at": "2026-11-16T06:53:51.643275+00:00",
+  "kb": "MCP unavailable; prior wrapper unavailable; bounded primary/owner/Mathlib fallback",
+  "novelty_claim": false,
+  "sources": [
+    {
+      "file": "Kohel-Shparlinski.pdf",
+      "url": "https://www.i2m.univ-amu.fr/perso/david.kohel/pub/character.pdf",
+      "sha256": "645d9022e029055271ae60387518b440075fad282886d8baa9df35f5b55d8d2a",
+      "reviewed": "Section2 propositions1/2; section3 unramified Lang-isogeny twist, subgroup-character orthogonality. Additive theorem1 not used as multiplicative theorem."
+    },
+    {
+      "file": "Perret1991.pdf",
+      "url": "https://www.impan.pl/shop/en/publication/transaction/download/product/107098",
+      "sha256": "6c2ac05d392b19c61268073c362ae51a31fb98eeb48b8d5c67b8fa04e2826486",
+      "reviewed": "Printed pp280--281 regularity and reduced valuations; pp284--288 propositions3.1/3.3/4.3/4.5 and corollary4.6; actual scanned primary pages visually read."
+    },
+    {
+      "file": "Perret-Udine1991.pdf",
+      "url": "https://www.math.univ-toulouse.fr/~perret/Fichiers/MCSandNLGC-Udine1991.pdf",
+      "sha256": "372034735854d05a4a060a8a693bd8d1295e1adb123e1e06290a146fb841ebba",
+      "reviewed": "Conference exposition pp159--161, modified character convention; replaced reliance on exposition by Acta primary proof. Loose nonconstant implication not imported."
+    }
+  ],
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "inherited": [
+    "Equiv.subtypePiEquivPi",
+    "Fintype.card_fun",
+    "Fintype.card_subtype_compl",
+    "Finset.card_biUnion_le",
+    "Finset.sum_image",
+    "Finset.sum_sub_distrib",
+    "addOrderOf_dvd_iff_nsmul_eq_zero",
+    "CryptoLean.TranslatedIntersections.both_gates_iff"
+  ],
+  "exclusions": [
+    "Ahmadi-Shparlinski scalar-index bilinear x(kmP) estimate is not a bound for arbitrary point sums P+Q.",
+    "ICALP2026 restricted pole-degree theorem not applied to our even-pole functions."
+  ]
+}

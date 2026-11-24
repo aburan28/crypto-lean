@@ -1,0 +1,170 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T12:50:39Z",
+ "id": "PCC-20261116-e6dc6e",
+ "kind": "statement",
+ "producer": {
+  "commit": "a4a6d8ae008576bee8f0e57d11c515b4d4f2b8c7",
+  "model": "",
+  "session": "two-chart-coefficients-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/TwoChartCoefficients.lean",
+    "sha256": "484bca72d63adb4b07671e1489e887870f5fc287fb1d461047379e509daab1c7"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/two-chart-coefficients-20261116-plan.md",
+    "sha256": "b1ca4382ee6847efc04995d0ef496ce87928ff0ea684ef74db92c8038da32f9b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/two-chart-coefficients-20261116.md",
+    "sha256": "08427c847175b1d5d5538e7c0ce1b274ad5d568eefbb8cd745a1febeb4d3a61b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/TwoChartCoefficients20261116/ActualInstances.lean",
+    "sha256": "6927aafbbe82627ee9d83007c87891f24c8e07871efa4fec7b900624edc7e7b1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/TwoChartCoefficients20261116/Axioms.lean",
+    "sha256": "afdd19bf7a845e648990bcd0ff5efa4924c89621f2d35213fcb66251cce66324"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/two-chart-coefficients-20261116/publication001.json",
+    "sha256": "f460b69bc07031d2c9c4a0ff7216a29a1f1ebd2783468e423d6fff832dc98dd8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_selector_control_20261116/control.py",
+    "sha256": "7a3432d021a21f04ad1925265b50ad3372fd985d894793fb0a6eb35cab94d07f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_selector_control_20261116/protocol.json",
+    "sha256": "4513d838826412811a519005a2a0943c765d7a44cc3c03d23a4f5e9323485656"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_selector_control_20261116/README.md",
+    "sha256": "648d0fa717b9c7ddd08ae4c6388d082af4f949c104175fc79b1c76330973a4b5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-78f314c491ff.json",
+    "sha256": "4bb50d6bb324df0517e686dfa241c603ef5d04f3a9d87f61792a85068708fa7c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-cdbe31551532.json",
+    "sha256": "28f5d6623c95e2c20c7cea9f2aeab60e642f3600149a11cf66a4d9136c63bcb3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/actual002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/axioms001.log",
+    "sha256": "b61a617cf9bf33baa6e9998a1ab8c2695d86904d951a8ac1132775fa2aeb6a18"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/owner-direct010.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/owner-direct004.log",
+    "sha256": "8719094035c5483f5206c0566741783bd81cb76291c7b2e09949366d4046f72d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/source-review001.json",
+    "sha256": "86c5f2b545c4baa5deec9e22799a527730aa1bb4fb0a4c2f287c95ca05e3c93a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/audit-delta001.json",
+    "sha256": "b314a4f4489a826d971232229f2fb5438f0bcd0d5577e881502fc4e24ac695d1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/gate001/_/audit.log",
+    "sha256": "5e8dc757035297b42e88c492ff8490a212ed5a915fa46a8422bb8e3ffb6ac6f3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/gate001/_/sources.log",
+    "sha256": "75d662e8a6b38f83aae1192c58895247159217745892e934c87abe5818b56dc0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/gate-launch001.log",
+    "sha256": "7c8cefa5006e7df2243432a96a29603183953f3443fc1da54162a48c956166fd"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/two-chart-coefficients-20261116/control-source-static001.json",
+    "sha256": "46d34725a4e86af482d5618a5e1c27199dd586caf43ace9393e860b90663ff04"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Actual source polynomial coefficient extraction and raw exceptional branch; source-only implementation control distinct from any numerical observation or two-chart runtime.",
+ "statement": "Exact primitive two-chart source audit:11 generic laws and5 actual symbolic applications compile, canonical local all-tracked420/0/0. Actual source coefficients1,-2tau,tau+sigma, field decoder, full model b-invariance/nonzero and exceptional raw source/conic identities are formal. Independently centered-lift information, full integer-row two-parameter search and useful yield remain open. A first-endpoint independent Sage full-scan control is prepared but UNEXECUTED;1PythonAST and1JSON parse only. No field/curve/LLL/native qualification/paid/image/job execution, measured speed, signed verdict or complete ECDLP algorithm."
+}

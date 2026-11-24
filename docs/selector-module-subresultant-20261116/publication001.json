@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-16T17:20:27.148854+00:00",
+  "final_source_commit": "ce9db6ae420a1a365d75ceffcb206015073eb24d",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 526,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/selector-module-subresultant-20261116/gate002/_/status"
+  },
+  "named_new_owner_laws": 27,
+  "actual_declarations": 10,
+  "generated_or_maintained_equations": 15,
+  "leaf_module_source_code_cover_formal": true,
+  "finite_chart_subresultant_profile_1_2_formal": true,
+  "original_equation_branch_preservation_formal": true,
+  "actual_projective_source_anchors_formal": true,
+  "four_window_curve_code_bound_formal": true,
+  "conditional_universal_cover_charge_p_lt_729_Q2_formal": true,
+  "full_modular_row_weighted_norm_transfer_formal": false,
+  "generic_model_asymptotic_transfer_formal": false,
+  "actual_projective_image_pool_count_instantiation_formal": false,
+  "growing_residual_module_support_rank_formal": false,
+  "selector_implemented": false,
+  "useful_original_yield_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "scientific_cases": 0,
+  "native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "independent_signed_verdict": false,
+  "old_frozen_subjects": 291,
+  "old_frozen_ledger_rows": 19,
+  "aborted_early_gate": "gate001: no pass; actual003 failed, journal correction retained",
+  "final_applications": [
+    "leaf-module-anchors-20261116/actual003.log",
+    "projective-subresultant-20261116/actual005.log"
+  ]
+}

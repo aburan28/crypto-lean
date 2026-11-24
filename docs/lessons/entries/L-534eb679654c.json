@@ -1,0 +1,15 @@
+{
+  "action": "Use raw or proper math syntax for pseudo-formulas and escape prose less-than signs; inspect renderer diagnostics and every final PDF page before pinning",
+  "created": "2026-11-16T06:11:48Z",
+  "evidence": [
+    "https://github.com/aburan28/crypto-lean/blob/f8d8e5334c867b94f300a0e6d5305272043dc8b2/docs/receipts/pair-colour-isolation-20261116/render001.typ.txt",
+    "https://github.com/aburan28/crypto-lean/blob/f8d8e5334c867b94f300a0e6d5305272043dc8b2/docs/pair-colour-isolation-20261116/report.typ"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "research-visuals"
+  ],
+  "trigger": "Embedding inline pseudo-mathematics with an underscore before parentheses or a literal less-than sign in Typst prose",
+  "why": ""
+}

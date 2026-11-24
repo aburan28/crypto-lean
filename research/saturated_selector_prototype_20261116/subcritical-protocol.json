@@ -1,0 +1,35 @@
+{
+  "schema": "research.subcritical-chart.protocol/v1",
+  "status": "source-only optional successor; unexecuted; not a launch request",
+  "input": "fixtures/public17.subcritical.json",
+  "selection": "fixed public known-answer control; offset panel is neither iid nor an asymptotic cover",
+  "hypothesis": "a smaller rational-height box may allow certified integer relations outside the balanced obstruction",
+  "observables": [
+    "all chart offsets and caps",
+    "certified short rows",
+    "finite leaf projection",
+    "checked original decompositions",
+    "separate scalar replay"
+  ],
+  "acceptance": "a scalar requires exact replay; mechanism usage additionally requires an ordinary_lattice relation with its offsets and H=2",
+  "negative": "no short rows, positive-dimensional or capped attempts remain recorded failures, not impossibility",
+  "balanced_zero_row_prediction_applies": false,
+  "asymptotic_success_claim": false,
+  "existing_paired_pilot_changed": false,
+  "proposed_resources": {
+    "worker_wall_seconds": 120,
+    "worker_cpu_seconds": 90,
+    "replay_wall_cpu_seconds": 30,
+    "job_deadline_seconds": 300,
+    "vcpus": 1,
+    "memory_mib": 8192,
+    "concurrency": 1,
+    "automatic_retries": 0
+  },
+  "cost": {
+    "proposed_total_ceiling_usd": 2,
+    "grant": false,
+    "remaining_balance": "unknown; no launch"
+  },
+  "pending": "same source/image/caller/quota/budget/custody/S3 admission bindings as pilot-protocol.json; no execution authorization added"
+}

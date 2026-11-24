@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T11:28:06Z",
+  "evidence": [
+    "docs/curve-first-selector-20261116.md",
+    "docs/receipts/curve-first-selector-20261116/actual001.log"
+  ],
+  "kind": "outcome",
+  "note": "Hand norm/model-count and all-degree algorithm arguments; degree-one algebra/recovery branches compile. No implementation or numerical/yield claim.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "research",
+  "task": "Curve-first pruning and mixed-degree pivot successor"
+}

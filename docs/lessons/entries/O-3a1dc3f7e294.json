@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T11:10:37Z",
+  "evidence": [
+    "docs/first-order-selector-20261116.md",
+    "docs/receipts/first-order-selector-20261116/gate-launch001.log"
+  ],
+  "kind": "outcome",
+  "note": "Complete mathematical existence search for the declared modular block; Python source remains unexecuted and useful ECDLP yield is unproved.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "research",
+  "task": "Coefficient-first rank-one endpoint selector"
+}

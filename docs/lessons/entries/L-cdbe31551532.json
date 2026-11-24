@@ -1,0 +1,16 @@
+{
+  "action": "compose maintained constant-coefficient ring homomorphisms before extracting the remaining monomial coefficients and bind standard nested-ring instances explicitly",
+  "created": "2026-11-16T12:38:44Z",
+  "evidence": [
+    "CryptoLean/Polynomial/TwoChartCoefficients.lean",
+    "docs/receipts/two-chart-coefficients-20261116/owner-direct004.log",
+    "docs/receipts/two-chart-coefficients-20261116/owner-direct010.log"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "research"
+  ],
+  "trigger": "nested polynomial coefficient proofs spend the default heartbeat budget normalizing irrelevant variables",
+  "why": "The seven-variable primitive source anchors compile without a limit increase using two constantCoeff maps; this is source algebra, not numerical qualification."
+}

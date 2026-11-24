@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-16 17:26:21 UTC",
+  "head": "1e559e62fbb5ca099050ff18873627d9a78e7c9c",
+  "unchanged_count": 0,
+  "enabled": true,
+  "next_run_time": "2026-11-16T10:16:20-08:00",
+  "success": true,
+  "trigger": "New published head and same-head gate results, following scheduled old-head prompt"
+}

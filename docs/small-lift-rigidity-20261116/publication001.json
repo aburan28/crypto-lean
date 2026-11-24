@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-16T16:08:54.352070+00:00",
+  "lean_source_commit": "3384dbe33335cae4bf6fe581e7187a3ce2154275",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 444,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/small-lift-rigidity-20261116/gate001/_/status"
+  },
+  "new_generic_laws": 18,
+  "actual_declarations": 4,
+  "generated_defining_equations": 2,
+  "strict_finite_conditional_exceptional_row_zero": true,
+  "coefficient_mass_1152_M7_formalized": false,
+  "asymptotic_support_norm_transfer_formalized": false,
+  "all_centered_lifts_or_full_ECDLP_excluded": false,
+  "numerical_cases": 0,
+  "paid_jobs": 0,
+  "qualification_runs": 0,
+  "complete_algorithm_criterion_met": false,
+  "independently_signed_verdict": false,
+  "old_frozen_subjects": 250,
+  "old_frozen_ledger_rows": 17
+}

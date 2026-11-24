@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-11-16T07:27:25.051592+00:00",
+  "source_commit": "77da60ea5b2e45ab16184c804f3d844435a6ea9c",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "canonical_gate": {
+    "status": "PASS",
+    "process_exit_code": 0,
+    "theorems": 271,
+    "failing": 0,
+    "trusted_native": 0,
+    "status_receipt": "docs/receipts/balanced-height-filtration-20261116/gate001/_/status"
+  },
+  "named_theorems": [
+    "CryptoLean.BalancedFiltration.level_zero",
+    "CryptoLean.BalancedFiltration.filtered_add",
+    "CryptoLean.BalancedFiltration.filtered_mul",
+    "CryptoLean.BalancedFiltration.mem_filtrationIdeal",
+    "CryptoLean.BalancedFiltration.ideal_pow_le",
+    "CryptoLean.BalancedFiltration.monomial_mem",
+    "CryptoLean.BalancedFiltration.modulus_mem",
+    "CryptoLean.BalancedFiltration.quadratic_chart_mem",
+    "CryptoLean.BalancedFiltration.coefficient_square_lower",
+    "CryptoLean.BalancedFiltration.span_power_coefficient_lower",
+    "CryptoLean.ProjectiveQuadratics.bezout_identity",
+    "CryptoLean.ProjectiveQuadratics.ideal_witness",
+    "CryptoLean.ProjectiveQuadratics.common_root"
+  ],
+  "axiom_log": "docs/receipts/balanced-height-filtration-20261116/axioms001.log",
+  "formal_scope": "Generic ordinary-ideal coefficient filtration and squared coefficient lower bound; finite one-vertex Bezout witness/ideal membership/common-root consequence; actual S3 polynomial and prime-field semantic probes",
+  "hand_scope": "Real weighted-norm/HHG corollary, arbitrary localization/power interpretation and successor algorithm accounting",
+  "growing_solver": false,
+  "implementation": false,
+  "new_numerical_cases": 0,
+  "new_lll_runs": 0,
+  "new_paid_jobs": 0,
+  "new_qualification_runs": 0,
+  "identity_certificate_issued": false,
+  "fresh_checker_available": false,
+  "pdf_inspection": {
+    "pages": 3,
+    "all_final_pages_rendered_and_visually_inspected": true,
+    "inspected_at": "2026-11-16T07:27:25.059910+00:00",
+    "renderer": "Typst0.15.1 + pdftoppm scale1250",
+    "sha256": "11b4032fb868e79564505184cf6749699ab9d884207d7d54d8dfa0f898469e24"
+  },
+  "pcc_standing": "Attestation only; no signed verification asserted"
+}

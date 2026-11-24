@@ -1,0 +1,22 @@
+CryptoLean/Polynomial/ResidualLeafRank.lean:164:21: error: typeclass instance problem is stuck
+  CommSemiring ?m.96
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `CommSemiring` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+CryptoLean/Polynomial/ResidualLeafRank.lean:178:79: error: unsolved goals
+case «2»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h₁ : ∀ (A B C₀ : K[X]), ((coreXY (C a) (C b) A B C₀).coeff 2).coeff 1 = A
+h₂ : ∀ (A B C₀ : K[X]), ((coreXY (C a) (C b) A B C₀).coeff 2).coeff 2 = C₀
+⊢ 2 * (-(σ * X.coeff 2) + (1 + -(X.coeff 2 * σ))) = 2
+
+case «5»
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h₁ : ∀ (A B C₀ : K[X]), ((coreXY (C a) (C b) A B C₀).coeff 2).coeff 1 = A
+h₂ : ∀ (A B C₀ : K[X]), ((coreXY (C a) (C b) A B C₀).coeff 2).coeff 2 = C₀
+⊢ X.coeff 2 * σ + -1 + σ * X.coeff 2 = -1

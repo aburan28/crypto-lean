@@ -1,0 +1,36 @@
+⚠ [3138/3149] Replayed CryptoLean.Semaev.S3
+warning: CryptoLean/Semaev/S3.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3149] Replayed CryptoLean.Polynomial.EndpointCoefficients
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Algebra.Polynomial.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/EndpointCoefficients.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3149] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3144/3149] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3145/3149] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3146/3149] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✖ [3149/3149] Building CryptoLean.Polynomial.ResidualLeafRank (4.8s)
+warning: CryptoLean/Polynomial/ResidualLeafRank.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Sigma` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+trace: .> LEAN_PATH=/workspace/scratch/mathlib4/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/mathlib4/.lake/build/lib/lean:/workspace/scratch/crypto-lean/.lake/build/lib/lean /home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean /workspace/scratch/crypto-lean/CryptoLean/Polynomial/ResidualLeafRank.lean -o /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/ResidualLeafRank.olean -i /workspace/scratch/crypto-lean/.lake/build/lib/lean/CryptoLean/Polynomial/ResidualLeafRank.ilean -c /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/ResidualLeafRank.c --setup /workspace/scratch/crypto-lean/.lake/build/ir/CryptoLean/Polynomial/ResidualLeafRank.setup.json --json
+error: CryptoLean/Polynomial/ResidualLeafRank.lean:207:2: Tactic `constructor` failed: no applicable constructor found
+
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+h :
+  ((coreXY (C a) (C b) (alpha (C τ) (C σ) X 5) (beta (C a) (C b) (C τ) (C σ) X 5) (gamma (C σ) X 5)).coeff 2).coeff 1 =
+      alpha (C τ) (C σ) X 5 ∧
+    ((coreXY (C a) (C b) (alpha (C τ) (C σ) X 5) (beta (C a) (C b) (C τ) (C σ) X 5) (gamma (C σ) X 5)).coeff 2).coeff
+        2 =
+      gamma (C σ) X 5
+⊢ σ + σ = 2 * σ
+Some required targets logged failures:
+- CryptoLean.Polynomial.ResidualLeafRank
+error: build failed

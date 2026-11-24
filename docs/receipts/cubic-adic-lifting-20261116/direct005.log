@@ -1,0 +1,6 @@
+CryptoLean/Polynomial/CubicAdicLifting.lean:305:27: warning: Unused tactic linter: `simp` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+CryptoLean/Polynomial/CubicAdicLifting.lean:305:27: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`

@@ -1,0 +1,21 @@
+docs/receipts/TightNormRelation20261116/ActualInstances.lean:35:55: error(lean.unknownIdentifier): Unknown constant `Algebra.norm_one`
+docs/receipts/TightNormRelation20261116/ActualInstances.lean:35:2: error: unsolved goals
+case hd
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : DecidableEq K
+W : WeierstrassCurve.Affine K
+⊢ ((Algebra.norm K[X]) 1).natDegree = 0
+docs/receipts/TightNormRelation20261116/ActualInstances.lean:36:6: warning: This simp argument is unused:
+  Polynomial.natDegree_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rowFunction, zero_smul, add_zero, one_smul, Algebra.norm_one, Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+docs/receipts/TightNormRelation20261116/ActualInstances.lean:38:0: warning: automatically included section variable(s) unused in theorem `TightNormActual.repeated_point_not_coprime`:
+  [DecidableEq K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

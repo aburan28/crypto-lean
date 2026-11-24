@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-16T18:29:20.953896+00:00",
+  "source_commit": "f82857c505ad0bd0957ca317600e098fcc829f24",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "generic_laws": 24,
+  "actual_applications": 5,
+  "named_axiom_prints": 24,
+  "owner_build_exit": 0,
+  "actual_exit": 0,
+  "actual_output_empty": true,
+  "axioms_exit": 0,
+  "formal_scope": [
+    "actual odd cubic norm nonzero for every nonzero pair",
+    "tight simple roots and exact signed affine zero locus",
+    "no common K-valued u/v zeros and selected nonzero denominator",
+    "scalar nodal norm factorization and necessary cubic congruence",
+    "bare cubic congruence false positive via square-degree parity",
+    "pure-nodal rejection, duplicate and empty controls",
+    "unique u for fixed v above degree cap"
+  ],
+  "hand_scope": [
+    "principal divisor, pole order and actual elliptic point-sum bridge",
+    "nonzero mixed-label recovery yield on original sampling law",
+    "colored nonzero extraction algorithm and cost",
+    "written tight symbolic uniqueness corollary"
+  ],
+  "scientific_execution": false,
+  "complete_classical_subexponential_ECDLP": false
+}

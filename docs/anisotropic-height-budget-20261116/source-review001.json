@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "title": "Practical Lattice-based Algorithms for Cryptanalysis",
+    "author": "Keegan Ryan",
+    "year": 2025,
+    "url": "https://escholarship.org/content/qt8bz3g5b6/qt8bz3g5b6.pdf",
+    "sha256": "7e0bde57bdcaa791c801240ea7c30be7263861ad2329cf998f1c5628bad0eec3",
+    "reviewed": [
+      "printed pp5--6, LLL approximation exponential in rank and minima/determinant scope",
+      "chapter3 printed pp55--68, HHG and independence heuristic, fixed ideal/monomial optimal shifts"
+    ],
+    "scope": "context; no generic independence or ECDLP theorem imported"
+  },
+  "owner_reuse": [
+    "CryptoLean.Polynomial.BalancedFiltration",
+    "CryptoLean.Combinatorics.UniversalPools",
+    "CryptoLean.Semaev.S3"
+  ],
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "mathlib_interfaces": [
+    "Fin.induction",
+    "Finset.card_le_card_of_injOn",
+    "Finset.single_le_sum",
+    "Ideal.span_le",
+    "Nat.pow_le_pow_left",
+    "Nat.pow_le_pow_right",
+    "Int.natAbs_dvd_natAbs",
+    "AddMonoidAlgebra.coeff_add"
+  ],
+  "kb": "unavailable; bounded primary/owner/pinned Mathlib fallback",
+  "novelty_claim": false,
+  "scientific_numerical_execution": false
+}

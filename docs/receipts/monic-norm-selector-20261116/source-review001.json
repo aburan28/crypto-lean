@@ -1,0 +1,32 @@
+{
+  "source_commit": "11ce031acbe1139fed92bf44d38f2f07e5b113f0",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "monic_laws": 15,
+  "doubling_residue_laws": 14,
+  "owner_laws": 29,
+  "actual_applications": 7,
+  "named_axiom_prints": 29,
+  "actual_final_exit": 0,
+  "mixed_final_exit": 0,
+  "axioms_final_exit": 0,
+  "application_outputs_empty": true,
+  "formal_scope": [
+    "complete even/odd leading-degree and coefficient classification",
+    "dominant monic normalization, degree/row preservation and recovery",
+    "unique supplied-row colored choice and singleton finite filters",
+    "actual tangent polynomial residue identity and products",
+    "actual Mathlib Point public odd half, slope, addX and xRep bridge",
+    "bounded degree2 residue witness and every colored odd-annihilated tuple passes",
+    "actual mixed alphaG+betaH input assembly"
+  ],
+  "hand_scope": [
+    "coefficient parameter count t-1 and field/group operation costs",
+    "product-sign nodal identification and higher degree monic lifts",
+    "higher f-adic lifting/degree-restricted Pade successor hypothesis",
+    "fast nonzero normalized full-norm discovery/cost",
+    "tight function principal divisor/pole and actual zero-sum bridge",
+    "original mixed-label useful yield"
+  ],
+  "new_scientific_execution": false,
+  "complete_classical_subexponential_ECDLP": false
+}

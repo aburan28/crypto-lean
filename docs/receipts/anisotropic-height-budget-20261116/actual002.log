@@ -1,0 +1,33 @@
+docs/receipts/AnisotropicHeight20261116/ActualInstances.lean:95:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  k ≥ 0
+  j ≥ 0
+  j + k - l ≥ 1
+  i ≥ 1
+  h ≥ 0
+  g ≥ 0
+  e ≥ 0
+  e - g ≥ 1
+  e - h ≤ 0
+  d ≥ 1
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 0
+  a ≥ 1
+where
+ a := ↑H
+ b := ↑p
+ c := ↑(H ^ 2)
+ d := ↑B
+ e := ↑(p ^ t)
+ g := ↑(coefficientNorm (fun m => B ^ leafDegree m * ∏ i, height i ^ slotDegree i m) f)
+ h := ↑B * ↑(H ^ (2 * t))
+ i := ↑(leafDegree m)
+ j := ↑(if True then n 4 + n 6 else n 5 + n 7)
+ k := ↑(if 1 = 0 then n 4 + n 6 else n 5 + n 7)
+ l := ↑(({ toFun := fun g => g 4, map_zero' := ⋯, map_add' := ⋯ } +
+          { toFun := fun g => g 5, map_zero' := ⋯, map_add' := ⋯ } +
+        { toFun := fun g => g 6, map_zero' := ⋯, map_add' := ⋯ } +
+      { toFun := fun g => g 7, map_zero' := ⋯, map_add' := ⋯ })
+    n)

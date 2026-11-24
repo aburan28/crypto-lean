@@ -1,0 +1,45 @@
+CryptoLean/Polynomial/LeafModuleAnchors.lean:157:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b
+in the target expression
+  (2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a)).coeff m =
+    2 * (D.coeff n).coeff m * (2 * τ * σ - a)
+
+case «3»
+ι : Type u_2
+K : Type u_3
+inst✝ : Field K
+a b τ σ : K
+x y : MvPolynomial ι K
+A D : (MvPolynomial ι K)[X]
+n : ℕ
+m : ι →₀ ℕ
+hlow : ∀ i < n, D.coeff i = 0
+h :
+  takeModuleAnchor
+        (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 2 0
+        0 =
+      D.coeff n ∧
+    takeModuleAnchor
+          (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 2 1 1
+          0 =
+        2 * D.coeff n * MvPolynomial.C τ ∧
+      takeModuleAnchor
+            (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1 2
+            0 1 =
+          2 * D.coeff n * MvPolynomial.C σ ∧
+        takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              1 1 1 =
+            2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a) ∧
+          takeModuleAnchor
+              (projectiveModule (MvPolynomial.C a) (MvPolynomial.C b) x y (MvPolynomial.C τ) (MvPolynomial.C σ) A D) n 1
+              0 2 1 =
+            2 * D.coeff n *
+              (MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b)
+hs : ∀ (z : K), (2 * D.coeff n * MvPolynomial.C z).coeff m = 2 * (D.coeff n).coeff m * z
+he : 2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a = MvPolynomial.C (2 * τ * σ - a)
+hk :
+  MvPolynomial.C τ ^ 2 * MvPolynomial.C σ - MvPolynomial.C a * MvPolynomial.C τ - 2 * MvPolynomial.C b =
+    MvPolynomial.C (τ ^ 2 * σ - a * τ - 2 * b)
+⊢ (2 * D.coeff n * (2 * MvPolynomial.C τ * MvPolynomial.C σ - MvPolynomial.C a)).coeff m =
+    2 * (D.coeff n).coeff m * (2 * τ * σ - a)

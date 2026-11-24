@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-16T16:04:27.916432+00:00",
+  "lean_source_commit": "3384dbe33335cae4bf6fe581e7187a3ce2154275",
+  "owner": "CryptoLean.Polynomial.SmallLiftRigidity",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "interfaces": [
+    "Int.eq_zero_of_dvd_of_natAbs_lt_natAbs",
+    "Int.natAbs_sub_le",
+    "AddMonoidAlgebra.coeff_add",
+    "Finsupp.add_apply",
+    "MvPolynomial.coeff_C_mul",
+    "MvPolynomial.eval",
+    "CurveParameterElimination.primitive_scaling",
+    "TwoChartCoefficients.exceptional_raw_zero"
+  ],
+  "formal_scope": "Strict coefficient-cross uniqueness, bounded linear and centered conic exactness and height, actual seven-variable cleared primitive, conditional exceptional integer-row vanishing, rational/signed/source-anchor symbolic applications.",
+  "hand_scope": "Coefficient l1 mass <=1152M^7, weighted anchor bounds, mod-p/source bridge and fixed-support critical-height asymptotic transfer.",
+  "finite_bounds_assumed_in_final_law": true,
+  "all_centered_lifts_or_all_ECDLP_ruled_out": false,
+  "numerical_cases": 0,
+  "scientific_native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "control_imported_or_executed": false,
+  "new_source_theorems": 18,
+  "actual_symbolic_declarations": 4,
+  "novelty_claim": false
+}

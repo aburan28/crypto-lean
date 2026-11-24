@@ -1,0 +1,13 @@
+digraph Heights {
+  graph [rankdir=TB,bgcolor="transparent",pad="0.15",ranksep="0.35"];
+  node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,fillcolor="#eef4fb",color="#244268",margin="0.17,0.12"];
+  edge [color="#476684",arrowsize=0.7];
+  input [label="S3 path with z_i = U_i / V_i\nAll projective bounds H ≥ √p; leaves B ≥ 1"];
+  ordinary [label="Ordinary ideal J=(p,F_1,…,F_s)\nEvery row has projective degree at least 2"];
+  filter [label="All mixed shifts and cancellations in J^t\np^(t−floor(d/2)) divides each degree-d coefficient",fillcolor="#dfede6"];
+  fail [label="Nonzero weighted coefficient ≥ p^t\nUsual HHG sufficient norm threshold cannot hold",fillcolor="#f6e7e4",color="#9b4138"];
+  sat [label="Change the family: cancel unit denominators\nSaturate BEFORE selecting bounded shifts"];
+  witness [label="Exact one-vertex trial: R V³ = A F + B G\nV ≠ 0 and common root ⇒ R = 0",fillcolor="#dfede6"];
+  open [label="Still required: capped growing-chain recovery\nIndependent equations, total degree/rank, useful yield",style="rounded,filled,dashed"];
+  input -> ordinary -> filter -> fail -> sat -> witness -> open;
+}

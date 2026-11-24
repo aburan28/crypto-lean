@@ -1,0 +1,11 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:135:4: error: Type mismatch: After simplification, term
+  projective_anchor (-2) 0 (-2 * τ)
+ has type
+  @Eq R
+    (projectiveAnchor
+      (-(C (C (C (C 2))) * (uVar * (vVar ^ 2 * wVar ^ 2))) +
+        -(C (C (C (C 2))) * (C (C (C (C τ))) * (vVar ^ 3 * wVar ^ 2)))))
+    (-(2 * τ))
+but is expected to have type
+  @Eq R (projectiveAnchor (-(2 * (uVar * (vVar ^ 2 * wVar ^ 2))) + -(2 * (C (C (C (C τ))) * (vVar ^ 3 * wVar ^ 2)))))
+    (-(2 * τ))

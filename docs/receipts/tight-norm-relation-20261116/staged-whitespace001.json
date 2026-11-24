@@ -1,0 +1,5 @@
+{
+  "exit": 2,
+  "raw_output": "docs/receipts/tight-norm-relation-20261116/direct001.log:1: trailing whitespace.\n+CryptoLean/Curve/TightNormRelation.lean:20:2: warning: Try this: \ndocs/receipts/tight-norm-relation-20261116/direct001.log:9: trailing whitespace.\n+CryptoLean/Curve/TightNormRelation.lean:21:2: warning: Try this: \ndocs/receipts/tight-norm-relation-20261116/direct001.log:48: trailing whitespace.\n+CryptoLean/Curve/TightNormRelation.lean:47:2: warning: Try this: \n",
+  "meaning": "compiler raw diagnostics preserved verbatim; no whitespace normalization"
+}

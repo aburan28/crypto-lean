@@ -1,0 +1,133 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:90:40: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+q : R :=
+  2 * (y * (T - w * W) ^ 2 - adjacentLinear a b w T W) * Z + (adjacentConstant a b w T W - (T - w * W) ^ 2 * y ^ 2) * V
+hj : adjacentLinear (C a) (C b) (C w) (C T) (C W) = C (adjacentLinear a b w T W)
+hm : adjacentConstant (C a) (C b) (C w) (C T) (C W) = C (adjacentConstant a b w T W)
+⊢ -(X * C y * C a * C T * C w * C W * C V * 4) + X * C y * C a * C T ^ 2 * C V * 2 +
+                                                                        X * C y * C a * C w ^ 2 * C W ^ 2 * C V * 2 +
+                                                                      X * C y * C (adjacentLinear a b w T W) * C Z * 4 -
+                                                                    X * C y * C (adjacentConstant a b w T W) * C V * 2 -
+                                                                  X * C y ^ 2 * C T * C w * C W * C Z * 4 +
+                                                                X * C y ^ 2 * C T ^ 2 * C Z * 2 +
+                                                              X * C y ^ 2 * C w ^ 2 * C W ^ 2 * C Z * 2 -
+                                                            X * C a * C T * C w * C W * C Z * 4 +
+                                                          X * C a * C T ^ 2 * C Z * 2 +
+                                                        X * C a * C w ^ 2 * C W ^ 2 * C Z * 2 -
+                                                      X * C b * C T * C w * C W * C V * 8 +
+                                                    X * C b * C T ^ 2 * C V * 4 +
+                                                  X * C b * C w ^ 2 * C W ^ 2 * C V * 4 -
+                                                X ^ 2 * C y * C T * C w * C W * C Z * 4 +
+                                              X ^ 2 * C y * C T ^ 2 * C Z * 2 +
+                                            X ^ 2 * C y * C w ^ 2 * C W ^ 2 * C Z * 2 +
+                                          X ^ 2 * C y ^ 2 * C T * C w * C W * C V * 2 -
+                                        X ^ 2 * C y ^ 2 * C T ^ 2 * C V -
+                                      X ^ 2 * C y ^ 2 * C w ^ 2 * C W ^ 2 * C V -
+                                    X ^ 2 * C (adjacentLinear a b w T W) * C Z * 2 +
+                                  X ^ 2 * C (adjacentConstant a b w T W) * C V -
+                                C y * C a * C T * C w * C W * C Z * 4 +
+                              C y * C a * C T ^ 2 * C Z * 2 +
+                            C y * C a * C w ^ 2 * C W ^ 2 * C Z * 2 -
+                          C y * C b * C T * C w * C W * C V * 8 +
+                        C y * C b * C T ^ 2 * C V * 4 +
+                      C y * C b * C w ^ 2 * C W ^ 2 * C V * 4 -
+                    C y ^ 2 * C (adjacentLinear a b w T W) * C Z * 2 +
+                  C y ^ 2 * C (adjacentConstant a b w T W) * C V +
+                C a ^ 2 * C T * C w * C W * C V * 2 -
+              C a ^ 2 * C T ^ 2 * C V -
+            C a ^ 2 * C w ^ 2 * C W ^ 2 * C V -
+          C b * C T * C w * C W * C Z * 8 +
+        C b * C T ^ 2 * C Z * 4 +
+      C b * C w ^ 2 * C W ^ 2 * C Z * 4 =
+    ⋯ + ⋯ - ⋯ * ⋯ + ⋯ * ⋯ * 2 - X * C (adjacentConstant a b w T W) * C V +
+                                                                                                X *
+                                                                                                      C
+                                                                                                        (adjacentConstant
+                                                                                                          a b w T W) *
+                                                                                                    C V *
+                                                                                                  C 1 ^ 2 -
+                                                                                              X *
+                                                                                                    C
+                                                                                                      (adjacentConstant
+                                                                                                        a b w T W) *
+                                                                                                  C V *
+                                                                                                C 0 ^ 2 -
+                                                                                            ⋯ * ⋯ * C T * C w * C W *
+                                                                                                C Z *
+                                                                                              4 +
+                                                                                          X ^ 2 * C y * C T ^ 2 * C Z *
+                                                                                            2 +
+                                                                                        X ^ 2 * C y * C w ^ 2 *
+                                                                                              C W ^ 2 *
+                                                                                            C Z *
+                                                                                          2 +
+                                                                                      X ^ 2 * C y ^ 2 * C T * C w *
+                                                                                            C W *
+                                                                                          C V *
+                                                                                        2 -
+                                                                                    X ^ 2 * C y ^ 2 * C T ^ 2 * C V -
+                                                                                  X ^ 2 * C y ^ 2 * C w ^ 2 * C W ^ 2 *
+                                                                                    C V -
+                                                                                X ^ 2 * C (adjacentLinear a b w T W) *
+                                                                                    C Z *
+                                                                                  2 +
+                                                                              X ^ 2 * C (adjacentConstant a b w T W) *
+                                                                                C V -
+                                                                            C y * C a * C T * C w * C W * C Z * 4 -
+                                                                          C y * C a * C T * C w * C W * C V * C 0 * 4 +
+                                                                        C y * C a * C T ^ 2 * C Z * 2 +
+                                                                      C y * C a * C T ^ 2 * C V * C 0 * 2 +
+                                                                    C y * C a * C w ^ 2 * C W ^ 2 * C Z * 2 +
+                                                                  C y * C a * C w ^ 2 * C W ^ 2 * C V * C 0 * 2 -
+                                                                C y * C b * C T * C w * C W * C V * 8 +
+                                                              C y * C b * C T ^ 2 * C V * 4 +
+                                                            C y * C b * C w ^ 2 * C W ^ 2 * C V * 4 -
+                                                          C y * C T * C w * C W * C Z * C 0 ^ 2 * 4 +
+                                                        C y * C T ^ 2 * C Z * C 0 ^ 2 * 2 +
+                                                      C y * C w ^ 2 * C W ^ 2 * C Z * C 0 ^ 2 * 2 +
+                                                    C y * C (adjacentLinear a b w T W) * C Z * C 0 * 4 -
+                                                  C y * C (adjacentConstant a b w T W) * C V * C 0 * 2 -
+                                                C y ^ 2 * C T * C w * C W * C Z * C 0 * 4 +
+                                              C y ^ 2 * C T * C w * C W * C V * C 0 ^ 2 * 2 +
+                                            C y ^ 2 * C T ^ 2 * C Z * C 0 * 2 -
+                                          C y ^ 2 * C T ^ 2 * C V * C 0 ^ 2 +
+                                        C y ^ 2 * C w ^ 2 * C W ^ 2 * C Z * C 0 * 2 -
+                                      C y ^ 2 * C w ^ 2 * C W ^ 2 * C V * C 0 ^ 2 -
+                                    C y ^ 2 * C (adjacentLinear a b w T W) * C Z * 2 +
+                                  C y ^ 2 * C (adjacentConstant a b w T W) * C V -
+                                C a * C T * C w * C W * C Z * C 0 * 4 +
+                              C a * C T ^ 2 * C Z * C 0 * 2 +
+                            C a * C w ^ 2 * C W ^ 2 * C Z * C 0 * 2 +
+                          C a ^ 2 * C T * C w * C W * C V * 2 -
+                        C a ^ 2 * C T ^ 2 * C V -
+                      C a ^ 2 * C w ^ 2 * C W ^ 2 * C V -
+                    C b * C T * C w * C W * C Z * 8 -
+                  C b * C T * C w * C W * C V * C 0 * 8 +
+                C b * C T ^ 2 * C Z * 4 +
+              C b * C T ^ 2 * C V * C 0 * 4 +
+            C b * C w ^ 2 * C W ^ 2 * C Z * 4 +
+          C b * C w ^ 2 * C W ^ 2 * C V * C 0 * 4 -
+        C (adjacentLinear a b w T W) * C Z * C 0 ^ 2 * 2 +
+      C (adjacentConstant a b w T W) * C V * C 0 ^ 2
+CryptoLean/Polynomial/ProjectiveSubresultant.lean:81:56: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W : R
+q : R :=
+  2 * (y * (T - w * W) ^ 2 - adjacentLinear a b w T W) * Z + (adjacentConstant a b w T W - (T - w * W) ^ 2 * y ^ 2) * V
+hj : adjacentLinear (C a) (C b) (C w) (C T) (C W) = C (adjacentLinear a b w T W)
+hm : adjacentConstant (C a) (C b) (C w) (C T) (C W) = C (adjacentConstant a b w T W)
+he :
+  inLeafX a b y w Z V T W =
+    C q * X ^ 2 + C (residual a b 1 y w Z V T W - residual a b 0 y w Z V T W - q) * X + C (residual a b 0 y w Z V T W)
+⊢ q =
+    2 * (y * (T - w * W) ^ 2 - adjacentLinear a b w T W) * Z +
+      (adjacentConstant a b w T W - (T - w * W) ^ 2 * y ^ 2) * V

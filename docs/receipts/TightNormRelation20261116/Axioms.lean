@@ -1,0 +1,15 @@
+import CryptoLean.Curve.TightNormRelation
+
+#print axioms CryptoLean.TightNormRelation.ideal_eq_of_le_equal_quotient_dimension
+#print axioms CryptoLean.TightNormRelation.coprime_quotient_dimension
+#print axioms CryptoLean.TightNormRelation.rowFunction_nonzero
+#print axioms CryptoLean.TightNormRelation.rowFunction_mem_pointIdeal
+#print axioms CryptoLean.TightNormRelation.pointIdeals_coprime
+#print axioms CryptoLean.TightNormRelation.tight_row_ideal_product
+#print axioms CryptoLean.TightNormRelation.point_sum_of_principal_product
+#print axioms CryptoLean.TightNormRelation.tight_row_sum_zero
+#print axioms CryptoLean.TightNormRelation.short_norm_eq
+#print axioms CryptoLean.TightNormRelation.short_tight_row_sum_zero
+#print axioms CryptoLean.TightNormRelation.short_capped_row_sum_zero
+#print axioms CryptoLean.TightNormRelation.recover_nat_mixed_relation
+#print axioms CryptoLean.TightNormRelation.recover_from_short_tight_row

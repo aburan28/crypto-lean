@@ -1,0 +1,163 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T09:58:47Z",
+ "id": "PCC-20261116-58f919",
+ "kind": "statement",
+ "producer": {
+  "commit": "65bbdeb58a07c95b219473ea7357c8d13f21835f",
+  "model": "",
+  "session": "anisotropic-height-budget-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/HeightBudget.lean",
+    "sha256": "cf119f78f585fcb6d2d3ea2ebc439bb00cc1f6508827850239dc6d4704c89b53"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Combinatorics/ChainPowerBlocks.lean",
+    "sha256": "237ccf6f40e7d11129aec8585f21e05749c0bda00e9bea8ddcfe15f882a50484"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116.md",
+    "sha256": "d4f369e30a3c3e658f6d6ccb035897d08341ebccf8e04785a1ff93bb9ce44229"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116-plan.md",
+    "sha256": "b59a5608f4260b06a3c41fecdbd0c89e353c71c022c628bb8e6066ee962f2149"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/AnisotropicHeight20261116/ActualInstances.lean",
+    "sha256": "3e20355e45aeebcce262748551153e7449b532d4a882ba4e32eb285cd0c4ba23"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/AnisotropicHeight20261116/Axioms.lean",
+    "sha256": "a187e068249ebff8e4a3b32851136532e06fce2386f7f24f166cc676fca6ad85"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/actual003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/axioms001.log",
+    "sha256": "7ef4ac9571bb610de8ace2a2a3e6bc9a047941cb040888fa979f2330d9cb79da"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/gate-launch001.log",
+    "sha256": "f248087611ae6b96b3d1d4890d2e5d4b009f2cda5c49cbbecaa1ab3000184212"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/gate001/_/audit.log",
+    "sha256": "4e1e0df399a379d4184ab15ce6a8bcf23464aa578da87030f0aaaf15236f5da8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/gate001/_/sources.log",
+    "sha256": "1101b190adefa3667e1eaa90db333a0a47ab02c93835c1ba464fe42b4fdcb2e3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/anisotropic-height-budget-20261116/next-hypothesis001.md",
+    "sha256": "577e9ac02aecd3ef54ef8500aa76ac2c29d82ddd8341d4f49fa4e90a95b53b6c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/flow.dot",
+    "sha256": "1354924a1fe390507fd0bc0cd2c6fbc51fe6371748d1816b027934654765b577"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/flow.svg",
+    "sha256": "966753933deb57301599223c1f048b434d8bdf31d3fe67868ffb775005e856ff"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/report.typ",
+    "sha256": "3a9193998acc94bced2160797a7c273f09bb8564974b9e2a0560516fa8afd55c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/report.pdf",
+    "sha256": "5a3b0acb5664d0c231dd061c0811548b5c1e736ff17bb3f666cb9f0180d31660"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/source-review001.json",
+    "sha256": "b70bc7dfcff2d5559196d393d3254a73116389a85f4e74df391653b948814986"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/anisotropic-height-budget-20261116/publication001.json",
+    "sha256": "7f0f478dd0b18bcfa246c6fc430c6f324a041996013677117ce4d3113373383d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-12cb288a9c11.json",
+    "sha256": "6b7fa1a4caef04ab3b2c668b3b956b85f2325703b7627a9e798a482ca4d1d9d8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-ea26265bb760.json",
+    "sha256": "50f4bb9307ea25ee124231382a957a2ca041f4ed048f37ecd1a8d87c8323d749"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "15 generic laws plus8 actual semantic checks; hand chart/solver interpretations separate; no numerical or complete algorithm claim.",
+ "statement": "Concentrated height budget and matched-modulus research package:15 generic laws and8 semantic declarations compile, canonical local all-tracked audit293/0/0. Exact leaf-support threshold, unequal-height transfer, adjacent-profile row counts and low-degree modulus support separation are formal. Signed/anisotropic/dyadic covering and proposed sparse menu are hand analysis. No proved determinant gain, independent useful equations, finite-root cost or random-target yield; no scientific numerical/LLL run or complete subexponential ECDLP algorithm."
+}

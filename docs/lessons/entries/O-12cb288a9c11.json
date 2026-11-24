@@ -1,0 +1,14 @@
+{
+  "applied": [],
+  "created": "2026-11-16T09:56:57Z",
+  "evidence": [
+    "docs/anisotropic-height-budget-20261116.md",
+    "docs/receipts/anisotropic-height-budget-20261116/gate001/_/status"
+  ],
+  "kind": "outcome",
+  "note": "15 generic laws and8 semantic checks compile; canonical293/0/0. No numerical run or positive determinant/independence/yield/full algorithm.",
+  "result": "partial",
+  "schema": "crypto.lesson/v1",
+  "scope": "selector-source",
+  "task": "Concentrated chart height eligibility, chain block counts and modulus support separation"
+}

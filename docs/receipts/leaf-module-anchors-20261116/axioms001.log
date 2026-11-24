@@ -1,0 +1,8 @@
+'CryptoLean.LeafModuleAnchors.lowest_mul_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.least_leaf_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.lift2Hom_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.projective_least_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.exists_nonzero_least_leaf' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.leafCode_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.leaf_code_curve_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.LeafModuleAnchors.nonzero_module_curve_cover' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,94 @@
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:55:15: warning: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, map_sub, map_pow, map_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:82:44: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W scalar₁ scalar₂ : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = EndpointCoefficients.endpointInX a b y Z V 0
+⊢ C scalar₂ *
+      ((C Z - C w * C V) ^ 2 * C T ^ 2 -
+          2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + 2 * C b * C V ^ 2) * C T * C W +
+        ((C Z * C w - C a * C V) ^ 2 - 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2) =
+    C scalar₂ *
+      ((C Z - C w * C V) ^ 2 * C T ^ 2 -
+          C 2 * ((C Z + C w * C V) * (C Z * C w + C a * C V) + C 2 * C b * C V ^ 2) * C T * C W +
+        ((C Z * C w - C a * C V) ^ 2 - C 4 * C b * (C Z + C w * C V) * C V) * C W ^ 2)
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:77:31: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b y w Z V T W scalar₁ scalar₂ : R
+hf : first (C a) (C b) X (C y) (C Z) (C V) = EndpointCoefficients.endpointInX a b y Z V 0
+hg : C scalar₂ * adjacent (C a) (C b) (C w) (C Z) (C V) (C T) (C W) = C (scalar₂ * adjacent a b w Z V T W)
+⊢ scalar₁ * W ^ 2 * (Z + -(y * V)) ^ 2 = scalar₁ * W ^ 2 * (Z - y * V) ^ 2
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:4: error(lean.unknownIdentifier): Unknown constant `Polynomial.constantCoeff_X`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:31: error(lean.unknownIdentifier): Unknown constant `Polynomial.constantCoeff_C`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:109:41: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b x y V W scalar₁ scalar₂ τ σ : R
+h :
+  ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 2).coeff 2 = C scalar₂ ∧
+    ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 2).coeff 1 =
+        2 * C scalar₂ * (C τ - X) * C V ∧
+      ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 2 =
+          2 * C scalar₂ * (C σ - X) * C W ∧
+        ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 1 =
+            4 * C scalar₂ * C σ * C W * (C τ - X) * C V - 2 * C scalar₂ * (2 * C τ * X + C a + X ^ 2) * C V * C W ∧
+          ((inTU (C a) (C b) (C x) (C y) X (C V) (C W) (C scalar₁) (C scalar₂) (C τ) (C σ)).coeff 1).coeff 0 =
+            2 * C scalar₂ * C σ * C W * (C τ - X) ^ 2 * C V ^ 2 -
+              2 * C scalar₂ * ((C τ + X) * (C τ * X + C a) + 2 * C b) * C V ^ 2 * C W
+⊢ constantCoeff (C scalar₂) = scalar₂ ∧
+    2 * constantCoeff (C scalar₂) * (constantCoeff (C τ) - constantCoeff X) * constantCoeff (C V) =
+        2 * scalar₂ * τ * V ∧
+      2 * constantCoeff (C scalar₂) * (constantCoeff (C σ) - constantCoeff X) * constantCoeff (C W) =
+          2 * scalar₂ * σ * W ∧
+        4 * constantCoeff (C scalar₂) * constantCoeff (C σ) * constantCoeff (C W) *
+                  (constantCoeff (C τ) - constantCoeff X) *
+                constantCoeff (C V) -
+              2 * constantCoeff (C scalar₂) * constantCoeff (2 * C τ * X + C a + X ^ 2) * constantCoeff (C V) *
+                constantCoeff (C W) =
+            2 * scalar₂ * (2 * τ * σ - a) * V * W ∧
+          2 * constantCoeff (C scalar₂) * constantCoeff (C σ) * constantCoeff (C W) *
+                  (constantCoeff (C τ) - constantCoeff X) ^ 2 *
+                constantCoeff (C V) ^ 2 -
+              2 * constantCoeff (C scalar₂) * constantCoeff ((C τ + X) * (C τ * X + C a) + 2 * C b) *
+                  constantCoeff (C V) ^ 2 *
+                constantCoeff (C W) =
+            2 * scalar₂ * (τ ^ 2 * σ - a * τ - 2 * b) * V ^ 2 * W
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:58: warning: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Polynomial.constantCoeff_apply, map_mul, map_sub, map_pow, map_ofNat, Polynomial.constantCoeff_X,
+    Polynomial.constantCoeff_C, sub_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:67: warning: This simp argument is unused:
+  sub_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Polynomial.constantCoeff_apply, map_mul, map_sub, map_pow, map_ofNat, Polynomial.constantCoeff_X,
+    Polynomial.constantCoeff_C, mul_zero, zero_mul, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:76: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Polynomial.constantCoeff_apply, map_mul, map_sub, map_pow, map_ofNat, Polynomial.constantCoeff_X,
+    Polynomial.constantCoeff_C, mul_zero, sub_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/RankTwoSourceAnchors.lean:114:85: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Polynomial.constantCoeff_apply, map_mul, map_sub, map_pow, map_ofNat, Polynomial.constantCoeff_X,
+    Polynomial.constantCoeff_C, mul_zero, sub_zero, zero_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

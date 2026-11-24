@@ -1,0 +1,177 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T16:24:35Z",
+ "id": "PCC-20261116-e8d73d",
+ "kind": "statement",
+ "producer": {
+  "commit": "26d7e97be7ef44a8c57f8e99dd2e5e31c5c0115e",
+  "model": "",
+  "session": "rank-two-source-anchors-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/RankTwoSourceAnchors.lean",
+    "sha256": "8ce39576c5520e2b829b96a912c4a19c357b8fd1a152e8722f91f64dc069527a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/rank-two-source-anchors-20261116-plan.md",
+    "sha256": "cb29278eabd9041217add8db1fcc357c676660761bced1971a4a1f7d999558dc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/rank-two-source-anchors-20261116.md",
+    "sha256": "8a82d8dfbf1441528acec7b4f908a1a3a0d795b758ef8e1e992c4dc9f10336b4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/RankTwoSourceAnchors20261116/ActualInstances.lean",
+    "sha256": "21e92628e4003f15802c76f9ea6e220b26587434fb9d22615c05274a2fa865a3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/RankTwoSourceAnchors20261116/Axioms.lean",
+    "sha256": "d0cf04802f5f405f6eada5875c1572d55365293f2c58368a6103bac5571d1d1d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/rank-two-source-anchors-20261116/publication001.json",
+    "sha256": "88dc608a8235666790121c05059dad067f56042f7366d212dfe8cbff77df48ab"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/actual002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/axioms001.log",
+    "sha256": "dcec8b02614ee167669bf1ff52f275d199efb95018ee9212f78cc4f1786bfb59"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-build001.log",
+    "sha256": "a442190a00af7d8ad3c40053bd812fceb7435df5d04ca70f4b960150d3be5bbe"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct001.log",
+    "sha256": "58c4430719d8c77307e6de6586cb2d9e9556e9f5f38608aacbddbc97b047b7e3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct002.log",
+    "sha256": "c9dd84c35d0d22ae4aa2952b93bb062709c90585bb6ff20373d0b2d93b27ddde"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct004.log",
+    "sha256": "8a07e0e860ac90cb29c986baebe9e577d989888125f2eedbbab9a970dd19f497"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct005.log",
+    "sha256": "11b27898468d7cd3117517d541c73ef7c1eec95ed2b9af2aa39402df0dbb8f68"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct006.log",
+    "sha256": "469ab87317bfcba1fa506709a0186a80c4e56579e61c103ab74ef29a00590225"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/owner-direct007.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/source-review001.json",
+    "sha256": "fbf5726eb809257a8e8d1722323e148ee6be7aff7dc93a3d9602d3fc64712468"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/audit-delta001.json",
+    "sha256": "ab58c40cec92842030996b68426146dd3a32d15e3729e21c0be63f946bb48f86"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/gate001/_/audit.log",
+    "sha256": "3ec0b25c131a06ff180f7475a67d149b983757a76e1a76e0127227508b182d31"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/gate001/_/sources.log",
+    "sha256": "23a0a7b676ada7a65d729f2529ead2bbe02d3016efd3be9d560b36a2f52d95fa"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/rank-two-source-anchors-20261116/gate-launch001.log",
+    "sha256": "fb3a518e62cfb72b2724ea36b54815e1bde5adf95f6f1ae0f17a2e90b7321eda"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Constant-multiplier rank-two original-source span; nonzero-second-multiplier curve code, zero branch retained; hand weighted/asymptotic transfer distinct.",
+ "statement": "Curve-dependent rank-two source audit:16 generic laws and4 actual applications compile, canonical local474/0/0. Actual T/U/w/V/W anchors recover the second multiplier, both chart offsets and both curve coefficients. The finite five-window curve-code cardinality bound(2T+1)^5 and bounded integer-anchor source cover compile. Zero second multiplier remains a first-equation-only free-chart branch. Full polynomial-row/weighted-norm/asymptotic transfer remains HAND; four-window selector is unimplemented and useful yield is absent. No numerical/scientific/native qualification/paid execution, independently signed verdict or complete subexponential ECDLP algorithm."
+}

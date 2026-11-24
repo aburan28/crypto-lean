@@ -1,0 +1,15 @@
+{
+  "new_owner_source_prose_findings": [],
+  "paths": [
+    "CryptoLean/Polynomial/MonicNormSelector.lean",
+    "CryptoLean/Polynomial/DoublingNormResidues.lean",
+    "docs/receipts/MonicNormSelector20261116/Axioms.lean",
+    "docs/receipts/MonicNormSelector20261116/MixedInstances.lean",
+    "docs/receipts/MonicNormSelector20261116/ActualInstances.lean",
+    "docs/monic-norm-selector-20261116-odd-point-plan002.md",
+    "docs/monic-norm-selector-20261116-plan.md",
+    "docs/monic-norm-selector-20261116-doubling-plan001.md"
+  ],
+  "old_raw_whitespace_reference": "docs/receipts/norm-saturated-interpolation-20261116/staged-whitespace001.json",
+  "no_recursive_copy_of_old_diagnostics": true
+}

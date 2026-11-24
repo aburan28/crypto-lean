@@ -1,0 +1,233 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T09:13:45Z",
+ "id": "PCC-20261116-2c3e0c",
+ "kind": "statement",
+ "producer": {
+  "commit": "4668dd6b663f178141551e96240b1f8b65dae966",
+  "model": "",
+  "session": "saturated-selector-prototype-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/launch.py",
+    "sha256": "a3ba54344b2396d0aba99f8e2d6d3ecb9ee15e1c93f0f2309c6aed2381f883b3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/metadata.py",
+    "sha256": "ed8c4553ea3e7805ce965da2c766c51f80774d3c8d9a86893edb39ec815f4fbe"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/pilot.py",
+    "sha256": "6dc5fb7bb39b2666ffeb49a24dd2821d669c1ec545a39ca686e1dcf0e68f4c77"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/test_launch_metadata.py",
+    "sha256": "f3d1c748cf439e971770177bffd023f34e87770a52b922fc6179286f48e11689"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/test_metadata.py",
+    "sha256": "ca64d9af9212208d727fa5ece152917a5400c1287677c9a8b72879f13be124d0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/verify.py",
+    "sha256": "3c0bf3db519d6db1bbd6428fcd8f24116166de28f770a807fc8a8f510cba9b2e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/worker.py",
+    "sha256": "69fcf64ea4a800e8f27880a7e609664a81685ccc51a1d52c75f235b83941c271"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/fixtures/public17.expected.json",
+    "sha256": "99d58a2df9659163c8ced8a0064fc71ee649faa7a99675ccc8a7db1f2465193f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/fixtures/public17.ordinary.json",
+    "sha256": "05f07866f8b1162a68119c4f68044a1a1576069810ffc546bf908400518e137b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/fixtures/public17.saturated.json",
+    "sha256": "e9859bc4db778f76817a9c34ec569ebdd9f9f125f694a79f8798de6df81e2147"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/fixtures/public17.subcritical.json",
+    "sha256": "62b880e474b9a9c6d5269d5461083aef5429d9ce434b09f112bcd290a5324f4d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/README.md",
+    "sha256": "1361b949b32c9715499792d62d95a509bda286a4ffb0008d013ccabb3a271b66"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/Dockerfile",
+    "sha256": "446b9e7c68a117836f840f25b8440fbb8714aa72730aa83c0e7f2d32fe9b7c89"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/base-image-metadata001.json",
+    "sha256": "96a005744384d29e55eac562ce33c760ca76b2391f7bdb4be1afee32b1ea6abc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/pilot-protocol.json",
+    "sha256": "77a2ee2dfc8f5752a7e9f80c0c5a4a95cc71a8bc1009a8946ebd769953dbdf8a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/saturated_selector_prototype_20261116/subcritical-protocol.json",
+    "sha256": "3c90d8a483e5269c6193b131d76cdcec695975d925a5a61457bf54a2d61a53f0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116.md",
+    "sha256": "3bd4dccacfb738acc5300326965b5f930ef23ada0418bb3a7472189fad2ea1c2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116-plan.md",
+    "sha256": "b2c46b7e4d9e79813ff28e0c22919a23bde9f382078d4ae6b23ab77ef9820011"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/flow.dot",
+    "sha256": "adf2cb8a3ee55a52bad2e42fe245c2a2e832d561b33a12fe680c302746fe0ac2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/flow.svg",
+    "sha256": "0de96a0e3573faa1448e886a49d7a1c9fc8c95da834f258db453fc2a94b1edd9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/report.pdf",
+    "sha256": "b44a64632b745c4efdb2804cf44bdc7f7092c27afac0c66887d15741a1e634f5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/report.typ",
+    "sha256": "a0c0edefdfd6e884383266a2010455bd7d1e59f9f1847b7281ea4e55a1883658"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/source-review001.json",
+    "sha256": "56b27a7c1052e70d6a24761dc999a2ae841c5372b006ed35d50506ad8afca547"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/saturated-selector-prototype-20261116/publication001.json",
+    "sha256": "f9ff92bffcc39f6d120fbd7681c5f50a70fda14d320fdd9c5ccd29fe52c9de96"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/saturated-selector-prototype-20261116/static005.json",
+    "sha256": "70d88732e35029a95992f5a1740de06d0b23b31695bf8dc040ec471c2f9eb471"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/saturated-selector-prototype-20261116/development-controls005.log",
+    "sha256": "fa3c3d43a6b47d5ccc1aacf0dff0a2eb8cbf71a8fa5c19ac4032e8b64ab725aa"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/saturated-selector-prototype-20261116/launcher-help002.log",
+    "sha256": "70df86664c2166bb930488fb673c0dac10183febf03aa555a495c90c1858dd76"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/saturated-selector-prototype-20261116/preclaim-preservation001.json",
+    "sha256": "6a5bda99cc37e2a56ac265c7cffe35fdd4b8f271a76d2705e754150df43544fe"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-9ae0eee1e8a0.json",
+    "sha256": "47aaef74c1885850f18fba0312cca48409f3e64b36505882fad15c75bf591b17"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-d71a5811f1e0.json",
+    "sha256": "ec7434a6f9dbcb9abb269ace83f2bc0f3610f7d426e64b213d8e8e12b7a390a0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-de5f3b35c890.json",
+    "sha256": "93133fdff3ed7e9e6d05e2967471e4e8bdebb03f07430158aade7e91bcc5951e"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Hand chart-coverage analysis and unexecuted bounded source; no new Lean/numerical proof, independent signed verdict or complete algorithm.",
+ "statement": "Subcritical translated rational charts have hand-derived universal covering bounds and a precise subexponential shrink window. Explicit local minors remain obstructed at balanced heights for length>=4. A capped end-to-end Sage source candidate and separate replay are unexecuted;7 Python/7 JSON files parse and9 generic development controls pass. No useful short-row, finite-root or random-target yield guarantee, numerical/LLL run or complete subexponential ECDLP algorithm."
+}

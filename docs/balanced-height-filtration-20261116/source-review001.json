@@ -1,0 +1,33 @@
+{
+  "primary": {
+    "title": "Practical Lattice-based Algorithms for Cryptanalysis",
+    "author": "Keegan Ryan",
+    "year": 2025,
+    "url": "https://escholarship.org/content/qt8bz3g5b6/qt8bz3g5b6.pdf",
+    "landing": "https://escholarship.org/uc/item/8bz3g5b6",
+    "sha256": "7e0bde57bdcaa791c801240ea7c30be7263861ad2329cf998f1c5628bad0eec3",
+    "reprint": "Chapter3 identifies itself as the full EUROCRYPT2025 reprint",
+    "reviewed": [
+      "Printed pp55--60, problem definition, HHG lemma6, heuristic3 and exact scope of generic impossibility context.",
+      "Printed pp61--68, ideal powers, Algorithm5, optimal fixed-monomial lattice theorem3.",
+      "Printed pp88--89, variable-growth/large-lattice limitation and future work."
+    ]
+  },
+  "kb": "MCP unavailable; exact pinned Mathlib and owner plus primary fallback",
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "prior_owner": "CryptoLean.Semaev.S3; frozen character-parity alternatives001, unchanged",
+  "mathlib_interfaces": [
+    "MvPolynomial.coeff_mul",
+    "AddMonoidAlgebra.coeff_add",
+    "Finsupp.add_apply",
+    "Finset.dvd_sum",
+    "Ideal.span_le",
+    "Ideal.mul_le",
+    "pow_le_pow_left'",
+    "Int.natAbs_dvd_natAbs",
+    "Nat.le_of_dvd"
+  ],
+  "bounded_resultant_search": "Mathlib/RingTheory/Polynomial/Resultant: generic resultant and quadratic discriminant found, no specialized two-quadratic Bezout witness found; no absence/novelty claim",
+  "access_receipt": "source-access001.json",
+  "new_numerical_or_lll_execution": false
+}

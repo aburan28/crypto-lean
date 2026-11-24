@@ -1,0 +1,8 @@
+{
+  "archival_whole_diff_exit": 2,
+  "owned_source_prose_exit": 0,
+  "raw_compiler_whitespace_retained": true,
+  "archival_path": "docs/receipts/anisotropic-height-budget-20261116/gate001/_/build.log",
+  "reason": "unaltered compiler warning suggestions contain trailing spaces; preserve raw evidence",
+  "owned_findings": ""
+}

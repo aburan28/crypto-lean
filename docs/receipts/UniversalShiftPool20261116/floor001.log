@@ -1,0 +1,55 @@
+Finset.sum_image.{u_1, u_2, u_4} {ι : Type u_1} {κ : Type u_2} {M : Type u_4} [AddCommMonoid M] {f : ι → M}
+  [DecidableEq ι] {s : Finset κ} {g : κ → ι} : Set.InjOn g ↑s → ∑ x ∈ Finset.image g s, f x = ∑ x ∈ s, f (g x)
+Finset.sum_sub_distrib.{u_1, u_5} {ι : Type u_1} {G : Type u_5} {s : Finset ι} [SubtractionCommMonoid G] (f g : ι → G) :
+  ∑ x ∈ s, (f x - g x) = ∑ x ∈ s, f x - ∑ x ∈ s, g x
+Finset.sum_const.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [AddCommMonoid M] (b : M) :
+  ∑ _x ∈ s, b = s.card • b
+addOrderOf_dvd_iff_nsmul_eq_zero.{u_1} {G : Type u_1} [AddMonoid G] {x : G} {n : ℕ} : addOrderOf x ∣ n ↔ n • x = 0
+Nat.le_of_dvd {m n : ℕ} (h : 0 < n) : m ∣ n → m ≤ n
+Equiv.subtypePiEquivPi.{v, u_1} {α : Sort u_1} {β : α → Sort v} {p : (a : α) → β a → Prop} :
+  { f // ∀ (a : α), p a (f a) } ≃ ((a : α) → { b // p a b })
+Fintype.card_congr.{u_3, u_4} {α : Type u_3} {β : Type u_4} [Fintype α] [Fintype β] (f : α ≃ β) :
+  Fintype.card α = Fintype.card β
+Fintype.card_fun.{u_1, u_2} {α : Type u_1} {β : Type u_2} [DecidableEq α] [Fintype α] [Fintype β] :
+  Fintype.card (α → β) = Fintype.card β ^ Fintype.card α
+Fintype.card_subtype_compl.{u_1} {α : Type u_1} [Fintype α] (p : α → Prop) [Fintype { x // p x }]
+  [Fintype { x // ¬p x }] : Fintype.card { x // ¬p x } = Fintype.card α - Fintype.card { x // p x }
+docs/receipts/UniversalShiftPool20261116/Floor.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Fintype.card_subtype_iff`
+Fintype.card_subtype.{u_1} {α : Type u_1} [Fintype α] (p : α → Prop) [Fintype { a // p a }] [DecidablePred p] :
+  Fintype.card { x // p x } = {x | p x}.card
+Finset.card_biUnion_le.{u_1, u_4} {ι : Type u_1} {M : Type u_4} [DecidableEq M] {s : Finset ι} {t : ι → Finset M} :
+  (s.biUnion t).card ≤ ∑ a ∈ s, (t a).card
+Finset.card_lt_card.{u_1} {α : Type u_1} {s t : Finset α} (h : s ⊂ t) : s.card < t.card
+docs/receipts/UniversalShiftPool20261116/Floor.lean:23:7: error(lean.unknownIdentifier): Unknown constant `Finset.card_lt_card_iff`
+docs/receipts/UniversalShiftPool20261116/Floor.lean:24:7: error(lean.unknownIdentifier): Unknown constant `Finset.exists_mem_not_mem_of_card_lt_card`
+Finset.card_filter_le_iff.{u_1} {α : Type u_1} (s : Finset α) (P : α → Prop) [DecidablePred P] (n : ℕ) :
+  (Finset.filter P s).card ≤ n ↔ ∀ s' ⊆ s, n < s'.card → ∃ a ∈ s', ¬P a
+docs/receipts/UniversalShiftPool20261116/Floor.lean:28:50: error(lean.unknownIdentifier): Unknown identifier `P`
+
+Note: It is not possible to treat `P` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+docs/receipts/UniversalShiftPool20261116/Floor.lean:35:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype { f // ∀ (j : Fin Q), p (f j) }
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/UniversalShiftPool20261116/Floor.lean:36:6: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin Q → { x // p x })
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/receipts/UniversalShiftPool20261116/Floor.lean:36:44: error: stuck at solving universe constraint
+  ?u.24 + 1 =?= max (max 1 ?u.26) ?u.27
+while trying to unify
+  Equiv.{?u.25 + 1, ?u.24 + 1} (Subtype.{imax ?u.26 ?u.27} fun f => ∀ (a : ?m.14), ?m.16 a (f a))
+    ((a : ?m.14) → Subtype.{?u.27} fun b => ?m.16 a b) : Type (max ?u.25 ?u.24)
+with
+  Equiv.{max 1 (imax ?u.26 ?u.27), max (max 1 ?u.26) ?u.27}
+    (Subtype.{imax ?u.26 ?u.27} fun f => ∀ (a : ?m.14), ?m.16 a (f a))
+    ((a : ?m.14) → Subtype.{?u.27} fun b => ?m.16 a b) : Sort (max (max 1 (imax ?u.26 ?u.27)) (max 1 ?u.26) ?u.27)
+docs/receipts/UniversalShiftPool20261116/Floor.lean:36:44: error: stuck at solving universe constraint
+  ?u.25 + 1 =?= max 1 (imax ?u.26 ?u.27)
+while trying to unify
+  Equiv.{?u.25 + 1, ?u.24 + 1} (Subtype.{imax ?u.26 ?u.27} fun f => ∀ (a : ?m.14), ?m.16 a (f a))
+    ((a : ?m.14) → Subtype.{?u.27} fun b => ?m.16 a b) : Type (max ?u.25 ?u.24)
+with
+  Equiv.{max 1 (imax ?u.26 ?u.27), max (max 1 ?u.26) ?u.27}
+    (Subtype.{imax ?u.26 ?u.27} fun f => ∀ (a : ?m.14), ?m.16 a (f a))
+    ((a : ?m.14) → Subtype.{?u.27} fun b => ?m.16 a b) : Sort (max (max 1 (imax ?u.26 ?u.27)) (max 1 ?u.26) ?u.27)

@@ -1,0 +1,61 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:116:2: error: No goals to be solved
+CryptoLean/Polynomial/TwoChartCoefficients.lean:119:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommRing (P4 R)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:126:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  CommRing (P4 R)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:125:83: error: unsolved goals
+case refine_1
+R : Type u_1
+inst✝ : CommRing R
+a b τ σ : R
+⊢ CommRing (P4 R)
+CryptoLean/Polynomial/TwoChartCoefficients.lean:128:13: warning: declaration uses `sorry`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:128:26: warning: This simp argument is unused:
+  h.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [shiftedModel, h.2.1, h.2.2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:128:30: warning: This simp argument is unused:
+  h.2.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [shiftedModel, h.1, h.2.2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:128:36: warning: This simp argument is unused:
+  h.2.2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [shiftedModel, h.1, h.2.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:135:63: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+b x y w V T W : R
+hs : firstSum x y (-(x + y) * V) V = 0
+hf : first (-(x ^ 2 + x * y + y ^ 2)) b x y (-(x + y) * V) V = 0
+⊢ adjacentSum w ((-y + -x) * V) V T W * W * first (-y ^ 2 + (-(x * y) + -x ^ 2)) b x y ((-y + -x) * V) V -
+      firstSum x y ((-y + -x) * V) V * adjacent (-y ^ 2 + (-(x * y) + -x ^ 2)) b w ((-y + -x) * V) V T W =
+    0
+CryptoLean/Polynomial/TwoChartCoefficients.lean:142:18: warning: This simp argument is unused:
+  hs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [primitive, hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:142:21: warning: This simp argument is unused:
+  hf
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [primitive, hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:146:32: error: unexpected token 'λ'; expected '_' or identifier

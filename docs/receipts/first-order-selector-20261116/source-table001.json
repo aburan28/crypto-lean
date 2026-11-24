@@ -1,0 +1,12 @@
+{
+  "scope": "AST/literal source-table translation only; selector not imported/executed",
+  "source_sha256": "3e06648f3f1b6e1ad8a8153b4410035593a3e2d4c272a8a0fda91af27e704096",
+  "source_table_columns": 20,
+  "keys_unique": true,
+  "keys_match_formal_model": true,
+  "projective_degree_every_column": 2,
+  "formal_probe": "docs/receipts/FirstOrderSelector20261116/PythonTableProbe001.lean",
+  "probe_sha256": "a0df898f2dc2d202db4b22c13142a129686bc955af0fe76302210ecf9b77378d",
+  "unsupported_operations_rejected": true,
+  "scientific_execution": false
+}

@@ -1,0 +1,212 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T18:38:06Z",
+ "id": "PCC-20261116-bda7ce",
+ "kind": "statement",
+ "producer": {
+  "commit": "ecadefd5be7fb4f5ec72a1a51415374f4a474235",
+  "model": "",
+  "session": "norm-saturated-interpolation-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/NormSaturatedInterpolation.lean",
+    "sha256": "11dfd57bf98a1313fc3828176a1d3d8b330aba83f2fb1a2115222bfe1c87fdb3"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/NormSaturatedInterpolation20261116/ActualInstances.lean",
+    "sha256": "56ca213018f117e2a3bffaae27bd15fc8dd1d257e137489c895cad8eb2091975"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/NormSaturatedInterpolation20261116/Axioms.lean",
+    "sha256": "de35996ad7bf584272e75023b240fa28c2db1793d8b38e4ec111858df7750721"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/norm-saturated-interpolation-20261116-plan.md",
+    "sha256": "afba1cd3b8b44f52ada885632efcc67f1e90524c6c21fe22e525d5d4074d0f98"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/norm-saturated-interpolation-20261116-quotient-plan001.md",
+    "sha256": "6d2a7e69bbecb4f6c8e9e517a07b9fcdc9862e0ba17ce564472177f8f9cb8171"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/norm-saturated-interpolation-20261116.md",
+    "sha256": "8dfb83f7a8db239a95794c528d0962aff59c8e88ae23ca704b9c872c8a3c2c62"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/norm-saturated-interpolation-20261116/publication001.json",
+    "sha256": "5d9d1e3d639bb1fa4005448d5aa8fe57dc0c0c53e709f1b2870264499e1a86ad"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/archival-whitespace001.log",
+    "sha256": "3d3bb692da1320b5fa71856024cbb7b68acabc14968420214f122bb4555a4d60"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/audit-delta001.json",
+    "sha256": "c20ccccf21aeaf541fb67e61700ebd89c7d45c8876680e04d0586422a302b85f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/axioms001.log",
+    "sha256": "cc649d604f997e35116d9c7f41ae8026ebf57965ed0ebcc8784ac488aa3068c2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/direct001.log",
+    "sha256": "7394cb7cdb802f6b800ab48e522698a81c097f3c9bd9a9bd8f780be85ec42c02"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/direct002.log",
+    "sha256": "a26c1801c17722b84c284c66f8ae34522835bb919dbf57b507b3563b5724fb5e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/direct003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/direct004.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/direct005.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate-launch001.log",
+    "sha256": "4ac4cdb8302b820e218d41c39a3748213cc490b0160912d6330f4744812bf996"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/audit.log",
+    "sha256": "57c9e8fe77c352e990ed246ece0bb6f5aa0d5a7523783f2617ff0b81349a9085"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/build.log",
+    "sha256": "de3d18be9e2a8e7d393f75eaa7fa35d9355c30c77328d0b9ac02cd826b020cca"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/cache.log",
+    "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/source-target.log",
+    "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/sources.log",
+    "sha256": "5c86864e1bc93f4cb602594ad3813c38deb3dc601e08740a4ac2af4fbda038ad"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/owner-build001.log",
+    "sha256": "5eafd2977600504294ac57e6ede033abe70b8bb4f2eeca21089d64cbe55010c8"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/preservation-pre001.json",
+    "sha256": "e8301643c88235fb87607c8d77d17a2319445faa79283e26ff3440b581ced11a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/source-review001.json",
+    "sha256": "571b317dd01071ef58cf5e52bc06e7ae73d10a0a298282e573e4bdb5c49738e0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/staged-whitespace001.json",
+    "sha256": "a204659f540a45dc3199f9895dfbbc0ac40a35a4e23c0fb7d851fb24f210719f"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/norm-saturated-interpolation-20261116/whitespace001.json",
+    "sha256": "2ec6526cf89053fa493a3fd770e7350c3f55d1f2f15b083868b5a90863ff56fd"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Generic polynomial source f82857c505ad0bd0957ca317600e098fcc829f24, default Lean4.35/Mathlib pin, checked exact source applications and canonical all-tracked gate001; HAND scopes explicitly excluded.",
+ "statement": "Local source/audit records report24 generic laws and5 symbolic applications for the actual odd-cubic tight norm certificate, signed affine zero locus, nodal-padding controls and a bare cubic-congruence false positive; canonical597/0/0. Geometric point-sum bridge, fast colored extraction, useful original yield and complete classical subexponential prime-field ECDLP remain open. No scientific execution or independent signed verification."
+}

@@ -1,0 +1,226 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T11:11:15Z",
+ "id": "PCC-20261116-0327b2",
+ "kind": "statement",
+ "producer": {
+  "commit": "abb7dad25da8b8c2592f7894bb2846a18bb215d7",
+  "model": "",
+  "session": "first-order-selector-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Combinatorics/FieldRectangles.lean",
+    "sha256": "fc2f0c44ef70beaccbe82102370d19ead2f5345decf138cb088ba6ecf84ee371"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/ShortCoefficientWindows.lean",
+    "sha256": "26f351cb82df81e758e4bf61a1057ed72e8177c69b66f39fb221d2680a4f0c5b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/EndpointCoefficients.lean",
+    "sha256": "56f34e929054a5b632c23aa8c7cf05712ff7033cde5983a1001425f2727c98ef"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/RankOneSelector.lean",
+    "sha256": "594af114ab99c6c46bb5dd1768cce786db599b73b3fcb36a51b77ae29b28487a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/WeightedRowCertificate.lean",
+    "sha256": "05bbaa227a17c47d42e2aa1cd32cebaef031d5d3431463b46b2a9ec0cd236323"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116-plan.md",
+    "sha256": "4539f5f8af60a90856c7cf774b0587b52b5cb65f4af97e076da5ce274fbab4de"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116.md",
+    "sha256": "fb1d8eb4d3a2e56df60f0d159377206fea7be13187d2c7ad3c17d3b7484cb957"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_first_selector_20261116/selector.py",
+    "sha256": "3e06648f3f1b6e1ad8a8153b4410035593a3e2d4c272a8a0fda91af27e704096"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_first_selector_20261116/translate_source_table.py",
+    "sha256": "b0f2e0ef5f42cda588fd7881e66bcad0dd207fa2fc024b4838f5e859c82b63ae"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "research/coefficient_first_selector_20261116/README.md",
+    "sha256": "bbe14c03a60b5204bf749db220fd1e802fbc2de07c0061c87840787c2e343066"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/FirstOrderSelector20261116/ActualInstances.lean",
+    "sha256": "2eebd382b4e88f0f155da56aa5c58d843e3b2e1e47384b2297a880098bd7ecc1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/FirstOrderSelector20261116/PythonTableProbe001.lean",
+    "sha256": "a0df898f2dc2d202db4b22c13142a129686bc955af0fe76302210ecf9b77378d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/FirstOrderSelector20261116/Axioms.lean",
+    "sha256": "34c09f82577ab95a39dc4e67f0964cdb65100b60a92aca2497aec7036974b7ba"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/O-3a1dc3f7e294.json",
+    "sha256": "5d4810b2e8ab8a5f724f61ac6a9ba3c6d6ccce8c9eaaf3204fb769de199a8cc2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/lessons/entries/L-3bd510416200.json",
+    "sha256": "718883fe163f68a68e0ef3b8a2c9783094e66b4f8ec8966d39f2e4499f447ded"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/actual001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/python-table001.log",
+    "sha256": "1d9a2b3797ef639f8cefd0439ddc232e520d8e48de68e2c429b0014c2d6bd27d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/axioms001.log",
+    "sha256": "291476a5b8efbc85d089ac753e8742be0168945375e26fc78b73b2ea2a9deb8b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/source-static002.json",
+    "sha256": "4a4572df47310f66010ab804b0287e3a7926faffc36aa151ec7ca3dac5f5c388"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/source-table001.json",
+    "sha256": "3b892ff1c47a4ba710a5618e47e14f719716a5fe69a9e6fa52fe461968cd3140"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/gate-launch001.log",
+    "sha256": "c22080e776662bd4cbce7a5a5e07936965773142bda7924885b0ab23a1a5287d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/gate001/_/audit.log",
+    "sha256": "d703882f644fd4509006da0c0d4425b9ffcac7b28c59bea705dda6ea5beeff84"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/first-order-selector-20261116/gate001/_/sources.log",
+    "sha256": "e84dd409eab9b916b1c95ac2f86ff72e5bc8ea58af7bad0cc18cd5244376decc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/source-review001.json",
+    "sha256": "39495e84335638813584d1a77eb19d2762b1742bada3243d25bf55ff596f10b0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/publication001.json",
+    "sha256": "2e49d0f759e5fe9194d9707164c76798ed90b87f91a49734a4c015abb6ad83d5"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/flow.dot",
+    "sha256": "011c677c704193384034594966d4935ca33e6b54c4261f54e3c0425246d7647c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/flow.svg",
+    "sha256": "531314fddf16857a93d05bbd71f1b931253a15257873bba4c0358f955cdc07d9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/report.typ",
+    "sha256": "5361cdf1f5c16a90f69998207cd27be1d32b6b17ad5d304c3a43f553b5f46554"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/first-order-selector-20261116/report.pdf",
+    "sha256": "7c70e1d436d0dc655dd0e2a4865b240708e89d3449421a75a352a4e8aa4c78ef"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Declared pZ^N+ZF(tau) block with positive weights and two anchor identities; no higher-rank or arbitrary saturation generalization.",
+ "statement": "Coefficient-first selector package:44 generic laws,5 actual symbolic declarations and1 AST-translated coefficient-table equality compile; canonical local all-tracked audit347/0/0. Complete existence search for a nonzero weighted-L1-short row in the declared one-generator modular family, centered minimality, exact endpoint coefficients and bounded-root integer vanishing are formal. Candidate-cost and uniform-offset rarity asymptotics are hand analysis. Python control flow remains unverified and unexecuted. No useful equation independence, global chart coverage, original decomposition yield or complete subexponential ECDLP algorithm."
+}

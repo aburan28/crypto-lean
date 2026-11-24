@@ -1,0 +1,317 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-16T19:21:10Z",
+ "id": "PCC-20261116-c3231e",
+ "kind": "statement",
+ "producer": {
+  "commit": "401c61c5d756a1467802ff13ac76d0befcaea8fa",
+  "model": "",
+  "session": "monic-norm-selector-20261116"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/MonicNormSelector.lean",
+    "sha256": "fab510d0402792cf7cd852ce6d8d8ce7741875a4a4a870a5f1292b125251a999"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "CryptoLean/Polynomial/DoublingNormResidues.lean",
+    "sha256": "ee8ab1b06b0447c1e0222c459b569f29d3957fad1bb16184b18b555051820b25"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/MonicNormSelector20261116/ActualInstances.lean",
+    "sha256": "16e36a2f5edc916f051837f57ba171a1e25c3bfd51b9aa5e17c4d6580806ef52"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/MonicNormSelector20261116/MixedInstances.lean",
+    "sha256": "2ce80aceec02b7ed93b8a1c08bf4a7e75fcbd1b537af3a4292f7cfb40eec94a9"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/MonicNormSelector20261116/Axioms.lean",
+    "sha256": "925ff1b74fafee5c5a838b6080877f50df5047fe3fa4a83b6c53ae87a67f40ee"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/monic-norm-selector-20261116-plan.md",
+    "sha256": "8258c4b5a40227dba3ae292d973d1299295c8d96f91a9b6af332ef02d365af46"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/monic-norm-selector-20261116-doubling-plan001.md",
+    "sha256": "d5eecc3c62a5dc26ad37b2591ad6843040ceedc5978cc278af6850e8355453df"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/monic-norm-selector-20261116-odd-point-plan002.md",
+    "sha256": "db319a390c789f25868509da600aea8a05b421b70abac0d9555c474563eded70"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/monic-norm-selector-20261116.md",
+    "sha256": "cca6d701a01eb9e8bd3b6b04f1f50e8659c8c6061fe3e1689d60e9ad447ea3b1"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/monic-norm-selector-20261116/publication001.json",
+    "sha256": "d875ef6463cc05b520fc2b5ffdf67462d77b4e106b9a4ed54f5d4d06e53ccd78"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/actual001.log",
+    "sha256": "5e092a24fa0335cbcb6a04b8e265611064454daa44cb054ede05e9753177efcc"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/actual002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/audit-delta001.json",
+    "sha256": "1312b90ee60ce2673a435d4cd1027174f71a50373cd4595975fed0b49cda0271"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/axioms001-status001.json",
+    "sha256": "11a7c383b68d33205be5d6014637a447d3f40e3bf1caa1779fab479160b1add4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/axioms001.log",
+    "sha256": "7671211a2ab2457d6c45f18a6167f30e1ebf295f9cc5d985561c796e04ebb478"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/direct001.log",
+    "sha256": "aba061e47bf3c658661afd1c2dcf7a94af07eae243606de2a2a6804cbe422ad2"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/direct002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate-launch001.log",
+    "sha256": "c9f783b37dc82e80f7c42b722273dd7d4a581a19d313a03400be5678d85480ab"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001-exit001.json",
+    "sha256": "0e2f8edd20786099f326234d9b5c38dfd84a6c5a6380a0ed124f2b009213794d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/audit.log",
+    "sha256": "c04c71324f260ee2cee3c8813abdb9ac7d2d400c7fa26b20cbc58119fe637d19"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/build.log",
+    "sha256": "53970639e05aae58cf1948a27a1bebdff70b6dbf43170d9f1c37ea6c78f3627c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/cache.log",
+    "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/source-target.log",
+    "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/sources.log",
+    "sha256": "a4e236a5061eaf2363357944c34fa6a642f56954ad6d444cb9c51cd69098cb58"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/gate001/_/status",
+    "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/mixed001.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/mixed002-status001.json",
+    "sha256": "081dac6edea755b4416ec9759bdc1237b9eedfd92ad75ef8f836b3576fcc1689"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/mixed002.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/owner-build001.log",
+    "sha256": "6be4f8d187ba76a4a940b4a3c0e44447bf999cf2e8f9a3ef5ceb077f77e9e347"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/pr25-scheduled1904-001.json",
+    "sha256": "8d872873c8941f628f811df603672f9ec124d284d16271c87589fe3cf654886c"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/preservation-pre001.json",
+    "sha256": "d93b5ffbac428b575d7582e9a2e88c5061fe9d82d28ba72db38bb54a1105db2a"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-build001.log",
+    "sha256": "523b2519e7344f91c77f8606a4dbd4cb7884828002c7babc7032ac7dc234dd88"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct001.log",
+    "sha256": "547c4af69fac854056f8d3b703a232b67113da65a46bf6554104f9d21febd96d"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct002.log",
+    "sha256": "20e108fe018d05d2ab1eeda7d8d2d58f998f2a44f6ccdf22c300cd3f84ad39aa"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct003.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct004.log",
+    "sha256": "c7598c37e776327c1012260cfcf0b8f5fec4aaba9692cabc30a716b237ca0984"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct005.log",
+    "sha256": "048fc20d92960a71a9a7a9e961ed812c8470400ba40715673fbc6f6e4579e265"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct006.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/residue-direct007.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/source-review001.json",
+    "sha256": "36637f9eb68f589ed9cfc5d3c50159dc8cb370d8718c230630ed8c052fa2ae69"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/staged-whitespace001.json",
+    "sha256": "a852ad989b5ed68ff98c3e66cd2131cfc0152566fbc93e69daf1bb8d4c765d0b"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/staged-whitespace002.json",
+    "sha256": "78f637eefd246d3a53ab862e40cc09fc573781901d09668e64ac7f92bafe7b4e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/monic-norm-selector-20261116/whitespace001.json",
+    "sha256": "02cebd86942062a3a21fbe158c235fa8ec6d85311613932e26a3043eb451dec1"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "Finalsource11ce031acbe1139fed92bf44d38f2f07e5b113f0; actual short model/characteristic!=2/nonzero common odd-annihilated point hypotheses, explicit normal-form/filter hypotheses, default Lean4.35/Mathlib pin. HAND runtime/dimension/higher-adic hypotheses and complete algorithm excluded.",
+ "statement": "Local source/audit records report complete dominant-monic tight norm postprocessing, unique supplied-row color filters, and an actual Mathlib odd-subgroup all-tuples cubic-square-residue obstruction with degree2 witnesses, including mixed alphaG+betaH inputs.29 owner laws+7 symbolic applications; canonical635/0/0. Fast nonzero discovery, full norm zero-sum bridge, useful original yield and complete classical subexponential prime-field ECDLP remain open. No scientific execution or independent signed verdict."
+}

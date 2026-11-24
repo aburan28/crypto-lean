@@ -1,0 +1,13 @@
+import CryptoLean.Polynomial.TwoChartCoefficients
+#print axioms CryptoLean.TwoChartCoefficients.x_square
+#print axioms CryptoLean.TwoChartCoefficients.scalar_square_coeffs
+#print axioms CryptoLean.TwoChartCoefficients.xy_coeffs
+#print axioms CryptoLean.TwoChartCoefficients.leaf_anchors
+#print axioms CryptoLean.TwoChartCoefficients.shifted_leaf_anchors
+#print axioms CryptoLean.TwoChartCoefficients.projective_anchor
+#print axioms CryptoLean.TwoChartCoefficients.exact_source_anchors
+#print axioms CryptoLean.TwoChartCoefficients.exceptional_raw_zero
+#print axioms CryptoLean.TwoChartCoefficients.recover_two_parameters
+#print axioms CryptoLean.TwoChartCoefficients.exceptional_s3_square
+#print axioms CryptoLean.TwoChartCoefficients.exceptional_s3_iff
+#print axioms CryptoLean.TwoChartCoefficients.p4CommRing

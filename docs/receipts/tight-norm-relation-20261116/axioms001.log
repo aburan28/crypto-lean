@@ -1,0 +1,15 @@
+'CryptoLean.TightNormRelation.ideal_eq_of_le_equal_quotient_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.TightNormRelation.coprime_quotient_dimension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.rowFunction_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.rowFunction_mem_pointIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.pointIdeals_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.tight_row_ideal_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.point_sum_of_principal_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.tight_row_sum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.short_norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.short_tight_row_sum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.short_capped_row_sum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.recover_nat_mixed_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.TightNormRelation.recover_from_short_tight_row' depends on axioms: [propext, Classical.choice, Quot.sound]

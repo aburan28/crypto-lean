@@ -1,0 +1,42 @@
+⚠ [3138/3143] Replayed CryptoLean.Combinatorics.UniversalPools
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Data.Fintype.BigOperators` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Logic.Equiv.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/UniversalPools.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3139/3143] Replayed CryptoLean.Combinatorics.FieldRectangles
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Data.Int.Interval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Combinatorics/FieldRectangles.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3140/3143] Replayed CryptoLean.Polynomial.BalancedFiltration
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.RingTheory.Ideal.Operations` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/BalancedFiltration.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3142/3143] Replayed CryptoLean.Polynomial.ShortCoefficientWindows
+warning: CryptoLean/Polynomial/ShortCoefficientWindows.lean: imports `Mathlib.Data.ZMod.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3143/3143] Built CryptoLean.Polynomial.RankOneSelector (2.8s)
+warning: CryptoLean/Polynomial/RankOneSelector.lean: imports `Mathlib.Data.ZMod.ValMinAbs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: CryptoLean/Polynomial/RankOneSelector.lean:26:0: automatically included section variable(s) unused in theorem `CryptoLean.RankOneSelector.centered_norm_minimal`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Polynomial/RankOneSelector.lean:127:0: automatically included section variable(s) unused in theorem `CryptoLean.RankOneSelector.selected_sound`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Polynomial/RankOneSelector.lean:160:0: automatically included section variable(s) unused in theorem `CryptoLean.RankOneSelector.centered_nonzero`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: CryptoLean/Polynomial/RankOneSelector.lean:167:0: automatically included section variable(s) unused in theorem `CryptoLean.RankOneSelector.centered_integer_witness`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (3143 jobs).

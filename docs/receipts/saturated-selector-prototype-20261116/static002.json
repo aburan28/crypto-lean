@@ -1,0 +1,30 @@
+{
+  "scope": "source parsing only; no Sage worker/curve/LLL executed",
+  "files": [
+    {
+      "path": "research/saturated_selector_prototype_20261116/launch.py",
+      "sha256": "085cdd0bfd02dfaecb5923ce0109090675a43ca7e0aaa7c7624cf58e956d72fe",
+      "syntax": "parsed"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/metadata.py",
+      "sha256": "1b85ff065201b222ce2c68552845f41423ecdc01da48e4c569e9e57f6c7b386f",
+      "syntax": "parsed"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/test_metadata.py",
+      "sha256": "ca64d9af9212208d727fa5ece152917a5400c1287677c9a8b72879f13be124d0",
+      "syntax": "parsed"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/verify.py",
+      "sha256": "3c0bf3db519d6db1bbd6428fcd8f24116166de28f770a807fc8a8f510cba9b2e",
+      "syntax": "parsed"
+    },
+    {
+      "path": "research/saturated_selector_prototype_20261116/worker.py",
+      "sha256": "c72e0717f22556785419136142d35f3cf4db090f0deaf2b2b57b98b98c197392",
+      "syntax": "parsed"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "action": "remove forced common denominator factors with an explicit original-ideal witness, then charge primitive profile and coverage before implementing a driver",
+  "created": "2026-11-16T11:54:27Z",
+  "evidence": [
+    "docs/distinct-generator-elimination-20261116.md",
+    "CryptoLean/Polynomial/CurveParameterElimination.lean"
+  ],
+  "kind": "lesson",
+  "schema": "crypto.lesson/v1",
+  "scope": [
+    "research"
+  ],
+  "trigger": "parameter elimination changes a projective certificate family",
+  "why": "The adjacent S3 b-free combination drops profile4,2 to3,2 but still forces polynomial universal coverage under L1<p; adaptive coverage is a separate question."
+}

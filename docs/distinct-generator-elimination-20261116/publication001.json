@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-16T12:03:32.083954+00:00",
+  "source_commit": "e346d3fa141b483dd2ce835b46363d48718cdc86",
+  "canonical_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "theorems": 389,
+    "failing": 0,
+    "trusted_native": 0,
+    "receipt": "docs/receipts/distinct-generator-elimination-20261116/gate001/_/status"
+  },
+  "new_named_owner_laws": 20,
+  "actual_declarations": 5,
+  "generated_definition_equations": 1,
+  "named_axioms": "standard only",
+  "source_review": "docs/receipts/distinct-generator-elimination-20261116/source-review001.json",
+  "adaptive_anchor_search_formalized": false,
+  "adaptive_yield_count_formalized": false,
+  "zero_branch_original_equations_retained": true,
+  "useful_equation_independence_proved": false,
+  "complete_algorithm_criterion_met": false,
+  "numerical_cases": 0,
+  "lll_runs": 0,
+  "native_qualification_runs": 0,
+  "paid_jobs": 0,
+  "independent_signed_verdict": false,
+  "identity_certificate": false,
+  "previous_frozen_subjects": 208,
+  "previous_ledger_rows": 15,
+  "remaining_budget": "unknown; no launch"
+}

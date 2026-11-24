@@ -1,0 +1,34 @@
+{
+  "baseline": 665,
+  "current": 684,
+  "delta": 19,
+  "owner_laws": 13,
+  "actual_applications": 4,
+  "generated_or_maintained_equations": 2,
+  "generated_names": [
+    "CryptoLean.TightNormRelation.rowFunction.eq_1",
+    "WeierstrassCurve.Affine.CoordinateRing.quotientXYIdealEquiv.congr_simp"
+  ],
+  "added": [
+    "CryptoLean.TightNormRelation.coprime_quotient_dimension",
+    "CryptoLean.TightNormRelation.ideal_eq_of_le_equal_quotient_dimension",
+    "CryptoLean.TightNormRelation.pointIdeals_coprime",
+    "CryptoLean.TightNormRelation.point_sum_of_principal_product",
+    "CryptoLean.TightNormRelation.recover_from_short_tight_row",
+    "CryptoLean.TightNormRelation.recover_nat_mixed_relation",
+    "CryptoLean.TightNormRelation.rowFunction.eq_1",
+    "CryptoLean.TightNormRelation.rowFunction_mem_pointIdeal",
+    "CryptoLean.TightNormRelation.rowFunction_nonzero",
+    "CryptoLean.TightNormRelation.short_capped_row_sum_zero",
+    "CryptoLean.TightNormRelation.short_norm_eq",
+    "CryptoLean.TightNormRelation.short_tight_row_sum_zero",
+    "CryptoLean.TightNormRelation.tight_row_ideal_product",
+    "CryptoLean.TightNormRelation.tight_row_sum_zero",
+    "TightNormActual.empty_affine_row_control",
+    "TightNormActual.horizontal_actual_group_relation",
+    "TightNormActual.repeated_point_not_coprime",
+    "TightNormMixedActual.colored_mixed_tight_row_recovers",
+    "WeierstrassCurve.Affine.CoordinateRing.quotientXYIdealEquiv.congr_simp"
+  ],
+  "removed": []
+}

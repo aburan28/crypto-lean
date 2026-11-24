@@ -1,0 +1,11 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:101:63: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+A B C₀ : R
+e : P4 R →+* R[X][X] := constantCoeff.comp constantCoeff
+hu : e uVar = 0
+hx : e xVar = 0
+hv : e vVar = X
+hw : e wVar = C X
+hl : ∀ (c : R), e (lift4 c) = C (C c)
+⊢ ((C (C C₀) * C X ^ 2 * X ^ 3).coeff 3).coeff 2 = C₀

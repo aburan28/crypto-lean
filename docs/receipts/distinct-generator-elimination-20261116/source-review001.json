@@ -1,0 +1,27 @@
+{
+  "owner_reuse": [
+    "CryptoLean.Semaev.S3",
+    "CryptoLean.Polynomial.HeightBudget.coefficient_le_norm",
+    "CryptoLean.Polynomial.EndpointCoefficients"
+  ],
+  "mathlib_rev": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+  "interfaces": [
+    "field_simp",
+    "ring",
+    "Finset.card_biUnion_le",
+    "Finset.sum_le_sum",
+    "Fintype.card_prod",
+    "Nat.mul_lt_mul_of_pos_left",
+    "MvPolynomial.mem_support_iff"
+  ],
+  "formal_scope": "20 ring/field/branch/scaling/min-weight/finite-cover laws and5 symbolic applications",
+  "hand_scope": [
+    "actual profile-to-weight interpretation",
+    "signed rational-box3H\u00b2 card bound",
+    "three coefficient anchors and adaptive rank-one search",
+    "nonzero-original-pivot uniform-b count; zero branch excluded and retained"
+  ],
+  "scientific_numerical_execution": false,
+  "new_selector_implementation": false,
+  "novelty_claim": false
+}

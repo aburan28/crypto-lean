@@ -1,0 +1,15 @@
+CryptoLean/Polynomial/DoublingNormResidues.lean:105:47: error: unsolved goals
+G : Type u_3
+inst✝ : AddGroup G
+P : G
+q : ℕ
+hodd : q % 2 = 1
+hq : q • P = 0
+hd : 2 * (q / 2 + 1) = q + 1
+⊢ (q / 2) • P + 1 • P + ((q / 2) • P + 1 • P) = (q / 2 + 1 + (q / 2 + 1)) • P
+CryptoLean/Polynomial/DoublingNormResidues.lean:158:24: error: Type mismatch: After simplification, term
+  Eq.symm hH
+ has type
+  @Eq W.Point P (WeierstrassCurve.Affine.Point.zero + WeierstrassCurve.Affine.Point.zero)
+but is expected to have type
+  @Eq W.Point P 0

@@ -1,0 +1,54 @@
+CryptoLean/Polynomial/TwoChartCoefficients.lean:89:61: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring R
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+CryptoLean/Polynomial/TwoChartCoefficients.lean:90:41: error: Type mismatch
+  commRing
+has type
+  CommRing ?m.1[X]
+but is expected to have type
+  CommRing (P4 R)
+CryptoLean/Polynomial/TwoChartCoefficients.lean:91:28: error: Type mismatch
+  C (C (C (C c)))
+has type
+  R[X][X][X][X]
+but is expected to have type
+  P4 R
+CryptoLean/Polynomial/TwoChartCoefficients.lean:92:19: error: Type mismatch
+  X
+has type
+  ?m.1[X]
+but is expected to have type
+  P4 R
+CryptoLean/Polynomial/TwoChartCoefficients.lean:93:19: error: Type mismatch
+  C X
+has type
+  ?m.4[X][X]
+but is expected to have type
+  P4 R
+CryptoLean/Polynomial/TwoChartCoefficients.lean:94:19: error: Type mismatch
+  C (C X)
+has type
+  ?m.7[X][X][X]
+but is expected to have type
+  P4 R
+CryptoLean/Polynomial/TwoChartCoefficients.lean:95:19: error: Type mismatch
+  C (C (C X))
+has type
+  ?m.10[X][X][X][X]
+but is expected to have type
+  P4 R
+CryptoLean/Polynomial/TwoChartCoefficients.lean:98:4: warning: declaration uses `sorry`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:105:38: error: Application type mismatch: The argument
+  constantCoeff
+has type
+  ?m.145[X] →+* ?m.145
+but is expected to have type
+  P4 R →+* R[X][X][X]
+in the application
+  constantCoeff.comp constantCoeff
+CryptoLean/Polynomial/TwoChartCoefficients.lean:130:11: warning: declaration uses `sorry`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:122:8: warning: declaration uses `sorry`
+CryptoLean/Polynomial/TwoChartCoefficients.lean:130:4: warning: Unused tactic linter: `simpa [lift4] using projective_anchor (0 : R) 0 1` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

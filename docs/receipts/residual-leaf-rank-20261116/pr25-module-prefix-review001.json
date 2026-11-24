@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-16T17:25:04.059184+00:00",
+  "head": "1e559e62fbb5ca099050ff18873627d9a78e7c9c",
+  "histories": [
+    {
+      "source": "0ab1e6f75e558417a9674185e22244fa7a236a8f",
+      "ancestor": true,
+      "source_rows": 19,
+      "head_rows": 20,
+      "byte_prefix": true,
+      "parsed_prefix": true
+    },
+    {
+      "source": "01750b4044989583e70e4886b4ab5a79fe83f128",
+      "ancestor": true,
+      "source_rows": 9,
+      "head_rows": 20,
+      "byte_prefix": true,
+      "parsed_prefix": true
+    }
+  ],
+  "all_prior_291_subjects_match_actual_head": true,
+  "old_claim_files_byte_identical": true,
+  "old_journal_byte_prefix": true
+}

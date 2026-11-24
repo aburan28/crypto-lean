@@ -1,0 +1,103 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/MixedDegreePivots.lean:56:51: error: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b τ A B L : R
+h :
+  ((C (C A) * X + C (C B * X + C (L + 2 * τ * (A + B)))) *
+            (C ((C τ - X) ^ 2) * X ^ 2 + C (-2 * X * C τ ^ 2 - 2 * (X ^ 2 + C a) * C τ - (2 * C a * X + 4 * C b)) * X +
+              C (X ^ 2 * C τ ^ 2 - 2 * (C a * X + 2 * C b) * C τ + (C a ^ 2 - 4 * C b * X)))).coeff
+        3 =
+      C A * (C τ - X) ^ 2 ∧
+    ((C (C A) * X + C (C B * X + C (L + 2 * τ * (A + B)))) *
+            (C ((C τ - X) ^ 2) * X ^ 2 + C (-2 * X * C τ ^ 2 - 2 * (X ^ 2 + C a) * C τ - (2 * C a * X + 4 * C b)) * X +
+              C (X ^ 2 * C τ ^ 2 - 2 * (C a * X + 2 * C b) * C τ + (C a ^ 2 - 4 * C b * X)))).coeff
+        2 =
+      C A * (-2 * X * C τ ^ 2 - 2 * (X ^ 2 + C a) * C τ - (2 * C a * X + 4 * C b)) +
+        (C B * X + C (L + 2 * τ * (A + B))) * (C τ - X) ^ 2
+⊢ ∑ x ∈ Finset.antidiagonal 2, (C A).coeff x.1 * (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2 = A ∧
+    ∑ x ∈ Finset.antidiagonal 3,
+            (-((C A).coeff x.1 * ∑ x ∈ Finset.antidiagonal x.2, X.coeff x.1 * (C τ ^ 2).coeff x.2 * 2) -
+                  (C A).coeff x.1 *
+                    ∑ x ∈ Finset.antidiagonal x.2,
+                      ((if x.1 = 2 then 1 else 0) * (C τ).coeff x.2 * 2 + (C a).coeff x.1 * (C τ).coeff x.2 * 2) -
+                (C A).coeff x.1 * ∑ x ∈ Finset.antidiagonal x.2, (C a).coeff x.1 * X.coeff x.2 * 2 -
+              (C A).coeff x.1 * (C b).coeff x.2 * 4) +
+          ∑ x ∈ Finset.antidiagonal 3,
+            ((∑ x ∈ Finset.antidiagonal x.1, (C B).coeff x.1 * X.coeff x.2) *
+                  (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2 +
+                (C L).coeff x.1 * (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2 +
+              (∑ x ∈ Finset.antidiagonal x.1,
+                  ((∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C A).coeff x.2 +
+                    (∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C B).coeff x.2)) *
+                (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2) =
+        B ∧
+      ∑ x ∈ Finset.antidiagonal 2,
+            (-((C A).coeff x.1 * ∑ x ∈ Finset.antidiagonal x.2, X.coeff x.1 * (C τ ^ 2).coeff x.2 * 2) -
+                  (C A).coeff x.1 *
+                    ∑ x ∈ Finset.antidiagonal x.2,
+                      ((if x.1 = 2 then 1 else 0) * (C τ).coeff x.2 * 2 + (C a).coeff x.1 * (C τ).coeff x.2 * 2) -
+                (C A).coeff x.1 * ∑ x ∈ Finset.antidiagonal x.2, (C a).coeff x.1 * X.coeff x.2 * 2 -
+              (C A).coeff x.1 * (C b).coeff x.2 * 4) +
+          ∑ x ∈ Finset.antidiagonal 2,
+            ((∑ x ∈ Finset.antidiagonal x.1, (C B).coeff x.1 * X.coeff x.2) *
+                  (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2 +
+                (C L).coeff x.1 * (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2 +
+              (∑ x ∈ Finset.antidiagonal x.1,
+                  ((∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C A).coeff x.2 +
+                    (∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C B).coeff x.2)) *
+                (-(C τ * X * 2) + C τ ^ 2 + X ^ 2).coeff x.2) =
+        L
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+CryptoLean/Polynomial/MixedDegreePivots.lean:69:33: error: unsolved goals
+case right.left
+R : Type u_1
+inst✝ : CommRing R
+a b τ A B L : R
+h :
+  ((C (C A) * X + C (C B * X + C (L + 2 * τ * (A + B)))) *
+            (C (2 * C τ - 2 * X) * X ^ 2 + C (-4 * C τ * X - 2 * X ^ 2 - 2 * C a) * X +
+              C (2 * C τ * X ^ 2 - 2 * C a * X - 4 * C b))).coeff
+        3 =
+      C A * (2 * C τ - 2 * X) ∧
+    ((C (C A) * X + C (C B * X + C (L + 2 * τ * (A + B)))) *
+            (C (2 * C τ - 2 * X) * X ^ 2 + C (-4 * C τ * X - 2 * X ^ 2 - 2 * C a) * X +
+              C (2 * C τ * X ^ 2 - 2 * C a * X - 4 * C b))).coeff
+        2 =
+      C A * (-4 * C τ * X - 2 * X ^ 2 - 2 * C a) + (C B * X + C (L + 2 * τ * (A + B))) * (2 * C τ - 2 * X)
+⊢ ∑ x ∈ Finset.antidiagonal 1,
+        ((-((C A).coeff x.1 * ∑ x ∈ Finset.antidiagonal x.2, (C τ).coeff x.1 * X.coeff x.2 * 4) -
+            (C A).coeff x.1 * if x.2 = 2 then 2 else 0) -
+          (C A).coeff x.1 * (C a).coeff x.2 * 2) +
+      ∑ x ∈ Finset.antidiagonal 1,
+        ((∑ x ∈ Finset.antidiagonal x.1, (C B).coeff x.1 * X.coeff x.2) * (C τ).coeff x.2 * 2 -
+                  (∑ x ∈ Finset.antidiagonal x.1, (C B).coeff x.1 * X.coeff x.2) * X.coeff x.2 * 2 +
+                (C L).coeff x.1 * (C τ).coeff x.2 * 2 -
+              (C L).coeff x.1 * X.coeff x.2 * 2 +
+            (∑ x ∈ Finset.antidiagonal x.1,
+                  ((∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C A).coeff x.2 +
+                    (∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C B).coeff x.2)) *
+                (C τ).coeff x.2 *
+              2 -
+          (∑ x ∈ Finset.antidiagonal x.1,
+                ((∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C A).coeff x.2 +
+                  (∑ x ∈ Finset.antidiagonal x.1, (C 2).coeff x.1 * (C τ).coeff x.2) * (C B).coeff x.2)) *
+              X.coeff x.2 *
+            2) =
+    -(A * τ * 8) - τ * B * 2 - L * 2
+CryptoLean/Polynomial/MixedDegreePivots.lean:85:2: error: Type mismatch: After simplification, term
+  (mixed_uv_anchors a b τ 0 0 L).right.right
+ has type
+  ((mixedUV a b τ 0 0 L).coeff 2).coeff 0 = L * (τ * 2)
+but is expected to have type
+  ((mixedUV a b τ 0 0 L).coeff 2).coeff 0 = τ * (L * 2)

@@ -1,0 +1,15 @@
+{
+  "old_subjects": 346,
+  "new_subjects": 32,
+  "all_subjects": 378,
+  "all_hashes_match": true,
+  "old_rows": 20,
+  "current_rows": 21,
+  "published1e55_prefix_byte_retained": true,
+  "published1e55_prefix_parsed_retained": true,
+  "main017_prefix_retained": true,
+  "new_claim": "PCC-20261116-2b1bc7",
+  "standing": "unverified",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0
+}

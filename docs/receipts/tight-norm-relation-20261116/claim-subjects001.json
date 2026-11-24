@@ -1,0 +1,464 @@
+[
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "CryptoLean/Curve/TightNormRelation.lean",
+      "sha256": "fe41f3de75f428a72c0bf4bea550d3fff17cd7e3124d2fd8de35442f8a70e53c"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/TightNormRelation20261116/ActualInstances.lean",
+      "sha256": "6e83c99c8031d1c14da41714576a0799c25d05b14ece4f1eaa52dd23a278b296"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/TightNormRelation20261116/MixedInstances.lean",
+      "sha256": "932fb6a131b41e790ed09a5a997653131cfd9feee7468976b9645846177ffac6"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/TightNormRelation20261116/Axioms.lean",
+      "sha256": "30b2564ffeb2aa231dca82d7ed8e0114f1c8aa70eb513002dea55861e3399ee4"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/tight-norm-relation-20261116-plan.md",
+      "sha256": "2a8b70070e790822ac75968b0b08ac594053727ea1cd6c2ad29d8319d750d957"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/tight-norm-relation-20261116.md",
+      "sha256": "c2d12be4c634c2b9000c59392b2eb055f36e0653215225fbba83b6a7487c3c27"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/tight-norm-relation-20261116/publication001.json",
+      "sha256": "978ec715c62cb1e23e9f8a93d0bde93eabecdd16caf0e770d068ee7b652e093b"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/colorful-circuit-selector-20261116-plan.md",
+      "sha256": "80e4d1e8ea32ef32dfc92e2069b6d1af8524e8407fbdd2e2f8e21b04c4139401"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/colorful-circuit-selector-20261116.md",
+      "sha256": "a5842c226301b9df9e58e75ab01d6e4067b233f71db10820a7aa12547ca7db3f"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/translation-fold-selector-20261116-plan.md",
+      "sha256": "0a1d4c0f7546c47573f329e6d6ae9c42254051e0106c1023b74375c4fd6347d1"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual001-source.lean.txt",
+      "sha256": "fcd662b6433a4274aec663c07448f4bcb212025eee0f4a8e2847627a176ff514"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual001-status001.json",
+      "sha256": "0d39347d4dbde75c0c6094e8a4f079870ce68ae68e7a46a4e2e5db8bff2060df"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual001.log",
+      "sha256": "ad031bda7107c357504393299c9d661ae7a503ffc1b995337f43cb31bea5eae2"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual002-source.lean.txt",
+      "sha256": "6e83c99c8031d1c14da41714576a0799c25d05b14ece4f1eaa52dd23a278b296"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual002-status001.json",
+      "sha256": "b6fff8722f4ad7cd8fa5eb6c51e841ea8b4564e18e42bad3d99db273fb4d9613"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/actual002.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/audit-delta001.json",
+      "sha256": "75e1f4c7040cc36290b18a8be68b482aeb186c25956c6e86ccb742576d35ed55"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/axioms001-source.lean.txt",
+      "sha256": "30b2564ffeb2aa231dca82d7ed8e0114f1c8aa70eb513002dea55861e3399ee4"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/axioms001-status001.json",
+      "sha256": "c92db2b20c49800a420214cda7dc28c3fa736f9e595ce9e6057dcdf1ad1741d8"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/axioms001.log",
+      "sha256": "a9cf770bd0792150910fa7a9fbe83eee31ad4502be6ca6ad6477e7b00b85e521"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct001-source.lean.txt",
+      "sha256": "cd3c586f1b86f73e6eb1ba3251729427b05cd898ff50db5c70975d6c2394f9d7"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct001-status001.json",
+      "sha256": "1c4d6615146e47113abb552eca892bae76f55663fb8949eacc6cf786338c564b"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct001.log",
+      "sha256": "c34e105582c7711d2f6cb84a533d6cc977f30cba71f6198e7af30bfcdc9304fe"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct002-source.lean.txt",
+      "sha256": "a41e04021ff13a14d8d5f0c5e36917d2f344ae4446a30f3f0a3f6464c447fea6"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct002-status001.json",
+      "sha256": "5b479dccdc4ff463e4f0e4e6bcda13f0c21d84ebab05db146eacefdd22ef5289"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct002.log",
+      "sha256": "cfed6dcba9f554d043acadd57ab4f3314d712874a5b556e6010580b7c6277907"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct003-source.lean.txt",
+      "sha256": "70500e8d6be3eeb24542b4d37cb764f9820396d4d1de998f075f419044fe2c0a"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct003-status001.json",
+      "sha256": "de76f4181f71c382f3627debcfb488dc19d4ea8964133839e235db89397c376a"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct003.log",
+      "sha256": "15f985757c888fa181684c9b4bffe4a16efd0041e1ea0874c1132a1155e333d7"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct004-source.lean.txt",
+      "sha256": "37d12e3d489fdababc9ab9cce6195e8043fd788759a2b7f3733d995d79163117"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct004-status001.json",
+      "sha256": "43e327fe0ebe845b5a4288bcc1eb8d6936c327c2fcc1997decc108433498cc91"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct004.log",
+      "sha256": "c3c5c10b7fc9733f00b2ea677f19a36f87d1c21a666387a54de353218d8bce4a"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct005-source.lean.txt",
+      "sha256": "64f46867d188b1499c0b9c27ef2d8f638303e8094c6e62770214331e38b9c534"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct005-status001.json",
+      "sha256": "71493d293ec6fa53943faa00350ca8c7079e9af41e3e0db036a9dd544046cf62"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct005.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct006-source.lean.txt",
+      "sha256": "101d513b98ce87c29c877e7ab97e88861c2d473932550dadb27d1f2ecf797abd"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct006-status001.json",
+      "sha256": "447f5b357e39af563c52d80168870bcc05f16a335f6969364807132ce0620003"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct006.log",
+      "sha256": "93117518f4ffb7052f2f407600667926e40092255a167fb75216caa756625275"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct007-source.lean.txt",
+      "sha256": "775fafb2fa19dcf77d205fe89992a82083be8156799ae84e26cb26a838a098cc"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct007-status001.json",
+      "sha256": "08d4d5e4ebdf1f07ee445f3ce2fbb1281513ff68781c9cf48114ec10d300c81f"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct007.log",
+      "sha256": "a1ba8cd4a9d05ef819576ad4236b752e411f2d4e1451f34bf2cf33f10d50b911"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct008-source.lean.txt",
+      "sha256": "572396b2d8549b60e3c8c94be45741a678f0b5c7005207e5b493ffa32f9d2998"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct008-status001.json",
+      "sha256": "9456ccb30251179b4239e7993ca3918150993478061d0370b3b0e7962a1a2310"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/direct008.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate-launch001.log",
+      "sha256": "c5a0191c9876062b910c83297c332af0cbbfb82af104d9baf940ca7a2df3afd8"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/audit.log",
+      "sha256": "609e7d35f644f6131232119ef293dd932b250ac73d52b63df4fdfd136e23c11f"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/build.log",
+      "sha256": "32f845ff6cdd09c2a586364cb997acb4efe72b169894297cfa6b3d16deb03b17"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/cache.log",
+      "sha256": "aa68ced31c543786efe616f82d13b0fda94dc37dd188cb5daeb85dcd95c3b5e4"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/source-target.log",
+      "sha256": "c1221c573311fb881b33f150cd71e32e8887ce0ef86800047d22b59ba327cf3e"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/sources.log",
+      "sha256": "d2c2fd187920e5298f6c36c6c3c6a83a655817afbc623be88f74295296c3209c"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001/_/status",
+      "sha256": "c26de83abdc9496cd1301470918ec39ecca1cf389ef0ae1c6504da1800d1c431"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/gate001-exit001.json",
+      "sha256": "3e92b45394606d66d4abd286d4e57b9eda57716ca8ab1a77eebde9e7ef489bff"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/list-decoding-pdf-fetch001.json",
+      "sha256": "c88e51c9f3c88a9ad02756f1fabf584adc1006ff03c262d255c5b04436f6f07a"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/literature-screen001.json",
+      "sha256": "73903fefc3c8aabc4ed07001d9cde8fc46137de1009fab5e9f2d5236c1ee351d"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/mixed001-source.lean.txt",
+      "sha256": "932fb6a131b41e790ed09a5a997653131cfd9feee7468976b9645846177ffac6"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/mixed001-status001.json",
+      "sha256": "1181e20f10d879ae5b96888a50bb8f85196014952a5715d276815a05a856feba"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/mixed001.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/monitor-beforepub001.json",
+      "sha256": "1751307a5e47130e0c86c24ccfbb55e63a9b4850edca08741f38ed2e992382a3"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/owner-build001-source.lean.txt",
+      "sha256": "fe41f3de75f428a72c0bf4bea550d3fff17cd7e3124d2fd8de35442f8a70e53c"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/owner-build001-status001.json",
+      "sha256": "321007d7c663f817247bee098e71796f21a50f05edfa16922a92eb54e75c7e61"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/owner-build001.log",
+      "sha256": "8563fe12291a5b7edb059e79d7a389cb9c8a77c3db40528ce004c5c12403ac3d"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/pr25-before001.json",
+      "sha256": "fb0babda5d634ab5805a06be1cf5fb15ec829642ed9dfc121289eabee41aeb94"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/preservation-pre001.json",
+      "sha256": "c0f1c02ad87dd8515e32043bf003aa9d4ff28c0ac4ede4b43a33145a9bc8552f"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/source-review001.json",
+      "sha256": "6df85a57d0ff264299e438e13aed67c6e8d0692a31911d1475b4ba38a9eabbde"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/staged-whitespace001.json",
+      "sha256": "acb53e89d6a6fad8c5f56263ddf212825f6eed8ba9142ec9c1765d226c1914a6"
+    }
+  },
+  {
+    "kind": "attestation",
+    "subject": {
+      "path": "docs/receipts/tight-norm-relation-20261116/staged-whitespace002.json",
+      "sha256": "378d1c8a1062687baa322b9f9a6de84448679d4a673d3e5854de1a6f8c1f0c3a"
+    }
+  }
+]

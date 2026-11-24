@@ -1,0 +1,23 @@
+{
+  "old_subjects": 378,
+  "new_subjects": 28,
+  "all_subjects": 406,
+  "all_hashes_match": true,
+  "rows": 22,
+  "prefixes": {
+    "f308e8d9a7084af3c5cec9ff1d72c07be973ce1c": {
+      "byte": true,
+      "parsed": true,
+      "rows": 21
+    },
+    "01750b4044989583e70e4886b4ab5a79fe83f128": {
+      "byte": true,
+      "parsed": true,
+      "rows": 9
+    }
+  },
+  "new_claim": "PCC-20261116-bda7ce",
+  "verify_all_exit": 2,
+  "ledger_verify_exit": 0,
+  "standing": "unverified"
+}

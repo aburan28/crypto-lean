@@ -1,0 +1,58 @@
+{
+  "schema": "research.saturated-selector.pilot/v1",
+  "status": "prepared, unexecuted; not an IsoLab launch request",
+  "goal": "falsify/check mechanics of modular saturation and full relation recovery on one published toy",
+  "mode_order": [
+    "ordinary",
+    "saturated"
+  ],
+  "inputs": [
+    "fixtures/public17.ordinary.json",
+    "fixtures/public17.saturated.json"
+  ],
+  "expected_file": "fixtures/public17.expected.json",
+  "input_selection": "fixed public known-answer controls, not a random-yield panel",
+  "runtime_base": "docker.io/sagemath/sagemath@sha256:fb96c7fb10d672f3be0d088399db3aeac52650416d1bb71f74f26429ea35778f",
+  "image_built": false,
+  "numerical_execution_performed": false,
+  "resources": {
+    "backend": "EKS Spot cpu-spot",
+    "vcpus": 1,
+    "memory_mib": 8192,
+    "concurrency": 1,
+    "controller_wall_seconds": 360,
+    "job_total_deadline_seconds": 600,
+    "worker_wall_seconds": 120,
+    "worker_cpu_seconds": 90,
+    "automatic_retries": 0
+  },
+  "cost": {
+    "proposed_total_ceiling_usd": 2,
+    "includes": [
+      "build",
+      "idle/queue",
+      "worker attempts",
+      "storage",
+      "transfer"
+    ],
+    "grant": false,
+    "remaining_daily_monthly_balance": "unknown; must be read before any launch"
+  },
+  "acceptance": {
+    "correctness": "every reported scalar/relation passes separate exact replay; false success fails the pilot",
+    "ordinary_prediction": "zero nonzero certified short rows at balanced heights; any such row contradicts the control",
+    "saturation_mechanism": "record short rows, finite leaf projection and checked decompositions separately",
+    "positive_event": "saturated scalar replay passes and at least one accepted relation has method saturated_lattice",
+    "negative_outcome": "preserve all empty/capped/error results without relabeling as impossibility",
+    "asymptotic_claim": false,
+    "complete_algorithm_criterion_met": false
+  },
+  "pending_launch_bindings": [
+    "actual source revision and GitHub custody receipt",
+    "built image digest and in-image source hashes",
+    "current caller permissions and live pool/quota readback",
+    "known remaining shared daily/monthly costs/reservations",
+    "original absolute deadline and validated maintained command request",
+    "private S3 manifest verification and exact Job/Pod identities"
+  ]
+}
