@@ -1,0 +1,582 @@
+{
+  "recorded": "2026-11-24T03:09:28.309420+00:00",
+  "original": {
+    "AGENTS.md": {
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020",
+      "mode": 384
+    },
+    "CryptoLean.lean": {
+      "bytes": 1559,
+      "sha256": "6432914170e5a180478776e4cda016070e1bb86322a8be7644e61dff382d6ee9",
+      "mode": 384
+    },
+    "CryptoLean/Group/PairIncidence.lean": {
+      "bytes": 2307,
+      "sha256": "45212056973c6911ca99bfd0a0de720e736a07411c4adca8c1c50254b7c16545",
+      "mode": 384
+    },
+    "CryptoLean/Group/PairIncidenceModule.lean": {
+      "bytes": 2361,
+      "sha256": "d88b2e49a4344c95206603c887f61dffd8d25478ce8ed6ea6038552788e9b73f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/BOOTSTRAP_A.json": {
+      "bytes": 1057,
+      "sha256": "88d757c9663b974f407cabeabfde87e95f0321d266f05605552326ebbef972a4",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/CRYPTO_APPLICATION_LINK_A.json": {
+      "bytes": 381,
+      "sha256": "4e49f2955251907ddd773932078cd97087fefec0e764862bc3a3485503117ea1",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/FIRST_A_FORMAL_NEGATIVE.json": {
+      "bytes": 6931,
+      "sha256": "0149f15d80fb5abfecf963b64e0e3d6fec239ab5244c02014bd93e1e19eead70",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/INSTALLED_RUNTIME_A.json": {
+      "bytes": 2445,
+      "sha256": "4feef1134746eb5a490ba8009c06e0e39c0a2c36a042f147e9d3a557a5a2afe5",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRELOCK_PROOF_MAP_RESTORATION_A.json": {
+      "bytes": 744,
+      "sha256": "5e9d5c0503837bf7389691b935310f4d4f82efa0e0844f9dadf62f8b6f3c7331",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A.md": {
+      "bytes": 2156,
+      "sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A_ORIGINAL.md": {
+      "bytes": 2156,
+      "sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_MODULE_REPAIR_B.md": {
+      "bytes": 1717,
+      "sha256": "7f14e7d87cedf64e2da94b18bcc9f88bffe9ed4f2f4ca753315fb1e1dab50f81",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PROTOCOL_A.md": {
+      "bytes": 2029,
+      "sha256": "aeef99887e378e7782e9932181b64f60a923c4c1349e868ddb3d09fd2b5f039a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PROTOCOL_B.md": {
+      "bytes": 1780,
+      "sha256": "a7683f9310451265c7dce62491ba19427525dd74b712abd990ac296173a19f2f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/SOURCE_LOCK_A.json": {
+      "bytes": 7358,
+      "sha256": "c30c70a98f1a1a219b909971c492a7953a6ecde9728249bb76b7375aa0a74f67",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-all18-complete-readback.json": {
+      "bytes": 3503,
+      "sha256": "f5b1e5a80eb4a28af4a927de6b9e0f41629fd7e16037ce6c0a9ca2572b501512",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-changed-complete-readback.json": {
+      "bytes": 3261,
+      "sha256": "f1f249467f02c2ee3174a8496954a155bb22a77217544128ee9a5371ce3d70f5",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stdout": {
+      "bytes": 222,
+      "sha256": "45fd6e1e6a6e0319278373d63437acb5fce56d86d7787b6ab73bd37db00b930b",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/custody_metadata_A.py": {
+      "bytes": 5862,
+      "sha256": "50e85c156219cacd396bc3069c4f15f1d35f2d3aeab373e45a387711427814d7",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/custody_metadata_B.py": {
+      "bytes": 5874,
+      "sha256": "c9899ebc711a90dfe937fdc703dc87a1f704d37ac3bd3d244682020c07469b81",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/BUILD_MANIFEST.json": {
+      "bytes": 10762,
+      "sha256": "2d342d132929f2828b0227dbcb3ef7b1e83fe14430922ac25f4e3441a20938f1",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/CONTEXT.json": {
+      "bytes": 1488,
+      "sha256": "1ee6b6485d3b4d84e18b70d9892b5019f07e63c5efe5f9c19bb1d559ce3717fe",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/POST_CALL_MANIFEST.json": {
+      "bytes": 10805,
+      "sha256": "1c260e3927f058b4ca9251e71fc0375f4011102e785fd8c5a108554a63dde1e8",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.argv": {
+      "bytes": 152,
+      "sha256": "cd07ce88425e3e570a2dda7243c0c888b872bbacc7a4c5adfb01f7b7de36a894",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.phase.json": {
+      "bytes": 391,
+      "sha256": "0cd1a830d0ea78786161b2ca43604a481527080aaddbb84f8a56a9afbd7d0bf7",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stdout": {
+      "bytes": 177,
+      "sha256": "578058165e1de902107af043afb90c971deabc706504afe10a27b87c1d696c4f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.argv": {
+      "bytes": 16,
+      "sha256": "072fc15a894e747d736adb1dcb4f321c7fdf3bfe0f137515f9f8f1fb513fe60d",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.phase.json": {
+      "bytes": 400,
+      "sha256": "dbdfde2c7132f0ec62eda479bb583dafcc367096609b32ee743dbcde950d2e2f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stdout": {
+      "bytes": 106,
+      "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/run_first_A.sh": {
+      "bytes": 2488,
+      "sha256": "cb9f79456290d6006e65a9982cd2eddd926c55c94748092b7a41804777507e59",
+      "mode": 493
+    },
+    "docs/research/chained-prym-law-20261124/run_first_B.sh": {
+      "bytes": 2512,
+      "sha256": "826bcc6d894ec3f865e748799a194a2c34d051f360d4fe60d11b071c9edd4f20",
+      "mode": 493
+    },
+    "lake-manifest.json": {
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75",
+      "mode": 384
+    },
+    "lakefile.toml": {
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b",
+      "mode": 384
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-a852b6.json": {
+      "bytes": 936,
+      "sha256": "8ef64378748f990bbd75d73b81c67a907e6f251d2d75faa11e3e6a324b2dffbe",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-d6d04f.json": {
+      "bytes": 916,
+      "sha256": "5d80c54c32e19ad543e6d1e698e5e9fcc6bcad77f3fd75f33a7bfaacd6524ecd",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-ea40c6.json": {
+      "bytes": 870,
+      "sha256": "44adb5ceeb447773cd88758265f0311a51637cd780933ba950400ba44cb76fd1",
+      "mode": 384
+    },
+    "tools/AuditAxioms.lean": {
+      "bytes": 3855,
+      "sha256": "fdb8bd3af4301a9f50c7d8d0049994459f15b07abe397b8dddc1e49532dad96d",
+      "mode": 384
+    },
+    "tools/proof-gate.sh": {
+      "bytes": 7963,
+      "sha256": "ad2d957a305313d2f478e3fdd459557cc5e20edf2a66e74dd8752a95a342377a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/SOURCE_LOCK_B.json": {
+      "bytes": 13498,
+      "sha256": "3f8fd767ce390d95056e9d273beb06667b08752ad97ea36242c8bab474074aaf",
+      "mode": 384
+    }
+  },
+  "copied": {
+    "AGENTS.md": {
+      "bytes": 4294,
+      "sha256": "7b20f522bcb8d4ad36e5a398177244ad225c412df7bf039af0c8ab6643e49020",
+      "mode": 384
+    },
+    "CryptoLean.lean": {
+      "bytes": 1559,
+      "sha256": "6432914170e5a180478776e4cda016070e1bb86322a8be7644e61dff382d6ee9",
+      "mode": 384
+    },
+    "CryptoLean/Group/PairIncidence.lean": {
+      "bytes": 2307,
+      "sha256": "45212056973c6911ca99bfd0a0de720e736a07411c4adca8c1c50254b7c16545",
+      "mode": 384
+    },
+    "CryptoLean/Group/PairIncidenceModule.lean": {
+      "bytes": 2361,
+      "sha256": "d88b2e49a4344c95206603c887f61dffd8d25478ce8ed6ea6038552788e9b73f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/BOOTSTRAP_A.json": {
+      "bytes": 1057,
+      "sha256": "88d757c9663b974f407cabeabfde87e95f0321d266f05605552326ebbef972a4",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/CRYPTO_APPLICATION_LINK_A.json": {
+      "bytes": 381,
+      "sha256": "4e49f2955251907ddd773932078cd97087fefec0e764862bc3a3485503117ea1",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/FIRST_A_FORMAL_NEGATIVE.json": {
+      "bytes": 6931,
+      "sha256": "0149f15d80fb5abfecf963b64e0e3d6fec239ab5244c02014bd93e1e19eead70",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/INSTALLED_RUNTIME_A.json": {
+      "bytes": 2445,
+      "sha256": "4feef1134746eb5a490ba8009c06e0e39c0a2c36a042f147e9d3a557a5a2afe5",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRELOCK_PROOF_MAP_RESTORATION_A.json": {
+      "bytes": 744,
+      "sha256": "5e9d5c0503837bf7389691b935310f4d4f82efa0e0844f9dadf62f8b6f3c7331",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A.md": {
+      "bytes": 2156,
+      "sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A_ORIGINAL.md": {
+      "bytes": 2156,
+      "sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PRIMARY_MODULE_REPAIR_B.md": {
+      "bytes": 1717,
+      "sha256": "7f14e7d87cedf64e2da94b18bcc9f88bffe9ed4f2f4ca753315fb1e1dab50f81",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PROTOCOL_A.md": {
+      "bytes": 2029,
+      "sha256": "aeef99887e378e7782e9932181b64f60a923c4c1349e868ddb3d09fd2b5f039a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/PROTOCOL_B.md": {
+      "bytes": 1780,
+      "sha256": "a7683f9310451265c7dce62491ba19427525dd74b712abd990ac296173a19f2f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/SOURCE_LOCK_A.json": {
+      "bytes": 7358,
+      "sha256": "c30c70a98f1a1a219b909971c492a7953a6ecde9728249bb76b7375aa0a74f67",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-all18-complete-readback.json": {
+      "bytes": 3503,
+      "sha256": "f5b1e5a80eb4a28af4a927de6b9e0f41629fd7e16037ce6c0a9ca2572b501512",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-changed-complete-readback.json": {
+      "bytes": 3261,
+      "sha256": "f1f249467f02c2ee3174a8496954a155bb22a77217544128ee9a5371ce3d70f5",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stdout": {
+      "bytes": 222,
+      "sha256": "45fd6e1e6a6e0319278373d63437acb5fce56d86d7787b6ab73bd37db00b930b",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/custody_metadata_A.py": {
+      "bytes": 5862,
+      "sha256": "50e85c156219cacd396bc3069c4f15f1d35f2d3aeab373e45a387711427814d7",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/custody_metadata_B.py": {
+      "bytes": 5874,
+      "sha256": "c9899ebc711a90dfe937fdc703dc87a1f704d37ac3bd3d244682020c07469b81",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/BUILD_MANIFEST.json": {
+      "bytes": 10762,
+      "sha256": "2d342d132929f2828b0227dbcb3ef7b1e83fe14430922ac25f4e3441a20938f1",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/CONTEXT.json": {
+      "bytes": 1488,
+      "sha256": "1ee6b6485d3b4d84e18b70d9892b5019f07e63c5efe5f9c19bb1d559ce3717fe",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/POST_CALL_MANIFEST.json": {
+      "bytes": 10805,
+      "sha256": "1c260e3927f058b4ca9251e71fc0375f4011102e785fd8c5a108554a63dde1e8",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.argv": {
+      "bytes": 152,
+      "sha256": "cd07ce88425e3e570a2dda7243c0c888b872bbacc7a4c5adfb01f7b7de36a894",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.phase.json": {
+      "bytes": 391,
+      "sha256": "0cd1a830d0ea78786161b2ca43604a481527080aaddbb84f8a56a9afbd7d0bf7",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stdout": {
+      "bytes": 177,
+      "sha256": "578058165e1de902107af043afb90c971deabc706504afe10a27b87c1d696c4f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.argv": {
+      "bytes": 16,
+      "sha256": "072fc15a894e747d736adb1dcb4f321c7fdf3bfe0f137515f9f8f1fb513fe60d",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.phase.json": {
+      "bytes": 400,
+      "sha256": "dbdfde2c7132f0ec62eda479bb583dafcc367096609b32ee743dbcde950d2e2f",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stdout": {
+      "bytes": 106,
+      "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/run_first_A.sh": {
+      "bytes": 2488,
+      "sha256": "cb9f79456290d6006e65a9982cd2eddd926c55c94748092b7a41804777507e59",
+      "mode": 493
+    },
+    "docs/research/chained-prym-law-20261124/run_first_B.sh": {
+      "bytes": 2512,
+      "sha256": "826bcc6d894ec3f865e748799a194a2c34d051f360d4fe60d11b071c9edd4f20",
+      "mode": 493
+    },
+    "lake-manifest.json": {
+      "bytes": 3157,
+      "sha256": "0698b3bab96df3923ba118299043185eefda83072820c13bfe1e6035b9efbb75",
+      "mode": 384
+    },
+    "lakefile.toml": {
+      "bytes": 804,
+      "sha256": "d892217225425018f1a7dc6348b19425c9c89d209aac74606f830b95bba9544b",
+      "mode": 384
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-a852b6.json": {
+      "bytes": 936,
+      "sha256": "8ef64378748f990bbd75d73b81c67a907e6f251d2d75faa11e3e6a324b2dffbe",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-d6d04f.json": {
+      "bytes": 916,
+      "sha256": "5d80c54c32e19ad543e6d1e698e5e9fcc6bcad77f3fd75f33a7bfaacd6524ecd",
+      "mode": 384
+    },
+    "pcc/claims/PCC-20261124-ea40c6.json": {
+      "bytes": 870,
+      "sha256": "44adb5ceeb447773cd88758265f0311a51637cd780933ba950400ba44cb76fd1",
+      "mode": 384
+    },
+    "tools/AuditAxioms.lean": {
+      "bytes": 3855,
+      "sha256": "fdb8bd3af4301a9f50c7d8d0049994459f15b07abe397b8dddc1e49532dad96d",
+      "mode": 384
+    },
+    "tools/proof-gate.sh": {
+      "bytes": 7963,
+      "sha256": "ad2d957a305313d2f478e3fdd459557cc5e20edf2a66e74dd8752a95a342377a",
+      "mode": 384
+    },
+    "docs/research/chained-prym-law-20261124/SOURCE_LOCK_B.json": {
+      "bytes": 13498,
+      "sha256": "3f8fd767ce390d95056e9d273beb06667b08752ad97ea36242c8bab474074aaf",
+      "mode": 384
+    }
+  },
+  "tools": {
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean": {
+      "bytes": 9024,
+      "sha256": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+      "mode": 493
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake": {
+      "bytes": 13416,
+      "sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+      "mode": 493
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libLake_shared.so": {
+      "bytes": 14070032,
+      "sha256": "d68867df340056b40726fde3939a9d2021901cc6944f971dd6a6a778bd9ea25b",
+      "mode": 420
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libInit_shared.so": {
+      "bytes": 6264,
+      "sha256": "7831b707e868cee76c353d26649fbd8981b2f4d7e0329af55bbf4fa9e0c69350",
+      "mode": 420
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared.so": {
+      "bytes": 231113560,
+      "sha256": "efef27df56f2197139afe12f1a2b63913a05f1aba81ce88824c44100431ed8c4",
+      "mode": 420
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_1.so": {
+      "bytes": 6264,
+      "sha256": "691bf49d9e542a15808fad9d1f8c5df45860166f77efa57961b5335e65a3a0ed",
+      "mode": 420
+    },
+    "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/libleanshared_2.so": {
+      "bytes": 6264,
+      "sha256": "141cbfdb3bc2016cd68e0bebc2e5494818213b462ed985afa6d975d4872fb8ec",
+      "mode": 420
+    }
+  },
+  "packages": [
+    {
+      "package": "mathlib",
+      "revision": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+      "prebuilt_files": 19058,
+      "prebuilt_bytes": 1128353942,
+      "whole_cache_filename_size_hash_mode_sha256": "c750585ce5bf1b830774d793f09841dcc441d28aa67c16e41426b68400bbdfda"
+    },
+    {
+      "package": "plausible",
+      "revision": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "prebuilt_files": 169,
+      "prebuilt_bytes": 9810138,
+      "whole_cache_filename_size_hash_mode_sha256": "58b4218af54820e2810bc1e48683d579a7a5bdd77d03354074dee7a81500193e"
+    },
+    {
+      "package": "LeanSearchClient",
+      "revision": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "prebuilt_files": 52,
+      "prebuilt_bytes": 3767849,
+      "whole_cache_filename_size_hash_mode_sha256": "42bd6577b26d0ccbe9408c380ba9175af19c83bdda20e21cef6063cd9a3854ee"
+    },
+    {
+      "package": "importGraph",
+      "revision": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "prebuilt_files": 455,
+      "prebuilt_bytes": 25537242,
+      "whole_cache_filename_size_hash_mode_sha256": "f507296806d7e2dc1930ddc0db3d3eed08707335ca4e8648116153e0ff080bf9"
+    },
+    {
+      "package": "proofwidgets",
+      "revision": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "prebuilt_files": 130,
+      "prebuilt_bytes": 7299664,
+      "whole_cache_filename_size_hash_mode_sha256": "0a61b3849b6e3c45e27587e17d45cc5321ac34cd8888cf9629c950fac26f04a1"
+    },
+    {
+      "package": "aesop",
+      "revision": "4a174c490d8707121c4a9290800489f105d85e07",
+      "prebuilt_files": 1716,
+      "prebuilt_bytes": 97791723,
+      "whole_cache_filename_size_hash_mode_sha256": "4a79970623956d110e017a4122c3640c1f1c2357f7b9b2bb3f9591c60a9c64b0"
+    },
+    {
+      "package": "Qq",
+      "revision": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "prebuilt_files": 182,
+      "prebuilt_bytes": 16018528,
+      "whole_cache_filename_size_hash_mode_sha256": "99bb03b4469310a21a732a0edc5295fa651649e816c38a3dce756054c5d2f7ec"
+    },
+    {
+      "package": "batteries",
+      "revision": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "prebuilt_files": 936,
+      "prebuilt_bytes": 62652060,
+      "whole_cache_filename_size_hash_mode_sha256": "07545d8568456adc07415a751ff8fdb621a4f4d6f8955d52bc3c9bf002e7c7b8"
+    },
+    {
+      "package": "Cli",
+      "revision": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+      "prebuilt_files": 0,
+      "prebuilt_bytes": 0,
+      "whole_cache_filename_size_hash_mode_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "compiled_olean": null,
+  "outer_exit": 1,
+  "guard_failures": []
+}

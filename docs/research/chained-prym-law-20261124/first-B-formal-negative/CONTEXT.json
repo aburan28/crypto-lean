@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-11-24T03:09:23.534700+00:00",
+  "source_commit": "342cacdfc3a5d750505ff6033a3641ef6b6a6bb3",
+  "root": "/dev/shm/crypto-lean-prym24",
+  "out": "/dev/shm/ct24-lean-prym-firstB-formal",
+  "temp": "/dev/shm/ct24-lean-prym-firstB-compiler-temp",
+  "environment": {
+    "LEAN_PATH": "/dev/shm/ct24-lean-prym-firstB-formal/olean:/dev/shm/crypto-lean-prym24/.lake/packages/mathlib/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/plausible/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/importGraph/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/proofwidgets/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/aesop/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/Qq/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/batteries/.lake/build/lib/lean:/dev/shm/crypto-lean-prym24/.lake/packages/Cli/.lake/build/lib/lean",
+    "LEAN_NUM_THREADS": "1",
+    "LEAN_MAIN_USE_THREAD": "0",
+    "LEAN_STACK_SIZE_KB": "16384",
+    "MIMALLOC_ARENA_RESERVE": "65536",
+    "CHECKPOINT_SKIP": "Fixed genuine additive pair-incidence mathematical proof, not an experiment; full public source/input/lock checkpoint and whole-byte readback."
+  },
+  "ambient_boundary": "Installed transitive toolchain libraries and OS disclosed; exact package cache hash/revisions guarded, no hermetic or independent execution proof."
+}

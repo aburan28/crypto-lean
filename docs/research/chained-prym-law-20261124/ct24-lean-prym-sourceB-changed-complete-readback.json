@@ -1,0 +1,200 @@
+{
+  "repository": "aburan28/crypto-lean",
+  "commit": "342cacdfc3a5d750505ff6033a3641ef6b6a6bb3",
+  "recorded": "2026-11-24T03:09:14.676Z",
+  "files": [
+    {
+      "path": "pcc/ledger.jsonl",
+      "blob": "31d58e26a7feb10526bbff9fc368d47424b765fc",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-a852b6.json",
+      "blob": "b53ff885fc3b04913a77dd660adfdf0eafc96de9",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-d6d04f.json",
+      "blob": "6af5ad8176b573bfcc90e67fea73fe0ab51b41fc",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-76aa8c.json",
+      "blob": "26245abca510ae22bae49359fe8329eb9345c68c",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-d6d04f.json",
+      "blob": "6af5ad8176b573bfcc90e67fea73fe0ab51b41fc",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "pcc/claims/PCC-20261124-a852b6.json",
+      "blob": "b53ff885fc3b04913a77dd660adfdf0eafc96de9",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "CryptoLean/Group/PairIncidenceModule.lean",
+      "blob": "4b4481375b3d7465faf30bca56d71bcdfec0368e",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/FIRST_A_FORMAL_NEGATIVE.json",
+      "blob": "3af674fac352afb5afed9b64f9b34d6b99156fc3",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PRIMARY_MODULE_REPAIR_B.md",
+      "blob": "af613a37eebe0667f066c7c2ef7502779dbb2a40",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/PROTOCOL_B.md",
+      "blob": "8177ec1839b80acb2cc6995afe86bba5b50cce0e",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/SOURCE_LOCK_B.json",
+      "blob": "38851a0289016b74d11307bbc245582cd6289a49",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-all18-complete-readback.json",
+      "blob": "5a2a43a25d4d12bf844eb59d33214e5174d8b593",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-changed-complete-readback.json",
+      "blob": "46b4b8d60f2857f2ac3cfd506bbf5b99b857bd31",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stderr",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/ct24-lean-prym-sourceA-staging.stdout",
+      "blob": "f2ca0d23079d468c8211668feb2d040858f79b27",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/custody_metadata_B.py",
+      "blob": "0cb847109b6eee345487c6638a287f70faa75100",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/BUILD_MANIFEST.json",
+      "blob": "8e835d378e7deef4c69e34437d0d39f8e4dfb50b",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/CONTEXT.json",
+      "blob": "d67ddba2b8651994c0e4ff213b8f2753794aecbd",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/POST_CALL_MANIFEST.json",
+      "blob": "1e15f16fce27eea56231e312c740ee96c62d06e0",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stderr",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/final-guards.stdout",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stderr",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/init.stdout",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.argv",
+      "blob": "7737611f5b04a9147b8adf1db5e616f66f4184e9",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.phase.json",
+      "blob": "d2b80187f956b468f71101e08bb044f4260d7da8",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stderr",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/law.stdout",
+      "blob": "07211e168486780e9176548ccc5cedddef74cd2e",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.argv",
+      "blob": "ee06c8db7879ff86c47fcaa3fbaa86ffcec6d767",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.phase.json",
+      "blob": "196541a365883e6c0872f5378e75229c53ecf998",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stderr",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/first-A-formal-negative/lean-version.stdout",
+      "blob": "6081cfbd1bdb79493f0c1f89530d0306670dede0",
+      "whole_bytes_equal": true,
+      "binary": false
+    },
+    {
+      "path": "docs/research/chained-prym-law-20261124/run_first_B.sh",
+      "blob": "994f39b3f5d15c5a132f5aa92dd4220fca3b676e",
+      "whole_bytes_equal": true,
+      "binary": false
+    }
+  ],
+  "errors": []
+}

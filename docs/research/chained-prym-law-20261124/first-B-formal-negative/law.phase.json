@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-11-24T03:09:28.143299+00:00",
+  "name": "law",
+  "expected_exit": 0,
+  "exit": 1,
+  "complete_stdout": {
+    "bytes": 178,
+    "sha256": "151c7403d21263f2146ed146c55c72f14adb8fa28ad080f438293ce6a1aaf10e",
+    "mode": 384
+  },
+  "complete_stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mode": 384
+  }
+}
