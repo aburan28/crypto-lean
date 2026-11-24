@@ -24,6 +24,8 @@ the study's parameters are instances, exhibited in the `example`s at the end.
      cyclic group of order r·s (r ⊥ s) onto its unique subgroup of order r,
      and Q = P^k is solved exactly by the pair of subproblems
      (P^s, Q^s) (order r) and (P^r, Q^r) (order s).
+* L6 `prime_dvd_mul_two_pow(_le)`: a prime r ∣ c·2^k is 2 or divides c, so
+     r ≤ max 2 c (the family p = c·2^k − 1 only).
 -/
 import Mathlib
 
@@ -346,6 +348,26 @@ theorem dlog_mod_r {G : Type*} [Group G] {r s : ℕ} (hs : s ≠ 0)
   subst hQ
   rw [← pow_mul P k s, mul_comm k s, pow_mul, pow_eq_pow_iff_modEq, hPs]
 
+/-! ## L6 the family p = c·2^k − 1 has no large prime in p + 1 -/
+
+/-- **L6** (RESULTS.md H0 "if p+1 were fully smooth the ECDLP is trivially
+PH-solvable"). Every prime `r ∣ c·2^k` is `2` or divides `c`. Stated for the
+family `p + 1 = c·2^k` only; it is false for sparse `p` in general
+(`p = 2^64 − 59`: `p + 1` has a 59-bit prime factor). -/
+theorem prime_dvd_mul_two_pow {r c k : ℕ} (hr : r.Prime) (h : r ∣ c * 2 ^ k) :
+    r = 2 ∨ r ∣ c := by
+  rcases (Nat.Prime.dvd_mul hr).mp h with hc | h2
+  · exact Or.inr hc
+  · exact Or.inl ((Nat.prime_dvd_prime_iff_eq hr Nat.prime_two).mp (hr.dvd_of_dvd_pow h2))
+
+/-- **L6, size form**: for `c ≠ 0`, every prime `r ∣ c·2^k` has `r ≤ max 2 c`,
+so the MOV subgroup order is at most `max 2 c`. -/
+theorem prime_dvd_mul_two_pow_le {r c k : ℕ} (hr : r.Prime) (hc : c ≠ 0)
+    (h : r ∣ c * 2 ^ k) : r ≤ max 2 c := by
+  rcases prime_dvd_mul_two_pow hr h with rfl | hrc
+  · exact le_max_left _ _
+  · exact (Nat.le_of_dvd (Nat.pos_of_ne_zero hc) hrc).trans (le_max_right _ _)
+
 /-! ## Satisfiability: the study instance p = 173 = 6·29 − 1, r = 29, s = 6 -/
 
 section Instance
@@ -400,6 +422,9 @@ example (P : Multiplicative (ZMod 174)) (hP : orderOf P = 29 * 6) (k' : ℕ) :
 /-- The hypothesis `orderOf P = r·s` of L5d is met by the generator of `ZMod 174`. -/
 example : orderOf (Multiplicative.ofAdd (1 : ZMod 174)) = 29 * 6 := by
   rw [orderOf_ofAdd_eq_addOrderOf, ZMod.addOrderOf_one]
+
+/-- L6 instance: p = 3·2^5 − 1 = 95 + 1 = 96; the prime 3 divides c = 3. -/
+example : (3 : ℕ) = 2 ∨ 3 ∣ 3 := prime_dvd_mul_two_pow (k := 5) (by norm_num) (by norm_num)
 
 end Instance
 

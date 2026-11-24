@@ -36,6 +36,8 @@ gate: `tools/proof-gate.sh --out <dir>`.
 | L5b | `card_range_pow` | cyclic, `card = r·s`: `card (range (·^s)) = r` | H0 |
 | L5c | `range_pow_unique` | cyclic, `card = r·s`, `r ⊥ s`: every subgroup of order `r` equals `range (·^s)` | H0 |
 | L5d | `dlog_split` | any group, `orderOf P = r·s`, `r ⊥ s`, `r,s ≠ 0`, `Q = P^k`: `P^k' = Q ⇔ (P^s)^k' = Q^s ∧ (P^r)^k' = Q^r` | H0 "smoothness of s only feeds Pohlig–Hellman on the s-part" |
+| L6 | `prime_dvd_mul_two_pow` | `r` prime, `r ∣ c·2^k` ⇒ `r = 2 ∨ r ∣ c` (family `p + 1 = c·2^k`) | H0 "if p+1 were fully smooth the ECDLP is trivially PH-solvable" (family p = c·2^k − 1) |
+| L6′ | `prime_dvd_mul_two_pow_le` | same, `c ≠ 0` ⇒ `r ≤ max 2 c`: MOV subgroup order ≤ max(2, c), DLP Pohlig–Hellman-easy | same |
 | L5e | `dlog_mod_r` | `orderOf P = r·s`, `s ≠ 0`, `Q = P^k`: `(P^s)^k' = Q^s ⇔ k' ≡ k [MOD r]` | H0 (k mod r is fixed by (P^s, Q^s) alone) |
 
 ## Fidelity table (formal vs claim)
@@ -47,6 +49,7 @@ gate: `tools/proof-gate.sh --out <dir>`.
 | L3 | `cube_root_unity_eq_one` | none |
 | L3 "only ±1" | `scaling_preserves_iff`, `variableChange_fixes_iff` | covers all admissible Weierstrass changes of variables (Mathlib's `VariableChange`), i.e. automorphisms fixing O given by coordinate changes; it does not quantify over arbitrary morphisms of `E.Point`. `p ≠ 2` needed in L3″ (y² = x³+1 is singular in char 2) |
 | L4 | `pow_eq_one_of_frobenius_fixed`, `algebraMap_pow_eq_one`, `sixth_root_pow_eq_one*` | **Stronger**: `r ∤ p−1` and `|K| = p²` are not needed; any field. Units: the lemma is about sixth roots of unity in the target; that the image of Z[ω]* lands in μ₆ is the ring-hom fact, not stated |
+| L6 | `prime_dvd_mul_two_pow(_le)` | only for `p + 1 = c·2^k`; **not** a statement about sparse `p` in general (false there: `p = 2^64 − 59` is prime, ≡ 2 mod 3, and `p+1` has a 59-bit prime factor). "PH-easy" is the reading, not a cost theorem |
 | L5 | `mem_range_pow_iff` … `dlog_mod_r` | algebraic reduction only; no cost statement. The CRT step is Mathlib's `Nat.modEq_and_modEq_iff_modEq_mul` (ZMod form `ZMod.chineseRemainder` not used). No generic-group-model Ω(√r) lower bound: none exists in crypto-lean (README "Not yet in v0.1.0"); out of scope |
 
 ## Instance gate (lean-instance-gate six fields, short)
@@ -57,6 +60,7 @@ gate: `tools/proof-gate.sh --out <dir>`.
 | L2 | ℕ, `ZMod r` | `Nat.le_of_dvd`, `Nat.sq_sub_sq`; `orderOf_neg_one`, `ZMod.ringChar_zmod_n` | none |
 | L3 | `ZMod p` field, `WeierstrassCurve`, `VariableChange` action | `pow_gcd_eq_one`, `ZMod.pow_card_sub_one_eq_one`, `WeierstrassCurve.variableChange_a₁…a₆`, `VariableChange.ext`, `mul_self_eq_one_iff` | none |
 | L4 | `Field`, `Monoid`, `Algebra (ZMod p) K` | `pow_sub_one_mul`, `ZMod.pow_card`, `Nat.mul_div_assoc`, `Nat.Coprime.dvd_of_dvd_mul_left`, `pow_mul` | `sq_sub_one_div_eq` (a ℕ identity) |
+| L6 | ℕ primes | `Nat.Prime.dvd_mul`, `Nat.Prime.dvd_of_dvd_pow`, `Nat.prime_dvd_prime_iff_eq` | none |
 | L5 | `CommGroup`, `IsCyclic`, `powMonoidHom`, `Subgroup` | `pow_card_eq_one'`, `Nat.gcd_eq_gcd_ab`, `IsCyclic.exists_generator`, `MonoidHom.map_zpowers`, `Nat.card_zpowers`, `orderOf_pow_of_dvd`, `Subgroup.eq_of_le_of_card_ge`, `pow_eq_pow_iff_modEq`, `Nat.modEq_and_modEq_iff_modEq_mul` | none |
 
 Each proof is the cited theorems applied to the instance equalities; no limit
@@ -65,6 +69,6 @@ anonymous-constructor values of Mathlib structures).
 
 ## Axioms
 
-All 17 reported theorems: `[propext, Classical.choice, Quot.sound]` or a subset
+All 19 reported theorems: `[propext, Classical.choice, Quot.sound]` or a subset
 (`sq_sub_one_div_eq`: `[propext]`; `sixth_root_pow_eq_one`: `[propext, Quot.sound]`).
 Gate: PASS (see receipts).
