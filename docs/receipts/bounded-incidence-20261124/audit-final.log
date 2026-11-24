@@ -1,0 +1,5 @@
+ok    CryptoLean.Combinatorics.BoundedIncidence.block_projection_image  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Combinatorics.BoundedIncidence.covered_card_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Combinatorics.BoundedIncidence.separated_block_kernel_tags  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Combinatorics.BoundedIncidence.sharing_pairs_card_le  [propext, Classical.choice, Quot.sound]
+audited 4 theorems in [CryptoLean.Combinatorics.BoundedIncidence]; 0 failing, 0 trusted (native_decide)

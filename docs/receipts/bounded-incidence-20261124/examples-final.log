@@ -1,0 +1,11 @@
+docs/receipts/bounded-incidence-20261124/Examples.lean:9:46: error: unexpected token ';'; expected ']'
+'CryptoLean.Combinatorics.BoundedIncidence.covered_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.sharing_pairs_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.block_projection_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.separated_block_kernel_tags' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
