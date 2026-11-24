@@ -36,3 +36,5 @@ import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Combinatorics.LargePrimeGraph
 import CryptoLean.Combinatorics.GainDsu
 import CryptoLean.Group.PairColourIsolation
+
+import CryptoLean.Group.PairIncidence

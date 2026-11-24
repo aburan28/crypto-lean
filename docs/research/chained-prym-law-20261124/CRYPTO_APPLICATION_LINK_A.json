@@ -1,0 +1,7 @@
+{
+  "crypto_PR": 5114,
+  "source_bound_actual_geometry": "https://github.com/isogeny-labs/crypto/blob/e52d16a9395638387f01191f36de984c025717f1/research/chained_cm19_resolvents_20261124/ACTUAL_INCIDENCE_PRYM_PROOF_B.md",
+  "claim": "PCC-20261124-d76527",
+  "native": "PCC-20261124-7dafac",
+  "scope": "Separate written actual-object geometry, not a formal dependency proving it."
+}

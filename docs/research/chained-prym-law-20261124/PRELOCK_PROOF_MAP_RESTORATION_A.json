@@ -1,0 +1,7 @@
+{
+  "classification": "Pre-lock metadata edit restored before lock creation or scientific call",
+  "original_registered_proof_map_sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05",
+  "byte_identical_restored": true,
+  "event": "A source-link insertion touched the already registered proof map during source preparation; restored its exact original bytes immediately, preserved identical ORIGINAL copy, put link in a new separate JSON. No claim/evidence hash rewrite or scientific call.",
+  "first_metadata_schema_negative": "First equality assertion incorrectly looked for sha256 at proof-record top level; actual canonical schema nests it in subject. Corrected metadata reader, original proof and claim unchanged."
+}

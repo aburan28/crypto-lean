@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-24T03:03:05Z",
+ "id": "PCC-20261124-078490",
+ "kind": "statement",
+ "producer": {
+  "commit": "e609315e179959bb04b2d8c0c95a7d12b18cd52a",
+  "model": "GPT-6",
+  "session": "chained-transfers-20261124"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-prym-law-20261124/SOURCE_LOCK_A.json",
+    "sha256": "c30c70a98f1a1a219b909971c492a7953a6ecde9728249bb76b7375aa0a74f67"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "First genuine pair-incidence scalar-two formal source/input/runtime lock. Minimal inherited Mathlib Hom.Defs, unchanged canonical auditor, exact Lean4.35 runtime/pinned installed-cache fingerprints,120s2GiB1worker/default logic. Full locked whole-input publication/readback required before first version/compiler/audit call, no outcome yet."
+}
