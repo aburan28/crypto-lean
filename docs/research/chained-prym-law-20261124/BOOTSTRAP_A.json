@@ -1,0 +1,15 @@
+{
+  "PR": 38,
+  "branch": "lane/chained-prym-law-20261124",
+  "main": "ff94d4295f592c679074034cf926695c76de4ddc",
+  "ACTIVE_only": "e609315e179959bb04b2d8c0c95a7d12b18cd52a",
+  "owned_root": "/dev/shm/crypto-lean-prym24",
+  "read_only_Git_alternate": "/dev/shm/crypto-lean-kernel-laws23/.git/objects",
+  "current_AGENTS": "b83480326d42901d8e38c927f142dcecc7145749",
+  "bootstrap_negatives": [
+    "Native sparse index write-tree printed missing unrelated blob diagnostics but verified exact expected root, no blob/tree corruption.",
+    "Initial hydration requested pcc/keyring.json absent from actual current main; stopped and preserved main ledger unchanged; no keyring added.",
+    "CryptoLean.lean exists in current main but local sparse alternate lacked its blob; full exact public content fetched via connected GitHub, same blobc5350475322857e64952c717c4008981fa25f756, no auth/backend change."
+  ],
+  "standing": "No Lean/version/compile/audit scientific call yet; generic law source not qualified. Existing main ledger hydrated byte-identically."
+}

@@ -1,0 +1,23 @@
+{
+ "claim_type": "data",
+ "created_at": "2026-11-24T03:11:48Z",
+ "id": "PCC-20261124-c06722",
+ "kind": "statement",
+ "producer": {
+  "commit": "342cacdfc3a5d750505ff6033a3641ef6b6a6bb3",
+  "model": "GPT-6",
+  "session": "chained-transfers-20261124"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-prym-law-20261124/FIRST_B_FORMAL_NEGATIVE.json",
+    "sha256": "b5e6fdf1f6b94cabfa35f71bece469bfa3e17fc2aec53d751622563e3d9fda9d"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "Distinct first public-module B formal source342cacdf after full47 whole-input readback: version0, law1 before theorem checking, failed reading existing Lean/Elab/Tactic/Simp.olean.private; canonical audit not reached, all guards unchanged. Packaging repair insufficient under fixed runtime/caps, zero theorems accepted, no missing-file or ENOMEM cause inferred from wording, preserve A/B and continue independent actual-map work."
+}

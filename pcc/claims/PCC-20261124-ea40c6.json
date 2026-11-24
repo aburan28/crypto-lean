@@ -1,0 +1,23 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-24T02:59:29Z",
+ "id": "PCC-20261124-ea40c6",
+ "kind": "statement",
+ "producer": {
+  "commit": "e609315e179959bb04b2d8c0c95a7d12b18cd52a",
+  "model": "GPT-6",
+  "session": "chained-transfers-20261124"
+ },
+ "proofs": [
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/research/chained-prym-law-20261124/PRIMARY_AND_PROOF_MAP_A.md",
+    "sha256": "74d83dee212816c143b07f6c1ac852d910b4b62117ce5fae9912753c15e65d05"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "",
+ "statement": "Proposed genuine Mathlib AddMonoidHom scalar-two retraction/injectivity laws for the actual pair-incidence application, explicit hypotheses and minimal hom-definition import, canonical auditor unchanged. Written source/protocol/proof map before first formal call; actual Jacobian geometry separate, no outcome yet."
+}

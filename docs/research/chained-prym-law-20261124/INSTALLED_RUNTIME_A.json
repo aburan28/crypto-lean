@@ -1,0 +1,65 @@
+[
+  {
+    "package": "mathlib",
+    "revision": "cfc55fc58714a59dc06e6e79edc6d1d95140d3c2",
+    "prebuilt_files": 19058,
+    "prebuilt_bytes": 1128353942,
+    "whole_cache_filename_size_hash_mode_sha256": "c750585ce5bf1b830774d793f09841dcc441d28aa67c16e41426b68400bbdfda"
+  },
+  {
+    "package": "plausible",
+    "revision": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+    "prebuilt_files": 169,
+    "prebuilt_bytes": 9810138,
+    "whole_cache_filename_size_hash_mode_sha256": "58b4218af54820e2810bc1e48683d579a7a5bdd77d03354074dee7a81500193e"
+  },
+  {
+    "package": "LeanSearchClient",
+    "revision": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+    "prebuilt_files": 52,
+    "prebuilt_bytes": 3767849,
+    "whole_cache_filename_size_hash_mode_sha256": "42bd6577b26d0ccbe9408c380ba9175af19c83bdda20e21cef6063cd9a3854ee"
+  },
+  {
+    "package": "importGraph",
+    "revision": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+    "prebuilt_files": 455,
+    "prebuilt_bytes": 25537242,
+    "whole_cache_filename_size_hash_mode_sha256": "f507296806d7e2dc1930ddc0db3d3eed08707335ca4e8648116153e0ff080bf9"
+  },
+  {
+    "package": "proofwidgets",
+    "revision": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+    "prebuilt_files": 130,
+    "prebuilt_bytes": 7299664,
+    "whole_cache_filename_size_hash_mode_sha256": "0a61b3849b6e3c45e27587e17d45cc5321ac34cd8888cf9629c950fac26f04a1"
+  },
+  {
+    "package": "aesop",
+    "revision": "4a174c490d8707121c4a9290800489f105d85e07",
+    "prebuilt_files": 1716,
+    "prebuilt_bytes": 97791723,
+    "whole_cache_filename_size_hash_mode_sha256": "4a79970623956d110e017a4122c3640c1f1c2357f7b9b2bb3f9591c60a9c64b0"
+  },
+  {
+    "package": "Qq",
+    "revision": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+    "prebuilt_files": 182,
+    "prebuilt_bytes": 16018528,
+    "whole_cache_filename_size_hash_mode_sha256": "99bb03b4469310a21a732a0edc5295fa651649e816c38a3dce756054c5d2f7ec"
+  },
+  {
+    "package": "batteries",
+    "revision": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+    "prebuilt_files": 936,
+    "prebuilt_bytes": 62652060,
+    "whole_cache_filename_size_hash_mode_sha256": "07545d8568456adc07415a751ff8fdb621a4f4d6f8955d52bc3c9bf002e7c7b8"
+  },
+  {
+    "package": "Cli",
+    "revision": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+    "prebuilt_files": 0,
+    "prebuilt_bytes": 0,
+    "whole_cache_filename_size_hash_mode_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

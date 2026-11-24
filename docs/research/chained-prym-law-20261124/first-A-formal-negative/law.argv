@@ -1,0 +1,1 @@
+lean -j1 -DwarningAsError=true -o /dev/shm/ct24-lean-prym-firstA-formal/olean/CryptoLean/Group/PairIncidence.olean CryptoLean/Group/PairIncidence.lean 

@@ -1,0 +1,162 @@
+{
+  "schema": "source-bound-distinct-module-formal-negative/v1",
+  "recorded": "2026-11-24T03:11:47.874355+00:00",
+  "source": "342cacdfc3a5d750505ff6033a3641ef6b6a6bb3",
+  "protocol": "PCC-20261124-d6d04f",
+  "lock": "PCC-20261124-76aa8c",
+  "complete_inputs_readback": "ct24-lean-prym-sourceB-all47-complete-readback.json",
+  "phases": [
+    {
+      "recorded": "2026-11-24T03:09:28.143299+00:00",
+      "name": "law",
+      "expected_exit": 0,
+      "exit": 1,
+      "complete_stdout": {
+        "bytes": 178,
+        "sha256": "151c7403d21263f2146ed146c55c72f14adb8fa28ad080f438293ce6a1aaf10e",
+        "mode": 384
+      },
+      "complete_stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 384
+      }
+    },
+    {
+      "recorded": "2026-11-24T03:09:27.330827+00:00",
+      "name": "lean-version",
+      "expected_exit": 0,
+      "exit": 0,
+      "complete_stdout": {
+        "bytes": 106,
+        "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a",
+        "mode": 384
+      },
+      "complete_stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 384
+      }
+    }
+  ],
+  "outer_exit": 1,
+  "guard_failures": [],
+  "files": [
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/BUILD_MANIFEST.json",
+      "bytes": 22982,
+      "sha256": "3c3a6573f4cc1b2f4590145e7d327d51a5455b301e2428fb373ccb4c50f46050",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/BUILD_MANIFEST.json"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/CONTEXT.json",
+      "bytes": 1488,
+      "sha256": "96e4f50cdedcc27c34ecb019647d2df2c4365dd7dce5648a77d5e90dea231644",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/CONTEXT.json"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/POST_CALL_MANIFEST.json",
+      "bytes": 23025,
+      "sha256": "c122cb42f63956cbbe352b6c608c2ab7e13387e6aaab20dc5843888b0a410670",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/POST_CALL_MANIFEST.json"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/final-guards.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/final-guards.stderr"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/final-guards.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/final-guards.stdout"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/init.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/init.stderr"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/init.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/init.stdout"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/law.argv",
+      "bytes": 164,
+      "sha256": "2207f929aed56639b3bbd3d7c61836d92939a6325ceb57aff4ee402e42375f7a",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/law.argv"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/law.phase.json",
+      "bytes": 391,
+      "sha256": "6d29da22c250fa1d7f7b4e6e83dd6354bce9ee1eed4885263f42739c33078a42",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/law.phase.json"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/law.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/law.stderr"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/law.stdout",
+      "bytes": 178,
+      "sha256": "151c7403d21263f2146ed146c55c72f14adb8fa28ad080f438293ce6a1aaf10e",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/law.stdout"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/lean-version.argv",
+      "bytes": 16,
+      "sha256": "072fc15a894e747d736adb1dcb4f321c7fdf3bfe0f137515f9f8f1fb513fe60d",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/lean-version.argv"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/lean-version.phase.json",
+      "bytes": 400,
+      "sha256": "f6057613bfb58d1953d8e499b987f3ac9dcc94214fdf05166e28ff45649604b3",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/lean-version.phase.json"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/lean-version.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/lean-version.stderr"
+    },
+    {
+      "original_RAM": "/dev/shm/ct24-lean-prym-firstB-formal/lean-version.stdout",
+      "bytes": 106,
+      "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a",
+      "mode": 384,
+      "whole_committed_copy": "docs/research/chained-prym-law-20261124/first-B-formal-negative/lean-version.stdout"
+    }
+  ],
+  "theorems_accepted": 0,
+  "canonical_audit": "not reached",
+  "private_file_at_error": {
+    "path": "/home/agent/.elan/toolchains/leanprover--lean4---v4.35.0/lib/lean/Lean/Elab/Tactic/Simp.olean.private",
+    "exists": true,
+    "bytes": 3881840,
+    "sha256": "cc2ab4754a526f0d7d4a16d9a56d75f1d791d28f91690d10f957ad0fe53c2127",
+    "mode": 420
+  },
+  "conclusion": "Public-module source change did not suffice to avoid a private library read failure in this installed runtime under fixed2GiB. Different error path than A, actual cause not established by error wording; no proof or impossibility verdict.",
+  "next": "Preserve both source locks/whole originals; no unchanged retry/cap or gate change. Continue independent actual-native kernel/Prym input work in crypto5114."
+}
