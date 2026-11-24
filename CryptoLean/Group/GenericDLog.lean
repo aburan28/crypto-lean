@@ -388,6 +388,28 @@ end PrimeOrder
 /-- Twice the maximum number of uniform secrets covered by the collision argument. -/
 def successNumerator (q : ℕ) : ℕ := (q + 3) * (q + 2) + 2
 
+/-- Turn a family of cutoff bounds into a mean query lower bound at positive success. -/
+theorem sqrt_success_mul_order_div_two_le_of_cutoffs {r : ℕ} (hr : 0 < r)
+    {success mean : ℝ} (hsuccess : 0 < success) (hmean : 0 ≤ mean)
+    (hbound : ∀ cutoff : ℕ, success ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      mean / ((cutoff : ℝ) + 1)) :
+    Real.sqrt (success * (r : ℝ) / 2) ≤ 2 * mean / success + 2 := by
+  let cutoff := ⌊2 * mean / success⌋₊
+  have hcutoff : (cutoff : ℝ) ≤ 2 * mean / success := Nat.floor_le (by positivity)
+  have htail : mean / ((cutoff : ℝ) + 1) < success / 2 := by
+    have hf : 2 * mean / success < (cutoff : ℝ) + 1 := Nat.lt_floor_add_one _
+    exact (div_lt_iff₀ (by positivity)).mpr (by nlinarith only [(div_lt_iff₀ hsuccess).mp hf])
+  have hcollision : success / 2 < (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) := by
+    linarith only [hbound cutoff, htail]
+  have hrReal : (0 : ℝ) < r := by exact_mod_cast hr
+  have horder : success * (r : ℝ) ≤ (successNumerator cutoff : ℝ) := by
+    nlinarith only [(lt_div_iff₀ (mul_pos two_pos hrReal)).mp hcollision]
+  have hnum : (successNumerator cutoff : ℝ) = ((cutoff : ℝ) + 3) * ((cutoff : ℝ) + 2) + 2 := by
+    simp [successNumerator]
+  have hsquare : success * (r : ℝ) / 2 ≤ ((cutoff : ℝ) + 2) ^ 2 := by
+    nlinarith only [horder, hnum, sq_nonneg (cutoff : ℝ), Nat.cast_nonneg (α := ℝ) cutoff]
+  exact ((Real.sqrt_le_left (by positivity)).mpr hsquare).trans (add_le_add hcutoff le_rfl)
+
 section Probability
 
 variable {r : ℕ} [Fact r.Prime] {View : ℕ → Type*} {q : ℕ}
@@ -428,47 +450,96 @@ noncomputable def expectedQueries (count : ZMod r → ℕ) : ℝ := by
   let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
   exact (∑ x : ZMod r, (count x : ℝ)) / r
 
-/-- A successful run either agrees with the truncated run or pays for at least `cutoff + 1` calls. -/
-theorem successProbability_le_of_expectedQueries (observe : ∀ n, Pattern n → View n)
-    (samples : ℕ → ZMod r) (strategy : Strategy r View 3 q) (cutoff : ℕ) :
-    successProbability observe samples strategy ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
-      expectedQueries (scalarQueryCount observe samples strategy) / ((cutoff : ℝ) + 1) := by
+/-- Charge each solved scalar to the truncated run, a long run, or the supplied exceptional set. -/
+theorem card_div_le_of_truncation (observe : ∀ n, Pattern n → View n)
+    (samples : ℕ → ZMod r) (strategy : Strategy r View 3 q) (cutoff : ℕ)
+    (solved exceptional : Finset (ZMod r)) (count : ZMod r → ℕ)
+    (hcert : ∀ x ∈ solved, x ∉ exceptional → scalarGuess observe samples strategy x = x ∧
+      scalarQueryCount observe samples strategy x ≤ count x) :
+    (solved.card : ℝ) / r ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      expectedQueries count / ((cutoff : ℝ) + 1) + (exceptional.card : ℝ) / r := by
   let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
   let truncated := strategy.truncate 0 cutoff
-  let long := (univ : Finset (ZMod r)).filter fun x => cutoff < scalarQueryCount observe samples strategy x
-  have hsub : successSecrets observe samples strategy ⊆ successSecrets observe samples truncated ∪ long := by
+  let long := (univ : Finset (ZMod r)).filter fun x => cutoff < count x
+  have hsub : solved ⊆ (successSecrets observe samples truncated ∪ long) ∪ exceptional := by
     intro x hx
-    by_cases hlong : cutoff < scalarQueryCount observe samples strategy x
+    apply Finset.mem_union.mpr
+    by_cases hbad : x ∈ exceptional
+    · exact Or.inr hbad
+    left
+    obtain ⟨hcorrect, hcount⟩ := hcert x hx hbad
+    by_cases hlong : cutoff < count x
     · exact Finset.mem_union.mpr (Or.inr (mem_filter.mpr ⟨mem_univ _, hlong⟩))
     · apply Finset.mem_union.mpr
       left
       have hsize : (run observe (scalarOracle r samples) strategy (eval x ∘ startingForms r)).size ≤
           3 + cutoff := by
-        unfold scalarQueryCount at hlong
+        unfold scalarQueryCount at hcount
         omega
       have hguess : scalarGuess observe samples truncated x = scalarGuess observe samples strategy x :=
         congrArg Execution.answer (run_truncate_eq_of_size_le observe (scalarOracle r samples)
           strategy (eval x ∘ startingForms r) 0 hsize)
-      exact mem_filter.mpr ⟨mem_univ _, hguess.trans (mem_filter.mp hx).2⟩
-  have hcard := (Finset.card_le_card hsub).trans (Finset.card_union_le _ _)
-  have hcost : long.card * (cutoff + 1) ≤ ∑ x : ZMod r, scalarQueryCount observe samples strategy x := by
+      exact mem_filter.mpr ⟨mem_univ _, hguess.trans hcorrect⟩
+  have hcard : solved.card ≤ (successSecrets observe samples truncated).card + long.card + exceptional.card :=
+    ((Finset.card_le_card hsub).trans (Finset.card_union_le _ _)).trans
+      (Nat.add_le_add_right (Finset.card_union_le _ _) _)
+  have hcost : long.card * (cutoff + 1) ≤ ∑ x : ZMod r, count x := by
     calc
       _ = ∑ _x ∈ long, (cutoff + 1) := by simp
-      _ ≤ ∑ x ∈ long, scalarQueryCount observe samples strategy x :=
+      _ ≤ ∑ x ∈ long, count x :=
         Finset.sum_le_sum fun x hx => Nat.succ_le_of_lt (mem_filter.mp hx).2
       _ ≤ _ := Finset.sum_le_sum_of_subset (filter_subset ..)
   have hr : 0 < (r : ℝ) := by exact_mod_cast (Fact.out : r.Prime).pos
-  have htail : (long.card : ℝ) / r ≤
-      expectedQueries (scalarQueryCount observe samples strategy) / ((cutoff : ℝ) + 1) := by
+  have htail : (long.card : ℝ) / r ≤ expectedQueries count / ((cutoff : ℝ) + 1) := by
     apply (le_div_iff₀ (by positivity)).mpr
     rw [div_mul_eq_mul_div₀, expectedQueries]
     exact div_le_div_of_nonneg_right (by exact_mod_cast hcost) hr.le
-  have hsuccess : successProbability observe samples strategy ≤
-      successProbability observe samples truncated + (long.card : ℝ) / r := by
+  have hsuccess : (solved.card : ℝ) / r ≤
+      successProbability observe samples truncated + (long.card : ℝ) / r + (exceptional.card : ℝ) / r := by
     unfold successProbability
-    rw [← add_div]
+    rw [← add_div, ← add_div]
     exact div_le_div_of_nonneg_right (by exact_mod_cast hcard) hr.le
-  exact hsuccess.trans (add_le_add (successProbability_le observe samples truncated) htail)
+  exact hsuccess.trans (add_le_add (add_le_add (successProbability_le observe samples truncated) htail) le_rfl)
+
+/-- A successful generic run either finishes within the cutoff or pays for at least one more call. -/
+theorem successProbability_le_of_expectedQueries (observe : ∀ n, Pattern n → View n)
+    (samples : ℕ → ZMod r) (strategy : Strategy r View 3 q) (cutoff : ℕ) :
+    successProbability observe samples strategy ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      expectedQueries (scalarQueryCount observe samples strategy) / ((cutoff : ℝ) + 1) := by
+  simpa [successProbability] using card_div_le_of_truncation observe samples strategy cutoff
+    (successSecrets observe samples strategy) ∅ (scalarQueryCount observe samples strategy)
+    (fun _ hx _ => ⟨(mem_filter.mp hx).2, le_rfl⟩)
+
+/-- Average the truncation bound over seeds that are independent of the uniform scalar. -/
+theorem mixed_card_div_le_of_truncation {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
+    (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) (cutoff : ℕ)
+    (solved exceptional : Seed → Finset (ZMod r)) (count : Seed → ZMod r → ℕ)
+    (exceptionBound : Seed → ℕ) (hbound : ∀ s, (exceptional s).card ≤ exceptionBound s)
+    (hcert : ∀ s x, x ∈ solved s → x ∉ exceptional s → scalarGuess (observe s) (samples s) (strategy s) x = x ∧
+      scalarQueryCount (observe s) (samples s) (strategy s) x ≤ count s x) :
+    (∑ s, weights s * ((solved s).card : ℝ)) / (r : ℝ) ≤
+      (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+        (∑ s, weights s * expectedQueries (count s)) / ((cutoff : ℝ) + 1) +
+        (∑ s, weights s * (exceptionBound s : ℝ)) / (r : ℝ) := by
+  have hr : 0 ≤ (r : ℝ) := by positivity
+  calc
+    _ = ∑ s, weights s * (((solved s).card : ℝ) / (r : ℝ)) := by
+      simp only [div_eq_mul_inv, Finset.sum_mul, mul_assoc]
+    _ ≤ ∑ s, weights s * ((successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+        expectedQueries (count s) / ((cutoff : ℝ) + 1) + (exceptionBound s : ℝ) / (r : ℝ)) := by
+      apply Finset.sum_le_sum
+      intro s _
+      apply mul_le_mul_of_nonneg_left _ (hnonneg s)
+      have hb : ((exceptional s).card : ℝ) ≤ (exceptionBound s : ℝ) := by exact_mod_cast hbound s
+      exact (card_div_le_of_truncation (observe s) (samples s) (strategy s) cutoff
+        (solved s) (exceptional s) (count s) (hcert s)).trans
+        (add_le_add le_rfl (div_le_div_of_nonneg_right hb hr))
+    _ = _ := by
+      simp_rw [mul_add]
+      rw [Finset.sum_add_distrib, Finset.sum_add_distrib, ← Finset.sum_mul, hnorm, one_mul]
+      simp only [div_eq_mul_inv, Finset.sum_mul, mul_assoc]
 
 /-- Average the actual query count over seeds independent of the uniform secret. -/
 noncomputable def mixedExpectedQueries {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
@@ -483,15 +554,11 @@ theorem mixedSuccessProbability_le_of_expectedQueries {Seed : Type*} [Fintype Se
     (strategy : Seed → Strategy r View 3 q) (cutoff : ℕ) :
     mixedSuccessProbability weights observe samples strategy ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
       mixedExpectedQueries weights observe samples strategy / ((cutoff : ℝ) + 1) := by
-  calc
-    _ ≤ ∑ s, weights s * ((successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
-        expectedQueries (scalarQueryCount (observe s) (samples s) (strategy s)) / ((cutoff : ℝ) + 1)) :=
-      Finset.sum_le_sum fun s _ => mul_le_mul_of_nonneg_left
-        (successProbability_le_of_expectedQueries (observe s) (samples s) (strategy s) cutoff) (hnonneg s)
-    _ = _ := by
-      simp_rw [mul_add]
-      rw [Finset.sum_add_distrib, ← Finset.sum_mul, hnorm, one_mul, mixedExpectedQueries]
-      simp only [div_eq_mul_inv, Finset.sum_mul, mul_assoc]
+  simpa [mixedSuccessProbability, successProbability, mixedExpectedQueries, div_eq_mul_inv, Finset.sum_mul, mul_assoc]
+    using mixed_card_div_le_of_truncation weights hnonneg hnorm observe samples strategy cutoff
+      (fun s => successSecrets (observe s) (samples s) (strategy s)) (fun _ => ∅)
+      (fun s => scalarQueryCount (observe s) (samples s) (strategy s)) (fun _ => 0)
+      (fun _ => by simp) (fun _ _ hx _ => ⟨(mem_filter.mp hx).2, le_rfl⟩)
 
 /-- Half success requires a mean query count of at least `sqrt r / 8 - 1 / 2`. -/
 theorem sqrt_order_le_of_half_success_with_expectedQueries {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ)
@@ -503,26 +570,15 @@ theorem sqrt_order_le_of_half_success_with_expectedQueries {Seed : Type*} [Finty
   let mean := mixedExpectedQueries weights observe samples strategy
   have hmean : 0 ≤ mean := Finset.sum_nonneg fun s _ =>
     mul_nonneg (hnonneg s) (by unfold expectedQueries; positivity)
-  let cutoff := ⌊4 * mean⌋₊
-  have hcutoff : (cutoff : ℝ) ≤ 4 * mean := Nat.floor_le (by positivity)
-  have htail : mean / ((cutoff : ℝ) + 1) < 1 / 4 := by
-    have hf : 4 * mean < (cutoff : ℝ) + 1 := Nat.lt_floor_add_one _
-    exact (div_lt_iff₀ (by positivity)).mpr (by linarith)
-  have hbound := hsuccess.trans
-    (mixedSuccessProbability_le_of_expectedQueries weights hnonneg hnorm observe samples strategy cutoff)
-  change (1 : ℝ) / 2 ≤ _ + mean / ((cutoff : ℝ) + 1) at hbound
-  have hcollision : (1 : ℝ) / 4 < (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) := by
-    linarith only [hbound, htail]
-  have hr : (0 : ℝ) < r := by exact_mod_cast (Fact.out : r.Prime).pos
-  have horder : (r : ℝ) ≤ 2 * (successNumerator cutoff : ℝ) := by
-    linarith only [(lt_div_iff₀ (mul_pos two_pos hr)).mp hcollision]
-  have hnum : (successNumerator cutoff : ℝ) = ((cutoff : ℝ) + 3) * ((cutoff : ℝ) + 2) + 2 := by
-    simp [successNumerator]
-  have hsquare : (r : ℝ) ≤ (2 * ((cutoff : ℝ) + 2)) ^ 2 := by
-    nlinarith only [horder, hnum, sq_nonneg (cutoff : ℝ), Nat.cast_nonneg (α := ℝ) cutoff]
-  calc
-    Real.sqrt r ≤ 2 * ((cutoff : ℝ) + 2) := (Real.sqrt_le_left (by positivity)).mpr hsquare
-    _ ≤ 8 * mean + 4 := by linarith only [hcutoff]
+  have h := sqrt_success_mul_order_div_two_le_of_cutoffs (Fact.out : r.Prime).pos
+    (success := (1 : ℝ) / 2) (mean := mean) (by norm_num) hmean (fun cutoff =>
+      hsuccess.trans (mixedSuccessProbability_le_of_expectedQueries weights hnonneg hnorm observe samples strategy cutoff))
+  have hscale : (1 : ℝ) / 2 * (r : ℝ) / 2 = (r : ℝ) / 4 := by ring
+  have hsqrt : Real.sqrt (4 : ℝ) = 2 := by
+    rw [show (4 : ℝ) = 2 ^ 2 by norm_num, Real.sqrt_sq (by norm_num)]
+  rw [hscale, Real.sqrt_div (by positivity : (0 : ℝ) ≤ r), hsqrt] at h
+  norm_num at h
+  linarith only [h]
 
 end Probability
 

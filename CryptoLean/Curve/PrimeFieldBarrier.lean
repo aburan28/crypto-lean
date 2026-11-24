@@ -53,6 +53,13 @@ theorem polynomialExceptions_card_le (polynomials : ι → (ZMod r)[X]) :
     _ ≤ ∑ i : ι, (polynomials i).roots.toFinset.card := Finset.card_biUnion_le
     _ ≤ _ := Finset.sum_le_sum fun i _ => roots_card_le_degree (polynomials i)
 
+private theorem eval_ne_zero_of_not_mem_polynomialExceptions (polynomials : ι → (ZMod r)[X])
+    {x : ZMod r} (hx : x ∉ polynomialExceptions polynomials) {i : ι} (hi : polynomials i ≠ 0) :
+    (polynomials i).eval x ≠ 0 := by
+  intro hz
+  exact hx (Finset.mem_biUnion.mpr ⟨i, mem_univ _,
+    Multiset.mem_toFinset.mpr ((Polynomial.mem_roots hi).mpr hz)⟩)
+
 noncomputable def successfulSecrets (guess : ZMod r → ZMod r) : Finset (ZMod r) := by
   let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
   exact univ.filter fun x => guess x = x
@@ -72,12 +79,7 @@ theorem two_mul_success_le_of_polynomial_exceptions {View : ℕ → Type*} {q : 
     by_cases hb : x ∈ polynomialExceptions polynomials
     · exact Or.inr hb
     · left
-      have hg (i : ι) : (polynomials i).eval x ≠ 0 := by
-        intro hz
-        apply hb
-        unfold polynomialExceptions
-        exact Finset.mem_biUnion.mpr ⟨i, mem_univ _,
-          Multiset.mem_toFinset.mpr ((Polynomial.mem_roots (hnonzero i)).mpr hz)⟩
+      have hg (i : ι) := eval_ne_zero_of_not_mem_polynomialExceptions polynomials hb (hnonzero i)
       unfold successfulSecrets at hx
       unfold GenericDLog.successSecrets
       exact Finset.mem_filter.mpr ⟨mem_univ _, (hmatch x hg).symm.trans (Finset.mem_filter.mp hx).2⟩
@@ -113,6 +115,64 @@ theorem two_mul_expected_success_le_of_polynomial_exceptions {View : ℕ → Typ
       apply Finset.sum_congr rfl
       intro s _
       ring
+
+/-- At any cutoff, combine the mean actual query count and the mean exceptional degree.
+Outside the roots, the reference run agrees with the solver and uses no more queries. -/
+theorem mixed_success_le_of_polynomial_exceptions_with_expectedQueries {View : ℕ → Type*} {q : ℕ}
+    {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ) (hnonneg : ∀ s, 0 ≤ weights s)
+    (hnorm : ∑ s, weights s = 1) (observe : Seed → ∀ n, Pattern n → View n)
+    (samples : Seed → ℕ → ZMod r) (strategy : Seed → Strategy r View 3 q)
+    (guess : Seed → ZMod r → ZMod r) (count : Seed → ZMod r → ℕ)
+    (polynomials : Seed → ι → (ZMod r)[X]) (hnonzero : ∀ s i, polynomials s i ≠ 0)
+    (hmatch : ∀ s x, (∀ i, (polynomials s i).eval x ≠ 0) →
+      guess s x = scalarGuess (observe s) (samples s) (strategy s) x ∧
+      scalarQueryCount (observe s) (samples s) (strategy s) x ≤ count s x) (cutoff : ℕ) :
+    (∑ s, weights s * ((successfulSecrets (guess s)).card : ℝ)) / (r : ℝ) ≤
+      (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+        (∑ s, weights s * expectedQueries (count s)) / ((cutoff : ℝ) + 1) +
+        (∑ s, weights s * ((∑ i, (polynomials s i).natDegree : ℕ) : ℝ)) / (r : ℝ) := by
+  let : NeZero r := ⟨(Fact.out : r.Prime).ne_zero⟩
+  refine mixed_card_div_le_of_truncation weights hnonneg hnorm observe samples strategy cutoff
+    (fun s => successfulSecrets (guess s)) (fun s => polynomialExceptions (polynomials s)) count
+    (fun s => ∑ i, (polynomials s i).natDegree) (fun s => polynomialExceptions_card_le (polynomials s)) ?_
+  intro s x hx hgood
+  obtain ⟨hguess, hcount⟩ := hmatch s x
+    (fun i => eval_ne_zero_of_not_mem_polynomialExceptions (polynomials s) hgood (hnonzero s i))
+  exact ⟨hguess.symm.trans (mem_filter.mp hx).2, hcount⟩
+
+/-- Half success with mean exceptional degree at most `r / 4` forces a square-root mean query bound. -/
+theorem sqrt_order_div_eight_le_of_half_success_with_polynomial_exceptions {View : ℕ → Type*} {q : ℕ}
+    {Seed : Type*} [Fintype Seed] (weights : Seed → ℝ) (hnonneg : ∀ s, 0 ≤ weights s)
+    (hnorm : ∑ s, weights s = 1) (observe : Seed → ∀ n, Pattern n → View n)
+    (samples : Seed → ℕ → ZMod r) (strategy : Seed → Strategy r View 3 q)
+    (guess : Seed → ZMod r → ZMod r) (count : Seed → ZMod r → ℕ)
+    (polynomials : Seed → ι → (ZMod r)[X]) (hnonzero : ∀ s i, polynomials s i ≠ 0)
+    (hmatch : ∀ s x, (∀ i, (polynomials s i).eval x ≠ 0) →
+      guess s x = scalarGuess (observe s) (samples s) (strategy s) x ∧
+      scalarQueryCount (observe s) (samples s) (strategy s) x ≤ count s x)
+    (hdegree : 4 * ∑ s, weights s * ((∑ i, (polynomials s i).natDegree : ℕ) : ℝ) ≤ (r : ℝ))
+    (hsuccess : (1 : ℝ) / 2 ≤
+      (∑ s, weights s * ((successfulSecrets (guess s)).card : ℝ)) / (r : ℝ)) :
+    Real.sqrt ((r : ℝ) / 8) ≤ 8 * (∑ s, weights s * expectedQueries (count s)) + 2 := by
+  let mean := ∑ s, weights s * expectedQueries (count s)
+  let degree := ∑ s, weights s * ((∑ i, (polynomials s i).natDegree : ℕ) : ℝ)
+  have hr : (0 : ℝ) < r := by exact_mod_cast (Fact.out : r.Prime).pos
+  have hmean : 0 ≤ mean := Finset.sum_nonneg fun s _ =>
+    mul_nonneg (hnonneg s) (by unfold expectedQueries; positivity)
+  have hdegreeFraction : degree / (r : ℝ) ≤ 1 / 4 :=
+    (div_le_iff₀ hr).mpr (by change 4 * degree ≤ (r : ℝ) at hdegree; linarith only [hdegree])
+  have hcutoffs (cutoff : ℕ) : (1 : ℝ) / 4 ≤ (successNumerator cutoff : ℝ) / (2 * (r : ℝ)) +
+      mean / ((cutoff : ℝ) + 1) := by
+    have htotal := hsuccess.trans (mixed_success_le_of_polynomial_exceptions_with_expectedQueries
+      weights hnonneg hnorm observe samples strategy guess count polynomials hnonzero hmatch cutoff)
+    change (1 : ℝ) / 2 ≤ _ + mean / ((cutoff : ℝ) + 1) + degree / (r : ℝ) at htotal
+    linarith only [htotal, hdegreeFraction]
+  have h := sqrt_success_mul_order_div_two_le_of_cutoffs (Fact.out : r.Prime).pos (by norm_num) hmean hcutoffs
+  have hscale : (1 : ℝ) / 4 * (r : ℝ) / 2 = (r : ℝ) / 8 := by ring
+  rw [hscale] at h
+  calc
+    _ ≤ 2 * mean / (1 / 4) + 2 := h
+    _ = _ := by change 2 * mean / (1 / 4) + 2 = 8 * mean + 2; ring
 
 /-- The half-success bound only needs a cap on expected exceptional degree. -/
 theorem order_le_twice_successNumerator_of_expected_half {r q : ℕ}

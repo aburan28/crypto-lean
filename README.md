@@ -43,8 +43,13 @@ running-time overhead depends on the cost of evaluating them.
 `CryptoLean.Curve.PrimeFieldBarrier` extends the generic collision bound
 to explicitly supplied polynomial zero tests over the scalar field. Its
 randomized version uses the expected total degree over seeds independent
-of the challenge. The prime-field estimate also takes the Hasse inequality
-and a cofactor cap as hypotheses.
+of the challenge. If the solver matches the reference guess outside the
+roots and the reference uses at most as many queries there, the mean
+query count `μ` and mean total degree `D̄` give the success bound
+`((m + 3)(m + 2) + 2)/(2r) + μ/(m + 1) + D̄/r` at every cutoff `m`.
+At half success and `D̄ ≤ r/4`, this gives `sqrt(r/8) ≤ 8μ + 2` and
+`sqrt(N^(2Δ) |D₀|/(32H)) ≤ 8μ + 2` across the conductor gap. The separate
+prime-field estimate uses the Hasse inequality and a cofactor cap.
 
 `CryptoLean.Polynomial.EllipticMaps` supplies the cleared doubling quartic,
 degree-two Vélu curve residual and its kernel-root/affine specializations.

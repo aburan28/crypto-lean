@@ -1,13 +1,15 @@
-import CryptoLean.Curve.SubgroupDLog
+import CryptoLean.Curve.PrimeFieldBarrier
 import Mathlib.NumberTheory.Padics.PadicVal.Basic
 
 /-! The conductor discriminant identity bounds the size of a subgroup used in generic ECDLP. -/
 
 set_option autoImplicit false
 
+open scoped Polynomial
+
 namespace CryptoLean.ConductorGap
 
-open GenericDLog ECDLP
+open GenericDLog ECDLP PrimeFieldBarrier
 
 /-- A divisor of the Frobenius conductor bounds the point count from below. -/
 theorem conductor_divisor_sq_le_four_point_count {q pointCount f N : ℕ} {t D₀ : ℤ}
@@ -43,6 +45,15 @@ theorem sqrt_conductor_divisor_le_sqrt_order {G : Type*} [AddCommGroup G] {r H d
   apply Real.sqrt_le_sqrt
   apply (div_le_iff₀ (mul_pos (by norm_num) (by exact_mod_cast hH))).mpr
   simpa only [mul_left_comm (r : ℝ) 4 (H : ℝ), mul_comm (r : ℝ) (H : ℝ)] using hwork
+
+/-- Rescale the squared conductor-divisor bound and the subgroup order by the same factor. -/
+theorem sqrt_conductor_divisor_le_sqrt_order_scaled {G : Type*} [AddCommGroup G] {r H d : ℕ} {D₀ : ℤ}
+    (P : G) (horder : addOrderOf P = r) (hH : 0 < H) (hcofactor : cofactor P ≤ H)
+    (hcount : (d : ℤ) ^ 2 * |D₀| ≤ 4 * (Nat.card G : ℤ)) (scale : ℝ) :
+    Real.sqrt ((d : ℝ) ^ 2 * |(D₀ : ℝ)| / (4 * (H : ℝ) * scale)) ≤ Real.sqrt ((r : ℝ) / scale) := by
+  rw [Real.sqrt_div (Nat.cast_nonneg r) scale, ← div_div, Real.sqrt_div (by positivity)]
+  exact div_le_div_of_nonneg_right (sqrt_conductor_divisor_le_sqrt_order P horder hH hcofactor hcount)
+    (Real.sqrt_nonneg scale)
 
 /-- With a cofactor cap, the conductor divisor bounds every generic half-success budget. -/
 theorem half_success_from_conductor_divisor {G : Type*} [AddCommGroup G] [DecidableEq G]
@@ -90,6 +101,31 @@ theorem sqrt_conductor_divisor_le_of_half_success_with_expectedQueries {G : Type
   exact hsubgroup.trans (by
     rw [mixedPointExpectedQueries_eq_scalar P horder]
     exact sqrt_order_le_of_half_success_with_expectedQueries weights hnonneg hnorm observe samples strategy hsuccess)
+
+/-- A conductor divisor bounds mean queries at half success with a certified exceptional set. -/
+theorem sqrt_conductor_divisor_le_at_half_success_with_polynomial_exceptions {G : Type*}
+    [AddCommGroup G] {p r q f d H : ℕ} [Fact r.Prime] {t D₀ : ℤ}
+    (hD : t ^ 2 - 4 * (p : ℤ) = (f : ℤ) ^ 2 * D₀) (hnegative : t ^ 2 - 4 * (p : ℤ) < 0)
+    (hdiv : d ∣ f) (hcount : (Nat.card G : ℤ) = (p : ℤ) + 1 - t)
+    (P : G) (horder : addOrderOf P = r) (hH : 0 < H) (hcofactor : cofactor P ≤ H)
+    {View : ℕ → Type*} {Seed ι : Type*} [Fintype Seed] [Fintype ι] (weights : Seed → ℝ)
+    (hnonneg : ∀ s, 0 ≤ weights s) (hnorm : ∑ s, weights s = 1)
+    (observe : Seed → ∀ n, Pattern n → View n) (samples : Seed → ℕ → ZMod r)
+    (strategy : Seed → Strategy r View 3 q) (guess : Seed → ZMod r → ZMod r) (count : Seed → ZMod r → ℕ)
+    (polynomials : Seed → ι → (ZMod r)[X]) (hnonzero : ∀ s i, polynomials s i ≠ 0)
+    (hmatch : ∀ s x, (∀ i, (polynomials s i).eval x ≠ 0) →
+      guess s x = scalarGuess (observe s) (samples s) (strategy s) x ∧
+      scalarQueryCount (observe s) (samples s) (strategy s) x ≤ count s x)
+    (hdegree : 4 * ∑ s, weights s * ((∑ i, (polynomials s i).natDegree : ℕ) : ℝ) ≤ (r : ℝ))
+    (hsuccess : (1 : ℝ) / 2 ≤
+      (∑ s, weights s * ((successfulSecrets (guess s)).card : ℝ)) / (r : ℝ)) :
+    Real.sqrt ((d : ℝ) ^ 2 * |(D₀ : ℝ)| / (32 * (H : ℝ))) ≤
+      8 * (∑ s, weights s * expectedQueries (count s)) + 2 := by
+  have hbound := conductor_divisor_sq_le_four_point_count hD hnegative hdiv hcount
+  have hsubgroup := sqrt_conductor_divisor_le_sqrt_order_scaled P horder hH hcofactor hbound 8
+  have hmean := sqrt_order_div_eight_le_of_half_success_with_polynomial_exceptions weights hnonneg hnorm
+    observe samples strategy guess count polynomials hnonzero hmatch hdegree hsuccess
+  simpa only [show 4 * (H : ℝ) * 8 = 32 * (H : ℝ) by ring] using hsubgroup.trans hmean
 
 /-- Solve the quadratic query bound for the budget. -/
 theorem sqrt_gap_lower_bound_le_budget {N H m : ℕ} {D₀ : ℤ} (hH : 0 < H)
