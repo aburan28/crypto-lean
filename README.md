@@ -22,6 +22,35 @@ must build on the same toolchain (Lake requires it).
 Promoted files name their source; new laws document their consumer and
 mathematical reference.
 
+`CryptoLean.Group.GenericDLog` and `CryptoLean.Curve.SubgroupDLog` bound
+adaptive generic discrete-log success by `(q + 3)(q + 2)/(2r) + 1/r`
+for `q` queries and prime subgroup order `r`. At fixed order, the same
+strategy has identical success and mean actual query count on either curve.
+At half success, the mean actual query count `μ` satisfies `sqrt r ≤ 8μ + 4`
+even when the stopping time depends on the challenge. The affine collision
+argument follows [Shoup](https://www.shoup.net/papers/dlbounds1.pdf).
+
+`CryptoLean.Curve.ConductorGapQueryBound` combines the Frobenius
+discriminant identity and a cofactor cap with the generic query bounds.
+With cofactor cap `H` and field discriminant `D₀`, a conductor gap of
+valuation difference `Δ` at `N` gives `N^Δ sqrt(|D₀|/H) ≤ 16μ + 8`
+at half success.
+`CryptoLean.Curve.DLogSolverTransport` preserves exact success for
+coordinate-aware solvers given additive maps with the dual-degree identity
+and degree coprime to `r`. The maps are inputs to the theorem, and the
+running-time overhead depends on the cost of evaluating them.
+
+`CryptoLean.Curve.PrimeFieldBarrier` extends the generic collision bound
+to explicitly supplied polynomial zero tests over the scalar field. Its
+randomized version uses the expected total degree over seeds independent
+of the challenge. If the solver matches the reference guess outside the
+roots and the reference uses at most as many queries there, the mean
+query count `μ` and mean total degree `D̄` give the success bound
+`((m + 3)(m + 2) + 2)/(2r) + μ/(m + 1) + D̄/r` at every cutoff `m`.
+At half success and `D̄ ≤ r/4`, this gives `sqrt(r/8) ≤ 8μ + 2` and
+`sqrt(N^(2Δ) |D₀|/(32H)) ≤ 8μ + 2` across the conductor gap. The separate
+prime-field estimate uses the Hasse inequality and a cofactor cap.
+
 `CryptoLean.Polynomial.EllipticMaps` supplies the cleared doubling quartic,
 degree-two Vélu curve residual and its kernel-root/affine specializations.
 They concern semantic rings and fields. Native source binding, rational-root
