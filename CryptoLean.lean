@@ -61,3 +61,5 @@ import CryptoLean.OpenProblems.NumberTheory.PrimePatterns
 import CryptoLean.OpenProblems.NumberTheory.SpecialPrimes
 import CryptoLean.OpenProblems.NumberTheory.Transcendence
 import CryptoLean.OpenProblems.NumberTheory.Zeta
+import CryptoLean.OpenProblems.NumberTheory.DeepConjectures
+import CryptoLean.OpenProblems.NumberTheory.EllipticCurves
