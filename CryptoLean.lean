@@ -13,6 +13,7 @@ import CryptoLean.Curve.Twists
 import CryptoLean.Group.CyclicTwists
 import CryptoLean.Group.Torsion
 import CryptoLean.Group.SingleRelation
+import CryptoLean.Group.LinearFilterObstruction
 import CryptoLean.Group.SubsetFourier
 import CryptoLean.Group.PartiteCoverage
 import CryptoLean.Group.ShiftRepresentations
