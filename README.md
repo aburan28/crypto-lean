@@ -129,3 +129,7 @@ needs review.
 - the group-level `PointIsogeny` and the generic-group model on Mathlib `Group`;
 - autoresearcher's Semaev symmetrization and fall-degree material;
 - the `@[report_theorem]` attribute (design phase 4).
+
+## Licence
+
+Copyright (c) 2026 Isogeny Labs. Released under the Apache License 2.0, as Mathlib is; see [LICENSE](LICENSE). To report a vulnerability, including a proof-gate soundness hole, see [SECURITY.md](SECURITY.md).
