@@ -1,0 +1,104 @@
+import Mathlib
+
+/-!
+Finite incidence counts and separated target-row blocks.
+Source: docs/bounded-incidence-20261124-plan.md, proof chain and fidelity table.
+These are finite counts and field identities, not a sampling or curve theorem.
+-/
+set_option autoImplicit false
+namespace CryptoLean.Combinatorics.BoundedIncidence
+open scoped BigOperators
+open Matrix
+
+/-- A finite set of columns covers at most its size times the incidence bound.
+This is the union-bound step in the consumer's fixed-shape model. -/
+theorem covered_card_le {C T : Type*} [DecidableEq T]
+    (s : Finset C) (incident : C → Finset T) (d : ℕ)
+    (hd : ∀ c ∈ s, (incident c).card ≤ d) :
+    (s.biUnion incident).card ≤ s.card * d := by
+  calc
+    _ ≤ ∑ c ∈ s, (incident c).card := Finset.card_biUnion_le
+    _ ≤ ∑ _c ∈ s, d := Finset.sum_le_sum hd
+    _ = s.card * d := by simp
+
+/-- The number of ordered target pairs sharing some column is bounded by the
+sum of squared column incidences. Diagonal pairs are intentionally included. -/
+theorem sharing_pairs_card_le {C T : Type*} [Fintype C] [DecidableEq T]
+    (incident : C → Finset T) (d : ℕ)
+    (hd : ∀ c, (incident c).card ≤ d) :
+    ((Finset.univ : Finset C).biUnion
+      (fun c => (incident c) ×ˢ (incident c))).card ≤ Fintype.card C * d^2 := by
+  calc
+    _ ≤ ∑ c : C, ((incident c) ×ˢ (incident c)).card := Finset.card_biUnion_le
+    _ ≤ ∑ _c : C, d^2 := Finset.sum_le_sum (fun c _ => by
+      rw [Finset.card_product, pow_two]
+      exact Nat.mul_le_mul (hd c) (hd c))
+    _ = Fintype.card C * d^2 := by simp
+
+section Blocks
+variable {K R C I : Type*} [Field K] [Fintype R] [Fintype C]
+
+/-- Masking a hidden column valuation by its owner projects a separated row
+matrix onto one target block. No valuation is an algorithm input. -/
+theorem block_projection_image [DecidableEq I]
+    (A : Matrix R C K) (block : R → I) (owner : C → I)
+    (x : C → K) (s : I → K)
+    (hsupport : ∀ r c, owner c ≠ block r → A r c = 0)
+    (hvalue : A *ᵥ x = s ∘ block) (i : I) :
+    A *ᵥ (fun c => if owner c = i then x c else 0) =
+      fun r => if block r = i then s i else 0 := by
+  funext r
+  by_cases hr : block r = i
+  · rw [if_pos hr]
+    calc
+      _ = (A *ᵥ x) r := by
+        apply Finset.sum_congr rfl
+        intro c _
+        by_cases hc : owner c = i
+        · rw [if_pos hc]
+        · rw [if_neg hc, hsupport r c (by simpa only [hr] using hc)]
+          simp
+      _ = s i := by rw [hvalue]; exact congrArg s hr
+  · rw [if_neg hr]
+    apply Finset.sum_eq_zero
+    intro c _
+    by_cases hc : owner c = i
+    · rw [if_pos hc, hsupport r c (by intro h; exact hr (h.symm.trans hc)), zero_mul]
+    · rw [if_neg hc, mul_zero]
+
+/-- Any left-kernel combination of rows in separated nonzero target blocks
+annihilates every tag constant within each block. This allows all rows of
+each query, not only one witness. The scalar-valued row semantics are explicit
+hypotheses; no native group or private-label sampling bridge is asserted. -/
+theorem separated_block_kernel_tags [DecidableEq I] [Fintype I]
+    (A : Matrix R C K) (block : R → I) (owner : C → I)
+    (x : C → K) (s : I → K)
+    (hsupport : ∀ r c, owner c ≠ block r → A r c = 0)
+    (hvalue : A *ᵥ x = s ∘ block) (hs : ∀ i, s i ≠ 0)
+    (y : R → K) (hy : y ᵥ* A = 0) (tag : I → K) :
+    ∑ r, y r * tag (block r) = 0 := by
+  have hblock (i : I) : (∑ r, if block r = i then y r else 0) = 0 := by
+    have h := congrArg (fun v : C → K => dotProduct v
+      (fun c => if owner c = i then x c else 0)) hy
+    rw [dotProduct_mulVec, block_projection_image A block owner x s hsupport hvalue i] at h
+    simp only [dotProduct, Pi.zero_apply, zero_mul, Finset.sum_const_zero] at h
+    have he : (∑ r, y r * (if block r = i then s i else 0)) =
+        (∑ r, if block r = i then y r else 0) * s i := by
+      rw [Finset.sum_mul]
+      apply Finset.sum_congr rfl
+      intro r _
+      split_ifs <;> simp
+    rw [he] at h
+    exact (mul_eq_zero.mp h).resolve_right (hs i)
+  calc
+    _ = ∑ r, ∑ i, (if block r = i then y r else 0) * tag i := by
+      apply Finset.sum_congr rfl
+      intro r _
+      simp
+    _ = ∑ i, ∑ r, (if block r = i then y r else 0) * tag i := Finset.sum_comm
+    _ = ∑ i, (∑ r, if block r = i then y r else 0) * tag i := by
+      simp_rw [Finset.sum_mul]
+    _ = 0 := by simp_rw [hblock, zero_mul]; simp
+
+end Blocks
+end CryptoLean.Combinatorics.BoundedIncidence

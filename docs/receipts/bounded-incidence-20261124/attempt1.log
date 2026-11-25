@@ -1,0 +1,184 @@
+CryptoLean/Combinatorics/BoundedIncidence.lean:52:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:58:14: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:58:14: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if owner c = i then ?m.101 else ?m.102
+in the target expression
+  (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = (fun j => A r j) c * x c
+
+case pos
+K : Type u_1
+R : Type u_2
+C : Type u_3
+I : Type u_4
+inst✝³ : Field K
+inst✝² : Fintype R
+inst✝¹ : Fintype C
+inst✝ : DecidableEq I
+A : Matrix R C K
+block : R → I
+owner : C → I
+x : C → K
+s : I → K
+hsupport : ∀ (r : R) (c : C), owner c ≠ block r → A r c = 0
+hvalue : A *ᵥ x = s ∘ block
+i : I
+r : R
+hr : block r = i
+c : C
+a✝ : c ∈ Finset.univ
+hc : owner c = i
+⊢ (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = (fun j => A r j) c * x c
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    A r
+CryptoLean/Combinatorics/BoundedIncidence.lean:59:14: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:59:14: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if owner c = i then ?m.106 else ?m.107
+in the target expression
+  (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = (fun j => A r j) c * x c
+
+case neg
+K : Type u_1
+R : Type u_2
+C : Type u_3
+I : Type u_4
+inst✝³ : Field K
+inst✝² : Fintype R
+inst✝¹ : Fintype C
+inst✝ : DecidableEq I
+A : Matrix R C K
+block : R → I
+owner : C → I
+x : C → K
+s : I → K
+hsupport : ∀ (r : R) (c : C), owner c ≠ block r → A r c = 0
+hvalue : A *ᵥ x = s ∘ block
+i : I
+r : R
+hr : block r = i
+c : C
+a✝ : c ∈ Finset.univ
+hc : ¬owner c = i
+⊢ (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = (fun j => A r j) c * x c
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    A r
+CryptoLean/Combinatorics/BoundedIncidence.lean:62:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:66:10: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:66:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if owner c = i then ?m.142 else ?m.143
+in the target expression
+  (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = 0
+
+case pos
+K : Type u_1
+R : Type u_2
+C : Type u_3
+I : Type u_4
+inst✝³ : Field K
+inst✝² : Fintype R
+inst✝¹ : Fintype C
+inst✝ : DecidableEq I
+A : Matrix R C K
+block : R → I
+owner : C → I
+x : C → K
+s : I → K
+hsupport : ∀ (r : R) (c : C), owner c ≠ block r → A r c = 0
+hvalue : A *ᵥ x = s ∘ block
+i : I
+r : R
+hr : ¬block r = i
+c : C
+a✝ : c ∈ Finset.univ
+hc : owner c = i
+⊢ (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = 0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    A r
+CryptoLean/Combinatorics/BoundedIncidence.lean:67:10: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+CryptoLean/Combinatorics/BoundedIncidence.lean:67:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if owner c = i then ?m.147 else ?m.148
+in the target expression
+  (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = 0
+
+case neg
+K : Type u_1
+R : Type u_2
+C : Type u_3
+I : Type u_4
+inst✝³ : Field K
+inst✝² : Fintype R
+inst✝¹ : Fintype C
+inst✝ : DecidableEq I
+A : Matrix R C K
+block : R → I
+owner : C → I
+x : C → K
+s : I → K
+hsupport : ∀ (r : R) (c : C), owner c ≠ block r → A r c = 0
+hvalue : A *ᵥ x = s ∘ block
+i : I
+r : R
+hr : ¬block r = i
+c : C
+a✝ : c ∈ Finset.univ
+hc : ¬owner c = i
+⊢ (fun j => A r j) c * (fun c => if owner c = i then x c else 0) c = 0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    A r
+CryptoLean/Combinatorics/BoundedIncidence.lean:83:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?v ⬝ᵥ ?A *ᵥ ?w
+in the target expression
+  (y ᵥ* A ⬝ᵥ fun c => if owner c = i then x c else 0) = 0 ⬝ᵥ fun c => if owner c = i then x c else 0
+
+K : Type u_1
+R : Type u_2
+C : Type u_3
+I : Type u_4
+inst✝⁴ : Field K
+inst✝³ : Fintype R
+inst✝² : Fintype C
+inst✝¹ : DecidableEq I
+inst✝ : Fintype I
+A : Matrix R C K
+block : R → I
+owner : C → I
+x : C → K
+s : I → K
+hsupport : ∀ (r : R) (c : C), owner c ≠ block r → A r c = 0
+hvalue : A *ᵥ x = s ∘ block
+hs : ∀ (i : I), s i ≠ 0
+y : R → K
+hy : y ᵥ* A = 0
+tag : I → K
+i : I
+h : (y ᵥ* A ⬝ᵥ fun c => if owner c = i then x c else 0) = 0 ⬝ᵥ fun c => if owner c = i then x c else 0
+⊢ (∑ r, if block r = i then y r else 0) = 0

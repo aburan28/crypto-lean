@@ -1,0 +1,10 @@
+'CryptoLean.Combinatorics.BoundedIncidence.covered_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.sharing_pairs_card_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.block_projection_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CryptoLean.Combinatorics.BoundedIncidence.separated_block_kernel_tags' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

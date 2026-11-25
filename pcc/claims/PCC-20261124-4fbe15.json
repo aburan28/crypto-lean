@@ -1,0 +1,68 @@
+{
+ "claim_type": "interpretive",
+ "created_at": "2026-11-24T03:33:44Z",
+ "id": "PCC-20261124-4fbe15",
+ "kind": "theorem",
+ "producer": {
+  "commit": "38343aee33d604b56df6833814e230b15324921e",
+  "model": "",
+  "session": "bounded-incidence-20261124"
+ },
+ "proofs": [
+  {
+   "decl_sha256": "ee2c310734ef060f651342b5ea9554009d040f5a6caf040f6978169a2dc76f34",
+   "kind": "lean",
+   "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+   "theorem": "CryptoLean.Combinatorics.BoundedIncidence.covered_card_le"
+  },
+  {
+   "decl_sha256": "defe14dc45c3f7869c6d2e484138c6dafca1fdde8d2fb348cbf9101ed96c4be0",
+   "kind": "lean",
+   "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+   "theorem": "CryptoLean.Combinatorics.BoundedIncidence.sharing_pairs_card_le"
+  },
+  {
+   "decl_sha256": "02a1627d6f223336bbb67ab59bd85571b8c47c8eb347d5b493eaac16bbcf9214",
+   "kind": "lean",
+   "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+   "theorem": "CryptoLean.Combinatorics.BoundedIncidence.block_projection_image"
+  },
+  {
+   "decl_sha256": "c7a9fd9255b8e5343c510c0dd7821583131932d8d5ebfe6eae8d2b638ef0e8a4",
+   "kind": "lean",
+   "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+   "theorem": "CryptoLean.Combinatorics.BoundedIncidence.separated_block_kernel_tags"
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/bounded-incidence-20261124-plan.md",
+    "sha256": "3d81a7566b232c6d0526a3903834faa1655f48b256432ffa681eb16ab5abba55"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/bounded-incidence-20261124/audit-final.log",
+    "sha256": "45e919139754d3d8aae193739657d8ebab492c46cf6b9906ae95afacd50bda5e"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/bounded-incidence-20261124/examples-final3.log",
+    "sha256": "8ac37ae9b5770fb41f4a81028799043e847d67ca95954cbff6f41f480ea2d4d0"
+   }
+  },
+  {
+   "kind": "attestation",
+   "subject": {
+    "path": "docs/receipts/bounded-incidence-20261124/gate-console.log",
+    "sha256": "188164b4bf0583dcacbf51db42fe867d66519bcda0ddf5463ec9c0a1e3afd746"
+   }
+  }
+ ],
+ "schema": "pcc.claim/v1",
+ "scope": "docs/bounded-incidence-20261124-plan.md",
+ "statement": "Four generic finite incidence and separated nonzero target-block field-matrix identities, under their explicit finite-set, ownership, row-valuation and nonzero-target hypotheses. No Curve25519/native-map, sampler, oracle-cost or exponent theorem."
+}

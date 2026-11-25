@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+      "theorem": "CryptoLean.Combinatorics.BoundedIncidence.covered_card_le",
+      "decl_sha256": "ee2c310734ef060f651342b5ea9554009d040f5a6caf040f6978169a2dc76f34",
+      "normalized_statement": "theorem covered_card_le {C T : Type*} [DecidableEq T] (s : Finset C) (incident : C \u2192 Finset T) (d : \u2115) (hd : \u2200 c \u2208 s, (incident c).card \u2264 d) : (s.biUnion incident).card \u2264 s.card * d"
+    },
+    {
+      "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+      "theorem": "CryptoLean.Combinatorics.BoundedIncidence.sharing_pairs_card_le",
+      "decl_sha256": "defe14dc45c3f7869c6d2e484138c6dafca1fdde8d2fb348cbf9101ed96c4be0",
+      "normalized_statement": "theorem sharing_pairs_card_le {C T : Type*} [Fintype C] [DecidableEq T] (incident : C \u2192 Finset T) (d : \u2115) (hd : \u2200 c, (incident c).card \u2264 d) : ((Finset.univ : Finset C).biUnion (fun c => (incident c) \u00d7\u02e2 (incident c))).card \u2264 Fintype.card C * d^2"
+    },
+    {
+      "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+      "theorem": "CryptoLean.Combinatorics.BoundedIncidence.block_projection_image",
+      "decl_sha256": "02a1627d6f223336bbb67ab59bd85571b8c47c8eb347d5b493eaac16bbcf9214",
+      "normalized_statement": "theorem block_projection_image [DecidableEq I] (A : Matrix R C K) (block : R \u2192 I) (owner : C \u2192 I) (x : C \u2192 K) (s : I \u2192 K) (hsupport : \u2200 r c, owner c \u2260 block r \u2192 A r c = 0) (hvalue : A *\u1d65 x = s \u2218 block) (i : I) : A *\u1d65 (fun c => if owner c = i then x c else 0) = fun r => if block r = i then s i else 0"
+    },
+    {
+      "path": "CryptoLean/Combinatorics/BoundedIncidence.lean",
+      "theorem": "CryptoLean.Combinatorics.BoundedIncidence.separated_block_kernel_tags",
+      "decl_sha256": "c7a9fd9255b8e5343c510c0dd7821583131932d8d5ebfe6eae8d2b638ef0e8a4",
+      "normalized_statement": "theorem separated_block_kernel_tags [DecidableEq I] [Fintype I] (A : Matrix R C K) (block : R \u2192 I) (owner : C \u2192 I) (x : C \u2192 K) (s : I \u2192 K) (hsupport : \u2200 r c, owner c \u2260 block r \u2192 A r c = 0) (hvalue : A *\u1d65 x = s \u2218 block) (hs : \u2200 i, s i \u2260 0) (y : R \u2192 K) (hy : y \u1d65* A = 0) (tag : I \u2192 K) : \u2211 r, y r * tag (block r) = 0"
+    }
+  ],
+  "source_sha256": "ca186d8a81e1145958095b07ec8394bdc8d29491e8d0e1b3fda342c5ce7243fe"
+}
