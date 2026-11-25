@@ -36,3 +36,11 @@ import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Combinatorics.LargePrimeGraph
 import CryptoLean.Combinatorics.GainDsu
 import CryptoLean.Group.PairColourIsolation
+import CryptoLean.OpenProblems.Coding
+import CryptoLean.OpenProblems.CommComplexity
+import CryptoLean.OpenProblems.Hadamard
+import CryptoLean.OpenProblems.Kissing
+import CryptoLean.OpenProblems.OneWay
+import CryptoLean.OpenProblems.ProjectivePlanes
+import CryptoLean.OpenProblems.SecretSharing
+import CryptoLean.OpenProblems.Trifference
