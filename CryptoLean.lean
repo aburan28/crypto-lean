@@ -63,3 +63,9 @@ import CryptoLean.OpenProblems.NumberTheory.Transcendence
 import CryptoLean.OpenProblems.NumberTheory.Zeta
 import CryptoLean.OpenProblems.NumberTheory.DeepConjectures
 import CryptoLean.OpenProblems.NumberTheory.EllipticCurves
+import CryptoLean.OpenProblems.GeometryTopology.AlgebraicGeometry
+import CryptoLean.OpenProblems.GeometryTopology.CombinatorialAlgebraic
+import CryptoLean.OpenProblems.GeometryTopology.FourManifoldsTopology
+import CryptoLean.OpenProblems.GeometryTopology.Knots
+import CryptoLean.OpenProblems.GeometryTopology.PlaneGeometry
+import CryptoLean.OpenProblems.GeometryTopology.RiemannianSymplectic
