@@ -57,6 +57,7 @@ separately as `DynamicalMordellLangAffine`, clearly labelled as a special case.
 | 81 | Absolute Hodge conjecture | algebraic de Rham cohomology with comparison isomorphisms, Hodge classes, conjugate varieties `X^σ` |
 | 82 | Grothendieck–Teichmüller | Drinfeld's profinite group `\widehat{GT}`, the Ihara embedding, profinite free group on two generators with its `GT`-action |
 | 84 | Mumford–Tate for abelian varieties | abelian varieties over number fields, Tate modules with Galois action, Mumford–Tate groups |
+| 87 | Effective Mordell (explicit height bound or terminating algorithm for X(K), genus ≥ 2) | smooth projective curves over number fields as varieties with their K-points and genus (Mathlib has schemes but no genus or Faltings finiteness), Weil/naive heights on such curves, Faltings' theorem itself. (Not assigned in the original grouping; row added afterwards. A hyperelliptic-only special case would be an unfaithful substitute, so none is stated.) |
 | 89 | Section conjecture | étale fundamental groups of curves over number fields and the fundamental exact sequence |
 | 100 | Selberg 1/4 | Laplace–Beltrami operator on `Γ\ℍ`, its `L²` spectrum for congruence subgroups |
 | 107 | Grothendieck–Katz `p`-curvature | algebraic vector bundles with integrable connection, `p`-curvature, spreading out |
