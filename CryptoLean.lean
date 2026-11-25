@@ -31,8 +31,17 @@ import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
 import CryptoLean.Polynomial.RootCertificate
 import CryptoLean.Semaev.S3
+import CryptoLean.Semaev.S3Laws
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Combinatorics.LargePrimeGraph
 import CryptoLean.Combinatorics.GainDsu
 import CryptoLean.Group.PairColourIsolation
+import CryptoLean.Semaev.Projective.FixedDegreeResultant
+import CryptoLean.Semaev.Projective.SylvesterConvention
+import CryptoLean.Semaev.Projective.RecursiveFamily
+import CryptoLean.Semaev.Projective.RecursiveWitness
+import CryptoLean.Semaev.Projective.GuardSystem
+import CryptoLean.Semaev.Projective.ChartSystem
+import CryptoLean.Semaev.Projective.InfinityStrata
+import CryptoLean.Semaev.Projective.LeftFoldAffine

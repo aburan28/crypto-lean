@@ -1,0 +1,862 @@
+ok    CryptoLean.BilinearSketch.half_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.matrixSketch_row  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.matrixSketch_single  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.matrix_half_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.matrix_quarter_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.quarter_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.BilinearSketch.surjective_of_value_one  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Bridge.iterate_eq  [propext, Quot.sound]
+ok    CryptoLean.Bridge.returns_iff_isPeriodicPt  [propext, Quot.sound]
+ok    CryptoLean.CenteredCompletion.centered_completion_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.CenteredCompletion.centered_xRep_eq_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.CharacterCarry.line_norm  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.CharacterCarry.quadratic_key  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.CharacterCarry.quadratic_norm  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ColorChecksums.checksum_eq_profile  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ColorChecksums.checksum_image_card_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ColorChecksums.common_target_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ColorChecksums.weights_eq_of_common_target  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.HasDual.comp  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.HasDual.id  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.above_floor_full_iff  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.addOrderOf_map_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.addOrderOf_map_eq_of_hasDual  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.conductor_generator_sq  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.conj_polynomial  [propext]
+ok    CryptoLean.ConductorGap.crater_full_iff  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.crater_side_full  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.crater_trace_congr  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.dlog_transfer  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.dlog_transfer_comp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.dlog_transfer_of_hasDual  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.dlp_prime_not_dvd_conductor  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.dual_comp  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.finrank_reduce  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.floor_not_full  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.floor_not_full_of_not_dvd  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.floor_side_line  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.frobenius_eigen_card_full  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.frobenius_eigen_card_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.frobenius_scalar_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.gap_prime_dvd_isogeny_degree  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.gap_prime_dvd_order  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.hom_conj_eq_smul  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.imHom.eq_1  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.kohel_smul_le  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.level_difference_le_degree  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.level_le_degree_add  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.mem_conductorOrder  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.orderEmbed.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.orderEmbed_apply  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.orderEmbed_frobenius  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.prime_dvd_degree_of_gap  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.prime_dvd_degree_of_gap'  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.prime_pow_dvd_degree_of_gap  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.range_orderEmbed  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.reduce_im  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.reduce_re  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.scalar_trace_congr  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ConductorGap.smul_conductorOrder_le_iff  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.sub_one_mem_smul_conductorOrder_iff  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.sub_one_mem_smul_iff  [propext, Quot.sound]
+ok    CryptoLean.ConductorGap.subring_eq_conductorOrder  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.FiniteIsolation.half_scaled_target_isolation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.FiniteIsolation.scaled_target_isolation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.FiniteIsolation.single_cover_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.FiniteIsolation.target_events_disjoint  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.FiniteIsolation.target_union_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.colorProduct_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.colorProduct_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.colorProducts_zero_iff_choice  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.mem_kernel  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.mem_prefixSupport  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.mem_prefix_kernel_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.mem_symbolic  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.nodal_eval_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.nodal_pair_mem_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.nodal_witness  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.prefixSupport_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.prefixSupport_eq_image  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.prefixSupport_injective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.prefix_kernel_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.prefix_kernel_injective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.supports_eq_of_kernels_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.symbolic_mem_iff_exists_kernel  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.InterpolationKernels.symbolic_nonzero_iff_exists_kernel  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.addPolynomial_eval  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.addPolynomial_natDegree  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.line_root_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.line_x_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.other_line_point_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.other_line_x_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.LineIncidence.slope_family_point_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PairColourIsolation.edgeColour_apply  [propext, Quot.sound]
+ok    CryptoLean.PairColourIsolation.edgeColour_surjective  [propext, Quot.sound]
+ok    CryptoLean.PairColourIsolation.pair_fibre_scaled  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PairColourIsolation.single_fibre_scaled  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PairColourIsolation.target_colour_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PairColourIsolation.two_edge_surjective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.coverage_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.first_moment  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.hit.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.hit_sq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.jointSum_surjective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.joint_event_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.joint_kernel_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.relationCount.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.relationCount_ne_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.second_moment  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.second_moment_row  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.single_event_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.single_kernel_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.support_cauchy_schwarz  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.tupleSum_spike  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.PartiteCoverage.tupleSum_surjective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.cleared_doubling_quartic  [propext]
+ok    CryptoLean.Polynomial.complete_roots_of_frobenius_gcd  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.complete_roots_of_gcd  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.isCoprime_veluProjectiveStep  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.isRelPrime_of_squarefree_norm  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.kummer_norm_charts  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.retained_kummer_charts  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.retained_power_congruence  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.target_norm_division  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.velu_two_affine_curve  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Polynomial.velu_two_curve_identity  [propext, Quot.sound]
+ok    CryptoLean.Polynomial.velu_two_curve_residual  [propext, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.indexed_resultant  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.indexed_taylor_nonzero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.nonzero_product_correction  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.quadratic_transfer  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.scaled_difference_product  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.secant_key  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ProjectiveProducts.taylor_strip_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.minimum.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.minimum_spec  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.pairedSuccess.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.pairedSuccess_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.pairedSuccess_iff_success  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.poolSwap_apply  [propext, Quot.sound]
+ok    CryptoLean.RankThreshold.raw_card_le_twice_paired  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.raw_card_le_twice_success  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.success.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.success_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.success_or_swap  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.success_swap_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.RankThreshold.success_tag_iff  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.Q5.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q5_eval  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q5_natDegree_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q5_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q7.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q7_eval  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q7_natDegree_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.Q7_ne_zero  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.five_core  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.glvPoint_some  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.glvPoint_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.instFiniteSecp256k1Point  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.instIsEllipticZModPSecp256k1  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.lt_pMinusOneCofactor  [propext]
+ok    CryptoLean.Secp256k1.Curve.pMinusOneCofactor.eq_1  []
+TRUST CryptoLean.Secp256k1.Curve.pMinusOneCofactor_no_small_prime_factor  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.pMinusOneCofactor_prime  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.pMinusOneSmoothPart.eq_1  []
+ok    CryptoLean.Secp256k1.Curve.pMinusOneSmoothPart_eq  [propext]
+TRUST CryptoLean.Secp256k1.Curve.p_mod_four  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.px.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.px.eq_2  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.py.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.py.eq_2  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1.eq_1  [propext, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_adaptor_complete  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_b₂  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_b₄  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_b₆  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_b₈  [propext, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_card_point_eq_n  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_card_point_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_curve_of_nonsingular  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_c₄_eq_zero  [propext, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_dh_agree  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_dlogEquiv_apply  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_apply  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_injective  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_surjective  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_eval_threeTorsionPoly  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_feldman_vss_verify  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_five_nsmul_eq_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_ncard_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_x_mem  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_gen_addOrderOf  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_generator_addOrderOf  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_generator_equation  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_generator_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_generator_nonsingular  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_generator_nsmul_n_eq_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_glvPoint_generator  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_glv_preserves_equation  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_glv_preserves_nonsingular  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_grp_card  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_grp_isAddCyclic  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_grp_nsmul_eq_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_j_eq_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_musig_key_aggregate  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_n_dvd_card_point  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_neg7_pow_ne_one  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_no_nonzero_two_torsion  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_p_sub_one_factorization  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_p_sub_one_smooth_part_value  []
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_preΨ₄_eval  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_psi2_evalEval  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_psi3_evalEval  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_psi5_evalEval  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_psi7_evalEval  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_schnorr_batch_verify  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_schnorr_verify  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_not_isSquare  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_nsmul_eq_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_pow_ne_one  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_ncard_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_x_mem  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_smooth_divisor_dvd_smooth_part  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_smooth_divisor_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_taproot_tweak_verify  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_finite  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_ncard_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_subset_Ψ₃_roots  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_three_nsmul_eq_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_three_nsmul_eq_zero_iff_eval  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_three_nsmul_eq_zero_iff_poly  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_ncard_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_x_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_x_mem_Ψ₃_roots  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_threshold_elgamal_combine  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_threshold_schnorr_aggregate  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_torsion_ncard_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_two_nsmul_eq_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_two_torsion_x_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_x_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Δ_ne_zero  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_Ψ₂Sq  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Ψ₂Sq_natDegree  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Ψ₂Sq_ne_zero  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_eval  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_natDegree  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_roots_toFinset_card_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.seven_core  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.seven_master  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.three_dvd_n_sub_one  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Curve.three_dvd_p_sub_one  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.applyPointSign_false  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.applyPointSign_true  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenChartCover_barKummer_iff_explicitSigns  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenChartCover_barKummer_iff_signedPrefixSum  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenProjectiveChain_barKummer_iff_explicitSigns  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenProjectiveChain_barKummer_iff_signedPrefixSum  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.signedPrefixSum.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_normalize_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_zero_iff_projectiveDet  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer.eq_2  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_eq_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_neg  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_some  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.normalizeProjectivePair_idem  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.normalize_barKummer  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_barKummer_eq_zero_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_eq_zero_iff_normalize_eq_affine  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_eq_zero_iff_normalize_eq_infinity  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.eval.eq_1  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.ext  []
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.ext_iff  []
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.mk.inj  []
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.mk.injEq  [propext]
+ok    CryptoLean.Secp256k1.GenericGroup.Aff.mk.sizeOf_spec  []
+ok    CryptoLean.Secp256k1.GenericGroup.badSet.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.badSet.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.badSet_card_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.collisionSet.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.collisionSet_card_le_one  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.eval_add  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.eval_neg  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.eval_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.generic_dlog_query_bound  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.generic_dlog_sqrt_bound  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.generic_success_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.GenericGroup.instNeZeroNat_cryptoLean  [propext]
+ok    CryptoLean.Secp256k1.GenericGroup.mem_badSet  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.GenericGroup.secp256k1_bsgs_steps_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.GenericGroup.secp256k1_generic_security  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.GenericGroup.two_pow_255_lt_secp256k1_n  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16CancellationRootLowerBound.cancellation_pair_root_lower_bounds  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16CancellationRootLowerBound.exists_nonzero_target_root_lower_bounds  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16CancellationRootLowerBound.exists_target_budget_lt_directRoot_card  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16CancellationRootLowerBound.maxRelationTermBudget_lt_liftable_cancellation_family  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_relation  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_add_target_eq_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_eq_target_or_neg  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_liesOver  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.exists_liesOver  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_closureLift  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_iff_barKummer_eq  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_neg_iff  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16DirectSystemRootBridge.ChainVars.mk.inj  []
+ok    CryptoLean.Secp256k1.M16DirectSystemRootBridge.ChainVars.mk.injEq  [propext]
+ok    CryptoLean.Secp256k1.M16DirectSystemRootBridge.ChainVars.mk.sizeOf_spec  []
+TRUST CryptoLean.Secp256k1.M16DirectSystemRootBridge.S17At_eq_zero_iff_chartPolynomialCover_over  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectSystemRootBridge.chainEquations_iff  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16DirectSystemRootBridge.extendLeaf.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseFinite.card_factorBaseX  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.boolCountAcc.eq_1  []
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.boolCountAcc.eq_2  []
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.boolCountAcc.eq_def  []
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.boolCountAcc_eq  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.factorBaseGenerator_certificate  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeCountRuntime.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeEulerPositive.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeEulerPositive_count  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representative_count_native  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.IsLiftable.eq_1  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.card_glvOrbitRep  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftFiber  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftableFactorBaseX  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftableGLVOrbitRep  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_nonliftableFactorBaseX  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_nonliftableGLVOrbitRep  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.card_signedAffineFactorBasePoint  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseCharacterSum.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseCharacterSum_eq  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_glv  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_glv_square  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_order  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseOrbitCount.eq_1  []
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_injective  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_one  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_two  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.isLiftable_iff_eulerCriterion  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.orbitRepresentative.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.rhs.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.secp256k1_rhs_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.toPoint.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseLiftable.toPoint_ne_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.budget_lt_card_sym_factorBaseX_seven  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_seven  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_six  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_six_le_budget  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.IsFp2Point.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_of_liesOver_of_isLiftable  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_sum_of_liftable_liesOver  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_sum_of_pointwise_descent  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusField_algebraMap  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusField_apply  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_eq_neg_of_liesOver_of_not_isLiftable  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_eq_of_liesOver_of_isLiftable  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_includePoint  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_sum_eq_neg_of_nonliftable_liesOver  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_before_two_torsion  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_of_base_subtotal  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_with_signed_target  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_injective  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_some  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_zero  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.isFp2Point_of_liesOver  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16FrobeniusPointSplit.split_partitioned_point_witnesses  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.budget_lt_card_sym_liftableFactorBaseX_seven  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_seven  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_six  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_six_le_budget  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.half_coverage_requires_more_than_two_pow_148_probes  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.natCard_liftableSignedSixIndex  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.no_half_coverage_of_two_pow_148_probe_bound  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.S17At_eq_zero_iff_partitionedPointWitness  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.S17At_factorBase_eq_zero_iff_partitionedPointWitness  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.exists_compatible_point_relation_of_partitionedPointWitness  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots_disjoint_nonliftableSlots  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots_union_nonliftableSlots  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.mem_liftableSlots  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.mem_nonliftableSlots  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.nonliftableSlots.eq_1  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.partitionedPointWitness_iff_exists_compatible_point_relation  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.partitionedPointWitness_of_compatible_point_relation  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16PartitionedPointSemantics.sum_eq_sum_liftable_add_sum_nonliftable  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SixWidthNoGo.card_sym_factorBaseX_six_lt_two_pow_106  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SixWidthNoGo.half_coverage_requires_more_than_two_pow_141_probes  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SixWidthNoGo.natCard_signedSixIndex_lt_two_pow_112  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SixWidthNoGo.ncard_coveredTargets_le  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SixWidthNoGo.no_half_coverage_of_two_pow_141_probe_bound  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.factorBaseDegree_pow_five_le_maxRelationTermBudget  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget.eq_1  []
+TRUST CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_bit_window  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_degree_window  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_lt_factorBaseDegree_pow_six  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_lt_two_pow_115  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16SolverGate.relationTermGate.eq_1  []
+TRUST CryptoLean.Secp256k1.M16SolverGate.relationTermGate_at_max  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.relationTermGate_fails_of_degree_six_lower_bound  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.M16SolverGate.relationTermGate_iff_le_exact  [propext]
+ok    CryptoLean.Secp256k1.M16SolverGate.relationTermGate_iff_le_max  [propext]
+ok    CryptoLean.Secp256k1.M16SolverGate.relationTermGate_spec  []
+TRUST CryptoLean.Secp256k1.M16SolverGate.relationTermGate_succ_max_fails  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.M16SolverGate.two_pow_114_le_maxRelationTermBudget  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.instFactPrimeN  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.instFactPrimeP  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_107361793816595537  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_107590001  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_115792089237316195423570985008687907852837564279074904382605163141518161494337  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_115792089237316195423570985008687907853269984665640564039457584007908834671663  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_1206781  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_132896956044521568488119  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_13331831  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_1627771  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_173378833005251801  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_174723607534414371449  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_205115282021455665897114700593932402728804164701536103180137503955397371  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_22149492674086928081353  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_255515944373312847190720520512484175977  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_29047611873442575647497758179  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_297159362677  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_341948486974166000522343609283189  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_44706919  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_4681609  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_545358713  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.pr_7240687  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.secp256k1_n_prime  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.Primality.secp256k1_p_prime  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.Schnorr.adaptor_complete  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.dh_agree  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.feldman_vss_verify  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.musig_key_aggregate  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.schnorr_batch_verify  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.schnorr_verify  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.taproot_tweak_verify  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.threshold_elgamal_combine  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Schnorr.threshold_schnorr_aggregate  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Semaev.secp256k1_semaev_three_chord  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Semaev.secp256k1_semaev_three_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Semaev.secp256k1_semaev_three_point  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Semaev.secp256k1_semaev_three_point_double  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Semaev.secp256k1_semaev_three_tangent  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.mem_torsionBy_iff_addOrderOf_dvd  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.torsionBy_dvd_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.torsionBy_eq_ker_nsmul  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.torsionBy_eq_top  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.zmod_module_nsmul_eq_zero  [propext, Quot.sound]
+ok    CryptoLean.Secp256k1.Torsion.zmultiples_le_torsionBy  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Secp256k1.beta_field_eigenvalue  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.beta_is_cube_root  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.beta_lt_p  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.generator_on_curve  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.glv_lambda_eigenvalue  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.lam_lt_n  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.lambda_is_cube_root  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Secp256k1.lambda_ne_one  native_decide, recorded in the trust manifest
+ok    CryptoLean.Secp256k1.p.eq_1  []
+TRUST CryptoLean.Secp256k1.p_special_form  native_decide, recorded in the trust manifest
+ok    CryptoLean.Semaev.FrozenProjective.Axis.ofNat_ctorIdx  []
+ok    CryptoLean.Semaev.FrozenProjective.Axis.u.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.Axis.v.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.ChartEquation.base.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.ChartEquation.final.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.ChartEquation.step.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.ChartEquation.step.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.ChartEquation.step.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.FrozenChartPolynomialSystem.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.FrozenChartSystem.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.FrozenProjectiveChain.eq_1  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.FrozenProjectiveChain.eq_2  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.FrozenProjectiveChain.eq_def  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.GuardCoordinate.a.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardCoordinate.b.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardCoordinate.ofNat_ctorIdx  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardCoordinate.u.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardCoordinate.v.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardVar.slot.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardVar.slot.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.GuardVar.slot.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.base.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.final.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.guard.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.guard.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.guard.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.step.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.step.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.GuardedEquation.step.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.HValue.eq_1  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_binaryConstant_binaryPair_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_cycle  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_first_infinity  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_first_third_infinity  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_middle_infinity  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_normalize_first_third_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_normalize_first_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_normalize_third_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_normalize_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_rescale_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_scale  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.HValue_third_infinity  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine.congr_simp  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.affine.eq_1  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.coord.eq_1  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.coord.eq_2  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.infinity.congr_simp  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.infinity.eq_1  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.mk.congr_simp  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.mk.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.mk.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.mk.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.ProjectivePair.valid  []
+ok    CryptoLean.Semaev.FrozenProjective.Var.leaf.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.Var.leaf.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.Var.leaf.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.Var.output.inj  []
+ok    CryptoLean.Semaev.FrozenProjective.Var.output.injEq  [propext]
+ok    CryptoLean.Semaev.FrozenProjective.Var.output.sizeOf_spec  []
+ok    CryptoLean.Semaev.FrozenProjective.admissibleInfinityMask_interior  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.assignment.eq_1  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.assignment.eq_2  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.binaryConstantPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.binaryPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.binaryQuadratic.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.binaryQuadratic_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.card_chartEquation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.card_chartVar  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.card_guardVar_fourteen  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.card_guarded_equations_fourteen  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.card_infinityMask  [propext, Classical.choice, Quot.sound]
+TRUST CryptoLean.Semaev.FrozenProjective.card_interiorSeparatedInfinityMask  native_decide, recorded in the trust manifest
+TRUST CryptoLean.Semaev.FrozenProjective.card_separatedInfinityMask  native_decide, recorded in the trust manifest
+ok    CryptoLean.Semaev.FrozenProjective.chartConstantPolynomialPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartCoordinates.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartEquationValue.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartEquationValue.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartEquationValue.eq_3  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPair_infinityMaskOf_eq_normalize  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation.eq_3  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation_base_totalDegree_le_two  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation_final_totalDegree_le_two  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation_step_totalDegree_le_four  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialEquation_totalDegree_le_four  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.chartPolynomialPair.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.coeff_map_C_natDegree  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.constantPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.coord_eq_projectiveScale_mul_normalize  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.dehomogenize_localProjectiveAt  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.dehomogenize_projectiveOutputAtOver  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.det_isHomogeneous_sum_row  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_chartConstantPolynomialPair  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_chartPolynomialEquation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_chartPolynomialPair  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_localSliceAt  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_localSliceAt_affine  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_localSliceAt_infinity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_previousSliceAtOver_frozenC  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_previousSliceAtOver_frozenC_affine  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_homogenize_previousSliceAtOver_frozenC_infinity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_localProjectiveAt  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.eval_projectiveOutputAtOver  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenC.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenC.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenC.eq_def  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChainVector_iff_chartSystem  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChainVector_normalize  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartCover_iff_admissibleChartCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartCover_iff_interiorChartCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartPolynomialCover_iff_admissible  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartPolynomialCover_iff_chartCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartPolynomialSystem_iff_chartSystem  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartSystem_admissibleInfinityMask  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartSystem_endpointCompatibleInfinityMask  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartSystem_leftInfinity_forces_rightCoordinate  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartSystem_rightInfinity_forces_leftCoordinate  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenChartSystem_separatedInfinityMask  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenGuardedProjectiveSystem_iff_chartPolynomialCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenProjectiveChain_iff_admissibleChartPolynomialCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenProjectiveChain_iff_chainVector  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenProjectiveChain_iff_chartCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenProjectiveChain_iff_chartPolynomialCover  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenProjectiveChain_iff_guardedProjectiveSystem  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenRecS17_iff_chartPolynomialCover_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.frozenRecS17_iff_guardedProjectiveSystem_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardConstantCoordinate.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardEquation.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardEquation_excludes_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardEquation_preserves_infinity  [propext, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardProjectiveCoordinate.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardProjectiveCoordinate.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardedEquation.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardedEquation.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardedEquation.eq_3  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardedEquation.eq_4  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.guardedEquation_totalDegree_le_four  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.homogenize_localSliceAt  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.homogenize_previousSliceAtOver_frozenC  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.infinityMaskOf.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.leafPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffOne.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffOne_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffTwo.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffTwo_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffZero.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localBinaryCoeffZero_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localProjectiveAt.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localProjectiveAt_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSlice.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt_binaryPair_coeff_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt_binaryPair_explicit  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt_constantPair_affine_coeff_natDegree_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt_constantPair_affine_explicit  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.localSliceAt_natDegree_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.mapProjectivePair.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.mapProjectivePair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.mapProjectivePair_coord  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.map_localSlice  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.map_localSlice_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.map_outputSlice  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.map_outputSlice_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.natDegree_det_le_sum_row  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.normalizeProjectivePair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.outputPair.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.previousSliceAtOver.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.previousSliceAtOver_binaryConstantPair  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.previousSliceAtOver_constantPair  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.previousSliceAtOver_eq_specializeOver_polynomial  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.previousSliceAtOver_frozenC_natDegree_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveDet.eq_1  []
+ok    CryptoLean.Semaev.FrozenProjective.projectiveDet_affine_left_eq_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveDet_affine_right_eq_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveOutputAtOver.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveOutputAtOver_frozenC_isHomogeneous  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveScale.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.projectiveScale_ne_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specializeOver.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specializeOver_frozenC16_eq_zero_iff_projectiveChain  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specializeOver_frozenC_eq_zero_iff_projectiveChain  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specializeOver_frozenC_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_affine  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_eq_zero_iff_common_projective_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_eq_zero_iff_common_projective_root_of_natDegree_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_infinity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_over_affine  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_over_eq_zero_iff_common_projective_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_over_eq_zero_iff_common_projective_root_of_natDegree_le  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.specialize_frozenC_succ_over_infinity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.taskSylvester_isHomogeneous_two_mul_left  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.FrozenProjective.taskSylvester_natDegree_le_two_mul_left  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.C.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.C.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.C.eq_def  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_S3  [propext, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.HValue_affine_eq_f3  [propext, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.S17At.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.S17At_eq_frozenSpecialize  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.Var.leaf.inj  []
+ok    CryptoLean.Semaev.LeftFoldAffine.Var.leaf.injEq  [propext]
+ok    CryptoLean.Semaev.LeftFoldAffine.Var.leaf.sizeOf_spec  []
+ok    CryptoLean.Semaev.LeftFoldAffine.Var.output.sizeOf_spec  []
+ok    CryptoLean.Semaev.LeftFoldAffine.assignment.eq_1  []
+ok    CryptoLean.Semaev.LeftFoldAffine.assignment.eq_2  []
+ok    CryptoLean.Semaev.LeftFoldAffine.dehom.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.dehom_C  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.dehom_X  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.dehom_frozenC_eq_semaevLeftFoldC  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.eval_dehom_eq_frozenSpecialize  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.externalValue.eq_1  []
+ok    CryptoLean.Semaev.LeftFoldAffine.f3.eq_1  [propext]
+ok    CryptoLean.Semaev.LeftFoldAffine.f3_eq_S3  [propext]
+ok    CryptoLean.Semaev.LeftFoldAffine.localSlice.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.localSlice_eq_eliminationOrder  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.map_localSlice_dehom  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.map_outputSlice_dehom  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.LeftFoldAffine.projectiveLeaves.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.eval_homogenize_one_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.eval_homogenize_second_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.fixedDegree_resultant_eq_zero_iff_common_projective_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.fixedDegree_resultant_eq_zero_iff_common_projective_root_over  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.map_fixedDegree_resultant_eq_zero_iff_common_projective_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.natDegree_lt_of_le_of_coeff_eq_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.ProjectiveResultant.one_zero_is_common_root_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3.eq_1  [propext]
+ok    CryptoLean.Semaev.S3_eq_zero_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3_eq_zero_of_chord  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3_eq_zero_of_tangent  [propext, Quot.sound]
+ok    CryptoLean.Semaev.S3_factor  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3_root_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3_root_of_eq_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.S3_symm₁₂  [propext, Quot.sound]
+ok    CryptoLean.Semaev.S3_symm₂₃  [propext, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.descendingShift.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_resultant  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.det_taskSylvester_eq_zero_iff_common_projective_root  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.fixtureFThreeTwo.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.fixtureGThreeTwo.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.taskSylvester.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.taskSylvester_eq_reindex_transpose  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.TaskSylvester.taskSylvester_fixture_three_two_det  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.Semaev.d2_mul_addX  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount.congr_simp  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_eq_sum  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_function_eq_sum  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_mean  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_real_eq_sum  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_second_moment  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.acceptedCount_variance  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.auxiliaryRecord.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.auxiliary_eq_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.auxiliary_eval_original  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.both_filters_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.originalRecord.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.originalVector.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.original_eval_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.original_ne_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.right_shift_eq_neg_left  [propext]
+ok    CryptoLean.ShiftRepresentations.shifted_hit_mean  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.shifted_hit_variance  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.vector_residual  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.vector_sum  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.vector_sum_eq_original_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShiftRepresentations.vector_sum_ne_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShortlistCompletion.adaptive_shortlist_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShortlistCompletion.fiber_card_mul  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.ShortlistCompletion.partite_shortlist_count  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SingleRelation.direct_index_size  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SingleRelation.mixed_label_fiber_card  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SingleRelation.recover_from_relation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dick.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dick.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dick.eq_def  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dickTower.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dickTower.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dickTower.eq_def  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dickTower_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.dickson_tower_faithful  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.endo_cyclic_eq_zsmul  [propext]
+ok    CryptoLean.SplitPrime.hom_card_prime_bijective  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.kumTower.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.kumTower.eq_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.kumTower.eq_def  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.kumTower_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.kummer_tower_faithful  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.modByMonic_eq_C_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.modByMonic_sq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.modByMonic_sq_sub_two  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SplitPrime.twist_part_sum_eq_zero  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.charSum.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.charSum_trivial  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.energy  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.parseval  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.returnCount.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.triple_deviation  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.triple_deviation_scaled  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.SubsetFourier.triple_identity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.acceptedCount_eq_sum  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.both_gates_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.indicator_eq  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.mem_completionFilter  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.raw_tag_mean  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.raw_tag_variance  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.TranslatedIntersections.zero_completionFilter  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.card_subfield_units  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cleared_normalized_j  [propext]
+ok    CryptoLean.cleared_twist_a  [propext]
+ok    CryptoLean.cleared_twist_b  [propext]
+ok    CryptoLean.coefficient_two_iff  [propext, Quot.sound]
+ok    CryptoLean.conductor_floor  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.conductor_full_four  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.conductor_full_two  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.conductor_gain  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.conductor_surface_four  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.conductor_surface_two  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cubic_discriminant  [propext, Quot.sound]
+ok    CryptoLean.cyclic_subgroup_index_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cyclic_subgroup_power_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cyclic_sup_power_index  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cyclic_twist_image_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.cyclic_twist_membership_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.eisenstein_norm_doubled  [propext, Quot.sound]
+ok    CryptoLean.eisenstein_norm_lower_bound  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.eisenstein_norm_pos  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.eisenstein_norm_rotate  [propext, Quot.sound]
+ok    CryptoLean.eisenstein_sector_bounds  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.finite_cyclic_twist_descent  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.finite_field_subfield_twist_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.finite_field_unit_twist_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.fixes_torsion_iff_factors_difference  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.genericTwistModel.eq_1  [propext, Quot.sound]
+ok    CryptoLean.generic_normalization  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.generic_twist_isomorphism_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.mapped_generic_model  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.normalized_generic_descent_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.odd_norm_forces_odd_scalar  [propext]
+ok    CryptoLean.quadraticNorm_dvd_of_reciprocal_root  [propext, Quot.sound]
+ok    CryptoLean.quadraticNorm_reciprocal_factorization  [propext, Quot.sound]
+ok    CryptoLean.quartic_twist_isomorphism_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.quotient_exponent_test  [propext]
+ok    CryptoLean.sextic_twist_isomorphism_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.shortJ.eq_1  [propext, Quot.sound]
+ok    CryptoLean.shortModel.eq_1  [propext, Quot.sound]
+ok    CryptoLean.shortModel_isShortNF  [propext, Quot.sound]
+ok    CryptoLean.short_change_has_zero_rst  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.short_isomorphism_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.short_j_agrees_with_weierstrass  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.subfield_twist_witness_iff  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.subfield_twist_witness_power_test  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.torsion_order_depth_bounds_of_bridges  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.translated_frobenius_norm  [propext, Quot.sound]
+ok    CryptoLean.twist_exponent_image_iff  [propext, Quot.sound]
+ok    CryptoLean.twist_image_subgroup  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.two_divides_scalar_minus_one  [propext, Quot.sound]
+ok    CryptoLean.unitIndexPolynomial.eq_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_1  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_10  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_14  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_2  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_3  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_5  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_6  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_degree_7  [propext, Classical.choice, Quot.sound]
+ok    CryptoLean.unit_index_identity  [propext, Classical.choice, Quot.sound]
+ok    CryptoLeanCore.N83.pairStates_eq_alt  [propext, Quot.sound]
+ok    CryptoLeanCore.N83.pairStates_le_squareStates  [propext, Quot.sound]
+ok    CryptoLeanCore.N83.pairStates_mono  [propext, Quot.sound]
+ok    CryptoLeanCore.N83.requestedEntries_mono  [propext, Quot.sound]
+ok    CryptoLeanCore.N83.two_dvd_mul_pred  [propext, Quot.sound]
+ok    CryptoLeanCore.Returns.eq_1  []
+ok    CryptoLeanCore.SplitMix64.first_output_seed_zero  [propext, Quot.sound]
+ok    CryptoLeanCore.iterate.eq_1  []
+ok    CryptoLeanCore.iterate.eq_2  []
+ok    CryptoLeanCore.iterate.eq_def  []
+ok    CryptoLeanCore.iterate_add  [propext]
+ok    CryptoLeanCore.iterate_succ  []
+ok    CryptoLeanCore.iterate_zero  []
+ok    CryptoLeanCore.returns_add  [propext]
+ok    CryptoLeanCore.returns_mod  [propext]
+ok    CryptoLeanCore.returns_mul  [propext]
+ok    CryptoLeanCore.returns_sub  [propext]
+ok    CryptoLeanCore.returns_zero  []
+ok    WeierstrassCurve.Affine.instFinitePoint  [propext, Classical.choice, Quot.sound]
+ok    WeierstrassCurve.j.congr_simp  [propext, Classical.choice]
+ok    curve_dlog_transfer  [propext, Classical.choice, Quot.sound]
+ok    curve_order_preserved  [propext, Classical.choice, Quot.sound]
+ok    study_class_facts  [propext, Quot.sound]
+audited 861 theorems in [CryptoLean, CryptoLean.Bridge.Iterate, CryptoLean.Combinatorics.FiniteIsolation, CryptoLean.Curve.CenteredCompletion, CryptoLean.Curve.CharacterCarry, CryptoLean.Curve.Conductor, CryptoLean.Curve.ConductorGap, CryptoLean.Curve.ConductorGapBridges, CryptoLean.Curve.Identities, CryptoLean.Curve.LineIncidence, CryptoLean.Curve.QuadraticNormTransport, CryptoLean.Curve.SubfieldTwists, CryptoLean.Curve.TorsionDepth, CryptoLean.Curve.Twists, CryptoLean.Group.BilinearSketch, CryptoLean.Group.ColorChecksums, CryptoLean.Group.CyclicTwists, CryptoLean.Group.PairColourIsolation, CryptoLean.Group.PartiteCoverage, CryptoLean.Group.RankThreshold, CryptoLean.Group.ShiftMoments, CryptoLean.Group.ShiftRepresentations, CryptoLean.Group.ShortlistCompletion, CryptoLean.Group.SingleRelation, CryptoLean.Group.SubsetFourier, CryptoLean.Group.Torsion, CryptoLean.Group.TranslatedIntersections, CryptoLean.Polynomial.EllipticMaps, CryptoLean.Polynomial.InterpolationKernels, CryptoLean.Polynomial.NormCharts, CryptoLean.Polynomial.ProjectiveProducts, CryptoLean.Polynomial.ProjectiveVelu, CryptoLean.Polynomial.RetainedRemainder, CryptoLean.Polynomial.RootCertificate, CryptoLean.Secp256k1, CryptoLean.Secp256k1.AffinePointFinite, CryptoLean.Secp256k1.CurveCardinality, CryptoLean.Secp256k1.CurveCardinalityExact, CryptoLean.Secp256k1.DivisionPolynomial, CryptoLean.Secp256k1.DivisionPolynomialDegree, CryptoLean.Secp256k1.DlogCompleteness, CryptoLean.Secp256k1.FiveTorsionBridge, CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics, CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber, CryptoLean.Secp256k1.GeneratorOrder, CryptoLean.Secp256k1.GenericGroupBound, CryptoLean.Secp256k1.GlvEndomorphism, CryptoLean.Secp256k1.M16CancellationRootLowerBound, CryptoLean.Secp256k1.M16DirectPointSemantics, CryptoLean.Secp256k1.M16DirectSystemRootBridge, CryptoLean.Secp256k1.M16FactorBaseFinite, CryptoLean.Secp256k1.M16FactorBaseLiftable, CryptoLean.Secp256k1.M16FactorBaseLiftableCountCertificate, CryptoLean.Secp256k1.M16FactorBaseLiftableDefs, CryptoLean.Secp256k1.M16FactorBaseLiftableGeneratorCertificate, CryptoLean.Secp256k1.M16FactorBaseSymmetricGate, CryptoLean.Secp256k1.M16FrobeniusPointSplit, CryptoLean.Secp256k1.M16LiftableSixWidthNoGo, CryptoLean.Secp256k1.M16PartitionedPointSemantics, CryptoLean.Secp256k1.M16SixWidthNoGo, CryptoLean.Secp256k1.M16SolverGate, CryptoLean.Secp256k1.ProtocolInstantiation, CryptoLean.Secp256k1.Secp256k1Curve, CryptoLean.Secp256k1.Secp256k1GenericSecurity, CryptoLean.Secp256k1.Secp256k1PMinusOneSmoothness, CryptoLean.Secp256k1.Secp256k1Params, CryptoLean.Secp256k1.Secp256k1PrimeN, CryptoLean.Secp256k1.Secp256k1PrimeP, CryptoLean.Secp256k1.SemaevThree, CryptoLean.Secp256k1.SevenNonResidue, CryptoLean.Secp256k1.SevenTorsionBridge, CryptoLean.Secp256k1.SubgroupOrder, CryptoLean.Secp256k1.ThreeTorsion, CryptoLean.Secp256k1.ThreeTorsionBridge, CryptoLean.Secp256k1.ThreeTorsionCard, CryptoLean.Secp256k1.Torsion, CryptoLean.Secp256k1.TorsionPointCount, CryptoLean.Secp256k1.TwoTorsionPoint, CryptoLean.Secp256k1.Verified, CryptoLean.Semaev.Projective.ChartSystem, CryptoLean.Semaev.Projective.FixedDegreeResultant, CryptoLean.Semaev.Projective.GuardSystem, CryptoLean.Semaev.Projective.InfinityStrata, CryptoLean.Semaev.Projective.LeftFoldAffine, CryptoLean.Semaev.Projective.RecursiveFamily, CryptoLean.Semaev.Projective.RecursiveWitness, CryptoLean.Semaev.Projective.SylvesterConvention, CryptoLean.Semaev.S3, CryptoLean.Semaev.S3Laws, CryptoLean.SplitPrime.Obstruction, CryptoLeanCore, CryptoLeanCore.GF2Poly, CryptoLeanCore.Iterate, CryptoLeanCore.N83Capacity, CryptoLeanCore.SplitMix64, docs.receipts.AuxiliaryShift20261115.AxiomProbe, docs.receipts.AuxiliaryShift20261115.FinalProbe, docs.receipts.AuxiliaryShift20261115.FloorProbe, docs.receipts.AuxiliaryShift20261115.MomentsFloorProbe, docs.receipts.BatchSelectorQuery20261116.AxiomProbe, docs.receipts.BatchSelectorQuery20261116.FinalProbe, docs.receipts.BatchSelectorQuery20261116.FloorProbe, docs.receipts.CenteredCompletion20261115.FinalAssemblyProbe, docs.receipts.CenteredCompletion20261115.FloorProbe, docs.receipts.CharacterParity20261116.ActualInstances, docs.receipts.CharacterParity20261116.Axioms, docs.receipts.CharacterParity20261116.CarryFloor, docs.receipts.CharacterParity20261116.CharacterFloor, docs.receipts.CharacterParity20261116.FloorProbe, docs.receipts.CharacterParity20261116.HalfFloor, docs.receipts.CharacterParity20261116.IndexedFloor, docs.receipts.CharacterParity20261116.TaylorFloor, docs.receipts.ColorChecksum20261116.AxiomProbe, docs.receipts.ColorChecksum20261116.FinalProbe, docs.receipts.ColorChecksum20261116.FloorProbe, docs.receipts.ConductorGap20261121.InstanceProbe, docs.receipts.InterpolationKernels20261115.FinalAssemblyProbe, docs.receipts.InterpolationKernels20261115.FloorProbe, docs.receipts.InterpolationKernels20261115.SymbolicFloorProbe, docs.receipts.PairColourIsolation20261116.ActualInstances, docs.receipts.PairColourIsolation20261116.Axioms, docs.receipts.PairColourIsolation20261116.FloorProbe, docs.receipts.RankThreshold20261115.FinalProbe, docs.receipts.RankThreshold20261115.FloorProbe, docs.receipts.SelectorTree20261116.AxiomProbe, docs.receipts.SelectorTree20261116.FinalProbe, docs.receipts.SelectorTree20261116.FloorProbe]; 0 failing, 248 trusted (native_decide)
