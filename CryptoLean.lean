@@ -44,3 +44,11 @@ import CryptoLean.OpenProblems.OneWay
 import CryptoLean.OpenProblems.ProjectivePlanes
 import CryptoLean.OpenProblems.SecretSharing
 import CryptoLean.OpenProblems.Trifference
+import CryptoLean.OpenProblems.APSP
+import CryptoLean.OpenProblems.CryptoAssumptions
+import CryptoLean.OpenProblems.Deletion
+import CryptoLean.OpenProblems.LDC
+import CryptoLean.OpenProblems.LinearProgramming
+import CryptoLean.OpenProblems.MultiUser
+import CryptoLean.OpenProblems.QuantumCC
+import CryptoLean.OpenProblems.SDP
