@@ -52,3 +52,12 @@ import CryptoLean.OpenProblems.LinearProgramming
 import CryptoLean.OpenProblems.MultiUser
 import CryptoLean.OpenProblems.QuantumCC
 import CryptoLean.OpenProblems.SDP
+import CryptoLean.OpenProblems.NumberTheory.Approximation
+import CryptoLean.OpenProblems.NumberTheory.ArithmeticStats
+import CryptoLean.OpenProblems.NumberTheory.Diophantine
+import CryptoLean.OpenProblems.NumberTheory.LatticeDivisor
+import CryptoLean.OpenProblems.NumberTheory.PrimeGaps
+import CryptoLean.OpenProblems.NumberTheory.PrimePatterns
+import CryptoLean.OpenProblems.NumberTheory.SpecialPrimes
+import CryptoLean.OpenProblems.NumberTheory.Transcendence
+import CryptoLean.OpenProblems.NumberTheory.Zeta
