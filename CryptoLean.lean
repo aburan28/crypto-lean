@@ -45,3 +45,6 @@ import CryptoLean.Semaev.Projective.GuardSystem
 import CryptoLean.Semaev.Projective.ChartSystem
 import CryptoLean.Semaev.Projective.InfinityStrata
 import CryptoLean.Semaev.Projective.LeftFoldAffine
+import CryptoLean.Lattice
+import CryptoLean.Quaternion
+import CryptoLean.PQ
