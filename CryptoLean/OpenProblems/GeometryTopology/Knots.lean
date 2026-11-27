@@ -475,7 +475,10 @@ theorem jonesA_trefoil_ne_one : jonesA 2 [1, 1, 1] ≠ 1 ∧ jonesA 3 [1, -2, 1,
     norm_num at this
 
 /-- Implication: the Jones unknot conjecture as stated (with its `↔`) implies that neither the
-trefoil nor the figure-eight braid is Markov-equivalent to the unknot. -/
+trefoil nor the figure-eight braid is Markov-equivalent to the unknot. Only the known direction
+of the `↔` (Markov equivalence preserves the Jones polynomial) is used, and the conclusion is a
+known theorem; this is a consistency check of the statement, not progress on the open
+direction. -/
 theorem not_unknot_of_jonesUnknotConjecture (h : JonesUnknotConjecture) :
     ¬ MarkovEquiv (2, [1, 1, 1]) (1, []) ∧ ¬ MarkovEquiv (3, [1, -2, 1, -2]) (1, []) :=
   ⟨fun hm => jonesA_trefoil_ne_one.1 ((h _ _ isKnotBraid_examples.1).2 hm),

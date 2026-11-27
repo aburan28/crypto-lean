@@ -32,8 +32,10 @@ diffeomorphisms), a ready-made Euler characteristic of a topological space or ma
 could be assembled from singular homology with rational coefficients and `eulerChar`, together
 with a finiteness proof for closed manifolds, but this is not in Mathlib), mapping class groups
 of surfaces (isotopy classes of homeomorphisms), word-hyperbolic groups, a packaged notion of
-ends of a finitely generated group (definable via ends of a Cayley graph), Lie-group
-lattices with Haar covolume, or arithmetic subgroups of algebraic groups.
+ends of a finitely generated group (definable via ends of a Cayley graph), the Lie groups
+`PU(n,1)` with their lattices (Mathlib does have `MeasureTheory.covolume` and quotient Haar
+measures, `MeasureTheory/Measure/Haar/Quotient.lean`, but not these groups), or arithmetic
+subgroups of algebraic groups.
 
 ## Open problems stated as `Prop`s
 
@@ -78,9 +80,9 @@ in the table below because punctured surfaces are not modelled.
 | 264 | Marked length spectrum rigidity (negative curvature) | sectional curvature; free homotopy classes of loops with their unique closed geodesic and its length (marked length spectrum); isotopy of diffeomorphisms |
 | 269 | Infinitely many closed geodesics on every closed Riemannian manifold (`dim ≥ 2`) | covariant derivative along a curve and hence the geodesic equation `∇_{γ'} γ' = 0` (the Levi-Civita connection exists in Mathlib as `CovariantDerivative.leviCivitaConnection`, but only for vector fields, not along curves), closed geodesics and their geometric distinctness / primitivity (the Riemannian distance alone does not define local geodesics faithfully) |
 | 274 | Arnold chord conjecture in dimension `2n+1`, `n ≥ 2` | contact forms and Reeb vector fields (as for 156), Legendrian submanifolds (`α|_Λ = 0`, `dim Λ = n`), co-orientation of the contact distribution |
-| 277 | Gromov's surface subgroup question for one-ended hyperbolic groups | word-hyperbolic groups (δ-thin triangles in a Cayley graph / Gromov product; word metrics exist in `Geometry/Group/WordMetric.lean`, hyperbolicity does not); "one-ended" is not packaged for groups but would be definable via ends of a Cayley graph (`Combinatorics/SimpleGraph/Ends`), so the blocking gap is hyperbolicity |
+| 277 | Gromov's surface subgroup question for one-ended hyperbolic groups | word-hyperbolic groups (δ-thin triangles in a Cayley graph / Gromov product; word metrics exist in `Geometry/Group/WordMetric.lean`, hyperbolicity does not); "one-ended" is not packaged for groups but would be definable via ends of a Cayley graph (`Combinatorics/SimpleGraph/Ends`), so the blocking gap is hyperbolicity. Audit note (2026-11-27): this is the row closest to a faithful `Prop`; Mathlib's `gromovProduct` (`Topology/MetricSpace/GromovProduct.lean`) and the word metric give the four-point δ-hyperbolicity condition directly, and `SurfaceGroup` is defined in this file, so a statement is a candidate follow-up |
 | 285 | Nirenberg problem on `S²` (characterize prescribable Gaussian curvatures) | Gaussian curvature of a metric on `S²` (equivalently the Laplace–Beltrami operator of the round sphere in `K = e^{-2u}(1 - Δ_{g_round} u)`); moreover the target asks for an exact characterization, not a single `Prop` |
-| 301 | Arithmeticity of lattices in `PU(n,1)`, `n ≥ 4` | the Lie group `PU(n,1)` with its Haar measure and lattices of finite covolume, arithmetic subgroups (ℚ-forms of algebraic groups, commensurability, compact-kernel projections) |
+| 301 | Arithmeticity of lattices in `PU(n,1)`, `n ≥ 4` | the Lie group `PU(n,1)` and its lattices (`MeasureTheory.covolume` and quotient Haar measures exist in Mathlib; the group itself does not), arithmetic subgroups (ℚ-forms of algebraic groups, commensurability, compact-kernel projections) |
 | 310 | Hopf: no positively curved metric on `S² × S²` | sectional curvature of a Riemannian metric (the manifold `S² × S²` and bundle metrics exist in Mathlib) |
 | 333 | Yau's first eigenvalue conjecture for minimal hypersurfaces of `S^{n+1}` | mean curvature / minimality of an embedded hypersurface of the sphere, Laplace–Beltrami operator of the induced metric and its spectrum |
 | 338 | Arnold–Givental Lagrangian intersection conjecture | symplectic forms, anti-symplectic involutions, Hamiltonian diffeomorphisms (time-1 maps of Hamiltonian isotopies), transversality of submanifolds, ℤ/2 Betti numbers of a manifold (ℤ/2 singular homology exists, but not its total dimension as a manifold invariant) |

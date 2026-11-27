@@ -89,7 +89,11 @@ Modelling:
 * `M` is taken in `Type` (universe `0`); every manifold is homeomorphic to one there;
 * "homotopy equivalent" is `ContinuousMap.HomotopyEquiv`;
 * the standard `S⁴` is the unit sphere of `ℝ⁵` with Mathlib's smooth structure, and
-  "diffeomorphic" is a `C^∞` diffeomorphism `M ≃ₘ^∞⟮𝓡 4, 𝓡 4⟯ S4`. -/
+  "diffeomorphic" is a `C^∞` diffeomorphism `M ≃ₘ^∞⟮𝓡 4, 𝓡 4⟯ S4`.
+
+Mathlib's `Geometry/Manifold/PoincareConjecture.lean` states the Poincaré conjectures in all
+dimensions through `ContinuousMap.HomotopyEquiv.NonemptyDiffeomorphSphere`; this local `Prop` is
+the dimension-4 smooth case written out directly, and is not derived from that file. -/
 def SmoothPoincare4 : Prop :=
   ∀ (M : Type) [TopologicalSpace M] [T2Space M] [CompactSpace M]
     [ChartedSpace (EuclideanSpace ℝ (Fin 4)) M] [IsManifold (𝓡 4) ∞ M],
