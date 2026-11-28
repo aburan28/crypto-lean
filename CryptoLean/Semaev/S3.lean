@@ -33,7 +33,7 @@ variable {K : Type*} [Field K]
 
 /-- Semaev's third summation polynomial for `y² = x³ + a x + b`,
 evaluated at `(x₁, x₂, x₃)`. -/
-def S3 (a b x₁ x₂ x₃ : K) : K :=
+def S3 {R : Type*} [CommRing R] (a b x₁ x₂ x₃ : R) : R :=
   (x₁ - x₂) ^ 2 * x₃ ^ 2
     - 2 * ((x₁ + x₂) * (x₁ * x₂ + a) + 2 * b) * x₃
     + ((x₁ * x₂ - a) ^ 2 - 4 * b * (x₁ + x₂))

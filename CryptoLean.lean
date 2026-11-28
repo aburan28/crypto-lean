@@ -10,9 +10,13 @@ import CryptoLean.Curve.CharacterCarry
 import CryptoLean.Curve.SubfieldTwists
 import CryptoLean.Curve.TorsionDepth
 import CryptoLean.Curve.Twists
+import CryptoLean.Group.CoprimeTransport
+import CryptoLean.Group.CyclicEncoding
 import CryptoLean.Group.CyclicTwists
+import CryptoLean.Group.RhoCollision
 import CryptoLean.Group.Torsion
 import CryptoLean.Group.SingleRelation
+import CryptoLean.Group.LinearFilterObstruction
 import CryptoLean.Group.SubsetFourier
 import CryptoLean.Group.PartiteCoverage
 import CryptoLean.Group.ShiftRepresentations
@@ -31,6 +35,7 @@ import CryptoLean.Polynomial.ProjectiveVelu
 import CryptoLean.Polynomial.RetainedRemainder
 import CryptoLean.Polynomial.RootCertificate
 import CryptoLean.Semaev.S3
+import CryptoLean.Semaev.S3Laws
 import CryptoLean.SplitPrime.Obstruction
 import CryptoLean.Combinatorics.FiniteIsolation
 import CryptoLean.Combinatorics.LargePrimeGraph
@@ -69,3 +74,11 @@ import CryptoLean.OpenProblems.GeometryTopology.FourManifoldsTopology
 import CryptoLean.OpenProblems.GeometryTopology.Knots
 import CryptoLean.OpenProblems.GeometryTopology.PlaneGeometry
 import CryptoLean.OpenProblems.GeometryTopology.RiemannianSymplectic
+import CryptoLean.Semaev.Projective.FixedDegreeResultant
+import CryptoLean.Semaev.Projective.SylvesterConvention
+import CryptoLean.Semaev.Projective.RecursiveFamily
+import CryptoLean.Semaev.Projective.RecursiveWitness
+import CryptoLean.Semaev.Projective.GuardSystem
+import CryptoLean.Semaev.Projective.ChartSystem
+import CryptoLean.Semaev.Projective.InfinityStrata
+import CryptoLean.Semaev.Projective.LeftFoldAffine

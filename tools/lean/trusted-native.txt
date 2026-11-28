@@ -1,0 +1,258 @@
+# Reviewed native_decide uses (tools/proof-gate.sh, tools/AuditAxioms.lean).
+# One theorem per line: name, then # and the certificate classes it depends on.
+# Generated from the audit of CryptoLean and CryptoLean.Secp256k1 on 2026-11-23
+# (port of KeyAIGit/ecdlp-lean-verification PR #347). Every listed theorem's only
+# non-standard axioms are native_decide certificates of these classes:
+#   * Pratt primality certificates for the secp256k1 p and n (Fact p.Prime, Fact n.Prime);
+#   * secp256k1 constant arithmetic on 256-bit literals;
+#   * the M16 liftable factor-base census and M16 integer bounds (finite checks
+#     whose computable definitions are tied to the mathematical ones by kernel proofs);
+#   * two finite infinity-mask counts in the generic Semaev layer (unused downstream).
+CryptoLean.Secp256k1.Curve.Q5.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q5_eval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q5_natDegree_le  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q5_ne_zero  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q7.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q7_eval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q7_natDegree_le  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.Q7_ne_zero  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.glvPoint_some  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.glvPoint_zero  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.instFiniteSecp256k1Point  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.instIsEllipticZModPSecp256k1  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.pMinusOneCofactor_no_small_prime_factor  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.pMinusOneCofactor_prime  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.p_mod_four  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.px.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.px.eq_2  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.py.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.py.eq_2  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_adaptor_complete  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_card_point_eq_n  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_card_point_le  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_curve_of_nonsingular  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_dh_agree  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_dlogEquiv_apply  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_apply  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_injective  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_dlogHom_surjective  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_feldman_vss_verify  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_five_nsmul_eq_zero_iff  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_ncard_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_five_torsion_x_mem  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_gen_addOrderOf  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_generator_addOrderOf  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_generator_equation  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_generator_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_generator_nonsingular  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_generator_nsmul_n_eq_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_glvPoint_generator  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_glv_preserves_equation  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_glv_preserves_nonsingular  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_grp_card  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_grp_isAddCyclic  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_grp_nsmul_eq_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_j_eq_zero  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_musig_key_aggregate  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_n_dvd_card_point  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_neg7_pow_ne_one  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_no_nonzero_two_torsion  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_p_sub_one_factorization  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_preΨ₄_eval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_psi2_evalEval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_psi5_evalEval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_psi7_evalEval  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_schnorr_batch_verify  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_schnorr_verify  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_not_isSquare  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_nsmul_eq_zero_iff  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_pow_ne_one  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_ncard_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_seven_torsion_x_mem  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_smooth_divisor_dvd_smooth_part  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_smooth_divisor_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_taproot_tweak_verify  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_finite  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_ncard_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_threeTorsionX_subset_Ψ₃_roots  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_ncard_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_x_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_three_torsion_x_mem_Ψ₃_roots  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_threshold_elgamal_combine  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_threshold_schnorr_aggregate  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_torsion_ncard_le  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.secp256k1_two_nsmul_eq_zero_iff  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_two_torsion_x_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_x_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Δ_ne_zero  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Ψ₂Sq_natDegree  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Ψ₂Sq_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_natDegree  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.secp256k1_Ψ₃_roots_toFinset_card_le  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.seven_core  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.seven_master  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Curve.three_dvd_n_sub_one  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.Curve.three_dvd_p_sub_one  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.applyPointSign_false  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.applyPointSign_true  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenChartCover_barKummer_iff_explicitSigns  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenChartCover_barKummer_iff_signedPrefixSum  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenProjectiveChain_barKummer_iff_explicitSigns  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.frozenProjectiveChain_barKummer_iff_signedPrefixSum  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpChainSemantics.signedPrefixSum.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_normalize_zero_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_zero_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.HValue_barKummer_zero_iff_projectiveDet  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer.eq_2  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_eq_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_neg  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_some  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.barKummer_zero  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.normalizeProjectivePair_idem  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.normalize_barKummer  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_barKummer_eq_zero_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_eq_zero_iff_normalize_eq_affine  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.FrozenProjectiveSecpLocalFiber.projectiveDet_eq_zero_iff_normalize_eq_infinity  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.GenericGroup.secp256k1_bsgs_steps_le  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.GenericGroup.secp256k1_generic_security  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.GenericGroup.two_pow_255_lt_secp256k1_n  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16CancellationRootLowerBound.cancellation_pair_root_lower_bounds  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16CancellationRootLowerBound.exists_nonzero_target_root_lower_bounds  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16CancellationRootLowerBound.exists_target_budget_lt_directRoot_card  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16CancellationRootLowerBound.maxRelationTermBudget_lt_liftable_cancellation_family  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_relation  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_add_target_eq_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_eq_target_or_neg  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.S17At_eq_zero_iff_exists_point_sum_liesOver  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.exists_liesOver  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_closureLift  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_iff_barKummer_eq  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16DirectPointSemantics.liesOver_neg_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16DirectSystemRootBridge.S17At_eq_zero_iff_chartPolynomialCover_over  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16DirectSystemRootBridge.chainEquations_iff  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16DirectSystemRootBridge.extendLeaf.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseFinite.card_factorBaseX  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.factorBaseGenerator_certificate  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeCountRuntime.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeEulerPositive.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representativeEulerPositive_count  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.Certificates.representative_count_native  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.IsLiftable.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftFiber  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftableFactorBaseX  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_liftableGLVOrbitRep  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_nonliftableFactorBaseX  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_nonliftableGLVOrbitRep  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.card_signedAffineFactorBasePoint  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseCharacterSum.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseCharacterSum_eq  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_glv  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_glv_square  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.factorBaseGenerator_order  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_injective  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_one  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.glvOrbitLayer_two  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.isLiftable_iff_eulerCriterion  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.orbitRepresentative.eq_1  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.rhs.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FactorBaseLiftable.secp256k1_rhs_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.toPoint.eq_1  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseLiftable.toPoint_ne_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.budget_lt_card_sym_factorBaseX_seven  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_seven  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_six  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FactorBaseSymmetricGate.card_sym_factorBaseX_six_le_budget  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.IsFp2Point.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_of_liesOver_of_isLiftable  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_sum_of_liftable_liesOver  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.exists_includePoint_eq_sum_of_pointwise_descent  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusField_algebraMap  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusField_apply  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_eq_neg_of_liesOver_of_not_isLiftable  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_eq_of_liesOver_of_isLiftable  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_includePoint  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobeniusPoint_sum_eq_neg_of_nonliftable_liesOver  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_before_two_torsion  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_of_base_subtotal  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.frobenius_split_with_signed_target  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint.eq_1  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_injective  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_some  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.includePoint_zero  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.isFp2Point_of_liesOver  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16FrobeniusPointSplit.split_partitioned_point_witnesses  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.budget_lt_card_sym_liftableFactorBaseX_seven  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_seven  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_six  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.card_sym_liftableFactorBaseX_six_le_budget  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.half_coverage_requires_more_than_two_pow_148_probes  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.natCard_liftableSignedSixIndex  # native_decide: M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16LiftableSixWidthNoGo.no_half_coverage_of_two_pow_148_probe_bound  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); M16 liftable factor-base census (generator order, 94509 representatives); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.S17At_eq_zero_iff_partitionedPointWitness  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.S17At_factorBase_eq_zero_iff_partitionedPointWitness  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.exists_compatible_point_relation_of_partitionedPointWitness  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots_disjoint_nonliftableSlots  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.liftableSlots_union_nonliftableSlots  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.mem_liftableSlots  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.mem_nonliftableSlots  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.nonliftableSlots.eq_1  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.partitionedPointWitness_iff_exists_compatible_point_relation  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.partitionedPointWitness_of_compatible_point_relation  # native_decide: Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16PartitionedPointSemantics.sum_eq_sum_liftable_add_sum_nonliftable  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16SixWidthNoGo.card_sym_factorBaseX_six_lt_two_pow_106  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16SixWidthNoGo.half_coverage_requires_more_than_two_pow_141_probes  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16SixWidthNoGo.natCard_signedSixIndex_lt_two_pow_112  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16SixWidthNoGo.ncard_coveredTargets_le  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.M16SixWidthNoGo.no_half_coverage_of_two_pow_141_probe_bound  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes); Pratt primality certificates for p and n; secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.M16SolverGate.factorBaseDegree_pow_five_le_maxRelationTermBudget  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_bit_window  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_degree_window  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_lt_factorBaseDegree_pow_six  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.maxRelationTermBudget_lt_two_pow_115  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.relationTermGate_at_max  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.relationTermGate_fails_of_degree_six_lower_bound  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.relationTermGate_succ_max_fails  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.M16SolverGate.two_pow_114_le_maxRelationTermBudget  # native_decide: M16 integer bounds (budget B windows, 2^106 / 2^148 sizes)
+CryptoLean.Secp256k1.Primality.instFactPrimeN  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.instFactPrimeP  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_107361793816595537  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_107590001  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_115792089237316195423570985008687907852837564279074904382605163141518161494337  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_115792089237316195423570985008687907853269984665640564039457584007908834671663  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_1206781  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_132896956044521568488119  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_13331831  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_1627771  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_173378833005251801  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_174723607534414371449  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_205115282021455665897114700593932402728804164701536103180137503955397371  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_22149492674086928081353  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_255515944373312847190720520512484175977  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_29047611873442575647497758179  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_297159362677  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_341948486974166000522343609283189  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_44706919  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_4681609  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_545358713  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.pr_7240687  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.secp256k1_n_prime  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.Primality.secp256k1_p_prime  # native_decide: Pratt primality certificates for p and n
+CryptoLean.Secp256k1.beta_field_eigenvalue  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.beta_is_cube_root  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.beta_lt_p  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.generator_on_curve  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.glv_lambda_eigenvalue  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.lam_lt_n  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.lambda_is_cube_root  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.lambda_ne_one  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Secp256k1.p_special_form  # native_decide: secp256k1 constant arithmetic (discriminant, p-1 factorization, generator, beta/lambda, curve order)
+CryptoLean.Semaev.FrozenProjective.card_interiorSeparatedInfinityMask  # native_decide: separated infinity-mask counts (987 / 377 of 2^14)
+CryptoLean.Semaev.FrozenProjective.card_separatedInfinityMask  # native_decide: separated infinity-mask counts (987 / 377 of 2^14)
