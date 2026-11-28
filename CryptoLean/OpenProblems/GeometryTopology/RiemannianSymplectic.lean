@@ -42,6 +42,7 @@ subgroups of algebraic groups.
 | rank | problem | declaration |
 |------|---------|-------------|
 | 270 | Congruence subgroup property for `Mod(S_g)`, `g ≥ 3` | `CongruenceSubgroupProperty` |
+| 277 | Gromov's surface subgroup question for one-ended word-hyperbolic groups | `GromovSurfaceSubgroupQuestion` |
 
 Additional, separately named and clearly labelled **special case** (not the ranked problem):
 `IvanovConjectureClosed` is the `n = 0` (closed surface) case of rank 491, which itself stays
@@ -80,7 +81,6 @@ in the table below because punctured surfaces are not modelled.
 | 264 | Marked length spectrum rigidity (negative curvature) | sectional curvature; free homotopy classes of loops with their unique closed geodesic and its length (marked length spectrum); isotopy of diffeomorphisms |
 | 269 | Infinitely many closed geodesics on every closed Riemannian manifold (`dim ≥ 2`) | covariant derivative along a curve and hence the geodesic equation `∇_{γ'} γ' = 0` (the Levi-Civita connection exists in Mathlib as `CovariantDerivative.leviCivitaConnection`, but only for vector fields, not along curves), closed geodesics and their geometric distinctness / primitivity (the Riemannian distance alone does not define local geodesics faithfully) |
 | 274 | Arnold chord conjecture in dimension `2n+1`, `n ≥ 2` | contact forms and Reeb vector fields (as for 156), Legendrian submanifolds (`α|_Λ = 0`, `dim Λ = n`), co-orientation of the contact distribution |
-| 277 | Gromov's surface subgroup question for one-ended hyperbolic groups | word-hyperbolic groups (δ-thin triangles in a Cayley graph / Gromov product; word metrics exist in `Geometry/Group/WordMetric.lean`, hyperbolicity does not); "one-ended" is not packaged for groups but would be definable via ends of a Cayley graph (`Combinatorics/SimpleGraph/Ends`), so the blocking gap is hyperbolicity. Audit note (2026-11-27): this is the row closest to a faithful `Prop`; Mathlib's `gromovProduct` (`Topology/MetricSpace/GromovProduct.lean`) and the word metric give the four-point δ-hyperbolicity condition directly, and `SurfaceGroup` is defined in this file, so a statement is a candidate follow-up |
 | 285 | Nirenberg problem on `S²` (characterize prescribable Gaussian curvatures) | Gaussian curvature of a metric on `S²` (equivalently the Laplace–Beltrami operator of the round sphere in `K = e^{-2u}(1 - Δ_{g_round} u)`); moreover the target asks for an exact characterization, not a single `Prop` |
 | 301 | Arithmeticity of lattices in `PU(n,1)`, `n ≥ 4` | the Lie group `PU(n,1)` and its lattices (`MeasureTheory.covolume` and quotient Haar measures exist in Mathlib; the group itself does not), arithmetic subgroups (ℚ-forms of algebraic groups, commensurability, compact-kernel projections) |
 | 310 | Hopf: no positively curved metric on `S² × S²` | sectional curvature of a Riemannian metric (the manifold `S² × S²` and bundle metrics exist in Mathlib) |
@@ -96,6 +96,9 @@ in the table below because punctured surfaces are not modelled.
 
 * `surfaceGroup_one_commute`: the genus-1 surface group `⟨a, b | [a,b]⟩` (the fundamental
   group of the torus) is commutative — a finite algebraic check of the model.
+* `isWordHyperbolic_of_finite`: every finite group is word-hyperbolic (take δ = the diameter
+  of a Cayley graph), so the hyperbolicity hypothesis of `GromovSurfaceSubgroupQuestion` is
+  satisfiable. Finite groups have no ends, so they do not meet its one-endedness hypothesis.
 -/
 
 namespace CryptoLean.OpenProblems.GeometryTopology.RiemannianSymplectic
@@ -162,6 +165,55 @@ def IvanovConjectureClosed : Prop :=
         (∀ φ (hφ : φ ∈ innerAut (SurfaceGroup g)), f ⟨φ, hΓ hφ⟩ = 1) →
           ¬ Function.Surjective f
 
+/-! ## Word-hyperbolic and one-ended groups (rank 277) -/
+
+/-- Four-point (Gromov-product) δ-hyperbolicity of the word metric of the generating family
+`P`: `(x|z)_w ≥ min((x|y)_w, (y|z)_w) - δ` for all `w x y z`, with `(y|z)_x` Mathlib's
+`Metric.gromovProduct x y z` for the word metric `P.normedGroup`. -/
+def _root_.Group.Generators.IsDeltaHyperbolic {G ι : Type*} [Group G]
+    (P : Group.Generators G ι) (δ : ℝ) : Prop :=
+  letI := P.normedGroup
+  ∀ w x y z : G,
+    min (Metric.gromovProduct w x y) (Metric.gromovProduct w y z) - δ ≤ Metric.gromovProduct w x z
+
+/-- `G` is word-hyperbolic: for some finite generating family the word metric is
+δ-hyperbolic for some `δ`. Hyperbolicity does not depend on the finite generating set, because
+the word metrics of two finite generating sets are quasi-isometric and hyperbolicity is a
+quasi-isometry invariant of geodesic spaces. That invariance is known and not formalized. -/
+def IsWordHyperbolic (G : Type*) [Group G] : Prop :=
+  ∃ (n : ℕ) (P : Group.Generators G (Fin n)) (δ : ℝ), P.IsDeltaHyperbolic δ
+
+/-- `G` is one-ended: for some finite generating family, the Cayley graph
+`SimpleGraph.mulCayley` on the generators has exactly one end (`SimpleGraph.end`). The number
+of ends of a finitely generated group does not depend on the finite generating set (known, not
+formalized). -/
+def IsOneEnded (G : Type*) [Group G] : Prop :=
+  ∃ (n : ℕ) (P : Group.Generators G (Fin n)),
+    (SimpleGraph.mulCayley (Set.range P.val)).end.Nonempty ∧
+      (SimpleGraph.mulCayley (Set.range P.val)).end.Subsingleton
+
+/-- **Open problem, ProofAtlas rank 277 (Gromov's surface subgroup question).** Not proved
+here. Does every one-ended word-hyperbolic group contain a surface subgroup, that is, a
+subgroup isomorphic to the fundamental group of a closed orientable surface of genus `g ≥ 2`?
+
+Source of the statement: the question as usually posed (Gromov; Bestvina's problem list,
+Question 1.6). The ProofAtlas exactTarget text was not available to the session that wrote this
+declaration, so it is not quoted here. Known cases (not formalized): Kahn–Markovic for
+fundamental groups of closed hyperbolic 3-manifolds; Calegari–Walker for random groups;
+Wilton for graphs of free groups with cyclic edge groups.
+
+Modelling choices:
+* a surface subgroup is an injective homomorphism from `SurfaceGroup g` with `g ≥ 2`. A
+  non-orientable closed surface of negative Euler characteristic has an orientable double cover
+  of genus `≥ 2`, so allowing non-orientable surfaces gives the same question;
+* hyperbolicity is the four-point condition on a word metric (`IsWordHyperbolic`), and
+  one-endedness is the end set of a Cayley graph (`IsOneEnded`), each for some finite
+  generating family. Both are independent of that choice, which is known but not formalized;
+* `G : Type` (universe 0). Finitely generated groups are countable, so this loses nothing. -/
+def GromovSurfaceSubgroupQuestion : Prop :=
+  ∀ (G : Type) [Group G], IsWordHyperbolic G → IsOneEnded G →
+    ∃ g : ℕ, 2 ≤ g ∧ ∃ f : SurfaceGroup g →* G, Function.Injective f
+
 /-! ## Known result (finite algebraic check of the model) -/
 
 /-- **Known result** (the fundamental group of the torus is `ℤ²`, in particular abelian; see
@@ -219,6 +271,32 @@ theorem surfaceGroup_one_commute (x y : SurfaceGroup 1) : x * y = y * x := by
     exact this (Subgroup.mem_top _)
   rw [Subgroup.mem_centralizer_singleton_iff] at hx
   exact hx
+
+/-- **Known result** (elementary): every finite group is word-hyperbolic. A finite group's word
+metric is bounded by its diameter `D`, and the four-point condition holds with `δ = D`, because
+Gromov products are nonnegative and at most the distance. -/
+theorem isWordHyperbolic_of_finite (G : Type*) [Group G] [Finite G] : IsWordHyperbolic G := by
+  classical
+  have := Fintype.ofFinite G
+  let e := Fintype.equivFin G
+  let P : Group.Generators G (Fin (Fintype.card G)) :=
+    ⟨e.symm, by simp [Set.range_eq_univ.mpr e.symm.surjective]⟩
+  let D : ℝ := ((Finset.univ : Finset G).sup fun g => P.wordLength g : ℕ)
+  refine ⟨_, P, D, ?_⟩
+  let _ : NormedGroup G := P.normedGroup
+  have hdist : ∀ a b : G, dist a b ≤ D := by
+    intro a b
+    rw [dist_eq_norm_inv_mul]
+    change ((P.wordLength (a⁻¹ * b) : ℕ) : ℝ) ≤ D
+    exact Nat.cast_le.mpr
+      (Finset.le_sup (f := fun g => P.wordLength g) (Finset.mem_univ (a⁻¹ * b)))
+  intro w x y z
+  have h1 : min (Metric.gromovProduct w x y) (Metric.gromovProduct w y z) ≤ D :=
+    (min_le_left _ _).trans ((Metric.gromovProduct_le_dist_left w x y).trans (hdist w x))
+  have h2 := Metric.gromovProduct_nonneg w x z
+  linarith
+
+#print axioms isWordHyperbolic_of_finite
 
 end CryptoLean.OpenProblems.GeometryTopology.RiemannianSymplectic
 
